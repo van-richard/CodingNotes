@@ -1,4 +1,6 @@
-# Notes I wish I had as a first year Ph.D. student with no programming background.
+# Overview
+
+## Notes I wish I had as a first year Ph.D. student with no programming background.
 
 ## Command Line Tools
     - Bash (Unix Shell)
