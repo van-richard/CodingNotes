@@ -5,5 +5,5 @@ source ~/.bash_aliases
 
 myconda
 
-jupyter-book build . all
+jupyter-book build . --all
 ghp-import -n -p -f _build/html
