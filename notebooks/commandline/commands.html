@@ -338,21 +338,21 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">BASH Commands</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk-manipulation-of-text">awk - Manipulation of text!</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">awk</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math">Math</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat-print-files-to-stdout">cat - Print files to stdout:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-changing-folders">cd - Changing folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp-copy-files-folders">cp - Copy files/folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep-searching-for-pattern-in-file-folders">grep - Searching for Pattern in File/Folders.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">cat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">cd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">cp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep">grep</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-list-information-about-files-folders">ls - List information about files/folders</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv-move-files-or-directories-from-one-place-to-another">mv - Move files or directories from one place to another.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed-tranform-text">sed - Tranform text!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq-sequence-of-number">seq - Sequence of Number</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl-give-specific-user-permission-to-read-write-execute-a-folder">setfacl - Give specific user permission to read/write/execute a folder.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">ls</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv">mv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed">sed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq">seq</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">setfacl</a></li>
 </ul>
 </li>
 </ul>
@@ -369,79 +369,83 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="bash-commands">
 <h1>BASH Commands<a class="headerlink" href="#bash-commands" title="Permalink to this heading">#</a></h1>
-<section id="awk-manipulation-of-text">
-<h2>awk - Manipulation of text!<a class="headerlink" href="#awk-manipulation-of-text" title="Permalink to this heading">#</a></h2>
+<section id="awk">
+<h2>awk<a class="headerlink" href="#awk" title="Permalink to this heading">#</a></h2>
+<p>Manipulation of text.</p>
 <p>Treating a text file, were each space is a column, you can print the columns with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">awk</span> <span class="s1">&#39;{print $1}&#39;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Where <code class="docutils literal notranslate"><span class="pre">$1</span></code> is the first column. Index starts at 1.</p>
 <p>Separator</p>
 <p>You can chose the field separator with, <code class="docutils literal notranslate"><span class="pre">-F</span></code>. This example choses the comma as the separator, and print the 5th column:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">awk</span> <span class="o">-</span><span class="n">F</span> <span class="s1">&#39;,&#39;</span> <span class="s1">&#39;{print $5} file&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span><span class="s1">&#39;{print $5} file&#39;</span>
 </pre></div>
 </div>
 <section id="math">
 <h3>Math<a class="headerlink" href="#math" title="Permalink to this heading">#</a></h3>
 <p>Average a column</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">awk</span> <span class="s1">&#39;{ total += $2; count++ } END { print total/count }&#39;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{ total += $2; count++ } END { print total/count }&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Add to value in column</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">awk</span> <span class="s1">&#39;{print $1 + 1}&#39;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{print $1 + 1}&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 </section>
 </section>
-<section id="cat-print-files-to-stdout">
-<h2>cat - Print files to stdout:<a class="headerlink" href="#cat-print-files-to-stdout" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">file</span><span class="o">.</span><span class="n">txt</span>
+<section id="cat">
+<h2>cat<a class="headerlink" href="#cat" title="Permalink to this heading">#</a></h2>
+<p>Print files to stdout</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>file.txt
 </pre></div>
 </div>
 <p>We can also read the file using <code class="docutils literal notranslate"><span class="pre">cat</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Contents=$(cat file.txt)
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">Contents</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span>file.txt<span class="k">)</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>“\n” prints a new line character</p></li>
 <li><p>“-e” to interpret the new line escape characters as escape characters</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;START OF FILE</span><span class="se">\n</span><span class="s2">$Contents</span><span class="se">\n</span><span class="s2">END OF FILE&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;START OF FILE\n</span><span class="nv">$Contents</span><span class="s2">\nEND OF FILE&quot;</span>
 </pre></div>
 </div>
 </section>
-<section id="cd-changing-folders">
-<h2>cd - Changing folders<a class="headerlink" href="#cd-changing-folders" title="Permalink to this heading">#</a></h2>
+<section id="cd">
+<h2>cd<a class="headerlink" href="#cd" title="Permalink to this heading">#</a></h2>
+<p>Change directories</p>
 <p>Since bash works in the context of a current directory, you might want to run your command in some other directory. We have cd for changing location:</p>
 <p>Change to home directory</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~</span> 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>     
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w">     </span>
 </pre></div>
 </div>
 <p>Go back one directory</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>  
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../
 </pre></div>
 </div>
 <p>Go to specific directory</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">Documents</span>  
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/home/username/Documents<span class="w">  </span>
 </pre></div>
 </div>
 <p>Go the the previous directory you were in</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">-</span>   
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>-<span class="w">   </span>
 </pre></div>
 </div>
 </section>
-<section id="cp-copy-files-folders">
-<h2>cp - Copy files/folders<a class="headerlink" href="#cp-copy-files-folders" title="Permalink to this heading">#</a></h2>
-<p>Copy file1 to file2 (new name):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="p">[</span><span class="n">FILE_1</span><span class="p">]</span> <span class="p">[</span><span class="n">FILE_2</span><span class="p">]</span>
+<section id="cp">
+<h2>cp<a class="headerlink" href="#cp" title="Permalink to this heading">#</a></h2>
+<p>Copy files/folders</p>
+<p>Toopy file1 to file2 (new name):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>FILE_1<span class="o">]</span><span class="w"> </span><span class="o">[</span>FILE_2<span class="o">]</span>
 </pre></div>
 </div>
 <p>Copy folders:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="p">[</span><span class="n">FOLDER_1</span><span class="p">]</span> <span class="p">[</span><span class="n">FOLDER_2</span><span class="p">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span><span class="o">[</span>FOLDER_1<span class="o">]</span><span class="w"> </span><span class="o">[</span>FOLDER_2<span class="o">]</span>
 </pre></div>
 </div>
 <p>Use <code class="docutils literal notranslate"><span class="pre">cp</span></code> to copy files or directories from one place to another.</p>
@@ -449,122 +453,127 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">cp</span></code> creates NEW versions of the sources, so editing the copy won’t affect the original (and vice versa).</p></li>
 </ul>
 <p><strong>Note that it will overwrite the destination if it already exists.</strong></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">srcFile</span><span class="o">.</span><span class="n">txt</span> <span class="n">clone</span><span class="o">.</span><span class="n">txt</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>srcFile.txt<span class="w"> </span>clone.txt
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">srcDirectory</span><span class="o">/</span> <span class="n">dst</span><span class="o">/</span> <span class="c1"># recursively copy</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>srcDirectory/<span class="w"> </span>dst/<span class="w"> </span><span class="c1"># recursively copy</span>
 </pre></div>
 </div>
 <p>Copying can be down with paths</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">dir_1</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">dir_2</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>/path/to/dir_1<span class="w"> </span>/path/to/dir_2
 </pre></div>
 </div>
 </section>
-<section id="grep-searching-for-pattern-in-file-folders">
-<h2>grep - Searching for Pattern in File/Folders.<a class="headerlink" href="#grep-searching-for-pattern-in-file-folders" title="Permalink to this heading">#</a></h2>
+<section id="grep">
+<h2>grep<a class="headerlink" href="#grep" title="Permalink to this heading">#</a></h2>
+<p>Searching for Pattern in File/Folders</p>
 <p>Example</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="s1">&#39;PATTERN&#39;</span> <span class="n">FILE</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="s1">&#39;PATTERN&#39;</span><span class="w"> </span>FILE
 </pre></div>
 </div>
 <p>Search pattern ignoring case</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="n">PATTERN</span> <span class="n">FILE</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-i<span class="w"> </span>PATTERN<span class="w"> </span>FILE
 </pre></div>
 </div>
 <p>Search pattern and get NEXT NUMBER of lines</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">A</span> <span class="n">NUMBER</span> <span class="n">PATTERN</span> <span class="n">FILE</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-A<span class="w"> </span>NUMBER<span class="w"> </span>PATTERN<span class="w"> </span>FILE
 </pre></div>
 </div>
 <p>Search pattern and get previous NUMBER of  lines</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">B</span> <span class="n">NUMBER</span> <span class="n">PATTERN</span> <span class="n">FILE</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-B<span class="w"> </span>NUMBER<span class="w"> </span>PATTERN<span class="w"> </span>FILE
 </pre></div>
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="ls-list-information-about-files-folders">
-<h1>ls - List information about files/folders<a class="headerlink" href="#ls-list-information-about-files-folders" title="Permalink to this heading">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="ls">
+<h1>ls<a class="headerlink" href="#ls" title="Permalink to this heading">#</a></h1>
+<p>List information about files/folders</p>
 <p>The default is to list the files in the current directory. Adding options can change how the list is organized.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="p">[</span><span class="n">option</span><span class="p">]</span> <span class="p">[</span><span class="n">directory</span><span class="p">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span><span class="o">[</span>option<span class="o">]</span><span class="w"> </span><span class="o">[</span>directory<span class="o">]</span>
 </pre></div>
 </div>
 <p>List directories</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">d</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-d
 </pre></div>
 </div>
 <p>Long list format</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l
 </pre></div>
 </div>
 <p>Sort by time (newest first)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">t</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-t
 </pre></div>
 </div>
 <p>List files with file size in kilobytes/megabytes/gigabytes</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">h</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-h
 </pre></div>
 </div>
 <p>Sort alphabetically</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">X</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-X
 </pre></div>
 </div>
-<section id="mv-move-files-or-directories-from-one-place-to-another">
-<h2>mv - Move files or directories from one place to another.<a class="headerlink" href="#mv-move-files-or-directories-from-one-place-to-another" title="Permalink to this heading">#</a></h2>
+<section id="mv">
+<h2>mv<a class="headerlink" href="#mv" title="Permalink to this heading">#</a></h2>
+<p>Move files or directories from one place to another.</p>
 <p><code class="docutils literal notranslate"><span class="pre">mv</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">cp</span></code>, but it deletes the source.
 <code class="docutils literal notranslate"><span class="pre">mv</span></code> is also useful for renaming files!</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">source</span><span class="o">.</span><span class="n">txt</span> <span class="n">new</span><span class="o">.</span><span class="n">txt</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>source.txt<span class="w"> </span>new.txt
 </pre></div>
 </div>
 </section>
-<section id="sed-tranform-text">
-<h2>sed - Tranform text!<a class="headerlink" href="#sed-tranform-text" title="Permalink to this heading">#</a></h2>
+<section id="sed">
+<h2>sed<a class="headerlink" href="#sed" title="Permalink to this heading">#</a></h2>
+<p>Tranform/replace text!</p>
 <p>We can replace some text, INPUT, with another text, OUTPUT, in a file with <code class="docutils literal notranslate"><span class="pre">sed</span></code>. The notation is:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s1">&#39;s/INPUT/OUTPUT/&#39;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span><span class="s1">&#39;s/INPUT/OUTPUT/&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Create a new file with replacement</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s1">&#39;s/INPUT/OUTPUT/&#39;</span> <span class="n">file</span> <span class="o">&gt;</span> <span class="n">newfile</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span><span class="s1">&#39;s/INPUT/OUTPUT/&#39;</span><span class="w"> </span>file<span class="w"> </span>&gt;<span class="w"> </span>newfile
 </pre></div>
 </div>
 <p>Replace occurances within the file</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s1">&#39;s/INPUT/OUTPUT/&#39;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/INPUT/OUTPUT/&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Replace all occurances</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s1">&#39;s/INPUT/OUTPUT/g&#39;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span><span class="s1">&#39;s/INPUT/OUTPUT/g&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Delete lines containing pattern</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s1">&#39;/INPUT/d&#39;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span><span class="s1">&#39;/INPUT/d&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Variables with sed</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="s2">&quot;s/INPUT/$</span><span class="si">{VARIABLE}</span><span class="s2">/&quot;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span><span class="s2">&quot;s/INPUT/</span><span class="si">${</span><span class="nv">VARIABLE</span><span class="si">}</span><span class="s2">/&quot;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Multiple inputs</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s/INPUT1/OUTPUT1/;s/INPUT2/OUTPUT2/;s/INPUT3/OUTPUT3/&#39;</span> <span class="n">file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/INPUT1/OUTPUT1/;s/INPUT2/OUTPUT2/;s/INPUT3/OUTPUT3/&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 </section>
-<section id="seq-sequence-of-number">
-<h2>seq - Sequence of Number<a class="headerlink" href="#seq-sequence-of-number" title="Permalink to this heading">#</a></h2>
-<p>Default increment of 1.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">seq</span> <span class="n">FIRST</span> <span class="n">INCREMENT</span> <span class="n">LAST</span>
+<section id="seq">
+<h2>seq<a class="headerlink" href="#seq" title="Permalink to this heading">#</a></h2>
+<p>Print a sequence of numbers. Default increment of 1.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>seq<span class="w"> </span>FIRST<span class="w"> </span>INCREMENT<span class="w"> </span>LAST
 </pre></div>
 </div>
 <p>This returns a sequence of numbers between 0 and 10.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">seq</span> <span class="mi">0</span> <span class="mi">10</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>seq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">10</span>
 </pre></div>
 </div>
 <p>Sequence with Placeholders</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">seq</span> <span class="o">-</span><span class="n">w</span> <span class="mi">0</span> <span class="mi">40</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">40</span>
 </pre></div>
 </div>
 </section>
-<section id="setfacl-give-specific-user-permission-to-read-write-execute-a-folder">
-<h2>setfacl - Give specific user permission to read/write/execute a folder.<a class="headerlink" href="#setfacl-give-specific-user-permission-to-read-write-execute-a-folder" title="Permalink to this heading">#</a></h2>
+<section id="setfacl">
+<h2>setfacl<a class="headerlink" href="#setfacl" title="Permalink to this heading">#</a></h2>
+<p>Give specific user permission to read/write/execute a folder.</p>
 <p><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> is short for set File ACL (Access Control List). This sets permissions for specific users, without changing the owndership of the directory.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">m</span> <span class="n">u</span><span class="p">:</span><span class="n">username</span><span class="p">:</span><span class="n">rwx</span> <span class="n">myfolder</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:username:rwx<span class="w"> </span>myfolder
 </pre></div>
 </div>
 <p>Options</p>
@@ -666,21 +675,21 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">BASH Commands</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk-manipulation-of-text">awk - Manipulation of text!</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">awk</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math">Math</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat-print-files-to-stdout">cat - Print files to stdout:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-changing-folders">cd - Changing folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp-copy-files-folders">cp - Copy files/folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep-searching-for-pattern-in-file-folders">grep - Searching for Pattern in File/Folders.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">cat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">cd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">cp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep">grep</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-list-information-about-files-folders">ls - List information about files/folders</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv-move-files-or-directories-from-one-place-to-another">mv - Move files or directories from one place to another.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed-tranform-text">sed - Tranform text!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq-sequence-of-number">seq - Sequence of Number</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl-give-specific-user-permission-to-read-write-execute-a-folder">setfacl - Give specific user permission to read/write/execute a folder.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">ls</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv">mv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed">sed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq">seq</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">setfacl</a></li>
 </ul>
 </li>
 </ul>
