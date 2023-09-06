@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Conda Commands &#8212; Computational Chemistry Notes</title>
+    <title>Making Websites &#8212; Computational Chemistry Notes</title>
   
   
   
@@ -61,11 +61,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/python/condacommands';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/websites/makewebsite';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Intel Environment on Conda with m1/m2 Macs" href="intel.html" />
-    <link rel="prev" title="Python" href="python.html" />
+    <link rel="prev" title="Movie Making with ChimeraX" href="../chimera/movies.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,7 +154,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../commandline/commands.html">BASH Commands</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python.html">Python</a></li>
 
 
 
@@ -190,7 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../chimera/movies.html">Movie Making with ChimeraX</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../websites/makewebsite.html">Making Websites</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Making Websites</a></li>
 </ul>
 
     </div>
@@ -245,7 +244,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/python/condacommands.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/websites/makewebsite.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -327,7 +326,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Conda Commands</h1>
+    <h1>Making Websites</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -337,14 +336,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-virtual-environment">Creating a new virtual environment.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-new-environment">Running the new environment.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-a-virutal-environment">Leave a virutal environment.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-conda-environments-and-related-packages">Deleting conda environments and related packages.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-available-environments">List available environments.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-environments-to-a-yml-file">Exporting environments to a YML file.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-conda-environment-from-a-yml-file">Installing a Conda environment from a YML file.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-ambertools">Example with AmberTools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
 </ul>
             </nav>
         </div>
@@ -356,67 +348,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="conda-commands">
-<h1>Conda Commands<a class="headerlink" href="#conda-commands" title="Permalink to this heading">#</a></h1>
-<section id="creating-a-new-virtual-environment">
-<h2>Creating a new virtual environment.<a class="headerlink" href="#creating-a-new-virtual-environment" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>                          <span class="c1"># Create New environment</span>
-<span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">python</span><span class="o">=&lt;</span><span class="n">version</span><span class="o">-</span><span class="n">number</span><span class="o">&gt;</span>  <span class="c1"># Specific Python version</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="making-websites">
+<h1>Making Websites<a class="headerlink" href="#making-websites" title="Permalink to this heading">#</a></h1>
+<section id="jupyter-book">
+<h2>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this heading">#</a></h2>
+<p>In a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environemnt, install the package.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyter-book
 </pre></div>
 </div>
-</section>
-<section id="running-the-new-environment">
-<h2>Running the new environment.<a class="headerlink" href="#running-the-new-environment" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+<p>Create a new book</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>create<span class="w"> </span>mynewbook/
 </pre></div>
 </div>
-<p>In your new activated environment, you can now install needed packages.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>                 <span class="c1"># Install Package</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>  <span class="c1"># Install package from a specific channel (-c)</span>
+<p>Building the book</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>mybookname/
 </pre></div>
 </div>
-</section>
-<section id="leave-a-virutal-environment">
-<h2>Leave a virutal environment.<a class="headerlink" href="#leave-a-virutal-environment" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">deactivate</span>
+<p>To publish the book to a Github repository, I use ghp-import.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ghp-import
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
 </pre></div>
 </div>
-</section>
-<section id="deleting-conda-environments-and-related-packages">
-<h2>Deleting conda environments and related packages.<a class="headerlink" href="#deleting-conda-environments-and-related-packages" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-</section>
-<section id="list-available-environments">
-<h2>List available environments.<a class="headerlink" href="#list-available-environments" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
-</pre></div>
-</div>
-<p>List packages within an environment.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
-<span class="n">conda</span> <span class="nb">list</span>
-</pre></div>
-</div>
-</section>
-<section id="exporting-environments-to-a-yml-file">
-<h2>Exporting environments to a YML file.<a class="headerlink" href="#exporting-environments-to-a-yml-file" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
-<span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;.</span><span class="n">yml</span>
-</pre></div>
-</div>
-</section>
-<section id="installing-a-conda-environment-from-a-yml-file">
-<h2>Installing a Conda environment from a YML file.<a class="headerlink" href="#installing-a-conda-environment-from-a-yml-file" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;.</span><span class="n">yml</span>
-</pre></div>
-</div>
-</section>
-<section id="example-with-ambertools">
-<h2>Example with AmberTools<a class="headerlink" href="#example-with-ambertools" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">ambertools</span>
-<span class="n">conda</span> <span class="n">activate</span> <span class="n">ambertools</span>
-<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ambertools</span><span class="o">=</span><span class="mi">22</span> <span class="n">compilers</span>
+<p>Then</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>
+git<span class="w"> </span>push
 </pre></div>
 </div>
 </section>
@@ -435,7 +391,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/python"
+            path: "./notebooks/websites"
         },
         predefinedOutput: true
     }
@@ -454,22 +410,13 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="python.html"
+       href="../chimera/movies.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Python</p>
+        <p class="prev-next-title">Movie Making with ChimeraX</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="intel.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Intel Environment on Conda with m1/m2 Macs</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -489,14 +436,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-virtual-environment">Creating a new virtual environment.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-new-environment">Running the new environment.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-a-virutal-environment">Leave a virutal environment.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-conda-environments-and-related-packages">Deleting conda environments and related packages.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-available-environments">List available environments.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-environments-to-a-yml-file">Exporting environments to a YML file.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-conda-environment-from-a-yml-file">Installing a Conda environment from a YML file.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-ambertools">Example with AmberTools</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
 </ul>
   </nav></div>
 
