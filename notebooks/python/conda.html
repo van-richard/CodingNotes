@@ -153,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/linux.html">Unix/Linux Commands</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/linux.html">Unix/Linux Commands List</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/bash.html">BASH Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">SSH-ing</a></li>
 
@@ -343,6 +343,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-conda">Installing Conda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-virtual-environment">Creating a new virtual environment.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-new-environment">Running the new environment.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-a-virutal-environment">Leave a virutal environment.</a></li>
@@ -364,6 +365,19 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="conda-commands">
 <h1>Conda Commands<a class="headerlink" href="#conda-commands" title="Permalink to this heading">#</a></h1>
+<section id="installing-conda">
+<h2>Installing Conda<a class="headerlink" href="#installing-conda" title="Permalink to this heading">#</a></h2>
+<p>I recommend installing <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge</a>.</p>
+<p>In the repository:</p>
+<ol class="arabic simple">
+<li><p>Scroll down to the <code class="docutils literal notranslate"><span class="pre">Download</span></code> section</p></li>
+<li><p>Find your operating system (OS)</p></li>
+<li><p>Click the link</p></li>
+<li><p>Copy the downloaded file to your <code class="docutils literal notranslate"><span class="pre">~/Programs</span></code> folder</p></li>
+<li><p>Run the installation script with <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">&lt;Miniforge-link&gt;.sh</span></code></p></li>
+<li><p>Choose your installation directory as <code class="docutils literal notranslate"><span class="pre">~/Programs/miniforge3</span></code></p></li>
+</ol>
+</section>
 <section id="creating-a-new-virtual-environment">
 <h2>Creating a new virtual environment.<a class="headerlink" href="#creating-a-new-virtual-environment" title="Permalink to this heading">#</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>                          <span class="c1"># Create New environment</span>
@@ -495,6 +509,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-conda">Installing Conda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-virtual-environment">Creating a new virtual environment.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-new-environment">Running the new environment.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-a-virutal-environment">Leave a virutal environment.</a></li>
