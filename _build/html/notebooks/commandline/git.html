@@ -153,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="linux.html">Unix/Linux Commands</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="linux.html">Unix/Linux Commands List</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bash.html">BASH Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
 
@@ -320,7 +320,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -336,6 +338,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tldr">TLDR</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-repository-from-github">Copy repository from GitHub</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-your-changes">Push your changes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Git Commands</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -347,26 +362,50 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="git-commands">
 <h1>Git Commands<a class="headerlink" href="#git-commands" title="Permalink to this heading">#</a></h1>
+<section id="tldr">
+<h2>TLDR<a class="headerlink" href="#tldr" title="Permalink to this heading">#</a></h2>
+<section id="copy-repository-from-github">
+<h3>Copy repository from GitHub<a class="headerlink" href="#copy-repository-from-github" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;githublink&gt;
+</pre></div>
+</div>
+</section>
+<section id="push-your-changes">
+<h3>Push your changes<a class="headerlink" href="#push-your-changes" title="Permalink to this heading">#</a></h3>
+<p>Make sure you update your copy first with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull
+</pre></div>
+</div>
+<p>then</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-a
+git<span class="w"> </span>push
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id1">
+<h2>Git Commands<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <p>Quickly check available commands</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span><span class="nb">help</span>
 </pre></div>
 </div>
 <p>Check all available commands</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span> <span class="o">-</span><span class="n">a</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>-a
 </pre></div>
 </div>
 <p>Command specific help - user manual</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span> <span class="o">&lt;</span><span class="n">command_here</span><span class="o">&gt;</span>
-<span class="n">git</span> <span class="n">help</span> <span class="n">add</span>
-<span class="n">git</span> <span class="n">help</span> <span class="n">commit</span>
-<span class="n">git</span> <span class="n">help</span> <span class="n">init</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>&lt;command_here&gt;
+git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>add
+git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>commit
+git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>init
 <span class="c1"># or git &lt;command_here&gt; --help</span>
-<span class="n">git</span> <span class="n">add</span> <span class="o">--</span><span class="n">help</span>
-<span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">help</span>
-<span class="n">git</span> <span class="n">init</span> <span class="o">--</span><span class="n">help</span>
+git<span class="w"> </span>add<span class="w"> </span>--help
+git<span class="w"> </span>commit<span class="w"> </span>--help
+git<span class="w"> </span>init<span class="w"> </span>--help
 
-<span class="n">echo</span> <span class="s2">&quot;temp/&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
-<span class="n">echo</span> <span class="s2">&quot;private_key&quot;</span> <span class="o">&gt;&gt;</span> <span class="o">.</span><span class="n">gitignore</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;temp/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;private_key&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
 </pre></div>
 </div>
 <p>Will display the branch, untracked files, changes and other differences</p>
@@ -421,6 +460,7 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log<span class="w"> </span>--merges
 </pre></div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -481,6 +521,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tldr">TLDR</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-repository-from-github">Copy repository from GitHub</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-your-changes">Push your changes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Git Commands</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

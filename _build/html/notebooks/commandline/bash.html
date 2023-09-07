@@ -61,13 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/commandline/bash';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="SSH-ing" href="ssh.html" />
-    <link rel="prev" title="Unix/Linux Commands" href="linux.html" />
+    <link rel="prev" title="Unix/Linux Commands List" href="linux.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -155,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="linux.html">Unix/Linux Commands</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="linux.html">Unix/Linux Commands List</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">BASH Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
 
@@ -352,150 +350,169 @@ document.write(`
 <p>First line of the script is the shebang which tells the system how to execute
 the script: <a class="reference external" href="https://en.wikipedia.org/wiki/Shebang_(Unix)">https://en.wikipedia.org/wiki/Shebang_(Unix)</a>
 As you already figured, comments start with #. Shebang is also a comment.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
 </pre></div>
 </div>
 <p>Simple hello world example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;Hello world!&quot;</span> 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello world!&quot;</span><span class="w"> </span>
 </pre></div>
 </div>
 <p>Each command starts on a new line, or after a semicolon:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;This is the first command&quot;</span><span class="p">;</span> <span class="n">echo</span> <span class="s2">&quot;This is the second command&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the first command&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the second command&quot;</span>
 <span class="c1"># =&gt; This is the first command</span>
 <span class="c1"># =&gt; This is the second command</span>
 </pre></div>
 </div>
 <p>Declaring a variable looks like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span><span class="o">=</span><span class="s2">&quot;Some string&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">variable</span><span class="o">=</span><span class="s2">&quot;Some string&quot;</span>
 </pre></div>
 </div>
 <p>But not like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span> <span class="o">=</span> <span class="s2">&quot;Some string&quot;</span> <span class="c1"># =&gt; returns error &quot;variable: command not found&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Some string&quot;</span><span class="w"> </span><span class="c1"># =&gt; returns error &quot;variable: command not found&quot;</span>
 </pre></div>
 </div>
 <p>Bash will decide that <code class="docutils literal notranslate"><span class="pre">variable</span></code> is a command it must execute and give an error because it can’t be found.</p>
 <p>Nor like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable</span><span class="o">=</span> <span class="s2">&quot;Some string&quot;</span> <span class="c1"># =&gt; returns error: &quot;Some string: command not found&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">variable</span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Some string&quot;</span><span class="w"> </span><span class="c1"># =&gt; returns error: &quot;Some string: command not found&quot;</span>
 </pre></div>
 </div>
 <p>Bash will decide that “Some string” is a command it must execute and give an error because it can’t be found. In this case the “variable=” part is seen as a variable assignment valid only for the scope of the “Some string” command.</p>
 <p>Using the variable:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;$variable&quot;</span> <span class="c1"># =&gt; Some string</span>
-<span class="n">echo</span> <span class="s1">&#39;$variable&#39;</span> <span class="c1"># =&gt; $variable</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$variable</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; Some string</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;$variable&#39;</span><span class="w"> </span><span class="c1"># =&gt; $variable</span>
 </pre></div>
 </div>
-<p>When you use a variable itself — assign it, export it, or else — you write its name without <span class="math notranslate nohighlight">\(. If you want to use the variable's value, you should use \)</span>.
-Note that ‘ (single quote) won’t expand the variables! You can write variable without surrounding quotes but it’s not recommended.</p>
+<p>When you use a variable itself — assign it, export it, or else — you write its name without <code class="docutils literal notranslate"><span class="pre">$</span></code>. If you want to use the variable’s value, you should use <code class="docutils literal notranslate"><span class="pre">$</span></code>.</p>
+<p>Note that ‘ (single quote) won’t expand the variables! You can write variable without surrounding quotes but it’s not recommended.</p>
 <p>Parameter expansion ${…}:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;$</span><span class="si">{variable}</span><span class="s2">&quot;</span> <span class="c1"># =&gt; Some string</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">variable</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; Some string</span>
 </pre></div>
 </div>
 <p>This is a simple usage of parameter expansion such as two examples above. Parameter expansion gets a value from a variable. It “expands” or prints the value. During the expansion time the value or parameter can be modified. Below are other modifications that add onto this expansion.</p>
 <p>String substitution in variables:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;${variable/Some/A}&quot;</span> <span class="c1"># =&gt; A string</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">variable</span><span class="p">/Some/A</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; A string</span>
 </pre></div>
 </div>
 <p>This will substitute the first occurrence of “Some” with “A”.</p>
 <p>Substring from a variable:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">length</span><span class="o">=</span><span class="mi">7</span>
-<span class="n">echo</span> <span class="s2">&quot;${variable:0:length}&quot;</span> <span class="c1"># =&gt; Some string</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">length</span><span class="o">=</span><span class="m">7</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">variable</span><span class="p">:</span><span class="nv">0</span><span class="p">:</span><span class="nv">length</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; Some string</span>
 </pre></div>
 </div>
 <p>This will return only the first 7 characters of the value</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;${variable: -5}&quot;</span> <span class="c1"># =&gt; string</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">variable</span><span class="p">: -5</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; string</span>
 </pre></div>
 </div>
 <p>This will return the last 5 characters (note the space before -5). The space before minus is mandatory here. String length:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;${#variable}&quot;</span> <span class="c1"># =&gt; 11</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">variable</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; 11</span>
 </pre></div>
 </div>
 <p>Indirect expansion:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>other_variable=&quot;variable&quot;
-echo ${!other_variable} # =&gt; Some string
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">other_variable</span><span class="o">=</span><span class="s2">&quot;variable&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="p">!other_variable</span><span class="si">}</span><span class="w"> </span><span class="c1"># =&gt; Some string</span>
 </pre></div>
 </div>
 <p>This will expand the value of <code class="docutils literal notranslate"><span class="pre">other_variable</span></code>.</p>
 <p>The default value for variable:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;${foo:-&quot;</span><span class="n">DefaultValueIfFooIsMissingOrEmpty</span><span class="s2">&quot;}&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">foo</span><span class="k">:-</span><span class="s2">&quot;DefaultValueIfFooIsMissingOrEmpty&quot;</span><span class="si">}</span><span class="s2">&quot;</span>
 <span class="c1"># =&gt; DefaultValueIfFooIsMissingOrEmpty</span>
 </pre></div>
 </div>
 <p>This works for null (foo=) and empty string (foo=””); zero (foo=0) returns 0.Note that it only returns default value and doesn’t change variable value.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Declare an array with 6 elements:
-array=(one two three four five six)
-# Print the first element:
-echo &quot;${array[0]}&quot; # =&gt; &quot;one&quot;
-# Print all elements:
-echo &quot;${array[@]}&quot; # =&gt; &quot;one two three four five six&quot;
-# Print the number of elements:
-echo &quot;${#array[@]}&quot; # =&gt; &quot;6&quot;
-# Print the number of characters in third element
-echo &quot;${#array[2]}&quot; # =&gt; &quot;5&quot;
-# Print 2 elements starting from fourth:
-echo &quot;${array[@]:3:2}&quot; # =&gt; &quot;four five&quot;
-# Print all elements each of them on new line.
-for item in &quot;${array[@]}&quot;; do
-    echo &quot;$item&quot;
-done
-
-# Built-in variables:
-# There are some useful built-in variables, like:
-echo &quot;Last program&#39;s return value: $?&quot;
-echo &quot;Script&#39;s PID: $$&quot;
-echo &quot;Number of arguments passed to script: $#&quot;
-echo &quot;All arguments passed to script: $@&quot;
-echo &quot;Script&#39;s arguments separated into different variables: $1 $2...&quot;
-
-# Brace Expansion {...}
-# used to generate arbitrary strings:
-echo {1..10} # =&gt; 1 2 3 4 5 6 7 8 9 10
-echo {a..z} # =&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z
-# This will output the range from the start value to the end value.
-# Note that you can&#39;t use variables here:
-from=1
-to=10
-echo {$from..$to} # =&gt; {$from..$to}
-
-# Now that we know how to echo and use variables,
-# let&#39;s learn some of the other basics of Bash!
-
-# Our current directory is available through the command `pwd`.
-# `pwd` stands for &quot;print working directory&quot;.
-# We can also use the built-in variable `$PWD`.
-# Observe that the following are equivalent:
-echo &quot;I&#39;m in $(pwd)&quot; # execs `pwd` and interpolates output
-echo &quot;I&#39;m in $PWD&quot; # interpolates the variable
-
-# If you get too much output in your terminal, or from a script, the command
-# `clear` clears your screen:
-clear
-# Ctrl-L also works for clearing output.
-
-# Reading a value from input:
-echo &quot;What&#39;s your name?&quot;
-read name
-# Note that we didn&#39;t need to declare a new variable.
-echo &quot;Hello, $name!&quot;
-
-
-# There is also conditional execution
-echo &quot;Always executed&quot; || echo &quot;Only executed if first command fails&quot;
-# =&gt; Always executed
-echo &quot;Always executed&quot; &amp;&amp; echo &quot;Only executed if first command does NOT fail&quot;
-# =&gt; Always executed
-# =&gt; Only executed if first command does NOT fail
-
-# A single ampersand &amp; after a command runs it in the background. A background command&#39;s
-# output is printed to the terminal, but it cannot read from the input.
-sleep 30 &amp;
-# List background jobs
-jobs # =&gt; [1]+  Running                 sleep 30 &amp;
-# Bring the background job to the foreground
-fg
-# Ctrl-C to kill the process, or Ctrl-Z to pause it
-# Resume a background process after it has been paused with Ctrl-Z
-bg
-# Kill job number 2
+<p>Declare an array with 6 elements:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">array</span><span class="o">=(</span>one<span class="w"> </span>two<span class="w"> </span>three<span class="w"> </span>four<span class="w"> </span>five<span class="w"> </span>six<span class="o">)</span>
+</pre></div>
+</div>
+<p>Print the first element:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[0]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; &quot;one&quot;</span>
+</pre></div>
+</div>
+<p>Print all elements:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; &quot;one two three four five six&quot;</span>
+</pre></div>
+</div>
+<p>Print the number of elements:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; &quot;6&quot;</span>
+</pre></div>
+</div>
+<p>Print the number of characters in third element</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${#</span><span class="nv">array</span><span class="p">[2]</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; &quot;5&quot;</span>
+</pre></div>
+</div>
+<p>Print 2 elements starting from fourth:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]:</span><span class="nv">3</span><span class="p">:</span><span class="nv">2</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># =&gt; &quot;four five&quot;</span>
+</pre></div>
+</div>
+<p>Print all elements each of them on new line.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>item<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$item</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p>Built-in variables. There are some useful built-in variables, like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Last program&#39;s return value: </span><span class="nv">$?</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script&#39;s PID: </span><span class="nv">$$</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Number of arguments passed to script: </span><span class="nv">$#</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;All arguments passed to script: </span><span class="nv">$@</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script&#39;s arguments separated into different variables: </span><span class="nv">$1</span><span class="s2"> </span><span class="nv">$2</span><span class="s2">...&quot;</span>
+</pre></div>
+</div>
+<p>Brace Expansion {…} are used to generate arbitrary strings:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; 1 2 3 4 5 6 7 8 9 10</span>
+<span class="nb">echo</span><span class="w"> </span><span class="o">{</span>a..z<span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
+</pre></div>
+</div>
+<p>This will output the range from the start value to the end value. Note that you can’t use variables here:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">from</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">to</span><span class="o">=</span><span class="m">10</span>
+<span class="nb">echo</span><span class="w"> </span><span class="o">{</span><span class="nv">$from</span>..<span class="nv">$to</span><span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; {$from..$to}</span>
+</pre></div>
+</div>
+<p>Now that we know how to echo and use variables, let’s learn some of the other basics of Bash!</p>
+<p>Our current directory is available through the command <code class="docutils literal notranslate"><span class="pre">pwd</span></code>. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> stands for “print working directory”. We can also use the built-in variable <code class="docutils literal notranslate"><span class="pre">$PWD</span></code>. Observe that the following are equivalent:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;I&#39;m in </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># execs `pwd` and interpolates output</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;I&#39;m in </span><span class="nv">$PWD</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># interpolates the variable</span>
+</pre></div>
+</div>
+<p>If you get too much output in your terminal, or from a script, the command <code class="docutils literal notranslate"><span class="pre">clear</span></code> clears your screen:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clear
+</pre></div>
+</div>
+<p>Ctrl-L also works for clearing output.</p>
+<p>Reading a value from input:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;What&#39;s your name?&quot;</span>
+<span class="nb">read</span><span class="w"> </span>name
+</pre></div>
+</div>
+<p>Note that we didn’t need to declare a new variable.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, </span><span class="nv">$name</span><span class="s2">!&quot;</span>
+</pre></div>
+</div>
+<p>There is also conditional execution</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command fails&quot;</span>
+<span class="c1"># =&gt; Always executed</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command does NOT fail&quot;</span>
+<span class="c1"># =&gt; Always executed</span>
+<span class="c1"># =&gt; Only executed if first command does NOT fail</span>
+</pre></div>
+</div>
+<p>A single ampersand &amp; after a command runs it in the background. A background command’s output is printed to the terminal, but it cannot read from the input.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sleep<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>List background jobs</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">jobs</span><span class="w"> </span><span class="c1"># =&gt; [1]+  Running                 sleep 30 &amp;</span>
+</pre></div>
+</div>
+<p>Bring the background job to the foreground</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">fg</span>
+</pre></div>
+</div>
+<p>Ctrl-C to kill the process, or Ctrl-Z to pause it. Resume a background process after it has been paused with Ctrl-Z</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">bg</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Kill job number 2
 kill %2
 # %1, %2, etc. can be used for fg and bg as well
 
@@ -813,7 +830,7 @@ info --apropos bash
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unix/Linux Commands</p>
+        <p class="prev-next-title">Unix/Linux Commands List</p>
       </div>
     </a>
     <a class="right-next"

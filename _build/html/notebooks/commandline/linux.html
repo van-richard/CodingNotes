@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Unix/Linux Commands &#8212; Coding Notes</title>
+    <title>Unix/Linux Commands List &#8212; Coding Notes</title>
   
   
   
@@ -153,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Unix/Linux Commands</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Unix/Linux Commands List</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="bash.html">BASH Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
 
@@ -333,7 +333,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Unix/Linux Commands</h1>
+    <h1>Unix/Linux Commands List</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -343,10 +343,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">awk</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math">Math</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">awk</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">cat</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">cd</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">cp</a></li>
@@ -367,8 +364,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="unix-linux-commands">
-<h1>Unix/Linux Commands<a class="headerlink" href="#unix-linux-commands" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="unix-linux-commands-list">
+<h1>Unix/Linux Commands List<a class="headerlink" href="#unix-linux-commands-list" title="Permalink to this heading">#</a></h1>
 <section id="awk">
 <h2>awk<a class="headerlink" href="#awk" title="Permalink to this heading">#</a></h2>
 <p>Manipulation of text.</p>
@@ -382,9 +379,7 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span><span class="s1">&#39;{print $5} file&#39;</span>
 </pre></div>
 </div>
-<section id="math">
-<h3>Math<a class="headerlink" href="#math" title="Permalink to this heading">#</a></h3>
-<p>Average a column</p>
+<p><code class="docutils literal notranslate"><span class="pre">awk</span></code> can do math. Average a column by:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{ total += $2; count++ } END { print total/count }&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
@@ -392,7 +387,6 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{print $1 + 1}&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
-</section>
 </section>
 <section id="cat">
 <h2>cat<a class="headerlink" href="#cat" title="Permalink to this heading">#</a></h2>
@@ -439,8 +433,8 @@ document.write(`
 </section>
 <section id="cp">
 <h2>cp<a class="headerlink" href="#cp" title="Permalink to this heading">#</a></h2>
-<p>Copy files/folders</p>
-<p>Toopy file1 to file2 (new name):</p>
+<p>Copy files/folders.</p>
+<p>To copy file1 to file2 (new name):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>FILE_1<span class="o">]</span><span class="w"> </span><span class="o">[</span>FILE_2<span class="o">]</span>
 </pre></div>
 </div>
@@ -674,10 +668,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">awk</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math">Math</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">awk</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">cat</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">cd</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">cp</a></li>

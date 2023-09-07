@@ -153,7 +153,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="linux.html">Unix/Linux Commands</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="linux.html">Unix/Linux Commands List</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bash.html">BASH Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
 
@@ -320,7 +320,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -336,6 +338,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -349,6 +359,10 @@ document.write(`
 <h1>SLURM<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h1>
 <p>SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.</p>
 <p><a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
+<section id="directives">
+<h2>Directives<a class="headerlink" href="#directives" title="Permalink to this heading">#</a></h2>
+<p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many vCPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -409,6 +423,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
