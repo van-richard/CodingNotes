@@ -293,7 +293,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -309,6 +311,30 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">Built-in Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">Brace Expansion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">Conditional Execution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">Ampersand</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">Expressions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-in-out-err">Standard In/Out/Err</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">Redirect Commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">Looping</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">Start Up Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bashrc">~/.bashrc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-aliases">~/.bash_aliases</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -390,6 +416,8 @@ document.write(`
 </pre></div>
 </div>
 <p>This works for null (<code class="docutils literal notranslate"><span class="pre">foo=</span></code>) and empty string (<code class="docutils literal notranslate"><span class="pre">foo=&quot;&quot;</span></code>); zero (<code class="docutils literal notranslate"><span class="pre">foo=0</span></code>) returns <code class="docutils literal notranslate"><span class="pre">0</span></code>. Note that it only returns default value and doesn’t change variable value.</p>
+<section id="arrays">
+<h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h2>
 <p>Declare an array with 6 elements:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">array</span><span class="o">=(</span>one<span class="w"> </span>two<span class="w"> </span>three<span class="w"> </span>four<span class="w"> </span>five<span class="w"> </span>six<span class="o">)</span>
 </pre></div>
@@ -420,7 +448,9 @@ document.write(`
 <span class="k">done</span>
 </pre></div>
 </div>
-<p>Built-in variables. There are some useful built-in variables, like:</p>
+<section id="built-in-variables">
+<h3>Built-in Variables<a class="headerlink" href="#built-in-variables" title="Permalink to this heading">#</a></h3>
+<p>There are some useful built-in variables, like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Last program&#39;s return value: </span><span class="nv">$?</span><span class="s2">&quot;</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script&#39;s PID: </span><span class="nv">$$</span><span class="s2">&quot;</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Number of arguments passed to script: </span><span class="nv">$#</span><span class="s2">&quot;</span>
@@ -428,7 +458,10 @@ document.write(`
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script&#39;s arguments separated into different variables: </span><span class="nv">$1</span><span class="s2"> </span><span class="nv">$2</span><span class="s2">...&quot;</span>
 </pre></div>
 </div>
-<p>Brace Expansion {…} are used to generate arbitrary strings:</p>
+</section>
+<section id="brace-expansion">
+<h3>Brace Expansion<a class="headerlink" href="#brace-expansion" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">{...}</span></code> are used to generate arbitrary strings:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; 1 2 3 4 5 6 7 8 9 10</span>
 <span class="nb">echo</span><span class="w"> </span><span class="o">{</span>a..z<span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
 </pre></div>
@@ -440,11 +473,6 @@ document.write(`
 </pre></div>
 </div>
 <p>Now that we know how to echo and use variables, let’s learn some of the other basics of Bash!</p>
-<p>Our current directory is available through the command <code class="docutils literal notranslate"><span class="pre">pwd</span></code>. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> stands for “print working directory”. We can also use the built-in variable <code class="docutils literal notranslate"><span class="pre">$PWD</span></code>. Observe that the following are equivalent:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;I&#39;m in </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># execs `pwd` and interpolates output</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;I&#39;m in </span><span class="nv">$PWD</span><span class="s2">&quot;</span><span class="w"> </span><span class="c1"># interpolates the variable</span>
-</pre></div>
-</div>
 <p>If you get too much output in your terminal, or from a script, the command <code class="docutils literal notranslate"><span class="pre">clear</span></code> clears your screen:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clear
 </pre></div>
@@ -459,7 +487,9 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello, </span><span class="nv">$name</span><span class="s2">!&quot;</span>
 </pre></div>
 </div>
-<p>There is also conditional execution</p>
+</section>
+<section id="conditional-execution">
+<h3>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command fails&quot;</span>
 <span class="c1"># =&gt; Always executed</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command does NOT fail&quot;</span>
@@ -467,6 +497,9 @@ document.write(`
 <span class="c1"># =&gt; Only executed if first command does NOT fail</span>
 </pre></div>
 </div>
+</section>
+<section id="ampersand">
+<h3>Ampersand<a class="headerlink" href="#ampersand" title="Permalink to this heading">#</a></h3>
 <p>A single ampersand <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> after a command runs it in the background. A background command’s output is printed to the terminal, but it cannot read from the input.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sleep<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
@@ -489,26 +522,23 @@ document.write(`
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">%1</span></code>, <code class="docutils literal notranslate"><span class="pre">%2</span></code>, etc. can be used for <code class="docutils literal notranslate"><span class="pre">fg</span></code> and <code class="docutils literal notranslate"><span class="pre">bg</span></code> as well</p>
 <p>Redefine command <code class="docutils literal notranslate"><span class="pre">ping</span></code> as alias to send only 5 packets</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">ping</span><span class="o">=</span><span class="s1">&#39;ping -c 5&#39;</span>
-</pre></div>
-</div>
-<p>Escape the alias and use command with this name instead</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="se">\p</span>ing<span class="w"> </span><span class="m">192</span>.168.1.1
-</pre></div>
-</div>
-<p>Print all aliases</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span><span class="w"> </span>-p
-</pre></div>
-</div>
+</section>
+<section id="expressions">
+<h3>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h3>
 <p>Expressions are denoted with the following format:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="k">$((</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="k">))</span><span class="w"> </span><span class="c1"># =&gt; 15</span>
 </pre></div>
 </div>
+</section>
+<section id="standard-in-out-err">
+<h3>Standard In/Out/Err<a class="headerlink" href="#standard-in-out-err" title="Permalink to this heading">#</a></h3>
 <p>Results (stdout) of the previous command can be passed as input (stdin) to the next command using a pipe <code class="docutils literal notranslate"><span class="pre">|</span></code>. Commands chained in this way are called a “pipeline”, and are run concurrently. The <code class="docutils literal notranslate"><span class="pre">grep</span></code> command filters the input with provided patterns. That’s how we can list .txt files in the current directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;\.txt&quot;</span>
 </pre></div>
 </div>
-<p>Look into <code class="docutils literal notranslate"><span class="pre">scp</span></code> or <code class="docutils literal notranslate"><span class="pre">sftp</span></code> if you plan on exchanging files between computers. <code class="docutils literal notranslate"><span class="pre">scp</span></code> behaves very similarly to <code class="docutils literal notranslate"><span class="pre">cp</span></code>. <code class="docutils literal notranslate"><span class="pre">sftp</span></code> is more interactive.</p>
+</section>
+<section id="redirect-commands">
+<h3>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h3>
 <p>You can redirect command input and output (stdin, stdout, and stderr) using “redirection operators”. Unlike a pipe, which passes output to a command, a redirection operator has a command’s input come from a file or stream, or sends its output to a file or stream.</p>
 <p>Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite <a class="reference external" href="http://hello.py">hello.py</a> with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>hello.py<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
@@ -555,18 +585,8 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;#helloworld&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>output.out<span class="w"> </span>&gt;/dev/null
 </pre></div>
 </div>
-<p>Cleanup temporary files verbosely (add <code class="docutils literal notranslate"><span class="pre">-i</span></code> for interactive). WARNING: <code class="docutils literal notranslate"><span class="pre">rm</span></code> commands cannot be undone</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-v<span class="w"> </span>output.out<span class="w"> </span>error.err<span class="w"> </span>output-and-error.log
-rm<span class="w"> </span>-r<span class="w"> </span>tempDir/<span class="w"> </span><span class="c1"># recursively delete</span>
-</pre></div>
-</div>
-<p>You can install the <code class="docutils literal notranslate"><span class="pre">trash-cli</span></code> Python package to have <code class="docutils literal notranslate"><span class="pre">trash</span></code> which puts files in the system trash and doesn’t delete them directly see <a class="reference external" href="https://pypi.org/project/trash-cli/">https://pypi.org/project/trash-cli/</a> if you want to be careful.</p>
 <p>Commands can be substituted within other commands using <code class="docutils literal notranslate"><span class="pre">$(</span> <span class="pre">):</span></code> The following command displays the number of files and directories in the current directory.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;There are </span><span class="k">$(</span>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span><span class="s2"> items here.&quot;</span>
-</pre></div>
-</div>
-<p>The same can be done using backticks `` but they can’t be nested - the preferred way is to use <code class="docutils literal notranslate"><span class="pre">$(</span> <span class="pre">).</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;There are `ls | wc -l` items here.&quot;</span>
 </pre></div>
 </div>
 <p>Bash uses a <code class="docutils literal notranslate"><span class="pre">case</span></code> statement that works similarly to switch in Java and C++:</p>
@@ -578,6 +598,9 @@ rm<span class="w"> </span>-r<span class="w"> </span>tempDir/<span class="w"> </s
 <span class="k">esac</span>
 </pre></div>
 </div>
+</section>
+<section id="looping">
+<h3>Looping<a class="headerlink" href="#looping" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops iterate for as many arguments given:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#The contents of $Variable is printed three times.</span>
 <span class="k">for</span><span class="w"> </span>Variable<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..3<span class="o">}</span>
@@ -629,6 +652,9 @@ rm<span class="w"> </span>-r<span class="w"> </span>tempDir/<span class="w"> </s
 <span class="c1"># =&gt; loop body here...</span>
 </pre></div>
 </div>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
 <p>You can also define functions</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Definition:
 function foo ()
@@ -662,6 +688,24 @@ foo arg1 arg2
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>foo<span class="w"> </span><span class="s2">&quot;My name is&quot;</span><span class="w"> </span><span class="nv">$Name</span>
 </pre></div>
 </div>
+</section>
+</section>
+<section id="start-up-files">
+<h2>Start Up Files<a class="headerlink" href="#start-up-files" title="Permalink to this heading">#</a></h2>
+<section id="bashrc">
+<h3>~/.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this heading">#</a></h3>
+<p>From the bash man page:</p>
+<blockquote>
+<div><p>“When bash is invoked as an interactive login shell, or as a non-interactive shell with the <code class="docutils literal notranslate"><span class="pre">--login</span></code> option, it first reads and executes commands from the file <code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code>, if that file exists. After reading that file, it looks for <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>, <code class="docutils literal notranslate"><span class="pre">~/.bash_login</span></code>, and <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>, in that order, and reads and executes commands from the first one that exists and is readable. The <code class="docutils literal notranslate"><span class="pre">--noprofile</span></code> option can be used when the shell is started to inhibit this behavior.”</p>
+</div></blockquote>
+<p>When an interactive shell that is not a login shell is started, bash reads and executes commands from <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>, if that file exists. This can be inhibited by using the <code class="docutils literal notranslate"><span class="pre">--norc</span></code> option. The <code class="docutils literal notranslate"><span class="pre">--rcfile</span></code> file option will force bash to read and execute commands from file instead of <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code></p>
+<p>Every new terminal window/tab that you open will load <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code></p>
+<p>On a brand new user account, none of these files will exist, they can be created with any suitable text editor that is capable of creating plain text files with unix style (<code class="docutils literal notranslate"><span class="pre">LF</span></code>) line endings. Save them into your home folder (<code class="docutils literal notranslate"><span class="pre">~/</span></code>)</p>
+</section>
+<section id="bash-aliases">
+<h3>~/.bash_aliases<a class="headerlink" href="#bash-aliases" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -722,6 +766,36 @@ foo arg1 arg2
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">Built-in Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">Brace Expansion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">Conditional Execution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">Ampersand</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">Expressions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-in-out-err">Standard In/Out/Err</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">Redirect Commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">Looping</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">Start Up Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bashrc">~/.bashrc</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-aliases">~/.bash_aliases</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
