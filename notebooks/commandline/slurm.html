@@ -156,7 +156,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="linux.html">Unix/Linux Commands List</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bash.html">BASH Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
-
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">SLURM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git.html">Git Commands</a></li>
 </ul>
@@ -317,7 +316,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">Basic Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">GPU Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">Exclusive Example</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -335,7 +339,50 @@ document.write(`
 <p><a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
 <section id="directives">
 <h2>Directives<a class="headerlink" href="#directives" title="Permalink to this heading">#</a></h2>
-<p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many vCPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code></p>
+<p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many CPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code></p>
+<section id="basic-example">
+<h3>Basic Example<a class="headerlink" href="#basic-example" title="Permalink to this heading">#</a></h3>
+<p>Change the words in all-caps to what you need.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --partition=PARTITION</span>
+<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
+<span class="c1">#SBATCH --nodes=NODES</span>
+<span class="c1">#SBATCH --ntasks=NTASKS</span>
+<span class="c1">#SBATCH --output=%j.out </span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH --name=JOBNAME</span>
+</pre></div>
+</div>
+</section>
+<section id="gpu-example">
+<h3>GPU Example<a class="headerlink" href="#gpu-example" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --partition=GPU_PARTITION</span>
+<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
+<span class="c1">#SBATCH --nodes=NODES</span>
+<span class="c1">#SBATCH --ntasks=NTASKS</span>
+<span class="c1">#SBATCH --output=%j.out </span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH --name=JOBNAME</span>
+<span class="c1">#SBATCH --gres=gpu:1</span>
+</pre></div>
+</div>
+</section>
+<section id="exclusive-example">
+<h3>Exclusive Example<a class="headerlink" href="#exclusive-example" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --partition=GPU_PARTITION</span>
+<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
+<span class="c1">#SBATCH --nodes=NODES</span>
+<span class="c1">#SBATCH --ntasks=NTASKS</span>
+<span class="c1">#SBATCH --output=%j.out </span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH --name=JOBNAME</span>
+<span class="c1">#SBATCH --mem=0</span>
+<span class="c1">#SBATCH --exclusive</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -406,7 +453,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">Basic Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">GPU Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">Exclusive Example</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

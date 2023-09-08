@@ -156,7 +156,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Unix/Linux Commands List</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="bash.html">BASH Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
-
 <li class="toctree-l2"><a class="reference internal" href="slurm.html">SLURM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git.html">Git Commands</a></li>
 </ul>
@@ -321,12 +320,22 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">cat</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">cd</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">cp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cut">cut</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep">grep</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#head">head</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#info">info</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">ls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#man">man</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">mkdir</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv">mv</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed">sed</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq">seq</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort">sort</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">setfacl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sudo">sudo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tail">tail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap">trap</a></li>
 </ul>
             </nav>
         </div>
@@ -433,6 +442,13 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="cut">
+<h2>cut<a class="headerlink" href="#cut" title="Permalink to this heading">#</a></h2>
+<p>Prints only the first column before the <code class="docutils literal notranslate"><span class="pre">,</span></code> character</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>file.txt
+</pre></div>
+</div>
+</section>
 <section id="grep">
 <h2>grep<a class="headerlink" href="#grep" title="Permalink to this heading">#</a></h2>
 <p>Searching for Pattern in File/Folders</p>
@@ -450,6 +466,61 @@ document.write(`
 </div>
 <p>Search pattern and get previous NUMBER of  lines</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-B<span class="w"> </span>NUMBER<span class="w"> </span>PATTERN<span class="w"> </span>FILE
+</pre></div>
+</div>
+<p>Print to stdout all lines of file.txt which match some regex. The example prints lines which begin with “foo” and end in “bar”</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt
+</pre></div>
+</div>
+<p>Pass the option “-c” to instead print the number of lines matching the regex</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt
+</pre></div>
+</div>
+<p>Other useful options are:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>someDir/<span class="w"> </span><span class="c1"># recursively `grep`</span>
+grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># give line numbers</span>
+grep<span class="w"> </span>-rI<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>someDir/<span class="w"> </span><span class="c1"># recursively `grep`, but ignore binary files</span>
+</pre></div>
+</div>
+<p>Perform the same initial search, but filter out the lines containing “baz”</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;baz&quot;</span>
+</pre></div>
+</div>
+<p>If you literally want to search for the string, and not the regex, use <code class="docutils literal notranslate"><span class="pre">fgrep</span></code> (or <code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">-F</span></code>)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fgrep<span class="w"> </span><span class="s2">&quot;foobar&quot;</span><span class="w"> </span>file.txt
+</pre></div>
+</div>
+</section>
+<section id="head">
+<h2>head<a class="headerlink" href="#head" title="Permalink to this heading">#</a></h2>
+<p>Print the first 10 lines of <code class="docutils literal notranslate"><span class="pre">file.txt</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>head<span class="w"> </span>file.txt
+</pre></div>
+</div>
+<p>Print X-number of lines of <code class="docutils literal notranslate"><span class="pre">file.txt</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>head<span class="w"> </span>-n<span class="w"> </span>X<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Where x is a number </span>
+</pre></div>
+</div>
+</section>
+<section id="help">
+<h2>help<a class="headerlink" href="#help" title="Permalink to this heading">#</a></h2>
+<p>Read Bash shell built-ins documentation with the bash <code class="docutils literal notranslate"><span class="pre">help</span></code> built-in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">help</span>
+<span class="nb">help</span><span class="w"> </span><span class="nb">help</span>
+<span class="nb">help</span><span class="w"> </span><span class="k">for</span>
+<span class="nb">help</span><span class="w"> </span><span class="k">return</span>
+<span class="nb">help</span><span class="w"> </span><span class="nb">source</span>
+<span class="nb">help</span><span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="info">
+<h2>info<a class="headerlink" href="#info" title="Permalink to this heading">#</a></h2>
+<p>Read info documentation with <code class="docutils literal notranslate"><span class="pre">info</span></code> (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apropos<span class="w"> </span>info<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;^info.*(&#39;</span>
+man<span class="w"> </span>info
+info<span class="w"> </span>info
+info<span class="w"> </span><span class="m">5</span><span class="w"> </span>info
 </pre></div>
 </div>
 </section>
@@ -480,6 +551,27 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-X
 </pre></div>
 </div>
+</section>
+<section id="man">
+<h2>man<a class="headerlink" href="#man" title="Permalink to this heading">#</a></h2>
+<p>Read Bash manpage documentation with <code class="docutils literal notranslate"><span class="pre">man</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apropos<span class="w"> </span>bash
+man<span class="w"> </span><span class="m">1</span><span class="w"> </span>bash
+man<span class="w"> </span>bash
+</pre></div>
+</div>
+</section>
+<section id="mkdir">
+<h2>mkdir<a class="headerlink" href="#mkdir" title="Permalink to this heading">#</a></h2>
+<p>Create new directories.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>myNewDir
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag causes new intermediate directories to be created as necessary.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>myNewDir/with/intermediate/directories
+</pre></div>
+</div>
+<p>If the intermediate directories didn’t already exist, running the above command without the <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag would return an error</p>
 </section>
 <section id="mv">
 <h2>mv<a class="headerlink" href="#mv" title="Permalink to this heading">#</a></h2>
@@ -537,6 +629,13 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="sort">
+<h2>sort<a class="headerlink" href="#sort" title="Permalink to this heading">#</a></h2>
+<p>Print <code class="docutils literal notranslate"><span class="pre">file.txt</span></code> lines in sorted order</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sort<span class="w"> </span>file.txt
+</pre></div>
+</div>
+</section>
 <section id="setfacl">
 <h2>setfacl<a class="headerlink" href="#setfacl" title="Permalink to this heading">#</a></h2>
 <p>Give specific user permission to read/write/execute a folder.</p>
@@ -570,6 +669,33 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</section>
+<section id="sudo">
+<h2>sudo<a class="headerlink" href="#sudo" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span></code> is used to perform commands as the superuser usually it will ask interactively the password of superuser</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">NAME1</span><span class="o">=</span><span class="k">$(</span>whoami<span class="k">)</span>
+<span class="nv">NAME2</span><span class="o">=</span><span class="k">$(</span>sudo<span class="w"> </span>whoami<span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Was </span><span class="nv">$NAME1</span><span class="s2">, then became more powerful </span><span class="nv">$NAME2</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="tail">
+<h2>tail<a class="headerlink" href="#tail" title="Permalink to this heading">#</a></h2>
+<p>Print the last 10 lines of <code class="docutils literal notranslate"><span class="pre">file.txt</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>file.txt
+</pre></div>
+</div>
+<p>Print X-number of lines of <code class="docutils literal notranslate"><span class="pre">file.txt</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>-n<span class="w"> </span>X<span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># Where x is a number </span>
+</pre></div>
+</div>
+</section>
+<section id="trap">
+<h2>trap<a class="headerlink" href="#trap" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">trap</span></code> command allows you to execute a command whenever your script receives a signal. Here, <code class="docutils literal notranslate"><span class="pre">trap</span></code> will execute <code class="docutils literal notranslate"><span class="pre">rm</span></code> if it receives any of the three listed signals.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">trap</span><span class="w"> </span><span class="s2">&quot;rm </span><span class="nv">$TEMP_FILE</span><span class="s2">; exit&quot;</span><span class="w"> </span>SIGHUP<span class="w"> </span>SIGINT<span class="w"> </span>SIGTERM
+</pre></div>
+</div>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -646,12 +772,22 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">cat</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">cd</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">cp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cut">cut</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep">grep</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#head">head</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#info">info</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">ls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#man">man</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">mkdir</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv">mv</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed">sed</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq">seq</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort">sort</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">setfacl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sudo">sudo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tail">tail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap">trap</a></li>
 </ul>
   </nav></div>
 
