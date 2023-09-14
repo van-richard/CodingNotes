@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/chimera/chimera';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Movie Making with ChimeraX" href="movies.html" />
-    <link rel="prev" title="Intel Environment on Conda with m1/m2 Macs" href="../python/intel.html" />
+    <link rel="next" title="Saving Images" href="images.html" />
+    <link rel="prev" title="Jupyter Notebooks" href="../python/jupyter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -163,10 +163,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../python/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="movies.html">Movie Making with ChimeraX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fading.html">Fading between Visual States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morph.html">Morphing</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../websites/makewebsite.html">Making Websites</a></li>
@@ -318,11 +321,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-images">Saving Images</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-quality-png-file">High quality PNG file.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transparent-background">Transparent Background</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -378,24 +376,6 @@ document.write(`
 </tbody>
 </table>
 </section>
-<section id="saving-images">
-<h2>Saving Images<a class="headerlink" href="#saving-images" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">picture</span><span class="o">.</span><span class="n">png</span> <span class="n">supersample</span> <span class="mi">3</span> <span class="n">transparentBackground</span> <span class="kc">True</span>
-</pre></div>
-</div>
-<section id="high-quality-png-file">
-<h3>High quality PNG file.<a class="headerlink" href="#high-quality-png-file" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span> <span class="n">supersample</span> <span class="mi">3</span> 
-</pre></div>
-</div>
-</section>
-<section id="transparent-background">
-<h3>Transparent Background<a class="headerlink" href="#transparent-background" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span> <span class="n">transparentBackground</span> <span class="n">true</span>
-</pre></div>
-</div>
-</section>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -432,20 +412,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../python/intel.html"
+       href="../python/jupyter.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Intel Environment on Conda with m1/m2 Macs</p>
+        <p class="prev-next-title">Jupyter Notebooks</p>
       </div>
     </a>
     <a class="right-next"
-       href="movies.html"
+       href="images.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Movie Making with ChimeraX</p>
+        <p class="prev-next-title">Saving Images</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -469,11 +449,6 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-images">Saving Images</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-quality-png-file">High quality PNG file.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transparent-background">Transparent Background</a></li>
-</ul>
-</li>
 </ul>
   </nav></div>
 
