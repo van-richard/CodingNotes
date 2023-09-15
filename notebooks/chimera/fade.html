@@ -340,22 +340,27 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fading">
 <h1>Fading<a class="headerlink" href="#fading" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
-
-<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;video src=&quot;../../_static/chimerax_fade_cas9.mp4&quot; width=&quot;50%&quot; height=&quot;50%&quot; align=&quot;center&quot;/&gt;&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;center&gt;</span>
+<span class="s2">&lt;video width=&quot;50%&quot; height=&quot;50%&quot; controls&gt;</span>
+<span class="s2">  &lt;source src=&quot;../../_static/chimerax_fade_cas9.mp4&quot; type=&quot;video/mp4&quot;&gt;</span>
+<span class="s2">&lt;/video&gt;</span>
+<span class="s2">&lt;/center&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</details>
 <div class="cell_output docutils container">
-<div class="output text_html"><video src="../../_static/chimerax_fade_cas9.mp4" width="50%" height="50%" align="center"/></div></div>
+<div class="output text_html">
+<center>
+<video width="50%" height="50%" controls>
+  <source src="../../_static/chimerax_fade_cas9.mp4" type="video/mp4">
+</video>
+</center>
+</div></div>
 </div>
 <p>The code looks like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crossfade</span> <span class="mi">48</span>
