@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Overview &#8212; Computational Chemistry Notes</title>
+    <title>Chimera/ChimeraX &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/chimera/overview';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Movie Making with ChimeraX" href="movies.html" />
-    <link rel="prev" title="Overview" href="../commandline/slurmoverview.html" />
+    <link rel="next" title="Saving Images" href="images.html" />
+    <link rel="prev" title="Jupyter Notebooks" href="../python/jupyter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -137,7 +137,7 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    <p class="title logo__title">Computational Chemistry Notes</p>
+    <p class="title logo__title">Coding Notes</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -146,18 +146,35 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../index.html">
-                    Notes I wish I had as a first year Ph.D. student with no programming background.
+                    Overview
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/commands.html">BASH Commands</a></li>
-
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="movies.html">Movie Making with ChimeraX</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/linux.html">Unix/Linux Commands List</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bash.html">BASH Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">SLURM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">Git Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../websites/overview.html">Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../python/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fade.html">Fading between Visual States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morph.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rock.html">Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spin.html">Rocking</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../websites/makewebsite.html">Making Websites</a></li>
 </ul>
 
     </div>
@@ -199,6 +216,21 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+<a href="https://github.com/van-richard/CodingNotes" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
 
 
 
@@ -294,7 +326,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Overview</h1>
+    <h1>Chimera/ChimeraX</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -304,11 +336,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-images">Saving Images</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-quality-png-file">High quality PNG file.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transparent-background">Transparent Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
 </ul>
 </li>
 </ul>
@@ -322,18 +352,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="chimera-chimerax">
+<h1>Chimera/ChimeraX<a class="headerlink" href="#chimera-chimerax" title="Permalink to this heading">#</a></h1>
+<p>Chimera and <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a> are both great molecular visualization tools developed by UCSF.</p>
+<p>ChimeraX is the newest program, and it can efficiently handle large data (i.e. PDBs with thousands of atoms). It is my prefered GUI when exploring new structures and making videos/figures.</p>
+<p>Download the latest version of ChimeraX, <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/download.html">HERE</a>! You will need to register for an account, otherwise you’ll get a notification everytime you open the software.</p>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading">#</a></h2>
 <section id="open-pdb-from-rcsb">
-<h2>Open PDB from RCSB<a class="headerlink" href="#open-pdb-from-rcsb" title="Permalink to this heading">#</a></h2>
+<h3>Open PDB from RCSB<a class="headerlink" href="#open-pdb-from-rcsb" title="Permalink to this heading">#</a></h3>
 <p>On ChimeraX command line, type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="o">*</span><span class="n">PDB_CODE</span><span class="o">*</span>
 </pre></div>
 </div>
-<p>Wher <em>PDB_CODE</em> is the 4-letter code from <a class="reference external" href="https://www.google.com/search?client=safari&amp;rls=en&amp;q=rcsb&amp;ie=UTF-8&amp;oe=UTF-8">RCSB</a></p>
+<p>Where <em>PDB_CODE</em> is the 4-letter code from <a class="reference external" href="https://www.google.com/search?client=safari&amp;rls=en&amp;q=rcsb&amp;ie=UTF-8&amp;oe=UTF-8">RCSB</a></p>
 </section>
 <section id="command-line-is-independent-of-model-panel">
-<h2>Command line is independent of model panel!<a class="headerlink" href="#command-line-is-independent-of-model-panel" title="Permalink to this heading">#</a></h2>
+<h3>Command line is independent of model panel!<a class="headerlink" href="#command-line-is-independent-of-model-panel" title="Permalink to this heading">#</a></h3>
+<p>Rather than searching through the GUI for the function you need (Show/Hide atoms/ribbon/surface), you can use the commmand line interface to control the display.</p>
 <p>Command Line Options:</p>
 <table class="table">
 <thead>
@@ -365,23 +401,6 @@ document.write(`
 </tr>
 </tbody>
 </table>
-</section>
-<section id="saving-images">
-<h2>Saving Images<a class="headerlink" href="#saving-images" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">picture</span><span class="o">.</span><span class="n">png</span> <span class="n">supersample</span> <span class="mi">3</span> <span class="n">transparentBackground</span> <span class="kc">True</span>
-</pre></div>
-</div>
-<section id="high-quality-png-file">
-<h3>High quality PNG file.<a class="headerlink" href="#high-quality-png-file" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span> <span class="n">supersample</span> <span class="mi">3</span> 
-</pre></div>
-</div>
-</section>
-<section id="transparent-background">
-<h3>Transparent Background<a class="headerlink" href="#transparent-background" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span> <span class="n">transparentBackground</span> <span class="n">true</span>
-</pre></div>
-</div>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -420,20 +439,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../commandline/slurmoverview.html"
+       href="../python/jupyter.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Overview</p>
+        <p class="prev-next-title">Jupyter Notebooks</p>
       </div>
     </a>
     <a class="right-next"
-       href="movies.html"
+       href="images.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Movie Making with ChimeraX</p>
+        <p class="prev-next-title">Saving Images</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -455,11 +474,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-images">Saving Images</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-quality-png-file">High quality PNG file.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transparent-background">Transparent Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
 </ul>
 </li>
 </ul>
