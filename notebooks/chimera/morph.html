@@ -153,17 +153,18 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/linux.html">Unix/Linux Commands List</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/bash.html">BASH Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/0_overview.html">Unix/Linux Commands</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bash.html">BASH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">SSH-ing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">SLURM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">Git Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../python/0_overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/website.html">Designing Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="0_overview.html">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -174,7 +175,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="spin.html">Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../websites/makewebsite.html">Making Websites</a></li>
 </ul>
 
     </div>
@@ -336,10 +336,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">Morphing transition between 2 PDB structures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">Morphing transition between 2 PDB structures</a></li>
 </ul>
             </nav>
         </div>
@@ -353,29 +350,25 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="morphing">
 <h1>Morphing<a class="headerlink" href="#morphing" title="Permalink to this heading">#</a></h1>
-<video src="../../_static/chimerax_morph_fncas12a.mp4" width="50%" height="50%" align="center"/><section id="morphing-transition-between-2-pdb-structures">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;video src=&quot;../../_static/chimerax_morph_fncas12a.mp4&quot; width=&quot;50%&quot; height=&quot;50%&quot; align=&quot;center&quot;/&gt;&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="../../_static/chimerax_morph_fncas12a.mp4" width="50%" height="50%" align="center"/></div></div>
+</div>
+<section id="morphing-transition-between-2-pdb-structures">
 <h2>Morphing transition between 2 PDB structures<a class="headerlink" href="#morphing-transition-between-2-pdb-structures" title="Permalink to this heading">#</a></h2>
-<p>Note: You must align the structures before morphing.</p>
+<p>Note: You need to align the structures before morphing.</p>
 <p><em>Morph between 2 PDB structures of FnCas12a (PDB 6GTG to 6I1K)</em></p>
-<p>The code looks like:</p>
+<p>The code looks like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">morph</span> <span class="c1">#1,2,3,4,5 frames 100</span>
 </pre></div>
 </div>
-<section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
-<p>Open 2 PDB files for FnCas12a.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="mi">6</span><span class="n">i1k</span> <span class="mi">6</span><span class="n">gtg</span>
-</pre></div>
-</div>
-<p>Align the two structures.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">match</span> <span class="c1">#2 to #1</span>
-</pre></div>
-</div>
-<p>Morph transition is done by:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">morph</span> <span class="c1">#1,2,3,4,5 frames 100</span>
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 
@@ -446,10 +439,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">Morphing transition between 2 PDB structures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">Morphing transition between 2 PDB structures</a></li>
 </ul>
   </nav></div>
 

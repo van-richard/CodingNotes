@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>BASH Overview &#8212; Coding Notes</title>
+    <title>BASH &#8212; Coding Notes</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="SSH-ing" href="ssh.html" />
-    <link rel="prev" title="Unix/Linux Commands List" href="linux.html" />
+    <link rel="prev" title="Unix/Linux Commands" href="0_overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,17 +153,18 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="linux.html">Unix/Linux Commands List</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">BASH Overview</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="0_overview.html">Unix/Linux Commands</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">BASH</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="slurm.html">SLURM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="git.html">Git Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../python/0_overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/website.html">Designing Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chimera/0_overview.html">Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -174,7 +175,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../websites/makewebsite.html">Making Websites</a></li>
 </ul>
 
     </div>
@@ -326,7 +326,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>BASH Overview</h1>
+    <h1>BASH</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -336,6 +336,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">1. Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">Built-in Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">Brace Expansion</a></li>
@@ -348,7 +349,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">Start Up Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">2. Start Up Files</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bashrc">~/.bashrc</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-aliases">~/.bash_aliases</a></li>
 </ul>
@@ -364,8 +365,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="bash-overview">
-<h1>BASH Overview<a class="headerlink" href="#bash-overview" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="bash">
+<h1>BASH<a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h1>
+<section id="overview">
+<h2>1. Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>First line of the script is the shebang which tells the system how to execute the script:</p>
 <p>[Shebang (#!)](<a class="reference external" href="https://en.wikipedia.org/wiki/Shebang_(Unix)">https://en.wikipedia.org/wiki/Shebang_(Unix)</a></p>
 <p>Comments start with #. The <code class="docutils literal notranslate"><span class="pre">shebang</span></code> is also a comment.</p>
@@ -436,6 +439,7 @@ document.write(`
 </pre></div>
 </div>
 <p>This works for null (<code class="docutils literal notranslate"><span class="pre">foo=</span></code>) and empty string (<code class="docutils literal notranslate"><span class="pre">foo=&quot;&quot;</span></code>); zero (<code class="docutils literal notranslate"><span class="pre">foo=0</span></code>) returns <code class="docutils literal notranslate"><span class="pre">0</span></code>. Note that it only returns default value and doesn’t change variable value.</p>
+</section>
 <section id="arrays">
 <h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h2>
 <p>Declare an array with 6 elements:</p>
@@ -711,7 +715,7 @@ foo arg1 arg2
 </section>
 </section>
 <section id="start-up-files">
-<h2>Start Up Files<a class="headerlink" href="#start-up-files" title="Permalink to this heading">#</a></h2>
+<h2>2. Start Up Files<a class="headerlink" href="#start-up-files" title="Permalink to this heading">#</a></h2>
 <section id="bashrc">
 <h3>~/.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this heading">#</a></h3>
 <p>From the bash man page:</p>
@@ -760,12 +764,12 @@ foo arg1 arg2
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="linux.html"
+       href="0_overview.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unix/Linux Commands List</p>
+        <p class="prev-next-title">Unix/Linux Commands</p>
       </div>
     </a>
     <a class="right-next"
@@ -795,6 +799,7 @@ foo arg1 arg2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">1. Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">Built-in Variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">Brace Expansion</a></li>
@@ -807,7 +812,7 @@ foo arg1 arg2
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">Start Up Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">2. Start Up Files</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bashrc">~/.bashrc</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-aliases">~/.bash_aliases</a></li>
 </ul>
