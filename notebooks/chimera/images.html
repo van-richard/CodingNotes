@@ -64,8 +64,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/chimera/images';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Fading between Visual States" href="fading.html" />
-    <link rel="prev" title="Chimera/ChimeraX" href="chimera.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -150,7 +148,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/linux.html">Unix/Linux Commands List</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -166,13 +164,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chimera.html">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fading.html">Fading between Visual States</a></li>
-<li class="toctree-l2"><a class="reference internal" href="morph.html">Morphing</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../websites/makewebsite.html">Making Websites</a></li>
 </ul>
 
     </div>
@@ -311,9 +302,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -329,15 +318,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#high-quality-png-file">High quality PNG file.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transparent-background">Transparent Background</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -349,22 +329,20 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="saving-images">
 <h1>Saving Images<a class="headerlink" href="#saving-images" title="Permalink to this heading">#</a></h1>
-<section id="high-quality-png-file">
-<h2>High quality PNG file.<a class="headerlink" href="#high-quality-png-file" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span> <span class="n">supersample</span> <span class="mi">3</span> 
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from IPython.display import HTML</span>
+<span class="c1"># html = &#39;&lt;img src=&quot;../../_static/&quot; width=&quot;50%&quot; height=&quot;50%&quot; align=&quot;center&quot;/&gt;&#39;</span>
+<span class="c1"># HTML(html)</span>
 </pre></div>
 </div>
-</section>
-<section id="transparent-background">
-<h2>Transparent Background<a class="headerlink" href="#transparent-background" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span> <span class="n">transparentBackground</span> <span class="kc">True</span>
-</pre></div>
 </div>
-<p>Combining Commands</p>
+</div>
+<p>You can save figures using the command line interface. The following example saves the display as a <code class="docutils literal notranslate"><span class="pre">.png</span></code> file. <code class="docutils literal notranslate"><span class="pre">Supersample</span> <span class="pre">3</span></code> helps the quality, and <code class="docutils literal notranslate"><span class="pre">transparentBackground</span></code> removes the white background.</p>
+<p>One liner:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">picture</span><span class="o">.</span><span class="n">png</span> <span class="n">supersample</span> <span class="mi">3</span> <span class="n">transparentBackground</span> <span class="kc">True</span>
 </pre></div>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -398,24 +376,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="chimera.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Chimera/ChimeraX</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="fading.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Fading between Visual States</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -425,21 +385,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#high-quality-png-file">High quality PNG file.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transparent-background">Transparent Background</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
