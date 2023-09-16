@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Designing Websites" href="website.html" />
-    <link rel="prev" title="Intel Environment on Conda with m1/m2 Macs" href="intel.html" />
+    <link rel="prev" title="Conda Commands" href="conda.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,7 +162,6 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="0_overview.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="conda.html">Conda Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Jupyter Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="website.html">Designing Websites</a></li>
 </ul>
@@ -175,6 +174,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simulations/preface/0_overview.html">Introductions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/preface/pdbfiles.html">PDB Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simulations/md/0_overview.html">Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/md/simple.html">Tutorial: Simple MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/md/angle.html">Angle Restraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/md/distance.html">Tutorial: Distance Restraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simulations/qmmm/0_overview.html">QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/qmmm/claisen.html">Tutorial: Claisen Rearrangment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../simulations/analysis/analysis.html">Analysis</a></li>
 </ul>
 
     </div>
@@ -336,6 +350,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kernals">Kernals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-kernals">Conda Kernals</a></li>
 </ul>
@@ -351,8 +366,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="jupyter-notebooks">
 <h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>The Jupyter Notebook App is a server-client application that allows editing and running notebook documents via a web browser. The Jupyter Notebook App can be executed on a local desktop requiring no internet access (as described in this document) or can be installed on a remote server and accessed through the internet.</p>
 <p>In addition to displaying/editing/running notebook documents, the Jupyter Notebook App has a “Dashboard” (Notebook Dashboard), a “control panel” showing local files and allowing to open notebook documents or shutting down their kernels.</p>
+</section>
 <section id="kernals">
 <h2>Kernals<a class="headerlink" href="#kernals" title="Permalink to this heading">#</a></h2>
 <p>A notebook kernel is a “computational engine” that executes the code contained in a Notebook document. The ipython kernel, referenced in this guide, executes python code. Kernels for many other languages exist (official kernels).</p>
@@ -406,12 +424,12 @@ the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernel
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intel.html"
+       href="conda.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Intel Environment on Conda with m1/m2 Macs</p>
+        <p class="prev-next-title">Conda Commands</p>
       </div>
     </a>
     <a class="right-next"
@@ -441,6 +459,7 @@ the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernel
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kernals">Kernals</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-kernals">Conda Kernals</a></li>
 </ul>

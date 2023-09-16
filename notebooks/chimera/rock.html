@@ -162,7 +162,6 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../python/0_overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/website.html">Designing Websites</a></li>
 </ul>
@@ -175,6 +174,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="spin.html">Rocking</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simulations/preface/0_overview.html">Introductions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/preface/pdbfiles.html">PDB Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simulations/md/0_overview.html">Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/md/simple.html">Tutorial: Simple MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/md/angle.html">Angle Restraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/md/distance.html">Tutorial: Distance Restraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../simulations/qmmm/0_overview.html">QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulations/qmmm/claisen.html">Tutorial: Claisen Rearrangment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../simulations/analysis/analysis.html">Analysis</a></li>
 </ul>
 
     </div>
@@ -349,13 +363,25 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 
-<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;&lt;video src=&quot;../../_static/chimerax_spin_cas9.mp4&quot; width=&quot;50%&quot; height=&quot;50%&quot; align=&quot;center&quot;/&gt;&quot;&quot;&quot;</span><span class="p">)</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;center&gt;</span>
+<span class="s2">&lt;video width=&quot;50%&quot; height=&quot;50%&quot; controls&gt;</span>
+<span class="s2">  &lt;source src=&quot;../../_static/chimerax_spin_cas9.mp4&quot; type=&quot;video/mp4&quot;&gt;</span>
+<span class="s2">&lt;/video&gt;</span>
+<span class="s2">&lt;/center&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><video src="../../_static/chimerax_spin_cas9.mp4" width="50%" height="50%" align="center"/></div></div>
+<div class="output text_html">
+<center>
+<video width="50%" height="50%" controls>
+  <source src="../../_static/chimerax_spin_cas9.mp4" type="video/mp4">
+</video>
+</center>
+</div></div>
 </div>
 <p>The code looks like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">movie</span> <span class="n">record</span> <span class="n">supersample</span> <span class="mi">3</span>
