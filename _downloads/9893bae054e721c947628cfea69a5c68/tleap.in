@@ -1,0 +1,13 @@
+source leaprc.gaff
+
+loadamberparams allyl_vinyl_ether.frcmod 
+
+ligand = loadmol2 allyl_vinyl_ether.mol2
+
+saveamberparm ligand step3_pbcsetup.parm7 step3_pbcsetup.rst7
+savepdb ligand step3_pbcsetup.pdb
+
+quit
+
+
+

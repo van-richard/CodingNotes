@@ -1,0 +1,10 @@
+#!/bin/bash
+
+n=-2.0
+for i in `seq -f"%02g" 0 20`
+do
+    nn=$(printf "%.2f" "$n")
+    sed "s/__REST__/${nn}/g" input/cv.rst > ${i}/cv.rst
+    n=`echo $n + 0.20 | bc`
+done
+

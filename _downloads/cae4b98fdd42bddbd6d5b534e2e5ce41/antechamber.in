@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# USAGE:
+# bash antechamber.in [input name] [charge]
+
+# If you want it for ligand.pdb 
+# EXAMPLE:
+# bash antechamber.in ligand 0
+
+module load OpenBabel
+module load intel/2020a
+source /home/panxl/amber20/amber.sh
+
+obabel ${1}.pdb -h -opdb -O ${1}_h.pdb
+pdb4amber -i ${1}_h.pdb -o ${1}_num.pdb
+antechamber -fi pdb -fo mol2 -i ${1}_num.pdb -o ${1}.mol2 -c bcc -pf y -nc $2
+parmchk2 -i ${1}.mol2 -f mol2 -o ${1}.frcmod

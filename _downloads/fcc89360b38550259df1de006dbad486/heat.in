@@ -1,0 +1,37 @@
+A NVT simulation for common production-level simulations
+ &cntrl
+    imin=0,        ! No minimization
+    irest=0,       ! This is NOT a restart of an old MD simulation
+    ntx=1,         ! So our inpcrd file has no velocities
+
+    ! Temperature control
+    ntt=3,         ! Langevin dynamics
+    gamma_ln=1.0,  ! Friction coefficient (ps^-1)
+    temp0=300,     ! Target temperature
+
+    ! Potential energy control
+    cut=9.0,       ! nonbonded cutoff, in angstroms
+
+    ! MD settings
+    nstlim=10000,  ! 10K steps, 10 ps total
+    dt=0.001,      ! time step (ps)
+
+    ! SHAKE
+    ntc=2,         ! Constrain bonds containing hydrogen
+    ntf=2,         ! Do not calculate forces of bonds containing hydrogen
+
+    ! Control how often information is printed
+    ntpr=1000,     ! Print energies every 1000 steps
+    ntwx=1000,     ! Print coordinates every 5000 steps to the trajectory
+    ntwr=1000,     ! Print a restart file every 10K steps (can be less frequent)
+    ntxo=2,        ! Write NetCDF format
+    ioutfm=1,      ! Write NetCDF format (always do this!)
+
+    ! Wrap coordinates when printing them to the same unit cell
+    iwrap=1,
+
+    ! Restraint options
+    ntr=1,
+    restraint_wt=5,
+    restraintmask=':1-6', ! Apply weak positional restraint on residues
+ /
