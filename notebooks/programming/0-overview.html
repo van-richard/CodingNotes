@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">https://van-richard.github.io</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">Home</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="commandline/0-overview.html">BASH</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="commandline/ssh.html">SSH-ing</a></li>
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="chimera/0-overview.html">Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="chimera/0-overview.html">ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="chimera/images.html">Saving Images</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chimera/fade.html">Fading</a></li>
 <li class="toctree-l3"><a class="reference internal" href="chimera/morph.html">Morphing</a></li>
@@ -173,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="chimera/spin.html">Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="websites/makewebsite.html">Making Websites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="websites/jupyterbook.html">Making Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation/0-overview.html">Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -334,7 +334,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -350,6 +352,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topics">Topics</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -361,6 +371,32 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="programming">
 <h1>Programming<a class="headerlink" href="#programming" title="Permalink to this heading">#</a></h1>
+<section id="topics">
+<h2>Topics<a class="headerlink" href="#topics" title="Permalink to this heading">#</a></h2>
+<p>Command Line Tools</p>
+<ul class="simple">
+<li><p>Bash (Unix Shell)</p>
+<ul>
+<li><p>Vi/Vim (Text Editor)</p></li>
+<li><p>Git (with GitHub)</p></li>
+</ul>
+</li>
+<li><p>Python</p></li>
+</ul>
+<p>Molecular Visualization</p>
+<ul class="simple">
+<li><p>ChimeraX</p></li>
+<li><p>VMD</p></li>
+</ul>
+<p>Molecular Dynamics</p>
+<ul class="simple">
+<li><p>Amber</p></li>
+</ul>
+<p>Simulation Analysis</p>
+<ul class="simple">
+<li><p>Ambertools</p></li>
+</ul>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -423,6 +459,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topics">Topics</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
