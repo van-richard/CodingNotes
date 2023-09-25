@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial: Simple MD &#8212; Coding Notes</title>
+    <title>Molecular Simulations &#8212; Coding Notes</title>
   
   
   
@@ -61,7 +61,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/md/simple';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/md/0-overview';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -251,7 +251,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/notebooks/simulation/md/simple.ipynb" target="_blank"
+      <li><a href="../../../_sources/notebooks/simulation/md/0-overview.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -333,7 +333,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial: Simple MD</h1>
+    <h1>Molecular Simulations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -343,14 +343,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-inputs">Preparing Inputs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimization">Minimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heating">Heating</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#production-md">Production MD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">Molecular Dynamics (MD) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">Monte Carlo (MC) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">Molecular Descriptors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">Properties of Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">Other Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">Bond Breaking/Forming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">Course-Graining Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">Constant pH Simulations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-amber-md-with-sander">Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">Literature</a></li>
 </ul>
             </nav>
         </div>
@@ -362,155 +366,88 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-simple-md">
-<h1>Tutorial: Simple MD<a class="headerlink" href="#tutorial-simple-md" title="Permalink to this heading">#</a></h1>
-<img src="example/simple/ala.mp4" width="50%" height="50%"/>
-<p>This is a simple tutorial of alanine dipeptide in a water box. We will perform the typical MD simulations steps such as equilibration (minimizatino, heating 20 ps) and have a production run (100 ps). This will take about 1 hour.</p>
-<p>To do so, we will need to make:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="molecular-simulations">
+<h1>Molecular Simulations<a class="headerlink" href="#molecular-simulations" title="Permalink to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<p>Molecular simulations methods involves a particle-based description of the system, and is propagated by deterministic or probabilistic rules to generate a trajectory describing its evolution over course of the simulation.</p>
+<p>Properties can be calculated from <em>snapshots</em> (<em>i.e.</em> a configuration of the system, or <em>frame</em>), and then averaged over the trajectory to calculate estimates of said property.</p>
+<p>General methods fit into 2 categories, depending on how the system is propagated:</p>
 <ol class="arabic simple">
-<li><p>Topology file (*.parm7)</p></li>
-<li><p>Cooridnate file (*.rst7)</p></li>
-<li><p>MD input files (<a class="reference external" href="http://min.in">min.in</a>, <a class="reference external" href="http://heat.in">heat.in</a>, <a class="reference external" href="http://prod.in">prod.in</a>)</p></li>
+<li><p>Molecular Dynamics (MD) Simulations</p></li>
+<li><p>Monte Carlo (MC) Simulations</p></li>
 </ol>
-<p><em>NOTE: This tutorial can run on your personal computer. The example/files used the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment on my MacBook.</em></p>
-<p>Activated your <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
-</pre></div>
-</div>
-<section id="preparing-inputs">
-<h2>Preparing Inputs<a class="headerlink" href="#preparing-inputs" title="Permalink to this heading">#</a></h2>
-<p>Make a new working directory.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>tutorial1
-<span class="nb">cd</span><span class="w"> </span>tutorial1
-</pre></div>
-</div>
-<p>Since alanine dipeptide is an amino acid that is capped. We can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate our topology and coordinate files.</p>
-<p>To do so, make a file called <span class="xref myst">tleap.in</span></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
-<span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
-
-<span class="nv">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sequence<span class="w"> </span><span class="o">{</span><span class="w"> </span>ACE<span class="w"> </span>ALA<span class="w"> </span>NME<span class="w"> </span><span class="o">}</span>
-
-solvatebox<span class="w"> </span>system<span class="w"> </span>TIP3PBOX<span class="w"> </span><span class="m">12</span>.0<span class="w"> </span>iso<span class="w"> </span><span class="m">0</span>.8
-
-saveamberparm<span class="w"> </span>system<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>step3_pbcsetup.rst7
-
-quit
-</pre></div>
-</div>
-<p>Run the script, <code class="docutils literal notranslate"><span class="pre">tleap.in</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
-</pre></div>
-</div>
-<p>If you list the files in the current working directory, you should see</p>
+</section>
+<section id="molecular-dynamics-md-simulations">
+<h2>Molecular Dynamics (MD) Simulations<a class="headerlink" href="#molecular-dynamics-md-simulations" title="Permalink to this heading">#</a></h2>
+<p>In this approach, Newton’s equations of motion are numerically intergrated to generate the dynamic trajectory of the system.</p>
+<p>These simulations can be used to investigate structural, dynamic, and thermodynamic properties.</p>
+</section>
+<section id="monte-carlo-mc-simulations">
+<h2>Monte Carlo (MC) Simulations<a class="headerlink" href="#monte-carlo-mc-simulations" title="Permalink to this heading">#</a></h2>
+<p>In this approach, probabilistic rules are used to generate new configuration from the present configuration. This is repeated to generate sequences of states that be used to calculate structural and thermodynamic properties.</p>
+<p><strong>This approach does not calculate dynamical properties. MC simulations lack any concept of time.</strong></p>
+<p>The trajectory produced by MC simulations are an ensemble of configurations that reflect those that <em>could be</em> dynamically sampled.</p>
+</section>
+<section id="molecular-descriptors">
+<h2>Molecular Descriptors<a class="headerlink" href="#molecular-descriptors" title="Permalink to this heading">#</a></h2>
+<p>MD or MC simulations can be carried out with differnt underlying physical theories to describe the particle-base model of the system. For example:</p>
 <ol class="arabic simple">
-<li><p><span class="xref myst">step3_pbcsetup.parm7</span></p></li>
-<li><p><span class="xref myst">step3_pbcsetup.rst7</span></p></li>
+<li><p><strong>Quantum Mechanics (QM) Descriptors</strong></p>
+<ul class="simple">
+<li><p>Electrons are explicitly represented by solving the electronic structure of the molecules</p></li>
+<li><p>No (or few) empirical parameters are used</p></li>
+<li><p>Various approximations to the physics</p></li>
+</ul>
+</li>
+<li><p><strong>Molecular Mechanics (MM) Descriptors</strong></p>
+<ul class="simple">
+<li><p>Also called <em>Classical Mechanics</em> or <em>Classical Descriptors</em></p></li>
+<li><p>Molecules represented by groups of atoms</p></li>
+<li><p>Each atom is assigned an electric charge and potential energy function</p></li>
+<li><p>Large number of empirical parameters fitted from experiment, QM, or other data used to calculate bonded and nonbonded interactions.</p></li>
+</ul>
+</li>
 </ol>
-<p><em>ALWAYS VISUALIZE THESE TWO FILES BEFORE MOVING ON!</em>
-Next, we will make the Amber MD input files.</p>
-<p>They contain settings for each MD run. We will have 3 steps:</p>
+<p>Unless otherwise specified, MD simulations emply MM force fields, which calculate the forces that determine the system dynamics.</p>
+<p>MM simulations are faster than quantum simulations, making this a popular appraoch to study condensed phase biomolecular systems. However, they are of lower accuracy than QM simulations, and generally cannot simulate bond rearrangements…</p>
+<p>QM simjulations are too computationally expensive to allow for simulations of the time and length scales to describe most systems of interest. The size of the system also depends on the method chosen:</p>
+<ul class="simple">
+<li><p>High-level <em>ab inito</em> Methods (<em>i.e.</em> DFT)</p></li>
+<li><p>Semi-Empirical Methods (NDDO, PM3, AM1)</p></li>
+</ul>
+<p>For context, a typical QM simulation could be perforemd with a hundred atoms or fewer. Whereas MM simulations routinely have tens to hundreds or thousands of atoms in the system.</p>
+</section>
+<section id="properties-of-interest">
+<h2>Properties of Interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this heading">#</a></h2>
+<p>The size of the system alone does not dictate the use of classical descriptors. MM simulations are often used to calculate:</p>
 <ol class="arabic simple">
-<li><p>Minimization</p></li>
-<li><p>Heating (for 20 ps from 0 K to 300 K)</p></li>
-<li><p>Production MD (100 ps at 300 K and 1 atm)</p></li>
+<li><p>Free Energies</p></li>
+<li><p>Transport Properties at Lab Temperatures</p></li>
 </ol>
-<section id="minimization">
-<h3>Minimization<a class="headerlink" href="#minimization" title="Permalink to this heading">#</a></h3>
-<p>Make a <span class="xref myst">min.in</span> file, with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Minimize
-<span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">    </span>
-<span class="w">  </span><span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,<span class="w">        </span>
-<span class="w">  </span><span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">maxcyc</span><span class="o">=</span><span class="m">2000</span>,
-<span class="w">  </span><span class="nv">ncyc</span><span class="o">=</span><span class="m">1000</span>,
-<span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,
-<span class="w"> </span>/
-</pre></div>
-</div>
+<p>These properties include entropic contributions. In other words, the fluctuations and correlations of motions within a system can affect the calculated property.</p>
+<p><strong>Simluations not only samples single optimal states but must sample the correct distribution of states.</strong> This requires simulations of <em>some length.</em> In protein simulations, relevant timescale of biological prosses are often nanoseconds to microseconds in length. For example, rearrangements of buried amino acid sidechains or conformation changes to a protein domain.</p>
 </section>
-<section id="heating">
-<h3>Heating<a class="headerlink" href="#heating" title="Permalink to this heading">#</a></h3>
-<p>Make a <span class="xref myst">heat.in</span> file, with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Heat
-<span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,
-<span class="w">  </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.002,
-<span class="w">  </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">tempi</span><span class="o">=</span><span class="m">0</span>.0,
-<span class="w">  </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,
-<span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,
-<span class="w">  </span><span class="nv">ntb</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,
-<span class="w">  </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">2</span>.0,
-<span class="w">  </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">ig</span><span class="o">=</span>-1,
-<span class="w"> </span>/
-<span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;TEMP0&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">istep2</span><span class="o">=</span><span class="m">9000</span>,<span class="w"> </span><span class="nv">value1</span><span class="o">=</span><span class="m">0</span>.0,<span class="w"> </span><span class="nv">value2</span><span class="o">=</span><span class="m">300</span>.0<span class="w"> </span>/
-<span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;TEMP0&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">9001</span>,<span class="w"> </span><span class="nv">istep2</span><span class="o">=</span><span class="m">10000</span>,<span class="w"> </span><span class="nv">value1</span><span class="o">=</span><span class="m">300</span>.0,<span class="w"> </span><span class="nv">value2</span><span class="o">=</span><span class="m">300</span>.0<span class="w"> </span>/
-<span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
-</pre></div>
-</div>
+<section id="other-methods">
+<h2>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">#</a></h2>
+<section id="bond-breaking-forming">
+<h3>Bond Breaking/Forming<a class="headerlink" href="#bond-breaking-forming" title="Permalink to this heading">#</a></h3>
+<p>In classical simulations, bond breaking/forming are generally not allowed. The topology, or chemistry, of the system is is constant as a function of time. In other words, the chemical identity of a molecular remains constant (with the exception of constant pH simulations).</p>
+<p>The hybrid QM/MM scheme or use of reactive force fields are generally used.</p>
 </section>
-<section id="production-md">
-<h3>Production MD<a class="headerlink" href="#production-md" title="Permalink to this heading">#</a></h3>
-<p>Make a <span class="xref myst">prod.in</span> file, with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Production
-<span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,
-<span class="w">  </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">50000</span>,
-<span class="w">  </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.002,
-<span class="w">  </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,
-<span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,
-<span class="w">  </span><span class="nv">ntb</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">ntp</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,
-<span class="w">  </span><span class="nv">barostat</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">2</span>.0,
-<span class="w">  </span><span class="nv">ig</span><span class="o">=</span>-1,
-<span class="w"> </span>/
-</pre></div>
-</div>
+<section id="course-graining-methods">
+<h3>Course-Graining Methods<a class="headerlink" href="#course-graining-methods" title="Permalink to this heading">#</a></h3>
+<p>Above the level of MM are course-graining methods. This method will reduce the resolution and computational cost.</p>
+</section>
+<section id="constant-ph-simulations">
+<h3>Constant pH Simulations<a class="headerlink" href="#constant-ph-simulations" title="Permalink to this heading">#</a></h3>
+<p>Sample the titratable residues</p>
 </section>
 </section>
-<section id="run-amber-md-with-sander">
-<h2>Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code><a class="headerlink" href="#run-amber-md-with-sander" title="Permalink to this heading">#</a></h2>
-<p>Amber has 2 MD engines, <code class="docutils literal notranslate"><span class="pre">sander</span></code> and <code class="docutils literal notranslate"><span class="pre">pmemd</span></code>. <code class="docutils literal notranslate"><span class="pre">sander</span></code> is free and shipped with Ambertools.</p>
-<p>Now run each step in sequential order, starting with minimization.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.out<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo
-</pre></div>
-</div>
-<p>You should get <span class="xref myst">min.out</span>, <span class="xref myst">min.ncrst</span>, and <span class="xref myst">min.mdinfo</span></p>
-<p>When this is done, run <code class="docutils literal notranslate"><span class="pre">heat.in</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>heat.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>min.ncrst<span class="w"> </span>-o<span class="w"> </span>heat.out<span class="w"> </span>-r<span class="w"> </span>heat.ncrst<span class="w"> </span>-inf<span class="w"> </span>heat.mdinfo<span class="w"> </span>-x<span class="w"> </span>heat.nc
-</pre></div>
-</div>
-<p>You should get <span class="xref myst">heat.out</span>, <span class="xref myst">heat.ncrst</span>, <span class="xref myst">heat.mdinfo</span>, and <span class="xref myst">heat.nc</span></p>
-<p>Last, run the production MD with <code class="docutils literal notranslate"><span class="pre">prod.in</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>heat.ncrst<span class="w"> </span>-o<span class="w"> </span>prod.out<span class="w"> </span>-r<span class="w"> </span>prod.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod.nc
-</pre></div>
-</div>
-<p>You should get <span class="xref myst">prod.out</span>, <span class="xref myst">prod.ncrst</span>, <span class="xref myst">prod.mdinfo</span>, and <span class="xref myst">prod.nc</span></p>
-</section>
-<section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
-<p>Now you can visual the results with VMD or Chimera, and perform some analysis.</p>
+<section id="literature">
+<h2>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
+<p>I recommend these readings, as to “not reinvent the wheel” ..</p>
+<p><a class="reference external" href="https://doi.org/10.33011/livecoms.1.1.5957">Best Practices for Foundations in Molecular Simulations</a></p>
 </section>
 </section>
 
@@ -563,14 +500,18 @@ Next, we will make the Amber MD input files.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-inputs">Preparing Inputs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimization">Minimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heating">Heating</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#production-md">Production MD</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">Molecular Dynamics (MD) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">Monte Carlo (MC) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">Molecular Descriptors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">Properties of Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">Other Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">Bond Breaking/Forming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">Course-Graining Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">Constant pH Simulations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-amber-md-with-sander">Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">Literature</a></li>
 </ul>
   </nav></div>
 

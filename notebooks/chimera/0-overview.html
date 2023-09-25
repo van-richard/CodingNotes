@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Jupyter Notebooks &#8212; Coding Notes</title>
+    <title>Chimera/ChimeraX &#8212; Coding Notes</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/python/jupyter';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/chimera/0-overview';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Chimera/ChimeraX" href="../chimera/0-overview.html" />
-    <link rel="prev" title="Intel Environment on Conda with m1/m2 Macs" href="intel.html" />
+    <link rel="next" title="Saving Images" href="images.html" />
+    <link rel="prev" title="Jupyter Notebooks" href="../python/jupyter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,18 +162,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">Git Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="0-overview.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="conda.html">Conda Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Jupyter Notebooks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../python/0-overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chimera/0-overview.html">Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">Fading between Visual States</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">Spin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fade.html">Fading between Visual States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="morph.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rock.html">Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spin.html">Rocking</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../websites/makewebsite.html">Making Websites</a></li>
@@ -253,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/python/jupyter.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/chimera/0-overview.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,7 +335,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Jupyter Notebooks</h1>
+    <h1>Chimera/ChimeraX</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -345,8 +345,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kernals">Kernals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-kernals">Conda Kernals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -358,28 +361,65 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="jupyter-notebooks">
-<h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h1>
-<p>The Jupyter Notebook App is a server-client application that allows editing and running notebook documents via a web browser. The Jupyter Notebook App can be executed on a local desktop requiring no internet access (as described in this document) or can be installed on a remote server and accessed through the internet.</p>
-<p>In addition to displaying/editing/running notebook documents, the Jupyter Notebook App has a “Dashboard” (Notebook Dashboard), a “control panel” showing local files and allowing to open notebook documents or shutting down their kernels.</p>
-<section id="kernals">
-<h2>Kernals<a class="headerlink" href="#kernals" title="Permalink to this heading">#</a></h2>
-<p>A notebook kernel is a “computational engine” that executes the code contained in a Notebook document. The ipython kernel, referenced in this guide, executes python code. Kernels for many other languages exist (official kernels).</p>
-<p>When you open a Notebook document, the associated kernel is automatically launched. When the notebook is executed (either cell-by-cell or with menu Cell -&gt; Run All), the kernel performs the computation and produces the results. Depending on the type of computations, the kernel may consume significant CPU and RAM. Note that the RAM is not released until the kernel is shut-down.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="chimera-chimerax">
+<h1>Chimera/ChimeraX<a class="headerlink" href="#chimera-chimerax" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="images.html">Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fade.html">Fading between Visual States</a></li>
+<li class="toctree-l1"><a class="reference internal" href="morph.html">Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rock.html">Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spin.html">Rocking</a></li>
+</ul>
+</div>
+<p>Chimera and <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a> are both great molecular visualization tools developed by UCSF.</p>
+<p>ChimeraX is the newest program, and it can efficiently handle large data (i.e. PDBs with thousands of atoms). It is my prefered GUI when exploring new structures and making videos/figures.</p>
+<p>Download the latest version of ChimeraX, <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/download.html">HERE</a>! You will need to register for an account, otherwise you’ll get a notification everytime you open the software.</p>
+<section id="basic-usage">
+<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading">#</a></h2>
+<section id="open-pdb-from-rcsb">
+<h3>Open PDB from RCSB<a class="headerlink" href="#open-pdb-from-rcsb" title="Permalink to this heading">#</a></h3>
+<p>On ChimeraX command line, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="o">*</span><span class="n">PDB_CODE</span><span class="o">*</span>
+</pre></div>
+</div>
+<p>Where <em>PDB_CODE</em> is the 4-letter code from <a class="reference external" href="https://www.google.com/search?client=safari&amp;rls=en&amp;q=rcsb&amp;ie=UTF-8&amp;oe=UTF-8">RCSB</a></p>
 </section>
-<section id="conda-kernals">
-<h2>Conda Kernals<a class="headerlink" href="#conda-kernals" title="Permalink to this heading">#</a></h2>
-<p>Install <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> and <code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code> into your <code class="docutils literal notranslate"><span class="pre">base</span></code> conda environment.</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> package is for running notebooks.
-the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code> package allows you to switch conda environments directly in the web browser.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyterlab<span class="w"> </span>nb_conda_kernels
-</pre></div>
-</div>
-<p>To run jupyter, type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lab
-</pre></div>
-</div>
-<p>This should open your brower automatically. If not, copy the first or second link.</p>
+<section id="command-line-is-independent-of-model-panel">
+<h3>Command line is independent of model panel!<a class="headerlink" href="#command-line-is-independent-of-model-panel" title="Permalink to this heading">#</a></h3>
+<p>Rather than searching through the GUI for the function you need (Show/Hide atoms/ribbon/surface), you can use the commmand line interface to control the display.</p>
+<p>Command Line Options:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Option</p></th>
+<th class="head text-left"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>show [model #] [ribbon, atom, etc.]</p></td>
+<td class="text-left"><p>Displays the selection in ribbon, atom, etc.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>hide [model #] [ribbon, atom, etc.]</p></td>
+<td class="text-left"><p>Hides the selection in ribbon, atom, etc.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>color byhetero</p></td>
+<td class="text-left"><p>Colors by hetero-atom</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>color bychain</p></td>
+<td class="text-left"><p>Colors by chain</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>color bymodel</p></td>
+<td class="text-left"><p>Colors by model #</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>split [option: model #]</p></td>
+<td class="text-left"><p>Splits the model by chain</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>sel [model, chain, residue, or atom #]</p></td>
+<td class="text-left"><p>Select the model, chain, residue, or atom</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 </section>
 
@@ -396,7 +436,7 @@ the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernel
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/python"
+            path: "./notebooks/chimera"
         },
         predefinedOutput: true
     }
@@ -415,20 +455,20 @@ the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernel
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intel.html"
+       href="../python/jupyter.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Intel Environment on Conda with m1/m2 Macs</p>
+        <p class="prev-next-title">Jupyter Notebooks</p>
       </div>
     </a>
     <a class="right-next"
-       href="../chimera/0-overview.html"
+       href="images.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chimera/ChimeraX</p>
+        <p class="prev-next-title">Saving Images</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -450,8 +490,11 @@ the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernel
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kernals">Kernals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-kernals">Conda Kernals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
