@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/md/simple';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Angle Restraints" href="angle.html" />
+    <link rel="next" title="Tutorial: Distance Restraints" href="distance.html" />
     <link rel="prev" title="Molecular Dynamics" href="0-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -179,7 +179,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">Molecular Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Tutorial: Simple MD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="angle.html">Angle Restraints</a></li>
 <li class="toctree-l3"><a class="reference internal" href="distance.html">Tutorial: Distance Restraints</a></li>
 </ul>
 </li>
@@ -378,7 +377,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial-simple-md">
 <h1>Tutorial: Simple MD<a class="headerlink" href="#tutorial-simple-md" title="Permalink to this heading">#</a></h1>
-<img src="example/simple/ala.mp4" width="50%" height="50%"/>
+<img src="../../../_static/simple/ala.mp4" width="50%" height="50%"/>
 <p>This is a simple tutorial of alanine dipeptide in a water box. We will perform the typical MD simulations steps such as equilibration (minimizatino, heating 20 ps) and have a production run (100 ps). This will take about 1 hour.</p>
 <p>To do so, we will need to make:</p>
 <ol class="arabic simple">
@@ -399,7 +398,7 @@ document.write(`
 </pre></div>
 </div>
 <p>Since alanine dipeptide is an amino acid that is capped. We can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate our topology and coordinate files.</p>
-<p>To do so, make a file called <span class="xref myst">tleap.in</span></p>
+<p>To do so, make a file called <code class="docutils literal notranslate"><span class="pre">tleap.in</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
 <span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
 
@@ -418,8 +417,8 @@ quit
 </div>
 <p>If you list the files in the current working directory, you should see</p>
 <ol class="arabic simple">
-<li><p><span class="xref myst">step3_pbcsetup.parm7</span></p></li>
-<li><p><span class="xref myst">step3_pbcsetup.rst7</span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.parm7</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code></p></li>
 </ol>
 <p><em>ALWAYS VISUALIZE THESE TWO FILES BEFORE MOVING ON!</em>
 Next, we will make the Amber MD input files.</p>
@@ -431,7 +430,7 @@ Next, we will make the Amber MD input files.</p>
 </ol>
 <section id="minimization">
 <h3>Minimization<a class="headerlink" href="#minimization" title="Permalink to this heading">#</a></h3>
-<p>Make a <span class="xref myst">min.in</span> file, with:</p>
+<p>Make a <code class="docutils literal notranslate"><span class="pre">min.in</span></code> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Minimize
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">    </span>
@@ -448,7 +447,7 @@ Next, we will make the Amber MD input files.</p>
 </section>
 <section id="heating">
 <h3>Heating<a class="headerlink" href="#heating" title="Permalink to this heading">#</a></h3>
-<p>Make a <span class="xref myst">heat.in</span> file, with:</p>
+<p>Make a <code class="docutils literal notranslate"><span class="pre">heat.in</span></code> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Heat
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
@@ -478,7 +477,7 @@ Next, we will make the Amber MD input files.</p>
 </section>
 <section id="production-md">
 <h3>Production MD<a class="headerlink" href="#production-md" title="Permalink to this heading">#</a></h3>
-<p>Make a <span class="xref myst">prod.in</span> file, with:</p>
+<p>Make a <code class="docutils literal notranslate"><span class="pre">prod.in</span></code> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Production
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
@@ -506,21 +505,19 @@ Next, we will make the Amber MD input files.</p>
 <section id="run-amber-md-with-sander">
 <h2>Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code><a class="headerlink" href="#run-amber-md-with-sander" title="Permalink to this heading">#</a></h2>
 <p>Amber has 2 MD engines, <code class="docutils literal notranslate"><span class="pre">sander</span></code> and <code class="docutils literal notranslate"><span class="pre">pmemd</span></code>. <code class="docutils literal notranslate"><span class="pre">sander</span></code> is free and shipped with Ambertools.</p>
+<p>Alternatively, you can run this with the MPI version of <code class="docutils literal notranslate"><span class="pre">sander</span></code> or <code class="docutils literal notranslate"><span class="pre">pmemd</span></code>, or the GPU version of <code class="docutils literal notranslate"><span class="pre">pmemd</span></code> called <code class="docutils literal notranslate"><span class="pre">pmemd.cuda</span></code>. Just change <code class="docutils literal notranslate"><span class="pre">sander</span></code> to your desired MD engine.</p>
 <p>Now run each step in sequential order, starting with minimization.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.out<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo
 </pre></div>
 </div>
-<p>You should get <span class="xref myst">min.out</span>, <span class="xref myst">min.ncrst</span>, and <span class="xref myst">min.mdinfo</span></p>
 <p>When this is done, run <code class="docutils literal notranslate"><span class="pre">heat.in</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>heat.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>min.ncrst<span class="w"> </span>-o<span class="w"> </span>heat.out<span class="w"> </span>-r<span class="w"> </span>heat.ncrst<span class="w"> </span>-inf<span class="w"> </span>heat.mdinfo<span class="w"> </span>-x<span class="w"> </span>heat.nc
 </pre></div>
 </div>
-<p>You should get <span class="xref myst">heat.out</span>, <span class="xref myst">heat.ncrst</span>, <span class="xref myst">heat.mdinfo</span>, and <span class="xref myst">heat.nc</span></p>
 <p>Last, run the production MD with <code class="docutils literal notranslate"><span class="pre">prod.in</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>heat.ncrst<span class="w"> </span>-o<span class="w"> </span>prod.out<span class="w"> </span>-r<span class="w"> </span>prod.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod.nc
 </pre></div>
 </div>
-<p>You should get <span class="xref myst">prod.out</span>, <span class="xref myst">prod.ncrst</span>, <span class="xref myst">prod.mdinfo</span>, and <span class="xref myst">prod.nc</span></p>
 </section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
@@ -569,11 +566,11 @@ Next, we will make the Amber MD input files.</p>
       </div>
     </a>
     <a class="right-next"
-       href="angle.html"
+       href="distance.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Angle Restraints</p>
+        <p class="prev-next-title">Tutorial: Distance Restraints</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -179,7 +179,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="../md/0-overview.html">Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../md/simple.html">Tutorial: Simple MD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../md/angle.html">Angle Restraints</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../md/distance.html">Tutorial: Distance Restraints</a></li>
 </ul>
 </li>
@@ -383,7 +382,7 @@ document.write(`
 
 <span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    &lt;center&gt;</span>
-<span class="s2">    &lt;video src=&quot;../../../_static/claisen.mp4&quot; width=&quot;50%&quot; height=&quot;50%&quot; controls&gt;</span>
+<span class="s2">    &lt;video src=&quot;../../../_static/claisen/claisen.mp4&quot; width=&quot;50%&quot; height=&quot;50%&quot; controls&gt;</span>
 <span class="s2">    &lt;/video&gt;&lt;/center&gt;</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
@@ -392,7 +391,7 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output text_html">
     <center>
-    <video src="../../../_static/claisen.mp4" width="50%" height="50%" controls>
+    <video src="../../../_static/claisen/claisen.mp4" width="50%" height="50%" controls>
     </video></center>
 </div></div>
 </div>
@@ -410,8 +409,6 @@ document.write(`
 </pre></div>
 </div>
 <p>With IQmol, make a PDB file for allyl vinyl ether and copy this to <code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
-<p>The PDB can also be copied from here.</p>
-<p><span class="xref myst">allyl_vinyl_ether.pdb</span></p>
 <p>To make the topology and coordinate file for a small molecule, we need to:</p>
 <ol class="arabic simple">
 <li><p>Add hydrogens</p></li>
@@ -420,7 +417,6 @@ document.write(`
 <li><p>Get parameters</p></li>
 </ol>
 <p>I prepared a script for this. You will need to modify the modules/sources based on what software is available for you.</p>
-<p><span class="xref myst">antechamber.in</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># USAGE:</span>
@@ -441,12 +437,8 @@ parmchk2<span class="w"> </span>-i<span class="w"> </span><span class="si">${</s
 </pre></div>
 </div>
 <p>Running the script (<code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">antechamber.in</span> <span class="pre">all_vinyl_ether.pdb</span> <span class="pre">0</span></code>) should give you these files:</p>
-<p><span class="xref myst">allyl_vinyl_ether_h.pdb</span>,
-<span class="xref myst">allyl_vinyl_ether_h_num.pdb</span>,
-<span class="xref myst">allyl_vinyl_ether.mol2</span>, and
-<span class="xref myst">allyl_vinyl_ether.frcmod</span></p>
+<p>allyl_vinyl_ether_h.pdb, allyl_vinyl_ether_h_num.pdb, allyl_vinyl_ether.mol2], and allyl_vinyl_ether.frcmod</p>
 <p>Now we can use tleap to make our <code class="docutils literal notranslate"><span class="pre">.parm7</span></code> and <code class="docutils literal notranslate"><span class="pre">.rst7</span></code> files.</p>
-<p><span class="xref myst">tleap.in</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.gaff
 <span class="nb">source</span><span class="w"> </span>leaprc.water.tip3p<span class="w"> </span>
 
@@ -462,14 +454,13 @@ savepdb<span class="w"> </span>ligand<span class="w"> </span>step3_pbcsetup.pdb
 quit
 </pre></div>
 </div>
-<p>Run tleap, and you should get <span class="xref myst">step3_pbcsetup.parm7</span> and <span class="xref myst">step3_pbcsetup.rst7</span>.</p>
+<p>Run tleap, and you should get step3_pbcsetup.parm7 and step3_pbcsetup.rst7.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
 </pre></div>
 </div>
 <section id="restraint-files">
 <h3>Restraint Files<a class="headerlink" href="#restraint-files" title="Permalink to this heading">#</a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file will contain atomic restraints for the mechanism we are interested in.</p>
-<p><span class="xref myst">cv.rst</span></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># r1 - r2 (CC - CO bond)</span>
  <span class="o">&amp;</span><span class="n">rst</span>
   <span class="n">iat</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span>
@@ -489,8 +480,8 @@ quit
 <h3>QM/MM MD Input files<a class="headerlink" href="#qm-mm-md-input-files" title="Permalink to this heading">#</a></h3>
 <p>2 MD input files are used. The first file (step5.00_equilibration.mdin) is used for the initial pathway sampling at a few picoseconds. The second file (step6.00_equilibration.mdin) is used for additional sampling (+10 ps).</p>
 <ol class="arabic simple">
-<li><p><span class="xref myst">step5.00_equilibration.mdin</span></p></li>
-<li><p><span class="xref myst">step6.00_equilibration.mdin</span></p></li>
+<li><p>step5.00_equilibration.mdin</p></li>
+<li><p>step6.00_equilibration.mdin</p></li>
 </ol>
 <p>The general format of a QM/MM MD input file differs from classical MD with the <code class="docutils literal notranslate"><span class="pre">&amp;qmmm</span></code> section.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
@@ -569,7 +560,6 @@ quit
 <section id="generate-umbrella-windows">
 <h2>Generate Umbrella Windows<a class="headerlink" href="#generate-umbrella-windows" title="Permalink to this heading">#</a></h2>
 <p>The script <code class="docutils literal notranslate"><span class="pre">gen_inputs.in</span></code> will prepare folders for umbrella sampling, and modify the <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file so that each window has a different restraint value.</p>
-<p><span class="xref myst">gen_inputs.in</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 mkdir<span class="w"> </span>-p<span class="w"> </span><span class="m">00</span>
@@ -602,8 +592,7 @@ cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><s
 </section>
 <section id="running-qm-mm-simulation">
 <h2>Running QM/MM Simulation<a class="headerlink" href="#running-qm-mm-simulation" title="Permalink to this heading">#</a></h2>
-<p>Run QM/MM simulations of the inital pathway.</p>
-<p><span class="xref myst">runqmmm1.slurm</span></p>
+<p>Run QM/MM simulations of the inital pathway, <code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=debug</span>
 <span class="c1">#SBATCH --exclusive</span>
@@ -641,8 +630,7 @@ module<span class="w"> </span>load<span class="w"> </span>intel/2020a
 <span class="k">done</span>
 </pre></div>
 </div>
-<p>Once this is done, perform additional sampling in each window.</p>
-<p><span class="xref myst">runqmmm2.slurm</span></p>
+<p>Once this is done, perform additional sampling in each window, <code class="docutils literal notranslate"><span class="pre">runqmmm2.slurm</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=debug</span>
 <span class="c1">#SBATCH --exclusive</span>
@@ -658,7 +646,6 @@ module<span class="w"> </span>load<span class="w"> </span>intel/2020a
 <span class="nb">source</span><span class="w"> </span>/home/panxl/amber20/amber.sh
 <span class="nb">export</span><span class="w"> </span><span class="nv">UCX_TLS</span><span class="o">=</span>all
 
-<span class="c1">#SANDER=&quot;mpiexec.hydra -bootstrap slurm -n 1 sander.MPI&quot;</span>
 <span class="nv">SANDER</span><span class="o">=</span><span class="s2">&quot;sander&quot;</span>
 <span class="nv">init</span><span class="o">=</span><span class="s2">&quot;step3_pbcsetup&quot;</span>
 
