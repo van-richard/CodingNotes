@@ -377,7 +377,23 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial-simple-md">
 <h1>Tutorial: Simple MD<a class="headerlink" href="#tutorial-simple-md" title="Permalink to this heading">#</a></h1>
-<img src="../../../_static/simple/ala.mp4" width="50%" height="50%"/>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;center&gt;&lt;video src=&quot;../../../_static/md/simple/ala.mp4&quot; width=&quot;50%&quot; height=&quot;50%&quot; center controls&gt;</span>
+<span class="s2">    &lt;/video&gt;&lt;/center&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <center><video src="../../../_static/md/simple/ala.mp4" width="50%" height="50%" center controls>
+    </video></center>
+</div></div>
+</div>
 <p>This is a simple tutorial of alanine dipeptide in a water box. We will perform the typical MD simulations steps such as equilibration (minimizatino, heating 20 ps) and have a production run (100 ps). This will take about 1 hour.</p>
 <p>To do so, we will need to make:</p>
 <ol class="arabic simple">
