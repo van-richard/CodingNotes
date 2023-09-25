@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>QM/MM Simulations &#8212; Coding Notes</title>
+    <title>Principle Component Analysis &#8212; Coding Notes</title>
   
   
   
@@ -61,13 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/qmmm/0-overview';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/analysis/pca';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tutorial: Claisen Rearrangment" href="claisen.html" />
-    <link rel="prev" title="Tutorial: Distance Restraints" href="../md/distance.html" />
+    <link rel="next" title="Pairwise Distance" href="pairwisedistance.html" />
+    <link rel="prev" title="Analysis" href="0-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -190,15 +188,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../md/distance.html">Tutorial: Distance Restraints</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">QM/MM Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="claisen.html">Tutorial: Claisen Rearrangment</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../qmmm/0-overview.html">QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../qmmm/claisen.html">Tutorial: Claisen Rearrangment</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../analysis/0-overview.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/pca.html">Principle Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/pairwisedistance.html">Pairwise Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsd.html">RMSD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsf.html">RMSF</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Principle Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pairwisedistance.html">Pairwise Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rmsd.html">RMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rmsf.html">RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -272,7 +270,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/notebooks/simulation/qmmm/0-overview.ipynb" target="_blank"
+      <li><a href="../../../_sources/notebooks/simulation/analysis/pca.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -341,9 +339,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -354,22 +350,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>QM/MM Simulations</h1>
+    <h1>Principle Component Analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">Bonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">Nonbonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">Electrostatic Embedding</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -379,100 +364,44 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="qm-mm-simulations">
-<h1>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="claisen.html">Tutorial: Claisen Rearrangment</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="principle-component-analysis">
+<h1>Principle Component Analysis<a class="headerlink" href="#principle-component-analysis" title="Permalink to this heading">#</a></h1>
+<p><em>Example</em></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="n">topology</span> <span class="o">=</span> <span class="s2">&quot;/directory/topology.parm7&quot;</span>
+<span class="n">trajectory</span> <span class="o">=</span> <span class="s2">&quot;/directory/file.nc&quot;</span>
+
+<span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">trajectory</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="s2">&quot;topology&quot;</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">pca</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="s1">&#39;@CA&#39;</span><span class="p">,</span> <span class="n">n_vecs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">projection_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">projection_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">num1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">projection_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">num2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">traj</span><span class="o">.</span><span class="n">n_frames</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>        
+
+<span class="c1"># Percent Variance </span>
+<span class="n">pc1</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="n">pc2</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;PC1 (&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pc1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;PC2 (&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pc2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Frame #&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">folder</span><span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">rep</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;img/&#39;</span> <span class="o">+</span> <span class="n">folder</span><span class="o">+</span><span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">rep</span> <span class="o">+</span> <span class="s1">&#39;pca.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
 </div>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
-<p>Reference: <a class="reference external" href="https://www.youtube.com/watch?v=VK0e6-ndodM">https://www.youtube.com/watch?v=VK0e6-ndodM</a></p>
-<p>In general, a hybrid quantum mechanics/molecular mechanics (QM/MM) scheme requires:</p>
-<ul class="simple">
-<li><p>Small part of system is defined at quantum level (QM)</p></li>
-<li><p>Rest of system is defined at force field level (MM)</p></li>
-</ul>
-<p>The potential energy contains 3 types of interactions:</p>
-<ol class="arabic simple">
-<li><p>Interaction between particles in QM region</p></li>
-<li><p>Interactions between particles in MM region</p></li>
-<li><p>Interaction between QM and MM particles</p></li>
-</ol>
-<p>Points 1 and 2 are straightforward descriptions of the system. Point number 3 requires calculating the energy of the combined system, whic can be done in 2 ways:</p>
-<ol class="arabic simple">
-<li><p>Subtractive scheme</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-E = E_\mathrm{QM}  + E_\mathrm{MM} - E_\mathrm{QM-MM}
-\]</div>
-<p>Pros: No communication between QM and MM routines.
-Cons: Force field needed for QM. FF needs to be ‘flexible’ to describe change when reaction occurs. No QM polarization</p>
-<ol class="arabic simple" start="2">
-<li><p>Additive scheme</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-E = E_\mathrm{QM} + E_\mathrm{QM-MM} + E_\mathrm{MM}
-\]</div>
-<p>QM energy (<span class="math notranslate nohighlight">\(E_\mathrm{QM}\)</span>) is from DFT Kohn-Sham Hamiltonian. MM energy (<span class="math notranslate nohighlight">\(E_\mathrm{MM}\)</span>) is from force field. QM-MM interaction energy (<span class="math notranslate nohighlight">\(E_\mathrm{QM-MM}\)</span>) is:</p>
-<div class="math notranslate nohighlight">
-\[
-E_\mathrm{QM-MM} = E_\mathrm{bonded}^\mathrm{QM-MM} + _\mathrm{nonbonded}^\mathrm{QM-MM}
-\]</div>
-<p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and non bonded terms</p>
-</section>
-<section id="bonded-interactions">
-<h2>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[
-E_\mathrm{bonded}^\mathrm{QM-MM}
-\]</div>
-<p>Bonded interactions are introduced when covalent bonds connecting QM and MM regions are cut.</p>
-<p>This term is chosen at classical FF level.</p>
-<p>Care has to be taken when evaluating the QM wave function, to address this, several approaches have been developed:</p>
-<ol class="arabic simple">
-<li><p><strong>Monovalent capping atom:</strong> hydrogen atoms are placed along bond vector.</p></li>
-<li><p><strong>Link atom pseudopotential:</strong> linking atoms with scaled down psudopotential and requires a valence change which requires to constraint bond distance.</p></li>
-<li><p><strong>Generalized hybrid orbitals:</strong> hybrid orbitals are olacced on boundary atom and one participates in SCF calculation for wave function of QM region</p></li>
-</ol>
-</section>
-<section id="nonbonded-interactions">
-<h2>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this heading">#</a></h2>
-<p>Non bonded term is:</p>
-<div class="math notranslate nohighlight">
-\[
-E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm{pol.}^\mathrm{QM-MM}
-\]</div>
-<p>QM Polarization energy (<span class="math notranslate nohighlight">\(E_\mathrm{pol.}^\mathrm{QM-MM}\)</span>) describes the <em>electrostatic</em> interaction between MM charges and QM charge density. This can be calculated in one of three ways:</p>
-<ol class="arabic simple">
-<li><p><strong>Mechanical embedding:</strong> No influence of MM charge on QM part, i.e.  QM calculation is gas-phase -like without additional potential due to MM atoms</p>
-<ul class="simple">
-<li><p>This neglects. established by assigning fixed set of effective charges to QM region. QM partial charges re=computed at every integration step of simulation (least-squares fitting procedure</p></li>
-</ul>
-</li>
-<li><p><strong>Electrostatic embedding:</strong> QM polarization due to MM part included</p>
-<ul class="simple">
-<li><p>Estimated through additional term to QM Hamiltonian, where it is taken into account in terms of external charge distribution</p></li>
-</ul>
-</li>
-<li><p><strong>Polarized embedding:</strong> MM polarization due to QM part included as well</p>
-<ul class="simple">
-<li><p>Non-self consistently or fully self-consistently</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<section id="electrostatic-embedding">
-<h2>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this heading">#</a></h2>
-<p>Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.</p>
-<div class="math notranslate nohighlight">
-\[
-E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum{}{} \sum{}{} \frac{q^{e}}{|{{\textbf{r}_{i}} - {\textbf{R}_{i}}}|} 
-\]</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -488,7 +417,7 @@ E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum{}{} \sum{}{} \frac{q^{e}}{|{{\tex
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/simulation/qmmm"
+            path: "./notebooks/simulation/analysis"
         },
         predefinedOutput: true
     }
@@ -507,20 +436,20 @@ E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum{}{} \sum{}{} \frac{q^{e}}{|{{\tex
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../md/distance.html"
+       href="0-overview.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Tutorial: Distance Restraints</p>
+        <p class="prev-next-title">Analysis</p>
       </div>
     </a>
     <a class="right-next"
-       href="claisen.html"
+       href="pairwisedistance.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial: Claisen Rearrangment</p>
+        <p class="prev-next-title">Pairwise Distance</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -533,23 +462,6 @@ E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum{}{} \sum{}{} \frac{q^{e}}{|{{\tex
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">Bonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">Nonbonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">Electrostatic Embedding</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
