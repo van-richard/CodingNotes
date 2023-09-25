@@ -167,7 +167,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="images.html">Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fade.html">Fading between Visual States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fade.html">Fading</a></li>
 <li class="toctree-l3"><a class="reference internal" href="morph.html">Morphing</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Spin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spin.html">Rocking</a></li>
@@ -361,7 +361,30 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="spin">
 <h1>Spin<a class="headerlink" href="#spin" title="Permalink to this heading">#</a></h1>
-<video src="../../_static/chiemrax_spin_cas9_surface.mp4" width="50%" height="50%" align="center"/><p>The code looks like</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;center&gt;&lt;video src=&quot;../../../_static/chimerax_spin_cas9_surface.mp4&quot;width=&quot;50%&quot; height=&quot;50%&quot; controls&gt;</span>
+<span class="s2">    &lt;/video&gt;&lt;/center&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <center><video src="../../../_static/chimerax_spin_cas9_surface.mp4"width="50%" height="50%" controls>
+    </video></center>
+</div></div>
+</div>
+<p>The code looks like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">movie</span> <span class="n">record</span> <span class="n">supersample</span> <span class="mi">3</span>
 <span class="n">turn</span> <span class="n">y</span> <span class="mi">1</span> <span class="mi">360</span>
 <span class="n">wait</span> <span class="mi">360</span>
