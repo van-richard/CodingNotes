@@ -366,7 +366,26 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fading-between-visual-states">
 <h1>Fading between Visual States<a class="headerlink" href="#fading-between-visual-states" title="Permalink to this heading">#</a></h1>
-<video src="../../_static/chimerax_fade_cas9.mp4" width="50%" height="50%" align="center"/><p>The code looks like:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;video alt=&quot;test&quot; controls&gt;</span>
+<span class="s2">        &lt;source src=&quot;../../_static/chimerax_fade_cas9.mp4&quot; width=&quot;50%&quot; height=&quot;50%&quot; align=&quot;center&quot;&gt;</span>
+<span class="s2">    &lt;/video&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <video alt="test" controls>
+        <source src="../../_static/chimerax_fade_cas9.mp4" width="50%" height="50%" align="center">
+    </video>
+</div></div>
+</div>
+<p>The code looks like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crossfade</span> <span class="mi">48</span>
 <span class="n">hide</span> <span class="c1">#1 ribbon,atom</span>
 <span class="n">wait</span> <span class="mi">48</span>
