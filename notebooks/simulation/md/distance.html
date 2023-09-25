@@ -155,8 +155,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../commandline/linux.html">Unix/Linux Commands List</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../commandline/bash.html">BASH Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../commandline/overview.html">BASH Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/ssh.html">SSH-ing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/slurm.html">SLURM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/git.html">Git Commands</a></li>
@@ -395,7 +394,7 @@ document.write(`
 </div>
 <p>Since alanine dipeptide is an amino acid that is capped. We can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate our topology and coordinate files.</p>
 <p>We can use tleap to generate the topology and coordinate file</p>
-<p>To do so, make a file called <a class="reference download internal" download="" href="../../../_downloads/bfd38ebf8c94ad284ed1692707f06851/tleap.in"><span class="xref download myst">tleap.in</span></a></p>
+<p>To do so, make a file called <span class="xref myst">tleap.in</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
 <span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
 
@@ -418,8 +417,8 @@ quit
 </div>
 <p>If you list the files in the current working directory, you should see</p>
 <ol class="arabic simple">
-<li><p><a class="reference download internal" download="" href="../../../_downloads/545ef3f5421de0cab97c01c73ef0f0fc/step3_pbcsetup.parm7"><span class="xref download myst">step3_pbcsetup.parm7</span></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../../_downloads/f56b529c72b66848c2dd07fef35d7c5d/step3_pbcsetup.rst7"><span class="xref download myst">step3_pbcsetup.rst7</span></a></p></li>
+<li><p><span class="xref myst">step3_pbcsetup.parm7</span></p></li>
+<li><p><span class="xref myst">step3_pbcsetup.rst7</span></p></li>
 </ol>
 <p><em>ALWAYS VISUALIZE THESE TWO FILES BEFORE MOVING ON!</em></p>
 <p>Next, we will make the Amber MD input files.</p>
@@ -431,7 +430,7 @@ quit
 </ol>
 <section id="minimization">
 <h3>Minimization<a class="headerlink" href="#minimization" title="Permalink to this heading">#</a></h3>
-<p>Make a <a class="reference download internal" download="" href="../../../_downloads/b8951f5b76aab41481f1a08ef55190cd/min.in"><span class="xref download myst">min.in</span></a> file, with:</p>
+<p>Make a <span class="xref myst">min.in</span> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Minimize
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">    </span>
@@ -448,7 +447,7 @@ quit
 </section>
 <section id="heating">
 <h3>Heating<a class="headerlink" href="#heating" title="Permalink to this heading">#</a></h3>
-<p>Make a <a class="reference download internal" download="" href="../../../_downloads/fcc89360b38550259df1de006dbad486/heat.in"><span class="xref download myst">heat.in</span></a> file, with:</p>
+<p>Make a <span class="xref myst">heat.in</span> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
@@ -537,7 +536,7 @@ quit
 <span class="w"> </span>/
 </pre></div>
 </div>
-<p>Check if your files match these: <a class="reference download internal" download="" href="../../../_downloads/0b36822a93bf8ed9339e692e5432698a/prod0.in"><span class="xref download myst">prod0.in</span></a>, <a class="reference download internal" download="" href="../../../_downloads/1a9202a16eb1310ea992bc1d3909fe0f/prod1.in"><span class="xref download myst">prod1.in</span></a>, <a class="reference download internal" download="" href="../../../_downloads/a8680c574b11fb733812eaf35eb35163/prod2.in"><span class="xref download myst">prod2.in</span></a>, and <a class="reference download internal" download="" href="../../../_downloads/1487da8342828f3ed1c70b2ddcb10b6c/prod3.in"><span class="xref download myst">prod3.in</span></a></p>
+<p>Check if your files match these: <span class="xref myst">prod0.in</span>, <span class="xref myst">prod1.in</span>, <span class="xref myst">prod2.in</span>, and <span class="xref myst">prod3.in</span></p>
 </section>
 <section id="restraint-file">
 <h3>Restraint File<a class="headerlink" href="#restraint-file" title="Permalink to this heading">#</a></h3>
@@ -553,12 +552,12 @@ quit
 <span class="w"> </span><span class="p">&amp;</span>end
 </pre></div>
 </div>
-<p>Check if your files match these: <a class="reference internal" href="example/distance/cv0.html"><span class="doc std std-doc">cv0.rst</span></a>, <a class="reference internal" href="example/distance/cv1.html"><span class="doc std std-doc">cv1.rst</span></a>, <a class="reference internal" href="example/distance/cv2.html"><span class="doc std std-doc">cv2.rst</span></a>, and <a class="reference internal" href="example/distance/cv3.html"><span class="doc std std-doc">cv3.rst</span></a></p>
+<p>Check if your files match these: <span class="xref myst">cv0.rst</span>, <span class="xref myst">cv1.rst</span>, <span class="xref myst">cv2.rst</span>, and <span class="xref myst">cv3.rst</span></p>
 </section>
 </section>
 <section id="run-amber-md-with-sander">
 <h2>Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code><a class="headerlink" href="#run-amber-md-with-sander" title="Permalink to this heading">#</a></h2>
-<p>You can prepare a single file running the steps sequentially. I made the file, <a class="reference download internal" download="" href="../../../_downloads/78f5647eeb0bea5434fef9d4785b33f7/runmd.sh"><span class="xref download myst">runmd.sh</span></a>.</p>
+<p>You can prepare a single file running the steps sequentially. I made the file, <span class="xref myst">runmd.sh</span>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.out<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo

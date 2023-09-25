@@ -156,8 +156,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../commandline/linux.html">Unix/Linux Commands List</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../commandline/bash.html">BASH Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../commandline/overview.html">BASH Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/ssh.html">SSH-ing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/slurm.html">SLURM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/git.html">Git Commands</a></li>
@@ -394,7 +393,7 @@ document.write(`
 </pre></div>
 </div>
 <p>Since alanine dipeptide is an amino acid that is capped. We can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate our topology and coordinate files.</p>
-<p>To do so, make a file called <a class="reference download internal" download="" href="../../../_downloads/9f7ec8cb30709aa71941d0315983d143/tleap.in"><span class="xref download myst">tleap.in</span></a></p>
+<p>To do so, make a file called <span class="xref myst">tleap.in</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
 <span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
 
@@ -413,8 +412,8 @@ quit
 </div>
 <p>If you list the files in the current working directory, you should see</p>
 <ol class="arabic simple">
-<li><p><a class="reference download internal" download="" href="../../../_downloads/42e3b66b0cbcecd86dba612be411821d/step3_pbcsetup.parm7"><span class="xref download myst">step3_pbcsetup.parm7</span></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../../_downloads/016febad63271dafb318254ca310a988/step3_pbcsetup.rst7"><span class="xref download myst">step3_pbcsetup.rst7</span></a></p></li>
+<li><p><span class="xref myst">step3_pbcsetup.parm7</span></p></li>
+<li><p><span class="xref myst">step3_pbcsetup.rst7</span></p></li>
 </ol>
 <p><em>ALWAYS VISUALIZE THESE TWO FILES BEFORE MOVING ON!</em>
 Next, we will make the Amber MD input files.</p>
@@ -426,7 +425,7 @@ Next, we will make the Amber MD input files.</p>
 </ol>
 <section id="minimization">
 <h3>Minimization<a class="headerlink" href="#minimization" title="Permalink to this heading">#</a></h3>
-<p>Make a <a class="reference download internal" download="" href="../../../_downloads/4006d5148221bab92bf861e89ebd7108/min.in"><span class="xref download myst">min.in</span></a> file, with:</p>
+<p>Make a <span class="xref myst">min.in</span> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Minimize
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">    </span>
@@ -443,7 +442,7 @@ Next, we will make the Amber MD input files.</p>
 </section>
 <section id="heating">
 <h3>Heating<a class="headerlink" href="#heating" title="Permalink to this heading">#</a></h3>
-<p>Make a <a class="reference download internal" download="" href="../../../_downloads/7df39246aaa0d9a78eec7726033b7677/heat.in"><span class="xref download myst">heat.in</span></a> file, with:</p>
+<p>Make a <span class="xref myst">heat.in</span> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Heat
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
@@ -473,7 +472,7 @@ Next, we will make the Amber MD input files.</p>
 </section>
 <section id="production-md">
 <h3>Production MD<a class="headerlink" href="#production-md" title="Permalink to this heading">#</a></h3>
-<p>Make a <a class="reference download internal" download="" href="../../../_downloads/c01e1d83c18c5764568e3dfc7add4b0b/prod.in"><span class="xref download myst">prod.in</span></a> file, with:</p>
+<p>Make a <span class="xref myst">prod.in</span> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Production
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
@@ -505,17 +504,17 @@ Next, we will make the Amber MD input files.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.out<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo
 </pre></div>
 </div>
-<p>You should get <a class="reference download internal" download="" href="../../../_downloads/b9b930a5c6663a8f7ca8ca48f16cfd50/min.out"><span class="xref download myst">min.out</span></a>, <a class="reference download internal" download="" href="../../../_downloads/6ee1408cd9d1b7afaa55c92a20a1a94c/min.ncrst"><span class="xref download myst">min.ncrst</span></a>, and <a class="reference download internal" download="" href="../../../_downloads/a57f12b449e79f815c0562e1b42994b6/min.mdinfo"><span class="xref download myst">min.mdinfo</span></a></p>
+<p>You should get <span class="xref myst">min.out</span>, <span class="xref myst">min.ncrst</span>, and <span class="xref myst">min.mdinfo</span></p>
 <p>When this is done, run <code class="docutils literal notranslate"><span class="pre">heat.in</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>heat.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>min.ncrst<span class="w"> </span>-o<span class="w"> </span>heat.out<span class="w"> </span>-r<span class="w"> </span>heat.ncrst<span class="w"> </span>-inf<span class="w"> </span>heat.mdinfo<span class="w"> </span>-x<span class="w"> </span>heat.nc
 </pre></div>
 </div>
-<p>You should get <a class="reference download internal" download="" href="../../../_downloads/9e7b24218f4710b147e5e8c8513241d1/heat.out"><span class="xref download myst">heat.out</span></a>, <a class="reference download internal" download="" href="../../../_downloads/1d5f0575ae426fd0d508281b41ad3f16/heat.ncrst"><span class="xref download myst">heat.ncrst</span></a>, <a class="reference download internal" download="" href="../../../_downloads/f5da97f9092019351d67e54bb4092e0e/heat.mdinfo"><span class="xref download myst">heat.mdinfo</span></a>, and <a class="reference download internal" download="" href="../../../_downloads/3d9c39fb01dc6c0e17a5ad4156f95e21/heat.nc"><span class="xref download myst">heat.nc</span></a></p>
+<p>You should get <span class="xref myst">heat.out</span>, <span class="xref myst">heat.ncrst</span>, <span class="xref myst">heat.mdinfo</span>, and <span class="xref myst">heat.nc</span></p>
 <p>Last, run the production MD with <code class="docutils literal notranslate"><span class="pre">prod.in</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>heat.ncrst<span class="w"> </span>-o<span class="w"> </span>prod.out<span class="w"> </span>-r<span class="w"> </span>prod.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod.nc
 </pre></div>
 </div>
-<p>You should get <a class="reference download internal" download="" href="../../../_downloads/22806fcfca22514e7b10d0366a3e1030/prod.out"><span class="xref download myst">prod.out</span></a>, <a class="reference download internal" download="" href="../../../_downloads/666e33a48947daebfb2ed1b611c0c26d/prod.ncrst"><span class="xref download myst">prod.ncrst</span></a>, <a class="reference download internal" download="" href="../../../_downloads/bf587d89b9c31a4c68fd75163b155cb7/prod.mdinfo"><span class="xref download myst">prod.mdinfo</span></a>, and <span class="xref myst">prod.nc</span></p>
+<p>You should get <span class="xref myst">prod.out</span>, <span class="xref myst">prod.ncrst</span>, <span class="xref myst">prod.mdinfo</span>, and <span class="xref myst">prod.nc</span></p>
 </section>
 <section id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>

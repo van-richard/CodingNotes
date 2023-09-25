@@ -154,8 +154,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../commandline/linux.html">Unix/Linux Commands List</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../commandline/bash.html">BASH Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../commandline/overview.html">BASH Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/ssh.html">SSH-ing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/slurm.html">SLURM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../commandline/git.html">Git Commands</a></li>
@@ -386,7 +385,7 @@ document.write(`
 </div>
 <p>With IQmol, make a PDB file for allyl vinyl ether and copy this to <code class="docutils literal notranslate"><span class="pre">inputs</span></code>.</p>
 <p>The PDB can also be copied from here.</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/8a9117a7e8e1ae1e8d850c54fef7a72f/allyl_vinyl_ether.pdb"><span class="xref download myst">allyl_vinyl_ether.pdb</span></a></p>
+<p><span class="xref myst">allyl_vinyl_ether.pdb</span></p>
 <p>To make the topology and coordinate file for a small molecule, we need to:</p>
 <ol class="arabic simple">
 <li><p>Add hydrogens</p></li>
@@ -395,7 +394,7 @@ document.write(`
 <li><p>Get parameters</p></li>
 </ol>
 <p>I prepared a script for this. You will need to modify the modules/sources based on what software is available for you.</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/cae4b98fdd42bddbd6d5b534e2e5ce41/antechamber.in"><span class="xref download myst">antechamber.in</span></a></p>
+<p><span class="xref myst">antechamber.in</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># USAGE:</span>
@@ -416,12 +415,12 @@ parmchk2<span class="w"> </span>-i<span class="w"> </span><span class="si">${</s
 </pre></div>
 </div>
 <p>Running the script (<code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">antechamber.in</span> <span class="pre">all_vinyl_ether.pdb</span> <span class="pre">0</span></code>) should give you these files:</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/023710fd540c90c66800f0a32f2a42b5/allyl_vinyl_ether_h.pdb"><span class="xref download myst">allyl_vinyl_ether_h.pdb</span></a>,
-<a class="reference download internal" download="" href="../../../_downloads/1a32763703e1915ce5d72e7dfe3c623e/allyl_vinyl_ether_num.pdb"><span class="xref download myst">allyl_vinyl_ether_h_num.pdb</span></a>,
-<a class="reference download internal" download="" href="../../../_downloads/e0337ef85839be2b08621ec9792a00ca/allyl_vinyl_ether.mol2"><span class="xref download myst">allyl_vinyl_ether.mol2</span></a>, and
-<a class="reference download internal" download="" href="../../../_downloads/f357ad5aa8f1a0ccc15231e626d2634d/allyl_vinyl_ether.frcmod"><span class="xref download myst">allyl_vinyl_ether.frcmod</span></a></p>
+<p><span class="xref myst">allyl_vinyl_ether_h.pdb</span>,
+<span class="xref myst">allyl_vinyl_ether_h_num.pdb</span>,
+<span class="xref myst">allyl_vinyl_ether.mol2</span>, and
+<span class="xref myst">allyl_vinyl_ether.frcmod</span></p>
 <p>Now we can use tleap to make our <code class="docutils literal notranslate"><span class="pre">.parm7</span></code> and <code class="docutils literal notranslate"><span class="pre">.rst7</span></code> files.</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/9893bae054e721c947628cfea69a5c68/tleap.in"><span class="xref download myst">tleap.in</span></a></p>
+<p><span class="xref myst">tleap.in</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.gaff
 <span class="nb">source</span><span class="w"> </span>leaprc.water.tip3p<span class="w"> </span>
 
@@ -437,14 +436,14 @@ savepdb<span class="w"> </span>ligand<span class="w"> </span>step3_pbcsetup.pdb
 quit
 </pre></div>
 </div>
-<p>Run tleap, and you should get <a class="reference download internal" download="" href="../../../_downloads/72ba44392f359b541625700c3dc516ac/step3_pbcsetup.parm7"><span class="xref download myst">step3_pbcsetup.parm7</span></a> and <a class="reference download internal" download="" href="../../../_downloads/bb8e0bfbdf463a3a2575cd2d93025c9e/step3_pbcsetup.rst7"><span class="xref download myst">step3_pbcsetup.rst7</span></a>.</p>
+<p>Run tleap, and you should get <span class="xref myst">step3_pbcsetup.parm7</span> and <span class="xref myst">step3_pbcsetup.rst7</span>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
 </pre></div>
 </div>
 <section id="restraint-files">
 <h3>Restraint Files<a class="headerlink" href="#restraint-files" title="Permalink to this heading">#</a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file will contain atomic restraints for the mechanism we are interested in.</p>
-<p><a class="reference internal" href="example/claisen/cv.html"><span class="doc std std-doc">cv.rst</span></a></p>
+<p><span class="xref myst">cv.rst</span></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># r1 - r2 (CC - CO bond)</span>
  <span class="o">&amp;</span><span class="n">rst</span>
   <span class="n">iat</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span>
@@ -464,8 +463,8 @@ quit
 <h3>QM/MM MD Input files<a class="headerlink" href="#qm-mm-md-input-files" title="Permalink to this heading">#</a></h3>
 <p>2 MD input files are used. The first file (step5.00_equilibration.mdin) is used for the initial pathway sampling at a few picoseconds. The second file (step6.00_equilibration.mdin) is used for additional sampling (+10 ps).</p>
 <ol class="arabic simple">
-<li><p><a class="reference download internal" download="" href="../../../_downloads/108fb193ee7f97160fa3be65200e362e/step5.00_equilibration.mdin"><span class="xref download myst">step5.00_equilibration.mdin</span></a></p></li>
-<li><p><a class="reference download internal" download="" href="../../../_downloads/2eb271cf34686287069ad5d626c06a09/step6.00_equilibration.mdin"><span class="xref download myst">step6.00_equilibration.mdin</span></a></p></li>
+<li><p><span class="xref myst">step5.00_equilibration.mdin</span></p></li>
+<li><p><span class="xref myst">step6.00_equilibration.mdin</span></p></li>
 </ol>
 <p>The general format of a QM/MM MD input file differs from classical MD with the <code class="docutils literal notranslate"><span class="pre">&amp;qmmm</span></code> section.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
@@ -544,7 +543,7 @@ quit
 <section id="generate-umbrella-windows">
 <h2>Generate Umbrella Windows<a class="headerlink" href="#generate-umbrella-windows" title="Permalink to this heading">#</a></h2>
 <p>The script <code class="docutils literal notranslate"><span class="pre">gen_inputs.in</span></code> will prepare folders for umbrella sampling, and modify the <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file so that each window has a different restraint value.</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/8a089ab2e5ff1ed219260b85b89e7e8a/gen_inputs.in"><span class="xref download myst">gen_inputs.in</span></a></p>
+<p><span class="xref myst">gen_inputs.in</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 mkdir<span class="w"> </span>-p<span class="w"> </span><span class="m">00</span>
@@ -578,7 +577,7 @@ cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><s
 <section id="running-qm-mm-simulation">
 <h2>Running QM/MM Simulation<a class="headerlink" href="#running-qm-mm-simulation" title="Permalink to this heading">#</a></h2>
 <p>Run QM/MM simulations of the inital pathway.</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/78e845d14c0db802d3132847a5a9cd69/runqmmm1.slurm"><span class="xref download myst">runqmmm1.slurm</span></a></p>
+<p><span class="xref myst">runqmmm1.slurm</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=debug</span>
 <span class="c1">#SBATCH --exclusive</span>
@@ -617,7 +616,7 @@ module<span class="w"> </span>load<span class="w"> </span>intel/2020a
 </pre></div>
 </div>
 <p>Once this is done, perform additional sampling in each window.</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/3ae0e8341ef9a20311136f7225831622/runqmmm2.slurm"><span class="xref download myst">runqmmm2.slurm</span></a></p>
+<p><span class="xref myst">runqmmm2.slurm</span></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=debug</span>
 <span class="c1">#SBATCH --exclusive</span>
