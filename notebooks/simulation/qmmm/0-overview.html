@@ -61,8 +61,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/qmmm/0-overview';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -386,11 +384,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="qm-mm-simulations">
+  <section id="qm-mm-simulations">
 <h1>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Permalink to this heading">#</a></h1>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
-<p>Reference: <a class="reference external" href="https://www.youtube.com/watch?v=VK0e6-ndodM">https://www.youtube.com/watch?v=VK0e6-ndodM</a></p>
+<p>Reference: https://www.youtube.com/watch?v=VK0e6-ndodM</p>
 <p>In general, a hybrid quantum mechanics/molecular mechanics (QM/MM) scheme requires:</p>
 <ul class="simple">
 <li><p>Small part of system is defined at quantum level (QM)</p></li>
@@ -406,32 +404,28 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Subtractive scheme</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E = E_\mathrm{QM}  + E_\mathrm{MM} - E_\mathrm{QM-MM}
-\]</div>
+$$</p>
 <p>Pros: No communication between QM and MM routines.
 Cons: Force field needed for QM. FF needs to be ‘flexible’ to describe change when reaction occurs. No QM polarization</p>
 <ol class="arabic simple" start="2">
 <li><p>Additive scheme</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E = E_\mathrm{QM} + E_\mathrm{QM-MM} + E_\mathrm{MM}
-\]</div>
-<p>QM energy (<span class="math notranslate nohighlight">\(E_\mathrm{QM}\)</span>) is from DFT Kohn-Sham Hamiltonian. MM energy (<span class="math notranslate nohighlight">\(E_\mathrm{MM}\)</span>) is from force field. QM-MM interaction energy (<span class="math notranslate nohighlight">\(E_\mathrm{QM-MM}\)</span>) is:</p>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>QM energy ($E_\mathrm{QM}$) is from DFT Kohn-Sham Hamiltonian. MM energy ($E_\mathrm{MM}$) is from force field. QM-MM interaction energy ($E_\mathrm{QM-MM}$) is:</p>
+<p>$$
 E_\mathrm{QM-MM} = E_\mathrm{bonded}^\mathrm{QM-MM} + _\mathrm{nonbonded}^\mathrm{QM-MM}
-\]</div>
+$$</p>
 <p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and non bonded terms</p>
 </section>
 <section id="bonded-interactions">
 <h2>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_\mathrm{bonded}^\mathrm{QM-MM}
-\]</div>
+$$</p>
 <p>Bonded interactions are introduced when covalent bonds connecting QM and MM regions are cut.</p>
 <p>This term is chosen at classical FF level.</p>
 <p>Care has to be taken when evaluating the QM wave function, to address this, several approaches have been developed:</p>
@@ -444,11 +438,10 @@ E_\mathrm{bonded}^\mathrm{QM-MM}
 <section id="nonbonded-interactions">
 <h2>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this heading">#</a></h2>
 <p>Non bonded term is:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm{pol.}^\mathrm{QM-MM}
-\]</div>
-<p>QM Polarization energy (<span class="math notranslate nohighlight">\(E_\mathrm{pol.}^\mathrm{QM-MM}\)</span>) describes the <em>electrostatic</em> interaction between MM charges and QM charge density. This can be calculated in one of three ways:</p>
+$$</p>
+<p>QM Polarization energy ($E_\mathrm{pol.}^\mathrm{QM-MM}$) describes the <em>electrostatic</em> interaction between MM charges and QM charge density. This can be calculated in one of three ways:</p>
 <ol class="arabic simple">
 <li><p><strong>Mechanical embedding:</strong> No influence of MM charge on QM part, i.e.  QM calculation is gas-phase -like without additional potential due to MM atoms</p>
 <ul class="simple">
@@ -470,10 +463,9 @@ E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm
 <section id="electrostatic-embedding">
 <h2>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this heading">#</a></h2>
 <p>Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.</p>
-<div class="math notranslate nohighlight">
-\[
-E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}_{i}} - {\textbf{R}_{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
-\]</div>
+<p>$$
+E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}<em>{i}} - {\textbf{R}</em>{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
+$$</p>
 <p>Two problems arise due to the short-range and long-range behavior of this term..</p>
 <ol class="arabic simple">
 <li><p>Short-Range - Electron spill-out; problems at the boundary</p></li>
@@ -487,17 +479,15 @@ E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \f
 </ul>
 <p>These artifacts can become serious if a large basis set (e.g. with polarization and diffuse functions), or plane waves are used in the QM calculation..</p>
 <p>This can be avoided by <strong>smeared-out charges</strong> instead of traditional point charges</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})v^{smear}(|\textbf{r}_i - \textbf{R}_i|)}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
-\]</div>
+$$</p>
 <p>Where, the <em>smearing function</em> can be a Gaussian distrubtion or another suitable function centered at the MM atom.</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
-\]</div>
+$$</p>
 <ul class="simple">
-<li><p>Smearing function in CP2P, where <span class="math notranslate nohighlight">\(r_{c,I}\)</span> is the covalent radius of atom <span class="math notranslate nohighlight">\(I\)</span></p></li>
+<li><p>Smearing function in CP2P, where $r_{c,I}$ is the covalent radius of atom $I$</p></li>
 </ul>
 </section>
 </section>

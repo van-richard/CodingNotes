@@ -61,8 +61,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/0-overview';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -390,7 +388,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="molecular-simulations">
+  <section id="molecular-simulations">
 <h1>Molecular Simulations<a class="headerlink" href="#molecular-simulations" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
@@ -458,30 +456,26 @@ document.write(`
 <li><p>Simulation time could be from 10 ps to 1 μs depending on model (typically ns</p></li>
 </ul>
 <p>Energy is:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_{total} = E_{bonded} + E_{nonbonded}
-\]</div>
+$$</p>
 <p>The bonded and nonbonded terms are:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_{total} = E_{bonds} + E_{angles} + E_{torsion} + E_{vDW} + E_{Coulomb}
-\]</div>
-<p>and each energy contribution term has a potential function, for example, the van der waals term <span class="math notranslate nohighlight">\(E_{vDW}\)</span> is defined by the Lennard-Jones potential:</p>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>and each energy contribution term has a potential function, for example, the van der waals term $E_{vDW}$ is defined by the Lennard-Jones potential:</p>
+<p>$$
 E_{vDW} = 4\epsilon  \left[ (\frac{\sigma}{r})^{12} - (\frac{\sigma}{r})^{6} \right]
-\]</div>
+$$</p>
 <p>The potential functions have preset bonding arrangements, therefore, classical MD on its own cannot be used to model chemical reactions.</p>
 <p>A MD simulation generates a sequence of configurations phase space connected by time. These is called a <em>trajectoy</em> of all particles in the system as a function of time. Time averages and other properties can be calculated from a trajectory.</p>
 </section>
 <section id="quantum-mechanics">
 <h3>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h3>
 <p>Quantum mechanical (QM) methods more accurately describe the behavior of the electrons in atoms and molecules and can model chemistry – the making and breaking of chemical bond. We do this by solving the Schrodinger equation:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 \hat{H} \Psi = E \Psi
-\]</div>
+$$</p>
 <p>Hatree-Fock, basis sets, semi-empirical methods, density functional theory, MP2, coupled cluster theory</p>
 </section>
 </section>

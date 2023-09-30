@@ -61,8 +61,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/md/energy';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -381,31 +379,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="theory">
+  <section id="theory">
 <h1>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h1>
 <section id="potential-functions">
 <h2>Potential Functions<a class="headerlink" href="#potential-functions" title="Permalink to this heading">#</a></h2>
 <p>Energy of a system is composed of bonded and nonbonded interactions:</p>
-<div class="math notranslate nohighlight">
-\[ 
-E _{total} = E_{bonded} + E_{nonbonded} 
-\]</div>
+<p>$$
+E <em>{total} = E</em>{bonded} + E_{nonbonded}
+$$</p>
 <p>The bonded interactions are:</p>
-<div class="math notranslate nohighlight">
-\[ 
+<p>$$
 E_{bonded} = E_{bond} + E_{angles} + E_{torsion}
-\]</div>
+$$</p>
 <p>Nonbonded interactions are:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_{nonbonded} = E_{vDW} + E_{Coulomb}
-\]</div>
+$$</p>
 <p>How these functions are written will depend on the simulation package (i.e. Amber, NAMD, OpenMM, Gromacs, etc.).</p>
 <p>In Amber, it is written:</p>
-<div class="math notranslate nohighlight">
-\[
-E_{total} = 
-\]</div>
+<p>$$
+E_{total} =
+$$</p>
 </section>
 <section id="force-fields">
 <h2>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>

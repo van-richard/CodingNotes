@@ -399,7 +399,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="bash">
+  <section id="bash">
 <h1>Bash<a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
@@ -603,7 +603,7 @@ document.write(`
 <section id="redirect-commands">
 <h3>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h3>
 <p>You can redirect command input and output (stdin, stdout, and stderr) using “redirection operators”. Unlike a pipe, which passes output to a command, a redirection operator has a command’s input come from a file or stream, or sends its output to a file or stream.</p>
-<p>Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite <a class="reference external" href="http://hello.py">hello.py</a> with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
+<p>Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite hello.py with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>hello.py<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
 <span class="s">#!/usr/bin/env python</span>
 <span class="s">from __future__ import print_function</span>
@@ -615,7 +615,7 @@ document.write(`
 <span class="s">EOF</span>
 </pre></div>
 </div>
-<p>Variables will be expanded if the first “EOF” is not quoted. Run the <a class="reference external" href="http://hello.py">hello.py</a> Python script with various stdin, stdout, and stderr redirections:</p>
+<p>Variables will be expanded if the first “EOF” is not quoted. Run the hello.py Python script with various stdin, stdout, and stderr redirections:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>hello.py<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;input.in&quot;</span><span class="w"> </span><span class="c1"># pass input.in as input to the script</span>
 
 python<span class="w"> </span>hello.py<span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;output.out&quot;</span><span class="w"> </span><span class="c1"># redirect output from the script to output.out</span>
