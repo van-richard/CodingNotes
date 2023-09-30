@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Slurm &#8212; Coding Notes</title>
+    <title>Conda Commands &#8212; Coding Notes</title>
   
   
   
@@ -61,11 +61,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/commandline/slurm';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/python/conda';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Basic Usage" href="../chimera/0-overview.html" />
-    <link rel="prev" title="SSH-ing" href="ssh.html" />
+    <link rel="prev" title="Python" href="0-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,10 +161,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Preface.html">Preface</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I The Basics</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="bash.html">Bash</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Slurm</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/bash.html">Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">Slurm</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chimera/0-overview.html">Basic Usage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -174,10 +173,10 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="git.html">Git/Github</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/0-overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../commandline/git.html">Git/Github</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="0-overview.html">Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Conda Commands</a></li>
 </ul>
 </li>
 </ul>
@@ -223,7 +222,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/commandline/slurm.ipynb" target="_blank"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/python/conda.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -249,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/commandline/slurm.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/python/conda.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +330,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Slurm</h1>
+    <h1>Conda Commands</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -341,25 +340,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">Basic Example</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">GPU Example</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">Exclusive Example</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-commands">Slurm Commands</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinfo">sinfo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sbatch">sbatch</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scancel">scancel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squeue">squeue</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scontrol">scontrol</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">Module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-conda">Installing Conda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-environment">Base Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-virtual-environment">Creating a new virtual environment.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-new-environment">Running the new environment.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-a-virutal-environment">Leave a virutal environment.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-conda-environments-and-related-packages">Deleting conda environments and related packages.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-available-environments">List available environments.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-packages-within-an-environment">List packages within an environment.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-environments-to-a-yml-file">Exporting environments to a YML file.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-conda-environment-from-a-yml-file">Installing a Conda environment from a YML file.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-ambertools">Example with AmberTools</a></li>
 </ul>
             </nav>
         </div>
@@ -371,125 +362,91 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="slurm">
-<h1>Slurm<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h1>
-<section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
-<p>SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.</p>
-<p><a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
+  <section id="conda-commands">
+<h1>Conda Commands<a class="headerlink" href="#conda-commands" title="Permalink to this heading">#</a></h1>
+<section id="installing-conda">
+<h2>Installing Conda<a class="headerlink" href="#installing-conda" title="Permalink to this heading">#</a></h2>
+<p>I recommend installing <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge</a>.</p>
+<p>In the repository:</p>
+<ol class="arabic simple">
+<li><p>Scroll down to the <code class="docutils literal notranslate"><span class="pre">Download</span></code> section</p></li>
+<li><p>Find your operating system (OS)</p></li>
+<li><p>Click the link</p></li>
+<li><p>Copy the downloaded file to your <code class="docutils literal notranslate"><span class="pre">~/Programs</span></code> folder</p></li>
+<li><p>Run the installation script with <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">&lt;Miniforge-link&gt;.sh</span></code></p></li>
+<li><p>Choose your installation directory as <code class="docutils literal notranslate"><span class="pre">~/Programs/miniforge3</span></code></p></li>
+</ol>
 </section>
-<section id="directives-sbatch">
-<h2>Directives (#SBATCH)<a class="headerlink" href="#directives-sbatch" title="Permalink to this heading">#</a></h2>
-<p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many CPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code></p>
-<section id="basic-example">
-<h3>Basic Example<a class="headerlink" href="#basic-example" title="Permalink to this heading">#</a></h3>
-<p>Change the words in all-caps to what you need.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --partition=PARTITION</span>
-<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
-<span class="c1">#SBATCH --nodes=NODES</span>
-<span class="c1">#SBATCH --ntasks=NTASKS</span>
-<span class="c1">#SBATCH --output=%j.out </span>
-<span class="c1">#SBATCH --error=%j.err</span>
-<span class="c1">#SBATCH --name=JOBNAME</span>
+<section id="base-environment">
+<h2>Base Environment<a class="headerlink" href="#base-environment" title="Permalink to this heading">#</a></h2>
+<p>By defuault, conda will starts in your <code class="docutils literal notranslate"><span class="pre">base</span></code> environment. Generally I don’t install very many packages here.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>base<span class="o">)</span><span class="w"> </span>username@computer:~<span class="w"> </span>username$
 </pre></div>
 </div>
 </section>
-<section id="gpu-example">
-<h3>GPU Example<a class="headerlink" href="#gpu-example" title="Permalink to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --partition=GPU_PARTITION</span>
-<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
-<span class="c1">#SBATCH --nodes=NODES</span>
-<span class="c1">#SBATCH --ntasks=NTASKS</span>
-<span class="c1">#SBATCH --output=%j.out </span>
-<span class="c1">#SBATCH --error=%j.err</span>
-<span class="c1">#SBATCH --name=JOBNAME</span>
-<span class="c1">#SBATCH --gres=gpu:1</span>
+<section id="creating-a-new-virtual-environment">
+<h2>Creating a new virtual environment.<a class="headerlink" href="#creating-a-new-virtual-environment" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>                          <span class="c1"># Create New environment</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="n">python</span><span class="o">=&lt;</span><span class="n">version</span><span class="o">-</span><span class="n">number</span><span class="o">&gt;</span>  <span class="c1"># Specific Python version</span>
 </pre></div>
 </div>
 </section>
-<section id="exclusive-example">
-<h3>Exclusive Example<a class="headerlink" href="#exclusive-example" title="Permalink to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --partition=GPU_PARTITION</span>
-<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
-<span class="c1">#SBATCH --nodes=NODES</span>
-<span class="c1">#SBATCH --ntasks=NTASKS</span>
-<span class="c1">#SBATCH --output=%j.out </span>
-<span class="c1">#SBATCH --error=%j.err</span>
-<span class="c1">#SBATCH --name=JOBNAME</span>
-<span class="c1">#SBATCH --mem=0</span>
-<span class="c1">#SBATCH --exclusive</span>
+<section id="running-the-new-environment">
+<h2>Running the new environment.<a class="headerlink" href="#running-the-new-environment" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In your new activated environment, you can now install needed packages.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>                 <span class="c1"># Install Package</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>  <span class="c1"># Install package from a specific channel (-c)</span>
 </pre></div>
 </div>
 </section>
-</section>
-<section id="slurm-commands">
-<h2>Slurm Commands<a class="headerlink" href="#slurm-commands" title="Permalink to this heading">#</a></h2>
-<p>There are Slurm specific commands.</p>
-<section id="sinfo">
-<h3>sinfo<a class="headerlink" href="#sinfo" title="Permalink to this heading">#</a></h3>
-<p>Get information about the resources on available nodes that make up the HPC cluster</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span><span class="c1"># All resources </span>
-sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>idle<span class="w"> </span><span class="c1"># Idle nodes </span>
+<section id="leave-a-virutal-environment">
+<h2>Leave a virutal environment.<a class="headerlink" href="#leave-a-virutal-environment" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">deactivate</span>
 </pre></div>
 </div>
 </section>
-<section id="sbatch">
-<h3>sbatch<a class="headerlink" href="#sbatch" title="Permalink to this heading">#</a></h3>
-<p>Submit batch script to Slurm for processing</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm
-<span class="c1"># The JOB_ID will be printed after you submit the batch script</span>
-<span class="c1"># which looks like:</span>
-<span class="c1"># “Submitted batch job *JOB_ID*”</span>
+<section id="deleting-conda-environments-and-related-packages">
+<h2>Deleting conda environments and related packages.<a class="headerlink" href="#deleting-conda-environments-and-related-packages" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </section>
-<section id="scancel">
-<h3>scancel<a class="headerlink" href="#scancel" title="Permalink to this heading">#</a></h3>
-<p>Cancel a job that is pending or running</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel<span class="w"> </span>*JOB_ID*
+<section id="list-available-environments">
+<h2>List available environments.<a class="headerlink" href="#list-available-environments" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
 </pre></div>
 </div>
 </section>
-<section id="squeue">
-<h3>squeue<a class="headerlink" href="#squeue" title="Permalink to this heading">#</a></h3>
-<p>Show Slurm queue, can be all queue or just your jobs</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w"> </span><span class="c1"># All jobs queue</span>
-squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w"> </span><span class="c1"># USERNAME queue</span>
+<section id="list-packages-within-an-environment">
+<h2>List packages within an environment.<a class="headerlink" href="#list-packages-within-an-environment" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">conda</span> <span class="nb">list</span>
 </pre></div>
 </div>
 </section>
-</section>
-<section id="scontrol">
-<h2>scontrol<a class="headerlink" href="#scontrol" title="Permalink to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span>*JOB_ID*
+<section id="exporting-environments-to-a-yml-file">
+<h2>Exporting environments to a YML file.<a class="headerlink" href="#exporting-environments-to-a-yml-file" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;.</span><span class="n">yml</span>
 </pre></div>
 </div>
 </section>
-<section id="module">
-<h2>Module<a class="headerlink" href="#module" title="Permalink to this heading">#</a></h2>
-<p>HPC uses a module system to load most software into a user’s environment. Most software is not accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
-<section id="commands">
-<h3>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">#</a></h3>
-<p>List all available modules</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>av
-</pre></div>
-</div>
-<p>Load a module</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>*name*
-</pre></div>
-</div>
-<p>Remove a module</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>remove<span class="w"> </span>*name*
-</pre></div>
-</div>
-<p>Remove ALL modules, cleaning your environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>purge
+<section id="installing-a-conda-environment-from-a-yml-file">
+<h2>Installing a Conda environment from a YML file.<a class="headerlink" href="#installing-a-conda-environment-from-a-yml-file" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;.</span><span class="n">yml</span>
 </pre></div>
 </div>
 </section>
+<section id="example-with-ambertools">
+<h2>Example with AmberTools<a class="headerlink" href="#example-with-ambertools" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">ambertools</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">ambertools</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">ambertools</span><span class="o">=</span><span class="mi">22</span> <span class="n">compilers</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -506,7 +463,7 @@ squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/commandline"
+            path: "./notebooks/python"
         },
         predefinedOutput: true
     }
@@ -525,22 +482,13 @@ squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ssh.html"
+       href="0-overview.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">SSH-ing</p>
+        <p class="prev-next-title">Python</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../chimera/0-overview.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Basic Usage</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   
@@ -560,25 +508,17 @@ squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">Basic Example</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">GPU Example</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">Exclusive Example</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-commands">Slurm Commands</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinfo">sinfo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sbatch">sbatch</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scancel">scancel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squeue">squeue</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scontrol">scontrol</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">Module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-conda">Installing Conda</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-environment">Base Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-new-virtual-environment">Creating a new virtual environment.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-new-environment">Running the new environment.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#leave-a-virutal-environment">Leave a virutal environment.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-conda-environments-and-related-packages">Deleting conda environments and related packages.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-available-environments">List available environments.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-packages-within-an-environment">List packages within an environment.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exporting-environments-to-a-yml-file">Exporting environments to a YML file.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-a-conda-environment-from-a-yml-file">Installing a Conda environment from a YML file.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-ambertools">Example with AmberTools</a></li>
 </ul>
   </nav></div>
 
