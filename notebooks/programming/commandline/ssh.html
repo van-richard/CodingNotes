@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.7.12. SSH-ing &#8212; Coding Notes</title>
+    <title>1.1.8. SSH-ing &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/commandline/ssh';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="1.7.13. Slurm" href="slurm.html" />
-    <link rel="prev" title="1.7.11. Unix/Linux Commands" href="linux.html" />
+    <link rel="next" title="1.1.9. Slurm" href="slurm.html" />
+    <link rel="prev" title="1.1.7. Unix/Linux Commands" href="linux.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,21 +159,25 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">1. Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="0-overview.html">1.1. Bash</a></li>
-
-
-
-
-
-
-<li class="toctree-l2 has-children"><a class="reference internal" href="../python/0-overview.html">1.8. Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../python/conda.html">1.8.10. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../python/intel.html">1.8.11. Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../python/jupyter.html">1.8.12. Jupyter Notebooks</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="bash.html">1.1. Bash</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="linux.html">1.1.7. Unix/Linux Commands</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.1.8. SSH-ing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slurm.html">1.1.9. Slurm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html">1.1.10. Git/Github</a></li>
 </ul>
 </li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../python/0-overview.html">1.2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/conda.html">1.2.10. Conda Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/intel.html">1.2.11. Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/jupyter.html">1.2.12. Jupyter Notebooks</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">1.3. ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">1.4. Create Websites</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../simulation/0-overview.html">2. Protein Structure</a></li>
+
 </ul>
 
     </div>
@@ -335,16 +339,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.7.12.1. Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-in">1.7.12.2. Log In</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-download-files">1.7.12.3. Upload/Download Files</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsync">1.7.12.3.1. rsync</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scp">1.7.12.3.2. scp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.1.8.1. Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-in">1.1.8.2. Log In</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-download-files">1.1.8.3. Upload/Download Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsync">1.1.8.3.1. rsync</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scp">1.1.8.3.2. scp</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-command-over-ssh">1.7.12.4. Run Command over SSH</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-login-no-password">1.7.12.5. Automate Login (No Password)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-file">1.7.12.6. Configuration File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-command-over-ssh">1.1.8.4. Run Command over SSH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-login-no-password">1.1.8.5. Automate Login (No Password)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-file">1.1.8.6. Configuration File</a></li>
 </ul>
             </nav>
         </div>
@@ -357,9 +361,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="ssh-ing">
-<h1><span class="section-number">1.7.12. </span>SSH-ing<a class="headerlink" href="#ssh-ing" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.1.8. </span>SSH-ing<a class="headerlink" href="#ssh-ing" title="Permalink to this heading">#</a></h1>
 <section id="background">
-<h2><span class="section-number">1.7.12.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1.8.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ssh</span></code> is Secure Shell protocol used for remote logins, allowing access to a computer over the internet.</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Secure_Shell">SSH on wikipedia</a></p>
 <blockquote>
@@ -367,7 +371,7 @@ document.write(`
 </div></blockquote>
 </section>
 <section id="log-in">
-<h2><span class="section-number">1.7.12.2. </span>Log In<a class="headerlink" href="#log-in" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1.8.2. </span>Log In<a class="headerlink" href="#log-in" title="Permalink to this heading">#</a></h2>
 <p>You will need to apply to a supercomputing center (OSCER, PETE, etc.) for an account with the group.</p>
 <p>I recommend creating a simple username. For example, my username is <code class="docutils literal notranslate"><span class="pre">van</span></code> just about everywhere.</p>
 <p>Once you have an account set up, you can login from your terminal in this notation:</p>
@@ -387,14 +391,14 @@ document.write(`
 <p>Answering yes to the prompt will cause the session to continue, and the host key is stored in the local system’s known_hosts file. This is a hidden file, stored by default in a hidden directory, called <code class="docutils literal notranslate"><span class="pre">/.ssh/known_hosts</span></code>, in the your home directory. Once the host key has been stored in the known_hosts file, the client system can connect directly to that server again without need for any approvals.</p>
 </section>
 <section id="upload-download-files">
-<h2><span class="section-number">1.7.12.3. </span>Upload/Download Files<a class="headerlink" href="#upload-download-files" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1.8.3. </span>Upload/Download Files<a class="headerlink" href="#upload-download-files" title="Permalink to this heading">#</a></h2>
 <p>There are two ways to do this.</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rsync</span></code> (recommended)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scp</span></code></p></li>
 </ol>
 <section id="rsync">
-<h3><span class="section-number">1.7.12.3.1. </span>rsync<a class="headerlink" href="#rsync" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.8.3.1. </span>rsync<a class="headerlink" href="#rsync" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">rsync</span></code> will sync the folders and update the newest folders. This is helpful for large data transfers!</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Send directory to server</span>
 rsync<span class="w"> </span>-avuim<span class="w"> </span>directory/<span class="w"> </span>van@ssh.server.example.edu:/path/to/directory<span class="w"> </span>
@@ -404,7 +408,7 @@ rsync<span class="w"> </span>-avuim<span class="w"> </span>van@ssh.server.exampl
 </div>
 </section>
 <section id="scp">
-<h3><span class="section-number">1.7.12.3.2. </span>scp<a class="headerlink" href="#scp" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.8.3.2. </span>scp<a class="headerlink" href="#scp" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">scp</span></code> is useful for copying single files or folders</p>
 <p>Example of copying files from your desktop to the supercomputer</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Send files/folders to server</span>
@@ -419,7 +423,7 @@ scp<span class="w"> </span>van@ssh.server.example.edu:/path/to/directory<span cl
 </section>
 </section>
 <section id="run-command-over-ssh">
-<h2><span class="section-number">1.7.12.4. </span>Run Command over SSH<a class="headerlink" href="#run-command-over-ssh" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1.8.4. </span>Run Command over SSH<a class="headerlink" href="#run-command-over-ssh" title="Permalink to this heading">#</a></h2>
 <p>What if the only thing you need to do over the SSH connection is execute a single quick command? You might not want to take the separate actions of connecting and authenticating, running the command, and then disconnecting.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@ssh.server.example.edu<span class="w"> </span>*command*
 <span class="c1"># Example of making directory</span>
@@ -428,7 +432,7 @@ scp<span class="w"> </span>van@ssh.server.example.edu:/path/to/directory<span cl
 </div>
 </section>
 <section id="automate-login-no-password">
-<h2><span class="section-number">1.7.12.5. </span>Automate Login (No Password)<a class="headerlink" href="#automate-login-no-password" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1.8.5. </span>Automate Login (No Password)<a class="headerlink" href="#automate-login-no-password" title="Permalink to this heading">#</a></h2>
 <p>It is possible to sign into your supercomputing account without entering a password. You will need to generate a public key pair to use when authenticating with the server.</p>
 <p>On your local computer, run the following:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span>
@@ -447,7 +451,7 @@ scp<span class="w"> </span>van@ssh.server.example.edu:/path/to/directory<span cl
 </div>
 </section>
 <section id="configuration-file">
-<h2><span class="section-number">1.7.12.6. </span>Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1.8.6. </span>Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">ssh</span></code> program receives its configuration from either the command line or from configuration files <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> and <code class="docutils literal notranslate"><span class="pre">/etc/ssh/ssh_config</span></code>. Command-line options take precedence over configuration files. The user-specific configuration file <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> is used next. Finally, the global <code class="docutils literal notranslate"><span class="pre">/etc/ssh/ssh_config</span></code> file is used.</p>
 <p>Some commonly used configuration options:</p>
 <ul class="simple">
@@ -512,7 +516,7 @@ Host<span class="w"> </span>osu<span class="w">   </span>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.7.11. </span>Unix/Linux Commands</p>
+        <p class="prev-next-title"><span class="section-number">1.1.7. </span>Unix/Linux Commands</p>
       </div>
     </a>
     <a class="right-next"
@@ -520,7 +524,7 @@ Host<span class="w"> </span>osu<span class="w">   </span>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.7.13. </span>Slurm</p>
+        <p class="prev-next-title"><span class="section-number">1.1.9. </span>Slurm</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -542,16 +546,16 @@ Host<span class="w"> </span>osu<span class="w">   </span>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.7.12.1. Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-in">1.7.12.2. Log In</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-download-files">1.7.12.3. Upload/Download Files</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsync">1.7.12.3.1. rsync</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scp">1.7.12.3.2. scp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.1.8.1. Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#log-in">1.1.8.2. Log In</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#upload-download-files">1.1.8.3. Upload/Download Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsync">1.1.8.3.1. rsync</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scp">1.1.8.3.2. scp</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-command-over-ssh">1.7.12.4. Run Command over SSH</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-login-no-password">1.7.12.5. Automate Login (No Password)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-file">1.7.12.6. Configuration File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-command-over-ssh">1.1.8.4. Run Command over SSH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-login-no-password">1.1.8.5. Automate Login (No Password)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-file">1.1.8.6. Configuration File</a></li>
 </ul>
   </nav></div>
 
