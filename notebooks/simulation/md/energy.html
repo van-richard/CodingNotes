@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>6.4.8. Theory &#8212; Coding Notes</title>
+    <title>7.3.8. Theory &#8212; Coding Notes</title>
   
   
   
@@ -65,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/md/energy';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="6.4.9. Tutorial: Simple MD" href="simple.html" />
-    <link rel="prev" title="6.4. Molecular Dynamics" href="0-overview.html" />
+    <link rel="next" title="7.3.9. Tutorial: Simple MD" href="simple.html" />
+    <link rel="prev" title="7.3. Molecular Dynamics" href="0-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,27 +182,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../programming/vmd/ffmpeg.html">4. ffmpeg</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../programming/websites/jupyterbook.html">5. Create Websites</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">6. Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">6.4. Molecular Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">6.4.8. Theory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="simple.html">6.4.9. Tutorial: Simple MD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="distance.html">6.4.10. Tutorial: Restraint MD</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../qmmm/0-overview.html">6.5. QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../qmmm/claisen.html">6.5.5. Tutorial: Claisen Rearrangment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../qmmm/ippo1.html">6.5.6. Tutorial: Enzyme Reaction</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../analysis/0-overview.html">6.6. Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/pairwisedistance.html">6.6.1. Pairwise Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/pca.html">6.6.2. Principle Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsd.html">6.6.3. RMSD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsf.html">6.6.4. RMSF</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../0-overview.html">6. Protein Structure</a></li>
+
 </ul>
 
     </div>
@@ -364,8 +345,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-functions">6.4.8.1. Potential Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">6.4.8.2. Force Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-functions">7.3.8.1. Potential Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">7.3.8.2. Force Fields</a></li>
 </ul>
             </nav>
         </div>
@@ -378,12 +359,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="theory">
-<h1><span class="section-number">6.4.8. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">7.3.8. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h1>
 <section id="potential-functions">
-<h2><span class="section-number">6.4.8.1. </span>Potential Functions<a class="headerlink" href="#potential-functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.3.8.1. </span>Potential Functions<a class="headerlink" href="#potential-functions" title="Permalink to this heading">#</a></h2>
 <p>Energy of a system is composed of bonded and nonbonded interactions:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-385dca7b-2f1b-4853-b541-573291ecb827">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-385dca7b-2f1b-4853-b541-573291ecb827" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-685cf4ae-417e-4e53-9709-ffa3a1040f41">
+<span class="eqno">(7.1)<a class="headerlink" href="#equation-685cf4ae-417e-4e53-9709-ffa3a1040f41" title="Permalink to this equation">#</a></span>\[\begin{equation}
 E _{total} = E_{bonded} + E_{nonbonded} 
 \end{equation}\]</div>
 <p>The bonded interactions ($E_{bonded}$) are:</p>
@@ -401,7 +382,7 @@ $$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{i
 <p>$$ E_{elec} = \sum_{nonbonded_{ij}} \frac{q_i q_j}{r_{ij}} $$</p>
 </section>
 <section id="force-fields">
-<h2><span class="section-number">6.4.8.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">7.3.8.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
@@ -442,7 +423,7 @@ $$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{i
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.4. </span>Molecular Dynamics</p>
+        <p class="prev-next-title"><span class="section-number">7.3. </span>Molecular Dynamics</p>
       </div>
     </a>
     <a class="right-next"
@@ -450,7 +431,7 @@ $$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{i
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.4.9. </span>Tutorial: Simple MD</p>
+        <p class="prev-next-title"><span class="section-number">7.3.9. </span>Tutorial: Simple MD</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -472,8 +453,8 @@ $$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{i
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-functions">6.4.8.1. Potential Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">6.4.8.2. Force Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-functions">7.3.8.1. Potential Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">7.3.8.2. Force Fields</a></li>
 </ul>
   </nav></div>
 
