@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.4. Morphing &#8212; Coding Notes</title>
+    <title>Morphing &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/chimera/morph';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3.5. Spin" href="rock.html" />
-    <link rel="prev" title="3.3. Fading" href="fade.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,13 +154,12 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/0-overview.html">1. Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/linux.html">1.7. Unix/Linux Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">1.8. SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">1.9. Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">1.10. Git/Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">1.7. SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">1.8. Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">1.9. Git/Github</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../python/0-overview.html">2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -171,18 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">2.12. Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="0-overview.html">3. ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="images.html">3.2. Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fade.html">3.3. Fading</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.4. Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rock.html">3.5. Spin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin.html">3.6. Rocking</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">4. ffmpeg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../websites/jupyterbook.html">5. Create Websites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../simulation/0-overview.html">6. Protein Structure</a></li>
-
 </ul>
 
     </div>
@@ -344,8 +329,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">3.4.1. Morphing transition between 2 PDB structures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">3.4.1.1. Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">Morphing transition between 2 PDB structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
@@ -360,7 +345,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="morphing">
-<h1><span class="section-number">3.4. </span>Morphing<a class="headerlink" href="#morphing" title="Permalink to this heading">#</a></h1>
+<h1>Morphing<a class="headerlink" href="#morphing" title="Permalink to this heading">#</a></h1>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -385,7 +370,7 @@ document.write(`
 </div></div>
 </div>
 <section id="morphing-transition-between-2-pdb-structures">
-<h2><span class="section-number">3.4.1. </span>Morphing transition between 2 PDB structures<a class="headerlink" href="#morphing-transition-between-2-pdb-structures" title="Permalink to this heading">#</a></h2>
+<h2>Morphing transition between 2 PDB structures<a class="headerlink" href="#morphing-transition-between-2-pdb-structures" title="Permalink to this heading">#</a></h2>
 <p>Note: You must align the structures before morphing.</p>
 <p><em>Morph between 2 PDB structures of FnCas12a (PDB 6GTG to 6I1K)</em></p>
 <p>The code looks like:</p>
@@ -393,7 +378,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="example">
-<h3><span class="section-number">3.4.1.1. </span>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h3>
 <p>Open 2 PDB files for FnCas12a.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="mi">6</span><span class="n">i1k</span> <span class="mi">6</span><span class="n">gtg</span>
 </pre></div>
@@ -441,24 +426,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="fade.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>Fading</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="rock.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.5. </span>Spin</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -477,8 +444,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">3.4.1. Morphing transition between 2 PDB structures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">3.4.1.1. Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">Morphing transition between 2 PDB structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
 </ul>
 </li>
 </ul>
