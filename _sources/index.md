@@ -1,22 +1,31 @@
-# Overview
+# Home
 
 ## Notes I wish I had as a first year Ph.D. student with no programming background.
 
-## Command Line Tools
+### Programming
     - Bash (Unix Shell)
     - Vi/Vim (Text Editor)
-    - Git (with GitHub)
+    - Git (with GitHub
+    - Slurm
+    - SSH
     - Python 
 
-## Molecular Visualization
+### Molecular Visualization
 
-- Chimera/ChimeraX 
-- VMD
+- [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) 
+- [VMD]( https://www.ks.uiuc.edu/Research/vmd/)
+- [IQmol](http://iqmol.org)
 
-## Molecular Dynamics
+### Molecular Dynamics
 
-- Amber
+- [Amber](https://ambermd.org)
+  - Classical Molecular Dynamics (MD)
+  - Quantum Mechanics/Molecular Mechanics MD Simulations
 
-## Analysis
+### Resources
 
-- Ambertools
+**Quantum**
+[Sherrill Notes](http://vergil.chemistry.gatech.edu/notes/index.html)
+
+**Machine Learning**
+[Machine Learning](https://e2eml.school/blog.html)
