@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.8. Unix/Linux Commands &#8212; Coding Notes</title>
+    <title>1.2. Unix/Linux Commands &#8212; Coding Notes</title>
   
   
   
@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/commandline/linux';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="1.9. SSH-ing" href="ssh.html" />
+    <link rel="next" title="1.3. SSH-ing" href="ssh.html" />
     <link rel="prev" title="1.1. Bash" href="bash.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -160,24 +160,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">1. Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bash.html">1.1. Bash</a></li>
-
-
-
-
-
-
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.8. Unix/Linux Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh.html">1.9. SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="slurm.html">1.10. Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git.html">1.11. Git/Github</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../python/0-overview.html">1.12. Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../python/conda.html">1.12.10. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../python/intel.html">1.12.11. Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../python/jupyter.html">1.12.12. Jupyter Notebooks</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.2. Unix/Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">1.3. SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="slurm.html">1.4. Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">1.5. Git/Github</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../python/0-overview.html">1.6. Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../python/conda.html">1.6.10. Conda Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/intel.html">1.6.11. Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python/jupyter.html">1.6.12. Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">1.13. ffmpeg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">1.14. Create Websites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">1.7. ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">1.8. Create Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../simulation/0-overview.html">2. Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -355,27 +349,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">1.8.1. awk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">1.8.2. cat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">1.8.3. cd</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">1.8.4. cp</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cut">1.8.5. cut</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep">1.8.6. grep</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#head">1.8.7. head</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">1.8.8. help</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#info">1.8.9. info</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">1.8.10. ls</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#man">1.8.11. man</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">1.8.12. mkdir</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv">1.8.13. mv</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed">1.8.14. sed</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq">1.8.15. seq</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort">1.8.16. sort</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">1.8.17. setfacl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sudo">1.8.18. sudo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tail">1.8.19. tail</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tar">1.8.20. tar</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap">1.8.21. trap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">1.2.1. awk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">1.2.2. cat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">1.2.3. cd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">1.2.4. cp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cut">1.2.5. cut</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep">1.2.6. grep</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#head">1.2.7. head</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">1.2.8. help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#info">1.2.9. info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">1.2.10. ls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#man">1.2.11. man</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">1.2.12. mkdir</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv">1.2.13. mv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed">1.2.14. sed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq">1.2.15. seq</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort">1.2.16. sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">1.2.17. setfacl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sudo">1.2.18. sudo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tail">1.2.19. tail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tar">1.2.20. tar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap">1.2.21. trap</a></li>
 </ul>
             </nav>
         </div>
@@ -388,9 +382,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="unix-linux-commands">
-<h1><span class="section-number">1.8. </span>Unix/Linux Commands<a class="headerlink" href="#unix-linux-commands" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.2. </span>Unix/Linux Commands<a class="headerlink" href="#unix-linux-commands" title="Permalink to this heading">#</a></h1>
 <section id="awk">
-<h2><span class="section-number">1.8.1. </span>awk<a class="headerlink" href="#awk" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.1. </span>awk<a class="headerlink" href="#awk" title="Permalink to this heading">#</a></h2>
 <p>Manipulation of text.</p>
 <p>Treating a text file, were each space is a column, you can print the columns with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>file
@@ -412,7 +406,7 @@ document.write(`
 </div>
 </section>
 <section id="cat">
-<h2><span class="section-number">1.8.2. </span>cat<a class="headerlink" href="#cat" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.2. </span>cat<a class="headerlink" href="#cat" title="Permalink to this heading">#</a></h2>
 <p>Print files to stdout</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>file.txt
 </pre></div>
@@ -430,7 +424,7 @@ document.write(`
 </div>
 </section>
 <section id="cd">
-<h2><span class="section-number">1.8.3. </span>cd<a class="headerlink" href="#cd" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.3. </span>cd<a class="headerlink" href="#cd" title="Permalink to this heading">#</a></h2>
 <p>Change directories</p>
 <p>Since bash works in the context of a current directory, you might want to run your command in some other directory. We have cd for changing location:</p>
 <p>Change to home directory</p>
@@ -455,7 +449,7 @@ document.write(`
 </div>
 </section>
 <section id="cp">
-<h2><span class="section-number">1.8.4. </span>cp<a class="headerlink" href="#cp" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.4. </span>cp<a class="headerlink" href="#cp" title="Permalink to this heading">#</a></h2>
 <p>Copy files/folders.</p>
 <p>To copy file1 to file2 (new name):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>FILE_1<span class="o">]</span><span class="w"> </span><span class="o">[</span>FILE_2<span class="o">]</span>
@@ -483,14 +477,14 @@ document.write(`
 </div>
 </section>
 <section id="cut">
-<h2><span class="section-number">1.8.5. </span>cut<a class="headerlink" href="#cut" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.5. </span>cut<a class="headerlink" href="#cut" title="Permalink to this heading">#</a></h2>
 <p>Prints only the first column before the <code class="docutils literal notranslate"><span class="pre">,</span></code> character</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cut<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span>-f<span class="w"> </span><span class="m">1</span><span class="w"> </span>file.txt
 </pre></div>
 </div>
 </section>
 <section id="grep">
-<h2><span class="section-number">1.8.6. </span>grep<a class="headerlink" href="#grep" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.6. </span>grep<a class="headerlink" href="#grep" title="Permalink to this heading">#</a></h2>
 <p>Searching for Pattern in File/Folders</p>
 <p>Example</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="s1">&#39;PATTERN&#39;</span><span class="w"> </span>FILE
@@ -532,7 +526,7 @@ grep<span class="w"> </span>-rI<span class="w"> </span><span class="s2">&quot;^f
 </div>
 </section>
 <section id="head">
-<h2><span class="section-number">1.8.7. </span>head<a class="headerlink" href="#head" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.7. </span>head<a class="headerlink" href="#head" title="Permalink to this heading">#</a></h2>
 <p>Print the first 10 lines of <code class="docutils literal notranslate"><span class="pre">file.txt</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>head<span class="w"> </span>file.txt
 </pre></div>
@@ -543,7 +537,7 @@ grep<span class="w"> </span>-rI<span class="w"> </span><span class="s2">&quot;^f
 </div>
 </section>
 <section id="help">
-<h2><span class="section-number">1.8.8. </span>help<a class="headerlink" href="#help" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.8. </span>help<a class="headerlink" href="#help" title="Permalink to this heading">#</a></h2>
 <p>Read Bash shell built-ins documentation with the bash <code class="docutils literal notranslate"><span class="pre">help</span></code> built-in:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">help</span>
 <span class="nb">help</span><span class="w"> </span><span class="nb">help</span>
@@ -555,7 +549,7 @@ grep<span class="w"> </span>-rI<span class="w"> </span><span class="s2">&quot;^f
 </div>
 </section>
 <section id="info">
-<h2><span class="section-number">1.8.9. </span>info<a class="headerlink" href="#info" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.9. </span>info<a class="headerlink" href="#info" title="Permalink to this heading">#</a></h2>
 <p>Read info documentation with <code class="docutils literal notranslate"><span class="pre">info</span></code> (<code class="docutils literal notranslate"><span class="pre">?</span></code> for help)</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apropos<span class="w"> </span>info<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;^info.*(&#39;</span>
 man<span class="w"> </span>info
@@ -565,7 +559,7 @@ info<span class="w"> </span><span class="m">5</span><span class="w"> </span>info
 </div>
 </section>
 <section id="ls">
-<h2><span class="section-number">1.8.10. </span>ls<a class="headerlink" href="#ls" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.10. </span>ls<a class="headerlink" href="#ls" title="Permalink to this heading">#</a></h2>
 <p>List information about files/folders</p>
 <p>The default is to list the files in the current directory. Adding options can change how the list is organized.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span><span class="o">[</span>option<span class="o">]</span><span class="w"> </span><span class="o">[</span>directory<span class="o">]</span>
@@ -593,7 +587,7 @@ info<span class="w"> </span><span class="m">5</span><span class="w"> </span>info
 </div>
 </section>
 <section id="man">
-<h2><span class="section-number">1.8.11. </span>man<a class="headerlink" href="#man" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.11. </span>man<a class="headerlink" href="#man" title="Permalink to this heading">#</a></h2>
 <p>Get documentation for various functions with <code class="docutils literal notranslate"><span class="pre">man</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>man<span class="w"> </span>grep<span class="w"> </span><span class="c1"># documentation for grep</span>
 
@@ -602,7 +596,7 @@ man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documen
 </div>
 </section>
 <section id="mkdir">
-<h2><span class="section-number">1.8.12. </span>mkdir<a class="headerlink" href="#mkdir" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.12. </span>mkdir<a class="headerlink" href="#mkdir" title="Permalink to this heading">#</a></h2>
 <p>Create new directories.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>myNewDir
 </pre></div>
@@ -614,7 +608,7 @@ man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documen
 <p>If the intermediate directories didn’t already exist, running the above command without the <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag would return an error</p>
 </section>
 <section id="mv">
-<h2><span class="section-number">1.8.13. </span>mv<a class="headerlink" href="#mv" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.13. </span>mv<a class="headerlink" href="#mv" title="Permalink to this heading">#</a></h2>
 <p>Move files or directories from one place to another.</p>
 <p><code class="docutils literal notranslate"><span class="pre">mv</span></code> is similar to <code class="docutils literal notranslate"><span class="pre">cp</span></code>, but it deletes the source.
 <code class="docutils literal notranslate"><span class="pre">mv</span></code> is also useful for renaming files!</p>
@@ -623,7 +617,7 @@ man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documen
 </div>
 </section>
 <section id="sed">
-<h2><span class="section-number">1.8.14. </span>sed<a class="headerlink" href="#sed" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.14. </span>sed<a class="headerlink" href="#sed" title="Permalink to this heading">#</a></h2>
 <p>Tranform/replace text!</p>
 <p>We can replace some text, INPUT, with another text, OUTPUT, in a file with <code class="docutils literal notranslate"><span class="pre">sed</span></code>. The notation is:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span><span class="s1">&#39;s/INPUT/OUTPUT/&#39;</span><span class="w"> </span>file
@@ -655,7 +649,7 @@ man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documen
 </div>
 </section>
 <section id="seq">
-<h2><span class="section-number">1.8.15. </span>seq<a class="headerlink" href="#seq" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.15. </span>seq<a class="headerlink" href="#seq" title="Permalink to this heading">#</a></h2>
 <p>Print a sequence of numbers. Default increment of 1.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>seq<span class="w"> </span>FIRST<span class="w"> </span>INCREMENT<span class="w"> </span>LAST
 </pre></div>
@@ -670,14 +664,14 @@ man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documen
 </div>
 </section>
 <section id="sort">
-<h2><span class="section-number">1.8.16. </span>sort<a class="headerlink" href="#sort" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.16. </span>sort<a class="headerlink" href="#sort" title="Permalink to this heading">#</a></h2>
 <p>Print <code class="docutils literal notranslate"><span class="pre">file.txt</span></code> lines in sorted order</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sort<span class="w"> </span>file.txt
 </pre></div>
 </div>
 </section>
 <section id="setfacl">
-<h2><span class="section-number">1.8.17. </span>setfacl<a class="headerlink" href="#setfacl" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.17. </span>setfacl<a class="headerlink" href="#setfacl" title="Permalink to this heading">#</a></h2>
 <p>Give specific user permission to read/write/execute a folder.</p>
 <p><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> is short for set File ACL (Access Control List). This sets permissions for specific users, without changing the owndership of the directory.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:username:rwx<span class="w"> </span>myfolder
@@ -711,7 +705,7 @@ man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documen
 </table>
 </section>
 <section id="sudo">
-<h2><span class="section-number">1.8.18. </span>sudo<a class="headerlink" href="#sudo" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.18. </span>sudo<a class="headerlink" href="#sudo" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">sudo</span></code> is used to perform commands as the superuser usually it will ask interactively the password of superuser</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">NAME1</span><span class="o">=</span><span class="k">$(</span>whoami<span class="k">)</span>
 <span class="nv">NAME2</span><span class="o">=</span><span class="k">$(</span>sudo<span class="w"> </span>whoami<span class="k">)</span>
@@ -720,7 +714,7 @@ man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documen
 </div>
 </section>
 <section id="tail">
-<h2><span class="section-number">1.8.19. </span>tail<a class="headerlink" href="#tail" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.19. </span>tail<a class="headerlink" href="#tail" title="Permalink to this heading">#</a></h2>
 <p>Print the last 10 lines of <code class="docutils literal notranslate"><span class="pre">file.txt</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tail<span class="w"> </span>file.txt
 </pre></div>
@@ -731,7 +725,7 @@ man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documen
 </div>
 </section>
 <section id="tar">
-<h2><span class="section-number">1.8.20. </span>tar<a class="headerlink" href="#tar" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.20. </span>tar<a class="headerlink" href="#tar" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">tar</span></code> stands for tape archive.</p>
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">tar</span></code> command to create, compressed, or uncompressed Archive files, and also maintain/modify them.</p>
 <p>Archive files are used to collect multiple data files together into a single file for easier portability and storage, or simply to compress files to use less storage space.</p>
@@ -757,7 +751,7 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>folder.tar.bz2<span class
 </div>
 </section>
 <section id="trap">
-<h2><span class="section-number">1.8.21. </span>trap<a class="headerlink" href="#trap" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2.21. </span>trap<a class="headerlink" href="#trap" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">trap</span></code> command allows you to execute a command whenever your script receives a signal. Here, <code class="docutils literal notranslate"><span class="pre">trap</span></code> will execute <code class="docutils literal notranslate"><span class="pre">rm</span></code> if it receives any of the three listed signals.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">trap</span><span class="w"> </span><span class="s2">&quot;rm </span><span class="nv">$TEMP_FILE</span><span class="s2">; exit&quot;</span><span class="w"> </span>SIGHUP<span class="w"> </span>SIGINT<span class="w"> </span>SIGTERM
 </pre></div>
@@ -810,7 +804,7 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>folder.tar.bz2<span class
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.9. </span>SSH-ing</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>SSH-ing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -832,27 +826,27 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>folder.tar.bz2<span class
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">1.8.1. awk</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">1.8.2. cat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">1.8.3. cd</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">1.8.4. cp</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cut">1.8.5. cut</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep">1.8.6. grep</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#head">1.8.7. head</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">1.8.8. help</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#info">1.8.9. info</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">1.8.10. ls</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#man">1.8.11. man</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">1.8.12. mkdir</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv">1.8.13. mv</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed">1.8.14. sed</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq">1.8.15. seq</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort">1.8.16. sort</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">1.8.17. setfacl</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sudo">1.8.18. sudo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tail">1.8.19. tail</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tar">1.8.20. tar</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap">1.8.21. trap</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#awk">1.2.1. awk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cat">1.2.2. cat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd">1.2.3. cd</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cp">1.2.4. cp</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cut">1.2.5. cut</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grep">1.2.6. grep</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#head">1.2.7. head</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#help">1.2.8. help</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#info">1.2.9. info</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls">1.2.10. ls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#man">1.2.11. man</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mkdir">1.2.12. mkdir</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mv">1.2.13. mv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sed">1.2.14. sed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#seq">1.2.15. seq</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sort">1.2.16. sort</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">1.2.17. setfacl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sudo">1.2.18. sudo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tail">1.2.19. tail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tar">1.2.20. tar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap">1.2.21. trap</a></li>
 </ul>
   </nav></div>
 

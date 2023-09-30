@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.12. Python &#8212; Coding Notes</title>
+    <title>1.6. Python &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/python/0-overview';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="1.12.10. Conda Commands" href="conda.html" />
-    <link rel="prev" title="1.11. Git/Github" href="../commandline/git.html" />
+    <link rel="next" title="1.6.10. Conda Commands" href="conda.html" />
+    <link rel="prev" title="1.5. Git/Github" href="../commandline/git.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,24 +160,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">1. Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../commandline/bash.html">1.1. Bash</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../commandline/linux.html">1.8. Unix/Linux Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">1.9. SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">1.10. Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">1.11. Git/Github</a></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">1.12. Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="conda.html">1.12.10. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="intel.html">1.12.11. Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="jupyter.html">1.12.12. Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/linux.html">1.2. Unix/Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">1.3. SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">1.4. Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">1.5. Git/Github</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">1.6. Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="conda.html">1.6.10. Conda Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intel.html">1.6.11. Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyter.html">1.6.12. Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">1.13. ffmpeg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">1.14. Create Websites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">1.7. ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">1.8. Create Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../simulation/0-overview.html">2. Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -355,16 +349,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">1.12.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-datatypes-and-operators">1.12.2. Primitive Datatypes and Operators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-collections">1.12.3. 2. Variables and Collections</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-and-iterables">1.12.4. 3. Control Flow and Iterables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.12.5. 4. Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">1.12.6. 5. Classes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">1.12.7. 6.1 Inheritance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-inheritance">1.12.8. 6.2 Multiple Inheritance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced">1.12.9. 7. Advanced</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decorators">1.12.9.1. Decorators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">1.6.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-datatypes-and-operators">1.6.2. Primitive Datatypes and Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-collections">1.6.3. 2. Variables and Collections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-and-iterables">1.6.4. 3. Control Flow and Iterables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.6.5. 4. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">1.6.6. 5. Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">1.6.7. 6.1 Inheritance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-inheritance">1.6.8. 6.2 Multiple Inheritance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced">1.6.9. 7. Advanced</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decorators">1.6.9.1. Decorators</a></li>
 </ul>
 </li>
 </ul>
@@ -379,9 +373,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="python">
-<h1><span class="section-number">1.12. </span>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.6. </span>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2><span class="section-number">1.12.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Single line comments start with a number symbol.</span>
 </pre></div>
 </div>
@@ -394,7 +388,7 @@ document.write(`
 </div>
 </section>
 <section id="primitive-datatypes-and-operators">
-<h2><span class="section-number">1.12.2. </span>Primitive Datatypes and Operators<a class="headerlink" href="#primitive-datatypes-and-operators" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.2. </span>Primitive Datatypes and Operators<a class="headerlink" href="#primitive-datatypes-and-operators" title="Permalink to this heading">#</a></h2>
 <p>You have numbers</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> 
 </pre></div>
@@ -560,7 +554,7 @@ document.write(`
 </div>
 </section>
 <section id="variables-and-collections">
-<h2><span class="section-number">1.12.3. </span>2. Variables and Collections<a class="headerlink" href="#variables-and-collections" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.3. </span>2. Variables and Collections<a class="headerlink" href="#variables-and-collections" title="Permalink to this heading">#</a></h2>
 <p>Python has a print function</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;m Python. Nice to meet you!&quot;</span><span class="p">)</span>  <span class="c1"># =&gt; I&#39;m Python. Nice to meet you!</span>
 </pre></div>
@@ -808,7 +802,7 @@ document.write(`
 </div>
 </section>
 <section id="control-flow-and-iterables">
-<h2><span class="section-number">1.12.4. </span>3. Control Flow and Iterables<a class="headerlink" href="#control-flow-and-iterables" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.4. </span>3. Control Flow and Iterables<a class="headerlink" href="#control-flow-and-iterables" title="Permalink to this heading">#</a></h2>
 <p>Let’s just make a variable</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">some_var</span> <span class="o">=</span> <span class="mi">5</span>
 </pre></div>
@@ -968,7 +962,7 @@ document.write(`
 </div>
 </section>
 <section id="functions">
-<h2><span class="section-number">1.12.5. </span>4. Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.5. </span>4. Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
 <p>Use “def” to create new functions</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x is </span><span class="si">{}</span><span class="s2"> and y is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
@@ -1087,7 +1081,7 @@ document.write(`
 </div>
 </section>
 <section id="classes">
-<h2><span class="section-number">1.12.6. </span>5. Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.6. </span>5. Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h2>
 <p>We use the “class” statement to create a class</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
 
@@ -1178,7 +1172,7 @@ document.write(`
 </div>
 </section>
 <section id="inheritance">
-<h2><span class="section-number">1.12.7. </span>6.1 Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.7. </span>6.1 Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this heading">#</a></h2>
 <p>Inheritance allows new child classes to be defined that inherit methods and variables from their parent class.</p>
 <p>Using the Human class defined above as the base or parent class, we can define a child class, Superhero, which inherits the class variables like “species”, “name”, and “age”, as well as methods, like “sing” and “grunt” from the Human class, but can also have its own unique properties.</p>
 <p>To take advantage of modularization by file you could place the classes above in their own files, say, human.py</p>
@@ -1264,7 +1258,7 @@ document.write(`
 </div>
 </section>
 <section id="multiple-inheritance">
-<h2><span class="section-number">1.12.8. </span>6.2 Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.8. </span>6.2 Multiple Inheritance<a class="headerlink" href="#multiple-inheritance" title="Permalink to this heading">#</a></h2>
 <p>Another class definition, <code class="docutils literal notranslate"><span class="pre">bat.py</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Bat</span><span class="p">:</span>
 
@@ -1347,7 +1341,7 @@ document.write(`
 </div>
 </section>
 <section id="advanced">
-<h2><span class="section-number">1.12.9. </span>7. Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6.9. </span>7. Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading">#</a></h2>
 <p>Generators help you make lazy code.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">double_numbers</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
@@ -1374,7 +1368,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="decorators">
-<h3><span class="section-number">1.12.9.1. </span>Decorators<a class="headerlink" href="#decorators" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.6.9.1. </span>Decorators<a class="headerlink" href="#decorators" title="Permalink to this heading">#</a></h3>
 <p>In this example <code class="docutils literal notranslate"><span class="pre">beg</span></code> wraps <code class="docutils literal notranslate"><span class="pre">say</span></code>. If say_please is True then it will change the returned message.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
 
@@ -1444,7 +1438,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.11. </span>Git/Github</p>
+        <p class="prev-next-title"><span class="section-number">1.5. </span>Git/Github</p>
       </div>
     </a>
     <a class="right-next"
@@ -1452,7 +1446,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.12.10. </span>Conda Commands</p>
+        <p class="prev-next-title"><span class="section-number">1.6.10. </span>Conda Commands</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1474,16 +1468,16 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">1.12.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-datatypes-and-operators">1.12.2. Primitive Datatypes and Operators</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-collections">1.12.3. 2. Variables and Collections</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-and-iterables">1.12.4. 3. Control Flow and Iterables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.12.5. 4. Functions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">1.12.6. 5. Classes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">1.12.7. 6.1 Inheritance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-inheritance">1.12.8. 6.2 Multiple Inheritance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced">1.12.9. 7. Advanced</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decorators">1.12.9.1. Decorators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">1.6.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primitive-datatypes-and-operators">1.6.2. Primitive Datatypes and Operators</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-and-collections">1.6.3. 2. Variables and Collections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-flow-and-iterables">1.6.4. 3. Control Flow and Iterables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.6.5. 4. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">1.6.6. 5. Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inheritance">1.6.7. 6.1 Inheritance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-inheritance">1.6.8. 6.2 Multiple Inheritance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced">1.6.9. 7. Advanced</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decorators">1.6.9.1. Decorators</a></li>
 </ul>
 </li>
 </ul>
