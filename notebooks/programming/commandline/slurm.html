@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.8. Slurm &#8212; Coding Notes</title>
+    <title>1.4. Slurm &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/commandline/slurm';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="1.9. Git/Github" href="git.html" />
-    <link rel="prev" title="1.7. SSH-ing" href="ssh.html" />
+    <link rel="next" title="1.5. Git/Github" href="git.html" />
+    <link rel="prev" title="1.3. SSH-ing" href="ssh.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,10 +158,12 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="0-overview.html">1. Bash</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ssh.html">1.7. SSH-ing</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.8. Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git.html">1.9. Git/Github</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">1. Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="0-overview.html">1.1. Bash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux.html">1.2. Unix/Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">1.3. SSH-ing</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4. Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git.html">1.5. Git/Github</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../python/0-overview.html">2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -331,23 +333,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.8.1. Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">1.8.2. Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">1.8.2.1. Basic Example</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">1.8.2.2. GPU Example</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">1.8.2.3. Exclusive Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.4.1. Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">1.4.2. Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">1.4.2.1. Basic Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">1.4.2.2. GPU Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">1.4.2.3. Exclusive Example</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-commands">1.8.3. Slurm Commands</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinfo">1.8.3.1. sinfo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sbatch">1.8.3.2. sbatch</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scancel">1.8.3.3. scancel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squeue">1.8.3.4. squeue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-commands">1.4.3. Slurm Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinfo">1.4.3.1. sinfo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sbatch">1.4.3.2. sbatch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scancel">1.4.3.3. scancel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squeue">1.4.3.4. squeue</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scontrol">1.8.4. scontrol</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">1.8.5. Module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">1.8.5.1. Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scontrol">1.4.4. scontrol</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">1.4.5. Module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">1.4.5.1. Commands</a></li>
 </ul>
 </li>
 </ul>
@@ -362,17 +364,17 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="slurm">
-<h1><span class="section-number">1.8. </span>Slurm<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.4. </span>Slurm<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h1>
 <section id="background">
-<h2><span class="section-number">1.8.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.4.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
 <p>SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.</p>
 <p><a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
 </section>
 <section id="directives-sbatch">
-<h2><span class="section-number">1.8.2. </span>Directives (#SBATCH)<a class="headerlink" href="#directives-sbatch" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.4.2. </span>Directives (#SBATCH)<a class="headerlink" href="#directives-sbatch" title="Permalink to this heading">#</a></h2>
 <p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many CPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code></p>
 <section id="basic-example">
-<h3><span class="section-number">1.8.2.1. </span>Basic Example<a class="headerlink" href="#basic-example" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.4.2.1. </span>Basic Example<a class="headerlink" href="#basic-example" title="Permalink to this heading">#</a></h3>
 <p>Change the words in all-caps to what you need.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=PARTITION</span>
@@ -386,7 +388,7 @@ document.write(`
 </div>
 </section>
 <section id="gpu-example">
-<h3><span class="section-number">1.8.2.2. </span>GPU Example<a class="headerlink" href="#gpu-example" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.4.2.2. </span>GPU Example<a class="headerlink" href="#gpu-example" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=GPU_PARTITION</span>
 <span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
@@ -400,7 +402,7 @@ document.write(`
 </div>
 </section>
 <section id="exclusive-example">
-<h3><span class="section-number">1.8.2.3. </span>Exclusive Example<a class="headerlink" href="#exclusive-example" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.4.2.3. </span>Exclusive Example<a class="headerlink" href="#exclusive-example" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=GPU_PARTITION</span>
 <span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
@@ -416,10 +418,10 @@ document.write(`
 </section>
 </section>
 <section id="slurm-commands">
-<h2><span class="section-number">1.8.3. </span>Slurm Commands<a class="headerlink" href="#slurm-commands" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.4.3. </span>Slurm Commands<a class="headerlink" href="#slurm-commands" title="Permalink to this heading">#</a></h2>
 <p>There are Slurm specific commands.</p>
 <section id="sinfo">
-<h3><span class="section-number">1.8.3.1. </span>sinfo<a class="headerlink" href="#sinfo" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.4.3.1. </span>sinfo<a class="headerlink" href="#sinfo" title="Permalink to this heading">#</a></h3>
 <p>Get information about the resources on available nodes that make up the HPC cluster</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span><span class="c1"># All resources </span>
 sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>idle<span class="w"> </span><span class="c1"># Idle nodes </span>
@@ -427,7 +429,7 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
 </div>
 </section>
 <section id="sbatch">
-<h3><span class="section-number">1.8.3.2. </span>sbatch<a class="headerlink" href="#sbatch" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.4.3.2. </span>sbatch<a class="headerlink" href="#sbatch" title="Permalink to this heading">#</a></h3>
 <p>Submit batch script to Slurm for processing</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm
 <span class="c1"># The JOB_ID will be printed after you submit the batch script</span>
@@ -437,14 +439,14 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
 </div>
 </section>
 <section id="scancel">
-<h3><span class="section-number">1.8.3.3. </span>scancel<a class="headerlink" href="#scancel" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.4.3.3. </span>scancel<a class="headerlink" href="#scancel" title="Permalink to this heading">#</a></h3>
 <p>Cancel a job that is pending or running</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel<span class="w"> </span>*JOB_ID*
 </pre></div>
 </div>
 </section>
 <section id="squeue">
-<h3><span class="section-number">1.8.3.4. </span>squeue<a class="headerlink" href="#squeue" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.4.3.4. </span>squeue<a class="headerlink" href="#squeue" title="Permalink to this heading">#</a></h3>
 <p>Show Slurm queue, can be all queue or just your jobs</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w"> </span><span class="c1"># All jobs queue</span>
 squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w"> </span><span class="c1"># USERNAME queue</span>
@@ -453,16 +455,16 @@ squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w
 </section>
 </section>
 <section id="scontrol">
-<h2><span class="section-number">1.8.4. </span>scontrol<a class="headerlink" href="#scontrol" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.4.4. </span>scontrol<a class="headerlink" href="#scontrol" title="Permalink to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span>*JOB_ID*
 </pre></div>
 </div>
 </section>
 <section id="module">
-<h2><span class="section-number">1.8.5. </span>Module<a class="headerlink" href="#module" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.4.5. </span>Module<a class="headerlink" href="#module" title="Permalink to this heading">#</a></h2>
 <p>HPC uses a module system to load most software into a user’s environment. Most software is not accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
 <section id="commands">
-<h3><span class="section-number">1.8.5.1. </span>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.4.5.1. </span>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">#</a></h3>
 <p>List all available modules</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>av
 </pre></div>
@@ -520,7 +522,7 @@ squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.7. </span>SSH-ing</p>
+        <p class="prev-next-title"><span class="section-number">1.3. </span>SSH-ing</p>
       </div>
     </a>
     <a class="right-next"
@@ -528,7 +530,7 @@ squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.9. </span>Git/Github</p>
+        <p class="prev-next-title"><span class="section-number">1.5. </span>Git/Github</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -550,23 +552,23 @@ squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.8.1. Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">1.8.2. Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">1.8.2.1. Basic Example</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">1.8.2.2. GPU Example</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">1.8.2.3. Exclusive Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">1.4.1. Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">1.4.2. Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">1.4.2.1. Basic Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">1.4.2.2. GPU Example</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">1.4.2.3. Exclusive Example</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-commands">1.8.3. Slurm Commands</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinfo">1.8.3.1. sinfo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sbatch">1.8.3.2. sbatch</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scancel">1.8.3.3. scancel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squeue">1.8.3.4. squeue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-commands">1.4.3. Slurm Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinfo">1.4.3.1. sinfo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sbatch">1.4.3.2. sbatch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scancel">1.4.3.3. scancel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squeue">1.4.3.4. squeue</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scontrol">1.8.4. scontrol</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">1.8.5. Module</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">1.8.5.1. Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scontrol">1.4.4. scontrol</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">1.4.5. Module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">1.4.5.1. Commands</a></li>
 </ul>
 </li>
 </ul>
