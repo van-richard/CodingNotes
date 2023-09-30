@@ -1,8 +1,10 @@
+# CodingNotes
+
 I wish someone had given me this in the first year of my Ph.D.
 
 ![](_static/welcome.png)
 
-These notes serve as a guide for:
+These notes contain tips for:
 
 **Programming**
 - Bash Scripting
@@ -11,7 +13,7 @@ These notes serve as a guide for:
 - HPC, SSH, and Slurm
 - Python and Conda
 
-**Softwares**
+**Software**
 - [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) 
 - [VMD]( https://www.ks.uiuc.edu/Research/vmd/)
 - [IQmol](http://iqmol.org)
@@ -27,7 +29,7 @@ These notes serve as a guide for:
 **Cloud-based Websites**
 - [GitHub](https://github.com)
 - [Overleaf](https://www.overleaf.com)
-- [Google CoLab](https://colab.research.google.com) Other Helpful Resources
+- [Google CoLab](https://colab.research.google.com)
 
 **Other helpful resources**
 [Sherrill Notes](http://vergil.chemistry.gatech.edu/notes/index.html)

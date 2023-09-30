@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Preface &#8212; Coding Notes</title>
+    <title>Terminal and the Command Line &#8212; Coding Notes</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Preface';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/CommandLine';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Minutes" href="Minutes.html" />
-    <link rel="prev" title="CodingNotes" href="../index.html" />
+    <link rel="next" title="Example" href="commandline/example0.html" />
+    <link rel="prev" title="Minutes" href="Minutes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,13 +157,13 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0 - Hello!</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Preface</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Preface.html">Preface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Minutes.html">Minutes</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I - Foundational Skills</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="CommandLine.html">Terminal and the Command Line</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Terminal and the Command Line</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="commandline/example0.html">Example</a></li>
 </ul>
 </li>
@@ -219,7 +219,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/Preface.ipynb" target="_blank"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/CommandLine.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -245,7 +245,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/notebooks/Preface.ipynb" target="_blank"
+      <li><a href="../_sources/notebooks/CommandLine.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -314,9 +314,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -327,20 +325,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Preface</h1>
+    <h1>Terminal and the Command Line</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -350,98 +339,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="preface">
-<h1>Preface<a class="headerlink" href="#preface" title="Permalink to this heading">#</a></h1>
-<p>Tips, tricks, cheatsheets, and examples for all things related to chemistry and code! I learned it the hard way so you don’t have to.</p>
-<p>I still remember my first day in a computational chemistry lab. All I felt was stress, confusion, and it was overwhelming to see a terminal for the first time and hearing all the nonsense modelling software names. <em>BUT IT’S NOT AS BAD AS IT SOUNDS!</em> - believe it or not - From my short experience in computational chemistry, I learned that building a good foundation in one or two languages is better than trying to absorb all the information on the internet.</p>
-<p>In that spirit, I believe the bare minimum skills needed to do well in computational research is familiarity with the command line (e.g. <code class="docutils literal notranslate"><span class="pre">Bash</span></code> scripting, <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code> for text editing), <code class="docutils literal notranslate"><span class="pre">python</span></code> for data analysis and plotting figures, and <code class="docutils literal notranslate"><span class="pre">git</span></code> for coordinating work with the lab.</p>
-<p>If you are working with biological systems, then you should be comfortable with Chimera/ChimeraX and VMD.</p>
-<p>If you’re working on small molecules, then you should be comfortable with IQmol and ChemDraw.</p>
-<p>Here, I documented some things I learned along the way, some examples for <code class="docutils literal notranslate"><span class="pre">Bash</span></code>, <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code>, <code class="docutils literal notranslate"><span class="pre">python</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span></code>, and some movie making with ChimeraX and VMD.</p>
-<p>My goal for these notes is for you to have access to examples and explanations for our very niche problems.</p>
-<p>Remember to not beat yourself over, and struggle with a coding problem for too long! Spend 1 -2 hours <strong>MAX</strong>, if you can’t figure it out, then reach out to anyone in lab.</p>
-<p>Best of luck on your journey into computational research!!!</p>
-<section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
-<p>I organized these notes as followed. First is <strong>Minutes</strong>, which should just take a few minutes to glimpse over and for you to get an idea of what computational tools we use. Next is <strong>Foundational Skills</strong>, which is split into 2 parts. <strong>Part I</strong> will help you develop the skills to navigate the command line, become familiar with our supercomputers (Schooner/Pete), learn about visualization softwares, and try some docking studies. <strong>Part II</strong> is focused on extending these skills to writing scripts in <code class="docutils literal notranslate"><span class="pre">Bash</span></code> and <code class="docutils literal notranslate"><span class="pre">python</span></code>. You will find that a lot of tasks become repetitive, and by writing scripts, we can automate of lot of our responsibilities. I also included some tips in making quality images/videos for presentations/publications. The last task is for you to run a simple molecular dynamics (MD) simulation of alanine dipeptide.</p>
-<p>At the end are additonal tutorials and other tips for you to try!</p>
-</section>
-<section id="workflow">
-<h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this heading">#</a></h2>
-<p><strong>Minutes</strong></p>
-<ul class="simple">
-<li><p>5 Minute Explanation of..</p>
-<ul>
-<li><p>Terminal and the Command Line( i.e. Unix/Linux, <code class="docutils literal notranslate"><span class="pre">Bash</span></code>, SSH, Slurm, and <code class="docutils literal notranslate"><span class="pre">git</span></code>)</p></li>
-</ul>
-</li>
-<li><p>Visualization Softwares</p>
-<ul>
-<li><p>IQmol, Chimera/ChimeraX, and VMD</p></li>
-</ul>
-</li>
-<li><p>What is Python? Conda?</p></li>
-<li><p>What is Computational Chemistry?</p></li>
-</ul>
-<p><strong>Part I - Foundational Skills</strong></p>
-<ul class="simple">
-<li><p>Programming I: An Introduction to..</p>
-<ul>
-<li><p>Command Line</p></li>
-<li><p>Supercomputing (Schooner/Pete)</p></li>
-</ul>
-</li>
-<li><p>Visualization I: Small molecules and Protein Structures..</p>
-<ul>
-<li><p>IQmol</p></li>
-<li><p>xyz/PDB Files</p></li>
-<li><p>ChimeraX</p></li>
-</ul>
-</li>
-<li><p>Macromolecular Modelling I: Predicting Binding Affinity with..</p>
-<ul>
-<li><p>Molecular Docking</p></li>
-</ul>
-</li>
-</ul>
-<p><strong>Part II - Foundational Skills</strong></p>
-<ul class="simple">
-<li><p>Programming II: Scripting with..</p>
-<ul>
-<li><p>Bash</p></li>
-<li><p>Python</p></li>
-</ul>
-</li>
-<li><p>Visualization II: Making Quality Figures..</p>
-<ul>
-<li><p>ChimeraX Command Line</p></li>
-<li><p>Saving Images/Movies</p></li>
-</ul>
-</li>
-<li><p>Macromolecular Modelling II: Intoduction to..</p>
-<ul>
-<li><p>Molecular Simulations</p></li>
-<li><p>Tutorial: Simple MD of Alanine dipeptide</p></li>
-<li><p>Visualization with VMD</p></li>
-</ul>
-</li>
-</ul>
-<p><strong>Additional Tutorials</strong></p>
-<p><em>Classical MD</em></p>
-<ul class="simple">
-<li><p>Distance Restraints</p></li>
-</ul>
-<p><em>QM/MM</em></p>
-<ul class="simple">
-<li><p>Claisen Rearrangement</p></li>
-<li><p>DNA Cleavage with I-Ppo1</p></li>
-</ul>
-<p><strong>Appendix</strong></p>
-<ul class="simple">
-<li><p>Unix/Linux Commands</p></li>
-</ul>
-<p>(I hope this stays organized)</p>
-</section>
+  <section id="terminal-and-the-command-line">
+<h1>Terminal and the Command Line<a class="headerlink" href="#terminal-and-the-command-line" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -476,20 +377,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="Minutes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">CodingNotes</p>
+        <p class="prev-next-title">Minutes</p>
       </div>
     </a>
     <a class="right-next"
-       href="Minutes.html"
+       href="commandline/example0.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Minutes</p>
+        <p class="prev-next-title">Example</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -502,21 +403,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contents">Contents</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflow">Workflow</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
