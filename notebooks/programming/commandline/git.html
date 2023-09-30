@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Git Commands &#8212; Coding Notes</title>
+    <title>Git/Github &#8212; Coding Notes</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Python" href="../python/0-overview.html" />
-    <link rel="prev" title="SLURM" href="slurm.html" />
+    <link rel="prev" title="Slurm" href="slurm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,11 +153,11 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">Home</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">BASH</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">Bash</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="linux.html">Unix/Linux Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="slurm.html">SLURM</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Git Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slurm.html">Slurm</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Git/Github</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../python/0-overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">Website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">Create Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../simulation/0-overview.html">Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -349,7 +349,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Git Commands</h1>
+    <h1>Git/Github</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -359,12 +359,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-repository-from-github">Copy repository from GitHub</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-your-changes">Push your changes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Git Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branches">Branches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
 </ul>
             </nav>
         </div>
@@ -376,8 +378,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="git-commands">
-<h1>Git Commands<a class="headerlink" href="#git-commands" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="git-github">
+<h1>Git/Github<a class="headerlink" href="#git-github" title="Permalink to this heading">#</a></h1>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">git</span></code> is a version control system.
+<code class="docutils literal notranslate"><span class="pre">git</span></code> helps you keep track of code changes.
+<code class="docutils literal notranslate"><span class="pre">git</span></code> is used to collaborate on code.</p>
+<p><a class="reference external" href="https://github.com">GitHub</a> is a cloud-based hosting service that lets you manage <code class="docutils literal notranslate"><span class="pre">git</span></code> repositories. If you have open-source projects that use <code class="docutils literal notranslate"><span class="pre">git</span></code>, then GitHub is designed to help you better manage them.</p>
+</section>
 <section id="basics">
 <h2>Basics<a class="headerlink" href="#basics" title="Permalink to this heading">#</a></h2>
 <section id="copy-repository-from-github">
@@ -400,8 +409,28 @@ git<span class="w"> </span>push
 </div>
 </section>
 </section>
-<section id="id1">
-<h2>Git Commands<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<section id="branches">
+<h2>Branches<a class="headerlink" href="#branches" title="Permalink to this heading">#</a></h2>
+<p>List all branches in repository</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch
+</pre></div>
+</div>
+<p>Make a new branch called <em>NAME</em> (does not check out!)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>*NAME*<span class="w"> </span>
+</pre></div>
+</div>
+<p>Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>*NAME*
+</pre></div>
+</div>
+<p>Rename current branch</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>*NEW_NAME*
+</pre></div>
+</div>
+<p>Commits to branch needs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> followed by the usual <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p>
+</section>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">#</a></h2>
 <p>Quickly check available commands</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span><span class="nb">help</span>
 </pre></div>
@@ -516,7 +545,7 @@ git<span class="w"> </span>init<span class="w"> </span>--help
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">SLURM</p>
+        <p class="prev-next-title">Slurm</p>
       </div>
     </a>
     <a class="right-next"
@@ -546,12 +575,14 @@ git<span class="w"> </span>init<span class="w"> </span>--help
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-repository-from-github">Copy repository from GitHub</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-your-changes">Push your changes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Git Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branches">Branches</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
 </ul>
   </nav></div>
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>SLURM &#8212; Coding Notes</title>
+    <title>Slurm &#8212; Coding Notes</title>
   
   
   
@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/commandline/slurm';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Git Commands" href="git.html" />
+    <link rel="next" title="Git/Github" href="git.html" />
     <link rel="prev" title="SSH-ing" href="ssh.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -153,11 +153,11 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">Home</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">BASH</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">Bash</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="linux.html">Unix/Linux Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">SLURM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="git.html">Git Commands</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Slurm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="git.html">Git/Github</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../python/0-overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">Website</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">Create Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../simulation/0-overview.html">Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -349,7 +349,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>SLURM</h1>
+    <h1>Slurm</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -359,10 +359,23 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">Basic Example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">GPU Example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">Exclusive Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-commands">Slurm Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinfo">sinfo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sbatch">sbatch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scancel">scancel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squeue">squeue</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scontrol">scontrol</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">Module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
 </ul>
 </li>
 </ul>
@@ -377,11 +390,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="slurm">
-<h1>SLURM<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h1>
+<h1>Slurm<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h1>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
 <p>SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.</p>
 <p><a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
-<section id="directives">
-<h2>Directives<a class="headerlink" href="#directives" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="directives-sbatch">
+<h2>Directives (#SBATCH)<a class="headerlink" href="#directives-sbatch" title="Permalink to this heading">#</a></h2>
 <p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many CPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code></p>
 <section id="basic-example">
 <h3>Basic Example<a class="headerlink" href="#basic-example" title="Permalink to this heading">#</a></h3>
@@ -423,6 +439,72 @@ document.write(`
 <span class="c1">#SBATCH --name=JOBNAME</span>
 <span class="c1">#SBATCH --mem=0</span>
 <span class="c1">#SBATCH --exclusive</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="slurm-commands">
+<h2>Slurm Commands<a class="headerlink" href="#slurm-commands" title="Permalink to this heading">#</a></h2>
+<p>There are Slurm specific commands.</p>
+<section id="sinfo">
+<h3>sinfo<a class="headerlink" href="#sinfo" title="Permalink to this heading">#</a></h3>
+<p>Get information about the resources on available nodes that make up the HPC cluster</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span><span class="c1"># All resources </span>
+sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>idle<span class="w"> </span><span class="c1"># Idle nodes </span>
+</pre></div>
+</div>
+</section>
+<section id="sbatch">
+<h3>sbatch<a class="headerlink" href="#sbatch" title="Permalink to this heading">#</a></h3>
+<p>Submit batch script to Slurm for processing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm
+<span class="c1"># The JOB_ID will be printed after you submit the batch script</span>
+<span class="c1"># which looks like:</span>
+<span class="c1"># “Submitted batch job *JOB_ID*”</span>
+</pre></div>
+</div>
+</section>
+<section id="scancel">
+<h3>scancel<a class="headerlink" href="#scancel" title="Permalink to this heading">#</a></h3>
+<p>Cancel a job that is pending or running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel<span class="w"> </span>*JOB_ID*
+</pre></div>
+</div>
+</section>
+<section id="squeue">
+<h3>squeue<a class="headerlink" href="#squeue" title="Permalink to this heading">#</a></h3>
+<p>Show Slurm queue, can be all queue or just your jobs</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w"> </span><span class="c1"># All jobs queue</span>
+squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w"> </span><span class="c1"># USERNAME queue</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="scontrol">
+<h2>scontrol<a class="headerlink" href="#scontrol" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span>*JOB_ID*
+</pre></div>
+</div>
+</section>
+<section id="module">
+<h2>Module<a class="headerlink" href="#module" title="Permalink to this heading">#</a></h2>
+<p>HPC uses a module system to load most software into a user’s environment. Most software is not accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
+<section id="commands">
+<h3>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">#</a></h3>
+<p>List all available modules</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>av
+</pre></div>
+</div>
+<p>Load a module</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>*name*
+</pre></div>
+</div>
+<p>Remove a module</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>remove<span class="w"> </span>*name*
+</pre></div>
+</div>
+<p>Remove ALL modules, cleaning your environment</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>purge
 </pre></div>
 </div>
 </section>
@@ -474,7 +556,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Git Commands</p>
+        <p class="prev-next-title">Git/Github</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -496,10 +578,23 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives">Directives</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-example">Basic Example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gpu-example">GPU Example</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exclusive-example">Exclusive Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-commands">Slurm Commands</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinfo">sinfo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sbatch">sbatch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scancel">scancel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#squeue">squeue</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scontrol">scontrol</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module">Module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
 </ul>
 </li>
 </ul>

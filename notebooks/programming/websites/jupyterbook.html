@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Website &#8212; Coding Notes</title>
+    <title>Create Websites &#8212; Coding Notes</title>
   
   
   
@@ -153,11 +153,11 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">Home</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="../commandline/0-overview.html">BASH</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../commandline/0-overview.html">Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commandline/linux.html">Unix/Linux Commands</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commandline/ssh.html">SSH-ing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commandline/slurm.html">SLURM</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commandline/git.html">Git Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/slurm.html">Slurm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commandline/git.html">Git/Github</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../python/0-overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Website</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Create Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../simulation/0-overview.html">Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -349,7 +349,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Website</h1>
+    <h1>Create Websites</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -359,7 +359,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -371,11 +375,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="website">
-<h1>Website<a class="headerlink" href="#website" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="create-websites">
+<h1>Create Websites<a class="headerlink" href="#create-websites" title="Permalink to this heading">#</a></h1>
 <section id="jupyter-book">
 <h2>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this heading">#</a></h2>
-<p>In a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environemnt, install the package.</p>
+<section id="background">
+<h3>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h3>
+<p>Design a website using jupyter notebooks</p>
+<p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter-Book</a></p>
+</section>
+<section id="tutorial">
+<h3>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">#</a></h3>
+<p>Adapted from the webpage.</p>
+<p>In a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment, install the package, <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyter-book
 </pre></div>
 </div>
@@ -398,6 +410,48 @@ git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </sp
 git<span class="w"> </span>push
 </pre></div>
 </div>
+<p>I automated this with a <code class="docutils literal notranslate"><span class="pre">build.sh</span></code> script:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Import aliases</span>
+<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>expand_aliases<span class="w"> </span>
+<span class="nb">source</span><span class="w"> </span>~/.bash_aliases<span class="w">  </span>
+
+<span class="c1"># Build book and push changes</span>
+myconda<span class="w"> </span>jupyter-book<span class="w"> </span>build<span class="w"> </span>.<span class="w"> </span>--all<span class="w"> </span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html<span class="w"> </span>
+</pre></div>
+</div>
+<p>To publish you book online, you need to host it on a public repository on Github.</p>
+<ol class="arabic simple">
+<li><p>First, log in to GitHub, then go to the “create a new repository” page: new</p></li>
+<li><p>Next, give your online repository a name and a description. Make your repository public and do not initialize it with a README file, then click “Create repository”.</p></li>
+<li><p>Now, clone the (currently empty) online repository to a location on your local computer. You can do this via the command line with:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/&lt;my-org&gt;/&lt;my-repository-name&gt;<span class="w"> </span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Copy all of your book files and folders into this newly cloned repository. For example, if you created your book locally with <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">mylocalbook</span></code> and your new repository is called ”myonlinebook,“ you could do this via the command line with:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>mylocalbook/*<span class="w"> </span>myonlinebook/<span class="w"> </span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Now you need to sync your local and remote (i.e., online) repositories. You can do this with the following commands:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>build.sh
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Update the settings for your GitHub pages site:</p>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch to host your website.</p></li>
+<li><p>Choose root directory <code class="docutils literal notranslate"><span class="pre">/</span></code> if you’re building the book in it’s own repository. Choose <code class="docutils literal notranslate"><span class="pre">/docs</span></code> directory if you’re building documentation with jupyter-book. From the main branch of your book’s root directory (which should contain the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder</p></li>
+</ul>
+</li>
+</ol>
+</section>
 </section>
 </section>
 
@@ -468,7 +522,11 @@ git<span class="w"> </span>push
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">Jupyter Book</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">Tutorial</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
