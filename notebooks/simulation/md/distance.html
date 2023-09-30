@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial: Distance Restraints &#8212; Coding Notes</title>
+    <title>Tutorial: Restraint MD &#8212; Coding Notes</title>
   
   
   
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">Molecular Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="simple.html">Tutorial: Simple MD</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Tutorial: Distance Restraints</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Tutorial: Restraint MD</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../qmmm/0-overview.html">QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -349,7 +349,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial: Distance Restraints</h1>
+    <h1>Tutorial: Restraint MD</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,8 +380,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-distance-restraints">
-<h1>Tutorial: Distance Restraints<a class="headerlink" href="#tutorial-distance-restraints" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-restraint-md">
+<h1>Tutorial: Restraint MD<a class="headerlink" href="#tutorial-restraint-md" title="Permalink to this heading">#</a></h1>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -414,10 +414,10 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Topology file (*.parm7)</p></li>
 <li><p>Coordinate file (*.rst7)</p></li>
-<li><p>MD input files (<a class="reference external" href="http://min.in">min.in</a>, <a class="reference external" href="http://heat.in">heat.in</a>, prod[0 to 3].in, and <em>cv[0 to 3].rst</em>)</p></li>
+<li><p>MD input files (<a class="reference external" href="http://min.in">min.in</a>, <a class="reference external" href="http://heat.in">heat.in</a>, prod*.in, and <em>cv*.rst</em>)</p></li>
 </ol>
 <p>You can download my files for reference.</p>
-<p><a class="reference external" href="https://www.dropbox.com/scl/fi/8p1ymw35ilvs79egtktqv/distance.tar.bz2?rlkey=mgddua07m5q8ukbptf1uiv36j&amp;dl=0">Distance Restraint Files</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/scl/fi/8p1ymw35ilvs79egtktqv/distance.tar.bz2?rlkey=mgddua07m5q8ukbptf1uiv36j&amp;dl=0">distance.tar.bz2</a></p>
 <p>To extract:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>xvjf<span class="w"> </span>distance.tar.bz2
 </pre></div>

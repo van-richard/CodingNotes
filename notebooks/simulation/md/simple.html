@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/md/simple';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tutorial: Distance Restraints" href="distance.html" />
+    <link rel="next" title="Tutorial: Restraint MD" href="distance.html" />
     <link rel="prev" title="Molecular Dynamics" href="0-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">Molecular Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Tutorial: Simple MD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="distance.html">Tutorial: Distance Restraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">Tutorial: Restraint MD</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../qmmm/0-overview.html">QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -407,11 +407,15 @@ document.write(`
 <p>To do so, we will need to make:</p>
 <ol class="arabic simple">
 <li><p>Topology file (*.parm7)</p></li>
-<li><p>Cooridnate file (*.rst7)</p></li>
+<li><p>Coordinate file (*.rst7)</p></li>
 <li><p>MD input files (<a class="reference external" href="http://min.in">min.in</a>, <a class="reference external" href="http://heat.in">heat.in</a>, <a class="reference external" href="http://prod.in">prod.in</a>)</p></li>
 </ol>
 <p>You can download my files here:</p>
-<p><a class="reference external" href="https://www.dropbox.com/scl/fi/8p1ymw35ilvs79egtktqv/distance.tar.bz2?rlkey=mgddua07m5q8ukbptf1uiv36j&amp;dl=0">Simple Simulation</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/scl/fi/vnhuy67y148z51talehlt/simple.tar.bz2?rlkey=cocf2mz57hbsnj26xe4f6e4d4&amp;dl=0">simple.tar.bz2</a></p>
+<p>To extract:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>xvjf<span class="w"> </span>simple.tar.bz2
+</pre></div>
+</div>
 <p><em>NOTE: This tutorial can run on your personal computer. The example/files used the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment on my MacBook.</em></p>
 <p>Activated your <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
@@ -597,7 +601,7 @@ Next, we will make the Amber MD input files.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial: Distance Restraints</p>
+        <p class="prev-next-title">Tutorial: Restraint MD</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

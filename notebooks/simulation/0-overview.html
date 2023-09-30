@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/0-overview';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -181,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="md/0-overview.html">Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="md/simple.html">Tutorial: Simple MD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="md/distance.html">Tutorial: Distance Restraints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="md/distance.html">Tutorial: Restraint MD</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="qmmm/0-overview.html">QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -365,6 +367,11 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pdbs-protein-data-bank">PDBs - Protein Data Bank</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">Types of Simulations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">Quantum Mechanics</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -428,6 +435,47 @@ document.write(`
 <blockquote>
 <div><p>“The primary information stored in the PDB archive consists of coordinate files for biological molecules. These files list the atoms in each protein, and their 3D location in space. These files are available in several formats (PDB, mmCIF, XML). A typical PDB formatted file includes a large “header” section of text that summarizes the protein, citation information, and the details of the structure solution, followed by the sequence and a long list of the atoms and their coordinates. The archive also contains the experimental observations that are used to determine these atomic coordinates.”</p>
 </div></blockquote>
+</section>
+</section>
+<section id="types-of-simulations">
+<h2>Types of Simulations<a class="headerlink" href="#types-of-simulations" title="Permalink to this heading">#</a></h2>
+<section id="classical-mechanics">
+<h3>Classical Mechanics<a class="headerlink" href="#classical-mechanics" title="Permalink to this heading">#</a></h3>
+<p>Molecular dynamic (MD) simulations uses classical Newtonian mechanics to describe the motions of atoms and molecules</p>
+<p>These simulations involve:</p>
+<ul class="simple">
+<li><p>Explicit a particles (atoms, ions)</p></li>
+<li><p>Particles interact via relatively simple analytical potential (i.e. <em>force field</em>)</p></li>
+<li><p>Newton’s equations of motion are integrated for all particles simultaneously</p></li>
+<li><p>Hundreds to millions of particles depending on model</p></li>
+<li><p>Simulation time could be from 10 ps to 1 μs depending on model (typically ns</p></li>
+</ul>
+<p>Energy is:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{total} = E_{bonded} + E_{nonbonded}
+\]</div>
+<p>The bonded and nonbonded terms are:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{total} = E_{bonds} + E_{angles} + E_{torsion} + E_{vDW} + E_{Coulomb}
+\]</div>
+<p>and each energy contribution term has a potential function, for example, the van der waals term <span class="math notranslate nohighlight">\(E_{vDW}\)</span> is defined by the Lennard-Jones potential:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{vDW} = 4\epsilon  \left[ (\frac{\sigma}{r})^{12} - (\frac{\sigma}{r})^{6} \right]
+\]</div>
+<p>The potential functions have preset bonding arrangements, therefore, classical MD on its own cannot be used to model chemical reactions.</p>
+<p>A MD simulation generates a sequence of configurations phase space connected by time. These is called a <em>trajectoy</em> of all particles in the system as a function of time. Time averages and other properties can be calculated from a trajectory.</p>
+</section>
+<section id="quantum-mechanics">
+<h3>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h3>
+<p>Quantum mechanical (QM) methods more accurately describe the behavior of the electrons in atoms and molecules and can model chemistry – the making and breaking of chemical bond. We do this by solving the Schrodinger equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{H} \Psi = E \Psi
+\]</div>
+<p>Hatree-Fock, basis sets, semi-empirical methods, density functional theory, MP2, coupled cluster theory</p>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -505,6 +553,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protein-structure">Protein Structure</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pdbs-protein-data-bank">PDBs - Protein Data Bank</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">Types of Simulations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">Quantum Mechanics</a></li>
 </ul>
 </li>
 </ul>
