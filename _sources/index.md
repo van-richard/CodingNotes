@@ -3,9 +3,9 @@
 ## Notes I wish I had as a first year Ph.D. student with no programming background.
 
 ### Programming
-    - Bash (Unix Shell)
-    - Vi/Vim (Text Editor)
-    - Git (with GitHub
+    - Bash
+    - vi/vim
+    - Git and GitHub
     - Slurm
     - SSH
     - Python 
@@ -25,7 +25,9 @@
 ### Resources
 
 **Quantum**
+
 [Sherrill Notes](http://vergil.chemistry.gatech.edu/notes/index.html)
 
 **Machine Learning**
+
 [Machine Learning](https://e2eml.school/blog.html)
