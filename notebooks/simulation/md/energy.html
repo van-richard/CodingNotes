@@ -387,19 +387,19 @@ document.write(`
 <p>$$
 E <em>{total} = E</em>{bonded} + E_{nonbonded}
 $$</p>
-<p>The bonded interactions are:</p>
+<p>The bonded interactions ($E_{bonded}$) are:</p>
 <p>$$
-E_{bonded} = E_{bond} + E_{angles} + E_{torsion}
+E_{bonded} = E_{bonds} + E_{angles} + E_{torsion}
 $$</p>
-<p>Nonbonded interactions are:</p>
-<p>$$
-E_{nonbonded} = E_{vDW} + E_{Coulomb}
-$$</p>
+<p>Nonbonded interactions ($E_{nonbonded}$) are:</p>
+<p>$$E_{nonbonded} = E_{vdw} + E_{elec.}$$</p>
 <p>How these functions are written will depend on the simulation package (i.e. Amber, NAMD, OpenMM, Gromacs, etc.).</p>
-<p>In Amber, it is written:</p>
-<p>$$
-E_{total} =
-$$</p>
+<p>Amber uses the following definitions:</p>
+<p>$$ E_{bonds} = \sum_{bonds} k_b (r - r_{eq})^2 $$ where, $k_b$ is the bond spring constant $\frac{kcal}{mol \r{A}}$, $r_{eq}$ is the equilibrium bond distance (A), and $r$ is the bond length.</p>
+<p>$$ E_{angles} = \sum_{angles} k_{a} (\theta - \theta_{eq})^2 $$
+$$ E_{torsion} = \sum_{torsion} \frac{V_n}{2} (1 + cos(n\phi - \delta) $$
+$$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{ij}^6} $$</p>
+<p>$$ E_{elec} = \sum_{nonbonded_{ij}} \frac{q_i q_j}{r_{ij}} $$</p>
 </section>
 <section id="force-fields">
 <h2><span class="section-number">2.4.8.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
