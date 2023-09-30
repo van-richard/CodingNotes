@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.5. QM/MM Simulations &#8212; Coding Notes</title>
+    <title>6.5. QM/MM Simulations &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/qmmm/0-overview';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2.5.5. Tutorial: Claisen Rearrangment" href="claisen.html" />
-    <link rel="prev" title="2.4.10. Tutorial: Restraint MD" href="../md/distance.html" />
+    <link rel="next" title="6.5.5. Tutorial: Claisen Rearrangment" href="claisen.html" />
+    <link rel="prev" title="6.4.10. Tutorial: Restraint MD" href="../md/distance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,49 +158,46 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/0-overview.html">1. Programming</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../programming/commandline/0-overview.html">1.1. Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/commandline/linux.html">1.1.7. Unix/Linux Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/commandline/ssh.html">1.1.8. SSH-ing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/commandline/slurm.html">1.1.9. Slurm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/commandline/git.html">1.1.10. Git/Github</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/commandline/0-overview.html">1. Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/linux.html">1.7. Unix/Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/ssh.html">1.8. SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/slurm.html">1.9. Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/git.html">1.10. Git/Github</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../programming/python/0-overview.html">1.2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/python/conda.html">1.2.10. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/python/intel.html">1.2.11. Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/python/jupyter.html">1.2.12. Jupyter Notebooks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/python/0-overview.html">2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/python/conda.html">2.10. Conda Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/python/intel.html">2.11. Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/python/jupyter.html">2.12. Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../programming/chimera/0-overview.html">1.3. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/images.html">1.3.2. Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/fade.html">1.3.3. Fading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/morph.html">1.3.4. Morphing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/rock.html">1.3.5. Spin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/spin.html">1.3.6. Rocking</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/chimera/0-overview.html">3. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/images.html">3.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/fade.html">3.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/morph.html">3.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/rock.html">3.5. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/spin.html">3.6. Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../programming/vmd/ffmpeg.html">1.4. ffmpeg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../programming/websites/jupyterbook.html">1.5. Create Websites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/vmd/ffmpeg.html">4. ffmpeg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/websites/jupyterbook.html">5. Create Websites</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">6. Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../md/0-overview.html">6.4. Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../md/energy.html">6.4.8. Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../md/simple.html">6.4.9. Tutorial: Simple MD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../md/distance.html">6.4.10. Tutorial: Restraint MD</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">2. Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="../md/0-overview.html">2.4. Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../md/energy.html">2.4.8. Theory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../md/simple.html">2.4.9. Tutorial: Simple MD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../md/distance.html">2.4.10. Tutorial: Restraint MD</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">6.5. QM/MM Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="claisen.html">6.5.5. Tutorial: Claisen Rearrangment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ippo1.html">6.5.6. Tutorial: Enzyme Reaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">2.5. QM/MM Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="claisen.html">2.5.5. Tutorial: Claisen Rearrangment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ippo1.html">2.5.6. Tutorial: Enzyme Reaction</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../analysis/0-overview.html">2.6. Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/pairwisedistance.html">2.6.1. Pairwise Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/pca.html">2.6.2. Principle Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsd.html">2.6.3. RMSD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsf.html">2.6.4. RMSF</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../analysis/0-overview.html">6.6. Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../analysis/pairwisedistance.html">6.6.1. Pairwise Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../analysis/pca.html">6.6.2. Principle Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsd.html">6.6.3. RMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsf.html">6.6.4. RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -366,11 +363,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">2.5.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">2.5.2. Bonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">2.5.3. Nonbonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">2.5.4. Electrostatic Embedding</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">2.5.4.1. Short-Range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">6.5.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">6.5.2. Bonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">6.5.3. Nonbonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">6.5.4. Electrostatic Embedding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">6.5.4.1. Short-Range</a></li>
 </ul>
 </li>
 </ul>
@@ -385,9 +382,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="qm-mm-simulations">
-<h1><span class="section-number">2.5. </span>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">6.5. </span>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2><span class="section-number">2.5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>Reference: https://www.youtube.com/watch?v=VK0e6-ndodM</p>
 <p>In general, a hybrid quantum mechanics/molecular mechanics (QM/MM) scheme requires:</p>
 <ul class="simple">
@@ -422,7 +419,7 @@ $$</p>
 <p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and non bonded terms</p>
 </section>
 <section id="bonded-interactions">
-<h2><span class="section-number">2.5.2. </span>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.2. </span>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
 <p>$$
 E_\mathrm{bonded}^\mathrm{QM-MM}
 $$</p>
@@ -436,7 +433,7 @@ $$</p>
 </ol>
 </section>
 <section id="nonbonded-interactions">
-<h2><span class="section-number">2.5.3. </span>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.3. </span>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this heading">#</a></h2>
 <p>Non bonded term is:</p>
 <p>$$
 E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm{pol.}^\mathrm{QM-MM}
@@ -461,7 +458,7 @@ $$</p>
 </ol>
 </section>
 <section id="electrostatic-embedding">
-<h2><span class="section-number">2.5.4. </span>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.5.4. </span>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this heading">#</a></h2>
 <p>Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.</p>
 <p>$$
 E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}<em>{i}} - {\textbf{R}</em>{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
@@ -472,7 +469,7 @@ $$</p>
 <li><p>Long-Range - Huge computational cost to evaluate the integral</p></li>
 </ol>
 <section id="short-range">
-<h3><span class="section-number">2.5.4.1. </span>Short-Range<a class="headerlink" href="#short-range" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.5.4.1. </span>Short-Range<a class="headerlink" href="#short-range" title="Permalink to this heading">#</a></h3>
 <p>In electron spill-out, a problem may arise when using standard MM atomic charges to describe the charge distribution of the MM system, which results in over-polarization near the boundary.</p>
 <ul class="simple">
 <li><p>The point charges on the MM side of the interface may attract (or repel) the electrons too strongly.</p></li>
@@ -532,7 +529,7 @@ $$</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.4.10. </span>Tutorial: Restraint MD</p>
+        <p class="prev-next-title"><span class="section-number">6.4.10. </span>Tutorial: Restraint MD</p>
       </div>
     </a>
     <a class="right-next"
@@ -540,7 +537,7 @@ $$</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.5.5. </span>Tutorial: Claisen Rearrangment</p>
+        <p class="prev-next-title"><span class="section-number">6.5.5. </span>Tutorial: Claisen Rearrangment</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -562,11 +559,11 @@ $$</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">2.5.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">2.5.2. Bonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">2.5.3. Nonbonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">2.5.4. Electrostatic Embedding</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">2.5.4.1. Short-Range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">6.5.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">6.5.2. Bonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">6.5.3. Nonbonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">6.5.4. Electrostatic Embedding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">6.5.4.1. Short-Range</a></li>
 </ul>
 </li>
 </ul>

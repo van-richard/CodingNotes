@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.4. Molecular Dynamics &#8212; Coding Notes</title>
+    <title>6.4. Molecular Dynamics &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/md/0-overview';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2.4.8. Theory" href="energy.html" />
-    <link rel="prev" title="2. Molecular Simulations" href="../0-overview.html" />
+    <link rel="next" title="6.4.8. Theory" href="energy.html" />
+    <link rel="prev" title="6. Molecular Simulations" href="../0-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,49 +158,46 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/0-overview.html">1. Programming</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../programming/commandline/0-overview.html">1.1. Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/commandline/linux.html">1.1.7. Unix/Linux Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/commandline/ssh.html">1.1.8. SSH-ing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/commandline/slurm.html">1.1.9. Slurm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/commandline/git.html">1.1.10. Git/Github</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/commandline/0-overview.html">1. Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/linux.html">1.7. Unix/Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/ssh.html">1.8. SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/slurm.html">1.9. Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/git.html">1.10. Git/Github</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../programming/python/0-overview.html">1.2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/python/conda.html">1.2.10. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/python/intel.html">1.2.11. Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/python/jupyter.html">1.2.12. Jupyter Notebooks</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/python/0-overview.html">2. Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/python/conda.html">2.10. Conda Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/python/intel.html">2.11. Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/python/jupyter.html">2.12. Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../programming/chimera/0-overview.html">1.3. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/images.html">1.3.2. Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/fade.html">1.3.3. Fading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/morph.html">1.3.4. Morphing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/rock.html">1.3.5. Spin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/spin.html">1.3.6. Rocking</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/chimera/0-overview.html">3. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/images.html">3.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/fade.html">3.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/morph.html">3.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/rock.html">3.5. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/chimera/spin.html">3.6. Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../programming/vmd/ffmpeg.html">1.4. ffmpeg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../programming/websites/jupyterbook.html">1.5. Create Websites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/vmd/ffmpeg.html">4. ffmpeg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../programming/websites/jupyterbook.html">5. Create Websites</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">6. Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">6.4. Molecular Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="energy.html">6.4.8. Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="simple.html">6.4.9. Tutorial: Simple MD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">6.4.10. Tutorial: Restraint MD</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">2. Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">2.4. Molecular Dynamics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="energy.html">2.4.8. Theory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="simple.html">2.4.9. Tutorial: Simple MD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="distance.html">2.4.10. Tutorial: Restraint MD</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../qmmm/0-overview.html">6.5. QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../qmmm/claisen.html">6.5.5. Tutorial: Claisen Rearrangment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../qmmm/ippo1.html">6.5.6. Tutorial: Enzyme Reaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../qmmm/0-overview.html">2.5. QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../qmmm/claisen.html">2.5.5. Tutorial: Claisen Rearrangment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../qmmm/ippo1.html">2.5.6. Tutorial: Enzyme Reaction</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../analysis/0-overview.html">2.6. Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/pairwisedistance.html">2.6.1. Pairwise Distance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/pca.html">2.6.2. Principle Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsd.html">2.6.3. RMSD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsf.html">2.6.4. RMSF</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../analysis/0-overview.html">6.6. Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../analysis/pairwisedistance.html">6.6.1. Pairwise Distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../analysis/pca.html">6.6.2. Principle Component Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsd.html">6.6.3. RMSD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../analysis/rmsf.html">6.6.4. RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -366,18 +363,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">2.4.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">2.4.2. Molecular Dynamics (MD) Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">2.4.3. Monte Carlo (MC) Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">2.4.4. Molecular Descriptors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">2.4.5. Properties of Interest</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">2.4.6. Other Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">2.4.6.1. Bond Breaking/Forming</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">2.4.6.2. Course-Graining Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">2.4.6.3. Constant pH Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">6.4.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">6.4.2. Molecular Dynamics (MD) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">6.4.3. Monte Carlo (MC) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">6.4.4. Molecular Descriptors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">6.4.5. Properties of Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">6.4.6. Other Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">6.4.6.1. Bond Breaking/Forming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">6.4.6.2. Course-Graining Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">6.4.6.3. Constant pH Simulations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">2.4.7. Literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">6.4.7. Literature</a></li>
 </ul>
             </nav>
         </div>
@@ -390,9 +387,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="molecular-dynamics">
-<h1><span class="section-number">2.4. </span>Molecular Dynamics<a class="headerlink" href="#molecular-dynamics" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">6.4. </span>Molecular Dynamics<a class="headerlink" href="#molecular-dynamics" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2><span class="section-number">2.4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>Molecular simulations methods involves a particle-based description of the system, and is propagated by deterministic or probabilistic rules to generate a trajectory describing its evolution over course of the simulation.</p>
 <p>Properties can be calculated from <em>snapshots</em> (<em>i.e.</em> a configuration of the system, or <em>frame</em>), and then averaged over the trajectory to calculate estimates of said property.</p>
 <p>General methods fit into 2 categories, depending on how the system is propagated:</p>
@@ -402,18 +399,18 @@ document.write(`
 </ol>
 </section>
 <section id="molecular-dynamics-md-simulations">
-<h2><span class="section-number">2.4.2. </span>Molecular Dynamics (MD) Simulations<a class="headerlink" href="#molecular-dynamics-md-simulations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.2. </span>Molecular Dynamics (MD) Simulations<a class="headerlink" href="#molecular-dynamics-md-simulations" title="Permalink to this heading">#</a></h2>
 <p>In this approach, Newton’s equations of motion are numerically intergrated to generate the dynamic trajectory of the system.</p>
 <p>These simulations can be used to investigate structural, dynamic, and thermodynamic properties.</p>
 </section>
 <section id="monte-carlo-mc-simulations">
-<h2><span class="section-number">2.4.3. </span>Monte Carlo (MC) Simulations<a class="headerlink" href="#monte-carlo-mc-simulations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.3. </span>Monte Carlo (MC) Simulations<a class="headerlink" href="#monte-carlo-mc-simulations" title="Permalink to this heading">#</a></h2>
 <p>In this approach, probabilistic rules are used to generate new configuration from the present configuration. This is repeated to generate sequences of states that be used to calculate structural and thermodynamic properties.</p>
 <p><strong>This approach does not calculate dynamical properties. MC simulations lack any concept of time.</strong></p>
 <p>The trajectory produced by MC simulations are an ensemble of configurations that reflect those that <em>could be</em> dynamically sampled.</p>
 </section>
 <section id="molecular-descriptors">
-<h2><span class="section-number">2.4.4. </span>Molecular Descriptors<a class="headerlink" href="#molecular-descriptors" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.4. </span>Molecular Descriptors<a class="headerlink" href="#molecular-descriptors" title="Permalink to this heading">#</a></h2>
 <p>MD or MC simulations can be carried out with differnt underlying physical theories to describe the particle-base model of the system. For example:</p>
 <ol class="arabic simple">
 <li><p><strong>Quantum Mechanics (QM) Descriptors</strong></p>
@@ -442,7 +439,7 @@ document.write(`
 <p>For context, a typical QM simulation could be perforemd with a hundred atoms or fewer. Whereas MM simulations routinely have tens to hundreds or thousands of atoms in the system.</p>
 </section>
 <section id="properties-of-interest">
-<h2><span class="section-number">2.4.5. </span>Properties of Interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.5. </span>Properties of Interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this heading">#</a></h2>
 <p>The size of the system alone does not dictate the use of classical descriptors. MM simulations are often used to calculate:</p>
 <ol class="arabic simple">
 <li><p>Free Energies</p></li>
@@ -452,23 +449,23 @@ document.write(`
 <p><strong>Simluations not only samples single optimal states but must sample the correct distribution of states.</strong> This requires simulations of <em>some length.</em> In protein simulations, relevant timescale of biological prosses are often nanoseconds to microseconds in length. For example, rearrangements of buried amino acid sidechains or conformation changes to a protein domain.</p>
 </section>
 <section id="other-methods">
-<h2><span class="section-number">2.4.6. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.6. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">#</a></h2>
 <section id="bond-breaking-forming">
-<h3><span class="section-number">2.4.6.1. </span>Bond Breaking/Forming<a class="headerlink" href="#bond-breaking-forming" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.6.1. </span>Bond Breaking/Forming<a class="headerlink" href="#bond-breaking-forming" title="Permalink to this heading">#</a></h3>
 <p>In classical simulations, bond breaking/forming are generally not allowed. The topology, or chemistry, of the system is is constant as a function of time. In other words, the chemical identity of a molecular remains constant (with the exception of constant pH simulations).</p>
 <p>The hybrid QM/MM scheme or use of reactive force fields are generally used.</p>
 </section>
 <section id="course-graining-methods">
-<h3><span class="section-number">2.4.6.2. </span>Course-Graining Methods<a class="headerlink" href="#course-graining-methods" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.6.2. </span>Course-Graining Methods<a class="headerlink" href="#course-graining-methods" title="Permalink to this heading">#</a></h3>
 <p>Above the level of MM are course-graining methods. This method will reduce the resolution and computational cost.</p>
 </section>
 <section id="constant-ph-simulations">
-<h3><span class="section-number">2.4.6.3. </span>Constant pH Simulations<a class="headerlink" href="#constant-ph-simulations" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">6.4.6.3. </span>Constant pH Simulations<a class="headerlink" href="#constant-ph-simulations" title="Permalink to this heading">#</a></h3>
 <p>Sample the titratable residues</p>
 </section>
 </section>
 <section id="literature">
-<h2><span class="section-number">2.4.7. </span>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.7. </span>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
 <p>I recommend these readings, as to “not reinvent the wheel” ..</p>
 <p><a class="reference external" href="https://doi.org/10.33011/livecoms.1.1.5957">Best Practices for Foundations in Molecular Simulations</a></p>
 </section>
@@ -513,7 +510,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Molecular Simulations</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Molecular Simulations</p>
       </div>
     </a>
     <a class="right-next"
@@ -521,7 +518,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4.8. </span>Theory</p>
+        <p class="prev-next-title"><span class="section-number">6.4.8. </span>Theory</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -543,18 +540,18 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">2.4.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">2.4.2. Molecular Dynamics (MD) Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">2.4.3. Monte Carlo (MC) Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">2.4.4. Molecular Descriptors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">2.4.5. Properties of Interest</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">2.4.6. Other Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">2.4.6.1. Bond Breaking/Forming</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">2.4.6.2. Course-Graining Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">2.4.6.3. Constant pH Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">6.4.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">6.4.2. Molecular Dynamics (MD) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">6.4.3. Monte Carlo (MC) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">6.4.4. Molecular Descriptors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">6.4.5. Properties of Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">6.4.6. Other Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">6.4.6.1. Bond Breaking/Forming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">6.4.6.2. Course-Graining Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">6.4.6.3. Constant pH Simulations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">2.4.7. Literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">6.4.7. Literature</a></li>
 </ul>
   </nav></div>
 
