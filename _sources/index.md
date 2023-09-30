@@ -1,6 +1,6 @@
 # CodingNotes
 
-Notes I wish someone had given me as I started my Ph.D in computational biochemistry.
+Notes I wish someone had given me in the first year of my Ph.D.
 
 ![](_static/welcome.png)
 
