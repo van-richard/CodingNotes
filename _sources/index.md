@@ -1,6 +1,8 @@
-# Home
+# adVANtures
 
 ## Notes I wish I had as a first year Ph.D. student with no programming background.
+
+[](_static/welcome.png)
 
 ### Programming
     - Bash
