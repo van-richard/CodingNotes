@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.6.12. Jupyter Notebooks &#8212; Coding Notes</title>
+    <title>1.8.12. Jupyter Notebooks &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/python/jupyter';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="1.7. ffmpeg" href="../vmd/ffmpeg.html" />
-    <link rel="prev" title="1.6.11. Intel Environment on Conda with m1/m2 Macs" href="intel.html" />
+    <link rel="next" title="1.9. ffmpeg" href="../vmd/ffmpeg.html" />
+    <link rel="prev" title="1.8.11. Intel Environment on Conda with m1/m2 Macs" href="intel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,19 +159,21 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">1. Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../commandline/bash.html">1.1. Bash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/linux.html">1.2. Unix/Linux Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">1.3. SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">1.4. Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">1.5. Git/Github</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">1.6. Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="conda.html">1.6.10. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="intel.html">1.6.11. Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.6.12. Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/0-overview.html">1.1. Bash</a></li>
+
+
+
+
+
+
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">1.8. Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="conda.html">1.8.10. Conda Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intel.html">1.8.11. Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1.8.12. Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">1.7. ffmpeg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">1.8. Create Websites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">1.9. ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">1.10. Create Websites</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../simulation/0-overview.html">2. Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -349,8 +351,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kernals">1.6.12.1. Kernals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-kernals">1.6.12.2. Conda Kernals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kernals">1.8.12.1. Kernals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-kernals">1.8.12.2. Conda Kernals</a></li>
 </ul>
             </nav>
         </div>
@@ -363,16 +365,16 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="jupyter-notebooks">
-<h1><span class="section-number">1.6.12. </span>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.8.12. </span>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this heading">#</a></h1>
 <p>The Jupyter Notebook App is a server-client application that allows editing and running notebook documents via a web browser. The Jupyter Notebook App can be executed on a local desktop requiring no internet access (as described in this document) or can be installed on a remote server and accessed through the internet.</p>
 <p>In addition to displaying/editing/running notebook documents, the Jupyter Notebook App has a “Dashboard” (Notebook Dashboard), a “control panel” showing local files and allowing to open notebook documents or shutting down their kernels.</p>
 <section id="kernals">
-<h2><span class="section-number">1.6.12.1. </span>Kernals<a class="headerlink" href="#kernals" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.8.12.1. </span>Kernals<a class="headerlink" href="#kernals" title="Permalink to this heading">#</a></h2>
 <p>A notebook kernel is a “computational engine” that executes the code contained in a Notebook document. The ipython kernel, referenced in this guide, executes python code. Kernels for many other languages exist (official kernels).</p>
 <p>When you open a Notebook document, the associated kernel is automatically launched. When the notebook is executed (either cell-by-cell or with menu Cell -&gt; Run All), the kernel performs the computation and produces the results. Depending on the type of computations, the kernel may consume significant CPU and RAM. Note that the RAM is not released until the kernel is shut-down.</p>
 </section>
 <section id="conda-kernals">
-<h2><span class="section-number">1.6.12.2. </span>Conda Kernals<a class="headerlink" href="#conda-kernals" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.8.12.2. </span>Conda Kernals<a class="headerlink" href="#conda-kernals" title="Permalink to this heading">#</a></h2>
 <p>Install <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> and <code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code> into your <code class="docutils literal notranslate"><span class="pre">base</span></code> conda environment.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> package is for running notebooks.
 the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code> package allows you to switch conda environments directly in the web browser.</p>
@@ -424,7 +426,7 @@ the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernel
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.6.11. </span>Intel Environment on Conda with m1/m2 Macs</p>
+        <p class="prev-next-title"><span class="section-number">1.8.11. </span>Intel Environment on Conda with m1/m2 Macs</p>
       </div>
     </a>
     <a class="right-next"
@@ -432,7 +434,7 @@ the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernel
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.7. </span>ffmpeg</p>
+        <p class="prev-next-title"><span class="section-number">1.9. </span>ffmpeg</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -454,8 +456,8 @@ the <code class="docutils literal notranslate"><span class="pre">nb_conda_kernel
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kernals">1.6.12.1. Kernals</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-kernals">1.6.12.2. Conda Kernals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kernals">1.8.12.1. Kernals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conda-kernals">1.8.12.2. Conda Kernals</a></li>
 </ul>
   </nav></div>
 
