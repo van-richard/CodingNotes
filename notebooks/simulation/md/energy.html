@@ -61,6 +61,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/md/energy';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -384,9 +385,10 @@ document.write(`
 <section id="potential-functions">
 <h2><span class="section-number">2.4.8.1. </span>Potential Functions<a class="headerlink" href="#potential-functions" title="Permalink to this heading">#</a></h2>
 <p>Energy of a system is composed of bonded and nonbonded interactions:</p>
-<p>$$
-E <em>{total} = E</em>{bonded} + E_{nonbonded}
-$$</p>
+<div class="amsmath math notranslate nohighlight" id="equation-78273335-be7f-4277-8ddd-5df774b0dc4e">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-78273335-be7f-4277-8ddd-5df774b0dc4e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+E _{total} = E_{bonded} + E_{nonbonded} 
+\end{equation}\]</div>
 <p>The bonded interactions ($E_{bonded}$) are:</p>
 <p>$$
 E_{bonded} = E_{bonds} + E_{angles} + E_{torsion}
