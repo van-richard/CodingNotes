@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.1. Bash &#8212; Coding Notes</title>
+    <title>1.7.4. Bash &#8212; Coding Notes</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/commandline/0-overview';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/programming/commandline/bash';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="1.7.4. Bash" href="bash.html" />
-    <link rel="prev" title="1. Programming" href="../0-overview.html" />
+    <link rel="next" title="1.7.11. Unix/Linux Commands" href="linux.html" />
+    <link rel="prev" title="1.1. Bash" href="0-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,7 +159,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">1. Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1. Bash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="0-overview.html">1.1. Bash</a></li>
 
 
 
@@ -217,7 +217,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/programming/commandline/0-overview.ipynb" target="_blank"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/programming/commandline/bash.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -243,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/notebooks/programming/commandline/0-overview.ipynb" target="_blank"
+      <li><a href="../../../_sources/notebooks/programming/commandline/bash.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -335,27 +335,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.1. Bash</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.2. Introduction</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.3. Comments</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#command">1.4. Command</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">1.5. Variables</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">1.6. Arrays</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">1.6.1. Built-in Variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">1.6.2. Brace Expansion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">1.6.3. Conditional Execution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">1.6.4. Ampersand</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">1.6.5. Expressions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-in-out-err">1.6.6. Standard In/Out/Err</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">1.6.7. Redirect Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">1.6.8. Looping</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.6.9. Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.7.4. Bash</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.7.5. Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.7.6. Comments</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#command">1.7.7. Command</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">1.7.8. Variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">1.7.9. Arrays</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">1.7.9.1. Built-in Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">1.7.9.2. Brace Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">1.7.9.3. Conditional Execution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">1.7.9.4. Ampersand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">1.7.9.5. Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-in-out-err">1.7.9.6. Standard In/Out/Err</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">1.7.9.7. Redirect Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">1.7.9.8. Looping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.7.9.9. Functions</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">1.7. Start Up Files</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-profile">1.7.1. ~/.bash_profile</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bashrc">1.7.2. ~/.bashrc</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-aliases">1.7.3. ~/.bash_aliases</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">1.7.10. Start Up Files</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-profile">1.7.10.1. ~/.bash_profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bashrc">1.7.10.2. ~/.bashrc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-aliases">1.7.10.3. ~/.bash_aliases</a></li>
 </ul>
 </li>
 </ul>
@@ -371,29 +371,29 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="bash">
-<h1><span class="section-number">1.1. </span>Bash<a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.7.4. </span>Bash<a class="headerlink" href="#bash" title="Permalink to this heading">#</a></h1>
 </section>
 <section id="introduction">
-<h1><span class="section-number">1.2. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.7.5. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
 <p>First line of the script is the shebang which tells the system how to execute the script:</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Shebang</a></p>
 </section>
 <section id="comments">
-<h1><span class="section-number">1.3. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.7.6. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h1>
 <p>Comments start with <code class="docutils literal notranslate"><span class="pre">#</span></code>. The <code class="docutils literal notranslate"><span class="pre">shebang</span></code> is also a comment.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/bash</span>
 </pre></div>
 </div>
 </section>
 <section id="command">
-<h1><span class="section-number">1.4. </span>Command<a class="headerlink" href="#command" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.7.7. </span>Command<a class="headerlink" href="#command" title="Permalink to this heading">#</a></h1>
 <p>Each command starts on a new line, or after a semicolon:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the first command&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the second command&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="variables">
-<h1><span class="section-number">1.5. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.7.8. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h1>
 <p>Declaring a variable looks like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">variable</span><span class="o">=</span><span class="s2">&quot;Some string&quot;</span>
 </pre></div>
@@ -452,7 +452,7 @@ document.write(`
 <p>This works for null (<code class="docutils literal notranslate"><span class="pre">foo=</span></code>) and empty string (<code class="docutils literal notranslate"><span class="pre">foo=&quot;&quot;</span></code>); zero (<code class="docutils literal notranslate"><span class="pre">foo=0</span></code>) returns <code class="docutils literal notranslate"><span class="pre">0</span></code>. Note that it only returns default value and doesn’t change variable value.</p>
 </section>
 <section id="arrays">
-<h1><span class="section-number">1.6. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.7.9. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h1>
 <p>Declare an array with 6 elements:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">array</span><span class="o">=(</span>one<span class="w"> </span>two<span class="w"> </span>three<span class="w"> </span>four<span class="w"> </span>five<span class="w"> </span>six<span class="o">)</span>
 </pre></div>
@@ -484,7 +484,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="built-in-variables">
-<h2><span class="section-number">1.6.1. </span>Built-in Variables<a class="headerlink" href="#built-in-variables" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.1. </span>Built-in Variables<a class="headerlink" href="#built-in-variables" title="Permalink to this heading">#</a></h2>
 <p>There are some useful built-in variables, like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Last program&#39;s return value: </span><span class="nv">$?</span><span class="s2">&quot;</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script&#39;s PID: </span><span class="nv">$$</span><span class="s2">&quot;</span>
@@ -495,7 +495,7 @@ document.write(`
 </div>
 </section>
 <section id="brace-expansion">
-<h2><span class="section-number">1.6.2. </span>Brace Expansion<a class="headerlink" href="#brace-expansion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.2. </span>Brace Expansion<a class="headerlink" href="#brace-expansion" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">{...}</span></code> are used to generate arbitrary strings:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; 1 2 3 4 5 6 7 8 9 10</span>
 <span class="nb">echo</span><span class="w"> </span><span class="o">{</span>a..z<span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
@@ -524,7 +524,7 @@ document.write(`
 </div>
 </section>
 <section id="conditional-execution">
-<h2><span class="section-number">1.6.3. </span>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.3. </span>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command fails&quot;</span>
 <span class="c1"># =&gt; Always executed</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command does NOT fail&quot;</span>
@@ -534,7 +534,7 @@ document.write(`
 </div>
 </section>
 <section id="ampersand">
-<h2><span class="section-number">1.6.4. </span>Ampersand<a class="headerlink" href="#ampersand" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.4. </span>Ampersand<a class="headerlink" href="#ampersand" title="Permalink to this heading">#</a></h2>
 <p>A single ampersand <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> after a command runs it in the background. A background command’s output is printed to the terminal, but it cannot read from the input.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sleep<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
@@ -559,21 +559,21 @@ document.write(`
 <p>Redefine command <code class="docutils literal notranslate"><span class="pre">ping</span></code> as alias to send only 5 packets</p>
 </section>
 <section id="expressions">
-<h2><span class="section-number">1.6.5. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.5. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h2>
 <p>Expressions are denoted with the following format:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="k">$((</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="k">))</span><span class="w"> </span><span class="c1"># =&gt; 15</span>
 </pre></div>
 </div>
 </section>
 <section id="standard-in-out-err">
-<h2><span class="section-number">1.6.6. </span>Standard In/Out/Err<a class="headerlink" href="#standard-in-out-err" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.6. </span>Standard In/Out/Err<a class="headerlink" href="#standard-in-out-err" title="Permalink to this heading">#</a></h2>
 <p>Results (stdout) of the previous command can be passed as input (stdin) to the next command using a pipe <code class="docutils literal notranslate"><span class="pre">|</span></code>. Commands chained in this way are called a “pipeline”, and are run concurrently. The <code class="docutils literal notranslate"><span class="pre">grep</span></code> command filters the input with provided patterns. That’s how we can list .txt files in the current directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;\.txt&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="redirect-commands">
-<h2><span class="section-number">1.6.7. </span>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.7. </span>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h2>
 <p>You can redirect command input and output (stdin, stdout, and stderr) using “redirection operators”. Unlike a pipe, which passes output to a command, a redirection operator has a command’s input come from a file or stream, or sends its output to a file or stream.</p>
 <p>Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite hello.py with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>hello.py<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
@@ -635,7 +635,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 </div>
 </section>
 <section id="looping">
-<h2><span class="section-number">1.6.8. </span>Looping<a class="headerlink" href="#looping" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.8. </span>Looping<a class="headerlink" href="#looping" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops iterate for as many arguments given:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#The contents of $Variable is printed three times.</span>
 <span class="k">for</span><span class="w"> </span>Variable<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..3<span class="o">}</span>
@@ -689,7 +689,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 </div>
 </section>
 <section id="functions">
-<h2><span class="section-number">1.6.9. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.9.9. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
 <p>You can also define functions</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Definition:
 function foo ()
@@ -726,11 +726,11 @@ foo arg1 arg2
 </section>
 </section>
 <section id="start-up-files">
-<h1><span class="section-number">1.7. </span>Start Up Files<a class="headerlink" href="#start-up-files" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1.7.10. </span>Start Up Files<a class="headerlink" href="#start-up-files" title="Permalink to this heading">#</a></h1>
 <p>When <code class="docutils literal notranslate"><span class="pre">Bash</span></code> is invoked as an interactive login shell, or as a non-interactive shell with the –login option, it first reads and executes commands from the file <code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code>, if that file exists. After reading that file, it looks for <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>, <code class="docutils literal notranslate"><span class="pre">~/.bash_login</span></code>, and <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>, in that order, and reads and executes commands from the first one that exists and is readable. The –noprofile option may be used when the shell is started to inhibit this behavior.</p>
 <p>When an interactive shell that is not a login shell is started, <code class="docutils literal notranslate"><span class="pre">Bash</span></code> reads and executes commands from <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>, if that file exists. This may be inhibited by using the –norc option. The –rcfile file option will force <code class="docutils literal notranslate"><span class="pre">Bash</span></code> to read and execute commands from file instead of <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>.</p>
 <section id="bash-profile">
-<h2><span class="section-number">1.7.1. </span>~/.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.10.1. </span>~/.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this heading">#</a></h2>
 <p>My <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code> contains:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">BASH_SILENCE_DEPRECATION_WARNING</span><span class="o">=</span><span class="m">1</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">CLICOLOR</span><span class="o">=</span><span class="m">1</span>
@@ -745,7 +745,7 @@ foo arg1 arg2
 </div>
 </section>
 <section id="bashrc">
-<h2><span class="section-number">1.7.2. </span>~/.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.10.2. </span>~/.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this heading">#</a></h2>
 <p>From the bash man page:</p>
 <blockquote>
 <div><p>“When bash is invoked as an interactive login shell, or as a non-interactive shell with the <code class="docutils literal notranslate"><span class="pre">--login</span></code> option, it first reads and executes commands from the file <code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code>, if that file exists. After reading that file, it looks for <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>, <code class="docutils literal notranslate"><span class="pre">~/.bash_login</span></code>, and <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>, in that order, and reads and executes commands from the first one that exists and is readable. The <code class="docutils literal notranslate"><span class="pre">--noprofile</span></code> option can be used when the shell is started to inhibit this behavior.”</p>
@@ -763,7 +763,7 @@ foo arg1 arg2
 </div>
 </section>
 <section id="bash-aliases">
-<h2><span class="section-number">1.7.3. </span>~/.bash_aliases<a class="headerlink" href="#bash-aliases" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.7.10.3. </span>~/.bash_aliases<a class="headerlink" href="#bash-aliases" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">Bash</span></code> aliases are essentially shortcuts that can save you from having to remember long commands and eliminate a great deal of typing when you are working on the command line</p>
 <p>My <code class="docutils literal notranslate"><span class="pre">~/.bash_aliases</span></code> file contains:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># aliases</span>
@@ -782,8 +782,6 @@ foo arg1 arg2
 </pre></div>
 </div>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -818,20 +816,20 @@ foo arg1 arg2
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../0-overview.html"
+       href="0-overview.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Programming</p>
+        <p class="prev-next-title"><span class="section-number">1.1. </span>Bash</p>
       </div>
     </a>
     <a class="right-next"
-       href="bash.html"
+       href="linux.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.7.4. </span>Bash</p>
+        <p class="prev-next-title"><span class="section-number">1.7.11. </span>Unix/Linux Commands</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -853,27 +851,27 @@ foo arg1 arg2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.1. Bash</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.2. Introduction</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.3. Comments</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#command">1.4. Command</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">1.5. Variables</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">1.6. Arrays</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">1.6.1. Built-in Variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">1.6.2. Brace Expansion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">1.6.3. Conditional Execution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">1.6.4. Ampersand</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">1.6.5. Expressions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-in-out-err">1.6.6. Standard In/Out/Err</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">1.6.7. Redirect Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">1.6.8. Looping</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.6.9. Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.7.4. Bash</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.7.5. Introduction</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">1.7.6. Comments</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#command">1.7.7. Command</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">1.7.8. Variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">1.7.9. Arrays</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">1.7.9.1. Built-in Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">1.7.9.2. Brace Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">1.7.9.3. Conditional Execution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">1.7.9.4. Ampersand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">1.7.9.5. Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-in-out-err">1.7.9.6. Standard In/Out/Err</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">1.7.9.7. Redirect Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">1.7.9.8. Looping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">1.7.9.9. Functions</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">1.7. Start Up Files</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-profile">1.7.1. ~/.bash_profile</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bashrc">1.7.2. ~/.bashrc</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-aliases">1.7.3. ~/.bash_aliases</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#start-up-files">1.7.10. Start Up Files</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-profile">1.7.10.1. ~/.bash_profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bashrc">1.7.10.2. ~/.bashrc</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bash-aliases">1.7.10.3. ~/.bash_aliases</a></li>
 </ul>
 </li>
 </ul>
