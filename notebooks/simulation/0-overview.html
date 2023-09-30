@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Protein Structure &#8212; Coding Notes</title>
+    <title>2. Simulations &#8212; Coding Notes</title>
   
   
   
@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/0-overview';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.3. Molecular Dynamics" href="md/0-overview.html" />
+    <link rel="next" title="2.3. Molecular Dynamics" href="md/0-overview.html" />
     <link rel="prev" title="1.4. Create Websites" href="../programming/websites/jupyterbook.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -176,8 +176,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../programming/websites/jupyterbook.html">1.4. Create Websites</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Protein Structure</a></li>
-
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="md/0-overview.html">2.3. Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="md/energy.html">2.3.8. Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="md/simple.html">2.3.9. Tutorial: Simple MD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="md/distance.html">2.3.10. Tutorial: Restraint MD</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="qmmm/0-overview.html">2.3.11. QM/MM Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="qmmm/claisen.html">2.3.11.5. Tutorial: Claisen Rearrangment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="qmmm/ippo1.html">2.3.11.6. Tutorial: Enzyme Reaction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -329,7 +341,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Protein Structure</h1>
+    <h1>Simulations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -339,18 +351,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2. Protein Structure</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">2.1. Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pdbs-protein-data-bank">2.2. PDBs - Protein Data Bank</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protein-structure">2.1. Protein Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">2.1.1. Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pdbs-protein-data-bank">2.1.2. PDBs - Protein Data Bank</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">3. Types of Simulations</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">3.1. Classical Mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">3.2. Quantum Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">2.2. Types of Simulations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">2.2.1. Classical Mechanics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">2.2.2. Quantum Mechanics</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -361,7 +372,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p>Before you run any simulation, consider the following:</p>
+  <section id="simulations">
+<h1><span class="section-number">2. </span>Simulations<a class="headerlink" href="#simulations" title="Permalink to this heading">#</a></h1>
+<p>Before you run any simulation, consider the following:</p>
 <ul class="simple">
 <li><p>What is your scientific question?</p></li>
 <li><p>Can your hypothesis be tested with MD?</p></li>
@@ -395,13 +408,13 @@ document.write(`
 </li>
 </ol>
 <section id="protein-structure">
-<h1><span class="section-number">2. </span>Protein Structure<a class="headerlink" href="#protein-structure" title="Permalink to this heading">#</a></h1>
+<h2><span class="section-number">2.1. </span>Protein Structure<a class="headerlink" href="#protein-structure" title="Permalink to this heading">#</a></h2>
 <section id="background">
-<h2><span class="section-number">2.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
+<h3><span class="section-number">2.1.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h3>
 <p>Before starting any simulation, we need a structure. Protein structures are deposited to the PDB data bank as <code class="docutils literal notranslate"><span class="pre">.pdb</span></code> files.</p>
 </section>
 <section id="pdbs-protein-data-bank">
-<h2><span class="section-number">2.2. </span>PDBs - Protein Data Bank<a class="headerlink" href="#pdbs-protein-data-bank" title="Permalink to this heading">#</a></h2>
+<h3><span class="section-number">2.1.2. </span>PDBs - Protein Data Bank<a class="headerlink" href="#pdbs-protein-data-bank" title="Permalink to this heading">#</a></h3>
 <p>These are files which contain atomic coordinates and other information which descripes biological molecules. Structural biologist use experimental methods such as X-ray crystallography, Nuclear Magnetic Resonace spectroscopy, and Cryo-electron microscopy to determine the location of atoms in the structure. The information is then deposited to a <a class="reference external" href="https://www.rcsb.org">PDB data bank (RCSB)</a>.</p>
 <p>For more information, please refer to the following resource:</p>
 <p><a class="reference external" href="https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/introduction#:~:text=A%20typical%20PDB%20formatted%20file,the%20atoms%20and%20their%20coordinates.">PDB 101</a></p>
@@ -411,9 +424,9 @@ document.write(`
 </section>
 </section>
 <section id="types-of-simulations">
-<h1><span class="section-number">3. </span>Types of Simulations<a class="headerlink" href="#types-of-simulations" title="Permalink to this heading">#</a></h1>
+<h2><span class="section-number">2.2. </span>Types of Simulations<a class="headerlink" href="#types-of-simulations" title="Permalink to this heading">#</a></h2>
 <section id="classical-mechanics">
-<h2><span class="section-number">3.1. </span>Classical Mechanics<a class="headerlink" href="#classical-mechanics" title="Permalink to this heading">#</a></h2>
+<h3><span class="section-number">2.2.1. </span>Classical Mechanics<a class="headerlink" href="#classical-mechanics" title="Permalink to this heading">#</a></h3>
 <p>Molecular dynamic (MD) simulations uses classical Newtonian mechanics to describe the motions of atoms and molecules</p>
 <p>These simulations involve:</p>
 <ul class="simple">
@@ -439,12 +452,13 @@ $$</p>
 <p>A MD simulation generates a sequence of configurations phase space connected by time. These is called a <em>trajectoy</em> of all particles in the system as a function of time. Time averages and other properties can be calculated from a trajectory.</p>
 </section>
 <section id="quantum-mechanics">
-<h2><span class="section-number">3.2. </span>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h2>
+<h3><span class="section-number">2.2.2. </span>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h3>
 <p>Quantum mechanical (QM) methods more accurately describe the behavior of the electrons in atoms and molecules and can model chemistry – the making and breaking of chemical bond. We do this by solving the Schrodinger equation:</p>
 <p>$$
 \hat{H} \Psi = E \Psi
 $$</p>
 <p>Hatree-Fock, basis sets, semi-empirical methods, density functional theory, MP2, coupled cluster theory</p>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -495,7 +509,7 @@ $$</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>Molecular Dynamics</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Molecular Dynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -517,18 +531,17 @@ $$</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2. Protein Structure</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">2.1. Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pdbs-protein-data-bank">2.2. PDBs - Protein Data Bank</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protein-structure">2.1. Protein Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#background">2.1.1. Background</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pdbs-protein-data-bank">2.1.2. PDBs - Protein Data Bank</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">3. Types of Simulations</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">3.1. Classical Mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">3.2. Quantum Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">2.2. Types of Simulations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">2.2.1. Classical Mechanics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">2.2.2. Quantum Mechanics</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
