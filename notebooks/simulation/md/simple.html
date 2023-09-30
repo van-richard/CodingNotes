@@ -174,7 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../../programming/chimera/spin.html">Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../programming/websites/jupyterbook.html">Making Websites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/vmd/ffmpeg.html">ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/websites/jupyterbook.html">Website</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -378,20 +379,26 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tutorial-simple-md">
 <h1>Tutorial: Simple MD<a class="headerlink" href="#tutorial-simple-md" title="Permalink to this heading">#</a></h1>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 
 <span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">    &lt;center&gt;&lt;video src=&quot;../../../_static/md/simple/ala.mp4&quot; width=&quot;50%&quot; height=&quot;50%&quot; center controls&gt;</span>
+<span class="s2">    &lt;center&gt;&lt;video src=&quot;../../../_static/simple.mov&quot; width=&quot;50%&quot; height=&quot;50%&quot; center controls&gt;</span>
 <span class="s2">    &lt;/video&gt;&lt;/center&gt;</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <div class="output text_html">
-    <center><video src="../../../_static/md/simple/ala.mp4" width="50%" height="50%" center controls>
+    <center><video src="../../../_static/simple.mov" width="50%" height="50%" center controls>
     </video></center>
 </div></div>
 </div>
@@ -402,6 +409,8 @@ document.write(`
 <li><p>Cooridnate file (*.rst7)</p></li>
 <li><p>MD input files (<a class="reference external" href="http://min.in">min.in</a>, <a class="reference external" href="http://heat.in">heat.in</a>, <a class="reference external" href="http://prod.in">prod.in</a>)</p></li>
 </ol>
+<p>You can download my files here:</p>
+<p><a class="reference external" href="https://www.dropbox.com/scl/fi/8p1ymw35ilvs79egtktqv/distance.tar.bz2?rlkey=mgddua07m5q8ukbptf1uiv36j&amp;dl=0">Simple Simulation</a></p>
 <p><em>NOTE: This tutorial can run on your personal computer. The example/files used the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment on my MacBook.</em></p>
 <p>Activated your <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools

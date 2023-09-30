@@ -174,7 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">Making Websites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../websites/jupyterbook.html">Website</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../simulation/0-overview.html">Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -376,6 +377,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">setfacl</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sudo">sudo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tail">tail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tar">tar</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap">trap</a></li>
 </ul>
             </nav>
@@ -595,10 +597,10 @@ info<span class="w"> </span><span class="m">5</span><span class="w"> </span>info
 </section>
 <section id="man">
 <h2>man<a class="headerlink" href="#man" title="Permalink to this heading">#</a></h2>
-<p>Read Bash manpage documentation with <code class="docutils literal notranslate"><span class="pre">man</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apropos<span class="w"> </span>bash
-man<span class="w"> </span><span class="m">1</span><span class="w"> </span>bash
-man<span class="w"> </span>bash
+<p>Get documentation for various functions with <code class="docutils literal notranslate"><span class="pre">man</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>man<span class="w"> </span>grep<span class="w"> </span><span class="c1"># documentation for grep</span>
+
+man<span class="w"> </span>sed<span class="w"> </span><span class="c1"># documentation for sed </span>
 </pre></div>
 </div>
 </section>
@@ -731,6 +733,32 @@ man<span class="w"> </span>bash
 </pre></div>
 </div>
 </section>
+<section id="tar">
+<h2>tar<a class="headerlink" href="#tar" title="Permalink to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">tar</span></code> stands for tape archive.</p>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">tar</span></code> command to create, compressed, or uncompressed Archive files, and also maintain/modify them.</p>
+<p>Archive files are used to collect multiple data files together into a single file for easier portability and storage, or simply to compress files to use less storage space.</p>
+<p>Example of opening <code class="docutils literal notranslate"><span class="pre">tar</span></code> files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>xvf<span class="w"> </span>file.tar
+</pre></div>
+</div>
+<p>Example of creating <code class="docutils literal notranslate"><span class="pre">tar</span></code> files:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>cvf<span class="w"> </span>file.tar<span class="w"> </span>file
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">gzip</span></code> compression on the <code class="docutils literal notranslate"><span class="pre">tar</span></code> Archive</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>cvzf<span class="w"> </span>folder.tar.gz<span class="w"> </span>folder<span class="w"> </span><span class="c1"># Creating tar</span>
+
+tar<span class="w"> </span>xvzf<span class="w"> </span>folder.tar.gz<span class="w"> </span><span class="c1"># Extract tar </span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">bzip2</span></code> compression on <code class="docutils literal notranslate"><span class="pre">tar</span></code> Archive</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>cfvj<span class="w"> </span>folder.tar.bz2<span class="w"> </span>folder<span class="w"> </span><span class="c1"># Creating tar</span>
+
+tar<span class="w"> </span>xvjf<span class="w"> </span>folder.tar.bz2<span class="w"> </span><span class="c1"># Extract tar</span>
+</pre></div>
+</div>
+</section>
 <section id="trap">
 <h2>trap<a class="headerlink" href="#trap" title="Permalink to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">trap</span></code> command allows you to execute a command whenever your script receives a signal. Here, <code class="docutils literal notranslate"><span class="pre">trap</span></code> will execute <code class="docutils literal notranslate"><span class="pre">rm</span></code> if it receives any of the three listed signals.</p>
@@ -826,6 +854,7 @@ man<span class="w"> </span>bash
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setfacl">setfacl</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sudo">sudo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tail">tail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tar">tar</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trap">trap</a></li>
 </ul>
   </nav></div>
