@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>12.4.6. Tutorial: Enzyme Reaction &#8212; Coding Notes</title>
+    <title>2.4.6. Tutorial: Enzyme Reaction &#8212; Coding Notes</title>
   
   
   
@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/qmmm/ippo1';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="prev" title="12.4.5. Tutorial: Claisen Rearrangment" href="claisen.html" />
+    <link rel="prev" title="2.4.5. Tutorial: Claisen Rearrangment" href="claisen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,32 +157,38 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../programming/0-overview.html">1. Programming</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../programming/commandline/0-overview.html">2. Bash</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/0-overview.html">1. Programming</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/bash.html">1.1. Bash</a></li>
 
 
 
 
 
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../programming/python/0-overview.html">9. Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../programming/python/conda.html">9.10. Conda Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../programming/python/intel.html">9.11. Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../programming/python/jupyter.html">9.12. Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/linux.html">1.8. Unix/Linux Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/ssh.html">1.9. SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/slurm.html">1.10. Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/commandline/git.html">1.11. Git/Github</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../programming/python/0-overview.html">1.12. Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../programming/python/conda.html">1.12.10. Conda Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programming/python/intel.html">1.12.11. Intel Environment on Conda with m1/m2 Macs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../programming/python/jupyter.html">1.12.12. Jupyter Notebooks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../programming/vmd/ffmpeg.html">10. ffmpeg</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../programming/websites/jupyterbook.html">11. Create Websites</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">12. Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="../md/0-overview.html">12.3. Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../md/energy.html">12.3.8. Theory</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../md/simple.html">12.3.9. Tutorial: Simple MD</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../md/distance.html">12.3.10. Tutorial: Restraint MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/vmd/ffmpeg.html">1.13. ffmpeg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programming/websites/jupyterbook.html">1.14. Create Websites</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">12.4. QM/MM Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="claisen.html">12.4.5. Tutorial: Claisen Rearrangment</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">12.4.6. Tutorial: Enzyme Reaction</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../0-overview.html">2. Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../md/0-overview.html">2.3. Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../md/energy.html">2.3.8. Theory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../md/simple.html">2.3.9. Tutorial: Simple MD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../md/distance.html">2.3.10. Tutorial: Restraint MD</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="0-overview.html">2.4. QM/MM Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="claisen.html">2.4.5. Tutorial: Claisen Rearrangment</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">2.4.6. Tutorial: Enzyme Reaction</a></li>
 </ul>
 </li>
 </ul>
@@ -348,13 +354,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-files">12.4.6.1. Input Files</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">12.4.6.1.1. Restraint Files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">12.4.6.1.2. QM/MM MD Input files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-files">2.4.6.1. Input Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">2.4.6.1.1. Restraint Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">2.4.6.1.2. QM/MM MD Input files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-umbrella-windows">12.4.6.2. Generate Umbrella Windows</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-qm-mm-simulation">12.4.6.3. Running QM/MM Simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-umbrella-windows">2.4.6.2. Generate Umbrella Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-qm-mm-simulation">2.4.6.3. Running QM/MM Simulation</a></li>
 </ul>
             </nav>
         </div>
@@ -367,7 +373,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="tutorial-enzyme-reaction">
-<h1><span class="section-number">12.4.6. </span>Tutorial: Enzyme Reaction<a class="headerlink" href="#tutorial-enzyme-reaction" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.4.6. </span>Tutorial: Enzyme Reaction<a class="headerlink" href="#tutorial-enzyme-reaction" title="Permalink to this heading">#</a></h1>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
 <summary aria-label="Toggle hidden content">
@@ -397,7 +403,7 @@ document.write(`
 <p>Additionally, we will use QMHub to add long-range electrostatics.</p>
 <p>We define the reaction coordinate as the difference in bond breaking (P - O) and bond forming9O - P) distances, and calculate the free energy profile using umbrella sampling and MBAR.</p>
 <section id="input-files">
-<h2><span class="section-number">12.4.6.1. </span>Input Files<a class="headerlink" href="#input-files" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.4.6.1. </span>Input Files<a class="headerlink" href="#input-files" title="Permalink to this heading">#</a></h2>
 <p>Make a new working directory.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>ippoi
 <span class="nb">cd</span><span class="w"> </span>ippoi
@@ -417,7 +423,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="restraint-files">
-<h3><span class="section-number">12.4.6.1.1. </span>Restraint Files<a class="headerlink" href="#restraint-files" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.4.6.1.1. </span>Restraint Files<a class="headerlink" href="#restraint-files" title="Permalink to this heading">#</a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file will contain atomic restraints for the mechanism we are interested in.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
@@ -429,7 +435,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">rk2=150.0,</span> <span class="pre">rk3=150.0,</span></code> Force constant in kcal/mol.</p>
 </section>
 <section id="qm-mm-md-input-files">
-<h3><span class="section-number">12.4.6.1.2. </span>QM/MM MD Input files<a class="headerlink" href="#qm-mm-md-input-files" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.4.6.1.2. </span>QM/MM MD Input files<a class="headerlink" href="#qm-mm-md-input-files" title="Permalink to this heading">#</a></h3>
 <p>2 MD input files are used. The first file (step5.00_equilibration.mdin) is used for the initial pathway sampling at a few picoseconds. The second file (step6.00_equilibration.mdin) is used for additional sampling (+10 ps).</p>
 <ol class="arabic simple">
 <li><p>step5.00_equilibration.mdin</p></li>
@@ -510,7 +516,7 @@ document.write(`
 </section>
 </section>
 <section id="generate-umbrella-windows">
-<h2><span class="section-number">12.4.6.2. </span>Generate Umbrella Windows<a class="headerlink" href="#generate-umbrella-windows" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.4.6.2. </span>Generate Umbrella Windows<a class="headerlink" href="#generate-umbrella-windows" title="Permalink to this heading">#</a></h2>
 <p>The script <code class="docutils literal notranslate"><span class="pre">gen_inputs.in</span></code> will prepare folders for umbrella sampling, and modify the <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file so that each window has a different restraint value.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
@@ -543,7 +549,7 @@ cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><s
 </div>
 </section>
 <section id="running-qm-mm-simulation">
-<h2><span class="section-number">12.4.6.3. </span>Running QM/MM Simulation<a class="headerlink" href="#running-qm-mm-simulation" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.4.6.3. </span>Running QM/MM Simulation<a class="headerlink" href="#running-qm-mm-simulation" title="Permalink to this heading">#</a></h2>
 <p>Run QM/MM simulations of the inital pathway, <code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=debug</span>
@@ -653,7 +659,7 @@ module<span class="w"> </span>load<span class="w"> </span>intel/2020a
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">12.4.5. </span>Tutorial: Claisen Rearrangment</p>
+        <p class="prev-next-title"><span class="section-number">2.4.5. </span>Tutorial: Claisen Rearrangment</p>
       </div>
     </a>
 </div></div>
@@ -674,13 +680,13 @@ module<span class="w"> </span>load<span class="w"> </span>intel/2020a
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-files">12.4.6.1. Input Files</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">12.4.6.1.1. Restraint Files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">12.4.6.1.2. QM/MM MD Input files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#input-files">2.4.6.1. Input Files</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">2.4.6.1.1. Restraint Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">2.4.6.1.2. QM/MM MD Input files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-umbrella-windows">12.4.6.2. Generate Umbrella Windows</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-qm-mm-simulation">12.4.6.3. Running QM/MM Simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-umbrella-windows">2.4.6.2. Generate Umbrella Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-qm-mm-simulation">2.4.6.3. Running QM/MM Simulation</a></li>
 </ul>
   </nav></div>
 
