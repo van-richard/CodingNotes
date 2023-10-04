@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Git/Github &#8212; Coding Notes</title>
+    <title>QM/MM Simulations &#8212; Coding Notes</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/commandline/git';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/qmmm';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Python" href="../python/0-overview.html" />
-    <link rel="prev" title="Saving Images" href="../chimera/images.html" />
+    <link rel="next" title="Tutorial: Restraint MD" href="distance.html" />
+    <link rel="prev" title="Theory" href="potential.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,34 +152,54 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../index.html">
-                    <no title>
+                    CodingNotes
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../GettingStarted.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">Learn Our Jargon</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I The Basics</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I - Foundational Skills</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="bash.html">Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="ssh.html">SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="slurm.html">Slurm</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../CommandLine.html">Terminal &amp; Command Line</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial0.html">Tutorial: Navigating with Bash</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chimera/0-overview.html">Basic Usage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Supercomputing.html">Supercomputing</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">Slurm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../StructureFiles.html">Structure Files</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II - Foundational Skills</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../BashScripting.html">Bash Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PythonScripting.html">Python Scripting</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Simulations.html">Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="simple.html">Tutorial: Simple MD</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory Notes</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Git/Github</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/0-overview.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="md.html">Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="potential.html">Theory</a></li>
 </ul>
 </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">QM/MM Simulations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="distance.html">Tutorial: Restraint MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="claisen.html">Tutorial: Claisen Rearrangment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ippo1.html">Tutorial: Enzyme Reaction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">Unix/Linux Commands</a></li>
 </ul>
 
     </div>
@@ -223,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/commandline/git.ipynb" target="_blank"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/simulation/qmmm.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -249,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/commandline/git.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/simulation/qmmm.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Git/Github</h1>
+    <h1>QM/MM Simulations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -341,14 +361,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-repository-from-github">Copy repository from GitHub</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-your-changes">Push your changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">Bonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">Nonbonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">Electrostatic Embedding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">Short-Range</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branches">Branches</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
 </ul>
             </nav>
         </div>
@@ -360,133 +379,112 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="git-github">
-<h1>Git/Github<a class="headerlink" href="#git-github" title="Permalink to this heading">#</a></h1>
-<section id="background">
-<h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">git</span></code> is a version control system.
-<code class="docutils literal notranslate"><span class="pre">git</span></code> helps you keep track of code changes.
-<code class="docutils literal notranslate"><span class="pre">git</span></code> is used to collaborate on code.</p>
-<p><a class="reference external" href="https://github.com">GitHub</a> is a cloud-based hosting service that lets you manage <code class="docutils literal notranslate"><span class="pre">git</span></code> repositories. If you have open-source projects that use <code class="docutils literal notranslate"><span class="pre">git</span></code>, then GitHub is designed to help you better manage them.</p>
+  <section id="qm-mm-simulations">
+<h1>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Permalink to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<p>Reference: https://www.youtube.com/watch?v=VK0e6-ndodM</p>
+<p>In general, a hybrid quantum mechanics/molecular mechanics (QM/MM) scheme requires:</p>
+<ul class="simple">
+<li><p>Small part of system is defined at quantum level (QM)</p></li>
+<li><p>Rest of system is defined at force field level (MM)</p></li>
+</ul>
+<p>The potential energy contains 3 types of interactions:</p>
+<ol class="arabic simple">
+<li><p>Interaction between particles in QM region</p></li>
+<li><p>Interactions between particles in MM region</p></li>
+<li><p>Interaction between QM and MM particles</p></li>
+</ol>
+<p>Points 1 and 2 are straightforward descriptions of the system. Point number 3 requires calculating the energy of the combined system, whic can be done in 2 ways:</p>
+<ol class="arabic simple">
+<li><p>Subtractive scheme</p></li>
+</ol>
+<p>$$
+E = E_\mathrm{QM}  + E_\mathrm{MM} - E_\mathrm{QM-MM}
+$$</p>
+<p>Pros: No communication between QM and MM routines.
+Cons: Force field needed for QM. FF needs to be ‘flexible’ to describe change when reaction occurs. No QM polarization</p>
+<ol class="arabic simple" start="2">
+<li><p>Additive scheme</p></li>
+</ol>
+<p>$$
+E = E_\mathrm{QM} + E_\mathrm{QM-MM} + E_\mathrm{MM}
+$$</p>
+<p>QM energy ($E_\mathrm{QM}$) is from DFT Kohn-Sham Hamiltonian. MM energy ($E_\mathrm{MM}$) is from force field. QM-MM interaction energy ($E_\mathrm{QM-MM}$) is:</p>
+<p>$$
+E_\mathrm{QM-MM} = E_\mathrm{bonded}^\mathrm{QM-MM} + _\mathrm{nonbonded}^\mathrm{QM-MM}
+$$</p>
+<p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and non bonded terms</p>
 </section>
-<section id="basics">
-<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this heading">#</a></h2>
-<section id="copy-repository-from-github">
-<h3>Copy repository from GitHub<a class="headerlink" href="#copy-repository-from-github" title="Permalink to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>&lt;githublink&gt;
-</pre></div>
-</div>
+<section id="bonded-interactions">
+<h2>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
+<p>$$
+E_\mathrm{bonded}^\mathrm{QM-MM}
+$$</p>
+<p>Bonded interactions are introduced when covalent bonds connecting QM and MM regions are cut.</p>
+<p>This term is chosen at classical FF level.</p>
+<p>Care has to be taken when evaluating the QM wave function, to address this, several approaches have been developed:</p>
+<ol class="arabic simple">
+<li><p><strong>Monovalent capping atom:</strong> hydrogen atoms are placed along bond vector.</p></li>
+<li><p><strong>Link atom pseudopotential:</strong> linking atoms with scaled down psudopotential and requires a valence change which requires to constraint bond distance.</p></li>
+<li><p><strong>Generalized hybrid orbitals:</strong> hybrid orbitals are olacced on boundary atom and one participates in SCF calculation for wave function of QM region</p></li>
+</ol>
 </section>
-<section id="push-your-changes">
-<h3>Push your changes<a class="headerlink" href="#push-your-changes" title="Permalink to this heading">#</a></h3>
-<p>Make sure you update your copy first with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>pull
-</pre></div>
-</div>
-<p>then</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-a
-git<span class="w"> </span>push
-</pre></div>
-</div>
+<section id="nonbonded-interactions">
+<h2>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this heading">#</a></h2>
+<p>Non bonded term is:</p>
+<p>$$
+E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm{pol.}^\mathrm{QM-MM}
+$$</p>
+<p>QM Polarization energy ($E_\mathrm{pol.}^\mathrm{QM-MM}$) describes the <em>electrostatic</em> interaction between MM charges and QM charge density. This can be calculated in one of three ways:</p>
+<ol class="arabic simple">
+<li><p><strong>Mechanical embedding:</strong> No influence of MM charge on QM part, i.e.  QM calculation is gas-phase -like without additional potential due to MM atoms</p>
+<ul class="simple">
+<li><p>This neglects. established by assigning fixed set of effective charges to QM region. QM partial charges re=computed at every integration step of simulation (least-squares fitting procedure</p></li>
+</ul>
+</li>
+<li><p><strong>Electrostatic embedding:</strong> QM polarization due to MM part included</p>
+<ul class="simple">
+<li><p>Estimated through additional term to QM Hamiltonian, where it is taken into account in terms of external charge distribution</p></li>
+</ul>
+</li>
+<li><p><strong>Polarized embedding:</strong> MM polarization due to QM part included as well</p>
+<ul class="simple">
+<li><p>Non-self consistently or fully self-consistently</p></li>
+</ul>
+</li>
+</ol>
 </section>
+<section id="electrostatic-embedding">
+<h2>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this heading">#</a></h2>
+<p>Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.</p>
+<p>$$
+E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}<em>{i}} - {\textbf{R}</em>{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
+$$</p>
+<p>Two problems arise due to the short-range and long-range behavior of this term..</p>
+<ol class="arabic simple">
+<li><p>Short-Range - Electron spill-out; problems at the boundary</p></li>
+<li><p>Long-Range - Huge computational cost to evaluate the integral</p></li>
+</ol>
+<section id="short-range">
+<h3>Short-Range<a class="headerlink" href="#short-range" title="Permalink to this heading">#</a></h3>
+<p>In electron spill-out, a problem may arise when using standard MM atomic charges to describe the charge distribution of the MM system, which results in over-polarization near the boundary.</p>
+<ul class="simple">
+<li><p>The point charges on the MM side of the interface may attract (or repel) the electrons too strongly.</p></li>
+</ul>
+<p>These artifacts can become serious if a large basis set (e.g. with polarization and diffuse functions), or plane waves are used in the QM calculation..</p>
+<p>This can be avoided by <strong>smeared-out charges</strong> instead of traditional point charges</p>
+<p>$$
+E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})v^{smear}(|\textbf{r}_i - \textbf{R}_i|)}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
+$$</p>
+<p>Where, the <em>smearing function</em> can be a Gaussian distrubtion or another suitable function centered at the MM atom.</p>
+<p>$$
+v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
+$$</p>
+<ul class="simple">
+<li><p>Smearing function in CP2P, where $r_{c,I}$ is the covalent radius of atom $I$</p></li>
+</ul>
 </section>
-<section id="branches">
-<h2>Branches<a class="headerlink" href="#branches" title="Permalink to this heading">#</a></h2>
-<p>List all branches in repository</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch
-</pre></div>
-</div>
-<p>Make a new branch called <em>NAME</em> (does not check out!)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>*NAME*<span class="w"> </span>
-</pre></div>
-</div>
-<p>Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>*NAME*
-</pre></div>
-</div>
-<p>Rename current branch</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>*NEW_NAME*
-</pre></div>
-</div>
-<p>Commits to branch needs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> followed by the usual <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p>
-</section>
-<section id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Permalink to this heading">#</a></h2>
-<p>Quickly check available commands</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span><span class="nb">help</span>
-</pre></div>
-</div>
-<p>Check all available commands</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>-a
-</pre></div>
-</div>
-<p>Command specific help - user manual</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>&lt;command_here&gt;
-git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>add
-git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>commit
-git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>init
-<span class="c1"># or git &lt;command_here&gt; --help</span>
-git<span class="w"> </span>add<span class="w"> </span>--help
-git<span class="w"> </span>commit<span class="w"> </span>--help
-git<span class="w"> </span>init<span class="w"> </span>--help
-
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;temp/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;private_key&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
-</pre></div>
-</div>
-<p>Will display the branch, untracked files, changes and other differences</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>status
-</pre></div>
-</div>
-<p>To learn other “tid bits” about git status</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span><span class="nb">help</span><span class="w"> </span>status
-</pre></div>
-</div>
-<p>List tags</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>tag
-</pre></div>
-</div>
-<p>Create a annotated tag. The -m specifies a tagging message, which is stored with the tag. If you don’t specify a message for an annotated tag, Git launches your editor so you can type it in.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v2.0<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;my version 2.0&#39;</span>
-</pre></div>
-</div>
-<p>Show info about tag that shows the tagger information, the date the commit was tagged, and the annotation message before showing the commit information.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>show<span class="w"> </span>v2.0
-</pre></div>
-</div>
-<p>Show difference between your working dir and the index</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff
-</pre></div>
-</div>
-<p>Show differences between the index and the most recent commit.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>--cached
-</pre></div>
-</div>
-<p>Show differences between your working dir and the most recent commit</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>diff<span class="w"> </span>HEAD
-</pre></div>
-</div>
-<p>Search for “variableName” in all java files</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;variableName&#39;</span><span class="w"> </span>--<span class="w"> </span><span class="s1">&#39;*.java&#39;</span>
-</pre></div>
-</div>
-<p>Search for a line that contains “arrayListName” and, “add” or “remove”</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>grep<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;arrayListName&#39;</span><span class="w"> </span>--and<span class="w"> </span><span class="se">\(</span><span class="w"> </span>-e<span class="w"> </span>add<span class="w"> </span>-e<span class="w"> </span>remove<span class="w"> </span><span class="se">\)</span>
-</pre></div>
-</div>
-<p>Show all commits</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log
-</pre></div>
-</div>
-<p>Show only commit message &amp; ref</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log<span class="w"> </span>--oneline
-</pre></div>
-</div>
-<p>Show merge commits only</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>log<span class="w"> </span>--merges
-</pre></div>
-</div>
 </section>
 </section>
 
@@ -503,7 +501,7 @@ git<span class="w"> </span>init<span class="w"> </span>--help
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/commandline"
+            path: "./notebooks/simulation"
         },
         predefinedOutput: true
     }
@@ -522,20 +520,20 @@ git<span class="w"> </span>init<span class="w"> </span>--help
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../chimera/images.html"
+       href="potential.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Saving Images</p>
+        <p class="prev-next-title">Theory</p>
       </div>
     </a>
     <a class="right-next"
-       href="../python/0-overview.html"
+       href="distance.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Python</p>
+        <p class="prev-next-title">Tutorial: Restraint MD</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -557,14 +555,13 @@ git<span class="w"> </span>init<span class="w"> </span>--help
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-repository-from-github">Copy repository from GitHub</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#push-your-changes">Push your changes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">Bonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">Nonbonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">Electrostatic Embedding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">Short-Range</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branches">Branches</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commands">Commands</a></li>
 </ul>
   </nav></div>
 
