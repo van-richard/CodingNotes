@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>11. Molecular Simulations &#8212; Coding Notes</title>
+    <title>4. What is a molecular simulation? &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/theory/md';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11.8. Potential Functions" href="potential.html" />
-    <link rel="prev" title="10. Tutorial: Simple MD" href="../simulation/simple.html" />
+    <link rel="next" title="4.7. Potential Functions" href="potential.html" />
+    <link rel="prev" title="3.9. Tutorial: Simple MD" href="../simulation/simple.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -159,42 +159,42 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn Our Jargon</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I - Foundational Skills</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../CommandLine.html">3. Terminal &amp; Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/bashtutorial0.html">4. Tutorial: Navigating with Bash</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Supercomputing.html">5. Supercomputing</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">5.4. SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">5.5. Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn the Jargon</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">3. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial0.html">3.2. Tutorial: Navigating with Bash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supercomputing.html">3.3. Supercomputing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">3.4. More on SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">3.5. More on Slurm &amp; HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.6. Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python.html">3.7. Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.8. Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">3.9. Tutorial: Simple MD</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../StructureFiles.html">6. Structure Files</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II - Foundational Skills</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../BashScripting.html">7. Bash Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python.html">8. Python Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Simulations.html">9. Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../simulation/simple.html">10. Tutorial: Simple MD</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory Notes</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theories</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">11. Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="potential.html">11.8. Potential Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qmmm.html">11.9. QM/MM Simulations</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. What is a molecular simulation?</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="potential.html">4.7. Potential Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qmmm.html">4.8. QM/MM Simulations</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../simulation/distance.html">12. MD: Applying Restraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../simulation/claisen.html">13. QM/MM: Claisen Rearrangment</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ChimeraX.html">5. Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">5.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">5.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">5.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">5.5. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">5.6. Rocking</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">14. Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">Unix/Linux Commands</a></li>
 </ul>
 
     </div>
@@ -346,7 +346,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Molecular Simulations</h1>
+    <h1>What is a molecular simulation?</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -356,18 +356,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">11.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">11.2. Molecular Dynamics (MD) Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">11.3. Monte Carlo (MC) Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">11.4. Molecular Descriptors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">11.5. Properties of Interest</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">11.6. Other Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">11.6.1. Bond Breaking/Forming</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">11.6.2. Course-Graining Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">11.6.3. Constant pH Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">4.1. Molecular Dynamics (MD) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">4.2. Monte Carlo (MC) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">4.3. Molecular Descriptors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">4.4. Properties of Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">4.5. Other Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">4.5.1. Bond Breaking/Forming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">4.5.2. Course-Graining Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">4.5.3. Constant pH Simulations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">11.7. Literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">4.6. Literature</a></li>
 </ul>
             </nav>
         </div>
@@ -379,10 +378,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="molecular-simulations">
-<h1><span class="section-number">11. </span>Molecular Simulations<a class="headerlink" href="#molecular-simulations" title="Permalink to this heading">#</a></h1>
-<section id="overview">
-<h2><span class="section-number">11.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+  <section id="what-is-a-molecular-simulation">
+<h1><span class="section-number">4. </span>What is a molecular simulation?<a class="headerlink" href="#what-is-a-molecular-simulation" title="Permalink to this heading">#</a></h1>
 <p>Molecular simulations methods involves a particle-based description of the system, and is propagated by deterministic or probabilistic rules to generate a trajectory describing its evolution over course of the simulation.</p>
 <p>Properties can be calculated from <em>snapshots</em> (<em>i.e.</em> a configuration of the system, or <em>frame</em>), and then averaged over the trajectory to calculate estimates of said property.</p>
 <p>General methods fit into 2 categories, depending on how the system is propagated:</p>
@@ -390,20 +387,19 @@ document.write(`
 <li><p>Molecular Dynamics (MD) Simulations</p></li>
 <li><p>Monte Carlo (MC) Simulations</p></li>
 </ol>
-</section>
 <section id="molecular-dynamics-md-simulations">
-<h2><span class="section-number">11.2. </span>Molecular Dynamics (MD) Simulations<a class="headerlink" href="#molecular-dynamics-md-simulations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span>Molecular Dynamics (MD) Simulations<a class="headerlink" href="#molecular-dynamics-md-simulations" title="Permalink to this heading">#</a></h2>
 <p>In this approach, Newton’s equations of motion are numerically intergrated to generate the dynamic trajectory of the system.</p>
 <p>These simulations can be used to investigate structural, dynamic, and thermodynamic properties.</p>
 </section>
 <section id="monte-carlo-mc-simulations">
-<h2><span class="section-number">11.3. </span>Monte Carlo (MC) Simulations<a class="headerlink" href="#monte-carlo-mc-simulations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2. </span>Monte Carlo (MC) Simulations<a class="headerlink" href="#monte-carlo-mc-simulations" title="Permalink to this heading">#</a></h2>
 <p>In this approach, probabilistic rules are used to generate new configuration from the present configuration. This is repeated to generate sequences of states that be used to calculate structural and thermodynamic properties.</p>
 <p><strong>This approach does not calculate dynamical properties. MC simulations lack any concept of time.</strong></p>
 <p>The trajectory produced by MC simulations are an ensemble of configurations that reflect those that <em>could be</em> dynamically sampled.</p>
 </section>
 <section id="molecular-descriptors">
-<h2><span class="section-number">11.4. </span>Molecular Descriptors<a class="headerlink" href="#molecular-descriptors" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.3. </span>Molecular Descriptors<a class="headerlink" href="#molecular-descriptors" title="Permalink to this heading">#</a></h2>
 <p>MD or MC simulations can be carried out with differnt underlying physical theories to describe the particle-base model of the system. For example:</p>
 <ol class="arabic simple">
 <li><p><strong>Quantum Mechanics (QM) Descriptors</strong></p>
@@ -432,7 +428,7 @@ document.write(`
 <p>For context, a typical QM simulation could be perforemd with a hundred atoms or fewer. Whereas MM simulations routinely have tens to hundreds or thousands of atoms in the system.</p>
 </section>
 <section id="properties-of-interest">
-<h2><span class="section-number">11.5. </span>Properties of Interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.4. </span>Properties of Interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this heading">#</a></h2>
 <p>The size of the system alone does not dictate the use of classical descriptors. MM simulations are often used to calculate:</p>
 <ol class="arabic simple">
 <li><p>Free Energies</p></li>
@@ -442,23 +438,23 @@ document.write(`
 <p><strong>Simluations not only samples single optimal states but must sample the correct distribution of states.</strong> This requires simulations of <em>some length.</em> In protein simulations, relevant timescale of biological prosses are often nanoseconds to microseconds in length. For example, rearrangements of buried amino acid sidechains or conformation changes to a protein domain.</p>
 </section>
 <section id="other-methods">
-<h2><span class="section-number">11.6. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.5. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">#</a></h2>
 <section id="bond-breaking-forming">
-<h3><span class="section-number">11.6.1. </span>Bond Breaking/Forming<a class="headerlink" href="#bond-breaking-forming" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.5.1. </span>Bond Breaking/Forming<a class="headerlink" href="#bond-breaking-forming" title="Permalink to this heading">#</a></h3>
 <p>In classical simulations, bond breaking/forming are generally not allowed. The topology, or chemistry, of the system is is constant as a function of time. In other words, the chemical identity of a molecular remains constant (with the exception of constant pH simulations).</p>
 <p>The hybrid QM/MM scheme or use of reactive force fields are generally used.</p>
 </section>
 <section id="course-graining-methods">
-<h3><span class="section-number">11.6.2. </span>Course-Graining Methods<a class="headerlink" href="#course-graining-methods" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.5.2. </span>Course-Graining Methods<a class="headerlink" href="#course-graining-methods" title="Permalink to this heading">#</a></h3>
 <p>Above the level of MM are course-graining methods. This method will reduce the resolution and computational cost.</p>
 </section>
 <section id="constant-ph-simulations">
-<h3><span class="section-number">11.6.3. </span>Constant pH Simulations<a class="headerlink" href="#constant-ph-simulations" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.5.3. </span>Constant pH Simulations<a class="headerlink" href="#constant-ph-simulations" title="Permalink to this heading">#</a></h3>
 <p>Sample the titratable residues</p>
 </section>
 </section>
 <section id="literature">
-<h2><span class="section-number">11.7. </span>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.6. </span>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
 <p>I recommend these readings, as to “not reinvent the wheel” ..</p>
 <p><a class="reference external" href="https://doi.org/10.33011/livecoms.1.1.5957">Best Practices for Foundations in Molecular Simulations</a></p>
 </section>
@@ -503,7 +499,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Tutorial: Simple MD</p>
+        <p class="prev-next-title"><span class="section-number">3.9. </span>Tutorial: Simple MD</p>
       </div>
     </a>
     <a class="right-next"
@@ -511,7 +507,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11.8. </span>Potential Functions</p>
+        <p class="prev-next-title"><span class="section-number">4.7. </span>Potential Functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -533,18 +529,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">11.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">11.2. Molecular Dynamics (MD) Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">11.3. Monte Carlo (MC) Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">11.4. Molecular Descriptors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">11.5. Properties of Interest</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">11.6. Other Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">11.6.1. Bond Breaking/Forming</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">11.6.2. Course-Graining Methods</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">11.6.3. Constant pH Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-dynamics-md-simulations">4.1. Molecular Dynamics (MD) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#monte-carlo-mc-simulations">4.2. Monte Carlo (MC) Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">4.3. Molecular Descriptors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">4.4. Properties of Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">4.5. Other Methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-breaking-forming">4.5.1. Bond Breaking/Forming</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#course-graining-methods">4.5.2. Course-Graining Methods</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#constant-ph-simulations">4.5.3. Constant pH Simulations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">11.7. Literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">4.6. Literature</a></li>
 </ul>
   </nav></div>
 

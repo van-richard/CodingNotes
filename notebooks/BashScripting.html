@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>7. Bash Scripting &#8212; Coding Notes</title>
+    <title>Bash Scripting &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/BashScripting';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Python Scripting" href="Python.html" />
-    <link rel="prev" title="6. Structure Files" href="StructureFiles.html" />
+    <link rel="next" title="Python Scripting" href="Python.html" />
+    <link rel="prev" title="Structure Files" href="StructureFiles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,44 +157,39 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Jargon.html">2. Learn Our Jargon</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I - Foundational Skills</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="CommandLine.html">3. Terminal &amp; Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commandline/bashtutorial0.html">4. Tutorial: Navigating with Bash</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Supercomputing.html">5. Supercomputing</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="commandline/ssh.html">5.4. SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commandline/slurm.html">5.5. Slurm</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jargon.html">Learn the Jargon</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="QuickStart.html">Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/bashtutorial0.html">Tutorial: Navigating with Bash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supercomputing.html">Supercomputing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/ssh.html">More on SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/slurm.html">More on Slurm &amp; HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StructureFiles.html">Structure Files</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Bash Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html">Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Simulations.html">Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation/simple.html">Tutorial: Simple MD</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="StructureFiles.html">6. Structure Files</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II - Foundational Skills</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Bash Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">8. Python Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Simulations.html">9. Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation/simple.html">10. Tutorial: Simple MD</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory Notes</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory Stuff</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="theory/md.html">11. Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory/potential.html">11.8. Potential Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory/qmmm.html">11.9. QM/MM Simulations</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory/md.html">1. Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory/potential.html">1.8. Potential Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/qmmm.html">1.9. QM/MM Simulations</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="simulation/distance.html">12. MD: Applying Restraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation/claisen.html">13. QM/MM: Claisen Rearrangment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation/distance.html">2. MD: Applying Restraint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="simulation/claisen.html">3. QM/MM: Claisen Rearrangment</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="appendix/linux.html">14. Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix/linux.html">Unix/Linux Commands</a></li>
 </ul>
 
     </div>
@@ -356,15 +351,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">7.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">7.2. Built-in Variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">7.3. Brace Expansion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">7.4. Conditional Execution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">7.5. Ampersand</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">7.6. Expressions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">7.7. Redirect Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">7.8. Looping</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">7.8.1. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">Built-in Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">Brace Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">Conditional Execution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">Ampersand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">Redirect Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">Looping</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 </ul>
 </li>
 </ul>
@@ -379,13 +374,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="bash-scripting">
-<h1><span class="section-number">7. </span>Bash Scripting<a class="headerlink" href="#bash-scripting" title="Permalink to this heading">#</a></h1>
+<h1>Bash Scripting<a class="headerlink" href="#bash-scripting" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2><span class="section-number">7.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>…</p>
 </section>
 <section id="built-in-variables">
-<h2><span class="section-number">7.2. </span>Built-in Variables<a class="headerlink" href="#built-in-variables" title="Permalink to this heading">#</a></h2>
+<h2>Built-in Variables<a class="headerlink" href="#built-in-variables" title="Permalink to this heading">#</a></h2>
 <p>There are some useful built-in variables, like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Last program&#39;s return value: </span><span class="nv">$?</span><span class="s2">&quot;</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script&#39;s PID: </span><span class="nv">$$</span><span class="s2">&quot;</span>
@@ -396,7 +391,7 @@ document.write(`
 </div>
 </section>
 <section id="brace-expansion">
-<h2><span class="section-number">7.3. </span>Brace Expansion<a class="headerlink" href="#brace-expansion" title="Permalink to this heading">#</a></h2>
+<h2>Brace Expansion<a class="headerlink" href="#brace-expansion" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">{...}</span></code> are used to generate arbitrary strings:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; 1 2 3 4 5 6 7 8 9 10</span>
 <span class="nb">echo</span><span class="w"> </span><span class="o">{</span>a..z<span class="o">}</span><span class="w"> </span><span class="c1"># =&gt; a b c d e f g h i j k l m n o p q r s t u v w x y z</span>
@@ -425,7 +420,7 @@ document.write(`
 </div>
 </section>
 <section id="conditional-execution">
-<h2><span class="section-number">7.4. </span>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this heading">#</a></h2>
+<h2>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command fails&quot;</span>
 <span class="c1"># =&gt; Always executed</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command does NOT fail&quot;</span>
@@ -435,7 +430,7 @@ document.write(`
 </div>
 </section>
 <section id="ampersand">
-<h2><span class="section-number">7.5. </span>Ampersand<a class="headerlink" href="#ampersand" title="Permalink to this heading">#</a></h2>
+<h2>Ampersand<a class="headerlink" href="#ampersand" title="Permalink to this heading">#</a></h2>
 <p>A single ampersand <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> after a command runs it in the background. A background command’s output is printed to the terminal, but it cannot read from the input.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sleep<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
@@ -460,14 +455,14 @@ document.write(`
 <p>Redefine command <code class="docutils literal notranslate"><span class="pre">ping</span></code> as alias to send only 5 packets</p>
 </section>
 <section id="expressions">
-<h2><span class="section-number">7.6. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h2>
+<h2>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h2>
 <p>Expressions are denoted with the following format:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="k">$((</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="k">))</span><span class="w"> </span><span class="c1"># =&gt; 15</span>
 </pre></div>
 </div>
 </section>
 <section id="redirect-commands">
-<h2><span class="section-number">7.7. </span>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h2>
+<h2>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h2>
 <p>You can redirect command input and output (stdin, stdout, and stderr) using “redirection operators”. Unlike a pipe, which passes output to a command, a redirection operator has a command’s input come from a file or stream, or sends its output to a file or stream.</p>
 <p>Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite hello.py with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>hello.py<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
@@ -529,7 +524,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 </div>
 </section>
 <section id="looping">
-<h2><span class="section-number">7.8. </span>Looping<a class="headerlink" href="#looping" title="Permalink to this heading">#</a></h2>
+<h2>Looping<a class="headerlink" href="#looping" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops iterate for as many arguments given:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#The contents of $Variable is printed three times.</span>
 <span class="k">for</span><span class="w"> </span>Variable<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..3<span class="o">}</span>
@@ -582,7 +577,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 </pre></div>
 </div>
 <section id="functions">
-<h3><span class="section-number">7.8.1. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h3>
 <p>You can also define functions</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Definition:
 function foo ()
@@ -657,7 +652,7 @@ foo arg1 arg2
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Structure Files</p>
+        <p class="prev-next-title">Structure Files</p>
       </div>
     </a>
     <a class="right-next"
@@ -665,7 +660,7 @@ foo arg1 arg2
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Python Scripting</p>
+        <p class="prev-next-title">Python Scripting</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -687,15 +682,15 @@ foo arg1 arg2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">7.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">7.2. Built-in Variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">7.3. Brace Expansion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">7.4. Conditional Execution</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">7.5. Ampersand</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">7.6. Expressions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">7.7. Redirect Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">7.8. Looping</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">7.8.1. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">Built-in Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#brace-expansion">Brace Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">Conditional Execution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">Ampersand</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">Expressions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">Redirect Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">Looping</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
 </ul>
 </li>
 </ul>

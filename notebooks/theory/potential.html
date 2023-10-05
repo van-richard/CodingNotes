@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>11.8. Potential Functions &#8212; Coding Notes</title>
+    <title>4.7. Classical MD &#8212; Coding Notes</title>
   
   
   
@@ -61,12 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/theory/potential';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11.9. QM/MM Simulations" href="qmmm.html" />
-    <link rel="prev" title="11. Molecular Simulations" href="md.html" />
+    <link rel="next" title="4.8. QM/MM Simulations" href="qmmm.html" />
+    <link rel="prev" title="4. What are molecular simulations?" href="simulation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,42 +161,42 @@ const thebe_selector_output = ".output, .cell_output"
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn Our Jargon</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I - Foundational Skills</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../CommandLine.html">3. Terminal &amp; Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/bashtutorial0.html">4. Tutorial: Navigating with Bash</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Supercomputing.html">5. Supercomputing</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">5.4. SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">5.5. Slurm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn the Jargon</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">3. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial0.html">3.2. Tutorial: Navigating with Bash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supercomputing.html">3.3. Supercomputing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">3.4. More on SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">3.5. More on Slurm &amp; HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.6. Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python.html">3.7. Python Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.8. Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">3.9. Tutorial: Simple MD</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../StructureFiles.html">6. Structure Files</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II - Foundational Skills</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../BashScripting.html">7. Bash Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python.html">8. Python Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Simulations.html">9. Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../simulation/simple.html">10. Tutorial: Simple MD</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory Notes</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theories</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="md.html">11. Molecular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.8. Potential Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="qmmm.html">11.9. QM/MM Simulations</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="simulation.html">4. What are molecular simulations?</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.7. Classical MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qmmm.html">4.8. QM/MM Simulations</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../simulation/distance.html">12. MD: Applying Restraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../simulation/claisen.html">13. QM/MM: Claisen Rearrangment</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ChimeraX.html">5. Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">5.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">5.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">5.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">5.5. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">5.6. Rocking</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">14. Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">Unix/Linux Commands</a></li>
 </ul>
 
     </div>
@@ -347,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Potential Functions</h1>
+    <h1>Classical MD</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,8 +358,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy">11.8.1. Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">11.8.2. Force Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy">4.7.1. Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">4.7.2. Force Fields</a></li>
 </ul>
             </nav>
         </div>
@@ -370,31 +371,35 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="potential-functions">
-<h1><span class="section-number">11.8. </span>Potential Functions<a class="headerlink" href="#potential-functions" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="classical-md">
+<h1><span class="section-number">4.7. </span>Classical MD<a class="headerlink" href="#classical-md" title="Permalink to this heading">#</a></h1>
 <section id="energy">
-<h2><span class="section-number">11.8.1. </span>Energy<a class="headerlink" href="#energy" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.7.1. </span>Energy<a class="headerlink" href="#energy" title="Permalink to this heading">#</a></h2>
 <p>Energy of a system is composed of bonded and nonbonded interactions:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-acbcbd41-2079-4c69-8d40-e0161ec37bdd">
-<span class="eqno">(11.1)<a class="headerlink" href="#equation-acbcbd41-2079-4c69-8d40-e0161ec37bdd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 E _{total} = E_{bonded} + E_{nonbonded} 
-\end{equation}\]</div>
-<p>The bonded interactions ($E_{bonded}$) are:</p>
-<p>$$
+\]</div>
+<p>The bonded interactions (\begin{math}E_{bonded}\end{math}) are:</p>
+<div class="math notranslate nohighlight">
+\[
 E_{bonded} = E_{bonds} + E_{angles} + E_{torsion}
-$$</p>
-<p>Nonbonded interactions ($E_{nonbonded}$) are:</p>
-<p>$$E_{nonbonded} = E_{vdw} + E_{elec.}$$</p>
+\]</div>
+<p>Nonbonded interactions (<span class="math notranslate nohighlight">\(E_{nonbonded}\)</span>) are:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{nonbonded} = E_{vdw} + E_{elec.}
+\]</div>
 <p>How these functions are written will depend on the simulation package (i.e. Amber, NAMD, OpenMM, Gromacs, etc.).</p>
 <p>Amber uses the following definitions:</p>
-<p>$$ E_{bonds} = \sum_{bonds} k_b (r - r_{eq})^2 $$ where, $k_b$ is the bond spring constant $\frac{kcal}{mol \r{A}}$, $r_{eq}$ is the equilibrium bond distance (A), and $r$ is the bond length.</p>
-<p>$$ E_{angles} = \sum_{angles} k_{a} (\theta - \theta_{eq})^2 $$
-$$ E_{torsion} = \sum_{torsion} \frac{V_n}{2} (1 + cos(n\phi - \delta) $$
-$$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{ij}^6} $$</p>
-<p>$$ E_{elec} = \sum_{nonbonded_{ij}} \frac{q_i q_j}{r_{ij}} $$</p>
+<p><span class="math notranslate nohighlight">\(E_{bonds} = \sum_{bonds} k_b (r - r_{eq})^2\)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{angles} = \sum_{angles} k_{a} (\theta - \theta_{eq})^2\)</span>
+<span class="math notranslate nohighlight">\(E_{torsion} = \sum_{torsion} \frac{V_n}{2} (1 + cos(n\phi - \delta) \)</span>
+<span class="math notranslate nohighlight">\(E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{ij}^6} \)</span></p>
+<p><span class="math notranslate nohighlight">\(E_{elec} = \sum_{nonbonded_{ij}} \frac{q_i q_j}{r_{ij}}\)</span></p>
 </section>
 <section id="force-fields">
-<h2><span class="section-number">11.8.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.7.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
@@ -430,12 +435,12 @@ $$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{i
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="md.html"
+       href="simulation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>Molecular Simulations</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>What are molecular simulations?</p>
       </div>
     </a>
     <a class="right-next"
@@ -443,7 +448,7 @@ $$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{i
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11.9. </span>QM/MM Simulations</p>
+        <p class="prev-next-title"><span class="section-number">4.8. </span>QM/MM Simulations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -465,8 +470,8 @@ $$ E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{i
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy">11.8.1. Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">11.8.2. Force Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy">4.7.1. Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">4.7.2. Force Fields</a></li>
 </ul>
   </nav></div>
 

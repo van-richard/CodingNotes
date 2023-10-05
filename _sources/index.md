@@ -38,5 +38,3 @@ Common softwares for visualizing small-molecules/proteins are (links to official
 
 - Creating Your Own Website (JupyterBook, Github)
 
-
-

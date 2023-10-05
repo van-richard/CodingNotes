@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.5. Slurm &#8212; Coding Notes</title>
+    <title>3.6. More on Slurm &amp; HPC &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/commandline/slurm';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6. Structure Files" href="../StructureFiles.html" />
-    <link rel="prev" title="5.4. SSH-ing" href="ssh.html" />
+    <link rel="next" title="3.7. Protein/Ligand Files" href="../StructureFiles.html" />
+    <link rel="prev" title="3.5. More on SSH-ing" href="ssh.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,44 +157,58 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn Our Jargon</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I - Foundational Skills</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../CommandLine.html">3. Terminal &amp; Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bashtutorial0.html">4. Tutorial: Navigating with Bash</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Supercomputing.html">5. Supercomputing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="ssh.html">5.4. SSH-ing</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.5. Slurm</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../StructureFiles.html">6. Structure Files</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II - Foundational Skills</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../BashScripting.html">7. Bash Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Python.html">8. Python Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Simulations.html">9. Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../simulation/simple.html">10. Tutorial: Simple MD</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../theory/md.html">11. Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../theory/potential.html">11.8. Potential Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/qmmm.html">11.9. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn the Jargon</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">3. Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bashtutorial0.html">3.2. Navigating w/ Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bashtutorial1.html">3.3. File Management w/ Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supercomputing.html">3.4. Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">3.5. More on SSH-ing</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.6. More on Slurm &amp; HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Protein/Ligand Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python.html">3.8. Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.9. Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">3.10. Tutorial: Simple MD</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theory</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../simulation/distance.html">12. MD: Applying Restraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../simulation/claisen.html">13. QM/MM: Claisen Rearrangment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/simulation.html">1. What are Molecular Simulations?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/classical.html">2. Classical MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/qmmm.html">3. QM/MM Simulations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../MD.html">1. Classical MD Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/distance.html">1.1. Distance Restraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QMMM.html">2. QM/MM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">2.1. Claisen Rearrangment</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ChimeraX.html">Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">14. Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">Unix/Linux Commands</a></li>
 </ul>
 
     </div>
@@ -238,7 +252,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/commandline/slurm.ipynb" target="_blank"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/commandline/slurm.md" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -264,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/commandline/slurm.ipynb" target="_blank"
+      <li><a href="../../_sources/notebooks/commandline/slurm.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -274,7 +288,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -346,7 +360,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Slurm</h1>
+    <h1>More on Slurm & HPC</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -356,24 +370,22 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">5.5.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-sumission">5.5.2. Job Sumission</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">5.5.2.1. Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-cpu-job">5.5.2.1.1. Example: CPU Job</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gpu-job">5.5.2.1.2. Example: GPU Job</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-exclusive-job">5.5.2.1.3. Example: Exclusive Job</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">3.6.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">3.6.2. Slurm Scripts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">3.6.2.1. Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-cpu-job">3.6.2.1.1. Example: CPU Job</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gpu-job">3.6.2.1.2. Example: GPU Job</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-exclusive-job">3.6.2.1.3. Example: Exclusive Job</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-managment">5.5.3. Job Managment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-allocation">5.5.4. Resource Allocation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-management">5.5.5. Resource Management</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-commands">5.5.5.1. Example commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-management-slurm-commands">3.6.3. Job Management Slurm Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-hpc-resources-with-sinfo">3.6.4. Information on HPC Resources with <code class="docutils literal notranslate"><span class="pre">sinfo</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-pre-installed-software-with-module">3.6.5. Information on Pre-Installed Software with <code class="docutils literal notranslate"><span class="pre">module</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-commands">3.6.5.1. Example commands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting">5.5.6. Scripting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automation">5.5.7. Automation</a></li>
 </ul>
             </nav>
         </div>
@@ -385,25 +397,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="slurm">
-<h1><span class="section-number">5.5. </span>Slurm<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="more-on-slurm-hpc">
+<h1><span class="section-number">3.6. </span>More on Slurm &amp; HPC<a class="headerlink" href="#more-on-slurm-hpc" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2><span class="section-number">5.5.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.6.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.</p>
 <p><a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
-<ol class="arabic simple">
-<li><p>Job Submission/Management</p></li>
-<li><p>Resource Allocation/Utilization</p></li>
-<li><p>Scripting and Automation</p></li>
-</ol>
 </section>
-<section id="job-sumission">
-<h2><span class="section-number">5.5.2. </span>Job Sumission<a class="headerlink" href="#job-sumission" title="Permalink to this heading">#</a></h2>
+<section id="slurm-scripts">
+<h2><span class="section-number">3.6.2. </span>Slurm Scripts<a class="headerlink" href="#slurm-scripts" title="Permalink to this heading">#</a></h2>
 <section id="directives-sbatch">
-<h3><span class="section-number">5.5.2.1. </span>Directives (#SBATCH)<a class="headerlink" href="#directives-sbatch" title="Permalink to this heading">#</a></h3>
-<p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many CPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code></p>
+<h3><span class="section-number">3.6.2.1. </span>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)<a class="headerlink" href="#directives-sbatch" title="Permalink to this heading">#</a></h3>
+<p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many CPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">##SBATCH</span></code></p>
 <section id="example-cpu-job">
-<h4><span class="section-number">5.5.2.1.1. </span>Example: CPU Job<a class="headerlink" href="#example-cpu-job" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">3.6.2.1.1. </span>Example: CPU Job<a class="headerlink" href="#example-cpu-job" title="Permalink to this heading">#</a></h4>
 <p>Change the words in all-caps to what you need.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=PARTITION</span>
@@ -417,7 +424,7 @@ document.write(`
 </div>
 </section>
 <section id="example-gpu-job">
-<h4><span class="section-number">5.5.2.1.2. </span>Example: GPU Job<a class="headerlink" href="#example-gpu-job" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">3.6.2.1.2. </span>Example: GPU Job<a class="headerlink" href="#example-gpu-job" title="Permalink to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=GPU_PARTITION</span>
 <span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
@@ -431,24 +438,24 @@ document.write(`
 </div>
 </section>
 <section id="example-exclusive-job">
-<h4><span class="section-number">5.5.2.1.3. </span>Example: Exclusive Job<a class="headerlink" href="#example-exclusive-job" title="Permalink to this heading">#</a></h4>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --partition=GPU_PARTITION</span>
-<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
-<span class="c1">#SBATCH --nodes=NODES</span>
-<span class="c1">#SBATCH --ntasks=NTASKS</span>
-<span class="c1">#SBATCH --output=%j.out </span>
-<span class="c1">#SBATCH --error=%j.err</span>
-<span class="c1">#SBATCH --name=JOBNAME</span>
-<span class="c1">#SBATCH --mem=0</span>
-<span class="c1">#SBATCH --exclusive</span>
+<h4><span class="section-number">3.6.2.1.3. </span>Example: Exclusive Job<a class="headerlink" href="#example-exclusive-job" title="Permalink to this heading">#</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">##!/bin/bash</span>
+<span class="c1">##SBATCH --partition=GPU_PARTITION</span>
+<span class="c1">##SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
+<span class="c1">##SBATCH --nodes=NODES</span>
+<span class="c1">##SBATCH --ntasks=NTASKS</span>
+<span class="c1">##SBATCH --output=%j.out </span>
+<span class="c1">##SBATCH --error=%j.err</span>
+<span class="c1">##SBATCH --name=JOBNAME</span>
+<span class="c1">##SBATCH --mem=0</span>
+<span class="c1">##SBATCH --exclusive</span>
 </pre></div>
 </div>
 </section>
 </section>
 </section>
-<section id="job-managment">
-<h2><span class="section-number">5.5.3. </span>Job Managment<a class="headerlink" href="#job-managment" title="Permalink to this heading">#</a></h2>
+<section id="job-management-slurm-commands">
+<h2><span class="section-number">3.6.3. </span>Job Management Slurm Commands<a class="headerlink" href="#job-management-slurm-commands" title="Permalink to this heading">#</a></h2>
 <p>Submitting a job</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm
 </pre></div>
@@ -458,25 +465,24 @@ document.write(`
 </pre></div>
 </div>
 <p>Show queued/running jobs which can be all queued/running jobs or just your queued/jobs</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w"> </span><span class="c1"># All jobs queue</span>
-squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w"> </span><span class="c1"># USERNAME queue</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w"> </span><span class="c1">## All jobs queue</span>
+squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w"> </span><span class="c1">## USERNAME queue</span>
 </pre></div>
 </div>
 </section>
-<section id="resource-allocation">
-<h2><span class="section-number">5.5.4. </span>Resource Allocation<a class="headerlink" href="#resource-allocation" title="Permalink to this heading">#</a></h2>
+<section id="information-on-hpc-resources-with-sinfo">
+<h2><span class="section-number">3.6.4. </span>Information on HPC Resources with <code class="docutils literal notranslate"><span class="pre">sinfo</span></code><a class="headerlink" href="#information-on-hpc-resources-with-sinfo" title="Permalink to this heading">#</a></h2>
 <p>Get information about the resources on available nodes that make up the HPC cluster</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span><span class="c1"># All resources </span>
-sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>idle<span class="w"> </span><span class="c1"># Idle nodes </span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span><span class="c1">## All resources </span>
+sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>idle<span class="w"> </span><span class="c1">## Idle nodes </span>
 </pre></div>
 </div>
 </section>
-<section id="resource-management">
-<h2><span class="section-number">5.5.5. </span>Resource Management<a class="headerlink" href="#resource-management" title="Permalink to this heading">#</a></h2>
-<p><em>Explain Slurm directives and only requesting needed resources</em></p>
+<section id="information-on-pre-installed-software-with-module">
+<h2><span class="section-number">3.6.5. </span>Information on Pre-Installed Software with <code class="docutils literal notranslate"><span class="pre">module</span></code><a class="headerlink" href="#information-on-pre-installed-software-with-module" title="Permalink to this heading">#</a></h2>
 <p>Additionally, the HPC often has preinstalled software. You can find this using the <code class="docutils literal notranslate"><span class="pre">module</span></code> command. The <code class="docutils literal notranslate"><span class="pre">module</span></code> system to load most software into a user’s environment. Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
 <section id="example-commands">
-<h3><span class="section-number">5.5.5.1. </span>Example commands<a class="headerlink" href="#example-commands" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.5.1. </span>Example commands<a class="headerlink" href="#example-commands" title="Permalink to this heading">#</a></h3>
 <p>List all available modules</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>av
 </pre></div>
@@ -493,13 +499,10 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>purge
 </pre></div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </section>
-</section>
-<section id="scripting">
-<h2><span class="section-number">5.5.6. </span>Scripting<a class="headerlink" href="#scripting" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="automation">
-<h2><span class="section-number">5.5.7. </span>Automation<a class="headerlink" href="#automation" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
@@ -540,7 +543,7 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.4. </span>SSH-ing</p>
+        <p class="prev-next-title"><span class="section-number">3.5. </span>More on SSH-ing</p>
       </div>
     </a>
     <a class="right-next"
@@ -548,7 +551,7 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Structure Files</p>
+        <p class="prev-next-title"><span class="section-number">3.7. </span>Protein/Ligand Files</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -570,24 +573,22 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">5.5.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-sumission">5.5.2. Job Sumission</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">5.5.2.1. Directives (#SBATCH)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-cpu-job">5.5.2.1.1. Example: CPU Job</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gpu-job">5.5.2.1.2. Example: GPU Job</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-exclusive-job">5.5.2.1.3. Example: Exclusive Job</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">3.6.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">3.6.2. Slurm Scripts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">3.6.2.1. Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-cpu-job">3.6.2.1.1. Example: CPU Job</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-gpu-job">3.6.2.1.2. Example: GPU Job</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-exclusive-job">3.6.2.1.3. Example: Exclusive Job</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-managment">5.5.3. Job Managment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-allocation">5.5.4. Resource Allocation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-management">5.5.5. Resource Management</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-commands">5.5.5.1. Example commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-management-slurm-commands">3.6.3. Job Management Slurm Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-hpc-resources-with-sinfo">3.6.4. Information on HPC Resources with <code class="docutils literal notranslate"><span class="pre">sinfo</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-pre-installed-software-with-module">3.6.5. Information on Pre-Installed Software with <code class="docutils literal notranslate"><span class="pre">module</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-commands">3.6.5.1. Example commands</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting">5.5.6. Scripting</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automation">5.5.7. Automation</a></li>
 </ul>
   </nav></div>
 

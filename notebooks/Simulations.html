@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>9. Molecular Dynamics &#8212; Coding Notes</title>
+    <title>3.9. Molecular Dynamics &#8212; Coding Notes</title>
   
   
   
@@ -61,11 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Simulations';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Tutorial: Simple MD" href="simulation/simple.html" />
-    <link rel="prev" title="8. Python Scripting" href="Python.html" />
+    <link rel="next" title="3.10. Tutorial: Simple MD" href="simulation/simple.html" />
+    <link rel="prev" title="3.8. Python &amp; Conda" href="Python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,44 +159,58 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Jargon.html">2. Learn Our Jargon</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part I - Foundational Skills</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="CommandLine.html">3. Terminal &amp; Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commandline/bashtutorial0.html">4. Tutorial: Navigating with Bash</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Supercomputing.html">5. Supercomputing</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="commandline/ssh.html">5.4. SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commandline/slurm.html">5.5. Slurm</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="StructureFiles.html">6. Structure Files</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part II - Foundational Skills</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="BashScripting.html">7. Bash Scripting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">8. Python Scripting</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation/simple.html">10. Tutorial: Simple MD</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory Notes</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="theory/md.html">11. Molecular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory/potential.html">11.8. Potential Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory/qmmm.html">11.9. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Jargon.html">2. Learn the Jargon</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="QuickStart.html">3. Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/bashtutorial0.html">3.2. Navigating w/ Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/bashtutorial1.html">3.3. File Management w/ Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supercomputing.html">3.4. Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/ssh.html">3.5. More on SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/slurm.html">3.6. More on Slurm &amp; HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StructureFiles.html">3.7. Protein/Ligand Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Python.html">3.8. Python &amp; Conda</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.9. Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation/simple.html">3.10. Tutorial: Simple MD</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theory</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="simulation/distance.html">12. MD: Applying Restraint</a></li>
-<li class="toctree-l1"><a class="reference internal" href="simulation/claisen.html">13. QM/MM: Claisen Rearrangment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/simulation.html">1. What are Molecular Simulations?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/classical.html">2. Classical MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/qmmm.html">3. QM/MM Simulations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="MD.html">1. Classical MD Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulation/distance.html">1.1. Distance Restraints</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="QMMM.html">2. QM/MM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulation/claisen.html">2.1. Claisen Rearrangment</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="ChimeraX.html">Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="chimera/images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera/fade.html">Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera/morph.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera/rock.html">Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera/spin.html">Rocking</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="vmd/ffmpeg.html">ffmpeg</a></li>
+</ul>
+</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="appendix/linux.html">14. Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="appendix/linux.html">Unix/Linux Commands</a></li>
 </ul>
 
     </div>
@@ -238,7 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/Simulations.ipynb" target="_blank"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/Simulations.md" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -264,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/notebooks/Simulations.ipynb" target="_blank"
+      <li><a href="../_sources/notebooks/Simulations.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -274,7 +290,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -356,10 +372,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">9.1. Overview</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">9.1.1. Types of Simulations</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">9.1.1.1. Classical Mechanics</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">9.1.1.2. Quantum Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">3.9.1. Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">3.9.1.1. Types of Simulations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">3.9.1.1.1. Classical Mechanics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">3.9.1.1.2. Quantum Mechanics</a></li>
 </ul>
 </li>
 </ul>
@@ -375,10 +391,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="molecular-dynamics">
-<h1><span class="section-number">9. </span>Molecular Dynamics<a class="headerlink" href="#molecular-dynamics" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="molecular-dynamics">
+<h1><span class="section-number">3.9. </span>Molecular Dynamics<a class="headerlink" href="#molecular-dynamics" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2><span class="section-number">9.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.9.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>Before you run any simulation, consider the following questions:</p>
 <ul class="simple">
 <li><p>What is your scientific question?</p></li>
@@ -413,9 +429,9 @@ document.write(`
 </li>
 </ol>
 <section id="types-of-simulations">
-<h3><span class="section-number">9.1.1. </span>Types of Simulations<a class="headerlink" href="#types-of-simulations" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.9.1.1. </span>Types of Simulations<a class="headerlink" href="#types-of-simulations" title="Permalink to this heading">#</a></h3>
 <section id="classical-mechanics">
-<h4><span class="section-number">9.1.1.1. </span>Classical Mechanics<a class="headerlink" href="#classical-mechanics" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">3.9.1.1.1. </span>Classical Mechanics<a class="headerlink" href="#classical-mechanics" title="Permalink to this heading">#</a></h4>
 <p>Molecular dynamic (MD) simulations uses classical Newtonian mechanics to describe the motions of atoms and molecules</p>
 <p>These simulations involve:</p>
 <ul class="simple">
@@ -426,27 +442,34 @@ document.write(`
 <li><p>Simulation time could be from 10 ps to 1 μs depending on model (typically ns</p></li>
 </ul>
 <p>Energy is:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 E_{total} = E_{bonded} + E_{nonbonded}
-$$</p>
+\]</div>
 <p>The bonded and nonbonded terms are:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 E_{total} = E_{bonds} + E_{angles} + E_{torsion} + E_{vDW} + E_{Coulomb}
-$$</p>
-<p>and each energy contribution term has a potential function, for example, the van der waals term $E_{vDW}$ is defined by the Lennard-Jones potential:</p>
-<p>$$
+\]</div>
+<p>and each energy contribution term has a potential function, for example, the van der waals term <span class="math notranslate nohighlight">\(E_{vDW}\)</span> is defined by the Lennard-Jones potential:</p>
+<div class="math notranslate nohighlight">
+\[
 E_{vDW} = 4\epsilon  \left[ (\frac{\sigma}{r})^{12} - (\frac{\sigma}{r})^{6} \right]
-$$</p>
+\]</div>
 <p>The potential functions have preset bonding arrangements, therefore, classical MD on its own cannot be used to model chemical reactions.</p>
 <p>A MD simulation generates a sequence of configurations phase space connected by time. These is called a <em>trajectoy</em> of all particles in the system as a function of time. Time averages and other properties can be calculated from a trajectory.</p>
 </section>
 <section id="quantum-mechanics">
-<h4><span class="section-number">9.1.1.2. </span>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">3.9.1.1.2. </span>Quantum Mechanics<a class="headerlink" href="#quantum-mechanics" title="Permalink to this heading">#</a></h4>
 <p>Quantum mechanical (QM) methods more accurately describe the behavior of the electrons in atoms and molecules and can model chemistry – the making and breaking of chemical bond. We do this by solving the Schrodinger equation:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 \hat{H} \Psi = E \Psi
-$$</p>
+\]</div>
 <p>Hatree-Fock, basis sets, semi-empirical methods, density functional theory, MP2, coupled cluster theory</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -489,7 +512,7 @@ $$</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Python Scripting</p>
+        <p class="prev-next-title"><span class="section-number">3.8. </span>Python &amp; Conda</p>
       </div>
     </a>
     <a class="right-next"
@@ -497,7 +520,7 @@ $$</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Tutorial: Simple MD</p>
+        <p class="prev-next-title"><span class="section-number">3.10. </span>Tutorial: Simple MD</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -519,10 +542,10 @@ $$</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">9.1. Overview</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">9.1.1. Types of Simulations</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">9.1.1.1. Classical Mechanics</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">9.1.1.2. Quantum Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">3.9.1. Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-simulations">3.9.1.1. Types of Simulations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">3.9.1.1.1. Classical Mechanics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-mechanics">3.9.1.1.2. Quantum Mechanics</a></li>
 </ul>
 </li>
 </ul>
