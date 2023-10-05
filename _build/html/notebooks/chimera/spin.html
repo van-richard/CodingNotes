@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/chimera/spin';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Making Websites" href="../websites/makewebsite.html" />
+    <link rel="next" title="VMD" href="../VMD.html" />
     <link rel="prev" title="Spin" href="rock.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -136,8 +136,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
-    <p class="title logo__title">Coding Notes</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -146,35 +152,63 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../../index.html">
-                    Overview
+                    CodingNotes
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io">van-richard.github.io</a></li>
-<li class="toctree-l1"><a class="reference external" href="https://van-richard.github.io/Tutorials">Simulation Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../commandline/linux.html">Unix/Linux Commands List</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/bash.html">BASH Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">SLURM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/git.html">Git Commands</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn the Jargon</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">3. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial0.html">3.2. Navigating w/ Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial1.html">3.3. File Management w/ Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supercomputing.html">3.4. Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">3.5. More on SSH-ing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">3.6. More on Slurm &amp; HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Protein/Ligand Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Python.html">3.8. Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.9. Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">3.10. Tutorial: Simple MD</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python/python.html">Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../python/conda.html">Conda Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/intel.html">Intel Environment on Conda with m1/m2 Macs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theory</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../theory/simulation.html">1. What are Molecular Simulations?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/classical.html">2. Classical MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/qmmm.html">3. QM/MM Simulations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../MD.html">1. Classical MD Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/distance.html">1.1. Distance Restraints</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QMMM.html">2. QM/MM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">2.1. Claisen Rearrangment</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../ChimeraX.html">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="images.html">Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fade.html">Fading between Visual States</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fade.html">Fading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="morph.html">Morphing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rock.html">Spin</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../websites/makewebsite.html">Making Websites</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">Unix/Linux Commands</a></li>
 </ul>
 
     </div>
@@ -218,15 +252,15 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes" target="_blank"
-   class="btn btn-sm btn-source-repository-button"
-   title="Source repository"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/chimera/spin.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button"
+   title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
-  <i class="fab fa-github"></i>
+  <i class="fas fa-pencil-alt"></i>
   </span>
 
 </a>
@@ -350,7 +384,29 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rocking">
 <h1>Rocking<a class="headerlink" href="#rocking" title="Permalink to this heading">#</a></h1>
-<video src="../../_static/chimerax_rock_cas9.mp4" width="50%" height="50%" align="center"/><p><video src="../../_images/chimerax_rock_cas9.mp4" title=""><a href="../../_images/chimerax_rock_cas9.mp4"></a></video></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+
+<span class="n">HTML</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    &lt;center&gt;&lt;video src=&quot;../../../_static/chimerax_rock_cas9.mp4&quot;width=&quot;50%&quot; height=&quot;50%&quot; controls&gt;</span>
+<span class="s2">    &lt;/video&gt;&lt;/center&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html">
+    <center><video src="../../../_static/chimerax_rock_cas9.mp4"width="50%" height="50%" controls>
+    </video></center>
+</div></div>
+</div>
 <p>The code looks like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">movie</span> <span class="n">record</span> <span class="n">supersample</span> <span class="mi">3</span>
 <span class="n">rock</span> <span class="n">y</span> <span class="mi">25</span> <span class="mi">360</span>
@@ -429,11 +485,11 @@ movie encode [location] - save the video at specified location</p>
       </div>
     </a>
     <a class="right-next"
-       href="../websites/makewebsite.html"
+       href="../VMD.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Making Websites</p>
+        <p class="prev-next-title">VMD</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

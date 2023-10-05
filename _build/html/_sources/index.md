@@ -1,22 +1,40 @@
-# Overview
+# CodingNotes
 
-## Notes I wish I had as a first year Ph.D. student with no programming background.
+Notes I wish I had when I started in computational chemistry with no programming experience.
 
-## Command Line Tools
-    - Bash (Unix Shell)
-    - Vi/Vim (Text Editor)
-    - Git (with GitHub)
-    - Python 
+![](_static/welcome.png)
 
-## Molecular Visualization
+Hopefully, my website contains some guidance for:
 
-- Chimera/ChimeraX 
-- VMD
+## Programming
 
-## Molecular Dynamics
+- Command line, `Bash`, text editing with `vi/vim`, and other terminal stuff
+- Supercomputering stuff (`ssh`/Slurm)
+- General `python` coding and managing with `conda` environments
 
-- Amber
+## Visualization Softwares
 
-## Analysis
+Common softwares for visualizing small-molecules/proteins are (links to official website included):
 
-- Ambertools
+- [IQmol](http://iqmol.org)
+- [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) 
+- [VMD]( https://www.ks.uiuc.edu/Research/vmd/)
+- [ChemDraw](https://connect.revvitysignals.com/sitesubscription/Gallery.aspx)
+- [Schrodinger Maestro](https://www.schrodinger.com/products/maestro)
+
+## Molecular Simulations
+
+- Introduction to Simulations with [AmberMD](http://ambermd.org)
+- Tutorials for various MD methods:
+    - Classical Molecular Dynamics Simulations
+    - Quantum Mechanics/Molecular Mechanics Simulations
+
+## Cloud-Based Web Services
+
+- [Overleaf](https://www.overleaf.com) for writing
+- [GitHub](https://github.com) for code management
+
+## Other Fun Programming Activities
+
+- Creating Your Own Website (JupyterBook, Github)
+

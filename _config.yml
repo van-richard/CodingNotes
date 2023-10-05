@@ -1,13 +1,26 @@
 # In _config.yml
 title: Coding Notes
 author: Richard Van
-# logo: logo.png
+logo: _static/logo.png
 execute:
   execute_notebooks: force
 repository:
   url: https://github.com/van-richard/CodingNotes
 html:
   use_repository_button: true
+exclude_patterns: [README.md]
+only_build_toc_files: true
+html: 
+  use_edit_page_button: true
+  use_multitoc_numbering: false
+
+sphinx: 
+  config: 
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    
+# parse:  
+#   myst_enable_extensions: 
+#     - sphinxcontrib.mermaid
 
 # Add a bibtex file so that we can create citations
 # bibtex_bibfiles:
