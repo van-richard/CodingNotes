@@ -2,14 +2,11 @@
 
 ## What is a Computer?
 
-### Unix/Linux
-
-Like Windows and MacOS, Linux is just a operating system. However, Linux is open-source, allowing the user the freedom to run any program, study the how the program works, make changes to the program, redistribute copies of modiciation. It is community driven, 'by the people, for the people' (lol). There are several distributions available, in other words, there are different flavors of linux systems depending on your "tech" tastes. Some popular distributions you might have heard are linux mint, debian, ubuntu, and fedora. For supercomputing clusters, you will often find them running Red Hat Enterprise Linux, Ubuntu Server, CentOS, or SUSE Enterprise Linus distributions.
+**Unix/Linux** Like Windows and MacOS, Linux is just a operating system. However, Linux is open-source, allowing the user the freedom to run any program, study the how the program works, make changes to the program, redistribute copies of modiciation. It is community driven, 'by the people, for the people' (lol). There are several distributions available, in other words, there are different flavors of linux systems depending on your "tech" tastes. Some popular distributions you might have heard are linux mint, debian, ubuntu, and fedora. For supercomputing clusters, you will often find them running Red Hat Enterprise Linux, Ubuntu Server, CentOS, or SUSE Enterprise Linus distributions.
 
 Unix is very similar to Linux, in that it is a modular OS made up of kernals, shell, etc. A shell could be the terminal I mentioned earlier, an example of Unix system is MacOS.
 
-### Terminal and the Command Line
-
+**Terminal and the Command Line** 
 A terminal is just a text-based interface to your computer. If you have MacOS, then this is the `Terminal` app that is already installed on your computer. If you have a Windows machine, then you have a similar interface called `Command Prompt`. 
 
 **NOTE TO WINDOW'S USERS:** Depending on which version of Windows you have, you will need to activate WSL and install the `Ubuntu` app. Someday, I will write a tutorial to show you how to do this..

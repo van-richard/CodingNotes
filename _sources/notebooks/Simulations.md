@@ -68,8 +68,3 @@ $$
 $$
 
 Hatree-Fock, basis sets, semi-empirical methods, density functional theory, MP2, coupled cluster theory
-
-
-```python
-
-```

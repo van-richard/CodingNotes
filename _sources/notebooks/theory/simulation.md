@@ -1,4 +1,4 @@
-# What are Molecular Simulations?
+# What are Simulations?
 
 Molecular simulations methods involves a particle-based description of the system, and is propagated by deterministic or probabilistic rules to generate a trajectory describing its evolution over course of the simulation.
 

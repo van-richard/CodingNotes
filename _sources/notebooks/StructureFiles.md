@@ -16,7 +16,7 @@ Each structure will have a unique 4-letter/number code. Inside each file, the Pr
 
 For example, a common molecular dynamics tutorial might look at hen egg-white lysozyme. The PDB code of the commonly used structure is PDB **1AKI**. Lets look at this file.
 
-## Example of Hen Egg-White Lysozyme PDB File
+**Example of Hen Egg-White Lysozyme PDB File**
 
 Get the hen egg-white lysozyme structure, PDB code "1AKI", from the Protein Data Bank. Visit the [RCSB website](https://www.rcsb.org), and in the search bar type, "1AKI".
 
@@ -26,7 +26,7 @@ Now, download this file as PDB format.
 
 ![](../_static/rcsb_1aki1.mov)
 
-## Viewing the Contents of 1AKI.pdb
+**Viewing the Contents of `1AKI.pdb`**
 
 This should be in your `~/Downloads/` directory. Using your terminal, change directories into this directory with `cd`, and then use `less` to view the file. Example on MacOS:
 
@@ -82,7 +82,7 @@ The general format the `ATOM` lines in PDB file is organized into ~12 or more co
 | ------------ | ---- | ------ | --------- | ------------ | -------- | --------- | ------------ | ------------ | ------------ | --------- | --------- | -------------- |
 |   Data   | ATOM | Atom # | Atom Type | Residue Name | Chain ID | Residue # | x-coordinate | y-coordinate | z-coordinate | Occupancy | B-factor | Element Symbol |
 
-## Example of `ATOM` Lines (PDB 1AKI)
+**Example of `ATOM` Lines (PDB 1AKI)**
 
 Use your d-pad to get to first `ATOM` line (this is line number, 347).
 
@@ -127,7 +127,7 @@ A chain identifier is a single-character label used to distinguish and identify 
 
 It is commonly represented as a single uppercase letter, such as 'A,' 'B,' 'C,' and so on. It's important to note that the chain identifier is case-sensitive, and it must be unique within the PDB file for each distinct chain.
 
-## Example with SpyCas9
+**Example with SpyCas9**
 
 We will visualize the PDB file of the ternary structure of SpyCas9 (SpyCas9 bound to RNA, DNA, and metal ions) using ChimeraX:
 
@@ -248,7 +248,7 @@ The XYZ file format is a text-file format. Unlike PDB files, there is no formal 
 
 Typically, we use these files to store molecular geometries in Quantum Mechanical (QM) calculations. These files generally contain up to a few hundred atoms. For example, let's build the small molecule alanine dipeptide, and store this data in `.xyz`.
 
-## Example with Alanine Dipeptide
+**Example with Alanine Dipeptide**
 
 ![](../_static/ala.png)
 
@@ -324,8 +324,3 @@ For more information, please refer to the following resource:
 > "The primary information stored in the PDB archive consists of coordinate files for biological molecules. These files list the atoms in each protein, and their 3D location in space. These files are available in several formats (PDB, mmCIF, XML). A typical PDB formatted file includes a large "header" section of text that summarizes the protein, citation information, and the details of the structure solution, followed by the sequence and a long list of the atoms and their coordinates. The archive also contains the experimental observations that are used to determine these atomic coordinates."
 
 [UCSF: Introduction to PDB Format](https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/tutorials/pdbintro.html)
-
-
-```python
-
-```

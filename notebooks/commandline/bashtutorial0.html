@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.2. Navigating w/ Command Line &#8212; Coding Notes</title>
+    <title>3.2. Navigating in Terminal &#8212; Coding Notes</title>
   
   
   
@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/commandline/bashtutorial0';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.3. File Management w/ Command Line" href="bashtutorial1.html" />
+    <link rel="next" title="3.3. Managing in Terminal" href="bashtutorial1.html" />
     <link rel="prev" title="3.1. Terminal &amp; Command Line" href="../CommandLine.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -162,11 +162,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn the Jargon</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">3. Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. Navigating w/ Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bashtutorial1.html">3.3. File Management w/ Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Supercomputing.html">3.4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh.html">3.5. More on SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="slurm.html">3.6. More on Slurm &amp; HPC</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bashtutorial1.html">3.3. Managing in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supercomputer.html">3.4. Intro. to Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">3.5. Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="slurm.html">3.6. HPC and Using Slurm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Protein/Ligand Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Python.html">3.8. Python &amp; Conda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.9. Molecular Dynamics</a></li>
@@ -176,39 +176,35 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theory</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory/simulation.html">1. What are Molecular Simulations?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/classical.html">2. Classical MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/simulation.html">1. What are Simulations?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/classical.html">2. Molecular Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/qmmm.html">3. QM/MM Simulations</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber Tutorials</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../MD.html">1. Classical MD Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation/distance.html">1.1. Distance Restraints</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../MDTutorials.html">1. Amber Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/distance.html">1.3. Distance Restraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">1.4. Claisen Rearrangment</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../QMMM.html">2. QM/MM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">2.1. Claisen Rearrangment</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Media.html">2. Making Figures &amp; Movies</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../ChimeraX.html">2.3. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/images.html">2.3.4. Saving Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/fade.html">2.3.5. Fading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html">2.3.6. Morphing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/rock.html">2.3.7. Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">2.3.8. Rocking</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../VMD.html">2.4. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vmd/ffmpeg.html">2.4.1. ffmpeg</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
+</li>
+</ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ChimeraX.html">Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">Spin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Extra.html"><strong>Addtional Resources</strong></a></li>
 </ul>
 
     </div>
@@ -360,7 +356,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Navigating w/ Command Line</h1>
+    <h1>Navigating in Terminal</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,8 +370,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">3.2.2. Where are we?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-here">3.2.3. What is here?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">3.2.4. How to make a new folder/directory?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-in-out-of-folders-directories">3.2.5. Moving in/out of folders/directories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">3.2.6. What are paths?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-in-out-of-directories">3.2.5. Moving in/out of Directories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">3.2.6. What are Paths?</a></li>
 </ul>
             </nav>
         </div>
@@ -387,8 +383,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="navigating-w-command-line">
-<h1><span class="section-number">3.2. </span>Navigating w/ Command Line<a class="headerlink" href="#navigating-w-command-line" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="navigating-in-terminal">
+<h1><span class="section-number">3.2. </span>Navigating in Terminal<a class="headerlink" href="#navigating-in-terminal" title="Permalink to this heading">#</a></h1>
 <section id="overview">
 <h2><span class="section-number">3.2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>Learning how to navigate the command line interface. In this tutorial, we will learn:</p>
@@ -434,10 +430,13 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span><span class="nb">test</span>
 </pre></div>
 </div>
-<p><strong>NOTE:</strong> Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called “amino acids”. Rather than using a space, use an underscore (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino_acids</span></code>) or hyphen (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino-acids</span></code>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called “amino acids”. Rather than using a space, use an underscore (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino_acids</span></code>) or hyphen (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino-acids</span></code>).</p>
+</div>
 </section>
-<section id="moving-in-out-of-folders-directories">
-<h2><span class="section-number">3.2.5. </span>Moving in/out of folders/directories<a class="headerlink" href="#moving-in-out-of-folders-directories" title="Permalink to this heading">#</a></h2>
+<section id="moving-in-out-of-directories">
+<h2><span class="section-number">3.2.5. </span>Moving in/out of Directories<a class="headerlink" href="#moving-in-out-of-directories" title="Permalink to this heading">#</a></h2>
 <p>We can enter a folder with the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, short for change directories. This command takes an argument, following the syntax <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[argument]</span></code> or in other words <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[folder</span> <span class="pre">name]</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
 </pre></div>
@@ -456,9 +455,12 @@ document.write(`
 </pre></div>
 </div>
 <p>If you check your current working directory again, you should see that you’re back home</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+</pre></div>
+</div>
 </section>
 <section id="what-are-paths">
-<h2><span class="section-number">3.2.6. </span>What are paths?<a class="headerlink" href="#what-are-paths" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.6. </span>What are Paths?<a class="headerlink" href="#what-are-paths" title="Permalink to this heading">#</a></h2>
 <p>There are 2 types of paths we can use, absolute and relative. Whenever we refer to a file or directory we are using one of these paths. Whenever we refer to a file or directory, we can use either type of path (either way, the system will still be directed to the same location).</p>
 <p>To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what’s called the root directory. It is denoted by a single slash ( / ). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.</p>
 <p>Absolute paths specify a location (file or directory) in relation to the root directory. You can identify them easily as they always begin with a forward slash ( <code class="docutils literal notranslate"><span class="pre">/</span></code>)</p>
@@ -511,7 +513,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>File Management w/ Command Line</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Managing in Terminal</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -537,8 +539,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">3.2.2. Where are we?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-here">3.2.3. What is here?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">3.2.4. How to make a new folder/directory?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-in-out-of-folders-directories">3.2.5. Moving in/out of folders/directories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">3.2.6. What are paths?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-in-out-of-directories">3.2.5. Moving in/out of Directories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">3.2.6. What are Paths?</a></li>
 </ul>
   </nav></div>
 

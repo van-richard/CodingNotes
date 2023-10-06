@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Chimera/ChimeraX &#8212; Coding Notes</title>
+    <title>2.3. ChimeraX &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/ChimeraX';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Saving Images" href="chimera/images.html" />
-    <link rel="prev" title="2.1. Claisen Rearrangment" href="simulation/claisen.html" />
+    <link rel="next" title="2.3.4. Saving Images" href="chimera/images.html" />
+    <link rel="prev" title="2. Making Figures &amp; Movies" href="Media.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,11 +162,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="Jargon.html">2. Learn the Jargon</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="QuickStart.html">3. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commandline/bashtutorial0.html">3.2. Navigating w/ Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commandline/bashtutorial1.html">3.3. File Management w/ Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supercomputing.html">3.4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commandline/ssh.html">3.5. More on SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commandline/slurm.html">3.6. More on Slurm &amp; HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/bashtutorial0.html">3.2. Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/bashtutorial1.html">3.3. Managing in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supercomputer.html">3.4. Intro. to Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/ssh.html">3.5. Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commandline/slurm.html">3.6. HPC and Using Slurm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="StructureFiles.html">3.7. Protein/Ligand Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Python.html">3.8. Python &amp; Conda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Simulations.html">3.9. Molecular Dynamics</a></li>
@@ -176,39 +176,35 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theory</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="theory/simulation.html">1. What are Molecular Simulations?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="theory/classical.html">2. Classical MD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/simulation.html">1. What are Simulations?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/classical.html">2. Molecular Dynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="theory/qmmm.html">3. QM/MM Simulations</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="MD.html">1. Classical MD Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="simulation/distance.html">1.1. Distance Restraints</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="QMMM.html">2. QM/MM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="simulation/claisen.html">2.1. Claisen Rearrangment</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Chimera/ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="chimera/images.html">Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera/fade.html">Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera/morph.html">Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera/rock.html">Spin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera/spin.html">Rocking</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="MDTutorials.html">1. Amber Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulation/distance.html">1.3. Distance Restraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation/claisen.html">1.4. Claisen Rearrangment</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="vmd/ffmpeg.html">ffmpeg</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Media.html">2. Making Figures &amp; Movies</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">2.3. ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="chimera/images.html">2.3.4. Saving Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chimera/fade.html">2.3.5. Fading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chimera/morph.html">2.3.6. Morphing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chimera/rock.html">2.3.7. Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chimera/spin.html">2.3.8. Rocking</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="VMD.html">2.4. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="vmd/ffmpeg.html">2.4.1. ffmpeg</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+</li>
+</ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="appendix/linux.html">Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Extra.html"><strong>Addtional Resources</strong></a></li>
 </ul>
 
     </div>
@@ -360,7 +356,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Chimera/ChimeraX</h1>
+    <h1>ChimeraX</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -370,11 +366,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">2.3.1. Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-pdbs-from-rcsb">2.3.2. Opening PDBs from RCSB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-command-line-options">2.3.3. Summary of Command Line Options</a></li>
 </ul>
             </nav>
         </div>
@@ -386,25 +380,30 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="chimera-chimerax">
-<h1>Chimera/ChimeraX<a class="headerlink" href="#chimera-chimerax" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="chimerax">
+<h1><span class="section-number">2.3. </span>ChimeraX<a class="headerlink" href="#chimerax" title="Permalink to this heading">#</a></h1>
+<section id="background">
+<h2><span class="section-number">2.3.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
 <p>Chimera and <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a> are both great molecular visualization tools developed by UCSF.</p>
 <p>ChimeraX is the newest program, and it can efficiently handle large data (i.e. PDBs with thousands of atoms). It is my prefered GUI when exploring new structures and making videos/figures.</p>
-<p>Download the latest version of ChimeraX, <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/download.html">HERE</a>! You will need to register for an account, otherwise you’ll get a notification everytime you open the software.</p>
-<section id="basic-usage">
-<h2>Basic Usage<a class="headerlink" href="#basic-usage" title="Permalink to this heading">#</a></h2>
-<section id="open-pdb-from-rcsb">
-<h3>Open PDB from RCSB<a class="headerlink" href="#open-pdb-from-rcsb" title="Permalink to this heading">#</a></h3>
+<p>Download the latest version of <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/download.html">ChimeraX</a>! You will need to register for an account, otherwise you’ll get a notification everytime you open the software.</p>
+</section>
+<section id="opening-pdbs-from-rcsb">
+<h2><span class="section-number">2.3.2. </span>Opening PDBs from RCSB<a class="headerlink" href="#opening-pdbs-from-rcsb" title="Permalink to this heading">#</a></h2>
 <p>On ChimeraX command line, type:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="o">*</span><span class="n">PDB_CODE</span><span class="o">*</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open<span class="w"> </span>*PDB_CODE*
 </pre></div>
 </div>
-<p>Where <em>PDB_CODE</em> is the 4-letter code from <a class="reference external" href="https://www.google.com/search?client=safari&amp;rls=en&amp;q=rcsb&amp;ie=UTF-8&amp;oe=UTF-8">RCSB</a></p>
+<p>Where <em>PDB_CODE</em> is the 4-letter code from <a class="reference external" href="https://www.google.com/search?client=safari&amp;rls=en&amp;q=rcsb&amp;ie=UTF-8&amp;oe=UTF-8">RCSB</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The ChimeraX command line is independent of model panel!</p>
+</div>
 </section>
-<section id="command-line-is-independent-of-model-panel">
-<h3>Command line is independent of model panel!<a class="headerlink" href="#command-line-is-independent-of-model-panel" title="Permalink to this heading">#</a></h3>
-<p>Rather than searching through the GUI for the function you need (Show/Hide atoms/ribbon/surface), you can use the commmand line interface to control the display.</p>
-<p>Command Line Options:</p>
+<section id="summary-of-command-line-options">
+<h2><span class="section-number">2.3.3. </span>Summary of Command Line Options<a class="headerlink" href="#summary-of-command-line-options" title="Permalink to this heading">#</a></h2>
+<p>Rather than searching through the GUI (graphic user interface) for the function you need (i.e., Show/Hide atoms/ribbon/surface), you can use the commmand line interface to control the display.</p>
+<p><strong>Command Line Options:</strong></p>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Option</p></th>
@@ -435,10 +434,6 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -476,12 +471,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="simulation/claisen.html"
+       href="Media.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Claisen Rearrangment</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Making Figures &amp; Movies</p>
       </div>
     </a>
     <a class="right-next"
@@ -489,7 +484,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Saving Images</p>
+        <p class="prev-next-title"><span class="section-number">2.3.4. </span>Saving Images</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -511,11 +506,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-usage">Basic Usage</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-pdb-from-rcsb">Open PDB from RCSB</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-is-independent-of-model-panel">Command line is independent of model panel!</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">2.3.1. Background</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-pdbs-from-rcsb">2.3.2. Opening PDBs from RCSB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-command-line-options">2.3.3. Summary of Command Line Options</a></li>
 </ul>
   </nav></div>
 

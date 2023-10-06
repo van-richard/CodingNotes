@@ -30,5 +30,4 @@ At the end of these sections, you should be comfortable working independently!
 
 Further readings include other simulation tutorials or fun programming activitie to try. At the very end is an appendix for quick referencing!
 
-(I hope this stays organized)
-s
+*I hope this stays organized*
