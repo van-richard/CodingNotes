@@ -1,4 +1,4 @@
-# Intro. to Supercomputers
+# Using Supercomputers
 
 A supercomputer is an extremely powerful and high-performance computing (HPC) machine designed to handle complex and computationally intensive tasks and simulations. These machines are among the fastest and most capable computers in the world and are typically used for scientific research, engineering simulations, weather forecasting, climate modeling, cryptography, and other demanding applications.
 

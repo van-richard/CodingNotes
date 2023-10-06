@@ -164,13 +164,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial0.html">3.2. Navigating in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial1.html">3.3. Managing in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Supercomputer.html">3.4. Intro. to Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supercomputer.html">3.4. Using Supercomputers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">3.5. Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">3.6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Protein/Ligand Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Molecular Structure Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Python.html">3.8. Python &amp; Conda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.9. Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simple.html">3.10. Tutorial: Simple MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simple.html">3.10. Simple MD Tutorial</a></li>
 </ul>
 </li>
 </ul>
@@ -189,11 +189,11 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Media.html">2. Making Figures &amp; Movies</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../ChimeraX.html">2.3. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/images.html">2.3.4. Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/fade.html">2.3.5. Fading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html">2.3.6. Morphing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/rock.html">2.3.7. Spin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">2.3.8. Rocking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/images.html">2.3.3. Saving Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/fade.html">2.3.4. Fading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html">2.3.5. Morphing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/rock.html">2.3.6. Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">2.3.7. Rocking</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../VMD.html">2.4. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -367,10 +367,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-inputs">1.3.1. Preparing Inputs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimization">1.3.1.1. Minimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heating">1.3.1.2. Heating</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#production-md">1.3.1.3. Production MD</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-file">1.3.1.4. Restraint File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-file">1.3.1.1. Restraint File</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-amber-md-with-sander">1.3.2. Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code></a></li>
@@ -400,21 +397,28 @@ document.write(`
 <li><p>Coordinate file (*.rst7)</p></li>
 <li><p>MD input files (<a class="reference external" href="http://min.in">min.in</a>, <a class="reference external" href="http://heat.in">heat.in</a>, prod*.in, and <em>cv*.rst</em>)</p></li>
 </ol>
-<p>You can download my files for reference.</p>
-<p><a class="reference external" href="https://www.dropbox.com/scl/fi/8p1ymw35ilvs79egtktqv/distance.tar.bz2?rlkey=mgddua07m5q8ukbptf1uiv36j&amp;dl=0">distance.tar.bz2</a></p>
-<p>To extract:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can download my files: <a class="reference external" href="https://www.dropbox.com/scl/fi/8p1ymw35ilvs79egtktqv/distance.tar.bz2?rlkey=mgddua07m5q8ukbptf1uiv36j&amp;dl=0">distance.tar.bz2</a></p>
+<p>Extract the file with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>xvjf<span class="w"> </span>distance.tar.bz2
 </pre></div>
 </div>
-<section id="preparing-inputs">
-<h2><span class="section-number">1.3.1. </span>Preparing Inputs<a class="headerlink" href="#preparing-inputs" title="Permalink to this heading">#</a></h2>
-<p>First, activated your <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
+<p>In this tutorial, I am running the simulation on my personal computer, not on the supercomputer.*</p>
+<p>This requires the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment. You can activate it running:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
 </pre></div>
 </div>
-<p>Make a new working directory, and <code class="docutils literal notranslate"><span class="pre">cd</span></code> into it.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>distance
-<span class="nb">cd</span><span class="w"> </span>distance
+</div>
+<section id="preparing-inputs">
+<h2><span class="section-number">1.3.1. </span>Preparing Inputs<a class="headerlink" href="#preparing-inputs" title="Permalink to this heading">#</a></h2>
+<p>nda activate ambertools</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+First we will need to prepare the input files. Start by making a new project folder called `distance`, and then change directories here:
+
+```bash
+mkdir distance
+cd distance
 </pre></div>
 </div>
 <p>Since alanine dipeptide is an amino acid that is capped. We can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate our topology and coordinate files.</p>
@@ -446,7 +450,10 @@ quit
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.pdb</span></code></p></li>
 </ol>
-<p><em>ALWAYS VISUALIZE THESE FILES BEFORE MOVING ON!</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Visualize these files with VMD. Always do this before moving on!</p>
+</div>
 <p>Next, we will make the Amber MD input files.</p>
 <p>They contain settings for each MD run. We will have 3 steps:</p>
 <ol class="arabic simple">
@@ -454,9 +461,7 @@ quit
 <li><p>Heating (for 10 ps at 300 K)</p></li>
 <li><p>Production MD (10 ps at 300 K, ranging distance)</p></li>
 </ol>
-<section id="minimization">
-<h3><span class="section-number">1.3.1.1. </span>Minimization<a class="headerlink" href="#minimization" title="Permalink to this heading">#</a></h3>
-<p>Make a <code class="docutils literal notranslate"><span class="pre">min.in</span></code> file, with:</p>
+<p><strong>Minimization</strong> Make a <code class="docutils literal notranslate"><span class="pre">min.in</span></code> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Minimize
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">    </span>
@@ -470,10 +475,7 @@ quit
 <span class="w"> </span>/
 </pre></div>
 </div>
-</section>
-<section id="heating">
-<h3><span class="section-number">1.3.1.2. </span>Heating<a class="headerlink" href="#heating" title="Permalink to this heading">#</a></h3>
-<p>Make a <code class="docutils literal notranslate"><span class="pre">heat.in</span></code> file, with:</p>
+<p><strong>Heating</strong> Make a <code class="docutils literal notranslate"><span class="pre">heat.in</span></code> file, with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
@@ -513,10 +515,7 @@ quit
 <span class="w"> </span>/
 </pre></div>
 </div>
-</section>
-<section id="production-md">
-<h3><span class="section-number">1.3.1.3. </span>Production MD<a class="headerlink" href="#production-md" title="Permalink to this heading">#</a></h3>
-<p>Make 4 copies of <code class="docutils literal notranslate"><span class="pre">prod.in</span></code>. Make sure they have different names (i.e. <code class="docutils literal notranslate"><span class="pre">prod0</span></code>, <code class="docutils literal notranslate"><span class="pre">prod1</span></code>, <code class="docutils literal notranslate"><span class="pre">prod2</span></code>, and <code class="docutils literal notranslate"><span class="pre">prod3</span></code>). Use the following as your template, and be sure to change the last line, where <code class="docutils literal notranslate"><span class="pre">DUMPAVE=prod.cv</span></code> to <code class="docutils literal notranslate"><span class="pre">DUMPAVE=prod[0,1,2,</span> <span class="pre">or</span> <span class="pre">3].cv</span></code>.</p>
+<p><strong>Production MD</strong> We will need 4 copies of <code class="docutils literal notranslate"><span class="pre">prod.in</span></code>. Make sure they have different names (i.e. <code class="docutils literal notranslate"><span class="pre">prod0</span></code>, <code class="docutils literal notranslate"><span class="pre">prod1</span></code>, <code class="docutils literal notranslate"><span class="pre">prod2</span></code>, and <code class="docutils literal notranslate"><span class="pre">prod3</span></code>). Use the following as your template, and be sure to change the last line, where <code class="docutils literal notranslate"><span class="pre">DUMPAVE=prod.cv</span></code> to <code class="docutils literal notranslate"><span class="pre">DUMPAVE=prod[0,1,2,</span> <span class="pre">or</span> <span class="pre">3].cv</span></code>.</p>
 <p>Here is an example of <code class="docutils literal notranslate"><span class="pre">prod0.in</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
@@ -563,9 +562,8 @@ quit
 <span class="w"> </span>/
 </pre></div>
 </div>
-</section>
 <section id="restraint-file">
-<h3><span class="section-number">1.3.1.4. </span>Restraint File<a class="headerlink" href="#restraint-file" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.3.1.1. </span>Restraint File<a class="headerlink" href="#restraint-file" title="Permalink to this heading">#</a></h3>
 <p>Like the <code class="docutils literal notranslate"><span class="pre">prod.in</span></code>, prepare 4 copies of the restraint file, <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> (<code class="docutils literal notranslate"><span class="pre">cv0.rst</span></code>, <code class="docutils literal notranslate"><span class="pre">cv1,rst</span></code>, <code class="docutils literal notranslate"><span class="pre">cv2.rst</span></code>, and <code class="docutils literal notranslate"><span class="pre">cv3.rst</span></code>). Set the range of the restraint value to 4, 8, 12, and 15 (e.g. for a distance restraing of 8 Angstroms, do, <code class="docutils literal notranslate"><span class="pre">r2=8,</span> <span class="pre">r3=8</span></code>… etc.). The file has the following format:</p>
 <p><code class="docutils literal notranslate"><span class="pre">iresid</span></code> - <code class="docutils literal notranslate"><span class="pre">iresid=0</span></code> Use atom numbering (Turning this on, <code class="docutils literal notranslate"><span class="pre">resid=1</span></code>, seems to not work which is why we use atom numbering).
 <code class="docutils literal notranslate"><span class="pre">igr1</span></code> - Center of mass (COM) of the first residue.
@@ -633,7 +631,10 @@ quit
 <span class="w"> </span><span class="p">&amp;</span>end
 </pre></div>
 </div>
-<p><strong>NOTE:</strong> <code class="docutils literal notranslate"><span class="pre">r2</span></code> and <code class="docutils literal notranslate"><span class="pre">r3</span></code> are now set to <code class="docutils literal notranslate"><span class="pre">__REST__</span></code>, which will be replaced through a script I call <code class="docutils literal notranslate"><span class="pre">gen_inputs.in</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>r2<code class="docutils literal notranslate"><span class="pre">and</span></code>r3<code class="docutils literal notranslate"><span class="pre">are</span> <span class="pre">now</span> <span class="pre">set</span> <span class="pre">to</span></code><strong>REST</strong><code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">which</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">replaced</span> <span class="pre">through</span> <span class="pre">a</span> <span class="pre">script</span> <span class="pre">I</span> <span class="pre">call</span> </code>gen_inputs.in`.</p>
+</div>
 <p>Instead of making a file called <code class="docutils literal notranslate"><span class="pre">prod.rst</span></code>. Make a file called <code class="docutils literal notranslate"><span class="pre">ref_prod.rst</span></code>, which looks like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
@@ -689,9 +690,6 @@ quit
 <span class="w">    </span>sed<span class="w"> </span><span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">n</span><span class="si">}</span><span class="s2">/g&quot;</span><span class="w"> </span>ref_prod.in<span class="w"> </span>&gt;<span class="w"> </span>prod<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.in<span class="w"> </span><span class="c1"># Change __REST__ to restraint value</span>
 <span class="w">    </span><span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$n</span><span class="w"> </span>+<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>bc<span class="sb">`</span><span class="w"> </span><span class="c1"># Add 2 to the last restraint value</span>
 <span class="k">done</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </section>
@@ -765,10 +763,7 @@ quit
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-inputs">1.3.1. Preparing Inputs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimization">1.3.1.1. Minimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heating">1.3.1.2. Heating</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#production-md">1.3.1.3. Production MD</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-file">1.3.1.4. Restraint File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-file">1.3.1.1. Restraint File</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-amber-md-with-sander">1.3.2. Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code></a></li>

@@ -1,7 +1,5 @@
 # Molecular Dynamics
 
-## Overview
-
 Before you run any simulation, consider the following questions:
 
 - What is your scientific question?
@@ -23,9 +21,9 @@ General steps of running molecular dynamics (MD) simulations are shown below. Ho
 4. Analysis of Trajectories
     - What property of the system addresses your hypothesis?
 
-### Types of Simulations
+## Types of Simulations
 
-#### Classical Mechanics
+### Classical Mechanics
 
 Molecular dynamic (MD) simulations uses classical Newtonian mechanics to describe the motions of atoms and molecules
 
@@ -59,7 +57,7 @@ The potential functions have preset bonding arrangements, therefore, classical M
 
 A MD simulation generates a sequence of configurations phase space connected by time. These is called a *trajectoy* of all particles in the system as a function of time. Time averages and other properties can be calculated from a trajectory.
 
-#### Quantum Mechanics
+### Quantum Mechanics
 
 Quantum mechanical (QM) methods more accurately describe the behavior of the electrons in atoms and molecules and can model chemistry -- the making and breaking of chemical bond. We do this by solving the Schrodinger equation:
 
