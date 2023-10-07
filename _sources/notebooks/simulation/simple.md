@@ -1,8 +1,17 @@
 # Simple MD Tutorial
 
-<center><video src="../../_static/simple.mov" width="50%" controls></video></center>
+<!-- <img src="../images/fun-fish.png" alt="fishy" class="bg-primary mb-1" width="200px"> -->
+<!-- <video src="../../_static/simple.mov" width="50%" controls> -->
 
-This is a simple tutorial of alanine dipeptide in a water box. We will perform the typical MD simulations steps such as equilibration (minimizatino, heating 20 ps) and have a production run (100 ps). This will take about 1 hour.
+```{figure} ../../_static/simple.mov
+---
+width: 50%
+name: simple-md
+---
+MD trajectory of Alanine Dipeptide (shown as ball-and-stick) solvated in a water box (shown as line) viewed on VMD.
+```
+
+A simple example we can perform is a simulation of Alanine Dipeptide solvated in a water box. Alanine Dipeptide is just the amino acid, Alanine, but with the N-terminal capped by an acetyl group (Amber Residue Name: ACE), and C-terminal capped by N-methylamide (Amber Residue Name: NME).
 
 To do so, we will need to make:
 

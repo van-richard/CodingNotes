@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.10. Simple MD Tutorial &#8212; Coding Notes</title>
+    <title>3.10. Simple MD Example &#8212; Coding Notes</title>
   
   
   
@@ -170,7 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Molecular Structure Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Python.html">3.8. Python &amp; Conda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.9. Molecular Dynamics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.10. Simple MD Tutorial</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.10. Simple MD Example</a></li>
 </ul>
 </li>
 </ul>
@@ -248,7 +248,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/simulation/simple.md" target="_blank"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/simulation/simple.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -274,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/simulation/simple.md" target="_blank"
+      <li><a href="../../_sources/notebooks/simulation/simple.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -356,7 +356,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Simple MD Tutorial</h1>
+    <h1>Simple MD Example</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -366,9 +366,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-inputs">3.10.1. Preparing Inputs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-simulation">3.10.2. Running the Simulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.10.3. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-a-project-folder">3.10.1. Prepare a Project Folder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-amber-inputs-parm7-rst7">3.10.2. Prepare Amber Inputs (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">.rst7</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#md-inputs-simulation-settings">3.10.3. MD Inputs - Simulation Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-simulation">3.10.4. Running the Simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.10.5. Conclusion</a></li>
 </ul>
             </nav>
         </div>
@@ -380,38 +382,57 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="simple-md-tutorial">
-<h1><span class="section-number">3.10. </span>Simple MD Tutorial<a class="headerlink" href="#simple-md-tutorial" title="Permalink to this heading">#</a></h1>
-<center><video src="../../_static/simple.mov" width="50%" controls></video></center>
-<p>This is a simple tutorial of alanine dipeptide in a water box. We will perform the typical MD simulations steps such as equilibration (minimizatino, heating 20 ps) and have a production run (100 ps). This will take about 1 hour.</p>
-<p>To do so, we will need to make:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="simple-md-example">
+<h1><span class="section-number">3.10. </span>Simple MD Example<a class="headerlink" href="#simple-md-example" title="Permalink to this heading">#</a></h1>
+<p>A simple example of how to run MD simulations is with the molecule, Alanine Dipeptide. We will model the residue, solvate it in a water box, equilibrate the system, and run MD production simulations with AmberTools. This should take roughly an hour.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/simple.mov"><img alt="../../_images/simple.mov" src="../../_images/simple.mov" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">MD trajectory of Alanine Dipeptide (<em>ball-and-stick</em>) in water (<em>line</em>) viewed using VMD.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The system, Alanine Dipeptide, is the amino acid, Alanine, with the charged ends neutralized. This is done by “capping” the N-terminal with an acetyl group, and C-terminal with N-methylamide.</p>
+<p>In this tutorial, we will:</p>
 <ol class="arabic simple">
-<li><p>Topology file (*.parm7)</p></li>
-<li><p>Coordinate file (*.rst7)</p></li>
-<li><p>MD input files (<a class="reference external" href="http://min.in">min.in</a>, <a class="reference external" href="http://heat.in">heat.in</a>, <a class="reference external" href="http://prod.in">prod.in</a>)</p></li>
+<li><p>Make a new project folder</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to make the molecule (in Amber format)</p></li>
+<li><p>Prepare inputs for MD simulations</p></li>
+<li><p>Run MD simulations with <code class="docutils literal notranslate"><span class="pre">sander</span></code></p></li>
+<li><p>Analyze the trajectory</p></li>
 </ol>
+<p><strong>This assumes you have already installed some form of conda, and made the conda environment “ambertools”.</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can download my files: <a class="reference external" href="https://www.dropbox.com/scl/fi/vnhuy67y148z51talehlt/simple.tar.bz2?rlkey=cocf2mz57hbsnj26xe4f6e4d4&amp;dl=0">simple.tar.bz2</a></p>
-<p>Extract the file with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>xvjf<span class="w"> </span>simple.tar.bz2
-</pre></div>
+<ul class="simple">
+<li><p>This tutorial can be perform on your local computer or with Google Colab</p></li>
+<li><p>Download my files for reference: <a class="reference download internal" download="" href="../../_downloads/053d20a2b9fe9f09025552a74192e439/simple.tar.bz2"><span class="xref download myst">simple.tar.bz2</span></a></p>
+<ul>
+<li><p>To do this on command line:</p>
+<ol class="arabic simple">
+<li><p>Right-click the link</p></li>
+<li><p>Choose copy link</p></li>
+<li><p>On your terminal, use the command, <code class="docutils literal notranslate"><span class="pre">wget</span></code> followed by pasting the link</p></li>
+<li><p>Extract the file with <code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">xvjf</span> <span class="pre">simple.tar.bz2</span></code></p></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
 </div>
-<p>In this tutorial, I am running the simulation on my personal computer, not on the supercomputer.*</p>
-<p>This requires the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment. You can activate it running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
-</pre></div>
-</div>
-</div>
-<section id="preparing-inputs">
-<h2><span class="section-number">3.10.1. </span>Preparing Inputs<a class="headerlink" href="#preparing-inputs" title="Permalink to this heading">#</a></h2>
-<p>First we will need to prepare the input files. Start by making a new project folder called <code class="docutils literal notranslate"><span class="pre">simple</span></code>, and then change directories here:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>simple
+<section id="prepare-a-project-folder">
+<h2><span class="section-number">3.10.1. </span>Prepare a Project Folder<a class="headerlink" href="#prepare-a-project-folder" title="Permalink to this heading">#</a></h2>
+<p>Make a new project folder, name it <code class="docutils literal notranslate"><span class="pre">simple</span></code>, and then <code class="docutils literal notranslate"><span class="pre">cd</span></code> into it. This will be our working directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>simple
 <span class="nb">cd</span><span class="w"> </span>simple
 </pre></div>
 </div>
-<p>Alanine dipeptide is an amino acid with its ends capped. We can use the <code class="docutils literal notranslate"><span class="pre">tleap</span></code> program to generate our topology and coordinate files. To do this, make a file called “<a class="reference external" href="http://tleap.in">tleap.in</a>” with <code class="docutils literal notranslate"><span class="pre">vi</span></code> (i.e., <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">tleap.in</span></code>) and copy the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
+<p>The <code class="docutils literal notranslate"><span class="pre">-p</span></code> option for <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> will report no error if existing, and make parent directories as needed.</p>
+</section>
+<section id="prepare-amber-inputs-parm7-rst7">
+<h2><span class="section-number">3.10.2. </span>Prepare Amber Inputs (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">.rst7</span></code>)<a class="headerlink" href="#prepare-amber-inputs-parm7-rst7" title="Permalink to this heading">#</a></h2>
+<p>Alanine dipeptide is an amino acid, so we can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate the topology (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code>) and coordinate files(<code class="docutils literal notranslate"><span class="pre">.rst7</span></code>). We need to make a script called, “<a class="reference external" href="http://tleap.in">tleap.in</a>”, which will be the input to the <code class="docutils literal notranslate"><span class="pre">tleap</span></code> program</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># tleap.in file</span>
+<span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
 <span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
 
 <span class="nv">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sequence<span class="w"> </span><span class="o">{</span><span class="w"> </span>ACE<span class="w"> </span>ALA<span class="w"> </span>NME<span class="w"> </span><span class="o">}</span>
@@ -423,22 +444,50 @@ saveamberparm<span class="w"> </span>system<span class="w"> </span>step3_pbcsetu
 quit
 </pre></div>
 </div>
-<p>Save and exit <code class="docutils literal notranslate"><span class="pre">vi</span></code>. Now, you can run <code class="docutils literal notranslate"><span class="pre">tleap</span></code> with <code class="docutils literal notranslate"><span class="pre">tleap.in</span></code> as the input:</p>
+<p>Where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> lines tell Amber which force field parameters we want for our molecules, this is always at the top of the file</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">leaprc.protein.ff19SB</span></code> contains protein information</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">leaprc.water.TIP3P</span></code> has the water parameters</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">system</span> <span class="pre">=</span> <span class="pre">sequence</span> <span class="pre">{</span> <span class="pre">ACE</span> <span class="pre">ALA</span> <span class="pre">NME</span> <span class="pre">}</span></code> makes use of the <code class="docutils literal notranslate"><span class="pre">sequence</span></code> command which combines amino acid residues together to build a molecule, and this is stored as “system” variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">solvatebox</span> <span class="pre">system</span> <span class="pre">TIP3PBOX</span> <span class="pre">12.0</span> <span class="pre">iso</span> <span class="pre">0.8</span></code> create a a water box around the <code class="docutils literal notranslate"><span class="pre">system</span></code>, such that the minimum distance between any atom in <code class="docutils literal notranslate"><span class="pre">system</span></code> and the edge of the periodic box <code class="docutils literal notranslate"><span class="pre">12.0</span></code> Å.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iso</span></code> rotates the <code class="docutils literal notranslate"><span class="pre">system</span></code> to orient the principal axes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0.8</span></code> is how close a solvent atom can be to the system atoms</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saveamberparm</span> <span class="pre">system</span> <span class="pre">step3_pbcsetup.parm7</span> <span class="pre">step3_pbcsetup.rst7</span></code> saves <code class="docutils literal notranslate"><span class="pre">system</span></code> as Amber topology (<code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.parm7</span></code>) and coordinate (<code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code>) files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quit</span></code> exits the tleap program.</p></li>
+</ul>
+<p>Now we can run <code class="docutils literal notranslate"><span class="pre">tleap</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
 </pre></div>
 </div>
-<p>If you list the files in this  directory, you should see <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.parm7</span></code> and <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">-sf</span></code> for <code class="docutils literal notranslate"><span class="pre">tleap</span></code> lets us run the script <code class="docutils literal notranslate"><span class="pre">tleap.in</span></code>, otherwise it will run interactively in the command line.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
+</pre></div>
+</div>
+<p>If you list the files in this directory, you should see <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.parm7</span></code> and <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Visualize these two files with VMD. Always do this before moving on!</p>
 </div>
+</section>
+<section id="md-inputs-simulation-settings">
+<h2><span class="section-number">3.10.3. </span>MD Inputs - Simulation Settings<a class="headerlink" href="#md-inputs-simulation-settings" title="Permalink to this heading">#</a></h2>
 <p>Now, we will make the Amber MD input files. These files contain the settings for each MD run. We will have 3 steps:</p>
 <ol class="arabic simple">
 <li><p>Minimization</p></li>
 <li><p>Heating (for 20 ps from 0 K to 300 K)</p></li>
 <li><p>Production MD (100 ps at 300 K and 1 atm)</p></li>
 </ol>
-<p><strong>Minimization</strong> Make a <code class="docutils literal notranslate"><span class="pre">min.in</span></code> file, with <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">min.in</span></code> containing:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+min.mdin</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Minimize
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">    </span>
@@ -452,7 +501,10 @@ quit
 <span class="w"> </span>/
 </pre></div>
 </div>
-<p><strong>Heating</strong> Make a <code class="docutils literal notranslate"><span class="pre">heat.in</span></code> file, with <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">heat.in</span></code> containing:</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+heat.mdin</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Heat
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
@@ -479,7 +531,10 @@ quit
 <span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
 </pre></div>
 </div>
-<p><strong>Production MD</strong> Make a <code class="docutils literal notranslate"><span class="pre">prod.in</span></code> file, with <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">prod.in</span></code> containing:</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+prod.mdin</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Production
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
@@ -502,9 +557,11 @@ quit
 <span class="w"> </span>/
 </pre></div>
 </div>
+</div>
+</div>
 </section>
 <section id="running-the-simulation">
-<h2><span class="section-number">3.10.2. </span>Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.10.4. </span>Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permalink to this heading">#</a></h2>
 <p>Amber has 2 MD engines, <code class="docutils literal notranslate"><span class="pre">sander</span></code> and <code class="docutils literal notranslate"><span class="pre">pmemd</span></code>. <code class="docutils literal notranslate"><span class="pre">sander</span></code> is free and shipped with Ambertools.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -512,15 +569,15 @@ quit
 </div>
 <p>Run each step in sequential order, starting with minimization.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
 Step 1 - Minimization</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.out<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
 Step 2 - Heating</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```bash
 sander -O -i heat.in -p step3_pbcsetup.parm7 -c min.ncrst -o heat.out -r heat.ncrst -inf heat.mdinfo -x heat.nc
@@ -541,7 +598,7 @@ sander -O -i prod.in -p step3_pbcsetup.parm7 -c heat.ncrst -o prod.out -r prod.n
 </div>
 </section>
 <section id="conclusion">
-<h2><span class="section-number">3.10.3. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.10.5. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>Now you can visual the results with VMD or Chimera, and perform some analysis.</p>
 </section>
 </section>
@@ -613,9 +670,11 @@ sander -O -i prod.in -p step3_pbcsetup.parm7 -c heat.ncrst -o prod.out -r prod.n
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-inputs">3.10.1. Preparing Inputs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-simulation">3.10.2. Running the Simulation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.10.3. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-a-project-folder">3.10.1. Prepare a Project Folder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-amber-inputs-parm7-rst7">3.10.2. Prepare Amber Inputs (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">.rst7</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#md-inputs-simulation-settings">3.10.3. MD Inputs - Simulation Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-simulation">3.10.4. Running the Simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.10.5. Conclusion</a></li>
 </ul>
   </nav></div>
 

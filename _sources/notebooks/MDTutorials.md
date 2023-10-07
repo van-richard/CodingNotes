@@ -2,9 +2,9 @@
 
 ## Classical Molecular Dynamics Simulations
 
-* [Using Distance Restraints with Alanine Dipeptide](https://van-richard.github.io/CodingNotes/notebooks/simulation/distance.html)
+* [Using Distance Restraints with Alanine Dipeptide](simulation/distance.html)
 
 ## QM/MM Simulations
 
-* [Claisen Rearrangement Reaction](https://van-richard.github.io/CodingNotes/notebooks/simulation/claisen.html)
+* [Claisen Rearrangement Reaction](simulation/claisen.html)
 

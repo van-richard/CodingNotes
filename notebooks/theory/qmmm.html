@@ -172,7 +172,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Molecular Structure Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Python.html">3.8. Python &amp; Conda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.9. Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">3.10. Simple MD Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">3.10. Simple MD Example</a></li>
 </ul>
 </li>
 </ul>
@@ -474,7 +474,7 @@ E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm
 \[
 E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}_{i}} - {\textbf{R}_{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
 \]</div>
-<p>Two problems arise due to the short-range and long-range behavior of this term..</p>
+<p>Two problems arise due to the short-range and long-range behavior of this term…</p>
 <ol class="arabic simple">
 <li><p>Short-Range - Electron spill-out; problems at the boundary</p></li>
 <li><p>Long-Range - Huge computational cost to evaluate the integral</p></li>
@@ -485,7 +485,7 @@ E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \f
 <ul class="simple">
 <li><p>The point charges on the MM side of the interface may attract (or repel) the electrons too strongly.</p></li>
 </ul>
-<p>These artifacts can become serious if a large basis set (e.g. with polarization and diffuse functions), or plane waves are used in the QM calculation..</p>
+<p>These artifacts can become serious if a large basis set (e.g. with polarization and diffuse functions), or plane waves are used in the QM calculation…</p>
 <p>This can be avoided by <strong>smeared-out charges</strong> instead of traditional point charges</p>
 <div class="math notranslate nohighlight">
 \[
