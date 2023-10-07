@@ -1,21 +1,22 @@
 # In _toc.yml
 format: jb-book
 root: index
+options:
+  numbered: true
 
 chapters:
 - file: notebooks/Jargon
 - file: notebooks/QuickStart
   sections:
-    - file: notebooks/CommandLine
-    - file: notebooks/commandline/bashtutorial0
-    - file: notebooks/commandline/bashtutorial1
-    - file: notebooks/Supercomputer
-    - file: notebooks/commandline/ssh
-    - file: notebooks/commandline/slurm
-    - file: notebooks/PythonConda
-    - file: notebooks/StructureFiles
-    - file: notebooks/BasicMD
-    - file: notebooks/simulation/simple
+    - file: notebooks/QuickStart/CommandLine
+    - file: notebooks/QuickStart/Navigation
+    - file: notebooks/QuickStart/FileManagement
+    - file: notebooks/QuickStart/Supercomputer
+    - file: notebooks/QuickStart/SSH
+    - file: notebooks/QuickStart/Slurm
+    - file: notebooks/QuickStart/PythonConda
+    - file: notebooks/QuickStart/StructureFiles
+    - file: notebooks/QuickStart/BasicMD
 - file: notebooks/TheoryTutorial
   sections:
   - file: notebooks/theory/notes
@@ -24,6 +25,7 @@ chapters:
     - file: notebooks/theory/qmmm
   - file: notebooks/simulation/tutorials
     sections:
+    - file: notebooks/simulation/simple
     - file: notebooks/simulation/distance
     - file: notebooks/simulation/claisen
 - file: notebooks/VisualizationTools
@@ -38,5 +40,15 @@ chapters:
   - file: notebooks/vmd/VMD
     sections:
     - file: notebooks/vmd/ffmpeg
-- file: notebooks/Extra
-
+- file: notebooks/AdditionalResources
+  sections: 
+  - file: notebooks/bash
+    sections:
+    - glob: notebooks/bash/*
+  - glob: notebooks/linuxcommands/*
+  - file: notebooks/pythonconda
+    sections:
+    - glob: notebooks/pythonconda/*
+  - file: notebooks/sshslurm
+    sections:
+    - glob: notebooks/sshslurm/*

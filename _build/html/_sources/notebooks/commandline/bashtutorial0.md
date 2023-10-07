@@ -1,34 +1,22 @@
 # Navigating in Terminal
 
-## Overview
+First we need to find your terminal!! Then, I want to introduce the general layout within the command line interface. Our goal here is to understand what these ideas:
 
-Learning how to navigate the command line interface. In this tutorial, we will learn:
+    * The current working directory 
+    * List content avalable "here" `.`
+    * Create new folders
+    * Absolute and relative paths 
 
-- Getting our current working directory
-- Listing files/folders avalable in the current working directory
-- Making a new folder
-- Absolute and relative paths
+````{note}
 
-In this tutorial, we will use the terminal on your local computer. So, there will be some differences in your output depending on if you're using MacOS or Windows/Ubuntu. Additionally, this tutorial assumes you using `bash` as your command line shell. If you don't know which shell you're using, type the following command in your terminal:
+ We will use the terminal on your local computer.
+ In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.
 
-```bash
-echo $SHELL 
-```
-
-The output should be `/bin/bash` printed on your screen. If it's not, run the following command:
-
-```bash
-chsh -s /bin/bash
-```
-You should now be in a `bash` shell
-
-```{note}
-When using the terminal, you usually **do not** need to use the mouse/trackpad! 
-```
+````
 
 ## Where are we?
 
-The first command we are going to learn is `pwd` which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. `pwd` tells you what your current or present working directory (folder) is.
+The first command to learn is `pwd` which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. `pwd` tells you what your current or present working directory (folder) is.
 
 ```bash
 pwd
@@ -58,7 +46,7 @@ mkdir test
 Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called "amino acids". Rather than using a space, use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
 ```
 
-## Moving in/out of Directories
+## Go in/out of Directories
 
 We can enter a folder with the `cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
 
@@ -93,11 +81,18 @@ pwd
 
 ## What are Paths?
 
-There are 2 types of paths we can use, absolute and relative. Whenever we refer to a file or directory we are using one of these paths. Whenever we refer to a file or directory, we can use either type of path (either way, the system will still be directed to the same location).
+There are 2 types of paths we can use
 
-To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what's called the root directory. It is denoted by a single slash ( / ). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.
+1. Absolute
+2. Relative. 
+   
+Whenever we refer to a file or directory we are using one of these paths.
 
-Absolute paths specify a location (file or directory) in relation to the root directory. You can identify them easily as they always begin with a forward slash ( `/`)
+To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what's called the root directory. It is denoted by a single slash (`/`). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.
 
-Relative paths specify a location (file or directory) in relation to where we currently are in the system. They will not begin with a slash.
 
+```{tip}
+Absolute paths specify a location of a file/folder in relation to the root directory `/`
+
+Relative paths specify a location file/folder  in relation to where *you* currently are in the system.
+```

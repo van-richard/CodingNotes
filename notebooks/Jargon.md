@@ -1,13 +1,6 @@
 # Learn the Jargon
 
-## What is a Computer?
-
-<!-- My early concept of coding was the typical *hacker-man* we see in movies. You know.. The guy sitting in a dark room with a million monitors, each screen with an absurd amount of code running.. and the green text.. This concept made me dislike the idea of sitting at a computer all day to crunch numbers..  
-
-But then I learned about the field of **computational chemistry!** *You can do chemistry on a computer?? Whaaa???*
-
-Prior to joining the Shao Lab, I had ZERO programming experience (I barely knew how to send emails, lol). -->
-
+## What Computer?
 
 <span style="font-size:1.5em;">**Unix/Linux Operating Systems**</span> 
 

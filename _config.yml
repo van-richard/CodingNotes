@@ -6,11 +6,13 @@ execute:
   execute_notebooks: force
 repository:
   url: https://github.com/van-richard/CodingNotes
+
+# Auto-exclude files not in the toc
+only_build_toc_files        : true
+# exclude_patterns: [README.md, 'raw_data/*/*/*']
+
 html:
   use_repository_button: true
-exclude_patterns: [README.md, 'raw_data/']
-
-html: 
   use_edit_page_button: true
   use_multitoc_numbering: false
     
