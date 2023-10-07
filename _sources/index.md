@@ -1,40 +1,54 @@
 # CodingNotes
 
-Notes I wish I had when I started in computational chemistry with no programming experience.
+*Notes I wish I had when I started in computational chemistry with no programming experience*
 
+```{margin}
 ![](_static/welcome.png)
+```
 
-Hopefully, my website contains some guidance for:
+I hope you find some of the information helpful.
 
-## Programming
+1. **Programming**
 
-- Command line, `Bash`, text editing with `vi/vim`, and other terminal stuff
-- Supercomputering stuff (`ssh`/Slurm)
-- General `python` coding and managing with `conda` environments
+   - Command line, `Bash``, `vi/vim`, and other terminal stuff
+   - Supercomputing stuff (`ssh`/Slurm)
+   - General `python` coding and managing with `conda` environments 
+  
+  <br>
 
-## Visualization Softwares
+2. **Visualization Software**
 
-Common softwares for visualizing small-molecules/proteins are (links to official website included):
+    Softwares I use the most often are:
 
-- [IQmol](http://iqmol.org)
-- [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) 
-- [VMD]( https://www.ks.uiuc.edu/Research/vmd/)
-- [ChemDraw](https://connect.revvitysignals.com/sitesubscription/Gallery.aspx)
-- [Schrodinger Maestro](https://www.schrodinger.com/products/maestro)
+    - [IQmol](http://iqmol.org)
+    - [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) 
+    - [VMD]( https://www.ks.uiuc.edu/Research/vmd/)
+    - [ChemDraw](https://connect.revvitysignals.com/sitesubscription/Gallery.aspx)
+    - [Schrodinger Maestro](https://www.schrodinger.com/products/maestro)
 
-## Molecular Simulations
+<br>
 
-- Introduction to Simulations with [AmberMD](http://ambermd.org)
-- Tutorials for various MD methods:
-    - Classical Molecular Dynamics Simulations
-    - Quantum Mechanics/Molecular Mechanics Simulations
+3. **Simulations with [AmberMD](http://ambermd.org)**
 
-## Cloud-Based Web Services
+    I have read the Amber manual so much, it would be a waste not to summarize them here
+    
+    Also some modern tutorials for simulations methods in:
 
-- [Overleaf](https://www.overleaf.com) for writing
-- [GitHub](https://github.com) for code management
+    * Classical Molecular Dynamics Simulations
+    * Quantum Mechanics/Molecular Mechanics Simulations
 
-## Other Fun Programming Activities
+<br>
 
-- Creating Your Own Website (JupyterBook, Github)
+4. **Cloud-Based Web Services**
+
+    Neat websites I learned about during my Ph.D!
+
+   * [Overleaf](https://www.overleaf.com) 
+   * [GitHub](https://github.com) 
+
+<br>
+
+5. Other fun activities while researching...
+    
+    Like making this website with Jekyll and JupyterBook
 

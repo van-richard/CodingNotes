@@ -1,26 +1,17 @@
 # Navigating in Terminal
 
-## Overview
+First we need to find your terminal!! Then, I want to introduce the general layout within the command line interface. Our goal here is to understand what these ideas:
 
-Learning how to navigate the command line interface. In this tutorial, we will learn:
+    * The current working directory 
+    * List content avalable "here" `.`
+    * Create new folders
+    * Absolute and relative paths 
 
-- Getting our current working directory
-- Listing files/folders avalable in the current working directory
-- Making a new folder
-- Absolute and relative paths
-
-In this tutorial, we will use the terminal on your local computer. So, there will be some differences in your output depending on if you're using MacOS or Windows/Ubuntu. Additionally, this tutorial assumes you using `bash` as your command line shell. If you don't know which shell you're using, type the following command in your terminal:
-
-```bash
-echo $SHELL 
-```
-
-The output should be `/bin/bash` printed on your screen. If it's not, run the following command:
-
-```bash
-chsh -s /bin/bash
-```
-You should now be in a `bash` shell
+````{note}
+ We will use the terminal on your local computer.
+ 
+ There will be some differences between your terminal and mine. 
+````
 
 ```{note}
 When using the terminal, you usually **do not** need to use the mouse/trackpad! 
