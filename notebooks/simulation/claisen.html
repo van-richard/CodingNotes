@@ -193,6 +193,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
 </ul>
 </li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../vmd/VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Extra.html"><strong>Addtional Resources</strong></a></li>
@@ -403,7 +407,7 @@ document.write(`
 <ul class="simple">
 <li><p><strong>This tutorial requires a supercomputing account!</strong></p></li>
 <li><p>My example is with Pete, so some modules might differ</p></li>
-<li><p>Download my files for reference: <span class="xref myst">simple.tar.bz2</span></p></li>
+<li><p>Download my files for reference: <span class="xref myst">claisen.tar.bz2</span></p></li>
 </ul>
 </div>
 <section id="iqmol">
@@ -724,6 +728,10 @@ cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><s
 <span class="w">    </span>sed<span class="w"> </span><span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span><span class="w"> </span>input/cv.rst<span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
 <span class="w">    </span><span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$n</span><span class="w"> </span>+<span class="w"> </span><span class="m">0</span>.20<span class="w"> </span><span class="p">|</span><span class="w"> </span>bc<span class="sb">`</span>
 <span class="k">done</span>
+</pre></div>
+</div>
+<p>Run the script by:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>gen_inputs.in
 </pre></div>
 </div>
 </section>
