@@ -2,50 +2,67 @@
 
 ## What is a Computer?
 
-### Unix/Linux
+<!-- My early concept of coding was the typical *hacker-man* we see in movies. You know.. The guy sitting in a dark room with a million monitors, each screen with an absurd amount of code running.. and the green text.. This concept made me dislike the idea of sitting at a computer all day to crunch numbers..  
 
-Like Windows and MacOS, Linux is just a operating system. However, Linux is open-source, allowing the user the freedom to run any program, study the how the program works, make changes to the program, redistribute copies of modiciation. It is community driven, 'by the people, for the people' (lol). There are several distributions available, in other words, there are different flavors of linux systems depending on your "tech" tastes. Some popular distributions you might have heard are linux mint, debian, ubuntu, and fedora. For supercomputing clusters, you will often find them running Red Hat Enterprise Linux, Ubuntu Server, CentOS, or SUSE Enterprise Linus distributions.
+But then I learned about the field of **computational chemistry!** *You can do chemistry on a computer?? Whaaa???*
 
-Unix is very similar to Linux, in that it is a modular OS made up of kernals, shell, etc. A shell could be the terminal I mentioned earlier, an example of Unix system is MacOS.
+Prior to joining the Shao Lab, I had ZERO programming experience (I barely knew how to send emails, lol). -->
 
-### Terminal and the Command Line
 
-A terminal is just a text-based interface to your computer. If you have MacOS, then this is the `Terminal` app that is already installed on your computer. If you have a Windows machine, then you have a similar interface called `Command Prompt`. 
+<span style="font-size:1.5em;">**Unix/Linux Operating Systems**</span> 
 
-**NOTE TO WINDOW'S USERS:** Depending on which version of Windows you have, you will need to activate WSL and install the `Ubuntu` app. Someday, I will write a tutorial to show you how to do this..
+- Like Windows and MacOS, Linux is just a operating system
+- It is open-source, allowing the user the freedom to run any program, study the how the program works, make changes to the program, redistribute copies of modiciation
+- Several distributions available for different applications
+    - Example: Linux Mint, Debian, Ubuntu, or Fedora
+- Linux is also used on supercomputing clusters, some distrubtions are:
+    - Red Hat Enterprise Linux, Ubuntu Server, CentOS, or SUSE Enterprise Linux
 
-### Bash
+- Unix is very similar to Linux
+    - Made up of kernals, shell, etc. 
+- But this is not open-source, you need a license for use
+    - Example: MacOS is a Unix system
 
-`Bash` is Unix shell and command language. It was the default login shell for most Linux distributions. Most of use in this lab use Bash, but there are other shells available like `zsh`, `tcsh`, or `csh`. `Bash` is a command processor that will run in your Terminal. You give Bash a command, and it will execute it for you. More is discussed [here](https://van-richard.github.io/CodingNotes/notebooks/commandline/bash.html)
 
-## Supercomputers
+<span style="font-size:1.5em;">**Terminal and the Command Line**</span>
 
-### Overview
+- The terminal is a text-based interface to your computer, some examples applications are:
+    - On MacOS, you have the `Terminal` app that is already installed on your computer
+    - On Windows, you have a similar interface called `Command Prompt`
 
-Supercomputers or high-performance computing clusters is where we perform most of our calculations.
+- The command line is how you interact with the computer by inputting lines of text called "command-lines" into the terminal
+- Also called, Command Line Interface (CLI), this is probably different to what you're use to which are Graphical User Interfaces (GUI)
+    - With a GUI, you can use your mouse to move around
+    - In CLI, you need to type in commands to do things!
 
-In Oklahoma, we have access to:
+```{note} 
+**Windows Users:** Depending on your version of Windows, you will need to activate WSL and install the `Ubuntu` app.
+```
 
-1. [Oscer, OU's supercomputer](https://www.ou.edu/oscer)
-2. [Pete, OSU's supercomputer](https://hpcc.okstate.edu/pete-supercomputer.html)
 
-At OU, the supercomputer's name can be Oscer or Schooner. I've heard people use this interchangably.
+<span style="font-size:1.5em;">**`Bash` Shell**</span>
 
-`ssh` is the command is we use to log into a computer over the internet. Tips are discussed [here](https://van-richard.github.io/CodingNotes/notebooks/commandline/ssh.html)
+- `Bash` is Unix shell and command language
+- Most of us in lab use this language in our CLI/terminal
+    - But there are other shells available like `zsh`, `tcsh`, or `csh`
+- Each language use slightly different functions and scripting notation
 
-Slurm is the cluster management system used on high-performance clusters (HPC) such as the Oscer or Pete supercomputers. Slurm will come with its own set of commands discussed [here](https://van-richard.github.io/CodingNotes/notebooks/commandline/slurm.html)
 
-#### SSH
+## What are Supercomputers?
 
-SSH stands for "Secure Shell" or "Secure Socket Shell". It is a network protocol that gives users, a secure way to access a computer over an unsecure network (WiFi). SSH is a suite of utilities that implement a SSH protocol such as strong password authentication, public key authentication, and encrypted communication between 2 computers connecting over an open network (internet). We use SSH to log into Schooner or Pete (our supercomputers) from our personal laptops.
+- Supercomputers, or high-performance computing (HPC) centers, is where we perform most of our work
+- In Oklahoma, we have access to:
+    1. [Oscer, OU's supercomputer](https://www.ou.edu/oscer)
+        - Also called Schooner
+    2. [Pete, OSU's supercomputer](https://hpcc.okstate.edu/pete-supercomputer.html)
 
-#### Slurm
+- `ssh` is a command we run to access the supercomputers over the internet
 
-Slurm is an open-source cluster management system. Slurm is often used in high performance super computing centers to mange jobs.
+- Slurm is a cluster management system used on high-performance clusters (HPC) 
+- Running jobs on the supercomputer requires some Slurm commands
+    - Slurm scripts have additional informatin for the Slurm scheduler
 
 ## Git/Github
-
-### Overview
 
 **Git** is a free and open source version control system designed to manage coding projects.
 
@@ -53,9 +70,8 @@ Slurm is an open-source cluster management system. Slurm is often used in high p
 
 Aside from manging coding projects with `git`, we use Github to store our presentations, papers, and other lab management things. *Github is just a website, whereas `git` is a command in your `Bash` terminal.* Git will come with its own set of commands which we will discuss [here](https://van-richard.github.io/CodingNotes/notebooks/commandline/git.html).
 
-## Visualization Softwares
 
-### Overview
+## Visualization Softwares
 
 There are a plethora of molecular visualization softwares you can find on the internet. Depending on your focus, there will only be a handful which you will use in your day to day. I use the following:
 
@@ -65,45 +81,14 @@ There are a plethora of molecular visualization softwares you can find on the in
 - [ChemDraw](https://connect.revvitysignals.com/sitesubscription/Gallery.aspx)
 - [Schrodinger Maestro](https://www.schrodinger.com/products/maestro)
 
-### IQmol
-
-For modelling/visualizing small molecues. You can even run short QChem jobs with this.
-
-[IQmol Download](http://iqmol.org)
-
-> "IQmol is a free open-source molecular editor and visualization package. It offers a range of features including a molecular editor, surface generation (orbitals and densities) and animations (vibrational modes and reaction pathways)."
-
-### Chimera/ChimeraX
-
-For modelling/visualizing protein structures from the protein data bank. 
-
-Chimera for docking studies, whereas ChimeraX is for figures and videos.
-
-[Chimera/ChimeraX Download](https://www.cgl.ucsf.edu/chimerax/)
-
-> "UCSF ChimeraX (or simply ChimeraX) is the next-generation molecular visualization program from the Resource for Biocomputing, Visualization, and Informatics (RBVI), following UCSF Chimera. ChimeraX can be downloaded free of charge for academic, government, nonprofit, and personal use. Commercial users, please see ChimeraX commercial licensing."
-
-### VMD
-
-Visualization and movie making of Molecular Dynamics trajectories.
-
-[VMD Download](https://www.ks.uiuc.edu/Research/vmd/)
-
-> "VMD is a molecular visualization program for displaying, animating, and analyzing large biomolecular systems using 3-D graphics and built-in scripting. VMD supports computers running MacOS X, Unix, or Windows, is distributed free of charge, and includes source code."
-
-### ChemDraw
-
-### Shrodinger Maestro
 
 ## What is Python? Conda?
 
-### Overview
+- Python is a programming language.
+- Conda is a software used to manage Python.
 
-Python is a programming language.
 
-Conda is a software used to manage Python.
-
-### Python
+<span style="font-size:1.5em;">**Python**</span>
 
 Python is a high-level, interpreted programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python is widely used in various fields, including web development (this website), data analysis, artificial intelligence, scientific computing, and more.
 
@@ -118,7 +103,7 @@ Some reasons why Python has grown in popularity include:
 
 There are many other reasons, but for the laymen, this pretty much sums it up!
 
-### Conda
+<span style="font-size:1.5em;">**Conda**</span>
 
 When I say "Conda," what I mean are the programs, **Anaconda, Miniconda, and/or Miniforge**. They are all software tools and distributions commonly used for *managing and working with Python.* 
 
@@ -157,6 +142,7 @@ Conda implies the use of Anaconda, Miniconda, and/or Miniforge.
 ```{note}
 I recommend installing Miniforge!
 ```
+
 
 ## What is computational chemistry?
 

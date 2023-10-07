@@ -1,6 +1,6 @@
-# Classical MD
+# Classical Molecular Dynamics 
 
-## Energy
+## Potential Energy
 
 Energy of a system is composed of bonded and nonbonded interactions:
 

@@ -1,0 +1,34 @@
+A NPT simulation for common production-level simulations
+ &cntrl
+  imin=0,        ! Turn off minimization
+  irest=1,       ! This is a restart of an old MD simulation
+  ntx=5,         ! So our inpcrd file has velocities
+  
+  ! Temperature control
+  ntt=3,         ! Langevin dynamics
+  gamma_ln=2.0,  ! Friction coefficient (ps^-1)   
+  temp0=300,     ! Target temperature
+  
+  ! Potential energy control
+  cut=8.0,       ! nonbonded cutoff, in angstroms
+
+  ! MD settings
+  nstlim=50000,  ! MD steps
+  dt=0.002,      ! Time step (ps)
+
+  ! SHAKE
+  ntc=2,         ! Constrain bonds containing hydrogen
+  ntf=2,         ! Do not calculate forces of bonds containing hydrogen
+  
+  ! Control how often information is printed
+  ntwx=100,      ! Print coordinates every ntwx steps to the trajectory  
+  ntpr=100,
+  ntwx=100,
+
+  ! Constant pressure control.
+  barostat=1,    ! Berendsen barostat... change to 2 for MC
+  ntp=1,         ! 1=isotropic, 2=anisotropic, 3=semi-isotropic w/ surften
+  pres0=1.0,     ! Target external pressure, in bar
+  taup=1.0,      ! Pressure relaxation time (in ps)
+ /
+ 

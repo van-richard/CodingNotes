@@ -1,4 +1,4 @@
-# Navigating w/ Command Line
+# Navigating in Terminal
 
 ## Overview
 
@@ -54,9 +54,11 @@ The syntax is `mkdir [arugment]` or in other words `mkdir [new folder name]`. He
 mkdir test
 ```
 
-**NOTE:** Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called "amino acids". Rather than using a space, use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
+```{note}
+Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called "amino acids". Rather than using a space, use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
+```
 
-## Moving in/out of folders/directories
+## Moving in/out of Directories
 
 We can enter a folder with the `cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
 
@@ -85,7 +87,11 @@ cd ~  # Option 2
 
 If you check your current working directory again, you should see that you're back home
 
-## What are paths?
+```bash
+pwd
+```
+
+## What are Paths?
 
 There are 2 types of paths we can use, absolute and relative. Whenever we refer to a file or directory we are using one of these paths. Whenever we refer to a file or directory, we can use either type of path (either way, the system will still be directed to the same location).
 

@@ -1,0 +1,69 @@
+A NVT simulation for common production-level simulations
+ &cntrl
+    imin=0,        ! No minimization
+    irest=0,       ! This IS a restart of an old MD simulation
+    ntx=1,         ! So our inpcrd file has velocities
+
+    ! Boundary conditions
+    ntb=0,         ! Periodic boundaries for constant volume
+    ntp=0,         ! No pressure control
+
+    ! Temperature control
+    ntt=3,         ! Langevin Mid
+    gamma_ln=5.0,  ! Friction coefficient (ps^-1)
+    temp0=300.0,   ! Target temperature
+    ig=-1,         ! Random number seed
+
+    ! Potential energy control
+    cut=999.0,      ! nonbonded cutoff, in Angstroms
+
+    ! MD settings
+    nstlim=500,   ! 1 ps total
+    dt=0.001,      ! time step (ps)
+
+    ! SHAKE
+    ntc=1,         ! Constrain bonds containing hydrogen
+    ntf=1,         ! Do not calculate forces of bonds containing hydrogen
+    tol=0.000001,  ! Shake tolerance
+
+    ! Control how often information is printed
+    ntpr=100,      ! Print energies every 100 steps
+    ntwx=100,      ! Print coordinates every 100 steps to the trajectory
+    ntwr=100,     ! Print a restart file every 5K steps (can be less frequent)
+!   ntwv=-1,       ! Uncomment to also print velocities to trajectory
+!   ntwf=-1,       ! Uncomment to also print forces to trajectory
+    ntxo=2,        ! Write NetCDF format
+    ioutfm=1,      ! Write NetCDF format (always do this!)
+
+    ! Restraints
+    nmropt=1,      ! Turn on restraints
+
+    ! QM/MM
+    ifqnt=1,       ! Turn on QM/MM
+ /
+
+ 
+
+ &qmmm
+    ! QM atoms
+    qmmask=':1'
+
+    ! QM settings
+    qm_theory='PM3',
+    qmcharge=0,
+
+    ! Shake
+    qmshake=0,     ! Use Shake for QM atoms
+
+    ! Potential energy control
+    qmcut=999.0,    ! Cutoff for QM/MM electrostatic interactions
+    qm_ewald=0,    ! QM/MM with periodic boundaries
+    qm_pme=0,      ! Use PME for QM-MM electrostatic interactions
+    qmmm_switch=0, ! Switching for QM-MM
+    writepdb=1,    ! Check QM atoms
+ /
+
+ &wt type='DUMPFREQ', istep1=10 /
+ &wt type='END' /
+ DISANG=cv.rst
+ DUMPAVE=step5.00_equilibration.cv

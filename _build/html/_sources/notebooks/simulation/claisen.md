@@ -299,8 +299,3 @@ for i in `seq -w 0 20`; do
     cd ..
 done
 ```
-
-
-```python
-
-```

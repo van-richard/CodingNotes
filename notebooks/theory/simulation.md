@@ -1,4 +1,11 @@
-# What are Molecular Simulations?
+# Simulation Notes
+
+Before you run any simulation, consider the following questions:
+
+- What is your scientific question?
+- Can your hypothesis be tested with MD?
+- Is there experimental evidence for the property you're investigating?
+- What timescale is the property you're testing for?
 
 Molecular simulations methods involves a particle-based description of the system, and is propagated by deterministic or probabilistic rules to generate a trajectory describing its evolution over course of the simulation.
 

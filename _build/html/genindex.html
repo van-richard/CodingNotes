@@ -60,6 +60,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
@@ -153,59 +155,50 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/Preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/Jargon.html">2. Learn the Jargon</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/QuickStart.html">3. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/commandline/bashtutorial0.html">3.2. Navigating w/ Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/commandline/bashtutorial1.html">3.3. File Management w/ Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/Supercomputing.html">3.4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/commandline/ssh.html">3.5. More on SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/commandline/slurm.html">3.6. More on Slurm &amp; HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/StructureFiles.html">3.7. Protein/Ligand Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/Python.html">3.8. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/Simulations.html">3.9. Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/simple.html">3.10. Tutorial: Simple MD</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Jargon.html">Learn the Jargon</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/QuickStart.html">Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/commandline/bashtutorial0.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/commandline/bashtutorial1.html">Managing in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/Supercomputer.html">Using Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/commandline/ssh.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/commandline/slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/PythonConda.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/BasicMD.html">Brief Introduction to Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/simple.html">Simple MD Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/TheoryTutorial.html">Theory &amp; Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/notes.html">Simulation Theory Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/qmmm.html">QM/MM Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/simulation/tutorials.html">Simulation Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/simulation/distance.html">Applying Distance Restraints in Classical MD SImulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/simulation/claisen.html">Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theory</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/theory/simulation.html">1. What are Molecular Simulations?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/theory/classical.html">2. Classical MD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/theory/qmmm.html">3. QM/MM Simulations</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/MD.html">1. Classical MD Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/distance.html">1.1. Distance Restraints</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/VisualizationTools.html">Visualization Tools</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/chimera/ChimeraX.html">ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/images.html">Saving Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/fade.html">Fading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/morph.html">Morphing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/rock.html">Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/spin.html">Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/QMMM.html">2. QM/MM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/claisen.html">2.1. Claisen Rearrangment</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/vmd/VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/vmd/ffmpeg.html">ffmpeg</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/ChimeraX.html">Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/chimera/images.html">Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/chimera/fade.html">Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/chimera/morph.html">Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/chimera/rock.html">Spin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/chimera/spin.html">Rocking</a></li>
-</ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/vmd/ffmpeg.html">ffmpeg</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/appendix/linux.html">Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Extra.html"><strong>Addtional Resources</strong></a></li>
 </ul>
 
     </div>

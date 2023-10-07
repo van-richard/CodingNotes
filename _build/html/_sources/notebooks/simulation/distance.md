@@ -15,25 +15,30 @@ The files we need are:
 2. Coordinate file (*.rst7)
 3. MD input files (min.in, heat.in, prod\*.in, and *cv\*.rst*)
 
-You can download my files for reference.
+````{note}
+You can download my files: [distance.tar.bz2](https://www.dropbox.com/scl/fi/8p1ymw35ilvs79egtktqv/distance.tar.bz2?rlkey=mgddua07m5q8ukbptf1uiv36j&dl=0)
 
-[distance.tar.bz2](https://www.dropbox.com/scl/fi/8p1ymw35ilvs79egtktqv/distance.tar.bz2?rlkey=mgddua07m5q8ukbptf1uiv36j&dl=0)
-
-To extract:
+Extract the file with:
 
 ```bash
 tar xvjf distance.tar.bz2
 ```
 
-## Preparing Inputs
+In this tutorial, I am running the simulation on my personal computer, not on the supercomputer.*
 
-First, activated your `ambertools` conda environment.
+This requires the `ambertools` conda environment. You can activate it running:
 
 ```bash
 conda activate ambertools
 ```
+````
 
-Make a new working directory, and `cd` into it.
+## Preparing Inputs
+
+nda activate ambertools
+```
+
+First we will need to prepare the input files. Start by making a new project folder called `distance`, and then change directories here:
 
 ```bash
 mkdir distance
@@ -75,7 +80,9 @@ If you list the files in the current working directory, you should see
 2. `step3_pbcsetup.rst7`
 3. `step3_pbcsetup.pdb`
 
-*ALWAYS VISUALIZE THESE FILES BEFORE MOVING ON!*
+```{note}
+Visualize these files with VMD. Always do this before moving on!
+```
 
 Next, we will make the Amber MD input files. 
 
@@ -85,9 +92,7 @@ They contain settings for each MD run. We will have 3 steps:
 2. Heating (for 10 ps at 300 K)
 3. Production MD (10 ps at 300 K, ranging distance)
 
-### Minimization
-
-Make a `min.in` file, with:
+**Minimization** Make a `min.in` file, with:
 
 ```bash
 Minimize
@@ -103,9 +108,7 @@ Minimize
  /
 ```
 
-### Heating 
-
-Make a `heat.in` file, with:
+**Heating** Make a `heat.in` file, with:
 
 ```bash
 A NVT simulation for common production-level simulations
@@ -147,9 +150,7 @@ A NVT simulation for common production-level simulations
  /
 ```
 
-### Production MD
-
-Make 4 copies of `prod.in`. Make sure they have different names (i.e. `prod0`, `prod1`, `prod2`, and `prod3`). Use the following as your template, and be sure to change the last line, where `DUMPAVE=prod.cv` to `DUMPAVE=prod[0,1,2, or 3].cv`.
+**Production MD** We will need 4 copies of `prod.in`. Make sure they have different names (i.e. `prod0`, `prod1`, `prod2`, and `prod3`). Use the following as your template, and be sure to change the last line, where `DUMPAVE=prod.cv` to `DUMPAVE=prod[0,1,2, or 3].cv`.
 
 Here is an example of `prod0.in`.
 
@@ -198,6 +199,7 @@ A NVT simulation for common production-level simulations
 
  /
 ```
+
 
 ### Restraint File
 
@@ -277,7 +279,9 @@ Instead of making a file called `cv.rst`. Make a file called `ref_cv.rst`, which
  &end
  ```
 
-**NOTE:** `r2` and `r3` are now set to `__REST__`, which will be replaced through a script I call `gen_inputs.in`.
+```{note}
+r2` and `r3` are now set to `__REST__`, which will be replaced through a script I call `gen_inputs.in`.
+```
 
 Instead of making a file called `prod.rst`. Make a file called `ref_prod.rst`, which looks like:
 
@@ -338,9 +342,4 @@ for i in `seq 0 3`; do # Loop over the sequence of number 0, 1, 2, 3
     sed "s/__REST__/${n}/g" ref_prod.in > prod${i}.in # Change __REST__ to restraint value
     n=`echo $n + 4 | bc` # Add 2 to the last restraint value
 done
-```
-
-
-```python
-
 ```

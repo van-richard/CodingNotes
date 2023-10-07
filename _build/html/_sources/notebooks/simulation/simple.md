@@ -1,9 +1,17 @@
-# Tutorial: Simple MD
+# Simple MD Tutorial
 
-<center><video src="../../_static/simple.mov" width="50%" controls>
-</video></center>
+<!-- <img src="../images/fun-fish.png" alt="fishy" class="bg-primary mb-1" width="200px"> -->
+<!-- <video src="../../_static/simple.mov" width="50%" controls> -->
 
-This is a simple tutorial of alanine dipeptide in a water box. We will perform the typical MD simulations steps such as equilibration (minimizatino, heating 20 ps) and have a production run (100 ps). This will take about 1 hour.
+```{figure} ../../_static/simple.mov
+---
+width: 50%
+name: simple-md
+---
+MD trajectory of Alanine Dipeptide (shown as ball-and-stick) solvated in a water box (shown as line) viewed on VMD.
+```
+
+A simple example we can perform is a simulation of Alanine Dipeptide solvated in a water box. Alanine Dipeptide is just the amino acid, Alanine, but with the N-terminal capped by an acetyl group (Amber Residue Name: ACE), and C-terminal capped by N-methylamide (Amber Residue Name: NME).
 
 To do so, we will need to make:
 
@@ -11,36 +19,35 @@ To do so, we will need to make:
 2. Coordinate file (*.rst7)
 3. MD input files (min.in, heat.in, prod.in)
 
-You can download my files here:
+````{note}
+You can download my files: [simple.tar.bz2](https://www.dropbox.com/scl/fi/vnhuy67y148z51talehlt/simple.tar.bz2?rlkey=cocf2mz57hbsnj26xe4f6e4d4&dl=0)
 
-[simple.tar.bz2](https://www.dropbox.com/scl/fi/vnhuy67y148z51talehlt/simple.tar.bz2?rlkey=cocf2mz57hbsnj26xe4f6e4d4&dl=0)
-
-To extract:
+Extract the file with:
 
 ```bash
 tar xvjf simple.tar.bz2
 ```
 
-*NOTE: This tutorial can run on your personal computer. The example/files used the `ambertools` conda environment on my MacBook.*
+In this tutorial, I am running the simulation on my personal computer, not on the supercomputer.*
 
-Activated your `ambertools` conda environment.
+This requires the `ambertools` conda environment. You can activate it running:
 
 ```bash
 conda activate ambertools
 ```
+````
+
 
 ## Preparing Inputs
 
-Make a new working directory.
+First we will need to prepare the input files. Start by making a new project folder called `simple`, and then change directories here:
 
 ```bash
-mkdir tutorial1
-cd tutorial1
+mkdir simple
+cd simple
 ```
 
-Since alanine dipeptide is an amino acid that is capped. We can use `tleap` to generate our topology and coordinate files. 
-
-To do so, make a file called `tleap.in`.
+Alanine dipeptide is an amino acid with its ends capped. We can use the `tleap` program to generate our topology and coordinate files. To do this, make a file called "tleap.in" with `vi` (i.e., `vi tleap.in`) and copy the following:
 
 ```bash
 source leaprc.protein.ff19SB
@@ -55,29 +62,26 @@ saveamberparm system step3_pbcsetup.parm7 step3_pbcsetup.rst7
 quit
 ```
 
-Run the script, `tleap.in`
+Save and exit `vi`. Now, you can run `tleap` with `tleap.in` as the input:
 
 ```bash
 tleap -sf tleap.in
 ```
 
-If you list the files in the current working directory, you should see
+If you list the files in this  directory, you should see `step3_pbcsetup.parm7` and `step3_pbcsetup.rst7`.
 
-1. `step3_pbcsetup.parm7`
-2. `step3_pbcsetup.rst7`
+```{note}
+Visualize these two files with VMD. Always do this before moving on!
+```
 
-*ALWAYS VISUALIZE THESE TWO FILES BEFORE MOVING ON!*
-Next, we will make the Amber MD input files. 
-
-They contain settings for each MD run. We will have 3 steps:
+Now, we will make the Amber MD input files. These files contain the settings for each MD run. We will have 3 steps:
 
 1. Minimization
 2. Heating (for 20 ps from 0 K to 300 K)
 3. Production MD (100 ps at 300 K and 1 atm)
 
-### Minimization
 
-Make a `min.in` file, with:
+**Minimization** Make a `min.in` file, with `vi min.in` containing:
 
 ```bash
 Minimize
@@ -93,9 +97,7 @@ Minimize
  /
 ```
 
-### Heating 
-
-Make a `heat.in` file, with:
+**Heating** Make a `heat.in` file, with `vi heat.in` containing:
 
 ```bash
 Heat
@@ -124,9 +126,7 @@ Heat
 &wt type='END' /
 ```
 
-### Production MD
-
-Make a `prod.in` file, with:
+**Production MD** Make a `prod.in` file, with `vi prod.in` containing:
 
 ```bash
 Production
@@ -151,29 +151,37 @@ Production
  /
 ```
 
-## Run Amber MD with `sander`
+
+## Running the Simulation
 
 Amber has 2 MD engines, `sander` and `pmemd`. `sander` is free and shipped with Ambertools. 
 
-Alternatively, you can run this with the MPI version of `sander` or `pmemd`, or the GPU version of `pmemd` called `pmemd.cuda`. Just change `sander` to your desired MD engine.
+```{note}
+You can also run this with the MPI version of `sander` or `pmemd`, or the GPU version of `pmemd` called `pmemd.cuda` if you have access to our Amber software. Just change `sander` to your desired MD engine.
+```
 
-Now run each step in sequential order, starting with minimization.
+Run each step in sequential order, starting with minimization.
 
+::::{tab-set}
+:::{tab-item} Step 1 - Minimization
 ```bash
 sander -O -i min.in -p step3_pbcsetup.parm7 -c step3_pbcsetup.rst7 -o min.out -r min.ncrst -inf min.mdinfo
 ```
-
-When this is done, run `heat.in`:
-
+:::
+::::{tab-item} Step 2 - Heating
+:::
 ```bash
 sander -O -i heat.in -p step3_pbcsetup.parm7 -c min.ncrst -o heat.out -r heat.ncrst -inf heat.mdinfo -x heat.nc
 ```
-
-Last, run the production MD with `prod.in`:
-
+:::
+::::{tab-item} Step 3 - Production MD
+:::
 ```bash
 sander -O -i prod.in -p step3_pbcsetup.parm7 -c heat.ncrst -o prod.out -r prod.ncrst -inf prod.mdinfo -x prod.nc
 ```
+:::
+::::
+
 
 ## Conclusion
 

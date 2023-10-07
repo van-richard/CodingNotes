@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.10. Tutorial: Simple MD &#8212; Coding Notes</title>
+    <title>Simple MD Tutorial &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/simple';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. What are Molecular Simulations?" href="../theory/simulation.html" />
-    <link rel="prev" title="3.9. Molecular Dynamics" href="../Simulations.html" />
+    <link rel="next" title="Theory &amp; Tutorials" href="../TheoryTutorial.html" />
+    <link rel="prev" title="Brief Introduction to Molecular Dynamics" href="../BasicMD.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,59 +156,50 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn the Jargon</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">3. Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial0.html">3.2. Navigating w/ Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial1.html">3.3. File Management w/ Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Supercomputing.html">3.4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">3.5. More on SSH-ing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">3.6. More on Slurm &amp; HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Protein/Ligand Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Python.html">3.8. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.9. Molecular Dynamics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.10. Tutorial: Simple MD</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">Learn the Jargon</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial0.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bashtutorial1.html">Managing in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supercomputer.html">Using Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonConda.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicMD.html">Brief Introduction to Molecular Dynamics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Simple MD Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../TheoryTutorial.html">Theory &amp; Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/notes.html">Simulation Theory Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/qmmm.html">QM/MM Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="tutorials.html">Simulation Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD SImulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="claisen.html">Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theory</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory/simulation.html">1. What are Molecular Simulations?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/classical.html">2. Classical MD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/qmmm.html">3. QM/MM Simulations</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../MD.html">1. Classical MD Examples</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="distance.html">1.1. Distance Restraints</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../VisualizationTools.html">Visualization Tools</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../chimera/ChimeraX.html">ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/rock.html">Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../QMMM.html">2. QM/MM Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="claisen.html">2.1. Claisen Rearrangment</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../vmd/VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
 </ul>
 </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures and Movies</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ChimeraX.html">Chimera/ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">Spin</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
-</ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../VMD.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
-</ul>
-</li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../appendix/linux.html">Unix/Linux Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Extra.html"><strong>Addtional Resources</strong></a></li>
 </ul>
 
     </div>
@@ -252,7 +243,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/simulation/simple.md" target="_blank"
+<a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/simulation/simple.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button"
    title="Suggest edit"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -278,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/simulation/simple.md" target="_blank"
+      <li><a href="../../_sources/notebooks/simulation/simple.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -360,7 +351,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial: Simple MD</h1>
+    <h1>Simple MD Tutorial</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -370,14 +361,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-inputs">3.10.1. Preparing Inputs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimization">3.10.1.1. Minimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heating">3.10.1.2. Heating</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#production-md">3.10.1.3. Production MD</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-amber-md-with-sander">3.10.2. Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.10.3. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">Prepare Files &amp; Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-topology-and-coordinate-files-inputs">Prepare Topology and Coordinate Files Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">Prepare MD Inputs - Simulation Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-simulation">Running the Simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">Visualize Trajectory</a></li>
 </ul>
             </nav>
         </div>
@@ -389,38 +377,102 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-simple-md">
-<h1><span class="section-number">3.10. </span>Tutorial: Simple MD<a class="headerlink" href="#tutorial-simple-md" title="Permalink to this heading">#</a></h1>
-<center><video src="../../_static/simple.mov" width="50%" controls>
-</video></center>
-<p>This is a simple tutorial of alanine dipeptide in a water box. We will perform the typical MD simulations steps such as equilibration (minimizatino, heating 20 ps) and have a production run (100 ps). This will take about 1 hour.</p>
-<p>To do so, we will need to make:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="simple-md-tutorial">
+<h1>Simple MD Tutorial<a class="headerlink" href="#simple-md-tutorial" title="Permalink to this heading">#</a></h1>
+<p>A simple example of how to run MD simulations is with the molecule, Alanine Dipeptide. We will model the residue, solvate it in a water box, equilibrate the system, and run MD production simulations with AmberTools. This should take roughly an hour.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/simple.mov"><img alt="../../_images/simple.mov" src="../../_images/simple.mov" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">MD trajectory of Alanine Dipeptide (<em>shown as ball-and-stick</em>) solvated in water (<em>shown as line</em>) viewed on VMD.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The system, Alanine Dipeptide, is the amino acid, Alanine, with the charged ends neutralized. This is done by “capping” the N-terminal with an acetyl group, and C-terminal with N-methylamide.</p>
+<p>In this tutorial, we will:</p>
+<ul class="simple">
+<li><p>Make a <code class="docutils literal notranslate"><span class="pre">~/Tutorials/</span></code> folder all of our projects</p></li>
+<li><p>Add a new project folder called <code class="docutils literal notranslate"><span class="pre">simple</span></code></p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to make the molecule (in Amber format)</p></li>
+<li><p>Prepare inputs for MD simulations</p></li>
+<li><p>Run MD simulations with <code class="docutils literal notranslate"><span class="pre">sander</span></code></p></li>
+<li><p>Analyze the trajectory</p></li>
+</ul>
+<p><strong>This assumes you have already installed some form of conda, and made the conda environment “ambertools”.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>This tutorial can be perform on your local computer</p></li>
+<li><p>Download my files for reference: <a class="reference download internal" download="" href="../../_downloads/053d20a2b9fe9f09025552a74192e439/simple.tar.bz2"><span class="xref download myst">simple.tar.bz2</span></a></p></li>
+</ul>
+</div>
+<section id="prepare-files-folders">
+<h2>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Permalink to this heading">#</a></h2>
+<p>First, set up the directories by creating a folder for “Tutorials”, then make a project folder for the “simple” simulation project. <em>Optionally, if you downloaded the reference file, we will move <code class="docutils literal notranslate"><span class="pre">simple.tar.bz2</span></code> into a reference folder.</em></p>
+<p>Create:</p>
 <ol class="arabic simple">
-<li><p>Topology file (*.parm7)</p></li>
-<li><p>Coordinate file (*.rst7)</p></li>
-<li><p>MD input files (<a class="reference external" href="http://min.in">min.in</a>, <a class="reference external" href="http://heat.in">heat.in</a>, <a class="reference external" href="http://prod.in">prod.in</a>)</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code> folder in our home</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">simple</span></code> folder inside <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code></p>
+<ul class="simple">
+<li><p>i.e. ~/Tutorials/simple</p></li>
+</ul>
+</li>
+<li><p>(Optional) The downloaded reference folder <code class="docutils literal notranslate"><span class="pre">simple</span></code> in <code class="docutils literal notranslate"><span class="pre">~/Tutorials/references/</span></code></p>
+<ul class="simple">
+<li><p>i.e. ~/Tutorials/references/simple</p></li>
+</ul>
+</li>
 </ol>
-<p>You can download my files here:</p>
-<p><a class="reference external" href="https://www.dropbox.com/scl/fi/vnhuy67y148z51talehlt/simple.tar.bz2?rlkey=cocf2mz57hbsnj26xe4f6e4d4&amp;dl=0">simple.tar.bz2</a></p>
-<p>To extract:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>xvjf<span class="w"> </span>simple.tar.bz2
+<p>Open terminal and check where you are:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 </div>
-<p><em>NOTE: This tutorial can run on your personal computer. The example/files used the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment on my MacBook.</em></p>
-<p>Activated your <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
+<p>Make a new directory for projects called, “Tutorials”:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>~/Tutorials
 </pre></div>
 </div>
-<section id="preparing-inputs">
-<h2><span class="section-number">3.10.1. </span>Preparing Inputs<a class="headerlink" href="#preparing-inputs" title="Permalink to this heading">#</a></h2>
-<p>Make a new working directory.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>tutorial1
-<span class="nb">cd</span><span class="w"> </span>tutorial1
+<p>The <code class="docutils literal notranslate"><span class="pre">~/</span></code> before Tutorials is the home path, i.e. <code class="docutils literal notranslate"><span class="pre">$HOME/Tutorials</span></code>.</p>
+<p>Go inside <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code> and  make the first project folder called, “simple”:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>simple
 </pre></div>
 </div>
-<p>Since alanine dipeptide is an amino acid that is capped. We can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate our topology and coordinate files.</p>
-<p>To do so, make a file called <code class="docutils literal notranslate"><span class="pre">tleap.in</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
+<p>If you downloaded my reference files, then make another folder called “references”, with <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">references</span></code>, then unzip and move the folder into references,</p>
+<div class="admonition-try-me admonition">
+<p class="admonition-title">Try me!!</p>
+<p>Assuming you saved my reference file by using your mouse, moved the file to <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code>, and extracted the files by clicking…</p>
+<p>I want to share the command line approach! Downloading and extracting compressed files via command line is helpful because it can be automated! Plus, in the future, we don’t want to download files locally, then upload to the supercomputer… It becomes tedious…</p>
+<p>In the terminal, go to where you want the file to be saved (<code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/Tutorials/</span></code>):</p>
+<ul class="simple">
+<li><p>Download the <code class="docutils literal notranslate"><span class="pre">.tar.bz2</span></code> file with either <code class="docutils literal notranslate"><span class="pre">curl</span></code> or <code class="docutils literal notranslate"><span class="pre">wget</span></code> <em>depending on your OS</em>.</p></li>
+<li><p>Extract the files with <code class="docutils literal notranslate"><span class="pre">tar</span></code></p></li>
+</ul>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+MacOS</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-<span class="w"> </span>O<span class="w"> </span>https://van-richard.github.io/CodingNotes/_downloads/053d20a2b9fe9f09025552a74192e439/simple.tar.bz2
+tar<span class="w"> </span>xvfj<span class="w"> </span>simple.tar.bz2<span class="w"> </span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Linux</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://van-richard.github.io/CodingNotes/_downloads/053d20a2b9fe9f09025552a74192e439/simple.tar.bz2
+tar<span class="w"> </span>xvfj<span class="w"> </span>simple.tar.bz2<span class="w"> </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition-question admonition">
+<p class="admonition-title">Question</p>
+<p>In terms of the terminal, do you know where you are or what is in this directory? If you forgot the path, then run <code class="docutils literal notranslate"><span class="pre">pwd</span></code>. This will tell you where you are with respect to your home directory. To see files/folders, run <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+</div>
+</section>
+<section id="prepare-topology-and-coordinate-files-inputs">
+<h2>Prepare Topology and Coordinate Files Inputs<a class="headerlink" href="#prepare-topology-and-coordinate-files-inputs" title="Permalink to this heading">#</a></h2>
+<p>Since Alanine dipeptide is still an amino acid, we can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate the topology (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code>) and coordinate files(<code class="docutils literal notranslate"><span class="pre">.rst7</span></code>). The <code class="docutils literal notranslate"><span class="pre">tleap</span></code> program contains reference coordinates for standard residues to generate  missing atoms, this function is base on the residue name.</p>
+<p>To give <code class="docutils literal notranslate"><span class="pre">tleap</span></code> instructions, make a file called, “<a class="reference external" href="http://tleap.in">tleap.in</a>” using <code class="docutils literal notranslate"><span class="pre">vi</span></code>, and copy the following lines:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
 <span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
 
 <span class="nv">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sequence<span class="w"> </span><span class="o">{</span><span class="w"> </span>ACE<span class="w"> </span>ALA<span class="w"> </span>NME<span class="w"> </span><span class="o">}</span>
@@ -432,116 +484,183 @@ saveamberparm<span class="w"> </span>system<span class="w"> </span>step3_pbcsetu
 quit
 </pre></div>
 </div>
-<p>Run the script, <code class="docutils literal notranslate"><span class="pre">tleap.in</span></code></p>
+<p>Briefly, the:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">source</span></code> line tell Amber which force field parameters we want for our molecules, this is always at the top of the file</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">leaprc.protein.ff19SB</span></code> contains protein parameters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">leaprc.water.TIP3P</span></code> has the water parameters</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">system</span> <span class="pre">=</span> <span class="pre">sequence</span> <span class="pre">{</span> <span class="pre">ACE</span> <span class="pre">ALA</span> <span class="pre">NME</span> <span class="pre">}</span></code> line makes use of the <code class="docutils literal notranslate"><span class="pre">sequence</span></code> command which combines amino acid residues together to build a molecule, and this is stored as “system” variable</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">solvatebox</span> <span class="pre">system</span> <span class="pre">TIP3PBOX</span> <span class="pre">12.0</span> <span class="pre">iso</span> <span class="pre">0.8</span></code> line create a a water box around the <code class="docutils literal notranslate"><span class="pre">system</span></code>, such that the minimum distance between any atom in <code class="docutils literal notranslate"><span class="pre">system</span></code> and the edge of the periodic box <code class="docutils literal notranslate"><span class="pre">12.0</span></code> Å.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">iso</span></code> rotates the <code class="docutils literal notranslate"><span class="pre">system</span></code> to orient the principal axes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0.8</span></code> is how close a solvent atom can be to the system atoms</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">saveamberparm</span> <span class="pre">system</span> <span class="pre">step3_pbcsetup.parm7</span> <span class="pre">step3_pbcsetup.rst7</span></code> line saves <code class="docutils literal notranslate"><span class="pre">system</span></code> as Amber topology (<code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.parm7</span></code>) and coordinate (<code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code>) files</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">quit</span></code> line exits the tleap program.</p></li>
+</ul>
+<p>Now we can run <code class="docutils literal notranslate"><span class="pre">tleap</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
 </pre></div>
 </div>
-<p>If you list the files in the current working directory, you should see</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.parm7</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code></p></li>
-</ol>
-<p><em>ALWAYS VISUALIZE THESE TWO FILES BEFORE MOVING ON!</em>
-Next, we will make the Amber MD input files.</p>
-<p>They contain settings for each MD run. We will have 3 steps:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">-sf</span></code> for <code class="docutils literal notranslate"><span class="pre">tleap</span></code> lets us run the script <code class="docutils literal notranslate"><span class="pre">tleap.in</span></code>, otherwise it will run interactively in the command line</p>
+<p>If you list the files in this directory, you should see <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.parm7</span></code> and <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Visualize these two files with VMD. Always do this before moving on!</p>
+</div>
+</section>
+<section id="prepare-md-inputs-simulation-settings">
+<h2>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Permalink to this heading">#</a></h2>
+<p>Now, we will make 3 MD input files for running Amber simulations. These files contain the settings for each part of the simulations. The 3 parts involve:</p>
 <ol class="arabic simple">
 <li><p>Minimization</p></li>
 <li><p>Heating (for 20 ps from 0 K to 300 K)</p></li>
 <li><p>Production MD (100 ps at 300 K and 1 atm)</p></li>
 </ol>
-<section id="minimization">
-<h3><span class="section-number">3.10.1.1. </span>Minimization<a class="headerlink" href="#minimization" title="Permalink to this heading">#</a></h3>
-<p>Make a <code class="docutils literal notranslate"><span class="pre">min.in</span></code> file, with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Minimize
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+min.mdin</label><div class="sd-tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Minimization<span class="w"> </span>input<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>explicit<span class="w"> </span>solvent
 <span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">    </span>
-<span class="w">  </span><span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,<span class="w">        </span>
-<span class="w">  </span><span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">maxcyc</span><span class="o">=</span><span class="m">2000</span>,
-<span class="w">  </span><span class="nv">ncyc</span><span class="o">=</span><span class="m">1000</span>,
-<span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,
+<span class="w">  </span>!<span class="w"> </span>Minimization<span class="w"> </span>options
+<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">         </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>minimization
+<span class="w">  </span><span class="nv">maxcyc</span><span class="o">=</span><span class="m">2000</span>,<span class="w">   </span>!<span class="w">  </span>Maximum<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>minimization<span class="w"> </span>cycles
+<span class="w">  </span><span class="nv">ncyc</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Steepest-descent<span class="w"> </span>steps,<span class="w"> </span>better<span class="w"> </span><span class="k">for</span><span class="w"> </span>strained<span class="w"> </span>systems<span class="w">       </span>
+
+<span class="w">  </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span><span class="k">function</span><span class="w"> </span>options
+<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>angstroms
+<span class="w"> </span>
+<span class="w">  </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>file
+<span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps
 <span class="w"> </span>/
+<span class="w"> </span>
 </pre></div>
 </div>
-</section>
-<section id="heating">
-<h3><span class="section-number">3.10.1.2. </span>Heating<a class="headerlink" href="#heating" title="Permalink to this heading">#</a></h3>
-<p>Make a <code class="docutils literal notranslate"><span class="pre">heat.in</span></code> file, with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Heat
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+heat.mdin</label><div class="sd-tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,
-<span class="w">  </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.002,
-<span class="w">  </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">tempi</span><span class="o">=</span><span class="m">0</span>.0,
-<span class="w">  </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,
-<span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,
-<span class="w">  </span><span class="nv">ntb</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,
-<span class="w">  </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">2</span>.0,
-<span class="w">  </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">ig</span><span class="o">=</span>-1,
+<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>Turn<span class="w"> </span>off<span class="w"> </span>minimization
+<span class="w">  </span><span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>NOT<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
+<span class="w">  </span><span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>velocities
+<span class="w">   </span>
+<span class="w">  </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
+<span class="w">  </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>dynamics
+<span class="w">  </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
+<span class="w">  </span><span class="nv">tempi</span><span class="o">=</span><span class="m">0</span>.0,<span class="w">     </span>!<span class="w"> </span>Initial<span class="w"> </span>temp<span class="w"> </span>--<span class="w"> </span>give<span class="w"> </span>it<span class="w"> </span>some<span class="w"> </span>small<span class="w"> </span>random<span class="w"> </span>velocities<span class="w">   </span>
+<span class="w">  </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,<span class="w">     </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
+
+<span class="w">  </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">0</span>,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>angstroms
+<span class="w"> </span>
+<span class="w">  </span>!<span class="w"> </span>MD<span class="w"> </span>settings
+<span class="w">  </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,<span class="w">  </span>!<span class="w"> </span>MD<span class="w"> </span>steps
+<span class="w">  </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.002,<span class="w">      </span>!<span class="w"> </span>Time<span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
+
+<span class="w">  </span>!<span class="w"> </span>SHAKE
+<span class="w">  </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">  </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">  </span>
+<span class="w">  </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
+<span class="w">  </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span>ntwx<span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
+<span class="w">  </span>
+<span class="w">  </span>!<span class="w"> </span>Restraints
+<span class="w">  </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>Restraints
 <span class="w"> </span>/
+!<span class="w"> </span>This<span class="w"> </span>section<span class="w"> </span>will<span class="w"> </span>vary<span class="w"> </span>the<span class="w"> </span>temperature<span class="w"> </span>
+!<span class="w"> </span>For<span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span><span class="m">9000</span><span class="w"> </span>steps,<span class="w"> </span>temp<span class="w"> </span>increases<span class="w"> </span>from<span class="w"> </span><span class="m">0</span><span class="w"> </span>to<span class="w"> </span><span class="m">300</span><span class="w"> </span>K.
+!<span class="w"> </span>For<span class="w"> </span>steps<span class="w"> </span><span class="m">9001</span><span class="w"> </span>to<span class="w"> </span><span class="m">10000</span>,<span class="w"> </span>temp<span class="w"> </span>will<span class="w"> </span>remain<span class="w"> </span>at<span class="w"> </span><span class="m">300</span><span class="w"> </span>K
 <span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;TEMP0&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">0</span>,<span class="w"> </span><span class="nv">istep2</span><span class="o">=</span><span class="m">9000</span>,<span class="w"> </span><span class="nv">value1</span><span class="o">=</span><span class="m">0</span>.0,<span class="w"> </span><span class="nv">value2</span><span class="o">=</span><span class="m">300</span>.0<span class="w"> </span>/
 <span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;TEMP0&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">9001</span>,<span class="w"> </span><span class="nv">istep2</span><span class="o">=</span><span class="m">10000</span>,<span class="w"> </span><span class="nv">value1</span><span class="o">=</span><span class="m">300</span>.0,<span class="w"> </span><span class="nv">value2</span><span class="o">=</span><span class="m">300</span>.0<span class="w"> </span>/
 <span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
 </pre></div>
 </div>
-</section>
-<section id="production-md">
-<h3><span class="section-number">3.10.1.3. </span>Production MD<a class="headerlink" href="#production-md" title="Permalink to this heading">#</a></h3>
-<p>Make a <code class="docutils literal notranslate"><span class="pre">prod.in</span></code> file, with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Production
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+prod.mdin</label><div class="sd-tab-content docutils">
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NPT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,
-<span class="w">  </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,
-<span class="w">  </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">50000</span>,
-<span class="w">  </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.002,
-<span class="w">  </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,
+<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>Turn<span class="w"> </span>off<span class="w"> </span>minimization
+<span class="w">  </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
+<span class="w">  </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>velocities
+<span class="w">  </span>
+<span class="w">  </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
+<span class="w">  </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>dynamics
+<span class="w">  </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">2</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span><span class="w">   </span>
+<span class="w">  </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,<span class="w">     </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
+<span class="w">  </span>
+<span class="w">  </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>angstroms
+
+<span class="w">  </span>!<span class="w"> </span>MD<span class="w"> </span>settings
+<span class="w">  </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">50000</span>,<span class="w">  </span>!<span class="w"> </span>MD<span class="w"> </span>steps
+<span class="w">  </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.002,<span class="w">      </span>!<span class="w"> </span>Time<span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
+
+<span class="w">  </span>!<span class="w"> </span>SHAKE
+<span class="w">  </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">  </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">  </span>
+<span class="w">  </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
+<span class="w">  </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span>ntwx<span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory<span class="w">  </span>
 <span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,
 <span class="w">  </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,
-<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,
-<span class="w">  </span><span class="nv">ntb</span><span class="o">=</span><span class="m">2</span>,
-<span class="w">  </span><span class="nv">ntp</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,
-<span class="w">  </span><span class="nv">barostat</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">  </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">2</span>.0,
-<span class="w">  </span><span class="nv">ig</span><span class="o">=</span>-1,
+
+<span class="w">  </span>!<span class="w"> </span>Constant<span class="w"> </span>pressure<span class="w"> </span>control.
+<span class="w">  </span><span class="nv">barostat</span><span class="o">=</span><span class="m">1</span>,<span class="w">    </span>!<span class="w"> </span>Berendsen<span class="w"> </span>barostat...<span class="w"> </span>change<span class="w"> </span>to<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>MC
+<span class="w">  </span><span class="nv">ntp</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span><span class="nv">1</span><span class="o">=</span>isotropic,<span class="w"> </span><span class="nv">2</span><span class="o">=</span>anisotropic,<span class="w"> </span><span class="nv">3</span><span class="o">=</span>semi-isotropic<span class="w"> </span>w/<span class="w"> </span>surften
+<span class="w">  </span><span class="nv">pres0</span><span class="o">=</span><span class="m">1</span>.0,<span class="w">     </span>!<span class="w"> </span>Target<span class="w"> </span>external<span class="w"> </span>pressure,<span class="w"> </span><span class="k">in</span><span class="w"> </span>bar
+<span class="w">  </span><span class="nv">taup</span><span class="o">=</span><span class="m">1</span>.0,<span class="w">      </span>!<span class="w"> </span>Pressure<span class="w"> </span>relaxation<span class="w"> </span><span class="nb">time</span><span class="w"> </span><span class="o">(</span><span class="k">in</span><span class="w"> </span>ps<span class="o">)</span>
 <span class="w"> </span>/
+<span class="w"> </span>
 </pre></div>
+</div>
+</div>
 </div>
 </section>
+<section id="running-the-simulation">
+<h2>Running the Simulation<a class="headerlink" href="#running-the-simulation" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Amber has 2 MD engines called, <code class="docutils literal notranslate"><span class="pre">sander</span></code> and <code class="docutils literal notranslate"><span class="pre">pmemd</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sander</span></code> is free and shipped with Ambertools</p></li>
+</ul>
+<p>Using <code class="docutils literal notranslate"><span class="pre">sander</span></code>, run the following commands in sequential order:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Step 1 - Minimization</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.mdout<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+Step 2 - Heating</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>heat.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>min.ncrst<span class="w"> </span>-o<span class="w"> </span>heat.mdout<span class="w"> </span>-r<span class="w"> </span>heat.ncrst<span class="w"> </span>-inf<span class="w"> </span>heat.mdinfo<span class="w"> </span>-x<span class="w"> </span>heat.nc
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+Step 3 - Production MD</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>heat.ncrst<span class="w"> </span>-o<span class="w"> </span>prod.mdout<span class="w"> </span>-r<span class="w"> </span>prod.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod.nc
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="run-amber-md-with-sander">
-<h2><span class="section-number">3.10.2. </span>Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code><a class="headerlink" href="#run-amber-md-with-sander" title="Permalink to this heading">#</a></h2>
-<p>Amber has 2 MD engines, <code class="docutils literal notranslate"><span class="pre">sander</span></code> and <code class="docutils literal notranslate"><span class="pre">pmemd</span></code>. <code class="docutils literal notranslate"><span class="pre">sander</span></code> is free and shipped with Ambertools.</p>
-<p>Alternatively, you can run this with the MPI version of <code class="docutils literal notranslate"><span class="pre">sander</span></code> or <code class="docutils literal notranslate"><span class="pre">pmemd</span></code>, or the GPU version of <code class="docutils literal notranslate"><span class="pre">pmemd</span></code> called <code class="docutils literal notranslate"><span class="pre">pmemd.cuda</span></code>. Just change <code class="docutils literal notranslate"><span class="pre">sander</span></code> to your desired MD engine.</p>
-<p>Now run each step in sequential order, starting with minimization.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.out<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo
-</pre></div>
-</div>
-<p>When this is done, run <code class="docutils literal notranslate"><span class="pre">heat.in</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>heat.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>min.ncrst<span class="w"> </span>-o<span class="w"> </span>heat.out<span class="w"> </span>-r<span class="w"> </span>heat.ncrst<span class="w"> </span>-inf<span class="w"> </span>heat.mdinfo<span class="w"> </span>-x<span class="w"> </span>heat.nc
-</pre></div>
-</div>
-<p>Last, run the production MD with <code class="docutils literal notranslate"><span class="pre">prod.in</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sander<span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod.in<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>heat.ncrst<span class="w"> </span>-o<span class="w"> </span>prod.out<span class="w"> </span>-r<span class="w"> </span>prod.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod.nc
-</pre></div>
-</div>
-</section>
-<section id="conclusion">
-<h2><span class="section-number">3.10.3. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<section id="visualize-trajectory">
+<h2>Visualize Trajectory<a class="headerlink" href="#visualize-trajectory" title="Permalink to this heading">#</a></h2>
 <p>Now you can visual the results with VMD or Chimera, and perform some analysis.</p>
 </section>
 </section>
@@ -578,20 +697,20 @@ Next, we will make the Amber MD input files.</p>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Simulations.html"
+       href="../BasicMD.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.9. </span>Molecular Dynamics</p>
+        <p class="prev-next-title">Brief Introduction to Molecular Dynamics</p>
       </div>
     </a>
     <a class="right-next"
-       href="../theory/simulation.html"
+       href="../TheoryTutorial.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>What are Molecular Simulations?</p>
+        <p class="prev-next-title">Theory &amp; Tutorials</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -613,14 +732,11 @@ Next, we will make the Amber MD input files.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-inputs">3.10.1. Preparing Inputs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimization">3.10.1.1. Minimization</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heating">3.10.1.2. Heating</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#production-md">3.10.1.3. Production MD</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-amber-md-with-sander">3.10.2. Run Amber MD with <code class="docutils literal notranslate"><span class="pre">sander</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.10.3. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">Prepare Files &amp; Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-topology-and-coordinate-files-inputs">Prepare Topology and Coordinate Files Inputs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">Prepare MD Inputs - Simulation Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-simulation">Running the Simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">Visualize Trajectory</a></li>
 </ul>
   </nav></div>
 
