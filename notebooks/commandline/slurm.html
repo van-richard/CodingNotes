@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.6. HPC and Using Slurm &#8212; Coding Notes</title>
+    <title>HPC and Using Slurm &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/commandline/slurm';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.7. Molecular Structure Files" href="../StructureFiles.html" />
-    <link rel="prev" title="3.5. Accessing the HPC" href="ssh.html" />
+    <link rel="next" title="Python &amp; Conda" href="../PythonConda.html" />
+    <link rel="prev" title="Accessing the HPC" href="ssh.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,54 +156,45 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Preface.html">1. Preface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">2. Learn the Jargon</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">3. Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">3.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bashtutorial0.html">3.2. Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bashtutorial1.html">3.3. Managing in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Supercomputer.html">3.4. Using Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh.html">3.5. Accessing the HPC</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">3.7. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Python.html">3.8. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Simulations.html">3.9. Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">3.10. Simple MD Example</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">Learn the Jargon</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bashtutorial0.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bashtutorial1.html">Managing in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Supercomputer.html">Using Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">Accessing the HPC</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PythonConda.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BasicMD.html">Brief Introduction to Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">Simple MD Tutorial</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Simulation Theory</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory/simulation.html">1. What are Simulations?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/classical.html">2. Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/qmmm.html">3. QM/MM Simulations</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../MDTutorials.html">1. Amber Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation/distance.html">1.3. Distance Restraints</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">1.4. Claisen Rearrangment</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Simulation.html">Simulation Theory &amp; Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/notes.html">Simulation Theory Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Media.html">2. Making Figures &amp; Movies</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../ChimeraX.html">2.3. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/images.html">2.3.3. Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/fade.html">2.3.4. Fading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html">2.3.5. Morphing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/rock.html">2.3.6. Spin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">2.3.7. Rocking</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../VMD.html">2.4. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../vmd/ffmpeg.html">2.4.1. ffmpeg</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../simulation/tutorials.html">Simulation Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../simulation/distance.html">Applying Distance Restraints in Classical MD SImulations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../simulation/claisen.html">Claisen Rearrangment</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../VisualizationTools.html">Visualization Tools</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../chimera/ChimeraX.html">ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/rock.html">Spin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
 </ul>
-<ul class="nav bd-sidenav">
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Extra.html"><strong>Addtional Resources</strong></a></li>
 </ul>
 
@@ -366,10 +357,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">3.6.1. Slurm Scripts</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-management">3.6.2. Job Management</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-hpc-resources">3.6.3. Information on HPC Resources</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-pre-installed-softwares">3.6.4. Information on Pre-Installed Softwares</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">Slurm Scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-management">Job Management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-hpc-resources">Information on HPC Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-pre-installed-softwares">Information on Pre-Installed Softwares</a></li>
 </ul>
             </nav>
         </div>
@@ -382,11 +373,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hpc-and-using-slurm">
-<h1><span class="section-number">3.6. </span>HPC and Using Slurm<a class="headerlink" href="#hpc-and-using-slurm" title="Permalink to this heading">#</a></h1>
+<h1>HPC and Using Slurm<a class="headerlink" href="#hpc-and-using-slurm" title="Permalink to this heading">#</a></h1>
 <p>SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters.</p>
 <p><a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
 <section id="slurm-scripts">
-<h2><span class="section-number">3.6.1. </span>Slurm Scripts<a class="headerlink" href="#slurm-scripts" title="Permalink to this heading">#</a></h2>
+<h2>Slurm Scripts<a class="headerlink" href="#slurm-scripts" title="Permalink to this heading">#</a></h2>
 <p><span style="font-size:1.5em;"><strong>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</strong></span></p>
 <p>The way that Slurm determines how to allocate your jobs to the cluster (i.e. across how many compute nodes, with how many CPUs, for how long etc) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>. Here are some examples:</p>
 <div class="sd-tab-set docutils">
@@ -438,7 +429,7 @@ Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <section id="job-management">
-<h2><span class="section-number">3.6.2. </span>Job Management<a class="headerlink" href="#job-management" title="Permalink to this heading">#</a></h2>
+<h2>Job Management<a class="headerlink" href="#job-management" title="Permalink to this heading">#</a></h2>
 <p>Submitting a job</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm
 </pre></div>
@@ -454,7 +445,7 @@ squeue<span class="w"> </span>-u<span class="w"> </span>*USERNAME*<span class="w
 </div>
 </section>
 <section id="information-on-hpc-resources">
-<h2><span class="section-number">3.6.3. </span>Information on HPC Resources<a class="headerlink" href="#information-on-hpc-resources" title="Permalink to this heading">#</a></h2>
+<h2>Information on HPC Resources<a class="headerlink" href="#information-on-hpc-resources" title="Permalink to this heading">#</a></h2>
 <p>Get information about the resources on available nodes that make up the HPC cluster with <code class="docutils literal notranslate"><span class="pre">sinfo</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span><span class="c1">## All resources </span>
 sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>idle<span class="w"> </span><span class="c1">## Idle nodes </span>
@@ -462,7 +453,7 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
 </div>
 </section>
 <section id="information-on-pre-installed-softwares">
-<h2><span class="section-number">3.6.4. </span>Information on Pre-Installed Softwares<a class="headerlink" href="#information-on-pre-installed-softwares" title="Permalink to this heading">#</a></h2>
+<h2>Information on Pre-Installed Softwares<a class="headerlink" href="#information-on-pre-installed-softwares" title="Permalink to this heading">#</a></h2>
 <p>Additionally, the HPC often has preinstalled software. You can find this using the <code class="docutils literal notranslate"><span class="pre">module</span></code> command. The <code class="docutils literal notranslate"><span class="pre">module</span></code> system to load most software into a user’s environment. Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
 <p>List all available modules</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>av
@@ -520,15 +511,15 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.5. </span>Accessing the HPC</p>
+        <p class="prev-next-title">Accessing the HPC</p>
       </div>
     </a>
     <a class="right-next"
-       href="../StructureFiles.html"
+       href="../PythonConda.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.7. </span>Molecular Structure Files</p>
+        <p class="prev-next-title">Python &amp; Conda</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -550,10 +541,10 @@ sinfo<span class="w"> </span><span class="p">|</span><span class="w"> </span>gre
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">3.6.1. Slurm Scripts</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-management">3.6.2. Job Management</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-hpc-resources">3.6.3. Information on HPC Resources</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-pre-installed-softwares">3.6.4. Information on Pre-Installed Softwares</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">Slurm Scripts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-management">Job Management</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-hpc-resources">Information on HPC Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#information-on-pre-installed-softwares">Information on Pre-Installed Softwares</a></li>
 </ul>
   </nav></div>
 

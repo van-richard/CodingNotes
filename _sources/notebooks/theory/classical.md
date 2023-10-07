@@ -1,4 +1,4 @@
-# Molecular Dynamics
+# Classical Molecular Dynamics 
 
 ## Potential Energy
 

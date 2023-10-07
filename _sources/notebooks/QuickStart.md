@@ -1,3 +1,6 @@
 # Quick Start Guide
 
-A quick introduction to programming and computational chemistry!
+A quick and easy introduction to programming and computational modelling!
+
+```{tableofcontents}
+```

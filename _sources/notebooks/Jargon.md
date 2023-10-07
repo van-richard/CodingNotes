@@ -2,42 +2,65 @@
 
 ## What is a Computer?
 
+<!-- My early concept of coding was the typical *hacker-man* we see in movies. You know.. The guy sitting in a dark room with a million monitors, each screen with an absurd amount of code running.. and the green text.. This concept made me dislike the idea of sitting at a computer all day to crunch numbers..  
 
-<span style="font-size:1.5em;">**Unix/Linux**</span> 
+But then I learned about the field of **computational chemistry!** *You can do chemistry on a computer?? Whaaa???*
 
-Like Windows and MacOS, Linux is just a operating system. However, Linux is open-source, allowing the user the freedom to run any program, study the how the program works, make changes to the program, redistribute copies of modiciation. It is community driven, 'by the people, for the people' (lol). There are several distributions available, in other words, there are different flavors of linux systems depending on your "tech" tastes. Some popular distributions you might have heard are linux mint, debian, ubuntu, and fedora. For supercomputing clusters, you will often find them running Red Hat Enterprise Linux, Ubuntu Server, CentOS, or SUSE Enterprise Linus distributions.
+Prior to joining the Shao Lab, I had ZERO programming experience (I barely knew how to send emails, lol). -->
 
-Unix is very similar to Linux, in that it is a modular OS made up of kernals, shell, etc. A shell could be the terminal I mentioned earlier, an example of Unix system is MacOS.
+
+<span style="font-size:1.5em;">**Unix/Linux Operating Systems**</span> 
+
+- Like Windows and MacOS, Linux is just a operating system
+- It is open-source, allowing the user the freedom to run any program, study the how the program works, make changes to the program, redistribute copies of modiciation
+- Several distributions available for different applications
+    - Example: Linux Mint, Debian, Ubuntu, or Fedora
+- Linux is also used on supercomputing clusters, some distrubtions are:
+    - Red Hat Enterprise Linux, Ubuntu Server, CentOS, or SUSE Enterprise Linux
+
+- Unix is very similar to Linux
+    - Made up of kernals, shell, etc. 
+- But this is not open-source, you need a license for use
+    - Example: MacOS is a Unix system
 
 
 <span style="font-size:1.5em;">**Terminal and the Command Line**</span>
 
-A terminal is just a text-based interface to your computer. If you have MacOS, then this is the `Terminal` app that is already installed on your computer. If you have a Windows machine, then you have a similar interface called `Command Prompt`. 
+- The terminal is a text-based interface to your computer, some examples applications are:
+    - On MacOS, you have the `Terminal` app that is already installed on your computer
+    - On Windows, you have a similar interface called `Command Prompt`
+
+- The command line is how you interact with the computer by inputting lines of text called "command-lines" into the terminal
+- Also called, Command Line Interface (CLI), this is probably different to what you're use to which are Graphical User Interfaces (GUI)
+    - With a GUI, you can use your mouse to move around
+    - In CLI, you need to type in commands to do things!
 
 ```{note} 
-**Windows Users:** Depending on which version of Windows you have, you will need to activate WSL and install the `Ubuntu` app. Someday, I will write a tutorial to show you how to do this..
+**Windows Users:** Depending on your version of Windows, you will need to activate WSL and install the `Ubuntu` app.
 ```
 
 
-<span style="font-size:1.5em;">**Bash**</span>
+<span style="font-size:1.5em;">**`Bash` Shell**</span>
 
-`Bash` is Unix shell and command language. It was the default login shell for most Linux distributions. Most of use in this lab use Bash, but there are other shells available like `zsh`, `tcsh`, or `csh`. `Bash` is a command processor that will run in your Terminal. You give Bash a command, and it will execute it for you. More is discussed [here](https://van-richard.github.io/CodingNotes/notebooks/commandline/bash.html)
+- `Bash` is Unix shell and command language
+- Most of us in lab use this language in our CLI/terminal
+    - But there are other shells available like `zsh`, `tcsh`, or `csh`
+- Each language use slightly different functions and scripting notation
 
 
 ## What are Supercomputers?
 
-Supercomputers, or high-performance computing (HPC) centers, is where we perform most of our work.
+- Supercomputers, or high-performance computing (HPC) centers, is where we perform most of our work
+- In Oklahoma, we have access to:
+    1. [Oscer, OU's supercomputer](https://www.ou.edu/oscer)
+        - Also called Schooner
+    2. [Pete, OSU's supercomputer](https://hpcc.okstate.edu/pete-supercomputer.html)
 
-In Oklahoma, we have access to:
+- `ssh` is a command we run to access the supercomputers over the internet
 
-1. [Oscer, OU's supercomputer](https://www.ou.edu/oscer)
-2. [Pete, OSU's supercomputer](https://hpcc.okstate.edu/pete-supercomputer.html)
-
-At OU, the supercomputer's name can be Oscer or Schooner. I've heard people use this interchangably.
-
-`ssh` is the command is we use to log into a computer over the internet. Tips are discussed [here](https://van-richard.github.io/CodingNotes/notebooks/commandline/ssh.html)
-
-Slurm is the cluster management system used on high-performance clusters (HPC) such as the Oscer or Pete supercomputers. Slurm will come with its own set of commands discussed [here](https://van-richard.github.io/CodingNotes/notebooks/commandline/slurm.html)
+- Slurm is a cluster management system used on high-performance clusters (HPC) 
+- Running jobs on the supercomputer requires some Slurm commands
+    - Slurm scripts have additional informatin for the Slurm scheduler
 
 ## Git/Github
 
