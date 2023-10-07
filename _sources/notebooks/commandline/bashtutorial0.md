@@ -8,18 +8,15 @@ First we need to find your terminal!! Then, I want to introduce the general layo
     * Absolute and relative paths 
 
 ````{note}
- We will use the terminal on your local computer.
- 
- There will be some differences between your terminal and mine. 
-````
 
-```{note}
-When using the terminal, you usually **do not** need to use the mouse/trackpad! 
-```
+ We will use the terminal on your local computer.
+ In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.
+
+````
 
 ## Where are we?
 
-The first command we are going to learn is `pwd` which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. `pwd` tells you what your current or present working directory (folder) is.
+The first command to learn is `pwd` which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. `pwd` tells you what your current or present working directory (folder) is.
 
 ```bash
 pwd
@@ -49,7 +46,7 @@ mkdir test
 Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called "amino acids". Rather than using a space, use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
 ```
 
-## Moving in/out of Directories
+## Go in/out of Directories
 
 We can enter a folder with the `cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
 
@@ -84,11 +81,18 @@ pwd
 
 ## What are Paths?
 
-There are 2 types of paths we can use, absolute and relative. Whenever we refer to a file or directory we are using one of these paths. Whenever we refer to a file or directory, we can use either type of path (either way, the system will still be directed to the same location).
+There are 2 types of paths we can use
 
-To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what's called the root directory. It is denoted by a single slash ( / ). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.
+1. Absolute
+2. Relative. 
+   
+Whenever we refer to a file or directory we are using one of these paths.
 
-Absolute paths specify a location (file or directory) in relation to the root directory. You can identify them easily as they always begin with a forward slash ( `/`)
+To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what's called the root directory. It is denoted by a single slash (`/`). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.
 
-Relative paths specify a location (file or directory) in relation to where we currently are in the system. They will not begin with a slash.
 
+```{tip}
+Absolute paths specify a location of a file/folder in relation to the root directory `/`
+
+Relative paths specify a location file/folder  in relation to where *you* currently are in the system.
+```

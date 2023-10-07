@@ -1,30 +1,20 @@
 # Learn the Jargon
 
-```{glossary}
-Linux
-    is a 
-
-Unix
-    is 
-    
-
-```
-
-## What is a Computer?
-
-<!-- My early concept of coding was the typical *hacker-man* we see in movies. You know.. The guy sitting in a dark room with a million monitors, each screen with an absurd amount of code running.. and the green text.. This concept made me dislike the idea of sitting at a computer all day to crunch numbers..  
-
-But then I learned about the field of **computational chemistry!** *You can do chemistry on a computer?? Whaaa???*
-
-Prior to joining the Shao Lab, I had ZERO programming experience (I barely knew how to send emails, lol). -->
-
+## What Computer?
 
 <span style="font-size:1.5em;">**Unix/Linux Operating Systems**</span> 
 
-        - Made up of kernals, shell, etc. 
-    - But this is not open-source, you need a license for use
-        - Example: MacOS is a Unix system
+- Like Windows and MacOS, Linux is just a operating system
+- It is open-source, allowing the user the freedom to run any program, study the how the program works, make changes to the program, redistribute copies of modiciation
+- Several distributions available for different applications
+    - Example: Linux Mint, Debian, Ubuntu, or Fedora
+- Linux is also used on supercomputing clusters, some distrubtions are:
+    - Red Hat Enterprise Linux, Ubuntu Server, CentOS, or SUSE Enterprise Linux
 
+- Unix is very similar to Linux
+    - Made up of kernals, shell, etc. 
+- But this is not open-source, you need a license for use
+    - Example: MacOS is a Unix system
 
 
 <span style="font-size:1.5em;">**Terminal and the Command Line**</span>

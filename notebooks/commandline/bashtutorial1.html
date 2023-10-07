@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Managing in Terminal &#8212; Coding Notes</title>
+    <title>Files in Terminal &#8212; Coding Notes</title>
   
   
   
@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Supercomputers" href="../Supercomputer.html" />
-    <link rel="prev" title="Navigating in Terminal" href="bashtutorial0.html" />
+    <link rel="prev" title="Terminal &amp; Command Line" href="../CommandLine.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,8 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Jargon.html">Learn the Jargon</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../CommandLine.html">Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bashtutorial0.html">Navigating in Terminal</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Managing in Terminal</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Files in Terminal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Supercomputer.html">Supercomputers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../SSH.html">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Slurm.html">HPC and Using Slurm</a></li>
@@ -214,6 +213,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../misc/linuxcommands/man.html"><code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/linuxcommands/mkdir.html"><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/linuxcommands/mv.html"><code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/linuxcommands/rsync.html"><code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/linuxcommands/scp.html"><code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/linuxcommands/sed.html"><code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/linuxcommands/seq.html"><code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../misc/linuxcommands/setfacl.html"><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
@@ -405,9 +406,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -418,20 +417,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Managing in Terminal</h1>
+    <h1>Files in Terminal</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-copy-files-folders">How to Copy Files/Folders?</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -441,26 +431,46 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="managing-in-terminal">
-<h1>Managing in Terminal<a class="headerlink" href="#managing-in-terminal" title="Permalink to this heading">#</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
-<p>Now, we will see how we can manage our files and folders with the command line.</p>
-<p>In this tutorial, we will learn:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="files-in-terminal">
+<h1>Files in Terminal<a class="headerlink" href="#files-in-terminal" title="Permalink to this heading">#</a></h1>
+<p>Your mouse does not work in the way you expect with the command line interface…</p>
+<p>Using the terminal means you need to learn how to to communicate with the computer through <strong>commands</strong>.</p>
+<p>Simple tasks like:</p>
 <ul class="simple">
 <li><p>Copying files/folders (<code class="docutils literal notranslate"><span class="pre">cp</span></code>)</p></li>
 <li><p>Moving files/folders (<code class="docutils literal notranslate"><span class="pre">mv</span></code>)</p></li>
 <li><p>Renaming files/folders (<code class="docutils literal notranslate"><span class="pre">mv</span></code>)</p></li>
 <li><p>Deleting files/folders (<code class="docutils literal notranslate"><span class="pre">rm</span></code>)</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>When using the terminal, you usually <strong>do not</strong> need to use the mouse/trackpad!</p>
+<p>Is usually done with at flick of your mouse, but now we have the command to start automating task.</p>
+<p><strong>Copying Files/Folders</strong></p>
+<p>To copy files, you use the command, <code class="docutils literal notranslate"><span class="pre">cp</span></code>, where you include the file or folder you want to copy followed by the path you want the copy to go!</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+General Notation</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
+</pre></div>
 </div>
-</section>
-<section id="how-to-copy-files-folders">
-<h2>How to Copy Files/Folders?<a class="headerlink" href="#how-to-copy-files-folders" title="Permalink to this heading">#</a></h2>
-</section>
+<p>For both <code class="docutils literal notranslate"><span class="pre">[source]</span></code> and <code class="docutils literal notranslate"><span class="pre">[destination]</span></code>, you can use the absolute or relative path</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Copy Files</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>file.txt<span class="w"> </span>/path/to/destination/file-copy.txt
+</pre></div>
+</div>
+<p>Copying a file is straight forward, you can even give the file a new name at the destination.</p>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+Copy Folders</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>directory/<span class="w"> </span>path/to/destination
+</pre></div>
+</div>
+<p>Copying a directory requires the option <code class="docutils literal notranslate"><span class="pre">-r</span></code>, otherwise it is the same as copying files.</p>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -495,12 +505,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="bashtutorial0.html"
+       href="../CommandLine.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Navigating in Terminal</p>
+        <p class="prev-next-title">Terminal &amp; Command Line</p>
       </div>
     </a>
     <a class="right-next"
@@ -521,21 +531,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-copy-files-folders">How to Copy Files/Folders?</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
