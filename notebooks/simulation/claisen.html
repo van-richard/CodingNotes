@@ -448,6 +448,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">3.2.3.5. Automate the Umbrella Windows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">3.2.3.6. Running the QM/MM Simulations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">3.2.3.7. Visualize the Trajectories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">3.2.3.8. Free Energy Profile with MBAR</a></li>
 </ul>
             </nav>
         </div>
@@ -486,6 +487,7 @@ document.write(`
 <p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Trajectory of the claisen rearrangement reaction, allyl vinyl ether is shown in ball-and-stick, and the trajectory was viewed on VMD.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<hr class="docutils" />
 <section id="use-iqmol-to-make-an-allyl-vinyl-ether-pdb">
 <h2><span class="section-number">3.2.3.1. </span>Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code><a class="headerlink" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb" title="Permalink to this heading">#</a></h2>
 <p>Use IQmol to make a model of allyl vinyl ether, and save the file as <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code>, remember to:</p>
@@ -502,6 +504,7 @@ document.write(`
 </figcaption>
 </figure>
 </section>
+<hr class="docutils" />
 <section id="prepare-project-folder-on-the-cluster">
 <h2><span class="section-number">3.2.3.2. </span>Prepare Project Folder on the Cluster<a class="headerlink" href="#prepare-project-folder-on-the-cluster" title="Permalink to this heading">#</a></h2>
 <p>Login to Pete with <code class="docutils literal notranslate"><span class="pre">ssh</span></code>:</p>
@@ -613,6 +616,7 @@ date
 </div>
 <p>When you <code class="docutils literal notranslate"><span class="pre">ls</span></code> the directory you should see a few new files:</p>
 </section>
+<hr class="docutils" />
 <section id="restraint-files-cv-rst">
 <h3><span class="section-number">3.2.3.4.2. </span>Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#restraint-files-cv-rst" title="Permalink to this heading">#</a></h3>
 <p>A restraint file (<code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>) contains information about the parameters for each umbrella window.</p>
@@ -824,6 +828,7 @@ step6.00_equilibration.mdin</label><div class="sd-tab-content docutils">
 <p><span style="align:center; font-size:2em;"><strong>We can start with preparing the umbrella windows!</strong></span></p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="automate-the-umbrella-windows">
 <h2><span class="section-number">3.2.3.5. </span>Automate the Umbrella Windows<a class="headerlink" href="#automate-the-umbrella-windows" title="Permalink to this heading">#</a></h2>
 <p>Go back one directory to the <code class="docutils literal notranslate"><span class="pre">pm3/</span></code> folder</p>
@@ -950,6 +955,7 @@ cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><s
 </div>
 <p><span style="align: center;font-size:2em;"><strong>TO0000000THE LAST STEP WOOOO!</strong></span></p>
 </section>
+<hr class="docutils" />
 <section id="running-the-qm-mm-simulations">
 <h2><span class="section-number">3.2.3.6. </span>Running the QM/MM Simulations<a class="headerlink" href="#running-the-qm-mm-simulations" title="Permalink to this heading">#</a></h2>
 <p>We have 2 files to make.</p>
@@ -1050,8 +1056,74 @@ date
 <p>The first step where we need generate the intial pathway will take a lot of time…</p>
 </div>
 </section>
+<hr class="docutils" />
 <section id="visualize-the-trajectories">
 <h2><span class="section-number">3.2.3.7. </span>Visualize the Trajectories<a class="headerlink" href="#visualize-the-trajectories" title="Permalink to this heading">#</a></h2>
+<p>Prep some stuff from vmd here or converting</p>
+</section>
+<hr class="docutils" />
+<section id="free-energy-profile-with-mbar">
+<h2><span class="section-number">3.2.3.8. </span>Free Energy Profile with MBAR<a class="headerlink" href="#free-energy-profile-with-mbar" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>I do not know if this works on Windows, so try this on pete first!</p>
+</div>
+<p>To do this part, you need to:</p>
+<ul class="simple">
+<li><p>Install the <code class="docutils literal notranslate"><span class="pre">mbar</span></code> environment to Conda on Pete <span class="xref myst">Tutorial Here</span>. Copy the two scripts in mentioned here to a <code class="docutils literal notranslate"><span class="pre">Scripts/</span></code> folder.</p></li>
+</ul>
+<p>For this analysis, I copy the <code class="docutils literal notranslate"><span class="pre">mbar.ipynb</span></code> to the project’s <code class="docutils literal notranslate"><span class="pre">mbar/</span></code> folder</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">mbar.ipynb</span></code> noteboook looks like this, in the refernce file, you can see a pdf file containing th the output from my analysis</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">AutoMinorLocator</span><span class="p">,</span> <span class="n">LogLocator</span><span class="p">,</span> <span class="n">NullFormatter</span>
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="kn">import</span> <span class="n">resample</span>
+
+<span class="kn">import</span> <span class="nn">pymbar</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;/Users/van/Scripts/&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">mbar_pmf</span> <span class="kn">import</span> <span class="n">mbar_pmf</span>
+
+<span class="n">n_windows</span> <span class="o">=</span> <span class="mi">21</span> 
+<span class="n">val_kn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_windows</span><span class="p">):</span>
+    <span class="n">fnames</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;../</span><span class="si">%02d</span><span class="s1">/step6.0?_equilibration.cv&#39;</span> <span class="o">%</span> <span class="n">i</span><span class="p">))</span>
+    <span class="n">arrays</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="mi">1</span><span class="p">)[::]</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fnames</span><span class="p">[:]]</span>
+    <span class="n">val_kn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">arrays</span><span class="p">))</span>
+<span class="n">val0_k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">2.00</span><span class="p">,</span> <span class="mf">2.00</span><span class="p">,</span> <span class="n">n_windows</span><span class="p">)</span>
+<span class="n">K_k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n_windows</span><span class="p">)</span> <span class="o">*</span> <span class="mf">300.0</span>
+<span class="n">val_min</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.00</span>
+<span class="n">val_max</span> <span class="o">=</span> <span class="mf">2.00</span>
+<span class="n">nbins</span> <span class="o">=</span> <span class="n">n_windows</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_windows</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Window </span><span class="si">%02d</span><span class="s2">:&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">,</span> <span class="n">pymbar</span><span class="o">.</span><span class="n">timeseries</span><span class="o">.</span><span class="n">subsampleCorrelatedData</span><span class="p">(</span><span class="n">val_kn</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">conservative</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+
+<span class="n">mbar</span> <span class="o">=</span> <span class="n">mbar_pmf</span><span class="p">(</span><span class="n">val_kn</span><span class="p">,</span> <span class="n">val0_k</span><span class="p">,</span> <span class="n">K_k</span><span class="p">,</span> <span class="mf">300.0</span><span class="p">)</span>
+
+<span class="n">bin_centers</span><span class="p">,</span> <span class="n">f_i</span><span class="p">,</span> <span class="n">df_i</span><span class="p">,</span> <span class="n">reweighting_entropy</span> <span class="o">=</span> <span class="n">mbar</span><span class="o">.</span><span class="n">get_pmf</span><span class="p">(</span><span class="n">val_min</span><span class="p">,</span> <span class="n">val_max</span><span class="p">,</span> <span class="n">nbins</span><span class="p">)</span>
+<span class="n">bin_centers</span><span class="p">,</span> <span class="n">f_i</span><span class="p">,</span> <span class="n">df_i</span><span class="p">,</span> <span class="n">reweighting_entropy</span> <span class="o">=</span> <span class="n">mbar</span><span class="o">.</span><span class="n">get_pmf</span><span class="p">(</span><span class="n">val_min</span><span class="p">,</span> <span class="n">val_max</span><span class="p">,</span> <span class="n">nbins</span><span class="p">,</span> <span class="n">uncertainties</span><span class="o">=</span><span class="s1">&#39;from-specified&#39;</span><span class="p">,</span> <span class="n">pmf_reference</span><span class="o">=</span><span class="n">f_i</span><span class="p">[:</span><span class="mi">20</span><span class="p">]</span><span class="o">.</span><span class="n">argmin</span><span class="p">())</span>
+<span class="n">np</span><span class="o">.</span><span class="n">savetxt</span><span class="p">(</span><span class="s2">&quot;freefile_mbar&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">bin_centers</span><span class="p">,</span> <span class="n">f_i</span><span class="p">,</span> <span class="n">df_i</span><span class="p">)))</span>
+
+<span class="n">initial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;freefile_mbar&#39;</span> <span class="p">)</span>
+
+<span class="n">bar</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">initial</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">initial</span><span class="p">[:</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">err</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">initial</span><span class="p">[</span><span class="n">initial</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">argmax</span><span class="p">()][</span><span class="mi">2</span><span class="p">],</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">initial</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">initial</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">initial</span><span class="p">[:</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">yerr</span><span class="o">=</span><span class="n">initial</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PM3&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="s1">&#39;$\Delta$G$^\ddag$ = </span><span class="si">%s</span><span class="s1"> $\pm$ </span><span class="si">%s</span><span class="s1"> kcal mol$^{-1}$&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">bar</span><span class="p">,</span> <span class="n">err</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;R1 - R2 (Å)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Potential of Mean Force (kcal/mol)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;claisen_pmf.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="" src="../../_images/claisen_pmf.png" /></p>
 </section>
 </section>
 
@@ -1135,6 +1207,7 @@ date
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">3.2.3.5. Automate the Umbrella Windows</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">3.2.3.6. Running the QM/MM Simulations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">3.2.3.7. Visualize the Trajectories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">3.2.3.8. Free Energy Profile with MBAR</a></li>
 </ul>
   </nav></div>
 
