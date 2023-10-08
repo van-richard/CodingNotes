@@ -2,7 +2,7 @@
 
 1. Right-Click and Copy the link:
 
-    [mbar.yaml](../../asset/mbar.yaml)
+    [mbar.yaml](../../assets/mbar.yaml)
 
 2. On the cluster, download the file with `wget`
 
