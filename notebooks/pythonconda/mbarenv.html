@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.25.5. Create Websites &#8212; Coding Notes</title>
+    <title>5.25.6. Conda mbar Environment &#8212; Coding Notes</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/pythonconda/jupyterbook';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/pythonconda/mbarenv';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5.25.6. Conda mbar Environment" href="mbarenv.html" />
-    <link rel="prev" title="5.25.4. Jupyter Notebooks" href="jupyter.html" />
+    <link rel="next" title="5.25.7. Python" href="python.html" />
+    <link rel="prev" title="5.25.5. Create Websites" href="jupyterbook.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -229,8 +229,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="condaintel.html">5.25.2. Intel Conda Environments on m1 &amp; m2 Mac Computers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="installconda.html">5.25.3. Installing Miniforge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="jupyter.html">5.25.4. Jupyter Notebooks</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.25.5. Create Websites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mbarenv.html">5.25.6. Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="jupyterbook.html">5.25.5. Create Websites</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.25.6. Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="python.html">5.25.7. Python</a></li>
 </ul>
 </li>
@@ -312,7 +312,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/pythonconda/jupyterbook.md" target="_blank"
+      <li><a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/pythonconda/mbarenv.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +342,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/pythonconda/jupyterbook.md" target="_blank"
+      <li><a href="../../_sources/notebooks/pythonconda/mbarenv.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -411,9 +411,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -424,20 +422,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Create Websites</h1>
+    <h1>Conda mbar Environment</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">5.25.5.1. Jupyter Book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">5.25.5.2. Tutorial</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -447,88 +436,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="create-websites">
-<h1><span class="section-number">5.25.5. </span>Create Websites<a class="headerlink" href="#create-websites" title="Permalink to this heading">#</a></h1>
-<p>Requires a GitHub account.</p>
-<section id="jupyter-book">
-<h2><span class="section-number">5.25.5.1. </span>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this heading">#</a></h2>
-<p>Design a website using jupyter notebooks</p>
-<p><a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">Jupyter-Book</a></p>
-</section>
-<section id="tutorial">
-<h2><span class="section-number">5.25.5.2. </span>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading">#</a></h2>
-<p>Adapted from their webpage.</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment, install the package, <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyter-book
-</pre></div>
-</div>
-<p>Create a new book</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>create<span class="w"> </span>mynewbook/
-</pre></div>
-</div>
-<p>Building the book</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>mybookname/
-</pre></div>
-</div>
-<p>To publish the book to a Github repository, I use ghp-import.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ghp-import
-ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
-</pre></div>
-</div>
-<p>Then</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>
-git<span class="w"> </span>push
-</pre></div>
-</div>
-<p>I automated this with a <code class="docutils literal notranslate"><span class="pre">build.sh</span></code> script:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="c1"># Import aliases</span>
-<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>expand_aliases<span class="w"> </span>
-<span class="nb">source</span><span class="w"> </span>~/.bash_aliases<span class="w">  </span>
-
-<span class="c1"># Build book and push changes</span>
-myconda<span class="w"> </span>jupyter-book<span class="w"> </span>build<span class="w"> </span>.<span class="w"> </span>--all<span class="w"> </span>
-ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html<span class="w"> </span>
-</pre></div>
-</div>
-<p>To publish you book online, you need to host it on a public repository on Github.</p>
-<ol class="arabic simple">
-<li><p>First, log in to GitHub, then go to the “create a new repository” page: new</p></li>
-<li><p>Next, give your online repository a name and a description. Make your repository public and do not initialize it with a README file, then click “Create repository”.</p></li>
-<li><p>Now, clone the (currently empty) online repository to a location on your local computer. You can do this via the command line with:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/&lt;my-org&gt;/&lt;my-repository-name&gt;<span class="w"> </span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="4">
-<li><p>Copy all of your book files and folders into this newly cloned repository. For example, if you created your book locally with <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">mylocalbook</span></code> and your new repository is called ”myonlinebook,“ you could do this via the command line with:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>mylocalbook/*<span class="w"> </span>myonlinebook/<span class="w"> </span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="5">
-<li><p>Now you need to sync your local and remote (i.e., online) repositories. You can do this with the following commands:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>build.sh
-</pre></div>
-</div>
-<ol class="arabic simple" start="6">
-<li><p>Update the settings for your GitHub pages site:</p>
-<ul class="simple">
-<li><p>Use the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch to host your website.</p></li>
-<li><p>Choose root directory <code class="docutils literal notranslate"><span class="pre">/</span></code> if you’re building the book in it’s own repository. Choose <code class="docutils literal notranslate"><span class="pre">/docs</span></code> directory if you’re building documentation with jupyter-book. From the main branch of your book’s root directory (which should contain the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="conda-mbar-environment">
+<h1><span class="section-number">5.25.6. </span>Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment<a class="headerlink" href="#conda-mbar-environment" title="Permalink to this heading">#</a></h1>
+<ol class="arabic">
+<li><p>Right-Click and Copy the link:</p>
+<p><span class="xref myst">mbar.yaml</span></p>
 </li>
+<li><p>On the cluster, download the file with <code class="docutils literal notranslate"><span class="pre">wget</span></code></p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<ol class="arabic simple" start="3">
+<li><p>On the cluster, make sure your conda env is activated, then creat ethe environment</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate
+conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>mbar.yml
 </pre></div>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -563,20 +488,20 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="jupyter.html"
+       href="jupyterbook.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.25.4. </span>Jupyter Notebooks</p>
+        <p class="prev-next-title"><span class="section-number">5.25.5. </span>Create Websites</p>
       </div>
     </a>
     <a class="right-next"
-       href="mbarenv.html"
+       href="python.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.25.6. </span>Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</p>
+        <p class="prev-next-title"><span class="section-number">5.25.7. </span>Python</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -589,21 +514,6 @@ ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> <
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-book">5.25.5.1. Jupyter Book</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorial">5.25.5.2. Tutorial</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
