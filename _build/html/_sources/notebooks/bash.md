@@ -1,3 +1,8 @@
+---
+myst:
+  enable_extensions: ["deflist"]
+---
+
 # More `bash`
 
 ## Built-in Variables

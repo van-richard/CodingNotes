@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.18. sed - tranform/replace text! &#8212; Coding Notes</title>
+    <title>5.3.16. sed - tranform/replace text! &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/linuxcommands/sed';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5.19. seq - sequence of numbers" href="seq.html" />
-    <link rel="prev" title="5.17. scp - copy files/folders over ssh" href="scp.html" />
+    <link rel="next" title="5.3.17. seq - sequence of numbers" href="seq.html" />
+    <link rel="prev" title="5.3.15. scp - copy files/folders over ssh" href="scp.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -202,40 +202,44 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../AdditionalResources.html">5. Additional Resources</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../bash.html">5.1. More <code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="awk.html">5.3. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cat.html">5.4. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cd.html">5.5. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chsh.html">5.6. chsh - change shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cp.html">5.7. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="grep.html">5.8. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="head.html">5.9. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help.html">5.10. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ls.html">5.11. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="man.html">5.12. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mkdir.html">5.13. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module.html">5.14. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mv.html">5.15. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rsync.html">5.16. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scp.html">5.17. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.18. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seq.html">5.19. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setfacl.html">5.20. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sort.html">5.21. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tail.html">5.22. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tar.html">5.23. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="trap.html">5.24. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../pythonconda.html">5.25. Python &amp; Conda</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/conda.html">5.25.1. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/condaintel.html">5.25.2. Intel Conda Environments on m1 &amp; m2 Mac Computers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/installconda.html">5.25.3. Installing Miniforge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyter.html">5.25.4. Jupyter Notebooks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyterbook.html">5.25.5. Create Websites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/python.html">5.25.6. Python</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../linux.html">5.3. Unix/Linux Commands</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="awk.html">5.3.1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cat.html">5.3.2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cd.html">5.3.3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chsh.html">5.3.4. chsh - change shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cp.html">5.3.5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grep.html">5.3.6. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="head.html">5.3.7. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="help.html">5.3.8. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ls.html">5.3.9. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="man.html">5.3.10. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mkdir.html">5.3.11. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.html">5.3.12. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mv.html">5.3.13. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rsync.html">5.3.14. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scp.html">5.3.15. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.3.16. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seq.html">5.3.17. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setfacl.html">5.3.18. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sort.html">5.3.19. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tail.html">5.3.20. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tar.html">5.3.21. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trap.html">5.3.22. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../sshslurm.html">5.26. Customize <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshautologin.html">5.26.1. Automate Login</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshconfig.html">5.26.2. Configure <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../pythonconda.html">5.4. Python &amp; Conda</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pythonconda/conda.html">5.4.1. Conda Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pythonconda/condaintel.html">5.4.2. Intel Conda Environments on m1 &amp; m2 Mac Computers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pythonconda/installconda.html">5.4.3. Installing Miniforge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyter.html">5.4.4. Jupyter Notebooks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyterbook.html">5.4.5. Create Websites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pythonconda/mbarenv.html">5.4.6. Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pythonconda/python.html">5.4.7. Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../sshslurm.html">5.5. Customize <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshautologin.html">5.5.1. Automate Login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshconfig.html">5.5.2. Configure <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -436,7 +440,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sed-tranform-replace-text">
-<h1><span class="section-number">5.18. </span><code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!<a class="headerlink" href="#sed-tranform-replace-text" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.3.16. </span><code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!<a class="headerlink" href="#sed-tranform-replace-text" title="Permalink to this heading">#</a></h1>
 <p>We can replace some text, INPUT, with another text, OUTPUT, in a file with <code class="docutils literal notranslate"><span class="pre">sed</span></code>. The notation is:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span><span class="s1">&#39;s/INPUT/OUTPUT/&#39;</span><span class="w"> </span>file
 </pre></div>
@@ -504,7 +508,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.17. </span><code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</p>
+        <p class="prev-next-title"><span class="section-number">5.3.15. </span><code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</p>
       </div>
     </a>
     <a class="right-next"
@@ -512,7 +516,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.19. </span><code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</p>
+        <p class="prev-next-title"><span class="section-number">5.3.17. </span><code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

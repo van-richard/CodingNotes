@@ -1,4 +1,0 @@
-# Simulation Theory & Tutorials
-
-```{tableofcontents}
-```
