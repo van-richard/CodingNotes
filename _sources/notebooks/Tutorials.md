@@ -4,6 +4,8 @@ Examples with tips and references files included
 
 ## Amber Simulations
 
+* [Amber22 + Torchmd-net](simulation/install)
+
 ::::{grid} 1
 :gutter: 1
 
