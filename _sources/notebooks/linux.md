@@ -1,24 +1,113 @@
-# Unix/Linux Commands
+---
+orphan: true
+---
 
-```{tableofcontents}
-```
+# List of Commands
 
-<!-- [](commands/awk.md) <br>
-[](commands/cat.md) <br>
-[](commands/cd.md) <br>
-[](commands/cd.md) <br>
-[](commands/cp.md) <br>
-[](commands/grep.md) <br>
-[](commands/head.md) <br>
-[](commands/help.md) <br>
-[](commands/ls.md) <br>
-[](commands/man.md) <br>
-[](commands/mkdir.md) <br>
-[](commands/mv.md) <br>
-[](commands/sed.md) <br>
-[](commands/seq.md) <br>
-[](commands/setfacl.md) <br>
-[](commands/sort.md) <br>
-[](commands/tail.md) <br>
-[](commands/tar.md) <br>
-[](commands/trap.md) <br> -->
+:::{Glossary}
+
+[awk](./commands/awk)
+     manipulate text
+
+
+[cat](./commands/cat)
+     print input to standard output
+
+
+[cd](./commands/cd)
+     change directories
+
+
+[chsh](./commands/chsh)
+     change shell
+
+
+[cp](./commands/cp)
+     copy files or folders
+
+
+[grep](./commands/grep)
+     search for pattern in file or folders
+
+
+[head](./commands/head)
+     read from top of file to standard output
+
+
+[help](./commands/help)
+     read documentation
+
+
+[less](./commands/less)
+     view files
+
+
+[ls](./commands/ls)
+     list information about files/folders 
+
+
+[man](./commands/man)
+     documentation for various functions 
+
+
+[mkdir](./commands/mkdir)
+     make new directories.
+
+
+[module](./commands/module)
+     load software on slurm
+
+
+[mv](./commands/mv)
+     move files/folders from one place to another.
+
+
+[pwd](./commands/pwd)
+     print working directory
+
+
+[rm](./commands/rm)
+     delete files
+
+
+[rsync](./commands/rsync)
+     sync files/folders 
+
+
+[scp](./commands/scp)
+     copy files/folders over ssh
+
+
+[sed](./commands/sed)
+     tranform/replace text!
+
+
+[seq](./commands/seq)
+     sequence of numbers
+
+
+[setfacl](./commands/setfacl)
+     change file/folder permissions 
+
+
+[sort](./commands/sort)
+     sorts lines
+
+
+[ssh](./commands/ssh)
+     secure shell protocol
+
+
+[tail](./commands/tail)
+     read from bottom of file
+
+
+[tar](./commands/tar)
+     compress/uncompress files
+
+
+[trap](./commands/trap)
+     signalled execution
+
+
+:::

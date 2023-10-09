@@ -1,4 +1,4 @@
-# `awk` - manipulate text
+# [`awk`](awk)- manipulate text
 
 Treating a text file, were each space is a column, you can print the columns with:
 

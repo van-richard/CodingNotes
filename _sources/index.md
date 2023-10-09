@@ -48,7 +48,7 @@ I hope you find some of the information helpful.
 
 <br>
 
-5. Other fun activities while researching...
+5. **Other fun activities while researching...**
     
     Like making this website with Jekyll and JupyterBook
 

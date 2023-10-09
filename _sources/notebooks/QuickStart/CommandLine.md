@@ -1,6 +1,10 @@
-# Terminal & Command Line
+---
+orphan: true
+---
 
-Using the terminal will be different depending on whether you're operating system is MacOS or Windows. I personally use MacOS, so most of my examples may look different.
+# {term}`Terminal` & {term}`Command Line`
+
+Using the terminal will be different depending on whether you're operating system is MacOS or Windows. I use MacOS, so my examples may look different.
 
 To start using the terminal, follow these instructions for your operating system:
 

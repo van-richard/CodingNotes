@@ -1,3 +1,4 @@
+(command)=
 # `cp` - copy files or folders
 
 To copy file1 to file2 (new name):

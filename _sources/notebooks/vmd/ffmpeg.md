@@ -1,3 +1,6 @@
+---
+orphan: true
+---
 # ffmpeg
 
 [ffmpeg Download](https://ffmpeg.org)

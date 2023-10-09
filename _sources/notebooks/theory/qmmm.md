@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # QM/MM Simulations
 
 ## Overview

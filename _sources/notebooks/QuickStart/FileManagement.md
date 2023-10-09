@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Files in Terminal
 
 Your mouse does not work in the way you expect with the command line interface.. 
@@ -6,18 +10,26 @@ Using the terminal means you need to learn how to to communicate with the comput
 
 Simple tasks like:
 
-- Copying files/folders (`cp`)
-- Moving files/folders (`mv`)
-- Renaming files/folders (`mv`)
-- Deleting files/folders (`rm`)
+- Copying files/folders ({term}`cp`)
+- Moving files/folders ({term}`mv`)
+- Renaming files/folders ({term}`mv`)
+- Deleting files/folders ({term}`rm`)
 
 Is usually done with at flick of your mouse, but now we have the command to start automating task. 
 
-***
 
-<span style="font-size:1.5em;">*Copying Files/Folders**<span>
+## Copying Files/Folders
 
-To copy files, you use the command, `cp`, where you include the file or folder you want to copy followed by the path you want the copy to go!
+````{margin}
+```{tip}
+More examples can be found here: 
+[](../commands/cp.md)
+```
+````
+
+To copy files, you use the command, {term}`cp`, where you include the file or folder you want to copy followed by the path you want the copy to go!
+
+
 
 ::::{tab-set}
 :::{tab-item} General Notation
@@ -46,11 +58,21 @@ Copying a directory requires the option `-r`, otherwise it is the same as copyin
 :::
 ::::
 
-***
 
-<span style="font-size:1.5em;">**Moving Files/Folders or Renaming Files/Folders**</span>
 
-Yes. They are the same command, `mv`. The notation for `mv` is the same as `cp`!
+## Moving Files/Folders or Renaming Files/Folders 
+
+````{margin}
+```{tip}
+:class: dropdown
+More examples can be found here: 
+[](../commands/mv.md)
+```
+````
+
+Yes. They are the same command, {term}`mv`. The notation for {term}`mv` is the same as {term}`cp`!
+
+
 
 ::::{tab-set}
 :::{tab-item} General Notation
@@ -80,9 +102,18 @@ Moving a directory is the same as the previous examples.
 :::
 ::::
 
-***
 
-<span style="font-size:1.5em;">**Deleting Files/Folders**</span>
+
+
+## Deleting Files/Folders
+
+````{margin}
+```{tip}
+:class: dropdown
+More examples can be found here: 
+[](../commands/rm.md)
+```
+````
 
 ```{caution}
 
@@ -90,7 +121,9 @@ This command is permanent. There is no trash can to recover your files from.....
 
 ```
 
-`rm` is used to delete files/folders, and is written like `cp` and `mv`
+{term}`rm` is used to delete files/folders, and is written like {term}`cp` and {term}`mv`
+
+
 
 ::::{tab-set}
 :::{tab-item} General Notation

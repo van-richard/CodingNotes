@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.3.18. setfacl - change file/folder permissions &#8212; Coding Notes</title>
+    <title>setfacl - change file/folder permissions &#8212; Coding Notes</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/linuxcommands/setfacl';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5.3.19. sort - sorts lines" href="sort.html" />
-    <link rel="prev" title="5.3.17. seq - sequence of numbers" href="seq.html" />
+    <link rel="next" title="sort - sorts lines" href="sort.html" />
+    <link rel="prev" title="seq - sequence of numbers" href="seq.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,93 +157,78 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">1. Jargon</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">2. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CommandLine.html">2.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">2.2. Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">2.3. Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Supercomputer.html">2.4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">2.5. Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">2.6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/PythonConda.html">2.7. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/StructureFiles.html">2.8. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">2.9. Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">Jargon</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../TheoryTutorial.html">3. Theory &amp; Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/notes.html">3.1. Simulation Theory Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../theory/classical.html">3.1.5. Classical Molecular Dynamics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../theory/qmmm.html">3.1.6. QM/MM Simulations</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">Simple MD Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../simulation/tutorials.html">3.2. Simulation Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../simulation/simple.html">3.2.1. Simple MD Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../simulation/distance.html">3.2.2. Applying Distance Restraints in Classical MD SImulations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../simulation/claisen.html">3.2.3. Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes &amp; Examples</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/notes.html">Simulation Theory Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../VisualizationTools.html">4. Visualization Tools</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../chimera/ChimeraX.html">4.1. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/images.html">4.1.3. Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/fade.html">4.1.4. Fading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html">4.1.5. Morphing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/rock.html">4.1.6. Spin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">4.1.7. Rocking</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../vmd/VMD.html">4.2. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../vmd/ffmpeg.html">4.2.1. ffmpeg</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../AdditionalResources.html">5. Additional Resources</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../bash.html">5.1. More <code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../AdditionalResources.html">Additional Resources</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bash/bash.html">More <code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
 
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../linux.html">5.3. Unix/Linux Commands</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="awk.html">5.3.1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cat.html">5.3.2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cd.html">5.3.3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
-<li class="toctree-l3"><a class="reference internal" href="chsh.html">5.3.4. chsh - change shell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cp.html">5.3.5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="grep.html">5.3.6. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="head.html">5.3.7. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="help.html">5.3.8. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ls.html">5.3.9. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="man.html">5.3.10. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mkdir.html">5.3.11. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="module.html">5.3.12. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mv.html">5.3.13. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rsync.html">5.3.14. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scp.html">5.3.15. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sed.html">5.3.16. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="seq.html">5.3.17. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">5.3.18. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sort.html">5.3.19. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tail.html">5.3.20. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tar.html">5.3.21. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="trap.html">5.3.22. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sshslurm/sshautologin.html">Automate Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sshslurm/sshconfig.html">Configure <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="linux.html">Commands</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="awk.html"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">awk</span></code></span>- manipulate text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cat.html"><code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cd.html"><code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="chsh.html">chsh - change shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cp.html"><code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grep.html"><code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="head.html"><code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="help.html"><code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ls.html"><code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="man.html"><code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mkdir.html"><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.html"><code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mv.html"><code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rsync.html"><code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scp.html"><code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sed.html"><code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="seq.html"><code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sort.html"><code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tail.html"><code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tar.html"><code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="trap.html"><code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../pythonconda.html">5.4. Python &amp; Conda</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/conda.html">5.4.1. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/condaintel.html">5.4.2. Intel Conda Environments on m1 &amp; m2 Mac Computers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/installconda.html">5.4.3. Installing Miniforge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyter.html">5.4.4. Jupyter Notebooks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyterbook.html">5.4.5. Create Websites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/mbarenv.html">5.4.6. Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/python.html">5.4.7. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../condapython/installconda.html">Installing Miniforge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../condapython/condaenv.html">Conda Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../condapython/condaambertools.html">Ambertools Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../condapython/condaintel.html">Intel Conda Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../condapython/mbarenv.html">Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../condapython/jupyter.html">Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../condapython/python.html">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../condapython/jupyterbook.html">Create Websites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/ChimeraX.html">ChimeraX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../sshslurm.html">5.5. Customize <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshautologin.html">5.5.1. Automate Login</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshconfig.html">5.5.2. Configure <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">index</a></li>
 </ul>
 
     </div>
@@ -440,7 +425,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="setfacl-change-file-folder-permissions">
-<h1><span class="section-number">5.3.18. </span><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions<a class="headerlink" href="#setfacl-change-file-folder-permissions" title="Permalink to this heading">#</a></h1>
+<h1><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions<a class="headerlink" href="#setfacl-change-file-folder-permissions" title="Permalink to this heading">#</a></h1>
 <p>Give specific user permission to read/write/execute a folder.</p>
 <p><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> is short for set File ACL (Access Control List). This sets permissions for specific users, without changing the owndership of the directory.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:username:rwx<span class="w"> </span>myfolder
@@ -510,7 +495,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.3.17. </span><code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</p>
       </div>
     </a>
     <a class="right-next"
@@ -518,7 +503,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.3.19. </span><code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

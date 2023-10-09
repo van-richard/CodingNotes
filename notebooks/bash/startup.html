@@ -1,0 +1,525 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Start Up Files &#8212; Coding Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/bash/startup';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    CodingNotes
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">Jargon</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CommandLine.html">1. <span class="xref std std-term">Terminal</span> &amp; <span class="xref std std-term">Command Line</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">2. Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">3. Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Supercomputer.html">4. Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">5. Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">6. HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CondaPython.html">7. Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/StructureFiles.html">8. Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">9. Briefly, Molecular Dynamics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/notes.html">Simulation Theory Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/qmmm.html">QM/MM Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../AdditionalResources.html">Additional Resources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/van-richard/CodingNotes" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/van-richard/CodingNotes/edit/master/notebooks/bash/startup.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/bash/startup.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Start Up Files</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="start-up-files">
+<h1>Start Up Files<a class="headerlink" href="#start-up-files" title="Permalink to this heading">#</a></h1>
+<p>When <code class="docutils literal notranslate"><span class="pre">bash</span></code> is invoked as an interactive login shell, or as a non-interactive shell with the –login option, it first reads and executes commands from the file <code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code>, if that file exists. After reading that file, it looks for <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>, <code class="docutils literal notranslate"><span class="pre">~/.bash_login</span></code>, and <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>, in that order, and reads and executes commands from the first one that exists and is readable. The –noprofile option may be used when the shell is started to inhibit this behavior.</p>
+<p>When an interactive shell that is not a login shell is started, <code class="docutils literal notranslate"><span class="pre">bash</span></code> reads and executes commands from <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>, if that file exists. This may be inhibited by using the –norc option. The –rcfile file option will force <code class="docutils literal notranslate"><span class="pre">bash</span></code> to read and execute commands from file instead of <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>.</p>
+<p>Example of my <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">~/.bash_profile</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">export</span><span class="w"> </span><span class="nv">BASH_SILENCE_DEPRECATION_WARNING</span><span class="o">=</span><span class="m">1</span>
+<span class="linenos">2</span><span class="nb">export</span><span class="w"> </span><span class="nv">CLICOLOR</span><span class="o">=</span><span class="m">1</span>
+<span class="linenos">3</span><span class="nb">export</span><span class="w"> </span><span class="nv">LSCOLORS</span><span class="o">=</span>ExGxCxDxCxegedabagaced<span class="w"> </span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-f<span class="w"> </span>~/.bashrc<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
+<span class="linenos">6</span><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.bashrc<span class="w"> </span>
+<span class="linenos">7</span><span class="k">fi</span><span class="w">  </span>
+<span class="linenos">8</span>
+<span class="linenos">9</span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>/opt/homebrew/bin/brew<span class="w"> </span>shellenv<span class="k">)</span><span class="s2">&quot;</span><span class="w">  </span>
+</pre></div>
+</div>
+</div>
+<p>From the bash man page:</p>
+<blockquote>
+<div><p>“When bash is invoked as an interactive login shell, or as a non-interactive shell with the <code class="docutils literal notranslate"><span class="pre">--login</span></code> option, it first reads and executes commands from the file <code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code>, if that file exists. After reading that file, it looks for <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>, <code class="docutils literal notranslate"><span class="pre">~/.bash_login</span></code>, and <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>, in that order, and reads and executes commands from the first one that exists and is readable. The <code class="docutils literal notranslate"><span class="pre">--noprofile</span></code> option can be used when the shell is started to inhibit this behavior.”</p>
+</div></blockquote>
+<p>When an interactive shell that is not a login shell is started, bash reads and executes commands from <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>, if that file exists. This can be inhibited by using the <code class="docutils literal notranslate"><span class="pre">--norc</span></code> option. The <code class="docutils literal notranslate"><span class="pre">--rcfile</span></code> file option will force bash to read and execute commands from file instead of <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code></p>
+<p>Every new terminal window/tab that you open will load <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code></p>
+<p>On a brand new user account, none of these files will exist, they can be created with any suitable text editor that is capable of creating plain text files with unix style (<code class="docutils literal notranslate"><span class="pre">LF</span></code>) line endings. Save them into your home folder (<code class="docutils literal notranslate"><span class="pre">~/</span></code>)</p>
+<p>Example of my <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file contains:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">~/.bashrc</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span>~/.bash_aliases<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
+<span class="linenos"> 2</span><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.bash_aliases<span class="w"> </span>
+<span class="linenos"> 3</span><span class="k">fi</span><span class="w"> </span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/homebrew/opt/gnu-sed/libexec/gnubin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="linenos"> 6</span>::
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>Aliases<span class="w"> </span>are<span class="w"> </span>shortcuts<span class="w"> </span>that<span class="w"> </span>can<span class="w"> </span>save<span class="w"> </span>you<span class="w"> </span>from<span class="w"> </span>having<span class="w"> </span>to<span class="w"> </span>remember<span class="w"> </span>long<span class="w"> </span>commands<span class="w"> </span>and<span class="w"> </span>eliminate<span class="w"> </span>a<span class="w"> </span>great<span class="w"> </span>deal<span class="w"> </span>of<span class="w"> </span>typing<span class="w"> </span>when<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>working<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span><span class="nb">command</span><span class="w"> </span>line
+<span class="linenos"> 9</span>
+<span class="linenos">10</span>Example<span class="w"> </span>of<span class="w"> </span>my<span class="w"> </span><span class="sb">`</span>~/.bash_aliases<span class="sb">`</span><span class="w"> </span>file:
+<span class="linenos">11</span>
+<span class="linenos">12</span>:::<span class="o">{</span>code-block<span class="o">}</span><span class="w"> </span>bash
+<span class="linenos">13</span>:caption:<span class="w"> </span>~/.bash_aliases
+<span class="linenos">14</span>:linenos:
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="c1"># aliases</span>
+<span class="linenos">17</span><span class="nb">alias</span><span class="w"> </span><span class="nv">myconda</span><span class="o">=</span><span class="s1">&#39;eval &quot;$(/Users/van/Programs/miniforge3/bin/conda shell.bash hook)&quot;; conda activate&#39;</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># software</span>
+<span class="linenos">20</span><span class="nb">alias</span><span class="w"> </span><span class="nv">chimera</span><span class="o">=</span><span class="s2">&quot;/Applications/Chimera.app/Contents/MacOS/chimera&quot;</span>
+<span class="linenos">21</span><span class="nb">alias</span><span class="w"> </span><span class="nv">chimerax</span><span class="o">=</span><span class="s2">&quot;/Applications/ChimeraX-1.5.app/Contents/MacOS/ChimeraX&quot;</span>
+<span class="linenos">22</span><span class="nb">alias</span><span class="w"> </span><span class="nv">iqmol</span><span class="o">=</span><span class="s2">&quot;/Applications/IQmol.app/Contents/MacOS/IQmol&quot;</span><span class="w"> </span>
+<span class="linenos">23</span><span class="nb">alias</span><span class="w"> </span><span class="nv">vmd</span><span class="o">=</span><span class="s2">&quot;/Applications/VMD\ 1.9.4.app/Contents/MacOS/startup.command&quot;</span><span class="w">  </span>
+<span class="linenos">24</span>
+<span class="linenos">25</span><span class="c1"># rsync </span>
+<span class="linenos">26</span><span class="nb">alias</span><span class="w"> </span><span class="nv">rsyncnc</span><span class="o">=</span><span class="s1">&#39;rsync -auvim --include &quot;*/&quot; --include &quot;*/*nc&quot; --exclude &quot;*/*.*&quot; --exclude &quot;*/sinr*&quot; --exclude &quot;*/*/&quot; --exclude &quot;*/*&quot; --exclude &quot;*/*.out&quot; --exclude &quot;*/*.err&quot;&#39;</span><span class="w"> </span>
+<span class="linenos">27</span><span class="nb">alias</span><span class="w"> </span><span class="nv">rsynccv</span><span class="o">=</span><span class="s1">&#39;rsync -auvim --include &quot;*/&quot; --include &quot;*/*cv&quot; --exclude &quot;*/*.*&quot; --exclude &quot;*/sinr*&quot; --exclude &quot;*/*/&quot; --exclude &quot;*/*&quot; --exclude &quot;*/*.out&quot; --exclude &quot;*/*.err&quot;&#39;</span><span class="w"> </span>
+<span class="linenos">28</span><span class="nb">alias</span><span class="w"> </span><span class="nv">rsyncqm</span><span class="o">=</span><span class="s1">&#39;rsync -auvim --exclude &quot;*/qmhub/&quot; --exclude &quot;*/qmhub/*/&quot; --exclude &quot;*/qmhub/*/*&quot;&#39;</span><span class="w"> </span>
+</pre></div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/bash"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Richard Van
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

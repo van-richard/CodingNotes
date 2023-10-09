@@ -10,5 +10,17 @@ The Quick Start Guide is meant for those who *feel interested* in computational 
 
 Getting you caught up in the terminology should be a quick read, and then we will learn about some programming languages!
 
-```{tableofcontents}
-```
+:::{toctree}
+:titlesonly:
+:numbered:
+
+QuickStart/CommandLine
+QuickStart/Navigation
+QuickStart/FileManagement
+QuickStart/Supercomputer
+QuickStart/SSH
+QuickStart/Slurm
+QuickStart/CondaPython
+QuickStart/StructureFiles
+QuickStart/BasicMD
+:::
