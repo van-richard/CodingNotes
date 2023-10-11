@@ -74,9 +74,8 @@ cd build/
 
 4. Change the `run_cmake` and run it `./run_cmake`:
 
-:::{code-block} shell
-:caption run_cmake
-:linenos:
+:::{code-block} bash
+:caption: run_cmake
 
   cmake $AMBER_PREFIX/amber22_src \
     -DCMAKE_INSTALL_PREFIX=/scratch/van/.Programs/amber22 \
@@ -91,13 +90,13 @@ cd build/
 
 5. Before we run `make install -j 8`, we'll build sander first, and test it.
 
-```{bash}
+```bash
 make sander -j 8
 ```
 Test sander using the source in the AmberTools directory. 
 
 If the test went well, go back to the `build/` and compile the MPI version.
 
-```{bash}
+```bash
 make sander.MPI -j 8
 ```

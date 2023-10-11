@@ -458,12 +458,30 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>Amber
 <ol class="arabic simple" start="4">
 <li><p>Change the <code class="docutils literal notranslate"><span class="pre">run_cmake</span></code> and run it <code class="docutils literal notranslate"><span class="pre">./run_cmake</span></code>:</p></li>
 </ol>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">run_cmake</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>cmake<span class="w"> </span><span class="nv">$AMBER_PREFIX</span>/amber22_src<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>/scratch/van/.Programs/amber22<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCOMPILER<span class="o">=</span>INTEL<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DMPI<span class="o">=</span>FALSE<span class="w"> </span>-DCUDA<span class="o">=</span>FALSE<span class="w"> </span>-DINSTALL_TESTS<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DFORCE_EXTERNAL_LIB<span class="o">=</span>mkl<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DDOWNLOAD_MINICONDA<span class="o">=</span>FALSE<span class="w"> </span>-DBUILD_PYTHON<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w">  </span>cmake.log
+</pre></div>
+</div>
+</div>
 <p><em>Check if everything is properly linked.</em></p>
 <ol class="arabic simple" start="5">
 <li><p>Before we run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span> <span class="pre">-j</span> <span class="pre">8</span></code>, we’ll build sander first, and test it.</p></li>
 </ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>sander<span class="w"> </span>-j<span class="w"> </span><span class="m">8</span>
+</pre></div>
+</div>
 <p>Test sander using the source in the AmberTools directory.</p>
 <p>If the test went well, go back to the <code class="docutils literal notranslate"><span class="pre">build/</span></code> and compile the MPI version.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>sander.MPI<span class="w"> </span>-j<span class="w"> </span><span class="m">8</span>
+</pre></div>
+</div>
 </section>
 </section>
 
