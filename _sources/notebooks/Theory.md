@@ -1,9 +1,8 @@
-# Notes 
+# Notes
 
-:::{toctree}
-:titlesonly:
+The background, concepts, and equations for simulation protocols and methodologies.
 
-theory/notes
-theory/classical
-theory/qmmm
-:::
+These are not comprehensive and I recommend referring to the the papers I cited. 
+
+```{tableofcontents}
+```

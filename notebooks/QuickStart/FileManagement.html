@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Files in Terminal &#8212; Coding Notes</title>
+    <title>Files in Terminal &#8212; Coding Notes</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/FileManagement';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Supercomputers" href="Supercomputer.html" />
-    <link rel="prev" title="2. Navigating in Terminal" href="Navigation.html" />
+    <link rel="next" title="Supercomputers" href="Supercomputer.html" />
+    <link rel="prev" title="Navigating in Terminal" href="Navigation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,27 +158,31 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">Jargon</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">1. <span class="xref std std-term">Terminal</span> &amp; <span class="xref std std-term">Command Line</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Navigation.html">2. Navigating in Terminal</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3. Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supercomputer.html">4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SSH.html">5. Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Slurm.html">6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CondaPython.html">7. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="StructureFiles.html">8. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="BasicMD.html">9. Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Navigation.html">Navigating in Terminal</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SSH.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../theory/notes.html">Simulation Theory Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/classical.html">Classical Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/qmmm.html">QM/MM Simulations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../AdditionalResources.html">Additional Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-ti.html">Thermodynamic Integration</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Resources.html">Resources</a></li>
 </ul>
 
     </div>
@@ -371,9 +376,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-files-folders">3.1. Copying Files/Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-files-folders-or-renaming-files-folders">3.2. Moving Files/Folders or Renaming Files/Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-folders">3.3. Deleting Files/Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-files-folders">Copying Files/Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-files-folders-or-renaming-files-folders">Moving Files/Folders or Renaming Files/Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-folders">Deleting Files/Folders</a></li>
 </ul>
             </nav>
         </div>
@@ -386,7 +391,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="files-in-terminal">
-<h1><span class="section-number">3. </span>Files in Terminal<a class="headerlink" href="#files-in-terminal" title="Permalink to this heading">#</a></h1>
+<h1>Files in Terminal<a class="headerlink" href="#files-in-terminal" title="Permalink to this heading">#</a></h1>
 <p>Your mouse does not work in the way you expect with the command line interface…</p>
 <p>Using the terminal means you need to learn how to to communicate with the computer through <strong>commands</strong>.</p>
 <p>Simple tasks like:</p>
@@ -397,8 +402,9 @@ document.write(`
 <li><p>Deleting files/folders (<a class="reference internal" href="../linux.html#term-rm"><span class="xref std std-term">rm</span></a>)</p></li>
 </ul>
 <p>Is usually done with at flick of your mouse, but now we have the command to start automating task.</p>
+<br>
 <section id="copying-files-folders">
-<h2><span class="section-number">3.1. </span>Copying Files/Folders<a class="headerlink" href="#copying-files-folders" title="Permalink to this heading">#</a></h2>
+<h2>Copying Files/Folders<a class="headerlink" href="#copying-files-folders" title="Permalink to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition tip">
@@ -434,9 +440,10 @@ Copy Folders</label><div class="sd-tab-content docutils">
 <p>Copying a directory requires the option <code class="docutils literal notranslate"><span class="pre">-r</span></code>, otherwise it is the same as copying files.</p>
 </div>
 </div>
+<br>
 </section>
 <section id="moving-files-folders-or-renaming-files-folders">
-<h2><span class="section-number">3.2. </span>Moving Files/Folders or Renaming Files/Folders<a class="headerlink" href="#moving-files-folders-or-renaming-files-folders" title="Permalink to this heading">#</a></h2>
+<h2>Moving Files/Folders or Renaming Files/Folders<a class="headerlink" href="#moving-files-folders-or-renaming-files-folders" title="Permalink to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="dropdown admonition tip">
@@ -473,9 +480,10 @@ Move/Rename Folders</label><div class="sd-tab-content docutils">
 <p>Moving a directory is the same as the previous examples.</p>
 </div>
 </div>
+<br>
 </section>
 <section id="deleting-files-folders">
-<h2><span class="section-number">3.3. </span>Deleting Files/Folders<a class="headerlink" href="#deleting-files-folders" title="Permalink to this heading">#</a></h2>
+<h2>Deleting Files/Folders<a class="headerlink" href="#deleting-files-folders" title="Permalink to this heading">#</a></h2>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="dropdown admonition tip">
@@ -555,7 +563,7 @@ Copy Folders</label><div class="sd-tab-content docutils">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Navigating in Terminal</p>
+        <p class="prev-next-title">Navigating in Terminal</p>
       </div>
     </a>
     <a class="right-next"
@@ -563,7 +571,7 @@ Copy Folders</label><div class="sd-tab-content docutils">
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Supercomputers</p>
+        <p class="prev-next-title">Supercomputers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -585,9 +593,9 @@ Copy Folders</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-files-folders">3.1. Copying Files/Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-files-folders-or-renaming-files-folders">3.2. Moving Files/Folders or Renaming Files/Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-folders">3.3. Deleting Files/Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-files-folders">Copying Files/Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-files-folders-or-renaming-files-folders">Moving Files/Folders or Renaming Files/Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-folders">Deleting Files/Folders</a></li>
 </ul>
   </nav></div>
 

@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Terminal &amp; Command Line" href="QuickStart/CommandLine.html" />
-    <link rel="prev" title="Jargon" href="Jargon.html" />
+    <link rel="next" title="Terminal &amp; Command Line" href="QuickStart/CommandLine.html" />
+    <link rel="prev" title="CodingNotes" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,27 +158,31 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Jargon.html">Jargon</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/CommandLine.html">1. <span class="xref std std-term">Terminal</span> &amp; <span class="xref std std-term">Command Line</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/Navigation.html">2. Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/FileManagement.html">3. Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/Supercomputer.html">4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/SSH.html">5. Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/Slurm.html">6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/CondaPython.html">7. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/StructureFiles.html">8. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/BasicMD.html">9. Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/Navigation.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/FileManagement.html">Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/SSH.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory/notes.html">Simulation Theory Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory/classical.html">Classical Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory/qmmm.html">QM/MM Simulations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="AdditionalResources.html">Additional Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/fe-alchemical.html">Alchemical Free Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/fe-ti.html">Thermodynamic Integration</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Resources.html">Resources</a></li>
 </ul>
 
     </div>
@@ -375,23 +380,43 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="quick-start-guide">
 <h1>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this heading">#</a></h1>
-<p>A quick and easy introduction to programming and computational modelling!</p>
-<p>If this is your first day in a computational lab, then…</p>
-<p><strong>Congratuations! You found my notes!!</strong></p>
-<p>The Quick Start Guide is meant for those who <em>feel interested</em> in computational research, but is intimidated by the high learning curve and/or have ZERO experience with it.</p>
-<p>Getting you caught up in the terminology should be a quick read, and then we will learn about some programming languages!</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/CommandLine.html">1. <span class="xref std std-term">Terminal</span> &amp; <span class="xref std std-term">Command Line</span></a></li>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/Navigation.html">2. Navigating in Terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/FileManagement.html">3. Files in Terminal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/Supercomputer.html">4. Supercomputers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/SSH.html">5. Accessing the HPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/Slurm.html">6. HPC and Using Slurm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/CondaPython.html">7. Python &amp; Conda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/StructureFiles.html">8. Molecular Structure Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="QuickStart/BasicMD.html">9. Briefly, Molecular Dynamics</a></li>
+<figure class="align-right" id="id1" style="width: 30%">
+<img alt="../_images/quickstart-meme.jpg" src="../_images/quickstart-meme.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">First day in lab, learning about the terminal, various visualization tools, and Amber (<em>top</em>). The me of today educating the me from years past (<em>bottom</em>).</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<center> Congratuations! You have these notes! </center><br>
+<p>Welcome to the world of computational chemistry! If this is your first time experience the wonders of programming, then I hope this guide helps you.</p>
+<p>The Quick Start Guide is designed for those who:</p>
+<ul class="simple">
+<li><p>Are interested in learning about computational research</p></li>
+<li><p>Contemplate pursuring a Ph.D. in this field</p></li>
 </ul>
+<p>But may have doubts about pursuing this path due to limited or no experience in the area. Just know, that it’s completely normal to find the terminology and steep learning curve intimidating. Just five years ago, I wasn’t even aware that computational science was a thing!</p>
+<br close="right"/>
+<p>With that in mind, I prepared this collection with these goals in mind:</p>
+<ol class="arabic simple">
+<li><p>Brief introduction to the command line interface (CLI)</p>
+<ul class="simple">
+<li><p>The CLI is (<em>usually</em>) the first step for any “computational experiment”</p></li>
+</ul>
+</li>
+<li><p>Quickly show you the basics of CLI (with examples)</p></li>
+<li><p>Information of our supercomputer and usage</p>
+<ul class="simple">
+<li><p>This is our most important lab equipment!</p></li>
+</ul>
+</li>
+<li><p>Basics of python programming, and how to manage your own copy!</p></li>
+<li><p>Short background on structures files for proteins and small-molecules</p></li>
+<li><p>Simple introduction to molecular dynamics simulations</p>
+<ul class="simple">
+<li><p>Includes a simple tutorial which you can run on your computer</p></li>
+</ul>
+</li>
+</ol>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -427,12 +452,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Jargon.html"
+       href="../index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Jargon</p>
+        <p class="prev-next-title">CodingNotes</p>
       </div>
     </a>
     <a class="right-next"
@@ -440,7 +465,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span><span class="xref std std-term">Terminal</span> &amp; <span class="xref std std-term">Command Line</span></p>
+        <p class="prev-next-title">Terminal &amp; Command Line</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

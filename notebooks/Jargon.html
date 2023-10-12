@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,8 +65,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Jargon';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quick Start Guide" href="QuickStart.html" />
-    <link rel="prev" title="CodingNotes" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,28 +155,32 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Jargon</a></li>
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="QuickStart.html">Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/CommandLine.html">1. <span class="xref std std-term">Terminal</span> &amp; <span class="xref std std-term">Command Line</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/Navigation.html">2. Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/FileManagement.html">3. Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/Supercomputer.html">4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/SSH.html">5. Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/Slurm.html">6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/CondaPython.html">7. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/StructureFiles.html">8. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="QuickStart/BasicMD.html">9. Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/Navigation.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/FileManagement.html">Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/SSH.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory/notes.html">Simulation Theory Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory/classical.html">Classical Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory/qmmm.html">QM/MM Simulations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="AdditionalResources.html">Additional Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/fe-alchemical.html">Alchemical Free Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/fe-ti.html">Thermodynamic Integration</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Resources.html">Resources</a></li>
 </ul>
 
     </div>
@@ -386,11 +389,6 @@ document.write(`
 </pre></div>
 </div>
 </dd>
-<dt id="term-terminal">terminal<a class="headerlink" href="#term-terminal" title="Permalink to this term">#</a></dt><dd><p>A small window to which you see all your mistakes and feel all the dread and dispair.</p>
-<p><strong>Just kidding!</strong> It’s just an application that opens window on your screen, and you can only type commmand which mokes other computer things function. The windows equivalent is the command prompt</p>
-</dd>
-<dt id="term-command-line">command line<a class="headerlink" href="#term-command-line" title="Permalink to this term">#</a></dt><dd><p>I guess the differnce with the Terminal, this the action of typing commands.</p>
-</dd>
 <dt id="term-Graphic-User-Interface">Graphic User Interface<a class="headerlink" href="#term-Graphic-User-Interface" title="Permalink to this term">#</a></dt><dd><p>Programs/softwares that requires the user to interact with icons, buttons, and menus</p>
 </dd>
 <dt id="term-bash">bash<a class="headerlink" href="#term-bash" title="Permalink to this term">#</a></dt><dd><p>Bourne Again SHel, is a “command” language forthe the CLI/Terminal. I write alot of my scripts with in bash!</p>
@@ -459,24 +457,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../index.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">CodingNotes</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="QuickStart.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quick Start Guide</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>

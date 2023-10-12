@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>8. Molecular Structure Files &#8212; Coding Notes</title>
+    <title>Molecular Structure Files &#8212; Coding Notes</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,8 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/StructureFiles';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="9. Briefly, Molecular Dynamics" href="BasicMD.html" />
-    <link rel="prev" title="7. Python &amp; Conda" href="CondaPython.html" />
+    <link rel="next" title="Briefly, Molecular Dynamics" href="BasicMD.html" />
+    <link rel="prev" title="Python &amp; Conda" href="CondaPython.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,27 +158,31 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">Jargon</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">1. <span class="xref std std-term">Terminal</span> &amp; <span class="xref std std-term">Command Line</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="Navigation.html">2. Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FileManagement.html">3. Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supercomputer.html">4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="SSH.html">5. Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Slurm.html">6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CondaPython.html">7. Python &amp; Conda</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">8. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="BasicMD.html">9. Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Navigation.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FileManagement.html">Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SSH.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../theory/notes.html">Simulation Theory Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/classical.html">Classical Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/qmmm.html">QM/MM Simulations</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../AdditionalResources.html">Additional Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-ti.html">Thermodynamic Integration</a></li>
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Resources.html">Resources</a></li>
 </ul>
 
     </div>
@@ -371,16 +376,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">8.1. What are PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-atom-lines-in-pdb-files">8.2. What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-chain-identifier-column-5-of-atom">8.3. What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chains-are-separated-by-ter-lines">8.4. Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-occupancy">8.5. What is Occupancy?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-factor">8.6. What is B-factor?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-records-in-pdb-files">8.7. Summary Records in PDB Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">8.8. What are XYZ Files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-contents-of-ala-xyz">8.9. Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">8.10. Additional Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">What are PDB files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-atom-lines-in-pdb-files">What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-chain-identifier-column-5-of-atom">What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chains-are-separated-by-ter-lines">Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-occupancy">What is Occupancy?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-factor">What is B-factor?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-records-in-pdb-files">Summary Records in PDB Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">What are XYZ Files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-contents-of-ala-xyz">Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -393,7 +398,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="molecular-structure-files">
-<h1><span class="section-number">8. </span>Molecular Structure Files<a class="headerlink" href="#molecular-structure-files" title="Permalink to this heading">#</a></h1>
+<h1>Molecular Structure Files<a class="headerlink" href="#molecular-structure-files" title="Permalink to this heading">#</a></h1>
 <p>The structures of proteins and small-molecules can be solved via experimental methods, NMR, some examples include NMR, X-ray crystallography, and Cryo-EM. There are many databases for different approaches to solving molecular structures, but I will limit this dicussion to <code class="docutils literal notranslate"><span class="pre">.pdb</span></code> and <code class="docutils literal notranslate"><span class="pre">.xyz</span></code> files.</p>
 <dl class="simple glossary">
 <dt id="term-PDB-Files">PDB Files<a class="headerlink" href="#term-PDB-Files" title="Permalink to this term">#</a></dt><dd><p>Protein structures are saved and shared via the <a class="reference external" href="https://www.rcsb.org">Protein Data Bank at the Research Collaboratory for Structural Bioinformatics (RCSB)</a> as <code class="docutils literal notranslate"><span class="pre">.pdb</span></code> files. These files follow a text file standard discussed later</p>
@@ -403,7 +408,7 @@ document.write(`
 </dl>
 <hr class="docutils" />
 <section id="what-are-pdb-files">
-<h2><span class="section-number">8.1. </span>What are PDB files?<a class="headerlink" href="#what-are-pdb-files" title="Permalink to this heading">#</a></h2>
+<h2>What are PDB files?<a class="headerlink" href="#what-are-pdb-files" title="Permalink to this heading">#</a></h2>
 <p>These are files which contain atomic coordinates and other information which descripes biological molecules. Structural biologist use experimental methods such as X-ray crystallography, Nuclear Magnetic Resonace spectroscopy, and Cryo-electron microscopy to determine the location of atoms in the structure. The information is then deposited to a <a class="reference external" href="https://www.org">RCSB</a>.</p>
 <p>Each structure will have a unique 4-letter/number code. Inside each file, the Protein Data Bank format consists of lines of information in a text file. Each line of information in the file is called a record. A file generally contains several different types of records, which are arranged in a specific order to describe a structure.</p>
 <p>For example, a common molecular dynamics tutorial might look at hen egg-white lysozyme. The PDB code of the commonly used structure is PDB <strong>1AKI</strong>. Lets look at this file.</p>
@@ -449,7 +454,7 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 </section>
 <hr class="docutils" />
 <section id="what-are-atom-lines-in-pdb-files">
-<h2><span class="section-number">8.2. </span>What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?<a class="headerlink" href="#what-are-atom-lines-in-pdb-files" title="Permalink to this heading">#</a></h2>
+<h2>What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?<a class="headerlink" href="#what-are-atom-lines-in-pdb-files" title="Permalink to this heading">#</a></h2>
 <p>Lines beginning with <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> are reserved for atoms in standard residues of protein, DNA or RNA.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -528,7 +533,7 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 </section>
 <hr class="docutils" />
 <section id="what-is-a-chain-identifier-column-5-of-atom">
-<h2><span class="section-number">8.3. </span>What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?<a class="headerlink" href="#what-is-a-chain-identifier-column-5-of-atom" title="Permalink to this heading">#</a></h2>
+<h2>What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?<a class="headerlink" href="#what-is-a-chain-identifier-column-5-of-atom" title="Permalink to this heading">#</a></h2>
 <p>A chain identifier is a single-character label used to distinguish and identify different polypeptide chains or structural components within a macromolecular structure. Each chain in a PDB file is assigned a unique chain identifier, allowing for the unambiguous identification of individual protein or nucleic acid chains within the structure.</p>
 <p>It is commonly represented as a single uppercase letter, such as ‘A,’ ‘B,’ ‘C,’ and so on. It’s important to note that the chain identifier is case-sensitive, and it must be unique within the PDB file for each distinct chain.</p>
 <p><span style="font-size:1.5em;"><strong>Example with SpyCas9</strong></span></p>
@@ -572,7 +577,7 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 </section>
 <hr class="docutils" />
 <section id="chains-are-separated-by-ter-lines">
-<h2><span class="section-number">8.4. </span>Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines<a class="headerlink" href="#chains-are-separated-by-ter-lines" title="Permalink to this heading">#</a></h2>
+<h2>Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines<a class="headerlink" href="#chains-are-separated-by-ter-lines" title="Permalink to this heading">#</a></h2>
 <p>Each Chain is identified by an alphabetical letter, and an additional <code class="docutils literal notranslate"><span class="pre">TER</span></code> line. The <code class="docutils literal notranslate"><span class="pre">TER</span></code> line occurs at the end of the chain. If we’re looking at proteins, then usually the C-terminal Oxygen will have the atom type ,<code class="docutils literal notranslate"><span class="pre">OXT</span></code>, followed by a <code class="docutils literal notranslate"><span class="pre">TER</span></code>!</p>
 <p>View the contents of PDB <strong>7Z4J</strong> using less, and you can see for yourself:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Downloads/<span class="w"> </span><span class="c1"># Change directories to /Users/[username] on MacOS</span>
@@ -611,7 +616,7 @@ END<span class="w">                                                             
 <p>We see here that following Chain B, we have a <code class="docutils literal notranslate"><span class="pre">TER</span></code> line, indicating the end of the protein. Following our SpyCas9 enzyme, we have some <code class="docutils literal notranslate"><span class="pre">HETATM</span></code> or non-standard residues such as, magnesium ions and waters, solved with the Cryo-EM structure.</p>
 </section>
 <section id="what-is-occupancy">
-<h2><span class="section-number">8.5. </span>What is Occupancy?<a class="headerlink" href="#what-is-occupancy" title="Permalink to this heading">#</a></h2>
+<h2>What is Occupancy?<a class="headerlink" href="#what-is-occupancy" title="Permalink to this heading">#</a></h2>
 <dl class="simple glossary">
 <dt id="term-Occupancy">Occupancy<a class="headerlink" href="#term-Occupancy" title="Permalink to this term">#</a></dt><dd><p>A parameter that represents the fractional occupancy of a particular atom or group of atoms in a crystal structure. The occupancy value typically ranges from 0.00 to 1.00, where:</p>
 <ul class="simple">
@@ -628,7 +633,7 @@ END<span class="w">                                                             
 </section>
 <hr class="docutils" />
 <section id="what-is-b-factor">
-<h2><span class="section-number">8.6. </span>What is B-factor?<a class="headerlink" href="#what-is-b-factor" title="Permalink to this heading">#</a></h2>
+<h2>What is B-factor?<a class="headerlink" href="#what-is-b-factor" title="Permalink to this heading">#</a></h2>
 <dl class="simple glossary">
 <dt id="term-B-factor">B-factor <a class="headerlink" href="#term-B-factor" title="Permalink to this term">#</a></dt><dd><p>(aka the temperature factor or Debye-Waller factor) is a parameter that represents the thermal vibrations or disorder of atoms in a crystal structure. It is used to describe the uncertainty in the precise position of each atom due to thermal motion.</p>
 </dd>
@@ -638,7 +643,7 @@ END<span class="w">                                                             
 </section>
 <hr class="docutils" />
 <section id="summary-records-in-pdb-files">
-<h2><span class="section-number">8.7. </span>Summary Records in PDB Files<a class="headerlink" href="#summary-records-in-pdb-files" title="Permalink to this heading">#</a></h2>
+<h2>Summary Records in PDB Files<a class="headerlink" href="#summary-records-in-pdb-files" title="Permalink to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Record</p></th>
@@ -699,7 +704,7 @@ END<span class="w">                                                             
 </section>
 <hr class="docutils" />
 <section id="what-are-xyz-files">
-<h2><span class="section-number">8.8. </span>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Permalink to this heading">#</a></h2>
+<h2>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Permalink to this heading">#</a></h2>
 <p>The XYZ file format is a text-file format. Unlike PDB files, there is no formal standard and several variations exist. However, a typical XYZ format specifies the molecule geometry by giving the number of atoms with Cartesian coordinates that will be read on the first line, a comment on the second, and the lines of atomic coordinates in the following lines.</p>
 <p>Typically, we use these files to store molecular geometries in Quantum Mechanical (QM) calculations. These files generally contain up to a few hundred atoms. For example, let’s build the small molecule alanine dipeptide, and store this data in <code class="docutils literal notranslate"><span class="pre">.xyz</span></code>.</p>
 <p><span style="font-size:1.5em;"><strong>Example with Alanine Dipeptide</strong></span></p>
@@ -721,7 +726,7 @@ END<span class="w">                                                             
 </section>
 <hr class="docutils" />
 <section id="viewing-the-contents-of-ala-xyz">
-<h2><span class="section-number">8.9. </span>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code><a class="headerlink" href="#viewing-the-contents-of-ala-xyz" title="Permalink to this heading">#</a></h2>
+<h2>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code><a class="headerlink" href="#viewing-the-contents-of-ala-xyz" title="Permalink to this heading">#</a></h2>
 <p>First, open your terminal, and then change directories to where you saved the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>. Since I saved them to my <code class="docutils literal notranslate"><span class="pre">~/Desktop/</span></code>, I will <a class="reference internal" href="../linux.html#term-cd"><span class="xref std std-term">cd</span></a> there, and use <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a> to view <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Desktop/
 less<span class="w"> </span>ala.xyz
@@ -764,7 +769,7 @@ less<span class="w"> </span>ala.xyz
 </section>
 <hr class="docutils" />
 <section id="additional-resources">
-<h2><span class="section-number">8.10. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h2>
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h2>
 <p>For more information, please refer to the following resource:</p>
 <p><a class="reference external" href="https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/introduction#:~:text=A%20typical%20PDB%20formatted%20file,the%20atoms%20and%20their%20coordinates.">RCSB: Guide to Understanding PDB data</a></p>
 <blockquote>
@@ -811,7 +816,7 @@ less<span class="w"> </span>ala.xyz
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Python &amp; Conda</p>
+        <p class="prev-next-title">Python &amp; Conda</p>
       </div>
     </a>
     <a class="right-next"
@@ -819,7 +824,7 @@ less<span class="w"> </span>ala.xyz
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Briefly, Molecular Dynamics</p>
+        <p class="prev-next-title">Briefly, Molecular Dynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -841,16 +846,16 @@ less<span class="w"> </span>ala.xyz
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">8.1. What are PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-atom-lines-in-pdb-files">8.2. What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-chain-identifier-column-5-of-atom">8.3. What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chains-are-separated-by-ter-lines">8.4. Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-occupancy">8.5. What is Occupancy?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-factor">8.6. What is B-factor?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-records-in-pdb-files">8.7. Summary Records in PDB Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">8.8. What are XYZ Files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-contents-of-ala-xyz">8.9. Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">8.10. Additional Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">What are PDB files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-atom-lines-in-pdb-files">What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-chain-identifier-column-5-of-atom">What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chains-are-separated-by-ter-lines">Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-occupancy">What is Occupancy?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-factor">What is B-factor?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-records-in-pdb-files">Summary Records in PDB Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">What are XYZ Files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-contents-of-ala-xyz">Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
 </ul>
   </nav></div>
 

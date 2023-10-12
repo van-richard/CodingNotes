@@ -12,11 +12,13 @@ First we need to find your terminal!! Then, I want to introduce the general layo
 * Absolute and relative paths 
 
 ````{note}
+
+
  We will use the terminal on your local computer.
  In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.
-
 ````
 
+<br>
 
 ## Where are we?
 
@@ -28,7 +30,7 @@ pwd
 
 Navigating the terminal will rely on you being in the right location. As you're moving around directories, it is easy to lose track of where you are. Use this command often to remind yourself where you presently are.
 
-
+<br>
 
 ## What is Here?
 
@@ -46,7 +48,7 @@ We know where we are, but we want to know what files/folders are here! To do thi
 ls
 ```
 
-
+<br>
 
 ## How to make a new folder/directory?
 
@@ -70,7 +72,7 @@ mkdir test
 Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called "amino acids". Rather than using a space, use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
 ```
 
-***
+<br>
 
 ## Go in/out of Directories
 
@@ -113,6 +115,7 @@ If you check your current working directory again, you should see that you're ba
 pwd
 ```
 
+<br>
 
 ## What are Paths?
 

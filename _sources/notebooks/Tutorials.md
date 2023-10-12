@@ -9,7 +9,7 @@ I'll try and add more details as time moves on, but always reference the Amber m
 
 ## Amber Simulations
 
-* [Amber22 + Torchmd-net](simulation/install)
+* [Amber22 + Torchmd-net](simulation/amberinstall)
 
 ::::{grid} 1
 :gutter: 1

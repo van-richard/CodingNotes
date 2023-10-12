@@ -17,6 +17,7 @@ Simple tasks like:
 
 Is usually done with at flick of your mouse, but now we have the command to start automating task. 
 
+<br>
 
 ## Copying Files/Folders
 
@@ -58,7 +59,7 @@ Copying a directory requires the option `-r`, otherwise it is the same as copyin
 :::
 ::::
 
-
+<br>
 
 ## Moving Files/Folders or Renaming Files/Folders 
 
@@ -103,7 +104,7 @@ Moving a directory is the same as the previous examples.
 ::::
 
 
-
+<br>
 
 ## Deleting Files/Folders
 

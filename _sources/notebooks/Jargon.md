@@ -11,14 +11,6 @@ unix
     
         Example: MacOS
 
-terminal
-    A small window to which you see all your mistakes and feel all the dread and dispair. 
-
-    **Just kidding!** It's just an application that opens window on your screen, and you can only type commmand which mokes other computer things function. The windows equivalent is the command prompt
-
-command line
-    I guess the differnce with the Terminal, this the action of typing commands. 
-
 Graphic User Interface
     Programs/softwares that requires the user to interact with icons, buttons, and menus 
 
