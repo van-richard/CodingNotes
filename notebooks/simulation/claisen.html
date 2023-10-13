@@ -439,6 +439,11 @@ document.write(`
 <li><p>Add hydrogens</p></li>
 <li><p>Minimize energy</p></li>
 <li><p>Save as <code class="docutils literal notranslate"><span class="pre">.pdb</span></code></p></li>
+<li><p>Delete all lines except for lines starting with <code class="docutils literal notranslate"><span class="pre">HETATM</span></code></p>
+<ul class="simple">
+<li><p>The IQmol PDB has the wrong bonding information.</p></li>
+</ul>
+</li>
 </ol>
 <p>I saved the filed onto my Desktop. Remember where you saved it! We will copy it later!!!</p>
 <figure class="align-center" id="id2">
@@ -501,7 +506,7 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>claisen/pm3<span class="w
 <p>Since this is a simulation of a small molecule, we do not have Amber force field parameters for it.</p>
 <p>To make a Amber topology and coordinate file for a small molecule, we need to:</p>
 <ol class="arabic simple">
-<li><p>Add hydrogens (*We did this with IQmol)</p></li>
+<li><p>Add hydrogens (<em>We did this with IQmol</em>)</p></li>
 <li><p>Compute charges with <code class="docutils literal notranslate"><span class="pre">antechamber</span></code></p></li>
 <li><p>Write parameters with <code class="docutils literal notranslate"><span class="pre">parmchk2</span></code></p></li>
 <li><p>Make topology and coordinate files with <code class="docutils literal notranslate"><span class="pre">tleap</span></code></p></li>
@@ -807,7 +812,7 @@ ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibra
 <span class="k">done</span>
 
 <span class="c1"># Section 3</span>
-cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><span class="m">00</span>/step5.00_equilibration_inp.rst7
+cp<span class="w"> </span>input/step3_pbcsetup.rst7<span class="w"> </span><span class="m">00</span>/step5.00_equilibration_inp.rst7
 
 <span class="nv">n</span><span class="o">=</span>-2.0
 <span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-f<span class="s2">&quot;%02g&quot;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span>
