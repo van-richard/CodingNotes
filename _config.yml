@@ -8,8 +8,8 @@ repository:
   url: https://github.com/van-richard/CodingNotes
 
 # Auto-exclude files not in the toc
-only_build_toc_files        : true
-# exclude_patterns: [README.md, 'raw_data/*/*/*']
+# only_build_toc_files        : true
+exclude_patterns: ['README.md', 'drafts', 'assets', 'linuxlist.sh', 'build.sh']
 
 html:
   use_repository_button: true
@@ -19,7 +19,7 @@ html:
 # Parse and render settings
 parse:
   myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
-    # - amsmath
+    - amsmath
     - colon_fence
     - deflist
     - dollarmath
@@ -37,6 +37,7 @@ sphinx:
   extra_extensions:
     - sphinx_design
     - sphinxcontrib.mermaid
+    - sphinx_proof
   config: 
     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 

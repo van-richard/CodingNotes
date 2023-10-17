@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # HPC and Using Slurm
 
 Slurm is the software which manages the individual user and group jobs in a supercomputer center.
@@ -6,18 +10,18 @@ This is a helpful refernce: [slurm.schemd.com](https://slurm.schedmd.com/overvie
 
 ```{tip}
 
-We use the SSH protocal to remotely access the computer. Slurm commands also start with the letter S, so they're not to hard to remember!
+We use the SSH protocol to remotely access the computer. Slurm commands also start with the letter S, so they're not to hard to remember!
 
 ```
 
 When you access the supercomputer remotely (`ssh username@servername`), you always start in your home directory.
 
-If you run `pwd`, you should see that you're in `/home/username`.
+If you run {term}`pwd`, you should see that you're in `/home/username`.
 
 
 <span style="font-size:1.5em;">**Info on HPC Resources**</span>
 
-`sinfo` prints information about the different paritions, and their current status.
+{term}`sinfo` prints information about the different paritions, and their current status.
 
 ```bash 
 sinfo 
@@ -25,7 +29,7 @@ sinfo
 
 <span style="font-size:1.5em;">**Information on Pre-Installed Softwares**</span>
 
-Clusters often has preinstalled software you can use. They're called using the command `module` . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.
+Clusters often has preinstalled software you can use. They're called using the command {term}`module` . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.
 
 ```bash 
 sinfo 
@@ -90,7 +94,7 @@ echo " Wow you dick."
 :::
 ::::
 
-To submit a `.slurm` job use `sbatch`. Alternatively, you can cancel it with `scancel`.
+To submit a `.slurm` job use {term}`sbatch`. Alternatively, you can cancel it with {term}`scancel`.
 
 ::::{tab-set}
 :::{tab-item} Submit a Job

@@ -1,0 +1,8 @@
+# Commands
+
+:::{toctree}
+:titlesonly:
+:glob:
+
+*
+:::

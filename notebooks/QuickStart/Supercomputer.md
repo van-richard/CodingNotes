@@ -1,6 +1,9 @@
 # Supercomputers
 
-A supercomputer is an extremely powerful and high-performance computing (HPC) machine designed to handle complex and computationally intensive tasks and simulations. These machines are among the fastest and most capable computers in the world and are typically used for scientific research, engineering simulations, weather forecasting, climate modeling, cryptography, and other demanding applications.
+:::{Glossary}
+Supercomputer 
+    Powerful and high-performance computing (HPC) machine designed to handle complex and computationally intensive tasks and simulations. These machines are among the fastest and most capable computers in the world and are typically used for scientific research, engineering simulations, weather forecasting, climate modeling, cryptography, and other demanding applications.
+:::
 
 In simple terms, they are like giant, powerful versions of regular computers, much larger and involve many more parts. They can take up entire rooms or even buildings. Inside these machines, you'll find thousands or even millions of smaller computer processors (like the brain of the computer) and a lot of memory (like the computer's short-term memory). Think of these processors as workers and the memory as their workspace.
 
@@ -15,16 +18,16 @@ Hopefully, you have already made an account either supercomputers. If you reciev
 
 Two key points when using the supercomputer:
 
-1. To access the computers remotely we use the `ssh` command 
+1. To access the computers remotely we use the {term}`ssh` command 
 2. Slurm is used to manage the cluster
 
-## What is `ssh`?
+## What is {term}`ssh`?
 
-To login remotely to a supercomputer, we use the command `ssh` on the terminal. This is short for secure shell protocol and can take a few arguments. The syntax is `ssh [username]@ssh.server.example.edu`.
+To login remotely to a supercomputer, we use the command {term}`ssh` on the terminal. This is short for secure shell protocol and can take a few arguments. The syntax is `ssh [username]@ssh.server.example.edu`.
 
 First, open your terminal, and follow the directions for Oscer or Pete SSH. Change the `[username]` part, to the username you created!!
 
-## What is Slurm?
+## What is {term}`Slurm`?
 
 Since high-performace computing centers are composed of many parts (CPU, GPU, RAM, SSD, HDD, etc.), involving many different users (biological science, machine learning, etc.) with different needs. They require a job scheduling and resource management system. One system is Slurm.
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.2.2. Applying Distance Restraints in Classical MD SImulations &#8212; Coding Notes</title>
+    <title>Applying Distance Restraints in Classical MD SImulations &#8212; Coding Notes</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,8 +65,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/distance';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.2.3. Simple QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
-    <link rel="prev" title="3.2.1. Simple MD Tutorial" href="simple.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,94 +155,40 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">1. Learn the Jargon</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">2. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CommandLine.html">2.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">2.2. Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">2.3. Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Supercomputer.html">2.4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">2.5. Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">2.6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/PythonConda.html">2.7. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/StructureFiles.html">2.8. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">2.9. Briefly, Molecular Dynamics</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../TheoryTutorial.html">3. Theory &amp; Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/notes.html">3.1. Simulation Theory Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../theory/classical.html">3.1.5. Classical Molecular Dynamics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../theory/qmmm.html">3.1.6. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="tutorials.html">3.2. Simulation Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="simple.html">3.2.1. Simple MD Tutorial</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">3.2.2. Applying Distance Restraints in Classical MD SImulations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="claisen.html">3.2.3. Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/potentials.html">Alchemical States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../VisualizationTools.html">4. Visualization Tools</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../chimera/ChimeraX.html">4.1. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/images.html">4.1.3. Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/fade.html">4.1.4. Fading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html">4.1.5. Morphing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/rock.html">4.1.6. Spin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/spin.html">4.1.7. Rocking</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../vmd/VMD.html">4.2. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../vmd/ffmpeg.html">4.2.1. ffmpeg</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/estimators/ti.html">Thermodynamic Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../AdditionalResources.html">5. Additional Resources</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../bash.html">5.1. More <code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
-
-<li class="toctree-l2 has-children"><a class="reference internal" href="../linux.html">5.3. Unix/Linux Commands</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/awk.html">5.3.1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/cat.html">5.3.2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/cd.html">5.3.3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/chsh.html">5.3.4. chsh - change shell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/cp.html">5.3.5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/grep.html">5.3.6. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/head.html">5.3.7. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/help.html">5.3.8. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/ls.html">5.3.9. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/man.html">5.3.10. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/mkdir.html">5.3.11. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/module.html">5.3.12. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/mv.html">5.3.13. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/rsync.html">5.3.14. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/scp.html">5.3.15. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/sed.html">5.3.16. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/seq.html">5.3.17. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/setfacl.html">5.3.18. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/sort.html">5.3.19. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/tail.html">5.3.20. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/tar.html">5.3.21. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/trap.html">5.3.22. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../pythonconda.html">5.4. Python &amp; Conda</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/conda.html">5.4.1. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/condaintel.html">5.4.2. Intel Conda Environments on m1 &amp; m2 Mac Computers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/installconda.html">5.4.3. Installing Miniforge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyter.html">5.4.4. Jupyter Notebooks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyterbook.html">5.4.5. Create Websites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/mbarenv.html">5.4.6. Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/python.html">5.4.7. Python</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../sshslurm.html">5.5. Customize <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshautologin.html">5.5.1. Automate Login</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshconfig.html">5.5.2. Configure <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../Resources.html">Resources</a></li>
 </ul>
 
     </div>
@@ -437,14 +382,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">3.2.2.1. Prepare Files &amp; Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">3.2.2.2. Make Topology and Coordinate Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">3.2.2.3. Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">3.2.2.3.1. Restraint Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">Prepare Files &amp; Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">Make Topology and Coordinate Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">Restraint Files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">3.2.2.4. Run MD with Bash Script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">3.2.2.5. Visualize and Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">Run MD with Bash Script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">Visualize and Analysis</a></li>
 </ul>
             </nav>
         </div>
@@ -457,13 +402,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="applying-distance-restraints-in-classical-md-simulations">
-<h1><span class="section-number">3.2.2. </span>Applying Distance Restraints in Classical MD SImulations<a class="headerlink" href="#applying-distance-restraints-in-classical-md-simulations" title="Permalink to this heading">#</a></h1>
+<h1>Applying Distance Restraints in Classical MD SImulations<a class="headerlink" href="#applying-distance-restraints-in-classical-md-simulations" title="Permalink to this heading">#</a></h1>
 <p>We can apply restraints to atoms or residues if we are interested in modelling a specific process such as diffusion or binding.</p>
 <p>Buiding on from the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial, the goal here is to simulate the process of 2 Alanine Dipeptide molecules slowly diffusing away from each other using <code class="docutils literal notranslate"><span class="pre">sander</span></code> in the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/distance.mov"><img alt="../../_images/distance.mov" src="../../_images/distance.mov" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In this tutorial, we will:</p>
@@ -484,7 +429,7 @@ document.write(`
 </ul>
 </div>
 <section id="prepare-files-folders">
-<h2><span class="section-number">3.2.2.1. </span>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Permalink to this heading">#</a></h2>
+<h2>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Permalink to this heading">#</a></h2>
 <p>Make a project folder, called “distance” in the <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code> directory, and change to that directory. <em>Optionally, if you downloaded the reference file, we will move <code class="docutils literal notranslate"><span class="pre">distance.tar.bz2</span></code> into the reference folder.</em></p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -512,7 +457,7 @@ mkdir<span class="w"> </span>distance<span class="w">            </span><span cl
 </div>
 </section>
 <section id="make-topology-and-coordinate-files">
-<h2><span class="section-number">3.2.2.2. </span>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Permalink to this heading">#</a></h2>
+<h2>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Permalink to this heading">#</a></h2>
 <p>Similar to the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial. We use <code class="docutils literal notranslate"><span class="pre">leap</span></code> to prepare our Amber topology and coordinate file. Since Alanine Dipeptide is still an amino acid, we can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate the topology (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code>) and coordinate files(<code class="docutils literal notranslate"><span class="pre">.rst7</span></code>). The <code class="docutils literal notranslate"><span class="pre">tleap</span></code> program contains reference coordinates for standard residues to generate  missing atoms, this function is base on the residue name.</p>
 <p>Give <code class="docutils literal notranslate"><span class="pre">tleap</span></code> instructions by making a file called “<a class="reference external" href="http://tleap.in">tleap.in</a>” containing:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
@@ -569,7 +514,7 @@ quit
 </div>
 </section>
 <section id="prepare-md-inputs-simulation-settings">
-<h2><span class="section-number">3.2.2.3. </span>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Permalink to this heading">#</a></h2>
+<h2>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Permalink to this heading">#</a></h2>
 <p>Prepare 2 MD input files, <code class="docutils literal notranslate"><span class="pre">min.mdin</span></code>, and <code class="docutils literal notranslate"><span class="pre">heat.mdin</span></code>. These files contain the settings for the first stage of the simulations.</p>
 <ol class="arabic simple">
 <li><p>Minimization</p></li>
@@ -641,7 +586,7 @@ heat.mdin</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <section id="restraint-files">
-<h3><span class="section-number">3.2.2.3.1. </span>Restraint Files<a class="headerlink" href="#restraint-files" title="Permalink to this heading">#</a></h3>
+<h3>Restraint Files<a class="headerlink" href="#restraint-files" title="Permalink to this heading">#</a></h3>
 <p>To apply a distance restraint, I typically use the Umbrella Sampling approach. If I avoid all the gritty details, the setup only requires 1 additional restraint file (<code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>) for each restraint value.</p>
 <p>If our initial distance between the 2 molecules is 5 Å, and the goal is to observe some property of the system when the distance is 15 Å. Then I want to sample some distances &lt; 5 Å and increment that distance at some value until I reach 15 Å. The increment between distance will depend on the system and property you’re studying.</p>
 <p>Since this is a simple example, we will start with a restraint value of 4 Å and increment this by 4, until we reach 16 Å (i.e.,** our restraint values are 4, 8, 12,and 16 Å**)</p>
@@ -752,7 +697,7 @@ Template for “cv.rst”</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="run-md-with-bash-script">
-<h2><span class="section-number">3.2.2.4. </span>Run MD with Bash Script<a class="headerlink" href="#run-md-with-bash-script" title="Permalink to this heading">#</a></h2>
+<h2>Run MD with Bash Script<a class="headerlink" href="#run-md-with-bash-script" title="Permalink to this heading">#</a></h2>
 <p>Instead of running each simulation one command at a time (like we did in the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial), we can write a script to run it for us! Make a file called, <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">runmd.sh</span></code> with:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
@@ -805,7 +750,7 @@ date
 <p><strong>PHEWWWW</strong>*, that was kind of confusing, huh?</p>
 </section>
 <section id="visualize-and-analysis">
-<h2><span class="section-number">3.2.2.5. </span>Visualize and Analysis<a class="headerlink" href="#visualize-and-analysis" title="Permalink to this heading">#</a></h2>
+<h2>Visualize and Analysis<a class="headerlink" href="#visualize-and-analysis" title="Permalink to this heading">#</a></h2>
 <p>Now you can visual the results with VMD or Chimera, and perform some analysis.</p>
 </section>
 </section>
@@ -841,24 +786,6 @@ date
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="simple.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.2.1. </span>Simple MD Tutorial</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="claisen.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.2.3. </span>Simple QM/MM Simulation of the Claisen Rearrangment Reaction</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -877,14 +804,14 @@ date
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">3.2.2.1. Prepare Files &amp; Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">3.2.2.2. Make Topology and Coordinate Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">3.2.2.3. Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">3.2.2.3.1. Restraint Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">Prepare Files &amp; Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">Make Topology and Coordinate Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">Restraint Files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">3.2.2.4. Run MD with Bash Script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">3.2.2.5. Visualize and Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">Run MD with Bash Script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">Visualize and Analysis</a></li>
 </ul>
   </nav></div>
 

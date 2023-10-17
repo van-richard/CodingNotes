@@ -1,3 +1,6 @@
+---
+orphan: true
+---
 # Briefly, Molecular Dynamics
 
 The general steps of molecular dynamics (MD) simulations are shown below, consider the following questions for each step:

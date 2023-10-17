@@ -1,4 +1,0 @@
-# Customize `ssh`
-
-```{tableofcontents}
-```

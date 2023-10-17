@@ -2,9 +2,13 @@
 
 The structures of proteins and small-molecules can be solved via experimental methods, NMR, some examples include NMR, X-ray crystallography, and Cryo-EM. There are many databases for different approaches to solving molecular structures, but I will limit this dicussion to `.pdb` and `.xyz` files.
 
-**PDB Files** Protein structures are saved and shared via the [Protein Data Bank at the Research Collaboratory for Structural Bioinformatics (RCSB)](https://www.rcsb.org) as `.pdb` files. These files follow a text file standard discussed later
+:::{Glossary}
+PDB Files
+    Protein structures are saved and shared via the [Protein Data Bank at the Research Collaboratory for Structural Bioinformatics (RCSB)](https://www.rcsb.org) as `.pdb` files. These files follow a text file standard discussed later
 
-**XYZ Files** A simple and widely used file format in computational chemistry and molecular modeling. Often used to represent the three-dimensional coordinates of atoms or small molecules. The `.xyz` files are plain text files that contain atomic coordinates, atom types, and sometimes additional information about the system. These files are often used in Quantum Mechanics (QM) calculations!
+XYZ Files
+     A simple and widely used file format in computational chemistry and molecular modeling. Often used to represent the three-dimensional coordinates of atoms or small molecules. The `.xyz` files are plain text files that contain atomic coordinates, atom types, and sometimes additional information about the system. These files are often used in Quantum Mechanics (QM) calculations!
+:::
 
 ***
 
@@ -28,7 +32,7 @@ Now, download this file as PDB format.
 
 <span style="font-size:1.5em;">**Viewing the Contents of `1AKI.pdb`**</span>
 
-This should be in your `~/Downloads/` directory. Using your terminal, change directories into this directory with `cd`, and then use `less` to view the file. Example on MacOS:
+This should be in your `~/Downloads/` directory. Using your terminal, change directories into this directory with {term}`cd`, and then use {term}`less` to view the file. Example on MacOS:
 
 ```bash
 pwd             # Print the current working directory to see where you are
@@ -37,11 +41,13 @@ cd Downloads/   # Change directories to Downloads
 less 1aki.pdb   # View the contents using the command "less"
 ```
 
-The `less` command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn't access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).
+The {term}`less` command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn't access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).
 
 When you get PDB files the from RCSB, they will start with some information pertaining to RCSB data, biological system, experiments performed, and journal/author details. Here is the first 20 lines of the files: 
 
-```bash
+:::{code-block} bash
+:lineno-start: 1
+
 HEADER    HYDROLASE                               19-MAY-97   1AKI     
 TITLE     THE STRUCTURE OF THE ORTHORHOMBIC FORM OF HEN EGG-WHITE LYSOZYME AT   
 TITLE    2 1.5 ANGSTROMS RESOLUTION     
@@ -62,7 +68,7 @@ REVDAT   2   24-FEB-09 1AKI    1       VERSN
 REVDAT   1   19-NOV-97 1AKI    0     
 JRNL        AUTH   P.J.ARTYMIUK,C.C.F.BLAKE,D.W.RICE,K.S.WILSON     
 JRNL        TITL   THE STRUCTURES OF THE MONOCLINIC AND ORTHORHOMBIC FORMS OF    
-```
+:::
 
 Other lines that start with `REMARK`, `HELIX`, `SHEET`, `SSBOND`, etc. (lines up to `ATOM`) contain experimental details and structural/sequence information.
 
@@ -90,7 +96,9 @@ Use your d-pad to get to first `ATOM` line (this is line number, 347).
 
 The first 20 'ATOM` lines in PDB 1AKI file:
 
-```bash
+:::{code-block} bash
+:lineno-start: 347
+
 ATOM      1  N   LYS A   1      35.365  22.342 -11.980  1.00 22.28           N  
 ATOM      2  CA  LYS A   1      35.892  21.073 -11.427  1.00 21.12           C  
 ATOM      3  C   LYS A   1      34.741  20.264 -10.844  1.00 16.85           C  
@@ -111,7 +119,7 @@ ATOM     17  N   PHE A   3      34.491  17.546  -8.038  1.00 19.89           N
 ATOM     18  CA  PHE A   3      35.185  16.903  -6.918  1.00 17.43           C  
 ATOM     19  C   PHE A   3      34.742  15.441  -6.771  1.00 15.70           C  
 ATOM     20  O   PHE A   3      33.525  15.162  -6.862  1.00 18.52           O 
-```
+:::
 
 Explanation of each column:
 
@@ -175,10 +183,10 @@ less 7z4j.pdb   # View file
 ```
 
 ```{note}
-In `less`, you can skip to the bottom of the file by pressing `shift`+`g`. To go back to the top, just press `g`.
+In {term}`less`, you can skip to the bottom of the file by pressing `shift`+`g`. To go back to the top, just press `g`.
 ```
 
-The last 20 lines containing 'ATOM', 'HETATM', 'TER' should look like this:
+The last ~20 lines containing 'ATOM', 'HETATM', 'TER' should look like this:
 
 ```bash
 ATOM  13936  CD2 LEU B1365     105.073 161.302 113.513  1.00152.63           C  
@@ -207,13 +215,17 @@ We see here that following Chain B, we have a `TER` line, indicating the end of 
 
 ## What is Occupancy?
 
-Occupancy is a parameter that represents the fractional occupancy of a particular atom or group of atoms in a crystal structure. The occupancy value typically ranges from 0.00 to 1.00, where:
-- **1.00:** That atom is fully occupied, 
-- **0.00:** That atom is completely unoccupied or not present.
+:::{Glossary}
+Occupancy
+    A parameter that represents the fractional occupancy of a particular atom or group of atoms in a crystal structure. The occupancy value typically ranges from 0.00 to 1.00, where:
+
+      - **1.00:** That atom is fully occupied, 
+      - **0.00:** That atom is completely unoccupied or not present.
+:::
 
 The occupancy value is used to account for situations where multiple different types of atoms or ions may occupy the same position in the crystal lattice. For example, in a crystal structure of a protein, there may be several alternate conformations of a side chain or different ligands bound to the same site. In such cases, each atom or group of atoms may be assigned an occupancy value that reflects the probability of finding that atom or group in its specific conformation. 
 
-```{note}
+```{important}
 The sum of all occupancy values for each atom in a residue conformation adds up to 1.00 or 100%!
 ```
 
@@ -221,7 +233,10 @@ The sum of all occupancy values for each atom in a residue conformation adds up 
 
 ## What is B-factor?
 
-The B-factor (aka the temperature factor or Debye-Waller factor) is a parameter that represents the thermal vibrations or disorder of atoms in a crystal structure. It is used to describe the uncertainty in the precise position of each atom due to thermal motion.
+:::{Glossary}
+B-factor 
+    (aka the temperature factor or Debye-Waller factor) is a parameter that represents the thermal vibrations or disorder of atoms in a crystal structure. It is used to describe the uncertainty in the precise position of each atom due to thermal motion.
+:::
 
 The B-factor is a real number associated with each atom or group of atoms in the PDB file. It quantifies how much an atom fluctuates or vibrates around its average position in the crystal lattice. A higher B-factor indicates greater thermal motion or disorder, while a lower B-factor indicates less thermal motion and greater positional certainty.
 
@@ -283,7 +298,7 @@ Alanine dipeptide is the amino acid, Alanine, with the N-/C-terminal capped by a
 
 ## Viewing the Contents of `ala.xyz`
 
-First, open your terminal, and then change directories to where you saved the `ala.xyz`. Since I saved them to my `~/Desktop`, I will `cd` there, and use `less` to view `ala.xyz`:
+First, open your terminal, and then change directories to where you saved the `ala.xyz`. Since I saved them to my `~/Desktop/`, I will {term}`cd` there, and use {term}`less` to view `ala.xyz`:
 
 ```bash
 cd ~/Desktop/
@@ -292,7 +307,9 @@ less ala.xyz
 
 You should see something like this:
 
-```bash
+:::{code-block} bash
+:lineno-start: 1
+
 22
 
 C         -4.63266       -0.12314       -0.02867
@@ -317,7 +334,7 @@ H          3.30037        0.47916       -1.01990
 H         -2.03263        3.14107        0.33971
 H         -0.25509        3.23182        0.33529
 H         -1.10019        2.31238        1.63679
-```
+:::
 
 Explanations:
 

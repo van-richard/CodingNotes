@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -61,10 +62,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Learn the Jargon" href="notebooks/Jargon.html" />
+    <link rel="next" title="Quick Start Guide" href="notebooks/QuickStart.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,93 +159,39 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/Jargon.html">1. Learn the Jargon</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/QuickStart.html">2. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/CommandLine.html">2.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/Navigation.html">2.2. Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/FileManagement.html">2.3. Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/Supercomputer.html">2.4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/SSH.html">2.5. Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/Slurm.html">2.6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/PythonConda.html">2.7. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/StructureFiles.html">2.8. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/BasicMD.html">2.9. Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/QuickStart.html">Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/Navigation.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/FileManagement.html">Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/SSH.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/TheoryTutorial.html">3. Theory &amp; Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/notes.html">3.1. Simulation Theory Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/classical.html">3.1.5. Classical Molecular Dynamics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/qmmm.html">3.1.6. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/simulation/tutorials.html">3.2. Simulation Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/simulation/simple.html">3.2.1. Simple MD Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/simulation/distance.html">3.2.2. Applying Distance Restraints in Classical MD SImulations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/simulation/claisen.html">3.2.3. Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/theory/fe-binding.html">Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/alchemical/potentials.html">Alchemical States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/VisualizationTools.html">4. Visualization Tools</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/chimera/ChimeraX.html">4.1. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/images.html">4.1.3. Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/fade.html">4.1.4. Fading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/morph.html">4.1.5. Morphing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/rock.html">4.1.6. Spin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/chimera/spin.html">4.1.7. Rocking</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/vmd/VMD.html">4.2. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/vmd/ffmpeg.html">4.2.1. ffmpeg</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/estimators/ti.html">Thermodynamic Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/AdditionalResources.html">5. Additional Resources</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/bash.html">5.1. More <code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
-
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/linux.html">5.3. Unix/Linux Commands</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/awk.html">5.3.1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/cat.html">5.3.2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/cd.html">5.3.3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/chsh.html">5.3.4. chsh - change shell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/cp.html">5.3.5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/grep.html">5.3.6. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/head.html">5.3.7. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/help.html">5.3.8. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/ls.html">5.3.9. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/man.html">5.3.10. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/mkdir.html">5.3.11. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/module.html">5.3.12. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/mv.html">5.3.13. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/rsync.html">5.3.14. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/scp.html">5.3.15. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/sed.html">5.3.16. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/seq.html">5.3.17. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/setfacl.html">5.3.18. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/sort.html">5.3.19. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/tail.html">5.3.20. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/tar.html">5.3.21. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/linuxcommands/trap.html">5.3.22. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/pythonconda.html">5.4. Python &amp; Conda</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/pythonconda/conda.html">5.4.1. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/pythonconda/condaintel.html">5.4.2. Intel Conda Environments on m1 &amp; m2 Mac Computers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/pythonconda/installconda.html">5.4.3. Installing Miniforge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/pythonconda/jupyter.html">5.4.4. Jupyter Notebooks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/pythonconda/jupyterbook.html">5.4.5. Create Websites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/pythonconda/mbarenv.html">5.4.6. Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/pythonconda/python.html">5.4.7. Python</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/sshslurm.html">5.5. Customize <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/sshslurm/sshautologin.html">5.5.1. Automate Login</a></li>
-<li class="toctree-l3"><a class="reference internal" href="notebooks/sshslurm/sshconfig.html">5.5.2. Configure <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/Resources.html">Resources</a></li>
 </ul>
 
     </div>
@@ -413,7 +362,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -429,6 +380,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-notes-include-tips-tricks-and-examples-for">These notes include tips, tricks, and examples for:</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -440,25 +399,33 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="codingnotes">
 <h1>CodingNotes<a class="headerlink" href="#codingnotes" title="Permalink to this heading">#</a></h1>
-<p><em>Notes I wish I had when I started in computational chemistry with no programming experience</em></p>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
+<aside class="sidebar">
 <p><img alt="" src="_images/welcome.png" /></p>
 </aside>
-<p>I hope you find some of the information helpful.</p>
-<ol class="arabic simple">
-<li><p><strong>Programming</strong></p>
+<p><em>Notes I wish I had showed me when I started</em></p>
+<p>This collection of notes pretty much is a my consolidated experience in the field of computational chemistry. Some I found through trial and error, while others are from the exceptional guidance of Dr. Genwei Zhang, Dr. Zheng Pei, Dr. Xiaoliang Pan, and Dr. Yihan Shao.</p>
+<p>I am not the most coherent when it comes to speaking and writing, but I hope many of you will find this information useful in your future endeavors.</p>
+<section id="these-notes-include-tips-tricks-and-examples-for">
+<h2>These notes include tips, tricks, and examples for:<a class="headerlink" href="#these-notes-include-tips-tricks-and-examples-for" title="Permalink to this heading">#</a></h2>
+<figure class="align-right">
+<a class="reference internal image-reference" href="_images/tec-meme.jpg"><img alt="_images/tec-meme.jpg" src="_images/tec-meme.jpg" style="width: 250px;" /></a>
+</figure>
+<p><strong>Programming</strong></p>
 <ul class="simple">
-<li><p>Command line, <code class="docutils literal notranslate"><span class="pre">Bash``,</span> </code>vi/vim`, and other terminal stuff</p></li>
+<li><p>Command line, <code class="docutils literal notranslate"><span class="pre">bash</span></code>, <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code>, and other terminal stuff</p></li>
 <li><p>Supercomputing stuff (<code class="docutils literal notranslate"><span class="pre">ssh</span></code>/Slurm)</p></li>
-<li><p>General <code class="docutils literal notranslate"><span class="pre">python</span></code> coding and managing with <code class="docutils literal notranslate"><span class="pre">conda</span></code> environments</p></li>
+<li><p>General <code class="docutils literal notranslate"><span class="pre">python</span></code> coding</p>
+<ul>
+<li><p>Managing with <code class="docutils literal notranslate"><span class="pre">conda</span></code> environments</p></li>
 </ul>
 </li>
-</ol>
-  <br>
-<ol class="arabic" start="2">
-<li><p><strong>Visualization Software</strong></p>
-<p>Softwares I use the most often are:</p>
+</ul>
+<br clear="right"/>
+<p><strong>Visualization Software</strong></p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="_images/viz-meme.png"><img alt="_images/viz-meme.png" src="_images/viz-meme.png" style="width: 250px;" /></a>
+</figure>
+<p>Softwares I often use:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://iqmol.org">IQmol</a></p></li>
 <li><p><a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a></p></li>
@@ -466,35 +433,42 @@ document.write(`
 <li><p><a class="reference external" href="https://connect.revvitysignals.com/sitesubscription/Gallery.aspx">ChemDraw</a></p></li>
 <li><p><a class="reference external" href="https://www.schrodinger.com/products/maestro">Schrodinger Maestro</a></p></li>
 </ul>
-</li>
-</ol>
-<br>
-<ol class="arabic" start="3">
-<li><p><strong>Simulations with <a class="reference external" href="http://ambermd.org">AmberMD</a></strong></p>
-<p>I have read the Amber manual so much, it would be a waste not to summarize them here</p>
-<p>Also some modern tutorials for simulations methods in:</p>
+<br clear="right"/>
+<figure class="align-right">
+<a class="reference internal image-reference" href="_images/simple.mov"><img alt="_images/simple.mov" src="_images/simple.mov" style="width: 250px;" /></a>
+</figure>
+<p><strong>Simulations with <a class="reference external" href="http://ambermd.org">AmberMD</a></strong></p>
+<p>I have read the Amber manual so much… It would be a waste not to summarize them here. I also wrote a set of tutorials for Amber simulations in the worflow our lab takes.</p>
 <ul class="simple">
 <li><p>Classical Molecular Dynamics Simulations</p></li>
 <li><p>Quantum Mechanics/Molecular Mechanics Simulations</p></li>
 </ul>
-</li>
-</ol>
-<br>
-<ol class="arabic" start="4">
-<li><p><strong>Cloud-Based Web Services</strong></p>
+<br clear="right"/>
+<p><strong>Cloud-Based Websitess</strong></p>
 <p>Neat websites I learned about during my Ph.D!</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.overleaf.com">Overleaf</a></p></li>
-<li><p><a class="reference external" href="https://github.com">GitHub</a></p></li>
+<li><p><a class="reference external" href="https://www.overleaf.com">Overleaf</a></p>
+<ul>
+<li><p>Equations, tables, and writing manuscripits with <span class="math notranslate nohighlight">\(\LaTeX\)</span></p></li>
 </ul>
 </li>
-</ol>
-<br>
-<ol class="arabic" start="5">
-<li><p>Other fun activities while researching…</p>
-<p>Like making this website with Jekyll and JupyterBook</p>
+<li><p><a class="reference external" href="https://github.com">GitHub</a></p>
+<ul>
+<li><p>Public code repositories, and lab resources!</p></li>
+</ul>
 </li>
-</ol>
+<li><p><a class="reference external" href="https://colab.research.google.com">Google Colab</a></p>
+<ul>
+<li><p>Accessible notebooks for coding</p></li>
+</ul>
+</li>
+</ul>
+<br>
+<p><strong>and other fun activities</strong></p>
+<ul class="simple">
+<li><p>Like making this website with Jekyll or JupyterBook 🤪🤪🤪</p></li>
+</ul>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -531,11 +505,11 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
-       href="notebooks/Jargon.html"
+       href="notebooks/QuickStart.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Learn the Jargon</p>
+        <p class="prev-next-title">Quick Start Guide</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -548,6 +522,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-notes-include-tips-tricks-and-examples-for">These notes include tips, tricks, and examples for:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

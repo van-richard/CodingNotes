@@ -1,14 +1,36 @@
 # Quick Start Guide
 
-A quick and easy introduction to programming and computational modelling!
 
-If this is your first day in a computational lab, then...
+```{figure} ../_static/quickstart-meme.jpg
+---
+align: right
+figwidth: 30%
+---
 
-**Congratuations! You found my notes!!**
-
-The Quick Start Guide is meant for those who *feel interested* in computational research, but is intimidated by the high learning curve and/or have ZERO experience with it.  
-
-Getting you caught up in the terminology should be a quick read, and then we will learn about some programming languages!
-
-```{tableofcontents}
+First day in lab, learning about the terminal, various visualization tools, and Amber (*top*). The me of today educating the me from years past (*bottom*).
 ```
+
+<center> Congratuations! You have these notes! </center><br>
+
+Welcome to the world of computational chemistry! If this is your first time experience the wonders of programming, then I hope this guide helps you. 
+
+The Quick Start Guide is designed for those who:
+
+* Are interested in learning about computational research
+* Contemplate pursuring a Ph.D. in this field
+
+But may have doubts about pursuing this path due to limited or no experience in the area. Just know, that it's completely normal to find the terminology and steep learning curve intimidating. Just five years ago, I wasn't even aware that computational science was a thing!
+
+<br close="right"/>
+
+With that in mind, I prepared this collection with these goals in mind:
+
+  1. Brief introduction to the command line interface (CLI)
+     - The CLI is (*usually*) the first step for any "computational experiment"
+  2. Quickly show you the basics of CLI (with examples)
+  3. Information of our supercomputer and usage
+     - This is our most important lab equipment!
+  4. Basics of python programming, and how to manage your own copy!
+  5. Short background on structures files for proteins and small-molecules
+  6. Simple introduction to molecular dynamics simulations
+     - Includes a simple tutorial which you can run on your computer

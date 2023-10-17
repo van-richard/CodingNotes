@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4.1. ChimeraX &#8212; Coding Notes</title>
+    <title>Introduction to ChimeraX &#8212; Coding Notes</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,8 +65,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/chimera/ChimeraX';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.1.3. Saving Images" href="images.html" />
-    <link rel="prev" title="4. Visualization Tools" href="../VisualizationTools.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,94 +155,40 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Jargon.html">1. Learn the Jargon</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">2. Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CommandLine.html">2.1. Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">2.2. Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">2.3. Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Supercomputer.html">2.4. Supercomputers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">2.5. Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">2.6. HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/PythonConda.html">2.7. Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/StructureFiles.html">2.8. Molecular Structure Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">2.9. Briefly, Molecular Dynamics</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CommandLine.html">Terminal &amp; Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">Navigating in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">Files in Terminal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../TheoryTutorial.html">3. Theory &amp; Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/notes.html">3.1. Simulation Theory Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../theory/classical.html">3.1.5. Classical Molecular Dynamics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../theory/qmmm.html">3.1.6. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../simulation/tutorials.html">3.2. Simulation Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../simulation/simple.html">3.2.1. Simple MD Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../simulation/distance.html">3.2.2. Applying Distance Restraints in Classical MD SImulations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../simulation/claisen.html">3.2.3. Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/potentials.html">Alchemical States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../VisualizationTools.html">4. Visualization Tools</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">4.1. ChimeraX</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="images.html">4.1.3. Saving Images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fade.html">4.1.4. Fading</a></li>
-<li class="toctree-l3"><a class="reference internal" href="morph.html">4.1.5. Morphing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rock.html">4.1.6. Spin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="spin.html">4.1.7. Rocking</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../vmd/VMD.html">4.2. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../vmd/ffmpeg.html">4.2.1. ffmpeg</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/estimators/ti.html">Thermodynamic Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../AdditionalResources.html">5. Additional Resources</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../bash.html">5.1. More <code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
-
-<li class="toctree-l2 has-children"><a class="reference internal" href="../linux.html">5.3. Unix/Linux Commands</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/awk.html">5.3.1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/cat.html">5.3.2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/cd.html">5.3.3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/chsh.html">5.3.4. chsh - change shell</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/cp.html">5.3.5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/grep.html">5.3.6. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/head.html">5.3.7. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/help.html">5.3.8. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/ls.html">5.3.9. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/man.html">5.3.10. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/mkdir.html">5.3.11. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/module.html">5.3.12. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/mv.html">5.3.13. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/rsync.html">5.3.14. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/scp.html">5.3.15. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/sed.html">5.3.16. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/seq.html">5.3.17. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/setfacl.html">5.3.18. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/sort.html">5.3.19. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/tail.html">5.3.20. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/tar.html">5.3.21. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../linuxcommands/trap.html">5.3.22. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../pythonconda.html">5.4. Python &amp; Conda</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/conda.html">5.4.1. Conda Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/condaintel.html">5.4.2. Intel Conda Environments on m1 &amp; m2 Mac Computers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/installconda.html">5.4.3. Installing Miniforge</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyter.html">5.4.4. Jupyter Notebooks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/jupyterbook.html">5.4.5. Create Websites</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/mbarenv.html">5.4.6. Conda <code class="docutils literal notranslate"><span class="pre">mbar</span></code> Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pythonconda/python.html">5.4.7. Python</a></li>
-</ul>
-</li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../sshslurm.html">5.5. Customize <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshautologin.html">5.5.1. Automate Login</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sshslurm/sshconfig.html">5.5.2. Configure <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../Resources.html">Resources</a></li>
 </ul>
 
     </div>
@@ -427,7 +372,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>ChimeraX</h1>
+    <h1>Introduction to ChimeraX</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -437,9 +382,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-pdbs-from-rcsb">4.1.1. Opening PDBs from RCSB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-command-line-options">4.1.2. Summary of Command Line Options</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to ChimeraX</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-pdbs-from-rcsb">Opening PDBs from RCSB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-command-line-options">Summary of Command Line Options</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#movie-making">Movie Making</a></li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -450,13 +400,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="chimerax">
-<h1><span class="section-number">4.1. </span>ChimeraX<a class="headerlink" href="#chimerax" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-chimerax">
+<h1>Introduction to ChimeraX<a class="headerlink" href="#introduction-to-chimerax" title="Permalink to this heading">#</a></h1>
 <p>Chimera and <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a> are both great molecular visualization tools developed by UCSF.</p>
 <p>ChimeraX is the newest program, and it can efficiently handle large data (i.e. PDBs with thousands of atoms). It is my prefered GUI when exploring new structures and making videos/figures.</p>
 <p>Download the latest version of <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/download.html">ChimeraX</a>! You will need to register for an account, otherwise you’ll get a notification everytime you open the software.</p>
 <section id="opening-pdbs-from-rcsb">
-<h2><span class="section-number">4.1.1. </span>Opening PDBs from RCSB<a class="headerlink" href="#opening-pdbs-from-rcsb" title="Permalink to this heading">#</a></h2>
+<h2>Opening PDBs from RCSB<a class="headerlink" href="#opening-pdbs-from-rcsb" title="Permalink to this heading">#</a></h2>
 <p>On ChimeraX command line, type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open<span class="w"> </span>*PDB_CODE*
 </pre></div>
@@ -468,7 +418,7 @@ document.write(`
 </div>
 </section>
 <section id="summary-of-command-line-options">
-<h2><span class="section-number">4.1.2. </span>Summary of Command Line Options<a class="headerlink" href="#summary-of-command-line-options" title="Permalink to this heading">#</a></h2>
+<h2>Summary of Command Line Options<a class="headerlink" href="#summary-of-command-line-options" title="Permalink to this heading">#</a></h2>
 <p>Rather than searching through the GUI (graphic user interface) for the function you need (i.e., Show/Hide atoms/ribbon/surface), you can use the commmand line interface to control the display.</p>
 <p><strong>Command Line Options:</strong></p>
 <table class="table">
@@ -502,8 +452,21 @@ document.write(`
 </tbody>
 </table>
 </section>
-<div class="toctree-wrapper compound">
-</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="movie-making">
+<h1>Movie Making<a class="headerlink" href="#movie-making" title="Permalink to this heading">#</a></h1>
+<dl class="simple glossary">
+<dt id="term-Saving-Images-ChimeraX">Saving Images (ChimeraX)<a class="headerlink" href="#term-Saving-Images-ChimeraX" title="Permalink to this term">#</a></dt><dd><p><a class="reference internal" href="images.html"><span class="doc std std-doc">Saving Images</span></a></p>
+</dd>
+<dt id="term-Fade-ChimeraX">Fade (ChimeraX)<a class="headerlink" href="#term-Fade-ChimeraX" title="Permalink to this term">#</a></dt><dd><p><a class="reference internal" href="fade.html"><span class="doc std std-doc">Fading</span></a></p>
+</dd>
+<dt id="term-Morph-ChimeraX">Morph (ChimeraX)<a class="headerlink" href="#term-Morph-ChimeraX" title="Permalink to this term">#</a></dt><dd><p><a class="reference internal" href="morph.html"><span class="doc std std-doc">Morphing</span></a></p>
+</dd>
+<dt id="term-Rock-ChimeraX">Rock (ChimeraX)<a class="headerlink" href="#term-Rock-ChimeraX" title="Permalink to this term">#</a></dt><dd><p><a class="reference internal" href="rock.html"><span class="doc std std-doc">Rocking</span></a></p>
+</dd>
+<dt id="term-Spin-ChimeraX">Spin (ChimeraX)<a class="headerlink" href="#term-Spin-ChimeraX" title="Permalink to this term">#</a></dt><dd><p><a class="reference internal" href="spin.html"><span class="doc std std-doc">Spin</span></a></p>
+</dd>
+</dl>
 </section>
 
     <script type="text/x-thebe-config">
@@ -537,24 +500,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../VisualizationTools.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Visualization Tools</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="images.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.1.3. </span>Saving Images</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -573,9 +518,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-pdbs-from-rcsb">4.1.1. Opening PDBs from RCSB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-command-line-options">4.1.2. Summary of Command Line Options</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Introduction to ChimeraX</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-pdbs-from-rcsb">Opening PDBs from RCSB</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-command-line-options">Summary of Command Line Options</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#movie-making">Movie Making</a></li>
+</ul>
+
   </nav></div>
 
 </div></div>

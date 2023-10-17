@@ -1,0 +1,55 @@
+TI simulation
+ &cntrl
+   imin = 0,         ! Turn on minimization
+   irest = 1,        ! 1 = restart simulation
+   ntx = 5,          ! 5 = read coordinates/velocities from file
+   
+   ! Molecular Dynamics
+   nstlim = 1000000,  ! Number of MD-steps
+   dt = 0.002,       ! time step (psec)
+   ntb = 1,          ! NVT
+   ntc = 2,          ! Turn on SHAKE (bonds involving hydrogen constrainted) 
+   ntf = 1,
+
+   ! Temperature Regulation
+   ntt = 3,               ! 0=NVE,1=NVT,2=Anderson,3=Langevin
+   temp0 = 300.0,         ! Reference temperature
+   gamma_ln = 1.0,        ! Collision frequency in ps^-1
+   ig = -1,               ! Random initial velocities
+   
+   ! Outputs
+   ntwx = 500000,          ! Write coordinates to .nc 
+   ntpr = 500000,          ! Print energy every ntpr steps
+   ntwr = 2500000,          ! Write rsrt every ntwr steps
+   ntwe = 250000,           ! Write energy/temp to mden
+   ioutfm = 1,            ! Format of coordinate/v 
+   iwrap = 1,             ! PBC
+
+   ! Amber TI Free Energy Calculation (pmemd/sander)
+   icfe = 1,              ! Turn on TI estimates
+   ifsc = 1,		  ! Turn on Softcore-Potential electrostatics
+   clambda = %L%,         ! lambda value (0=unperturb Hamiltonian)
+   scalpha = 0.5,         ! alpha parameter (default=0.5)
+   scbeta = 12.0,         ! beta parameter (defulat(12 Angstrom^2)
+   logdvdl = 1,           ! Print pV/vlamba for postprocessing
+
+   ! Output files for MBAR post-processing
+   ifmbar = 1,            ! Print potential E for MBAR
+   mbar_states = 11,      ! Number of lambda windows
+   ! Lambda Windows simulated
+   mbar_lambda = 0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,
+
+   ! TI Amber mask selection
+   timask1='@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216',
+   timask2='@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506',
+   scmask1='@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216',
+   scmask2='@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506',
+   ! timask1=':865',
+   ! scmask1=':865',
+   ! timask2=':2230',
+   ! scmask2=':2230',
+ /
+
+ &ewald
+ / 
+

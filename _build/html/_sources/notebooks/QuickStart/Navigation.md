@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Navigating in Terminal
 
 First we need to find your terminal!! Then, I want to introduce the general layout within the command line interface. Our goal here is to understand these concepts:
@@ -8,14 +12,15 @@ First we need to find your terminal!! Then, I want to introduce the general layo
 * Absolute and relative paths 
 
 ````{note}
-:class: dropdow
+
+
  We will use the terminal on your local computer.
  In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.
-
 ````
 
+<br>
 
-<span style="font-size:1.5em;">**Where are we?**</span>
+## Where are we?
 
 The first command to learn is `pwd` which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. `pwd` tells you what your current or present working directory (folder) is.
 
@@ -25,9 +30,17 @@ pwd
 
 Navigating the terminal will rely on you being in the right location. As you're moving around directories, it is easy to lose track of where you are. Use this command often to remind yourself where you presently are.
 
-***
+<br>
 
-<span style="font-size:1.5em;">**What is here?**</span>
+## What is Here?
+
+````{margin}
+```{tip}
+:class: dropdown
+More examples can be found here: 
+[](../commands/ls.md)
+```
+````
 
 We know where we are, but we want to know what files/folders are here! To do this, use `ls`, short for list.
 
@@ -35,9 +48,17 @@ We know where we are, but we want to know what files/folders are here! To do thi
 ls
 ```
 
-***
+<br>
 
-<span style="font-size:1.5em;">**How to make a new folder/directory?**</span>
+## How to make a new folder/directory?
+
+````{margin}
+```{tip}
+:class: dropdown
+More examples can be found here: 
+[](../commands/mkdir.md)
+```
+````
 
 Let's make a new folder/directory so our current working directory isn't so lonely. To do this, use the `mkdir` command, short for make directory. This command takes an argument, i.e. the new folder name!
 
@@ -51,9 +72,17 @@ mkdir test
 Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called "amino acids". Rather than using a space, use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
 ```
 
-***
+<br>
 
-<span style="font-size:1.5em;">**Go in/out of Directories**</span>
+## Go in/out of Directories
+
+````{margin}
+```{tip}
+:class: dropdown
+More examples can be found here: 
+[](../commands/cd.md)
+```
+````
 
 We can enter a folder with the `cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
 
@@ -86,9 +115,9 @@ If you check your current working directory again, you should see that you're ba
 pwd
 ```
 
-***
+<br>
 
-<span style="font-size:1.5em;">**What are Paths?**</span>
+## What are Paths?
 
 There are 2 types of paths we can use
 

@@ -1,6 +1,6 @@
 # Accessing the HPC 
 
-The command, `ssh`, means the Secure Shell protocol, and we use to remotely access the supercomputer! 
+The command, {term}`ssh`, means the Secure Shell protocol, and we use to remotely access the supercomputer! 
 
 The general notation looks like this:
 
@@ -70,7 +70,7 @@ Answering `yes` to the prompt will cause the session to continue, and the host k
 
 ## Transferring File & Folder 
 
-We need to be able to copy files and folders from the supercomputer to our local computer, or vice versa. Previously, we learned `cp` and `mv` to manage files locally on our computer. However, to copy files through `ssh`, we need to use one of these 2 commands:
+We need to be able to copy files and folders from the supercomputer to our local computer, or vice versa. Previously, we learned {term}`cp` and {term}`mv` to manage files locally on our computer. However, to copy files through {term}`ssh`, we need to use one of these 2 commands:
 
 1. `rsync` 
 2. `scp`
@@ -94,11 +94,11 @@ scp /path/to/source /path/to/destination/
 I recommend using `rsync` because this will check files sizes and modify timestamps of both files or folders. It will skip any further processing if they match. Additionally, if the destination file already exists, the transfer algorithm will make sure only differences between the files are sent over the wire.
 ```
 
-We won't go any futher, but remember there always more information about `rsync` and `scp` at the end! 
+We won't go any futher, but remember you can find more information about {term}`rsync` and {term}`scp`! 
 
-One last thing about `ssh` is that, you can also run commands without going through the whole process of logging in.
+One last thing about {term}`ssh` is that, you can also run commands without going through the whole process of logging in.
 
-## Command Execution with `ssh`
+## Command Execution with {term}`ssh`
 
 What if the only thing you need to do over the SSH connection is execute a single quick command? You might not want to take the separate actions of connecting and authenticating, running the command, and then disconnecting. The `ssh` command allows us to execute command on remote machine without logging into that machine. Here is the general notation:
 

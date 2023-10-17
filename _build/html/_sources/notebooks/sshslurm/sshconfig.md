@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 #  Configure `ssh`
 
 The `ssh` program receives its configuration from either the command line or from configuration files `~/.ssh/config` and `/etc/ssh/ssh_config`. Command-line options take precedence over configuration files. The user-specific configuration file `~/.ssh/config` is used next. Finally, the global `/etc/ssh/ssh_config` file is used.

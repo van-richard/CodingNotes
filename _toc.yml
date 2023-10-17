@@ -1,56 +1,33 @@
 # In _toc.yml
 format: jb-book
 root: index
-options:
-  numbered: true
 
 chapters:
-- file: notebooks/Jargon
 - file: notebooks/QuickStart
   sections:
-    - file: notebooks/QuickStart/CommandLine
-    - file: notebooks/QuickStart/Navigation
-    - file: notebooks/QuickStart/FileManagement
-    - file: notebooks/QuickStart/Supercomputer
-    - file: notebooks/QuickStart/SSH
-    - file: notebooks/QuickStart/Slurm
-    - file: notebooks/QuickStart/PythonConda
-    - file: notebooks/QuickStart/StructureFiles
-    - file: notebooks/QuickStart/BasicMD
-- file: notebooks/TheoryTutorial
+  - file: notebooks/QuickStart/CommandLine
+  - file: notebooks/QuickStart/Navigation
+  - file: notebooks/QuickStart/FileManagement
+  - file: notebooks/QuickStart/Supercomputer
+  - file: notebooks/QuickStart/SSH
+  - file: notebooks/QuickStart/Slurm
+  - file: notebooks/QuickStart/CondaPython
+  - file: notebooks/QuickStart/StructureFiles
+  - file: notebooks/QuickStart/BasicMD 
+- file: notebooks/Tutorials
+- file: notebooks/Theory
   sections:
-  - file: notebooks/theory/notes
+  - file: notebooks/theory/simulations
+    sections:
+    - file: notebooks/theory/basics-classical
+    - file: notebooks/theory/basics-qmmm
+  - file: notebooks/theory/fe-binding
+  - file: notebooks/theory/fe-alchemical
     sections: 
-    - file: notebooks/theory/classical
-    - file: notebooks/theory/qmmm
-  - file: notebooks/simulation/tutorials
-    sections:
-    - file: notebooks/simulation/simple
-    - file: notebooks/simulation/distance
-    - file: notebooks/simulation/claisen
-- file: notebooks/VisualizationTools
-  sections:
-  - file: notebooks/chimera/ChimeraX
-    sections:
-    - file: notebooks/chimera/images
-    - file: notebooks/chimera/fade
-    - file: notebooks/chimera/morph
-    - file: notebooks/chimera/rock
-    - file: notebooks/chimera/spin
-  - file: notebooks/vmd/VMD
-    sections:
-    - file: notebooks/vmd/ffmpeg
-- file: notebooks/AdditionalResources
-  sections: 
-  - file: notebooks/bash
-    sections:
-    - glob: notebooks/bash/*
-  - file: notebooks/linux
-    sections:
-    - glob: notebooks/linuxcommands/*
-  - file: notebooks/pythonconda
-    sections:
-    - glob: notebooks/pythonconda/*
-  - file: notebooks/sshslurm
-    sections:
-    - glob: notebooks/sshslurm/*
+    - file: notebooks/theory/alchemical/potentials
+    - file: notebooks/theory/alchemical/workflow
+  - file: notebooks/theory/fe-estimators
+    sections: 
+    - file: notebooks/theory/estimators/ti
+    - file: notebooks/theory/estimators/mbar
+- file: notebooks/Resources 
