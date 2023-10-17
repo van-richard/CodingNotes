@@ -2,7 +2,7 @@
 orphan: true
 ---
 
-# ChimeraX
+# Introduction to ChimeraX 
 
 Chimera and [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) are both great molecular visualization tools developed by UCSF.
 

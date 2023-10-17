@@ -2,7 +2,7 @@
 orphan: true
 ---
 
-# Intel Conda Environments
+# Intel Environments on M1/M2
 
 If you have an Macbook with the m1 or m2 chips, you might have found out some python libraries don't work.
 

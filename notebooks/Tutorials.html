@@ -177,12 +177,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="theory/fe-binding.html">Binding Affinity</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="theory/fe-alchemical-workflow.html">Simulation Workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory/alchemical/potentials.html">Alchemical States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="theory/fe-ti.html">Thermodynamic Integration</a></li>
-
+<li class="toctree-l2 has-children"><a class="reference internal" href="theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory/estimators/ti.html">Thermodynamic Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Resources.html">Resources</a></li>
@@ -399,9 +404,6 @@ These tutorials, <em>by themselves</em>, skips the background/details of simulat
 <p>I’ll try and add more details as time moves on, but always reference the Amber manual if you don’t understand something.</p>
 <section id="amber-simulations">
 <h2>Amber Simulations<a class="headerlink" href="#amber-simulations" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference internal" href="simulation/amberinstall.html"><span class="doc std std-doc">Amber22 + Torchmd-net</span></a></p></li>
-</ul>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-1 sd-row-cols-md-1 sd-row-cols-lg-1 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
 <div class="sd-col sd-d-flex-row docutils">
@@ -423,6 +425,18 @@ Classical Simulations</div>
 QM/MM Simulations</div>
 <ul class="simple">
 <li><p class="sd-card-text"><a class="reference internal" href="simulation/claisen.html"><span class="doc std std-doc">Simple QM/MM Simulation of the Claisen Rearrangment Reaction</span></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Analysis</div>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference internal" href="simulation/rmsd.html"><span class="doc std std-doc">RMSD</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="simulation/rmsf.html"><span class="doc std std-doc">RMSF</span></a></p></li>
 </ul>
 </div>
 </div>

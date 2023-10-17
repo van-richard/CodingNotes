@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Intel Conda Environments &#8212; Coding Notes</title>
+    <title>Intel Environments on M1/M2 &#8212; Coding Notes</title>
   
   
   
@@ -175,12 +175,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Binding Affinity</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../theory/fe-alchemical-workflow.html">Simulation Workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/potentials.html">Alchemical States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/fe-ti.html">Thermodynamic Integration</a></li>
-
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/estimators/ti.html">Thermodynamic Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Resources.html">Resources</a></li>
@@ -365,7 +370,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Intel Conda Environments</h1>
+    <h1>Intel Environments on M1/M2</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,8 +384,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="intel-conda-environments">
-<h1>Intel Conda Environments<a class="headerlink" href="#intel-conda-environments" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="intel-environments-on-m1-m2">
+<h1>Intel Environments on M1/M2<a class="headerlink" href="#intel-environments-on-m1-m2" title="Permalink to this heading">#</a></h1>
 <p>If you have an Macbook with the m1 or m2 chips, you might have found out some python libraries don’t work.</p>
 <p>A work around, is via a conda environment with an intel architecture!</p>
 <p><span style="font-size:1.5em;"><strong>Example: Ambertools on m2 Macbook</strong></span></p>

@@ -1,23 +1,61 @@
-# Appendix
+# Resources
 
+````{div} full-width
 
-```{index} double: Anaconda; anaconda
-```
+Additional guides, notes/examples, and tips for an improved QOL (quality of life) in this cubicle.
 
-```{index} double: bash; Bash; BASH
-```
+::::{grid} 2
+:gutter: 1
 
-```{index} double: Graphic User Interface; GUI
-```
+:::{grid-item-card} bash
+* [](bash/startup.md)
+* [](bash/basics)
+* [](bash/bash1)
+:::
 
-```{index} single: sinfo
-```
+:::{grid-item-card} git
+* [](git/git)
+* [](git/branch)
+:::
 
-```{index} single: sbatch
-```
+:::{grid-item-card} ssh
+* [](ssh/autologin)
+* [](ssh/config)
+:::
 
-```{index} single: scancel
-```
+:::{grid-item-card} Linux
+* [](./linux)
+:::
 
-```{index} single: ssh-keygen
-```
+:::{grid-item-card} Conda
+* [](conda/installconda)
+* [](conda/condaenv)
+* [](conda/condaambertools)
+* [](conda/condaintel)
+* [](conda/myenv)
+* [](conda/jupyter)
+* [](conda/jupyterbook)
+:::
+
+:::{grid-item-card} Python
+* [](python/python)
+:::
+
+:::{grid-item-card} Amber
+* [](simulation/amberinstall)
+:::
+
+:::{grid-item-card} ChimeraX
+* [](chimera/ChimeraX)
+:::
+
+:::{grid-item-card} VMD
+* [](vmd/ffmpeg)
+:::
+
+:::{grid-item-card} idk where to put this
+* [Computer Terminology](Jargon)
+:::
+::::
+
+````

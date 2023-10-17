@@ -74,6 +74,14 @@ orphan: true
      sync files/folders 
 
 
+[sbatch](./commands/sbatch)
+     Submit job to Slurm
+
+
+[scancel](./commands/scancel)
+     Cancel Slurm Jobs
+
+
 [scp](./commands/scp)
      copy files/folders over ssh
 
@@ -90,8 +98,16 @@ orphan: true
      change file/folder permissions 
 
 
+[sinfo](./commands/sinfo)
+     View information about Slurm nodes and partitions.
+
+
 [sort](./commands/sort)
      sorts lines
+
+
+[ssh-keygen](./commands/ssh-keygen)
+    keygen` 
 
 
 [ssh](./commands/ssh)

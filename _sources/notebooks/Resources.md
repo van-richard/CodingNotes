@@ -6,9 +6,10 @@ Additional guides, notes/examples, and tips for an improved QOL (quality of life
 :gutter: 1
 
 :::{grid-item-card} bash
-* [](bash/startup.md)
+* [](bash/startup)
 * [](bash/basics)
 * [](bash/bash1)
+* [](bash/vi)
 :::
 
 :::{grid-item-card} git
@@ -28,9 +29,9 @@ Additional guides, notes/examples, and tips for an improved QOL (quality of life
 :::{grid-item-card} Conda
 * [](conda/installconda)
 * [](conda/condaenv)
+* [](conda/myenv)
 * [](conda/condaambertools)
 * [](conda/condaintel)
-* [](conda/myenv)
 * [](conda/jupyter)
 * [](conda/jupyterbook)
 :::

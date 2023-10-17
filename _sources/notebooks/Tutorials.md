@@ -9,8 +9,6 @@ I'll try and add more details as time moves on, but always reference the Amber m
 
 ## Amber Simulations
 
-* [Amber22 + Torchmd-net](simulation/amberinstall)
-
 ::::{grid} 1
 :gutter: 1
 
@@ -22,4 +20,10 @@ I'll try and add more details as time moves on, but always reference the Amber m
 :::{grid-item-card} QM/MM Simulations
 * [](simulation/claisen)
 :::
+
+:::{grid-item-card} Analysis
+* [](simulation/rmsd)
+* [](simulation/rmsf)
+:::
 ::::
+

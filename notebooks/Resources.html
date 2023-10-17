@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Resources';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Thermodynamic Integration" href="theory/fe-ti.html" />
+    <link rel="prev" title="BAR &amp; MBAR" href="theory/estimators/mbar.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,12 +176,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="theory/fe-binding.html">Binding Affinity</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="theory/fe-alchemical-workflow.html">Simulation Workflows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory/alchemical/potentials.html">Alchemical States</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="theory/fe-ti.html">Thermodynamic Integration</a></li>
-
+<li class="toctree-l2 has-children"><a class="reference internal" href="theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory/estimators/ti.html">Thermodynamic Integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Resources</a></li>
@@ -394,6 +399,7 @@ bash</div>
 <li><p class="sd-card-text"><a class="reference internal" href="bash/startup.html"><span class="doc std std-doc">Start Up Files</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="bash/basics.html"><span class="doc std std-doc">Bash Basics</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="bash/bash1.html"><span class="doc std std-doc">Scripting</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="bash/vi.html"><span class="doc std std-doc">Text Editing with Vi/Vim</span></a></p></li>
 </ul>
 </div>
 </div>
@@ -441,9 +447,9 @@ Conda</div>
 <ul class="simple">
 <li><p class="sd-card-text"><a class="reference internal" href="conda/installconda.html"><span class="doc std std-doc">Installing Miniforge</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="conda/condaenv.html"><span class="doc std std-doc">Conda Environments</span></a></p></li>
-<li><p class="sd-card-text"><a class="reference internal" href="conda/condaambertools.html"><span class="doc std std-doc">Ambertools Environment</span></a></p></li>
-<li><p class="sd-card-text"><a class="reference internal" href="conda/condaintel.html"><span class="doc std std-doc">Intel Conda Environments</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="conda/myenv.html"><span class="doc std std-doc">My recommended Conda Setup</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="conda/condaambertools.html"><span class="doc std std-doc">Ambertools Environment</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="conda/condaintel.html"><span class="doc std std-doc">Intel Environments on M1/M2</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="conda/jupyter.html"><span class="doc std std-doc">Jupyter Notebooks</span></a></p></li>
 <li><p class="sd-card-text"><a class="reference internal" href="conda/jupyterbook.html"><span class="doc std std-doc">Create Websites</span></a></p></li>
 </ul>
@@ -456,7 +462,7 @@ Conda</div>
 <div class="sd-card-title sd-font-weight-bold docutils">
 Python</div>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference internal" href="python/python.html"><span class="doc std std-doc">Python</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="python/python.html"><span class="doc std std-doc">Overview</span></a></p></li>
 </ul>
 </div>
 </div>
@@ -478,7 +484,7 @@ Amber</div>
 <div class="sd-card-title sd-font-weight-bold docutils">
 ChimeraX</div>
 <ul class="simple">
-<li><p class="sd-card-text"><a class="reference internal" href="chimera/ChimeraX.html"><span class="doc std std-doc">ChimeraX</span></a></p></li>
+<li><p class="sd-card-text"><a class="reference internal" href="chimera/ChimeraX.html"><span class="doc std std-doc">Introduction to ChimeraX</span></a></p></li>
 </ul>
 </div>
 </div>
@@ -541,12 +547,12 @@ idk where to put this</div>
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="theory/fe-ti.html"
+       href="theory/estimators/mbar.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Thermodynamic Integration</p>
+        <p class="prev-next-title">BAR &amp; MBAR</p>
       </div>
     </a>
 </div></div>
