@@ -9,10 +9,12 @@ I'll try and add more details as time moves on, but always reference the Amber m
 
 ## Amber Simulations
 
-::::{grid} 1
-:gutter: 1
+::::{grid} 2
+:gutter: 4
 
 :::{grid-item-card} Classical Simulations
+<!-- :img-background: ../_static/images/ala.png -->
+
 * [](simulation/simple)
 * [](simulation/distance)
 :::

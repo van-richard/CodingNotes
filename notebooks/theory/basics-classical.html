@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -66,10 +67,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/theory/basics-classical';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/theory/basics-classical.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="QM/MM Simulations" href="basics-qmmm.html" />
-    <link rel="prev" title="Molcular Simulations" href="simulations.html" />
+    <link rel="prev" title="Molcular Modelling" href="simulations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -169,24 +171,28 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">HPC and Using Slurm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/CondaPython.html">Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../QuickStart/StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../QuickStart/PDBFiles.html">Exploring PDB Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../QuickStart/XYZFiles.html">What are XYZ Files?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory.html">Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="simulations.html">Molcular Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory.html">Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="simulations.html">Molcular Modelling</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Classical Molecular Dynamics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fe-binding.html">Binding Affinity</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="fe-binding.html">Modelling Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="alchemical/potentials.html">Alchemical States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="estimators/ti.html">Thermodynamic Integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
@@ -475,7 +481,7 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Molcular Simulations</p>
+        <p class="prev-next-title">Molcular Modelling</p>
       </div>
     </a>
     <a class="right-next"
@@ -530,7 +536,7 @@ By Richard Van
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

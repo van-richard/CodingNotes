@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/Navigation';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/QuickStart/Navigation.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Files in Terminal" href="FileManagement.html" />
@@ -167,24 +169,28 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="SSH.html">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Slurm.html">HPC and Using Slurm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CondaPython.html">Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="PDBFiles.html">Exploring PDB Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XYZFiles.html">What are XYZ Files?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Binding Affinity</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Modelling Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/potentials.html">Alchemical States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/estimators/ti.html">Thermodynamic Integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
@@ -388,7 +394,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">Where are we?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-here">What is Here?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">How to make a new folder/directory?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#go-in-out-of-directories">Go in/out of Directories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-between-directories">Moving between Directories</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">What are Paths?</a></li>
 </ul>
             </nav>
@@ -412,10 +418,8 @@ document.write(`
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We will use the terminal on your local computer.
-In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.</p>
+<p>We will use the terminal on your local computer. In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.</p>
 </div>
-<br>
 <section id="where-are-we">
 <h2>Where are we?<a class="headerlink" href="#where-are-we" title="Permalink to this heading">#</a></h2>
 <p>The first command to learn is <code class="docutils literal notranslate"><span class="pre">pwd</span></code> which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> tells you what your current or present working directory (folder) is.</p>
@@ -423,7 +427,6 @@ In the margin is a screen capture of my terminal running the command. There will
 </pre></div>
 </div>
 <p>Navigating the terminal will rely on you being in the right location. As you’re moving around directories, it is easy to lose track of where you are. Use this command often to remind yourself where you presently are.</p>
-<br>
 </section>
 <section id="what-is-here">
 <h2>What is Here?<a class="headerlink" href="#what-is-here" title="Permalink to this heading">#</a></h2>
@@ -431,15 +434,13 @@ In the margin is a screen capture of my terminal running the command. There will
 <p class="sidebar-title"></p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tip</p>
-<p>More examples can be found here:
-<a class="reference internal" href="../commands/ls.html"><span class="doc std std-doc">ls - list information about files/folders</span></a></p>
+<p>More examples can be found here: <a class="reference internal" href="../commands/ls.html"><span class="doc std std-doc">ls - list information about files/folders</span></a></p>
 </div>
 </aside>
 <p>We know where we are, but we want to know what files/folders are here! To do this, use <code class="docutils literal notranslate"><span class="pre">ls</span></code>, short for list.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
 </pre></div>
 </div>
-<br>
 </section>
 <section id="how-to-make-a-new-folder-directory">
 <h2>How to make a new folder/directory?<a class="headerlink" href="#how-to-make-a-new-folder-directory" title="Permalink to this heading">#</a></h2>
@@ -447,31 +448,18 @@ In the margin is a screen capture of my terminal running the command. There will
 <p class="sidebar-title"></p>
 <div class="dropdown admonition tip">
 <p class="admonition-title">Tip</p>
-<p>More examples can be found here:
-<a class="reference internal" href="../commands/mkdir.html"><span class="doc std std-doc">mkdir - make new directories.</span></a></p>
+<p>Avoid using spaces when choosing filenames/folders. For example, for a folder called “amino acids”, ather than using a space, you should use an underscore (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino_acids</span></code>) or hyphen (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino-acids</span></code>).</p>
+<p>More examples can be found here: <a class="reference internal" href="../commands/mkdir.html"><span class="doc std std-doc">mkdir - make new directories.</span></a></p>
 </div>
 </aside>
 <p>Let’s make a new folder/directory so our current working directory isn’t so lonely. To do this, use the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command, short for make directory. This command takes an argument, i.e. the new folder name!</p>
-<p>The syntax is <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[arugment]</span></code> or in other words <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[new</span> <span class="pre">folder</span> <span class="pre">name]</span></code>. Here, I will use the braket notations (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) to imply this is some sort of input given by you. We can start by making a new folder called <code class="docutils literal notranslate"><span class="pre">test/</span></code>.</p>
+<p>The syntax is <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[argument]</span></code> or in other words <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[new</span> <span class="pre">folder</span> <span class="pre">name]</span></code>. Here, I will use the braket notations (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) to imply this is some sort of input given by you. We can start by making a new folder called <code class="docutils literal notranslate"><span class="pre">test/</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span><span class="nb">test</span>
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called “amino acids”. Rather than using a space, use an underscore (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino_acids</span></code>) or hyphen (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino-acids</span></code>).</p>
-</div>
-<br>
 </section>
-<section id="go-in-out-of-directories">
-<h2>Go in/out of Directories<a class="headerlink" href="#go-in-out-of-directories" title="Permalink to this heading">#</a></h2>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="dropdown admonition tip">
-<p class="admonition-title">Tip</p>
-<p>More examples can be found here:
-<a class="reference internal" href="../commands/cd.html"><span class="doc std std-doc">cd - change directories</span></a></p>
-</div>
-</aside>
+<section id="moving-between-directories">
+<h2>Moving between Directories<a class="headerlink" href="#moving-between-directories" title="Permalink to this heading">#</a></h2>
 <p>We can enter a folder with the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command, short for change directories. This command takes an argument, following the syntax <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[argument]</span></code> or in other words <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[folder</span> <span class="pre">name]</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
 </pre></div>
@@ -493,7 +481,6 @@ In the margin is a screen capture of my terminal running the command. There will
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 </div>
-<br>
 </section>
 <section id="what-are-paths">
 <h2>What are Paths?<a class="headerlink" href="#what-are-paths" title="Permalink to this heading">#</a></h2>
@@ -582,7 +569,7 @@ In the margin is a screen capture of my terminal running the command. There will
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">Where are we?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-here">What is Here?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">How to make a new folder/directory?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#go-in-out-of-directories">Go in/out of Directories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-between-directories">Moving between Directories</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">What are Paths?</a></li>
 </ul>
   </nav></div>
@@ -607,7 +594,7 @@ By Richard Van
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

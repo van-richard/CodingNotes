@@ -2,7 +2,7 @@
 orphan: true
 ---
 
-# Binding Affinity
+# Modelling Binding Affinity
 
 The binding affinity (energy of binding) between a ligand, $L$, to a receptor.
 

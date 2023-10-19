@@ -13,12 +13,9 @@ First we need to find your terminal!! Then, I want to introduce the general layo
 
 ````{note}
 
-
- We will use the terminal on your local computer.
- In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.
+We will use the terminal on your local computer. In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.
 ````
 
-<br>
 
 ## Where are we?
 
@@ -30,15 +27,15 @@ pwd
 
 Navigating the terminal will rely on you being in the right location. As you're moving around directories, it is easy to lose track of where you are. Use this command often to remind yourself where you presently are.
 
-<br>
+
 
 ## What is Here?
 
 ````{margin}
 ```{tip}
 :class: dropdown
-More examples can be found here: 
-[](../commands/ls.md)
+
+More examples can be found here: [](../commands/ls.md)
 ```
 ````
 
@@ -48,41 +45,31 @@ We know where we are, but we want to know what files/folders are here! To do thi
 ls
 ```
 
-<br>
+
 
 ## How to make a new folder/directory?
 
-````{margin}
-```{tip}
+::::{margin}
+:::{tip}
 :class: dropdown
-More examples can be found here: 
-[](../commands/mkdir.md)
-```
-````
+
+Avoid using spaces when choosing filenames/folders. For example, for a folder called "amino acids", ather than using a space, you should use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
+
+More examples can be found here: [](../commands/mkdir.md)
+:::
+::::
 
 Let's make a new folder/directory so our current working directory isn't so lonely. To do this, use the `mkdir` command, short for make directory. This command takes an argument, i.e. the new folder name!
 
-The syntax is `mkdir [arugment]` or in other words `mkdir [new folder name]`. Here, I will use the braket notations (`[]`) to imply this is some sort of input given by you. We can start by making a new folder called `test/`.
+The syntax is `mkdir [argument]` or in other words `mkdir [new folder name]`. Here, I will use the braket notations (`[]`) to imply this is some sort of input given by you. We can start by making a new folder called `test/`.
 
 ```bash
 mkdir test
 ```
 
-```{note}
-Avoid using spaces in filenames and/or folders. This causes some extra key strokes which we will touch on later! An example would be making a folder called "amino acids". Rather than using a space, use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
-```
 
-<br>
+## Moving between Directories
 
-## Go in/out of Directories
-
-````{margin}
-```{tip}
-:class: dropdown
-More examples can be found here: 
-[](../commands/cd.md)
-```
-````
 
 We can enter a folder with the `cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
 
@@ -115,7 +102,6 @@ If you check your current working directory again, you should see that you're ba
 pwd
 ```
 
-<br>
 
 ## What are Paths?
 
@@ -129,6 +115,7 @@ Whenever we refer to a file or directory we are using one of these paths.
 To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what's called the root directory. It is denoted by a single slash (`/`). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.
 
 ```{important}
+
 Absolute paths specify a location of a file/folder in relation to the root directory `/`
 
 Relative paths specify a location file/folder  in relation to where *you* currently are in the system.

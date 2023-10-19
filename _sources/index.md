@@ -1,8 +1,8 @@
 # CodingNotes
 
-<!-- ```{sidebar}
-![](_static/welcome.png)
-``` -->
+:::{sidebar}
+![](_static/images/welcome.png)
+:::
 
 *Notes I wish I had showed me when I started*
 
@@ -11,14 +11,14 @@ This collection of notes pretty much is a my consolidated experience in the fiel
 I am not the most coherent when it comes to speaking and writing, but I hope many of you will find this information useful in your future endeavors.
 
 
-## These notes include tips, tricks, and examples for:
+**These notes include tips, tricks, and examples for:**
 
-<!-- ```{figure} _static/tec-meme.jpg
+:::{figure} _static/images/tec-meme.jpg
 ---
 width: 250 px
 align: right
 ---
-``` -->
+:::
 
 **Programming**
 
@@ -32,12 +32,12 @@ align: right
 
 **Visualization Software**
 
-```{figure} _static/viz-meme.png
+:::{figure} _static/images/viz-meme.png
 ---
 width: 250 px
 align: right
 ---
-```
+:::
 
 Softwares I often use:
    * [IQmol](http://iqmol.org)
@@ -48,12 +48,12 @@ Softwares I often use:
 
 <br clear="right"/>
 
-<!-- ```{figure} _static/simple.mov
+:::{figure} _static/videos/simple.mov
 ---
 width: 250 px
 align: right
 ---
-``` -->
+:::
 
 **Simulations with [AmberMD](http://ambermd.org)**
 

@@ -1,18 +1,19 @@
 # Accessing the HPC 
 
-The command, {term}`ssh`, means the Secure Shell protocol, and we use to remotely access the supercomputer! 
+{term}`ssh` stands for Secure Shell protocol, and this is how what it looks like!
 
-The general notation looks like this:
+The command looks like this
 
 ```bash
 ssh username@servername
 ```
 
-Where: 
-- `username` is the username that you made when applying for the account
-- `@servername` is the server name and IP address of the supercomputer
+Where,
 
-To log into Oscer/Schooner or Pete, the command would look like this (*change `username` to your username*):
+- `username` is the username whatever you made when applying for the account
+- `@servername` is the name and IP address of the supercomputer
+
+To log into Oscer/Schooner/Pete, we would type this (*change `username` to your username*):
 
 ::::{tab-set} 
 :::{tab-item} Oscer/Schooner
@@ -29,10 +30,7 @@ ssh username@pete.hpc.okstate.edu
 :::
 ::::
 
-Lets try logging into the Pete supercomputer. If you have Oscer/Schooner, then change the `servername` to the `schooner.oscer.ou.edu`.
-
-
-<span style="font-size:1.5em;">**Accessing Pete with `ssh`**</span>
+Try logging into one of the supercomputer. Change the `servername` to the `pete.hpc.okstate.edu` or ``schooner.oscer.ou.edu`.
 
 My username is `van`, so logging in looks like this:
 
@@ -51,7 +49,7 @@ ssh van@pete.hpc.okstate.edu
 :::
 ::::
 
-The first time logging in, you will get the following prompt:
+In the very first login to the computer, you will get the following prompt:
 
 ```bash
 The authenticity of host 'pete.hpc.okstate.edu' cannot be established.
@@ -62,20 +60,22 @@ The authenticity of host 'pete.hpc.okstate.edu' cannot be established.
 Answering `yes` to the prompt will cause the session to continue, and the host key is stored in the local system's known_hosts file. This is a hidden file, stored by default in a hidden directory, called `/.ssh/known_hosts`, in the your home directory. Once the host key has been stored in the known_hosts file, the client system can connect directly to that server again without need for any approvals.
 
 ```{note} 
+
 **Answer `yes` by typing into your terminal. This will only happen on the first login!**
+
 ```
 
-<span style="align:center; font-size:2em;">**Congratulations! You logged into the supercomputer!**</soan>
+*Congratulations! You logged into the supercomputer!*
 
 
-## Transferring File & Folder 
+## Transferring Files/Folders Remotely
 
-We need to be able to copy files and folders from the supercomputer to our local computer, or vice versa. Previously, we learned {term}`cp` and {term}`mv` to manage files locally on our computer. However, to copy files through {term}`ssh`, we need to use one of these 2 commands:
+Previously, we learned {term}`cp` and {term}`mv` to manage files locally on our computer. However, to copy files through {term}`ssh`, we need to use one of these 2 commands:
 
 1. `rsync` 
 2. `scp`
 
-To use either command, type:
+Type:
 
 ::::{tab-set}
 :::{tab-item} rsync 

@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -66,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/index.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Quick Start Guide" href="notebooks/QuickStart.html" />
@@ -168,24 +170,28 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/SSH.html">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/Slurm.html">HPC and Using Slurm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/CondaPython.html">Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/QuickStart/StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/QuickStart/PDBFiles.html">Exploring PDB Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebooks/QuickStart/XYZFiles.html">What are XYZ Files?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="notebooks/Tutorials.html">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/basics-classical.html">Classical Molecular Dynamics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/theory/fe-binding.html">Binding Affinity</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/theory/fe-binding.html">Modelling Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/alchemical/potentials.html">Alchemical States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/estimators/ti.html">Thermodynamic Integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
@@ -363,9 +369,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -381,14 +385,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-notes-include-tips-tricks-and-examples-for">These notes include tips, tricks, and examples for:</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -400,20 +396,16 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="codingnotes">
 <h1>CodingNotes<a class="headerlink" href="#codingnotes" title="Permalink to this heading">#</a></h1>
-<!-- ```{sidebar}
-![](_static/welcome.png)
-``` -->
+<aside class="sidebar">
+<p><img alt="" src="_images/welcome.png" /></p>
+</aside>
 <p><em>Notes I wish I had showed me when I started</em></p>
 <p>This collection of notes pretty much is a my consolidated experience in the field of computational chemistry. Some I found through trial and error, while others are from the exceptional guidance of Dr. Genwei Zhang, Dr. Zheng Pei, Dr. Xiaoliang Pan, and Dr. Yihan Shao.</p>
 <p>I am not the most coherent when it comes to speaking and writing, but I hope many of you will find this information useful in your future endeavors.</p>
-<section id="these-notes-include-tips-tricks-and-examples-for">
-<h2>These notes include tips, tricks, and examples for:<a class="headerlink" href="#these-notes-include-tips-tricks-and-examples-for" title="Permalink to this heading">#</a></h2>
-<!-- ```{figure} _static/tec-meme.jpg
----
-width: 250 px
-align: right
----
-``` -->
+<p><strong>These notes include tips, tricks, and examples for:</strong></p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="_images/tec-meme.jpg"><img alt="_images/tec-meme.jpg" src="_images/tec-meme.jpg" style="width: 250px;" /></a>
+</figure>
 <p><strong>Programming</strong></p>
 <ul class="simple">
 <li><p>Command line, <code class="docutils literal notranslate"><span class="pre">bash</span></code>, <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code>, and other terminal stuff</p></li>
@@ -438,12 +430,9 @@ align: right
 <li><p><a class="reference external" href="https://www.schrodinger.com/products/maestro">Schrodinger Maestro</a></p></li>
 </ul>
 <br clear="right"/>
-<!-- ```{figure} _static/simple.mov
----
-width: 250 px
-align: right
----
-``` -->
+<figure class="align-right">
+<a class="reference internal image-reference" href="_images/simple.mov"><img alt="_images/simple.mov" src="_images/simple.mov" style="width: 250px;" /></a>
+</figure>
 <p><strong>Simulations with <a class="reference external" href="http://ambermd.org">AmberMD</a></strong></p>
 <p>I have read the Amber manual so much… It would be a waste not to summarize them here. I also wrote a set of tutorials for Amber simulations in the worflow our lab takes.</p>
 <ul class="simple">
@@ -475,7 +464,6 @@ align: right
 <ul class="simple">
 <li><p>Like making this website with Jekyll or JupyterBook 🤪🤪🤪</p></li>
 </ul>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -530,20 +518,6 @@ align: right
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#these-notes-include-tips-tricks-and-examples-for">These notes include tips, tricks, and examples for:</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
             
           </div>
           <footer class="bd-footer-content">
@@ -562,7 +536,7 @@ By Richard Van
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

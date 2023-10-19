@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,9 +65,10 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/StructureFiles';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/QuickStart/StructureFiles.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Briefly, Molecular Dynamics" href="BasicMD.html" />
+    <link rel="next" title="Exploring PDB Files" href="PDBFiles.html" />
     <link rel="prev" title="Python &amp; Conda" href="CondaPython.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -167,24 +169,28 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="SSH.html">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Slurm.html">HPC and Using Slurm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CondaPython.html">Python &amp; Conda</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Molecular Structure Files</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Molecular Structure Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="PDBFiles.html">Exploring PDB Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XYZFiles.html">What are XYZ Files?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Binding Affinity</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Modelling Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/potentials.html">Alchemical States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/estimators/ti.html">Thermodynamic Integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
@@ -386,15 +392,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">What are PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-atom-lines-in-pdb-files">What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-chain-identifier-column-5-of-atom">What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chains-are-separated-by-ter-lines">Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-occupancy">What is Occupancy?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-factor">What is B-factor?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-records-in-pdb-files">Summary Records in PDB Files</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">What are XYZ Files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-contents-of-ala-xyz">Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
 </ul>
             </nav>
         </div>
@@ -415,377 +413,18 @@ document.write(`
 <dt id="term-XYZ-Files">XYZ Files<a class="headerlink" href="#term-XYZ-Files" title="Permalink to this term">#</a></dt><dd><p>A simple and widely used file format in computational chemistry and molecular modeling. Often used to represent the three-dimensional coordinates of atoms or small molecules. The <code class="docutils literal notranslate"><span class="pre">.xyz</span></code> files are plain text files that contain atomic coordinates, atom types, and sometimes additional information about the system. These files are often used in Quantum Mechanics (QM) calculations!</p>
 </dd>
 </dl>
-<hr class="docutils" />
 <section id="what-are-pdb-files">
 <h2>What are PDB files?<a class="headerlink" href="#what-are-pdb-files" title="Permalink to this heading">#</a></h2>
 <p>These are files which contain atomic coordinates and other information which descripes biological molecules. Structural biologist use experimental methods such as X-ray crystallography, Nuclear Magnetic Resonace spectroscopy, and Cryo-electron microscopy to determine the location of atoms in the structure. The information is then deposited to a <a class="reference external" href="https://www.org">RCSB</a>.</p>
 <p>Each structure will have a unique 4-letter/number code. Inside each file, the Protein Data Bank format consists of lines of information in a text file. Each line of information in the file is called a record. A file generally contains several different types of records, which are arranged in a specific order to describe a structure.</p>
-<p>For example, a common molecular dynamics tutorial might look at hen egg-white lysozyme. The PDB code of the commonly used structure is PDB <strong>1AKI</strong>. Lets look at this file.</p>
-<p><span style="font-size:1.5em;"><strong>Example of Hen Egg-White Lysozyme PDB File</strong></span></p>
-<p>Get the hen egg-white lysozyme structure, PDB code “1AKI”, from the Protein Data Bank. Visit the <a class="reference external" href="https://www.rcsb.org">RCSB website</a>, and in the search bar type, “1AKI”.</p>
-<p><img alt="" src="../../_images/rcsb_1aki0.mov" /></p>
-<p>Now, download this file as PDB format.</p>
-<p><img alt="" src="../../_images/rcsb_1aki1.mov" /></p>
-<p><span style="font-size:1.5em;"><strong>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code></strong></span></p>
-<p>This should be in your <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code> directory. Using your terminal, change directories into this directory with <a class="reference internal" href="../linux.html#term-cd"><span class="xref std std-term">cd</span></a>, and then use <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a> to view the file. Example on MacOS:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span><span class="w">             </span><span class="c1"># Print the current working directory to see where you are</span>
-<span class="nb">cd</span><span class="w">              </span><span class="c1"># Change directories to /Users/[username]</span>
-<span class="nb">cd</span><span class="w"> </span>Downloads/<span class="w">   </span><span class="c1"># Change directories to Downloads</span>
-less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1"># View the contents using the command &quot;less&quot;</span>
-</pre></div>
-</div>
-<p>The <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a> command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn’t access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).</p>
-<p>When you get PDB files the from RCSB, they will start with some information pertaining to RCSB data, biological system, experiments performed, and journal/author details. Here is the first 20 lines of the files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>HEADER<span class="w">    </span>HYDROLASE<span class="w">                               </span><span class="m">19</span>-MAY-97<span class="w">   </span>1AKI<span class="w">     </span>
-<span class="linenos"> 2</span>TITLE<span class="w">     </span>THE<span class="w"> </span>STRUCTURE<span class="w"> </span>OF<span class="w"> </span>THE<span class="w"> </span>ORTHORHOMBIC<span class="w"> </span>FORM<span class="w"> </span>OF<span class="w"> </span>HEN<span class="w"> </span>EGG-WHITE<span class="w"> </span>LYSOZYME<span class="w"> </span>AT<span class="w">   </span>
-<span class="linenos"> 3</span>TITLE<span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>.5<span class="w"> </span>ANGSTROMS<span class="w"> </span>RESOLUTION<span class="w">     </span>
-<span class="linenos"> 4</span>COMPND<span class="w">    </span>MOL_ID:<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w">     </span>
-<span class="linenos"> 5</span>COMPND<span class="w">   </span><span class="m">2</span><span class="w"> </span>MOLECULE:<span class="w"> </span>LYSOZYME<span class="p">;</span><span class="w">     </span>
-<span class="linenos"> 6</span>COMPND<span class="w">   </span><span class="m">3</span><span class="w"> </span>CHAIN:<span class="w"> </span>A<span class="p">;</span><span class="w">     </span>
-<span class="linenos"> 7</span>COMPND<span class="w">   </span><span class="m">4</span><span class="w"> </span>EC:<span class="w"> </span><span class="m">3</span>.2.1.17<span class="w">     </span>
-<span class="linenos"> 8</span>SOURCE<span class="w">    </span>MOL_ID:<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w">     </span>
-<span class="linenos"> 9</span>SOURCE<span class="w">   </span><span class="m">2</span><span class="w"> </span>ORGANISM_SCIENTIFIC:<span class="w"> </span>GALLUS<span class="w"> </span>GALLUS<span class="p">;</span><span class="w">     </span>
-<span class="linenos">10</span>SOURCE<span class="w">   </span><span class="m">3</span><span class="w"> </span>ORGANISM_COMMON:<span class="w"> </span>CHICKEN<span class="p">;</span><span class="w">     </span>
-<span class="linenos">11</span>SOURCE<span class="w">   </span><span class="m">4</span><span class="w"> </span>ORGANISM_TAXID:<span class="w"> </span><span class="m">9031</span><span class="p">;</span><span class="w">     </span>
-<span class="linenos">12</span>SOURCE<span class="w">   </span><span class="m">5</span><span class="w"> </span>CELL:<span class="w"> </span>EGG<span class="w">     </span>
-<span class="linenos">13</span>KEYWDS<span class="w">    </span>HYDROLASE,<span class="w"> </span>GLYCOSIDASE<span class="w">     </span>
-<span class="linenos">14</span>EXPDTA<span class="w">    </span>X-RAY<span class="w"> </span>DIFFRACTION<span class="w">     </span>
-<span class="linenos">15</span>AUTHOR<span class="w">    </span>D.CARTER,J.HE,J.R.RUBLE,B.WRIGHT<span class="w">     </span>
-<span class="linenos">16</span>REVDAT<span class="w">   </span><span class="m">3</span><span class="w">   </span><span class="m">02</span>-AUG-23<span class="w"> </span>1AKI<span class="w">    </span><span class="m">1</span><span class="w">       </span>REMARK<span class="w">     </span>
-<span class="linenos">17</span>REVDAT<span class="w">   </span><span class="m">2</span><span class="w">   </span><span class="m">24</span>-FEB-09<span class="w"> </span>1AKI<span class="w">    </span><span class="m">1</span><span class="w">       </span>VERSN<span class="w">     </span>
-<span class="linenos">18</span>REVDAT<span class="w">   </span><span class="m">1</span><span class="w">   </span><span class="m">19</span>-NOV-97<span class="w"> </span>1AKI<span class="w">    </span><span class="m">0</span><span class="w">     </span>
-<span class="linenos">19</span>JRNL<span class="w">        </span>AUTH<span class="w">   </span>P.J.ARTYMIUK,C.C.F.BLAKE,D.W.RICE,K.S.WILSON<span class="w">     </span>
-<span class="linenos">20</span>JRNL<span class="w">        </span>TITL<span class="w">   </span>THE<span class="w"> </span>STRUCTURES<span class="w"> </span>OF<span class="w"> </span>THE<span class="w"> </span>MONOCLINIC<span class="w"> </span>AND<span class="w"> </span>ORTHORHOMBIC<span class="w"> </span>FORMS<span class="w"> </span>OF<span class="w">    </span>
-</pre></div>
-</div>
-<p>Other lines that start with <code class="docutils literal notranslate"><span class="pre">REMARK</span></code>, <code class="docutils literal notranslate"><span class="pre">HELIX</span></code>, <code class="docutils literal notranslate"><span class="pre">SHEET</span></code>, <code class="docutils literal notranslate"><span class="pre">SSBOND</span></code>, etc. (lines up to <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>) contain experimental details and structural/sequence information.</p>
-<p>Although this information is helpful, one of the most important parts (<em>for us anyways…</em>) are lines beginning with <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> and <code class="docutils literal notranslate"><span class="pre">HETATM</span></code>. These lines contain the x-, y-, z- coordinates required to visualize the structure on Chimera, ChimeraX, or VMD.</p>
 </section>
-<hr class="docutils" />
-<section id="what-are-atom-lines-in-pdb-files">
-<h2>What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?<a class="headerlink" href="#what-are-atom-lines-in-pdb-files" title="Permalink to this heading">#</a></h2>
-<p>Lines beginning with <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> are reserved for atoms in standard residues of protein, DNA or RNA.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There might be lines that start with <code class="docutils literal notranslate"><span class="pre">HETATM</span></code>. These lines are for non-standard residues such as, substrates, ligands, solvent, and metal ions. **They also follow the same format of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines</p>
-</div>
-<p>The general format the <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB file is organized into ~12 or more columns, where each column is:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Column #</p></th>
-<th class="head"><p>1</p></th>
-<th class="head"><p>2</p></th>
-<th class="head"><p>3</p></th>
-<th class="head"><p>4</p></th>
-<th class="head"><p>5</p></th>
-<th class="head"><p>6</p></th>
-<th class="head"><p>7</p></th>
-<th class="head"><p>8</p></th>
-<th class="head"><p>9</p></th>
-<th class="head"><p>10</p></th>
-<th class="head"><p>11</p></th>
-<th class="head"><p>12</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Data</p></td>
-<td><p>ATOM</p></td>
-<td><p>Atom #</p></td>
-<td><p>Atom Type</p></td>
-<td><p>Residue Name</p></td>
-<td><p>Chain ID</p></td>
-<td><p>Residue #</p></td>
-<td><p>x-coordinate</p></td>
-<td><p>y-coordinate</p></td>
-<td><p>z-coordinate</p></td>
-<td><p>Occupancy</p></td>
-<td><p>B-factor</p></td>
-<td><p>Element Symbol</p></td>
-</tr>
-</tbody>
-</table>
-<p><span style="font-size:1.5em;"><strong>Example of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)</strong></span></p>
-<p>Use your d-pad to get to first <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> line (this is line number, 347).</p>
-<p>The first 20 ‘ATOM` lines in PDB 1AKI file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">347</span>ATOM<span class="w">      </span><span class="m">1</span><span class="w">  </span>N<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">35</span>.365<span class="w">  </span><span class="m">22</span>.342<span class="w"> </span>-11.980<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">22</span>.28<span class="w">           </span>N<span class="w">  </span>
-<span class="linenos">348</span>ATOM<span class="w">      </span><span class="m">2</span><span class="w">  </span>CA<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">35</span>.892<span class="w">  </span><span class="m">21</span>.073<span class="w"> </span>-11.427<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">21</span>.12<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">349</span>ATOM<span class="w">      </span><span class="m">3</span><span class="w">  </span>C<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">34</span>.741<span class="w">  </span><span class="m">20</span>.264<span class="w"> </span>-10.844<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">16</span>.85<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">350</span>ATOM<span class="w">      </span><span class="m">4</span><span class="w">  </span>O<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">33</span>.945<span class="w">  </span><span class="m">20</span>.813<span class="w"> </span>-10.081<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.94<span class="w">           </span>O<span class="w">  </span>
-<span class="linenos">351</span>ATOM<span class="w">      </span><span class="m">5</span><span class="w">  </span>CB<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">36</span>.872<span class="w">  </span><span class="m">21</span>.435<span class="w"> </span>-10.306<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">20</span>.78<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">352</span>ATOM<span class="w">      </span><span class="m">6</span><span class="w">  </span>CG<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">37</span>.453<span class="w">  </span><span class="m">20</span>.248<span class="w">  </span>-9.565<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.47<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">353</span>ATOM<span class="w">      </span><span class="m">7</span><span class="w">  </span>CD<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">38</span>.688<span class="w">  </span><span class="m">20</span>.649<span class="w">  </span>-8.775<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">20</span>.32<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">354</span>ATOM<span class="w">      </span><span class="m">8</span><span class="w">  </span>CE<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">39</span>.057<span class="w">  </span><span class="m">19</span>.508<span class="w">  </span>-7.837<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">24</span>.76<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">355</span>ATOM<span class="w">      </span><span class="m">9</span><span class="w">  </span>NZ<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">40</span>.423<span class="w">  </span><span class="m">19</span>.771<span class="w">  </span>-7.299<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">28</span>.27<span class="w">           </span>N<span class="w">  </span>
-<span class="linenos">356</span>ATOM<span class="w">     </span><span class="m">10</span><span class="w">  </span>N<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">34</span>.739<span class="w">  </span><span class="m">18</span>.961<span class="w"> </span>-11.042<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.96<span class="w">           </span>N<span class="w">  </span>
-<span class="linenos">357</span>ATOM<span class="w">     </span><span class="m">11</span><span class="w">  </span>CA<span class="w">  </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">33</span>.903<span class="w">  </span><span class="m">17</span>.998<span class="w"> </span>-10.333<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.10<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">358</span>ATOM<span class="w">     </span><span class="m">12</span><span class="w">  </span>C<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">34</span>.800<span class="w">  </span><span class="m">17</span>.312<span class="w">  </span>-9.294<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.39<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">359</span>ATOM<span class="w">     </span><span class="m">13</span><span class="w">  </span>O<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">35</span>.759<span class="w">  </span><span class="m">16</span>.605<span class="w">  </span>-9.665<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">22</span>.14<span class="w">           </span>O<span class="w">  </span>
-<span class="linenos">360</span>ATOM<span class="w">     </span><span class="m">14</span><span class="w">  </span>CB<span class="w">  </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">33</span>.140<span class="w">  </span><span class="m">17</span>.034<span class="w"> </span>-11.232<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">16</span>.81<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">361</span>ATOM<span class="w">     </span><span class="m">15</span><span class="w">  </span>CG1<span class="w"> </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">32</span>.251<span class="w">  </span><span class="m">16</span>.084<span class="w"> </span>-10.434<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">21</span>.92<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">362</span>ATOM<span class="w">     </span><span class="m">16</span><span class="w">  </span>CG2<span class="w"> </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">32</span>.294<span class="w">  </span><span class="m">17</span>.714<span class="w"> </span>-12.290<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.46<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">363</span>ATOM<span class="w">     </span><span class="m">17</span><span class="w">  </span>N<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">34</span>.491<span class="w">  </span><span class="m">17</span>.546<span class="w">  </span>-8.038<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.89<span class="w">           </span>N<span class="w">  </span>
-<span class="linenos">364</span>ATOM<span class="w">     </span><span class="m">18</span><span class="w">  </span>CA<span class="w">  </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">35</span>.185<span class="w">  </span><span class="m">16</span>.903<span class="w">  </span>-6.918<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">17</span>.43<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">365</span>ATOM<span class="w">     </span><span class="m">19</span><span class="w">  </span>C<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">34</span>.742<span class="w">  </span><span class="m">15</span>.441<span class="w">  </span>-6.771<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">15</span>.70<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">366</span>ATOM<span class="w">     </span><span class="m">20</span><span class="w">  </span>O<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">33</span>.525<span class="w">  </span><span class="m">15</span>.162<span class="w">  </span>-6.862<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.52<span class="w">           </span>O<span class="w"> </span>
-</pre></div>
-</div>
-<p>Explanation of each column:</p>
-<ul class="simple">
-<li><p><strong>Columns 1 and 2:</strong> The first 20 lines correspond to the first 20 atoms of PDB 1AKI.</p></li>
-<li><p><strong>Columns 4 and 6:</strong> These atoms belong to the first 3 residues  Lysine, Valine, and Phenylalanine</p></li>
-<li><p><strong>Column 5:</strong> The atoms of these 3 residues belong to the same chain (i.e. protein)</p></li>
-<li><p><strong>Columns 7,8, and 9:</strong> The x-, y-, z- coordinates, in that order.</p></li>
-<li><p><strong>Column 10:</strong> Ooccupancy of that atom in residue, column 5 (this value between 0.00 and 1.00)</p></li>
-<li><p><strong>Column 11:</strong> B-factor value</p></li>
-<li><p><strong>Column 12:</strong> Element symbol (i.e. chemical identity)</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="what-is-a-chain-identifier-column-5-of-atom">
-<h2>What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?<a class="headerlink" href="#what-is-a-chain-identifier-column-5-of-atom" title="Permalink to this heading">#</a></h2>
-<p>A chain identifier is a single-character label used to distinguish and identify different polypeptide chains or structural components within a macromolecular structure. Each chain in a PDB file is assigned a unique chain identifier, allowing for the unambiguous identification of individual protein or nucleic acid chains within the structure.</p>
-<p>It is commonly represented as a single uppercase letter, such as ‘A,’ ‘B,’ ‘C,’ and so on. It’s important to note that the chain identifier is case-sensitive, and it must be unique within the PDB file for each distinct chain.</p>
-<p><span style="font-size:1.5em;"><strong>Example with SpyCas9</strong></span></p>
-<p>We will visualize the PDB file of the ternary structure of SpyCas9 (SpyCas9 bound to RNA, DNA, and metal ions) using ChimeraX:</p>
-<ol class="arabic simple">
-<li><p>Visit the Protein Data Bank</p></li>
-<li><p>Search for the PDB <strong>7Z4J</strong></p></li>
-<li><p>Download this file</p></li>
-<li><p>Open the file using ChimeraX</p></li>
-<li><p>Change the molecule style to ribbon</p></li>
-</ol>
-<p><video src="../../_static/rcsb_7z4j0.mov" controls width=100%></video></p>
-<p>In Step 4. (or roughly 28 seconds into the video), once we opened PDB <strong>7Z4J</strong>, ChimeraX gives us some chain information in the “Log” panel. For this PDB, we have 5 chains corresponding to:</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Chain</p></th>
-<th class="head"><p>Molecule</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>A</p></td>
-<td><p>RNA (single-guide RNA)</p></td>
-</tr>
-<tr class="row-odd"><td><p>B</p></td>
-<td><p>Cas9 Enzyme</p></td>
-</tr>
-<tr class="row-even"><td><p>C</p></td>
-<td><p>One strand of DNA (target-strand DNA bound to RNA)</p></td>
-</tr>
-<tr class="row-odd"><td><p>D</p></td>
-<td><p>Complementary strand of DNA (non-target strand DNA)</p></td>
-</tr>
-<tr class="row-even"><td><p>c</p></td>
-<td><p>The rest of target-strand DNA (since this is the cleaved product)</p></td>
-</tr>
-</tbody>
-</table>
-<p>In this example, we are looking at the DNA cleavage product from SpyCas9. Chains C and c both correspond to the target-strand DNA, but they are labeled as separate chains because they are not connected! They are treated as separate molecules in the PDB file.</p>
-<p><video src="../../_static/rcsb_7z4j1.mov" controls width=100%></video></p>
-<p>In this video, I zoom into the the HNH domain where target-strand DNA gets cleaved, and show all residues within 5 Å of the magnesium ion. Chain C is on the right, while Chain c is on the left.</p>
-</section>
-<hr class="docutils" />
-<section id="chains-are-separated-by-ter-lines">
-<h2>Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines<a class="headerlink" href="#chains-are-separated-by-ter-lines" title="Permalink to this heading">#</a></h2>
-<p>Each Chain is identified by an alphabetical letter, and an additional <code class="docutils literal notranslate"><span class="pre">TER</span></code> line. The <code class="docutils literal notranslate"><span class="pre">TER</span></code> line occurs at the end of the chain. If we’re looking at proteins, then usually the C-terminal Oxygen will have the atom type ,<code class="docutils literal notranslate"><span class="pre">OXT</span></code>, followed by a <code class="docutils literal notranslate"><span class="pre">TER</span></code>!</p>
-<p>View the contents of PDB <strong>7Z4J</strong> using less, and you can see for yourself:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Downloads/<span class="w"> </span><span class="c1"># Change directories to /Users/[username] on MacOS</span>
-less<span class="w"> </span>7z4j.pdb<span class="w">   </span><span class="c1"># View file</span>
-<span class="c1"># While in less, you start at the top of 7z4j.pdb  </span>
-<span class="c1"># You can skip to the bottom of the file by pressing &quot;Shift + g&quot;</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a>, you can skip to the bottom of the file by pressing <code class="docutils literal notranslate"><span class="pre">shift</span></code>+<code class="docutils literal notranslate"><span class="pre">g</span></code>. To go back to the top, just press <code class="docutils literal notranslate"><span class="pre">g</span></code>.</p>
-</div>
-<p>The last ~20 lines containing ‘ATOM’, ‘HETATM’, ‘TER’ should look like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ATOM<span class="w">  </span><span class="m">13936</span><span class="w">  </span>CD2<span class="w"> </span>LEU<span class="w"> </span>B1365<span class="w">     </span><span class="m">105</span>.073<span class="w"> </span><span class="m">161</span>.302<span class="w"> </span><span class="m">113</span>.513<span class="w">  </span><span class="m">1</span>.00152.63<span class="w">           </span>C<span class="w">  </span>
-ATOM<span class="w">  </span><span class="m">13937</span><span class="w">  </span>N<span class="w">   </span>GLY<span class="w"> </span>B1366<span class="w">     </span><span class="m">106</span>.547<span class="w"> </span><span class="m">165</span>.755<span class="w"> </span><span class="m">115</span>.990<span class="w">  </span><span class="m">1</span>.00154.73<span class="w">           </span>N<span class="w">  </span>
-ATOM<span class="w">  </span><span class="m">13938</span><span class="w">  </span>CA<span class="w">  </span>GLY<span class="w"> </span>B1366<span class="w">     </span><span class="m">106</span>.450<span class="w"> </span><span class="m">166</span>.850<span class="w"> </span><span class="m">116</span>.936<span class="w">  </span><span class="m">1</span>.00153.70<span class="w">           </span>C<span class="w">  </span>
-ATOM<span class="w">  </span><span class="m">13939</span><span class="w">  </span>C<span class="w">   </span>GLY<span class="w"> </span>B1366<span class="w">     </span><span class="m">107</span>.728<span class="w"> </span><span class="m">167</span>.109<span class="w"> </span><span class="m">117</span>.706<span class="w">  </span><span class="m">1</span>.00153.60<span class="w">           </span>C<span class="w">  </span>
-ATOM<span class="w">  </span><span class="m">13940</span><span class="w">  </span>O<span class="w">   </span>GLY<span class="w"> </span>B1366<span class="w">     </span><span class="m">107</span>.771<span class="w"> </span><span class="m">167</span>.980<span class="w"> </span><span class="m">118</span>.575<span class="w">  </span><span class="m">1</span>.00151.76<span class="w">           </span>O<span class="w">  </span>
-TER<span class="w">   </span><span class="m">13941</span><span class="w">      </span>GLY<span class="w"> </span>B1366<span class="w">                                                      </span>
-HETATM13942<span class="w"> </span>MG<span class="w">    </span>MG<span class="w"> </span>A<span class="w"> </span><span class="m">201</span><span class="w">     </span><span class="m">108</span>.471<span class="w"> </span><span class="m">130</span>.166<span class="w"> </span><span class="m">143</span>.047<span class="w">  </span><span class="m">1</span>.00124.93<span class="w">          </span>MG<span class="w">  </span>
-HETATM13943<span class="w"> </span>MG<span class="w">    </span>MG<span class="w"> </span>B1401<span class="w">     </span><span class="m">128</span>.982<span class="w"> </span><span class="m">134</span>.222<span class="w"> </span><span class="m">104</span>.696<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">62</span>.38<span class="w">          </span>MG<span class="w">  </span>
-HETATM13944<span class="w"> </span>MG<span class="w">    </span>MG<span class="w"> </span>B1402<span class="w">     </span><span class="m">129</span>.678<span class="w"> </span><span class="m">130</span>.604<span class="w"> </span><span class="m">104</span>.214<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">83</span>.43<span class="w">          </span>MG<span class="w">  </span>
-HETATM13945<span class="w"> </span>MG<span class="w">    </span>MG<span class="w"> </span>B1403<span class="w">     </span><span class="m">134</span>.288<span class="w"> </span><span class="m">121</span>.616<span class="w"> </span><span class="m">135</span>.973<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">56</span>.44<span class="w">          </span>MG<span class="w">  </span>
-HETATM13946<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">301</span><span class="w">     </span><span class="m">107</span>.802<span class="w"> </span><span class="m">131</span>.851<span class="w"> </span><span class="m">143</span>.930<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">99</span>.69<span class="w">           </span>O<span class="w">  </span>
-HETATM13947<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">302</span><span class="w">     </span><span class="m">108</span>.431<span class="w"> </span><span class="m">129</span>.318<span class="w"> </span><span class="m">144</span>.849<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">93</span>.31<span class="w">           </span>O<span class="w">  </span>
-HETATM13948<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">303</span><span class="w">     </span><span class="m">108</span>.156<span class="w"> </span><span class="m">131</span>.547<span class="w"> </span><span class="m">141</span>.770<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">95</span>.01<span class="w">           </span>O<span class="w">  </span>
-HETATM13949<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">304</span><span class="w">     </span><span class="m">109</span>.489<span class="w"> </span><span class="m">129</span>.827<span class="w"> </span><span class="m">141</span>.295<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">95</span>.43<span class="w">           </span>O<span class="w">  </span>
-HETATM13950<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">305</span><span class="w">     </span><span class="m">107</span>.313<span class="w"> </span><span class="m">129</span>.453<span class="w"> </span><span class="m">141</span>.610<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">95</span>.40<span class="w">           </span>O<span class="w">  </span>
-HETATM13951<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">306</span><span class="w">     </span><span class="m">106</span>.637<span class="w"> </span><span class="m">129</span>.981<span class="w"> </span><span class="m">143</span>.643<span class="w">  </span><span class="m">1</span>.00113.87<span class="w">           </span>O<span class="w">  </span>
-HETATM13952<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>C<span class="w"> </span><span class="m">101</span><span class="w">     </span><span class="m">134</span>.709<span class="w"> </span><span class="m">123</span>.362<span class="w"> </span><span class="m">135</span>.209<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">86</span>.02<span class="w">           </span>O<span class="w">  </span>
-HETATM13953<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>B1501<span class="w">     </span><span class="m">134</span>.738<span class="w"> </span><span class="m">122</span>.897<span class="w"> </span><span class="m">137</span>.348<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">88</span>.14<span class="w">           </span>O<span class="w">  </span>
-MASTER<span class="w">      </span><span class="m">282</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">4</span><span class="w">   </span><span class="m">69</span><span class="w">   </span><span class="m">32</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">613948</span><span class="w">    </span><span class="m">5</span><span class="w">   </span><span class="m">24</span><span class="w">  </span><span class="m">122</span><span class="w">          </span>
-END<span class="w">                                                                             </span>
-</pre></div>
-</div>
-<p>We see here that following Chain B, we have a <code class="docutils literal notranslate"><span class="pre">TER</span></code> line, indicating the end of the protein. Following our SpyCas9 enzyme, we have some <code class="docutils literal notranslate"><span class="pre">HETATM</span></code> or non-standard residues such as, magnesium ions and waters, solved with the Cryo-EM structure.</p>
-</section>
-<section id="what-is-occupancy">
-<h2>What is Occupancy?<a class="headerlink" href="#what-is-occupancy" title="Permalink to this heading">#</a></h2>
-<dl class="simple glossary">
-<dt id="term-Occupancy">Occupancy<a class="headerlink" href="#term-Occupancy" title="Permalink to this term">#</a></dt><dd><p>A parameter that represents the fractional occupancy of a particular atom or group of atoms in a crystal structure. The occupancy value typically ranges from 0.00 to 1.00, where:</p>
-<ul class="simple">
-<li><p><strong>1.00:</strong> That atom is fully occupied,</p></li>
-<li><p><strong>0.00:</strong> That atom is completely unoccupied or not present.</p></li>
-</ul>
-</dd>
-</dl>
-<p>The occupancy value is used to account for situations where multiple different types of atoms or ions may occupy the same position in the crystal lattice. For example, in a crystal structure of a protein, there may be several alternate conformations of a side chain or different ligands bound to the same site. In such cases, each atom or group of atoms may be assigned an occupancy value that reflects the probability of finding that atom or group in its specific conformation.</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The sum of all occupancy values for each atom in a residue conformation adds up to 1.00 or 100%!</p>
-</div>
-</section>
-<hr class="docutils" />
-<section id="what-is-b-factor">
-<h2>What is B-factor?<a class="headerlink" href="#what-is-b-factor" title="Permalink to this heading">#</a></h2>
-<dl class="simple glossary">
-<dt id="term-B-factor">B-factor <a class="headerlink" href="#term-B-factor" title="Permalink to this term">#</a></dt><dd><p>(aka the temperature factor or Debye-Waller factor) is a parameter that represents the thermal vibrations or disorder of atoms in a crystal structure. It is used to describe the uncertainty in the precise position of each atom due to thermal motion.</p>
-</dd>
-</dl>
-<p>The B-factor is a real number associated with each atom or group of atoms in the PDB file. It quantifies how much an atom fluctuates or vibrates around its average position in the crystal lattice. A higher B-factor indicates greater thermal motion or disorder, while a lower B-factor indicates less thermal motion and greater positional certainty.</p>
-<p>This value can be used to gain insights into the flexibility of a molecule or a particular region within a crystal structure. For example, in a protein crystallography study, regions of a protein that are more flexible or less well-ordered may have higher B-factors, whereas well-ordered regions with less thermal motion will have lower B-factors.</p>
-</section>
-<hr class="docutils" />
-<section id="summary-records-in-pdb-files">
-<h2>Summary Records in PDB Files<a class="headerlink" href="#summary-records-in-pdb-files" title="Permalink to this heading">#</a></h2>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-center"><p>Record</p></th>
-<th class="head text-left"><p>Explanation</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p>HELIX</p></td>
-<td class="text-left"><p>Location and type (right-handed alpha, etc.) of helices. One record per helix</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>SHEET</p></td>
-<td class="text-left"><p>Location, sense (anti-parallel, etc.) and registration with respect to the previous strand in the sheet (if any) of each strand in the model. One record per strand</p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>SSBOND</p></td>
-<td class="text-left"><p>Defines disulfide bond linkages between cysteine residues</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>ATOM</p></td>
-<td class="text-left"><p>This line pertain to atoms in standard residues (<em>amino acids and nucleic acids</em>) <br> <strong>Note:</strong> This can also be <code class="docutils literal notranslate"><span class="pre">HETATM</span></code> for non-standard residues (<em>ligands, solvent, and metal ions</em>)</p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>Atom #</p></td>
-<td class="text-left"><p>Atom number (starts at 1, and continues for entire PDB file!)</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>Atom Type</p></td>
-<td class="text-left"><p>Atom name, additional information on this here</p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>Residue Name</p></td>
-<td class="text-left"><p>3-letter code for amino acids, 2 letter code for DNA, and 1-letter code for RNA</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>Chain ID</p></td>
-<td class="text-left"><p>Identifies molecules, alphabetical ID (e.g. A, B, C, D) for PDBs with multiple molecules. <br> <strong>Notes:</strong> Each chain is followed by a <code class="docutils literal notranslate"><span class="pre">TER</span></code> line!</p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>Residue #</p></td>
-<td class="text-left"><p>Residue Number (starts at 1, and ends at terminal residue at the end of Chain)</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>x-coordinate</p></td>
-<td class="text-left"><p>x- orthogonal coordinate in Å</p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>y-coordinate</p></td>
-<td class="text-left"><p>y- orthogonal coordinate in Å</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>z-coordinate</p></td>
-<td class="text-left"><p>z- X orthogonal coordinate in Å</p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>Occupancy</p></td>
-<td class="text-left"><p>Fraction of atoms in a residue found in that xyz- coordinate. This is a number between 0.00 - 1.00. An occupancy of 1.00 indicates that the atom is found in all of the molecules in the same place in the crystal, whereas an occupancy &lt; 1.00 suggests multiple conformations, noted by <code class="docutils literal notranslate"><span class="pre">Residue</span> <span class="pre">Name</span></code> + <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">or</span> <span class="pre">B</span></code></p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>B-factor</p></td>
-<td class="text-left"><p>Quantification of how much an atom fluctuates around its average position in the crystal lattice. A higher B-factor indicates greater thermal motion or disorder, while a lower B-factor indicates less thermal motion and greater positional certainty <br> <strong>Note:</strong> A lower value indicates a well-ordered region, whereas a higher value indicates a more flexible region</p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>Element Symbol</p></td>
-<td class="text-left"><p>Clear chemical identification (Carbon - C, Oxygen -O, Nitrogen -N, etc.)</p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>TER</p></td>
-<td class="text-left"><p>The end of a chain of residues</p></td>
-</tr>
-</tbody>
-</table>
-</section>
-<hr class="docutils" />
 <section id="what-are-xyz-files">
 <h2>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Permalink to this heading">#</a></h2>
 <p>The XYZ file format is a text-file format. Unlike PDB files, there is no formal standard and several variations exist. However, a typical XYZ format specifies the molecule geometry by giving the number of atoms with Cartesian coordinates that will be read on the first line, a comment on the second, and the lines of atomic coordinates in the following lines.</p>
 <p>Typically, we use these files to store molecular geometries in Quantum Mechanical (QM) calculations. These files generally contain up to a few hundred atoms. For example, let’s build the small molecule alanine dipeptide, and store this data in <code class="docutils literal notranslate"><span class="pre">.xyz</span></code>.</p>
-<p><span style="font-size:1.5em;"><strong>Example with Alanine Dipeptide</strong></span></p>
-<p><img alt="" src="../../_images/ala.png" /></p>
-<p>Alanine dipeptide is the amino acid, Alanine, with the N-/C-terminal capped by an N-acetyl and N′-methylamide to neutralize the charges. First we will build alanine dipeptide via IQmol, then save the structure as <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>:</p>
-<ol class="arabic simple">
-<li><p>Open up the software, IQmol</p></li>
-<li><p>Use your mouse/trackpad and click any area on the screen</p></li>
-<li><p>Starting with the first Carbon atom, add the rest of the atoms, ignoring hydrogen</p></li>
-<li><p>Click on the ‘C’ to get the periodic table</p></li>
-<li><p>Click on Nitrogen, and replace the appropriate Carbons</p></li>
-<li><p>Repeat step 5. but with Oxygen</p></li>
-<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">add</span> <span class="pre">hydrogens</span></code> button</p></li>
-<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">minimize</span> <span class="pre">energy</span></code> button</p></li>
-<li><p>Save the structure as <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> to your desired location (I saved them to my <code class="docutils literal notranslate"><span class="pre">~/Desktop/</span></code>)</p></li>
-</ol>
-<p><video src="../../_static/iqmol_ala.mov" controls width=100%></video></p>
-<p><span style="align: center; font-size:1.5em;"><strong>Congratualations! You made your first structure files!</strong></span></p>
 </section>
-<hr class="docutils" />
-<section id="viewing-the-contents-of-ala-xyz">
-<h2>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code><a class="headerlink" href="#viewing-the-contents-of-ala-xyz" title="Permalink to this heading">#</a></h2>
-<p>First, open your terminal, and then change directories to where you saved the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>. Since I saved them to my <code class="docutils literal notranslate"><span class="pre">~/Desktop/</span></code>, I will <a class="reference internal" href="../linux.html#term-cd"><span class="xref std std-term">cd</span></a> there, and use <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a> to view <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Desktop/
-less<span class="w"> </span>ala.xyz
-</pre></div>
+<div class="toctree-wrapper compound">
 </div>
-<p>You should see something like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="m">22</span>
-<span class="linenos"> 2</span>
-<span class="linenos"> 3</span>C<span class="w">         </span>-4.63266<span class="w">       </span>-0.12314<span class="w">       </span>-0.02867
-<span class="linenos"> 4</span>C<span class="w">         </span>-3.47843<span class="w">        </span><span class="m">0</span>.78724<span class="w">       </span>-0.33464
-<span class="linenos"> 5</span>N<span class="w">         </span>-2.20323<span class="w">        </span><span class="m">0</span>.42630<span class="w">       </span>-0.00959
-<span class="linenos"> 6</span>C<span class="w">         </span>-1.04137<span class="w">        </span><span class="m">1</span>.27430<span class="w">       </span>-0.28628
-<span class="linenos"> 7</span>C<span class="w">          </span><span class="m">0</span>.27575<span class="w">        </span><span class="m">0</span>.55742<span class="w">        </span><span class="m">0</span>.00041
-<span class="linenos"> 8</span>N<span class="w">          </span><span class="m">1</span>.45796<span class="w">        </span><span class="m">1</span>.17048<span class="w">       </span>-0.29496
-<span class="linenos"> 9</span>C<span class="w">          </span><span class="m">2</span>.75416<span class="w">        </span><span class="m">0</span>.56631<span class="w">       </span>-0.05757
-<span class="linenos">10</span>O<span class="w">          </span><span class="m">0</span>.27431<span class="w">       </span>-0.56825<span class="w">        </span><span class="m">0</span>.48031
-<span class="linenos">11</span>O<span class="w">         </span>-3.70495<span class="w">        </span><span class="m">1</span>.85032<span class="w">       </span>-0.89391
-<span class="linenos">12</span>C<span class="w">         </span>-1.11255<span class="w">        </span><span class="m">2</span>.56299<span class="w">        </span><span class="m">0</span>.55432
-<span class="linenos">13</span>H<span class="w">         </span>-4.29553<span class="w">       </span>-1.05515<span class="w">        </span><span class="m">0</span>.47169
-<span class="linenos">14</span>H<span class="w">         </span>-5.15086<span class="w">       </span>-0.39580<span class="w">       </span>-0.97185
-<span class="linenos">15</span>H<span class="w">         </span>-5.34808<span class="w">        </span><span class="m">0</span>.39806<span class="w">        </span><span class="m">0</span>.64145
-<span class="linenos">16</span>H<span class="w">         </span>-2.06950<span class="w">       </span>-0.49744<span class="w">        </span><span class="m">0</span>.42698
-<span class="linenos">17</span>H<span class="w">         </span>-1.04318<span class="w">        </span><span class="m">1</span>.52892<span class="w">       </span>-1.36918
-<span class="linenos">18</span>H<span class="w">          </span><span class="m">1</span>.44851<span class="w">        </span><span class="m">2</span>.11097<span class="w">       </span>-0.71632
-<span class="linenos">19</span>H<span class="w">          </span><span class="m">2</span>.67618<span class="w">       </span>-0.44502<span class="w">        </span><span class="m">0</span>.39384
-<span class="linenos">20</span>H<span class="w">          </span><span class="m">3</span>.33886<span class="w">        </span><span class="m">1</span>.21183<span class="w">        </span><span class="m">0</span>.63059
-<span class="linenos">21</span>H<span class="w">          </span><span class="m">3</span>.30037<span class="w">        </span><span class="m">0</span>.47916<span class="w">       </span>-1.01990
-<span class="linenos">22</span>H<span class="w">         </span>-2.03263<span class="w">        </span><span class="m">3</span>.14107<span class="w">        </span><span class="m">0</span>.33971
-<span class="linenos">23</span>H<span class="w">         </span>-0.25509<span class="w">        </span><span class="m">3</span>.23182<span class="w">        </span><span class="m">0</span>.33529
-<span class="linenos">24</span>H<span class="w">         </span>-1.10019<span class="w">        </span><span class="m">2</span>.31238<span class="w">        </span><span class="m">1</span>.63679
-</pre></div>
-</div>
-<p>Explanations:</p>
-<ul class="simple">
-<li><p>The first line of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> is the total number of atoms.</p></li>
-<li><p>The second line is reserved for comments, so you can include details about the structure here</p></li>
-<li><p>The rest of the file contains the elemental symbol, followed by x-,y-z- coodinates</p></li>
-</ul>
-<p>Simple yeah?</p>
-</section>
-<hr class="docutils" />
-<section id="additional-resources">
-<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h2>
-<p>For more information, please refer to the following resource:</p>
-<p><a class="reference external" href="https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/introduction#:~:text=A%20typical%20PDB%20formatted%20file,the%20atoms%20and%20their%20coordinates.">RCSB: Guide to Understanding PDB data</a></p>
-<blockquote>
-<div><p>“The primary information stored in the PDB archive consists of coordinate files for biological molecules. These files list the atoms in each protein, and their 3D location in space. These files are available in several formats (PDB, mmCIF, XML). A typical PDB formatted file includes a large “header” section of text that summarizes the protein, citation information, and the details of the structure solution, followed by the sequence and a long list of the atoms and their coordinates. The archive also contains the experimental observations that are used to determine these atomic coordinates.”</p>
-</div></blockquote>
-<p><a class="reference external" href="https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/tutorials/pdbintro.html">UCSF: Introduction to PDB Format</a></p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -829,11 +468,11 @@ less<span class="w"> </span>ala.xyz
       </div>
     </a>
     <a class="right-next"
-       href="BasicMD.html"
+       href="PDBFiles.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Briefly, Molecular Dynamics</p>
+        <p class="prev-next-title">Exploring PDB Files</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -856,15 +495,7 @@ less<span class="w"> </span>ala.xyz
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">What are PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-atom-lines-in-pdb-files">What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-chain-identifier-column-5-of-atom">What is a Chain Identifier (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chains-are-separated-by-ter-lines">Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-occupancy">What is Occupancy?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-factor">What is B-factor?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-records-in-pdb-files">Summary Records in PDB Files</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">What are XYZ Files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-contents-of-ala-xyz">Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
 </ul>
   </nav></div>
 
@@ -888,7 +519,7 @@ By Richard Van
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/FileManagement';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/QuickStart/FileManagement.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Supercomputers" href="Supercomputer.html" />
@@ -167,24 +169,28 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="SSH.html">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Slurm.html">HPC and Using Slurm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CondaPython.html">Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="PDBFiles.html">Exploring PDB Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XYZFiles.html">What are XYZ Files?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Binding Affinity</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Modelling Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/potentials.html">Alchemical States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/estimators/ti.html">Thermodynamic Integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
@@ -386,7 +392,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-files-folders">Copying Files/Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-files-folders-or-renaming-files-folders">Moving Files/Folders or Renaming Files/Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-files-folders-renaming-files-folders">Moving Files/Folders &amp; Renaming Files/Folders</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-folders">Deleting Files/Folders</a></li>
 </ul>
             </nav>
@@ -411,17 +417,8 @@ document.write(`
 <li><p>Deleting files/folders (<a class="reference internal" href="../linux.html#term-rm"><span class="xref std std-term">rm</span></a>)</p></li>
 </ul>
 <p>Is usually done with at flick of your mouse, but now we have the command to start automating task.</p>
-<br>
 <section id="copying-files-folders">
 <h2>Copying Files/Folders<a class="headerlink" href="#copying-files-folders" title="Permalink to this heading">#</a></h2>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>More examples can be found here:
-<a class="reference internal" href="../commands/cp.html"><span class="doc std std-doc">cp - copy files or folders</span></a></p>
-</div>
-</aside>
 <p>To copy files, you use the command, <a class="reference internal" href="../linux.html#term-cp"><span class="xref std std-term">cp</span></a>, where you include the file or folder you want to copy followed by the path you want the copy to go!</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -449,18 +446,9 @@ Copy Folders</label><div class="sd-tab-content docutils">
 <p>Copying a directory requires the option <code class="docutils literal notranslate"><span class="pre">-r</span></code>, otherwise it is the same as copying files.</p>
 </div>
 </div>
-<br>
 </section>
-<section id="moving-files-folders-or-renaming-files-folders">
-<h2>Moving Files/Folders or Renaming Files/Folders<a class="headerlink" href="#moving-files-folders-or-renaming-files-folders" title="Permalink to this heading">#</a></h2>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="dropdown admonition tip">
-<p class="admonition-title">Tip</p>
-<p>More examples can be found here:
-<a class="reference internal" href="../commands/mv.html"><span class="doc std std-doc">mv - move files/folders from one place to another.</span></a></p>
-</div>
-</aside>
+<section id="moving-files-folders-renaming-files-folders">
+<h2>Moving Files/Folders &amp; Renaming Files/Folders<a class="headerlink" href="#moving-files-folders-renaming-files-folders" title="Permalink to this heading">#</a></h2>
 <p>Yes. They are the same command, <a class="reference internal" href="../linux.html#term-mv"><span class="xref std std-term">mv</span></a>. The notation for <a class="reference internal" href="../linux.html#term-mv"><span class="xref std std-term">mv</span></a> is the same as <a class="reference internal" href="../linux.html#term-cp"><span class="xref std std-term">cp</span></a>!</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
@@ -489,18 +477,9 @@ Move/Rename Folders</label><div class="sd-tab-content docutils">
 <p>Moving a directory is the same as the previous examples.</p>
 </div>
 </div>
-<br>
 </section>
 <section id="deleting-files-folders">
 <h2>Deleting Files/Folders<a class="headerlink" href="#deleting-files-folders" title="Permalink to this heading">#</a></h2>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="dropdown admonition tip">
-<p class="admonition-title">Tip</p>
-<p>More examples can be found here:
-<a class="reference internal" href="../commands/rm.html"><span class="doc std std-doc">rm - delete files</span></a></p>
-</div>
-</aside>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>This command is permanent. There is no trash can to recover your files from…</p>
@@ -603,7 +582,7 @@ Copy Folders</label><div class="sd-tab-content docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying-files-folders">Copying Files/Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-files-folders-or-renaming-files-folders">Moving Files/Folders or Renaming Files/Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-files-folders-renaming-files-folders">Moving Files/Folders &amp; Renaming Files/Folders</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-folders">Deleting Files/Folders</a></li>
 </ul>
   </nav></div>
@@ -628,7 +607,7 @@ By Richard Van
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

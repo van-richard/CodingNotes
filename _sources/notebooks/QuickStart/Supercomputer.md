@@ -1,9 +1,5 @@
 # Supercomputers
 
-:::{Glossary}
-Supercomputer 
-    Powerful and high-performance computing (HPC) machine designed to handle complex and computationally intensive tasks and simulations. These machines are among the fastest and most capable computers in the world and are typically used for scientific research, engineering simulations, weather forecasting, climate modeling, cryptography, and other demanding applications.
-:::
 
 In simple terms, they are like giant, powerful versions of regular computers, much larger and involve many more parts. They can take up entire rooms or even buildings. Inside these machines, you'll find thousands or even millions of smaller computer processors (like the brain of the computer) and a lot of memory (like the computer's short-term memory). Think of these processors as workers and the memory as their workspace.
 
@@ -12,14 +8,12 @@ In Oklahoma, we have access to 2 supercomputers:
 1. [Oscer (aka. Schooner) at OU](https://www.ou.edu/oscer)
 2. [Pete at OSU](https://hpcc.okstate.edu/pete-supercomputer.html)
 
-Visit thier website to get more information and learn how to make an account!
-
-Hopefully, you have already made an account either supercomputers. If you recieved a confirmation email from them, the first thing you need to do is login and set your password.
+Visit their websites to get more information and learn how to make an account!
 
 Two key points when using the supercomputer:
 
-1. To access the computers remotely we use the {term}`ssh` command 
-2. Slurm is used to manage the cluster
+1. We access the computers remotely with our terminal
+2. Slurm is used to manage jobs on the cluster
 
 ## What is {term}`ssh`?
 

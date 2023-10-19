@@ -31,6 +31,9 @@ GitHub
 
     .. it's a web-based hosting service for git repositories (a place where you store data, files, resources). 
 
+Supercomputer 
+    Powerful and high-performance computing (HPC) machine designed to handle complex and computationally intensive tasks and simulations. These machines are among the fastest and most capable computers in the world and are typically used for scientific research, engineering simulations, weather forecasting, climate modeling, cryptography, and other demanding applications.
+
 Slurm
     Job management system on some supercompters.
 

@@ -15,7 +15,7 @@ The {term}`command line` (or command line interface (CLI)) is the just the inter
 When you first open the terminal, you will be in a {term}`shell` (or command line shell). The purpose of this is to provide the *structure* to the commands we input. There are many types of {term}`unix`/{term}`linux` based shells, such as {term}`bash`, zsh, csh, etc. I will later introduce, {term}`bash`, but the purpose of {term}`bash` include flow control constructs to combine commands. In addition to typing commands at an interactive
  prompt, we can write scripts (e.g., small pieces of code used to automate repetitive tasks).
 
-```{figure} ../../_static/terminal-window.png
+```{figure} ../../_static/images/terminal-window.png
 ---
 align: center
 ---

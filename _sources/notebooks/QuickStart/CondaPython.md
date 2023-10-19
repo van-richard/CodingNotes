@@ -1,7 +1,6 @@
 # Python & Conda
 
 ```{danger}
-:class: dropdown
 
 I pray to god you did not install python randomly before reading this.
 
