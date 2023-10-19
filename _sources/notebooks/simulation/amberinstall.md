@@ -2,7 +2,9 @@
 orphan: true
 ---
 
-# Amber + QMhub + Torchmd-net 
+# Compiling Amber
+
+Amber + QMhub + Torchmd-net 
 
 Compile Amber for QM/MM simulations with QMhub and Torchmd-net.
 
