@@ -1,8 +1,8 @@
 # CodingNotes
 
-```{sidebar}
+<!-- ```{sidebar}
 ![](_static/welcome.png)
-```
+``` -->
 
 *Notes I wish I had showed me when I started*
 
@@ -13,12 +13,12 @@ I am not the most coherent when it comes to speaking and writing, but I hope man
 
 ## These notes include tips, tricks, and examples for:
 
-```{figure} _static/tec-meme.jpg
+<!-- ```{figure} _static/tec-meme.jpg
 ---
 width: 250 px
 align: right
 ---
-```
+``` -->
 
 **Programming**
 
@@ -48,12 +48,12 @@ Softwares I often use:
 
 <br clear="right"/>
 
-```{figure} _static/simple.mov
+<!-- ```{figure} _static/simple.mov
 ---
 width: 250 px
 align: right
 ---
-```
+``` -->
 
 **Simulations with [AmberMD](http://ambermd.org)**
 
