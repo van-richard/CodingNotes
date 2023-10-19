@@ -18,6 +18,7 @@ When you first open the terminal, you will be in a {term}`shell` (or command lin
 ```{figure} ../../_static/images/terminal-window.png
 ---
 align: center
+figwidth: 75%
 ---
 The terminal window on my MacBook. The standard format starts with the name of your computer, followed by a colob, your username, and then a dollar sign. The next grey box is where you input commands.
 ```

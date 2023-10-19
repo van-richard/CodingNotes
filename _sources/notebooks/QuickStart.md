@@ -1,11 +1,4 @@
 # Quick Start Guide
-
-::::{margin}
-:::{figure} ../_static/images/quickstart-meme.jpg
-
-First day in lab, learning about the terminal, various visualization tools, and Amber (*top*). The me of today educating the me from years past (*bottom*).
-:::
-:::: 
  
 Welcome to the world of computational chemistry! If this is your first time experience the wonders of programming, then I hope this guide helps you. 
 
@@ -27,3 +20,12 @@ With that in mind, I prepared this collection with these goals in mind:
   5. Short background on structures files for proteins and small-molecules
   6. Simple introduction to molecular dynamics simulations
      - Includes a simple tutorial which you can run on your computer
+
+
+:::{figure} ../_static/images/quickstart-meme.jpg
+---
+align: center
+figwidth: 75%
+---
+First day in lab, learning about the terminal, various visualization tools, and Amber (*top*). The me of today educating the me from years past (*bottom*).
+:::
