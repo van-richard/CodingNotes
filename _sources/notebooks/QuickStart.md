@@ -25,7 +25,7 @@ With that in mind, I prepared this collection with these goals in mind:
 :::{figure} ../_static/images/quickstart-meme.jpg
 ---
 align: center
-figwidth: 75%
+figwidth: 50%
 ---
 First day in lab, learning about the terminal, various visualization tools, and Amber (*top*). The me of today educating the me from years past (*bottom*).
 :::

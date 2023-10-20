@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/card.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -64,8 +64,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/index.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -146,8 +144,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo2.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/logo2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -178,20 +176,27 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="notebooks/QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks/Tutorials.html">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/Tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/distance.html">Applying Distance Restraints in Classical MD SImulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/claisen.html">Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/rmsd.html">RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notebooks/simulation/rmsf.html">RMSF</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/basics-classical.html">Classical Molecular Dynamics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="notebooks/theory/fe-binding.html">Modelling Binding Affinity</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/alchemical/potentials.html">Alchemical States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="notebooks/theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/estimators/ti.html">Thermodynamic Integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notebooks/theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
@@ -402,68 +407,49 @@ document.write(`
 <p><em>Notes I wish I had showed me when I started</em></p>
 <p>This collection of notes pretty much is a my consolidated experience in the field of computational chemistry. Some I found through trial and error, while others are from the exceptional guidance of Dr. Genwei Zhang, Dr. Zheng Pei, Dr. Xiaoliang Pan, and Dr. Yihan Shao.</p>
 <p>I am not the most coherent when it comes to speaking and writing, but I hope many of you will find this information useful in your future endeavors.</p>
-<p><strong>These notes include tips, tricks, and examples for:</strong></p>
-<figure class="align-right">
-<a class="reference internal image-reference" href="_images/tec-meme.jpg"><img alt="_images/tec-meme.jpg" src="_images/tec-meme.jpg" style="width: 250px;" /></a>
-</figure>
-<p><strong>Programming</strong></p>
-<ul class="simple">
-<li><p>Command line, <code class="docutils literal notranslate"><span class="pre">bash</span></code>, <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code>, and other terminal stuff</p></li>
-<li><p>Supercomputing stuff (<code class="docutils literal notranslate"><span class="pre">ssh</span></code>/Slurm)</p></li>
-<li><p>General <code class="docutils literal notranslate"><span class="pre">python</span></code> coding</p>
-<ul>
-<li><p>Managing with <code class="docutils literal notranslate"><span class="pre">conda</span></code> environments</p></li>
-</ul>
-</li>
-</ul>
-<br clear="right"/>
-<p><strong>Visualization Software</strong></p>
-<figure class="align-right">
-<a class="reference internal image-reference" href="_images/viz-meme.png"><img alt="_images/viz-meme.png" src="_images/viz-meme.png" style="width: 250px;" /></a>
-</figure>
-<p>Softwares I often use:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="http://iqmol.org">IQmol</a></p></li>
-<li><p><a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a></p></li>
-<li><p><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a></p></li>
-<li><p><a class="reference external" href="https://connect.revvitysignals.com/sitesubscription/Gallery.aspx">ChemDraw</a></p></li>
-<li><p><a class="reference external" href="https://www.schrodinger.com/products/maestro">Schrodinger Maestro</a></p></li>
-</ul>
-<br clear="right"/>
-<figure class="align-right">
-<a class="reference internal image-reference" href="_images/simple.mov"><img alt="_images/simple.mov" src="_images/simple.mov" style="width: 250px;" /></a>
-</figure>
-<p><strong>Simulations with <a class="reference external" href="http://ambermd.org">AmberMD</a></strong></p>
-<p>I have read the Amber manual so much… It would be a waste not to summarize them here. I also wrote a set of tutorials for Amber simulations in the worflow our lab takes.</p>
-<ul class="simple">
-<li><p>Classical Molecular Dynamics Simulations</p></li>
-<li><p>Quantum Mechanics/Molecular Mechanics Simulations</p></li>
-</ul>
-<br clear="right"/>
-<p><strong>Cloud-Based Websitess</strong></p>
-<p>Neat websites I learned about during my Ph.D!</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.overleaf.com">Overleaf</a></p>
-<ul>
-<li><p>Equations, tables, and writing manuscripits with <span class="math notranslate nohighlight">\(\LaTeX\)</span></p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://github.com">GitHub</a></p>
-<ul>
-<li><p>Public code repositories, and lab resources!</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://colab.research.google.com">Google Colab</a></p>
-<ul>
-<li><p>Accessible notebooks for coding</p></li>
-</ul>
-</li>
-</ul>
-<br>
-<p><strong>and other fun activities</strong></p>
-<ul class="simple">
-<li><p>Like making this website with Jekyll or JupyterBook 🤪🤪🤪</p></li>
-</ul>
+<body2>
+    <div class = container2>
+      <div class = card2>
+        <div class = image2>
+          <img href = "#" src = _static/images/card0.png>
+        </div>
+        <div class = content2>
+          <h3 style="text-transform:uppercase">
+            <b>Coding Tips</b>
+          </h3>
+          <p>
+          Terminal, <code>bash</code>, <code>vi/vim</code>, supercomputing, some </code>python</code>.
+          </p>
+        </div>
+      </div> 
+      <div class = card2>
+        <div class = image2>
+          <img href = "#" src = _static/images/card2.png>
+        </div>
+        <div class = content2>
+          <h3 style="text-transform:uppercase">
+          <b>Visualization Tools</b>
+          </h3>
+          <p>
+          Chimera/ChimeraX, VMD, Photoshop, Illustrator, Premiere.
+          </p>
+        </div>
+      </div>  
+      <div class = card2>
+        <div class = image2>
+          <img href = "#" src = _static/images/card1.png>
+        </div>
+        <div class = content2>
+          <h3 style="text-transform:uppercase;">
+          <b>Molecular Modelling</b>
+          </h3>
+          <p>
+          Tutorials on Amber simulation, notes on theory and methods. 
+          </p>
+        </div>
+      </div>   
+    </div>
+  </body>
 <div class="toctree-wrapper compound">
 </div>
 </section>

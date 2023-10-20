@@ -3,7 +3,7 @@
 Additional guides, notes/examples, and tips for an improved QOL (quality of life) in this cubicle.
 
 ::::{grid} 3
-:gutter: 6
+:gutter: 4
 
 :::{grid-item-card} bash
 * [](bash/startup)
