@@ -1,17 +1,5 @@
 # Quick Start Guide
-
-
-```{figure} ../_static/quickstart-meme.jpg
----
-align: right
-figwidth: 30%
----
-
-First day in lab, learning about the terminal, various visualization tools, and Amber (*top*). The me of today educating the me from years past (*bottom*).
-```
-
-<center> Congratuations! You have these notes! </center><br>
-
+ 
 Welcome to the world of computational chemistry! If this is your first time experience the wonders of programming, then I hope this guide helps you. 
 
 The Quick Start Guide is designed for those who:
@@ -20,8 +8,6 @@ The Quick Start Guide is designed for those who:
 * Contemplate pursuring a Ph.D. in this field
 
 But may have doubts about pursuing this path due to limited or no experience in the area. Just know, that it's completely normal to find the terminology and steep learning curve intimidating. Just five years ago, I wasn't even aware that computational science was a thing!
-
-<br close="right"/>
 
 With that in mind, I prepared this collection with these goals in mind:
 
@@ -34,3 +20,12 @@ With that in mind, I prepared this collection with these goals in mind:
   5. Short background on structures files for proteins and small-molecules
   6. Simple introduction to molecular dynamics simulations
      - Includes a simple tutorial which you can run on your computer
+
+
+:::{figure} ../_static/images/quickstart-meme.jpg
+---
+align: center
+figwidth: 50%
+---
+First day in lab, learning about the terminal, various visualization tools, and Amber (*top*). The me of today educating the me from years past (*bottom*).
+:::

@@ -9,10 +9,12 @@ I'll try and add more details as time moves on, but always reference the Amber m
 
 ## Amber Simulations
 
-::::{grid} 1
-:gutter: 1
+::::{grid} 3
+:gutter: 3
 
 :::{grid-item-card} Classical Simulations
+<!-- :img-background: ../_static/images/ala.png -->
+
 * [](simulation/simple)
 * [](simulation/distance)
 :::
@@ -27,3 +29,16 @@ I'll try and add more details as time moves on, but always reference the Amber m
 :::
 ::::
 
+
+## ChimeraX
+:::{card} Movie Making
+---
+margin: 3
+---
+
+* [](chimera/fade)
+* [](chimera/images)
+* [](chimera/morph) 
+* [](chimera/rock)
+* [](chimera/spin)
+:::

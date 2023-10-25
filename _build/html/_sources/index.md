@@ -1,8 +1,8 @@
 # CodingNotes
 
-```{sidebar}
-![](_static/welcome.png)
-```
+:::{sidebar}
+![](_static/images/welcome.png)
+:::
 
 *Notes I wish I had showed me when I started*
 
@@ -11,72 +11,46 @@ This collection of notes pretty much is a my consolidated experience in the fiel
 I am not the most coherent when it comes to speaking and writing, but I hope many of you will find this information useful in your future endeavors.
 
 
-## These notes include tips, tricks, and examples for:
-
-```{figure} _static/tec-meme.jpg
----
-width: 250 px
-align: right
----
-```
-
-**Programming**
-
-* Command line, `bash`, `vi/vim`, and other terminal stuff
-* Supercomputing stuff (`ssh`/Slurm)
-* General `python` coding
-    * Managing with `conda` environments 
-  
-<br clear="right"/>
-
-
-**Visualization Software**
-
-```{figure} _static/viz-meme.png
----
-width: 250 px
-align: right
----
-```
-
-Softwares I often use:
-   * [IQmol](http://iqmol.org)
-   * [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) 
-   * [VMD]( https://www.ks.uiuc.edu/Research/vmd/)
-   * [ChemDraw](https://connect.revvitysignals.com/sitesubscription/Gallery.aspx)
-   * [Schrodinger Maestro](https://www.schrodinger.com/products/maestro)
-
-<br clear="right"/>
-
-```{figure} _static/simple.mov
----
-width: 250 px
-align: right
----
-```
-
-**Simulations with [AmberMD](http://ambermd.org)**
-
-I have read the Amber manual so much.... It would be a waste not to summarize them here. I also wrote a set of tutorials for Amber simulations in the worflow our lab takes.
-
-   * Classical Molecular Dynamics Simulations
-   * Quantum Mechanics/Molecular Mechanics Simulations
-
-<br clear="right"/>
-
-**Cloud-Based Websitess**
-
-Neat websites I learned about during my Ph.D!
-* [Overleaf](https://www.overleaf.com) 
-  * Equations, tables, and writing manuscripits with $\LaTeX$
-* [GitHub](https://github.com) 
-  * Public code repositories, and lab resources!
-* [Google Colab](https://colab.research.google.com)
-  * Accessible notebooks for coding
-  
-<br>
-
-**and other fun activities**
-    
-* Like making this website with Jekyll or JupyterBook 🤪🤪🤪
-
+<body2>
+    <div class = container2>
+      <div class = card2>
+        <div class = image2>
+          <img href = "#" src = _static/images/card0.png>
+        </div>
+        <div class = content2>
+          <h3 style="text-transform:uppercase">
+            <b>Coding Tips</b>
+          </h3>
+          <p>
+          Terminal, <code>bash</code>, <code>vi/vim</code>, supercomputing, some </code>python</code>.
+          </p>
+        </div>
+      </div> 
+      <div class = card2>
+        <div class = image2>
+          <img href = "#" src = _static/images/card2.png>
+        </div>
+        <div class = content2>
+          <h3 style="text-transform:uppercase">
+          <b>Visualization Tools</b>
+          </h3>
+          <p>
+          Chimera/ChimeraX, VMD, Photoshop, Illustrator, Premiere.
+          </p>
+        </div>
+      </div>  
+      <div class = card2>
+        <div class = image2>
+          <img href = "#" src = _static/images/card1.png>
+        </div>
+        <div class = content2>
+          <h3 style="text-transform:uppercase;">
+          <b>Molecular Modelling</b>
+          </h3>
+          <p>
+          Tutorials on Amber simulation, notes on theory and methods. 
+          </p>
+        </div>
+      </div>   
+    </div>
+  </body>

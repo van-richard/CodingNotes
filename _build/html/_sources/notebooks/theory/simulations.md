@@ -1,4 +1,4 @@
-# Molcular Simulations 
+# Molcular Modelling 
 
 Before running a simulation, ask yourself:
 

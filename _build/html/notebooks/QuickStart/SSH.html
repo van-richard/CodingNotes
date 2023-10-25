@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Accessing the HPC &#8212; Coding Notes</title>
   
@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/card.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -47,6 +48,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -63,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/SSH';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/QuickStart/SSH.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="HPC and Using Slurm" href="Slurm.html" />
@@ -142,8 +145,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/logo2.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -166,24 +169,35 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Slurm.html">HPC and Using Slurm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CondaPython.html">Python &amp; Conda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="PDBFiles.html">Exploring PDB Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="XYZFiles.html">What are XYZ Files?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/distance.html">Applying Distance Restraints in Classical MD SImulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/rmsd.html">RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation/rmsf.html">RMSF</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Binding Affinity</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Modelling Binding Affinity</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/potentials.html">Alchemical States</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/workflow.html">Simulation Workflows</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-estimators.html">Free Energy Estimators</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/estimators/ti.html">Thermodynamic Integration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../theory/estimators/mbar.html">BAR &amp; MBAR</a></li>
 </ul>
@@ -384,7 +398,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transferring-file-folder">Transferring File &amp; Folder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transferring-files-folders-remotely">Transferring Files/Folders Remotely</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-execution-with-ssh">Command Execution with <span class="xref std std-term">ssh</span></a></li>
 </ul>
             </nav>
@@ -399,17 +413,17 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="accessing-the-hpc">
 <h1>Accessing the HPC<a class="headerlink" href="#accessing-the-hpc" title="Permalink to this heading">#</a></h1>
-<p>The command, <a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a>, means the Secure Shell protocol, and we use to remotely access the supercomputer!</p>
-<p>The general notation looks like this:</p>
+<p><a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> stands for Secure Shell protocol, and this is how what it looks like!</p>
+<p>The command looks like this</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@servername
 </pre></div>
 </div>
-<p>Where:</p>
+<p>Where,</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> is the username that you made when applying for the account</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;servername</span></code> is the server name and IP address of the supercomputer</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> is the username whatever you made when applying for the account</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;servername</span></code> is the name and IP address of the supercomputer</p></li>
 </ul>
-<p>To log into Oscer/Schooner or Pete, the command would look like this (<em>change <code class="docutils literal notranslate"><span class="pre">username</span></code> to your username</em>):</p>
+<p>To log into Oscer/Schooner/Pete, we would type this (<em>change <code class="docutils literal notranslate"><span class="pre">username</span></code> to your username</em>):</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
@@ -426,8 +440,7 @@ Pete</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>Lets try logging into the Pete supercomputer. If you have Oscer/Schooner, then change the <code class="docutils literal notranslate"><span class="pre">servername</span></code> to the <code class="docutils literal notranslate"><span class="pre">schooner.oscer.ou.edu</span></code>.</p>
-<p><span style="font-size:1.5em;"><strong>Accessing Pete with <code class="docutils literal notranslate"><span class="pre">ssh</span></code></strong></span></p>
+<p>Try logging into one of the supercomputer. Change the <code class="docutils literal notranslate"><span class="pre">servername</span></code> to the <code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code> or ``schooner.oscer.ou.edu`.</p>
 <p>My username is <code class="docutils literal notranslate"><span class="pre">van</span></code>, so logging in looks like this:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
@@ -445,7 +458,7 @@ Pete</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>The first time logging in, you will get the following prompt:</p>
+<p>In the very first login to the computer, you will get the following prompt:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>The<span class="w"> </span>authenticity<span class="w"> </span>of<span class="w"> </span>host<span class="w"> </span><span class="s1">&#39;pete.hpc.okstate.edu&#39;</span><span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>established.
 <span class="w"> </span>DSA<span class="w"> </span>key<span class="w"> </span>fingerprint<span class="w"> </span>is<span class="w"> </span><span class="m">01</span>:23:45:67:89:ab:cd:ef:ff:fe:dc:ba:98:76:54:32:10.
 <span class="w"> </span>Are<span class="w"> </span>you<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="k">continue</span><span class="w"> </span>connecting<span class="w"> </span><span class="o">(</span>yes/no<span class="o">)</span>?
@@ -456,15 +469,15 @@ Pete</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Note</p>
 <p><strong>Answer <code class="docutils literal notranslate"><span class="pre">yes</span></code> by typing into your terminal. This will only happen on the first login!</strong></p>
 </div>
-<p><span style="align:center; font-size:2em;"><strong>Congratulations! You logged into the supercomputer!</strong></soan></p>
-<section id="transferring-file-folder">
-<h2>Transferring File &amp; Folder<a class="headerlink" href="#transferring-file-folder" title="Permalink to this heading">#</a></h2>
-<p>We need to be able to copy files and folders from the supercomputer to our local computer, or vice versa. Previously, we learned <a class="reference internal" href="../linux.html#term-cp"><span class="xref std std-term">cp</span></a> and <a class="reference internal" href="../linux.html#term-mv"><span class="xref std std-term">mv</span></a> to manage files locally on our computer. However, to copy files through <a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a>, we need to use one of these 2 commands:</p>
+<p><em>Congratulations! You logged into the supercomputer!</em></p>
+<section id="transferring-files-folders-remotely">
+<h2>Transferring Files/Folders Remotely<a class="headerlink" href="#transferring-files-folders-remotely" title="Permalink to this heading">#</a></h2>
+<p>Previously, we learned <a class="reference internal" href="../linux.html#term-cp"><span class="xref std std-term">cp</span></a> and <a class="reference internal" href="../linux.html#term-mv"><span class="xref std std-term">mv</span></a> to manage files locally on our computer. However, to copy files through <a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a>, we need to use one of these 2 commands:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rsync</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scp</span></code></p></li>
 </ol>
-<p>To use either command, type:</p>
+<p>Type:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-4">
@@ -570,7 +583,7 @@ scp</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transferring-file-folder">Transferring File &amp; Folder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transferring-files-folders-remotely">Transferring Files/Folders Remotely</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-execution-with-ssh">Command Execution with <span class="xref std std-term">ssh</span></a></li>
 </ul>
   </nav></div>
@@ -595,7 +608,7 @@ By Richard Van
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>

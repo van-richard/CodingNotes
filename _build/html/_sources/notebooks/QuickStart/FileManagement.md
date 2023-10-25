@@ -15,22 +15,12 @@ Simple tasks like:
 - Renaming files/folders ({term}`mv`)
 - Deleting files/folders ({term}`rm`)
 
-Is usually done with at flick of your mouse, but now we have the command to start automating task. 
+Is usually done with at flick of your mouse, but now we have the command to start automating task.
 
-<br>
 
 ## Copying Files/Folders
 
-````{margin}
-```{tip}
-More examples can be found here: 
-[](../commands/cp.md)
-```
-````
-
 To copy files, you use the command, {term}`cp`, where you include the file or folder you want to copy followed by the path you want the copy to go!
-
-
 
 ::::{tab-set}
 :::{tab-item} General Notation
@@ -59,21 +49,10 @@ Copying a directory requires the option `-r`, otherwise it is the same as copyin
 :::
 ::::
 
-<br>
 
-## Moving Files/Folders or Renaming Files/Folders 
-
-````{margin}
-```{tip}
-:class: dropdown
-More examples can be found here: 
-[](../commands/mv.md)
-```
-````
+## Moving Files/Folders & Renaming Files/Folders 
 
 Yes. They are the same command, {term}`mv`. The notation for {term}`mv` is the same as {term}`cp`!
-
-
 
 ::::{tab-set}
 :::{tab-item} General Notation
@@ -104,17 +83,7 @@ Moving a directory is the same as the previous examples.
 ::::
 
 
-<br>
-
 ## Deleting Files/Folders
-
-````{margin}
-```{tip}
-:class: dropdown
-More examples can be found here: 
-[](../commands/rm.md)
-```
-````
 
 ```{caution}
 
@@ -123,8 +92,6 @@ This command is permanent. There is no trash can to recover your files from.....
 ```
 
 {term}`rm` is used to delete files/folders, and is written like {term}`cp` and {term}`mv`
-
-
 
 ::::{tab-set}
 :::{tab-item} General Notation
