@@ -21,7 +21,7 @@ I am not the most coherent when it comes to speaking and writing, but I hope man
         <h3 style="text-transform:uppercase">
           <b>Coding Tips</b>
         </h3>
-        <p>
+        <p style="color= #030303">
         Terminal, <code>bash</code>, <code>vi/vim</code>, supercomputing, some </code>python</code>.
         </p>
       </div>
