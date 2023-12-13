@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../_static/tippy/notebooks/theory/fe-alchemical.8c418123-3c17-4955-8d44-f1778cc2c512.js"></script>
+    <script defer="defer" src="../../_static/tippy/notebooks/theory/fe-alchemical.cdf97438-d8cb-45ca-82dd-22daa4c4661a.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/theory/fe-alchemical';</script>
@@ -178,7 +178,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">HPC and Using Slurm</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../QuickStart/CondaPython.html">Python &amp; Conda</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart/StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/PDBFiles.html">Exploring PDB Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/XYZFiles.html">What are XYZ Files?</a></li>
@@ -435,8 +434,8 @@ document.write(`
 <h1>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0aab0f31-5def-4501-9f61-93e15c4ef56f">
-<span class="eqno">(1)<a class="headerlink" href="#equation-0aab0f31-5def-4501-9f61-93e15c4ef56f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-027d8fa2-03a9-47b3-adf2-48a7c7ef2aa8">
+<span class="eqno">(1)<a class="headerlink" href="#equation-027d8fa2-03a9-47b3-adf2-48a7c7ef2aa8" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -449,8 +448,8 @@ document.write(`
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-895c48ac-a846-4b42-96c3-9116bb6db88b">
-<span class="eqno">(2)<a class="headerlink" href="#equation-895c48ac-a846-4b42-96c3-9116bb6db88b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-79263d31-f88a-4a68-bb92-ebf795a5a766">
+<span class="eqno">(2)<a class="headerlink" href="#equation-79263d31-f88a-4a68-bb92-ebf795a5a766" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}
