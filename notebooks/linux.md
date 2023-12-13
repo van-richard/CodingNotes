@@ -1,8 +1,6 @@
----
-orphan: true
----
+# Linux/Unix Commands
 
-# List of Commands
+## List of Commands
 
 :::{Glossary}
 

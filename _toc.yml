@@ -32,18 +32,42 @@ parts:
       - file: notebooks/simulation/rmsf
   - caption: Notes
     chapters:
-    - file: notebooks/Theory
+    - file: notebooks/theory/simulations
+    - file: notebooks/theory/basics-classical
+    - file: notebooks/theory/basics-qmmm
+    - file: notebooks/theory/fe-binding
+    - file: notebooks/theory/fe-alchemical
+      sections: 
+      - file: notebooks/theory/alchemical/potentials
+      - file: notebooks/theory/alchemical/workflow
+    - file: notebooks/theory/fe-estimators
+      sections: 
+      - file: notebooks/theory/estimators/ti
+      - file: notebooks/theory/estimators/mbar
+  - caption: Resources
+    chapters:
+    - file: notebooks/bash/startup
       sections:
-      - file: notebooks/theory/simulations
-      - file: notebooks/theory/basics-classical
-      - file: notebooks/theory/basics-qmmm
-      - file: notebooks/theory/fe-binding
-      - file: notebooks/theory/fe-alchemical
-        sections: 
-        - file: notebooks/theory/alchemical/potentials
-        - file: notebooks/theory/alchemical/workflow
-      - file: notebooks/theory/fe-estimators
-        sections: 
-        - file: notebooks/theory/estimators/ti
-        - file: notebooks/theory/estimators/mbar
-    - file: notebooks/Resources 
+      - file: notebooks/bash/basics
+      - file: notebooks/bash/bash1
+      - file: notebooks/bash/vi 
+    - file: notebooks/git/git
+      sections:
+      - file: notebooks/branch
+    - file: notebooks/ssh/autologin
+      sections:
+      - file: notebooks/ssh/config
+    - file: notebooks/linux
+    - file: notebooks/python/python
+      sections:
+      - file: notebooks/conda/installconda
+      - file: notebooks/conda/condaenv
+      - file: notebooks/conda/myenv
+      - file: notebooks/conda/condaambertools
+      - file: notebooks/conda/condaintel
+      - file: notebooks/conda/jupyter
+      - file: notebooks/conda/jupyterbook
+    - file: notebooks/simulation/amberinstall
+    - file: notebooks/chimera/ChimeraX
+    - file: notebooks/vmd/ffmpeg
+    

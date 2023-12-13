@@ -1,20 +1,22 @@
-# Copy, Move, Rename, & Delete Files
+# File Management
+
+## Copy, Move, Rename, & Delete Files
 
 Your mouse does not work in the way you expect when in the CLI.
 
 Using the terminal means you need to learn how to communicate with the computer through __commands__.
 
-Simple tasks like:
+Tasks like:
 
 - Copying files/folders ({term}`cp`)
 - Moving files/folders ({term}`mv`)
 - Renaming files/folders ({term}`mv`)
 - Deleting files/folders ({term}`rm`)
 
-Is usually done with at flick of your mouse, but now we have the command to start automating task.
+Need to be typed!
 
 
-## Copying Files/Folders
+## Copying
 
 To copy files, you use the command, {term}`cp`, where you include the file or folder you want to copy followed by the path you want the copy to go!
 
@@ -46,7 +48,7 @@ Copying a directory requires the option `-r`, otherwise it is the same as copyin
 ::::
 
 
-## Moving Files/Folders & Renaming Files/Folders 
+## Moving & Renaming
 
 Yes. They are the same command, {term}`mv`. The notation for {term}`mv` is the same as {term}`cp`!
 
@@ -79,7 +81,7 @@ Moving a directory is the same as the previous examples.
 ::::
 
 
-## Deleting Files/Folders
+## Deleting
 
 ```{caution}
 

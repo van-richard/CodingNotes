@@ -1,5 +1,7 @@
 # Accessing the HPC 
 
+## SSH
+
 {term}`ssh` stands for Secure Shell protocol, and this is how what it looks like!
 
 The command looks like this

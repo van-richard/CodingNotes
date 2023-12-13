@@ -19,7 +19,7 @@ I hope many of you will find this information useful in your future endeavors.
     * Basic Python Programming 
     * Molecular Structures and File Formats
 
-2. [Tutorials on Molecular Modelling](./notebooks/Tutorials/Overview.md)
+2. [Tutorials on Molecular Modelling]()
     * Visualization with Chimera/ChimeraX
     * Classical Molecular Dynamics Simulations (Amber)
     * Quantum Mechanics/Molecular Mechanics Simulations (Amber)

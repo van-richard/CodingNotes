@@ -1,6 +1,6 @@
 # Navigating
 
-**Objective** 
+## Objective
 * Understand the general layout of the `terminal`, and how it differs from GUIs like `Finder` 
 * Find where your start, currently are, and can go in `terminal`
 * See files/folders 
