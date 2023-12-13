@@ -1,8 +1,6 @@
----
-orphan: true
----
+# HPC Managment
 
-# HPC and Using Slurm
+## SLURM
 
 Slurm is the software which manages the individual user and group jobs in a supercomputer center.
 
