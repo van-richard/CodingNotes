@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Scripting
 
 ## Redirect Commands

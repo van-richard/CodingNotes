@@ -1,9 +1,4 @@
----
-orphan: true
----
-
-
-# My recommended Conda Setup
+# My Recommended Conda Setup
 
 * The installation of conda should be in your `~/Programs` directory
 * For the HPC, turn off conda on login by removing the conda lines in `~/.bashrc` or `~/.bash_profile`

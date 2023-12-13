@@ -1,6 +1,5 @@
-# ssh
 
-## Automate {term}`ssh` Login 
+# Automate Login 
 
  Having to enter your password every time you log into a supercomputer and transfer files can become tedious. However, we can log into a supercomputer without the need to enter your password (*safely and securely*)!
  

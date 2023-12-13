@@ -36,22 +36,3 @@ Rather than searching through the GUI (graphic user interface) for the function 
 | split [option: model #] | Splits the model by chain |
 | sel [model, chain, residue, or atom #] | Select the model, chain, residue, or atom |
 
-
-# Movie Making
-
-:::{Glossary}
-Saving Images (ChimeraX)
-    [](./images)
-
-Fade (ChimeraX)
-    [](./fade.md)
-
-Morph (ChimeraX)
-    [](./morph.md)
-
-Rock (ChimeraX)
-    [](./rock.md)
-
-Spin (ChimeraX)
-    [](./spin.md)
-:::

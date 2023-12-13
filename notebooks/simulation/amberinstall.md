@@ -1,6 +1,4 @@
-# Amber
-
-## Compiling Amber
+# Compiling Amber
 
 Amber + QMhub + Torchmd-net 
 

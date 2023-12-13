@@ -2,72 +2,104 @@
 format: jb-book
 root: index
 parts:
-  - caption: A (Not So) Quick Start Guide
-    numbered: True
+  - caption:
     chapters:
-    - file: notebooks/QuickStart/Overview
-    - file: notebooks/QuickStart/Terminal
+    - file: notebooks/quickstart/overview
+      options:
+        numbered: true
       sections:
-      - file: notebooks/QuickStart/Navigation
-      - file: notebooks/QuickStart/FileManagement
-    - file: notebooks/QuickStart/Supercomputer
-      sections:
-      - file: notebooks/QuickStart/SSH
-      - file: notebooks/QuickStart/Slurm
-    - file: notebooks/QuickStart/Python
-      sections:
-      - file: notebooks/QuickStart/Conda
-    - file: notebooks/QuickStart/StructureFiles
-      sections: 
-      - file: notebooks/QuickStart/PDBFiles
-      - file: notebooks/QuickStart/XYZFiles
-  - caption: Tutorials
+      - file: notebooks/quickstart/Terminal
+        sections:
+        - file: notebooks/quickstart/Navigation
+        - file: notebooks/quickstart/FileManagement
+      - file: notebooks/quickstart/Supercomputer
+        sections:
+        - file: notebooks/quickstart/SSH
+        - file: notebooks/quickstart/Slurm
+      - file: notebooks/quickstart/Python
+        sections:
+        - file: notebooks/quickstart/Conda
+      - file: notebooks/quickstart/StructureFiles
+        sections: 
+        - file: notebooks/quickstart/PDBFiles
+        - file: notebooks/quickstart/XYZFiles
+      - file: notebooks/quickstart/BasicMD
+
+  - caption: Programming
     chapters:
-    - file: notebooks/Tutorials
-      sections: 
+    - file: notebooks/bash/overview
+      sections:
+      - file: notebooks/bash/scripting
+      - file: notebooks/bash/startup
+    - file: notebooks/hpc/overview
+      sections:
+      - file: notebooks/hpc/autologin
+      - file: notebooks/hpc/config
+    - file: notebooks/git/overview
+      sections:
+      - file: notebooks/git/git
+        sections:
+        - file: notebooks/git/branch
+    - file: notebooks/python/overview
+      sections:
+      - file: notebooks/python/python
+      - file: notebooks/python/conda
+        sections:
+        - file: notebooks/python/installconda
+        - file: notebooks/python/condaenv
+        - file: notebooks/python/myenv
+        - file: notebooks/python/condaintel
+        - file: notebooks/python/jupyter
+  
+
+  - caption: Visualization
+    chapters:
+    - file: notebooks/chimera/overview
+      sections:
+      - file: notebooks/chimera/fade
+      - file: notebooks/chimera/images
+      - file: notebooks/chimera/morph
+      - file: notebooks/chimera/rock
+      - file: notebooks/chimera/spin
+    - file: notebooks/vmd/overview
+      sections:
+      - file: notebooks/vmd/ffmpeg
+      
+
+  - caption: Simulations
+    chapters:
+    - file: notebooks/simulation/md
+      sections:
       - file: notebooks/simulation/simple
       - file: notebooks/simulation/distance
+    - file: notebooks/simulation/qmmm
+      sections:
       - file: notebooks/simulation/claisen
+    - file: notebooks/simulation/analysis
+      sections:
       - file: notebooks/simulation/rmsd
       - file: notebooks/simulation/rmsf
-  - caption: Notes
+
+  - caption: My Notes
     chapters:
-    - file: notebooks/theory/simulations
-    - file: notebooks/theory/basics-classical
-    - file: notebooks/theory/basics-qmmm
-    - file: notebooks/theory/fe-binding
-    - file: notebooks/theory/fe-alchemical
-      sections: 
-      - file: notebooks/theory/alchemical/potentials
-      - file: notebooks/theory/alchemical/workflow
-    - file: notebooks/theory/fe-estimators
-      sections: 
-      - file: notebooks/theory/estimators/ti
-      - file: notebooks/theory/estimators/mbar
+    - file: notebooks/notes/binding
+    - file: notebooks/notes/modelling
+      sections:
+      - file: notebooks/notes/basics-classical
+        sections:
+        - file: notebooks/notes/fe-alchemical
+          sections: 
+          - file: notebooks/notes/alchemical/potentials
+          - file: notebooks/notes/alchemical/workflow
+      - file: notebooks/notes/basics-qmmm
+      - file: notebooks/notes/fe-estimators
+        sections: 
+        - file: notebooks/notes/estimators/ti
+        - file: notebooks/notes/estimators/mbar
+
+
   - caption: Resources
     chapters:
-    - file: notebooks/bash/startup
-      sections:
-      - file: notebooks/bash/basics
-      - file: notebooks/bash/bash1
-      - file: notebooks/bash/vi 
-    - file: notebooks/git/git
-      sections:
-      - file: notebooks/branch
-    - file: notebooks/ssh/autologin
-      sections:
-      - file: notebooks/ssh/config
+    - file: notebooks/python/jupyterbook
     - file: notebooks/linux
-    - file: notebooks/python/python
-      sections:
-      - file: notebooks/conda/installconda
-      - file: notebooks/conda/condaenv
-      - file: notebooks/conda/myenv
-      - file: notebooks/conda/condaambertools
-      - file: notebooks/conda/condaintel
-      - file: notebooks/conda/jupyter
-      - file: notebooks/conda/jupyterbook
     - file: notebooks/simulation/amberinstall
-    - file: notebooks/chimera/ChimeraX
-    - file: notebooks/vmd/ffmpeg
-    

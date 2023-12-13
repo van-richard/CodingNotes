@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Conda Environments
 
 ## Creating New Environments

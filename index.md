@@ -13,16 +13,20 @@ This collection was an attempt to consolidated my experiences in computational c
 
 I hope many of you will find this information useful in your future endeavors.
 
-1. [A (Not So) Quick Start Guide](./notebooks/QuickStart/Overview.md)
+1. [A (Not So) Quick Start Guide](notebooks/quickstart/overview)
     * Introduction to Terminal, Shell, and Bash
     * Navigating Supercomputers
     * Basic Python Programming 
     * Molecular Structures and File Formats
 
-2. [Tutorials on Molecular Modelling]()
-    * Visualization with Chimera/ChimeraX
-    * Classical Molecular Dynamics Simulations (Amber)
-    * Quantum Mechanics/Molecular Mechanics Simulations (Amber)
+2. Programming
+    *  [bash](notebooks/bash/overview) 
+    *  [SLURM & ssh](notebooks/hpc/overview)
+    *  [GitHub & git](notebooks/git/overview)
+    *  [Python & Conda](notebooks/python/overview)
+
+3. Tutorials
+    * [Molecular Simulations with Amber](notebooks/simulation/overview)
     * Analysis techniques
 
 

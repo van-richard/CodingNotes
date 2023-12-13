@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Jupyter Notebooks
 
 The Jupyter Notebook App is a server-client application that allows editing and running notebook documents via a web browser. The Jupyter Notebook App can be executed on a local desktop requiring no internet access (as described in this document) or can be installed on a remote server and accessed through the internet.

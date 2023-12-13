@@ -1,6 +1,4 @@
-# Python
-
-## Overview
+# Overview
 
 ```python
 # Single line comments start with a number symbol.

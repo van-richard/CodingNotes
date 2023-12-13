@@ -1,11 +1,11 @@
-# Molcular Modelling 
+# Simulation Methods
 
 Before running a simulation, ask yourself:
 
 - What is the scientific question?
 - Can the hypothesis be tested with MD?
-- What experimental evidence is ther for the property of interest?
-- Is the timescale of the property in attosecond? picosend? millisecond?
+- What experimental evidence is the for the property of interest?
+- Is the timescale of the property in attosecond? picosecond? millisecond?
 
 Molecular simulations methods uses a particle-based description of the system, and is propagated by deterministic or probabilistic rules to generate a trajectory describing its evolution over course of the simulation.
 
@@ -19,7 +19,7 @@ General methods fit into 2 categories (*depending on how the system is propagate
 
 <span style="font-size:1.5em;">**Molecular Dynamics (MD) Simulations**</span>
 
-In this approach, Newton's equations of motion are numerically intergrated to generate the dynamic trajectory of the system.These simulations can be used to investigate structural, dynamic, and thermodynamic properties.
+In this approach, Newton's equations of motion are numerically integrated to generate the dynamic trajectory of the system. These simulations can be used to investigate structural, dynamic, and thermodynamic properties.
 
 
 <span style="font-size:1.5em;">**Monte Carlo (MC) Simulations**</span>
@@ -33,7 +33,7 @@ This approach does not calculate dynamical properties. MC simulations lack any c
 
 ## Molecular Descriptors
 
-MD or MC simulations can be carried out with differnt underlying physical theories to describe the particle-base model of the system. For example:
+MD or MC simulations can be carried out with different underlying physical theories to describe the particle-base model of the system. For example:
 
 1. **Molecular Mechanics (MM) Descriptors**
     - Also called *Classical Mechanics* or *Classical Descriptors*
@@ -54,7 +54,7 @@ QM simjulations are too computationally expensive to allow for simulations of th
 - High-level *ab inito* Methods (*i.e.* DFT)
 - Semi-Empirical Methods (NDDO, PM3, AM1)
 
-For context, a typical QM simulation could be perforemd with a hundred atoms or fewer. Whereas MM simulations routinely have tens to hundreds or thousands of atoms in the system.
+For context, a typical QM simulation could be performed with a hundred atoms or fewer. Whereas MM simulations routinely have tens to hundreds or thousands of atoms in the system.
 
 ## Properties of Interest
 
@@ -65,14 +65,14 @@ The size of the system alone does not dictate the use of classical descriptors. 
 
 These properties include entropic contributions. In other words, the fluctuations and correlations of motions within a system can affect the calculated property.
 
-**Simluations not only samples single optimal states but must sample the correct distribution of states.** This requires simulations of *some length.* In protein simulations, relevant timescale of biological prosses are often nanoseconds to microseconds in length. For example, rearrangements of buried amino acid sidechains or conformation changes to a protein domain.
+**Simluations not only samples single optimal states but must sample the correct distribution of states.** This requires simulations of *some length.* In protein simulations, relevant timescale of biological processes are often nanoseconds to microseconds in length. For example, rearrangements of buried amino acid sidechains or conformation changes to a protein domain.
 
 
 ## Other Methods
 
 <span style="font-size:1.5em;">Quantum Mechanics/Molecular Mechanics (QM/MM) Simulations</span>
 
-In classical simulations, bond breaking/forming are generally not allowed. The topology, or chemistry, of the system is is constant as a function of time. In other words, the chemical identity of a molecular remains constant (with the exception of constant pH simulations). 
+In classical simulations, bond breaking/forming are generally not allowed. The topology, or chemistry, of the system is constant as a function of time. In other words, the chemical identity of a molecular remains constant (except constant pH simulations). 
 
 The hybrid QM/MM scheme or use of reactive force fields are generally used.
 

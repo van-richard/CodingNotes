@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Branching
 
 List all branches in repository

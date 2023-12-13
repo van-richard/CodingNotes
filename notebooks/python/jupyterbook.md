@@ -1,8 +1,4 @@
----
-orphan: true
----
-
-# Create Websites
+# DIY GitHub Website
 
 Requires a GitHub account.
 

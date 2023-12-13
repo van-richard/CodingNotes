@@ -1,8 +1,4 @@
----
-orphan: true
----
-
-# Installing Miniforge
+# Installing 
 
 I use miniforge, so this tutorial will guide you through installing [Miniforge](https://github.com/conda-forge/miniforge). 
 

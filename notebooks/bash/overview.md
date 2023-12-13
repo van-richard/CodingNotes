@@ -1,8 +1,4 @@
----
-orphan: true
----
-
-# Bash Basics
+# bash Shell
 
 First line of the script is the shebang which tells the system how to execute the script: 
 
