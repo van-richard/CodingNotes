@@ -7,6 +7,9 @@ exclude_patterns: ["README.md", "drafts", "assets", "assets/*", "linuxlist.sh", 
 
 execute:
   execute_notebooks: cache
+
+only_build_toc_files: true
+
   
 html:
   baseurl: https://van-richard.github.io/CodingNotes
@@ -15,6 +18,11 @@ html:
   use_multitoc_numbering: false
   html_static_path: ["_static/"]
   html_css_files: ["_static/css/card.css"]
+
+repository:
+  url: https://github.com/van-richard/CodingNotes
+  branch: main
+
    
 parse:
   myst_enable_extensions:  
@@ -45,6 +53,4 @@ sphinx:
 # bibtex_bibfiles:
 #   - references.bib
 
-repository:
-  url: "https://github.com/van-richard/CodingNotes"
 
