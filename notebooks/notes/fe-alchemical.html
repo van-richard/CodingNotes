@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../_static/tippy/notebooks/notes/fe-alchemical.7280c9cd-abd8-433e-85c1-4a0970d42b85.js"></script>
+    <script defer="defer" src="../../_static/tippy/notebooks/notes/fe-alchemical.144b6661-3221-405f-b4d4-83fbe850f660.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/notes/fe-alchemical';</script>
@@ -429,8 +429,8 @@ document.write(`
 <h1>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2a665b89-49db-4886-bdb2-6fc526ebbb4c">
-<span class="eqno">(1)<a class="headerlink" href="#equation-2a665b89-49db-4886-bdb2-6fc526ebbb4c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0df29f42-4031-49fe-a04d-b05fa9836de0">
+<span class="eqno">(1)<a class="headerlink" href="#equation-0df29f42-4031-49fe-a04d-b05fa9836de0" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -443,8 +443,8 @@ document.write(`
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-f8fe6669-eab0-4b24-b0e9-5232c7f0903f">
-<span class="eqno">(2)<a class="headerlink" href="#equation-f8fe6669-eab0-4b24-b0e9-5232c7f0903f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7a5f9b31-6037-4acd-a54b-3f46e3c26b78">
+<span class="eqno">(2)<a class="headerlink" href="#equation-7a5f9b31-6037-4acd-a54b-3f46e3c26b78" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}
