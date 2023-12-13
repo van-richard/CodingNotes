@@ -44,6 +44,8 @@ The CLI can be accessed via {term}`terminal` app.
   * Pre-installed on many computers
   * Text-based graphical interface
 
+### Terminal App
+
 You can find the terminal by:
 
 ::::{tab-set} 
@@ -76,16 +78,18 @@ Users can send instructions to the computer by running `commands`
   
 ***
 
-## Shell Programs Provides Structure
+## Shell
 
 ::::{margin} 
 :::{important}
-Essentially a type of CLI, your choice in `shell` will define how you:
+Essentially, one type of CLI, the choice in `shell` programs dictates how:
   * Interact with the operating system
   * Workflow and control of the program
   * Command line combinations
 :::
 ::::
+
+### Shells Provides Structure
 
 When the user opens `terminal`, a {term}`shell` session is immediately started
 * These contain the current state, or {term}`environment`, of the shell. 
@@ -98,6 +102,7 @@ When the user opens `terminal`, a {term}`shell` session is immediately started
   * Examples: `csh`, `zsh` 
 
 **I mainly use the `bash` shell.**
+
 
 An {term}`interactive prompt`, is when the user runs each "command" line by line 
   * Combining all lines into 1 file is called a "shell {term}`script`."

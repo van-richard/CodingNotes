@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Molecular Structure Files &#8212; Coding Notes</title>
+    <title>4. Molecular Structure Files &#8212; Coding Notes</title>
   
   
   
@@ -66,13 +66,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../_static/tippy/notebooks/QuickStart/StructureFiles.56ed6209-7182-4e39-b1d5-7301d77b7fd0.js"></script>
+    <script defer="defer" src="../../_static/tippy/notebooks/QuickStart/StructureFiles.de3bd910-c2e3-4afc-a0fb-5b9f3c11df60.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/StructureFiles';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/QuickStart/StructureFiles.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Exploring PDB Files" href="PDBFiles.html" />
-    <link rel="prev" title="HPC and Using Slurm" href="Slurm.html" />
+    <link rel="next" title="4.3. Exploring PDB Files" href="PDBFiles.html" />
+    <link rel="prev" title="3.4. HPC and Using Slurm" href="Slurm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -165,20 +165,20 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">A (Not So) Quick Start Guide</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Terminal.html">Terminal, Shell, &amp; Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Navigation.html">Navigating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FileManagement.html">Copy, Move, Rename, &amp; Delete Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">1. Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Terminal.html">2. Terminal, Shell, &amp; Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Navigation.html">2.3. Navigating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FileManagement.html">2.4. Copy, Move, Rename, &amp; Delete Files</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Supercomputer.html">Supercomputers</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="SSH.html">Accessing the HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Slurm.html">HPC and Using Slurm</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Supercomputer.html">3. Supercomputers</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="SSH.html">3.3. Accessing the HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Slurm.html">3.4. HPC and Using Slurm</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Molecular Structure Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="PDBFiles.html">Exploring PDB Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="XYZFiles.html">What are XYZ Files?</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. Molecular Structure Files</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PDBFiles.html">4.3. Exploring PDB Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XYZFiles.html">4.4. What are XYZ Files?</a></li>
 </ul>
 </li>
 </ul>
@@ -406,8 +406,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">What are PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">What are XYZ Files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">4.1. What are PDB files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">4.2. What are XYZ Files?</a></li>
 </ul>
             </nav>
         </div>
@@ -420,7 +420,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="molecular-structure-files">
-<h1>Molecular Structure Files<a class="headerlink" href="#molecular-structure-files" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>Molecular Structure Files<a class="headerlink" href="#molecular-structure-files" title="Permalink to this heading">#</a></h1>
 <p>The structures of proteins and small-molecules can be solved via experimental methods, NMR, some examples include NMR, X-ray crystallography, and Cryo-EM. There are many databases for different approaches to solving molecular structures, but I will limit this dicussion to <code class="docutils literal notranslate"><span class="pre">.pdb</span></code> and <code class="docutils literal notranslate"><span class="pre">.xyz</span></code> files.</p>
 <dl class="simple glossary">
 <dt id="term-PDB-Files">PDB Files<a class="headerlink" href="#term-PDB-Files" title="Permalink to this term">#</a></dt><dd><p>Protein structures are saved and shared via the <a class="reference external" href="https://www.rcsb.org">Protein Data Bank at the Research Collaboratory for Structural Bioinformatics (RCSB)</a> as <code class="docutils literal notranslate"><span class="pre">.pdb</span></code> files. These files follow a text file standard discussed later</p>
@@ -429,12 +429,12 @@ document.write(`
 </dd>
 </dl>
 <section id="what-are-pdb-files">
-<h2>What are PDB files?<a class="headerlink" href="#what-are-pdb-files" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span>What are PDB files?<a class="headerlink" href="#what-are-pdb-files" title="Permalink to this heading">#</a></h2>
 <p>These are files which contain atomic coordinates and other information which descripes biological molecules. Structural biologist use experimental methods such as X-ray crystallography, Nuclear Magnetic Resonace spectroscopy, and Cryo-electron microscopy to determine the location of atoms in the structure. The information is then deposited to a <a class="reference external" href="https://www.org">RCSB</a>.</p>
 <p>Each structure will have a unique 4-letter/number code. Inside each file, the Protein Data Bank format consists of lines of information in a text file. Each line of information in the file is called a record. A file generally contains several different types of records, which are arranged in a specific order to describe a structure.</p>
 </section>
 <section id="what-are-xyz-files">
-<h2>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.2. </span>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Permalink to this heading">#</a></h2>
 <p>The XYZ file format is a text-file format. Unlike PDB files, there is no formal standard and several variations exist. However, a typical XYZ format specifies the molecule geometry by giving the number of atoms with Cartesian coordinates that will be read on the first line, a comment on the second, and the lines of atomic coordinates in the following lines.</p>
 <p>Typically, we use these files to store molecular geometries in Quantum Mechanical (QM) calculations. These files generally contain up to a few hundred atoms. For example, let’s build the small molecule alanine dipeptide, and store this data in <code class="docutils literal notranslate"><span class="pre">.xyz</span></code>.</p>
 </section>
@@ -479,7 +479,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">HPC and Using Slurm</p>
+        <p class="prev-next-title"><span class="section-number">3.4. </span>HPC and Using Slurm</p>
       </div>
     </a>
     <a class="right-next"
@@ -487,7 +487,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exploring PDB Files</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Exploring PDB Files</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -509,8 +509,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">What are PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">What are XYZ Files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">4.1. What are PDB files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">4.2. What are XYZ Files?</a></li>
 </ul>
   </nav></div>
 

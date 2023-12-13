@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>HPC and Using Slurm &#8212; Coding Notes</title>
+    <title>3.4. HPC and Using Slurm &#8212; Coding Notes</title>
   
   
   
@@ -66,13 +66,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../_static/tippy/notebooks/QuickStart/Slurm.59f64ecb-2ae0-41ad-9146-50ae13ea802f.js"></script>
+    <script defer="defer" src="../../_static/tippy/notebooks/QuickStart/Slurm.89469c6e-28f7-4ddb-9374-138a4de9af22.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/Slurm';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/QuickStart/Slurm.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Molecular Structure Files" href="StructureFiles.html" />
-    <link rel="prev" title="Accessing the HPC" href="SSH.html" />
+    <link rel="next" title="4. Molecular Structure Files" href="StructureFiles.html" />
+    <link rel="prev" title="3.3. Accessing the HPC" href="SSH.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -165,20 +165,20 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">A (Not So) Quick Start Guide</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Terminal.html">Terminal, Shell, &amp; Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Navigation.html">Navigating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FileManagement.html">Copy, Move, Rename, &amp; Delete Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">1. Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Terminal.html">2. Terminal, Shell, &amp; Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Navigation.html">2.3. Navigating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FileManagement.html">2.4. Copy, Move, Rename, &amp; Delete Files</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Supercomputer.html">Supercomputers</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="SSH.html">Accessing the HPC</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">HPC and Using Slurm</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Supercomputer.html">3. Supercomputers</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="SSH.html">3.3. Accessing the HPC</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.4. HPC and Using Slurm</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="PDBFiles.html">Exploring PDB Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="XYZFiles.html">What are XYZ Files?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="StructureFiles.html">4. Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PDBFiles.html">4.3. Exploring PDB Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XYZFiles.html">4.4. What are XYZ Files?</a></li>
 </ul>
 </li>
 </ul>
@@ -406,12 +406,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hpc-resources">HPC Resources</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-installed-softwares">Pre-Installed Softwares</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hpc-resources">3.4.1. HPC Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-installed-softwares">3.4.1.1. Pre-Installed Softwares</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">Slurm Scripts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">3.4.2. Slurm Scripts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">3.4.2.1. Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</a></li>
 </ul>
 </li>
 </ul>
@@ -426,7 +426,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hpc-and-using-slurm">
-<h1>HPC and Using Slurm<a class="headerlink" href="#hpc-and-using-slurm" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.4. </span>HPC and Using Slurm<a class="headerlink" href="#hpc-and-using-slurm" title="Permalink to this heading">#</a></h1>
 <p>Slurm is the software which manages the individual user and group jobs in a supercomputer center.</p>
 <p>This is a helpful refernce: <a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
 <aside class="margin sidebar">
@@ -439,13 +439,13 @@ document.write(`
 <p>When you access the supercomputer remotely (<code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">username&#64;servername</span></code>), you always start in your home directory (<em>/home/username</em>)</p>
 <p>If you run <a class="reference internal" href="../linux.html#term-pwd"><span class="xref std std-term">pwd</span></a>, you should see that you’re it!</p>
 <section id="hpc-resources">
-<h2>HPC Resources<a class="headerlink" href="#hpc-resources" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.4.1. </span>HPC Resources<a class="headerlink" href="#hpc-resources" title="Permalink to this heading">#</a></h2>
 <p><a class="reference internal" href="../linux.html#term-sinfo"><span class="xref std std-term">sinfo</span></a> prints information about the different paritions, and their current status.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span>
 </pre></div>
 </div>
 <section id="pre-installed-softwares">
-<h3>Pre-Installed Softwares<a class="headerlink" href="#pre-installed-softwares" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.4.1.1. </span>Pre-Installed Softwares<a class="headerlink" href="#pre-installed-softwares" title="Permalink to this heading">#</a></h3>
 <p>Clusters often has preinstalled software you can use. They’re called using the command <a class="reference internal" href="../linux.html#term-module"><span class="xref std std-term">module</span></a> . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span>
 </pre></div>
@@ -453,10 +453,10 @@ document.write(`
 </section>
 </section>
 <section id="slurm-scripts">
-<h2>Slurm Scripts<a class="headerlink" href="#slurm-scripts" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.4.2. </span>Slurm Scripts<a class="headerlink" href="#slurm-scripts" title="Permalink to this heading">#</a></h2>
 <p>It will be important for you to differentiat between a shell script and a Slurm script. When I make files, I typically use the file extention <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> for jobs I plan to submit to the cluster. The slurm scripts have a specific notation you must follow.</p>
 <section id="directives-sbatch">
-<h3>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)<a class="headerlink" href="#directives-sbatch" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.4.2.1. </span>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)<a class="headerlink" href="#directives-sbatch" title="Permalink to this heading">#</a></h3>
 <p>The way that Slurm determines how to allocate your jobs to the cluster (<em>i.e. across how many compute nodes, with how many CPUs, for how long etc</em>) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>. Common types of jobs are:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -577,7 +577,7 @@ squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Accessing the HPC</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Accessing the HPC</p>
       </div>
     </a>
     <a class="right-next"
@@ -585,7 +585,7 @@ squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w">
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Molecular Structure Files</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Molecular Structure Files</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -607,12 +607,12 @@ squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hpc-resources">HPC Resources</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-installed-softwares">Pre-Installed Softwares</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hpc-resources">3.4.1. HPC Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-installed-softwares">3.4.1.1. Pre-Installed Softwares</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">Slurm Scripts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slurm-scripts">3.4.2. Slurm Scripts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#directives-sbatch">3.4.2.1. Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</a></li>
 </ul>
 </li>
 </ul>
