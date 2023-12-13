@@ -30,7 +30,11 @@ scripts
 environment
     The current state of your shell
 
+miniforge
+    Community-drive anaconda package
 
+SLURM
+    Job Management on HPC
 
 
 ```

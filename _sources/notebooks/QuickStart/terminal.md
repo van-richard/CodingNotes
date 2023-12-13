@@ -1,14 +1,16 @@
 # Terminal, Shell, & Bash
 ## Terminal
 
-![](../../_static/gif/terminal-header.gif)
+:::{figure} https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif
+---
+align: center
+name: terminal-header
+---
 
-Example of the `terminal` on a Macbook. The line you are working on is noted with the `$`. The format of this line is: computer name, `;` , username, and then `$` . `Bash` commands are typed by line, and ran by hitting the `[enter]` key. The four lines ran:
+Command line on MacOS `terminal`, where, (1) `echo` will return `"[`some text`]"` as an output, (2) `echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator), (3) `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`, and (4) cowboy.
+:::
 
-  1. `echo` will return `"[`some text`]"` as an output
-  2. `echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator)
-  3. `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`
-  4.  cowboy
+Example of the `terminal` on a Macbook ({numref}`terminal-header`). The line you are working on is noted with the `$`. The format of this line is: computer name, `;` , username, and then `$` . `Bash` commands are typed by line, and ran by hitting the `[enter]` key.
 
 **_Why do we start here?_**
 The command line is a tool that everyone uses in computational research. 
