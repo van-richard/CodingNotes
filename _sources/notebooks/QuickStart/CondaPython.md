@@ -1,10 +1,11 @@
 # Python & Conda
 
-```{danger}
+::::{margin}
+:::{danger}
 
 I pray to god you did not install python randomly before reading this.
-
-```
+:::
+::::
 
 Python is a programming language we all use day-to-day in data analysis, machine learning, and figure/movie-making!
 
