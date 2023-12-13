@@ -1,56 +1,24 @@
 # CodingNotes
+## Notes I wish I had showed me when I started
 
-:::{sidebar}
+:::{margin}
 ![](_static/images/welcome.png)
 :::
 
-*Notes I wish I had showed me when I started*
+This collection was an attempt to consolidated my experiences in computational chemistry. Entering the field with no background in mathematics or computers, a lot was learned through trial and error. Despite these shortcomings, I am forever grateful to the exceptional guidance and continued support of Dr. Genwei Zhang, Dr. Zheng Pei, Dr. Xiaoliang Pan, and Dr. Yihan Shao.
 
-This collection of notes pretty much is a my consolidated experience in the field of computational chemistry. Some I found through trial and error, while others are from the exceptional guidance of Dr. Genwei Zhang, Dr. Zheng Pei, Dr. Xiaoliang Pan, and Dr. Yihan Shao.
+I hope many of you will find this information useful in your future endeavors.
 
-I am not the most coherent when it comes to speaking and writing, but I hope many of you will find this information useful in your future endeavors.
+1. [A (Not So) Quick Start Guide](./notebooks/QuickStart/Overview.md)
+    * Introduction to Terminal, Shell, and Bash
+    * Navigating Supercomputers
+    * Basic Python Programming 
+    * Molecular Structures and File Formats
+
+2. [Tutorials on Molecular Modelling](./notebooks/Tutorials/Overview.md)
+    * Visualization with Chimera/ChimeraX
+    * Classical Molecular Dynamics Simulations (Amber)
+    * Quantum Mechanics/Molecular Mechanics Simulations (Amber)
+    * Analysis techniques
 
 
-<body2>
-  <div class = container2>
-    <div class = card2>
-      <div class = image2>
-        <img href = "#" src = _static/images/card0.png>
-      </div>
-      <div class = content2>
-        <h3 style="text-transform:uppercase">
-          <b>Coding Tips</b>
-        </h3>
-        <p>
-        Terminal, <code>bash</code>, <code>vi/vim</code>, supercomputing, some </code>python</code>.
-        </p>
-      </div>
-    </div>
-    <div class = card2>
-      <div class = image2>
-        <img href = "#" src = _static/images/card2.png>
-      </div>
-      <div class = content2>
-        <h3 style="text-transform:uppercase">
-          <b>Visualization Tools</b>
-        </h3>
-        <p>
-        Chimera/ChimeraX, VMD, Photoshop, Illustrator, Premiere.
-        </p>
-      </div>
-    </div>
-    <div class = card2>
-      <div class = image2>
-        <img href = "#" src = _static/images/card1.png>
-      </div>
-      <div class = content2>
-        <h3 style="text-transform:uppercase;">
-        <b>Molecular Modelling</b>
-        </h3>
-        <p>
-        Tutorials on Amber simulation, notes on theory and methods. 
-        </p>
-      </div>
-    </div>  
-  </div> 
-</body2>

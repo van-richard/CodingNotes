@@ -1,20 +1,10 @@
----
-orphan: true
----
+# Navigating
 
-# Navigating in Terminal
-
-First we need to find your terminal!! Then, I want to introduce the general layout within the command line interface. Our goal here is to understand these concepts:
-
-* The current working directory 
-* List content avalable "here" `.`
-* Create new folders
-* Absolute and relative paths 
-
-````{note}
-
-We will use the terminal on your local computer. In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.
-````
+**Objective** 
+* Understand the general layout of the `terminal`, and how it differs from GUIs like `Finder` 
+* Find where your start, currently are, and can go in `terminal`
+* See files/folders 
+* Difference between absolute and relative paths
 
 
 ## Where are we?

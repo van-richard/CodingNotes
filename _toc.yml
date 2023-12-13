@@ -1,42 +1,46 @@
 # In _toc.yml
 format: jb-book
 root: index
-
-chapters:
-- file: notebooks/QuickStart
-  sections:
-  - file: notebooks/QuickStart/CommandLine
-  - file: notebooks/QuickStart/Navigation
-  - file: notebooks/QuickStart/FileManagement
-  - file: notebooks/QuickStart/Supercomputer
-  - file: notebooks/QuickStart/SSH
-  - file: notebooks/QuickStart/Slurm
-  - file: notebooks/QuickStart/CondaPython
-  - file: notebooks/QuickStart/StructureFiles
-    sections: 
-    - file: notebooks/QuickStart/PDBFiles
-    - file: notebooks/QuickStart/XYZFiles
-  - file: notebooks/QuickStart/BasicMD 
-- file: notebooks/Tutorials
-  sections: 
-  - file: notebooks/simulation/simple
-  - file: notebooks/simulation/distance
-  - file: notebooks/simulation/claisen
-  - file: notebooks/simulation/rmsd
-  - file: notebooks/simulation/rmsf
-- file: notebooks/Theory
-  sections:
-  - file: notebooks/theory/simulations
-    sections:
-    - file: notebooks/theory/basics-classical
-    - file: notebooks/theory/basics-qmmm
-  - file: notebooks/theory/fe-binding
-  - file: notebooks/theory/fe-alchemical
-    sections: 
-    - file: notebooks/theory/alchemical/potentials
-    - file: notebooks/theory/alchemical/workflow
-  - file: notebooks/theory/fe-estimators
-    sections: 
-    - file: notebooks/theory/estimators/ti
-    - file: notebooks/theory/estimators/mbar
-- file: notebooks/Resources 
+parts:
+  - caption: A (Not So) Quick Start Guide
+    chapters:
+    - file: notebooks/QuickStart/Overview
+    - file: notebooks/QuickStart/Terminal
+      sections:
+      - file: notebooks/QuickStart/Navigation
+      - file: notebooks/QuickStart/FileManagement
+    - file: notebooks/QuickStart/Supercomputer
+      sections:
+      - file: notebooks/QuickStart/SSH
+      - file: notebooks/QuickStart/Slurm
+    - file: notebooks/QuickStart/Python
+    - file: notebooks/QuickStart/StructureFiles
+      sections: 
+      - file: notebooks/QuickStart/PDBFiles
+      - file: notebooks/QuickStart/XYZFiles
+  - caption: Tutorials
+    chapters:
+    - file: notebooks/Tutorials
+      sections: 
+      - file: notebooks/simulation/simple
+      - file: notebooks/simulation/distance
+      - file: notebooks/simulation/claisen
+      - file: notebooks/simulation/rmsd
+      - file: notebooks/simulation/rmsf
+  - caption: Notes
+    chapters:
+    - file: notebooks/Theory
+      sections:
+      - file: notebooks/theory/simulations
+      - file: notebooks/theory/basics-classical
+      - file: notebooks/theory/basics-qmmm
+      - file: notebooks/theory/fe-binding
+      - file: notebooks/theory/fe-alchemical
+        sections: 
+        - file: notebooks/theory/alchemical/potentials
+        - file: notebooks/theory/alchemical/workflow
+      - file: notebooks/theory/fe-estimators
+        sections: 
+        - file: notebooks/theory/estimators/ti
+        - file: notebooks/theory/estimators/mbar
+    - file: notebooks/Resources 

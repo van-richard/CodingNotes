@@ -1,9 +1,9 @@
-# In _config.yml
+ # In _config.yml
 title: Coding Notes
 author: Richard Van
 copyright: "2023"
 logo: "_static/images/logo2.png"
-exclude_patterns: ["README.md", "drafts", "assets", "linuxlist.sh", "build.sh"]
+exclude_patterns: ["README.md", "drafts", "assets", "assets/*", "linuxlist.sh", "build.sh"]
 
 execute:
   execute_notebooks: cache
@@ -34,6 +34,7 @@ parse:
 
 sphinx: 
   extra_extensions:
+    - sphinx_tippy
     - sphinx_design
     - sphinxcontrib.mermaid
     - sphinx_proof

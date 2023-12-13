@@ -1,12 +1,8 @@
----
-orphan: true
----
+# Copy, Move, Rename, & Delete Files
 
-# Files in Terminal
+Your mouse does not work in the way you expect when in the CLI.
 
-Your mouse does not work in the way you expect with the command line interface.. 
-
-Using the terminal means you need to learn how to to communicate with the computer through __commands__.
+Using the terminal means you need to learn how to communicate with the computer through __commands__.
 
 Simple tasks like:
 

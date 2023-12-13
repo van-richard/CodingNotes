@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Navigating in Terminal &#8212; Coding Notes</title>
+    <title>Navigating &#8212; Coding Notes</title>
   
   
   
@@ -64,12 +64,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
+    <script defer="defer" src="../../_static/tippy/notebooks/QuickStart/Navigation.4e75c7f3-25fc-4215-8d8e-0eebc12fffb2.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/QuickStart/Navigation';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/QuickStart/Navigation.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Files in Terminal" href="FileManagement.html" />
-    <link rel="prev" title="Terminal &amp; Command Line" href="CommandLine.html" />
+    <link rel="next" title="Copy, Move, Rename, &amp; Delete Files" href="FileManagement.html" />
+    <link rel="prev" title="Terminal, Shell, &amp; Bash" href="Terminal.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -160,24 +163,29 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="CommandLine.html">Terminal &amp; Command Line</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="FileManagement.html">Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Supercomputer.html">Supercomputers</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">A (Not So) Quick Start Guide</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Terminal.html">Terminal, Shell, &amp; Bash</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Navigating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FileManagement.html">Copy, Move, Rename, &amp; Delete Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Supercomputer.html">Supercomputers</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="SSH.html">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Slurm.html">HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="CondaPython.html">Python &amp; Conda</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="PDBFiles.html">Exploring PDB Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="XYZFiles.html">What are XYZ Files?</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="BasicMD.html">Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="PDBFiles.html">Exploring PDB Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XYZFiles.html">What are XYZ Files?</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation/distance.html">Applying Distance Restraints in Classical MD SImulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
@@ -185,12 +193,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../simulation/rmsf.html">RMSF</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../theory/simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
-</li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Theory.html">Notes</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/simulations.html">Molcular Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/basics-qmmm.html">QM/MM Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../theory/fe-binding.html">Modelling Binding Affinity</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../theory/fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../theory/alchemical/potentials.html">Alchemical States</a></li>
@@ -388,7 +397,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Navigating in Terminal</h1>
+    <h1>Navigating</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -414,19 +423,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="navigating-in-terminal">
-<h1>Navigating in Terminal<a class="headerlink" href="#navigating-in-terminal" title="Permalink to this heading">#</a></h1>
-<p>First we need to find your terminal!! Then, I want to introduce the general layout within the command line interface. Our goal here is to understand these concepts:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="navigating">
+<h1>Navigating<a class="headerlink" href="#navigating" title="Permalink to this heading">#</a></h1>
+<p><strong>Objective</strong></p>
 <ul class="simple">
-<li><p>The current working directory</p></li>
-<li><p>List content avalable “here” <code class="docutils literal notranslate"><span class="pre">.</span></code></p></li>
-<li><p>Create new folders</p></li>
-<li><p>Absolute and relative paths</p></li>
+<li><p>Understand the general layout of the <code class="docutils literal notranslate"><span class="pre">terminal</span></code>, and how it differs from GUIs like <code class="docutils literal notranslate"><span class="pre">Finder</span></code></p></li>
+<li><p>Find where your start, currently are, and can go in <code class="docutils literal notranslate"><span class="pre">terminal</span></code></p></li>
+<li><p>See files/folders</p></li>
+<li><p>Difference between absolute and relative paths</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We will use the terminal on your local computer. In the margin is a screen capture of my terminal running the command. There will be some differences (files/folders) between your terminal and mine.</p>
-</div>
 <section id="where-are-we">
 <h2>Where are we?<a class="headerlink" href="#where-are-we" title="Permalink to this heading">#</a></h2>
 <p>The first command to learn is <code class="docutils literal notranslate"><span class="pre">pwd</span></code> which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> tells you what your current or present working directory (folder) is.</p>
@@ -538,12 +543,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="CommandLine.html"
+       href="Terminal.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Terminal &amp; Command Line</p>
+        <p class="prev-next-title">Terminal, Shell, &amp; Bash</p>
       </div>
     </a>
     <a class="right-next"
@@ -551,7 +556,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Files in Terminal</p>
+        <p class="prev-next-title">Copy, Move, Rename, &amp; Delete Files</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

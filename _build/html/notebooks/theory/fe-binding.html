@@ -64,6 +64,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
+    <script defer="defer" src="../../_static/tippy/notebooks/theory/fe-binding.b1d9c27d-cac0-4d68-aefc-fe0f82b60b74.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/theory/fe-binding';</script>
@@ -162,24 +165,29 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart.html">Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CommandLine.html">Terminal &amp; Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">Navigating in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">Files in Terminal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Supercomputer.html">Supercomputers</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">A (Not So) Quick Start Guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../QuickStart/Overview.html">Overview</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart/Terminal.html">Terminal, Shell, &amp; Bash</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/Navigation.html">Navigating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/FileManagement.html">Copy, Move, Rename, &amp; Delete Files</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart/Supercomputer.html">Supercomputers</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/SSH.html">Accessing the HPC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../QuickStart/Slurm.html">HPC and Using Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/CondaPython.html">Python &amp; Conda</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../QuickStart/StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../QuickStart/PDBFiles.html">Exploring PDB Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../QuickStart/XYZFiles.html">What are XYZ Files?</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../QuickStart/BasicMD.html">Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../QuickStart/CondaPython.html">Python &amp; Conda</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../QuickStart/StructureFiles.html">Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/PDBFiles.html">Exploring PDB Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../QuickStart/XYZFiles.html">What are XYZ Files?</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../simulation/simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation/distance.html">Applying Distance Restraints in Classical MD SImulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation/claisen.html">Simple QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
@@ -187,12 +195,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../simulation/rmsf.html">RMSF</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory.html">Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 has-children"><a class="reference internal" href="simulations.html">Molcular Modelling</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="basics-classical.html">Classical Molecular Dynamics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basics-qmmm.html">QM/MM Simulations</a></li>
 </ul>
-</li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Notes</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Theory.html">Notes</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simulations.html">Molcular Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics-qmmm.html">QM/MM Simulations</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Modelling Binding Affinity</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="fe-alchemical.html">Alchemical Free Energy</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="alchemical/potentials.html">Alchemical States</a></li>

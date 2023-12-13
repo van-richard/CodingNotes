@@ -1,0 +1,22 @@
+selector_to_html = {"a[href=\"#pre-installed-softwares\"]": "<h3 class=\"tippy-header\" style=\"margin-top: 0;\">Pre-Installed Softwares<a class=\"headerlink\" href=\"#pre-installed-softwares\" title=\"Permalink to this heading\">#</a></h3><p>Clusters often has preinstalled software you can use. They\u2019re called using the command <a class=\"reference internal\" href=\"../linux.html#term-module\"><span class=\"xref std std-term\">module</span></a> . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>", "a[href=\"#slurm-scripts\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">Slurm Scripts<a class=\"headerlink\" href=\"#slurm-scripts\" title=\"Permalink to this heading\">#</a></h2><p>It will be important for you to differentiat between a shell script and a Slurm script. When I make files, I typically use the file extention <code class=\"docutils literal notranslate\"><span class=\"pre\">.slurm</span></code> for jobs I plan to submit to the cluster. The slurm scripts have a specific notation you must follow.</p>", "a[href=\"#hpc-resources\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">HPC Resources<a class=\"headerlink\" href=\"#hpc-resources\" title=\"Permalink to this heading\">#</a></h2><p><a class=\"reference internal\" href=\"../linux.html#term-sinfo\"><span class=\"xref std std-term\">sinfo</span></a> prints information about the different paritions, and their current status.</p>", "a[href=\"../linux.html#term-pwd\"]": "<dt id=\"term-pwd\"><a class=\"reference internal\" href=\"../commands/pwd.html\"><span class=\"doc std std-doc\">pwd</span></a></dt><dd><p>print working directory</p></dd>", "a[href=\"../linux.html#term-module\"]": "<dt id=\"term-module\"><a class=\"reference internal\" href=\"../commands/module.html\"><span class=\"doc std std-doc\">module</span></a></dt><dd><p>load software on slurm</p></dd>", "a[href=\"../linux.html#term-sbatch\"]": "<dt id=\"term-sbatch\"><a class=\"reference internal\" href=\"../commands/sbatch.html\"><span class=\"doc std std-doc\">sbatch</span></a></dt><dd><p>Submit job to Slurm</p></dd>", "a[href=\"../linux.html#term-scancel\"]": "<dt id=\"term-scancel\"><a class=\"reference internal\" href=\"../commands/scancel.html\"><span class=\"doc std std-doc\">scancel</span></a></dt><dd><p>Cancel Slurm Jobs</p></dd>", "a[href=\"#hpc-and-using-slurm\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">HPC and Using Slurm<a class=\"headerlink\" href=\"#hpc-and-using-slurm\" title=\"Permalink to this heading\">#</a></h1><p>Slurm is the software which manages the individual user and group jobs in a supercomputer center.</p><p>This is a helpful refernce: <a class=\"reference external\" href=\"https://slurm.schedmd.com/overview.html\">slurm.schemd.com</a></p>", "a[href=\"../linux.html#term-sinfo\"]": "<dt id=\"term-sinfo\"><a class=\"reference internal\" href=\"../commands/sinfo.html\"><span class=\"doc std std-doc\">sinfo</span></a></dt><dd><p>View information about Slurm nodes and partitions.</p></dd>", "a[href=\"#directives-sbatch\"]": "<h3 class=\"tippy-header\" style=\"margin-top: 0;\">Directives (<code class=\"docutils literal notranslate\"><span class=\"pre\">#SBATCH</span></code>)<a class=\"headerlink\" href=\"#directives-sbatch\" title=\"Permalink to this heading\">#</a></h3><p>The way that Slurm determines how to allocate your jobs to the cluster (<em>i.e. across how many compute nodes, with how many CPUs, for how long etc</em>) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class=\"docutils literal notranslate\"><span class=\"pre\">#SBATCH</span></code>. Common types of jobs are:</p>"}
+skip_classes = ["headerlink", "sd-stretched-link"]
+
+window.onload = function () {
+    for (const [select, tip_html] of Object.entries(selector_to_html)) {
+        const links = document.querySelectorAll(` ${select}`);
+        for (const link of links) {
+            if (skip_classes.some(c => link.classList.contains(c))) {
+                continue;
+            }
+
+            tippy(link, {
+                content: tip_html,
+                allowHTML: true,
+                arrow: true,
+                placement: 'auto-start', maxWidth: 500, interactive: false,
+
+            });
+        };
+    };
+    console.log("tippy tips loaded!");
+};
