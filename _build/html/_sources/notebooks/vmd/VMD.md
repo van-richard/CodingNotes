@@ -1,3 +1,0 @@
-# VMD
-
-View MD Trajectories

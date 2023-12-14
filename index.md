@@ -2,7 +2,7 @@
 
 **Notes I wish I had showed me when I started**
 
-:::{figure} https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/images/welcome.png
+:::{figure} _static/images/welcome.png
 ---
 width: 275px
 align: right
