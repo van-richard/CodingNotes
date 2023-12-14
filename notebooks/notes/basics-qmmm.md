@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # QM/MM Simulations
 
 ## Overview
@@ -19,7 +15,7 @@ The potential energy contains 3 types of interactions:
 2. Interactions between particles in MM region
 3. Interaction between QM and MM particles
 
-Points 1 and 2 are straightforward descriptions of the system. Point number 3 requires calculating the energy of the combined system, whic can be done in 2 ways:
+Points 1 and 2 are straightforward descriptions of the system. Point number 3 requires calculating the energy of the combined system, which can be done in 2 ways:
 
 1. Subtractive scheme
 
@@ -42,7 +38,7 @@ $$
 E_\mathrm{QM-MM} = E_\mathrm{bonded}^\mathrm{QM-MM} + _\mathrm{nonbonded}^\mathrm{QM-MM}
 $$
 
-**The additive scheme is the most common approach**, and we will talk about the QM/MM bonded and non bonded terms
+**The additive scheme is the most common approach**, and we will talk about the QM/MM bonded and nonbonded terms
 
 ## Bonded Interactions
 
@@ -58,7 +54,7 @@ Care has to be taken when evaluating the QM wave function, to address this, seve
 
 1) **Monovalent capping atom:** hydrogen atoms are placed along bond vector.
 2) **Link atom pseudopotential:** linking atoms with scaled down psudopotential and requires a valence change which requires to constraint bond distance.
-3) **Generalized hybrid orbitals:** hybrid orbitals are olacced on boundary atom and one participates in SCF calculation for wave function of QM region
+3) **Generalized hybrid orbitals:** hybrid orbitals are placed on boundary atom and one participates in SCF calculation for wave function of QM region
 
 ## Nonbonded Interactions
 
@@ -71,7 +67,7 @@ $$
 QM Polarization energy ($E_\mathrm{pol.}^\mathrm{QM-MM}$) describes the *electrostatic* interaction between MM charges and QM charge density. This can be calculated in one of three ways:
 
 1) **Mechanical embedding:** No influence of MM charge on QM part, i.e.  QM calculation is gas-phase -like without additional potential due to MM atoms
-    - This neglects. established by assigning fixed set of effective charges to QM region. QM partial charges re=computed at every integration step of simulation (least-squares fitting procedure  
+    - This neglects. established by assigning fixed set of effective charges to QM region. QM partial charges re=computed at every integration step of simulation (least-squares fitting procedure)
 2) **Electrostatic embedding:** QM polarization due to MM part included
     - Estimated through additional term to QM Hamiltonian, where it is taken into account in terms of external charge distribution
 3) **Polarized embedding:** MM polarization due to QM part included as well
@@ -82,7 +78,7 @@ QM Polarization energy ($E_\mathrm{pol.}^\mathrm{QM-MM}$) describes the *electro
 Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.
 
 $$
-E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}_{i}} - {\textbf{R}_{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
+E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}_i} - {\textbf{R}_{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
 $$
 
 Two problems arise due to the short-range and long-range behavior of this term..
@@ -105,7 +101,7 @@ $$
 E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})v^{smear}(|\textbf{r}_i - \textbf{R}_i|)}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
 $$
 
-Where, the *smearing function* can be a Gaussian distrubtion or another suitable function centered at the MM atom.
+Where, the *smearing function* can be a Gaussian distribution or another suitable function centered at the MM atom.
 
 $$
 v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
@@ -113,7 +109,3 @@ $$
 
 - Smearing function in CP2P, where $r_{c,I}$ is the covalent radius of atom $I$
 
-
-```python
-
-```
