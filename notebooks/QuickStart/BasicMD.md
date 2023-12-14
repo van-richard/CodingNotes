@@ -1,6 +1,3 @@
----
-orphan: true
----
 # Briefly, Molecular Dynamics
 
 The general steps of molecular dynamics (MD) simulations are shown below, consider the following questions for each step:
@@ -11,7 +8,7 @@ The general steps of molecular dynamics (MD) simulations are shown below, consid
      - What protonation states are your titratable residues?
 2. Equilibrate the System
     - What is the target environmental conditions for your system?
-    - Is temperature, pressure, and/or the energy of the sytem stable? 
+    - Is temperature, pressure, and/or the energy of the system stable? 
 3. Production Simulations 
     - How long do you need your simulation?
 4. Analysis of Trajectories
@@ -49,5 +46,5 @@ $$
 
 The potential functions have preset bonding arrangements, therefore, classical MD on its own cannot be used to model chemical reactions.  
 
-A MD simulation generates a sequence of configurations phase space connected by time. These is called a *trajectoy* of all particles in the system as a function of time. Time averages and other properties can be calculated from a trajectory.
+MD simulation generates a sequence of configurations phase space connected by time. This is called a *trajectory* of all particles in the system as a function of time. Time averages and other properties can be calculated from a trajectory.
 

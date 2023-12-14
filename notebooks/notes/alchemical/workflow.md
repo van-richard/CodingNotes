@@ -9,19 +9,6 @@ For more information, refer to the
 
 # Simulation Workflows
 
-:::{mermaid}
-graph LR
-    A(alchemical)--> B(setup)
-    B --> D(Prep. PDBs for wildtype protein \n mutant protein \n nucleic acids \n ions & water)
-    D --> F(merged_protein.parm7 \n merged_protein.parm7 \n merged_complexparm7 \n merged_complex.parm7)
-    F --> C
-    A --> C(free_energy)
-    C --> G(protein MD)
-    G --> I(lambda windows)
-    C --> H(complex MD)
-    H --> J(lambda windows)
-:::
-
 ## Setup Amber Files for `pmemd`
 
 `pmemd` requires the single topology file approach.

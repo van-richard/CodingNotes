@@ -7,10 +7,10 @@ align: center
 name: terminal-header
 ---
 
-Command line on MacOS `terminal`, where, (1) `echo` will return `"[`some text`]"` as an output, (2) `echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator), (3) `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`, and (4) cowboy.
+Command line on MacOS :term:`terminal`, where, (1) :term:`echo` will return `"[`some text`]"` as an output, (2) :term:`echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator), (3) `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`, and (4) cowboy.
 :::
 
-Example of the `terminal` on a Macbook ({numref}`terminal-header`). The line you are working on is noted with the `$`. The format of this line is: computer name, `;` , username, and then `$` . `Bash` commands are typed by line, and ran by hitting the `[enter]` key.
+Example of the `terminal` on a Macbook ({numref}`terminal-header`). The line you are working on is noted with the `$`. The format of this line is: computer name, `;` , username, and then `$`. `Bash` commands are typed by line, and ran by hitting the `[enter]` key.
 
 **_Why do we start here?_**
 The command line is a tool that everyone uses in computational research. 
@@ -108,3 +108,27 @@ When the user opens `terminal`, a {term}`shell` session is immediately started
 
 An {term}`interactive prompt`, is when the user runs each "command" line by line 
   * Combining all lines into 1 file is called a "shell {term}`script`."
+
+
+## Commands in Command Line
+
+In a `shell`, you have `commands`, which are computer processes that are predefined by the chosen `shell` structure.
+
+`commands` are typed, and interpreted by the computer to run some process. In other words, the user provides some `input` in the form of commands, and the computer `output` the result. The `output` is printed on your screen, and does not change. To update the `output`, you will need to run the command again!
+
+Some `commands` can be modified by `options` which follow the command with a hyphen `-`.
+
+Some `commmands` take in arguments, which is the `input` for the commands
+
+### Helpful Commands
+
+Common ones are:
+
+1. {term}`pwd`
+2. {term}`echo`
+3. {term}`cat`
+4. {term}`tail`
+5. {term}`head`
+6. {term}`touch`.
+
+

@@ -1,6 +1,8 @@
-# Linux/Unix Commands
+---
+orphan: true
+---
 
-## List of Commands
+# List of Commands
 
 :::{Glossary}
 
@@ -22,6 +24,10 @@
 
 [cp](./commands/cp)
      copy files or folders
+
+
+[echo](./commands/echo)
+     Print Argument
 
 
 [grep](./commands/grep)
@@ -118,6 +124,10 @@
 
 [tar](./commands/tar)
      compress/uncompress files
+
+
+[touch](./commands/touch)
+     Make File
 
 
 [trap](./commands/trap)

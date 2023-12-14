@@ -19,14 +19,21 @@ I hope many of you will find this information useful in your future endeavors.
     * Basic Python Programming 
     * Molecular Structures and File Formats
 
+
 2. Programming
     *  [bash](notebooks/bash/overview) 
     *  [SLURM & ssh](notebooks/hpc/overview)
     *  [GitHub & git](notebooks/git/overview)
     *  [Python & Conda](notebooks/python/overview)
 
-3. Tutorials
-    * [Molecular Simulations with Amber](notebooks/simulation/overview)
+
+3. Molecular Visualization
+    * ChimeraX
+    * VMD
+
+
+4.  Tutorials
+    * Molecular Simulations with Amber
     * Analysis techniques
 
 
