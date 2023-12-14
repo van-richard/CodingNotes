@@ -35,6 +35,14 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/card.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
@@ -52,6 +60,9 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/js/hoverxref.js"></script>
+    <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../../../_static/js/micromodal.min.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -64,9 +75,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
-    <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy/notebooks/notes/estimators/ti.63d7f10d-50c7-4391-aa5c-dafb3f9537cb.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/notes/estimators/ti';</script>
@@ -458,8 +466,8 @@ Q(N, V, T, \lambda) = \sum_{s} \exp [-U_s(\lambda)/k_{B}T]
 F(N,V,T,\lambda) = -k_{B}T \ln Q(N,V,T,\lambda)
 \]</div>
 <p>If we take the derivative of F with respect to <span class="math notranslate nohighlight">\(\lambda\)</span>, we will get that it equals the ensemble average of the derivative of potential energy with respect to <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-417b8f0b-01be-4e97-a080-8df9e3442c91">
-<span class="eqno">(3)<a class="headerlink" href="#equation-417b8f0b-01be-4e97-a080-8df9e3442c91" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9ffdf5db-c0f8-431a-9c74-da24b9cf7f74">
+<span class="eqno">(3)<a class="headerlink" href="#equation-9ffdf5db-c0f8-431a-9c74-da24b9cf7f74" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta F(A \rightarrow B)
  &amp;= \int_0^1 \frac{\partial F(\lambda)}{\partial\lambda} d\lambda \\
  &amp;= -\int_0^1 \frac{k_{B}T}{Q} \frac{\partial Q}{\partial\lambda} d\lambda \\
