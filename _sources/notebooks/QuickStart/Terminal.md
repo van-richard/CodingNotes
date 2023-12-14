@@ -7,7 +7,7 @@ align: center
 name: terminal-header
 ---
 
-Command line on MacOS `terminal`, where, (1) `echo` will return `"[`some text`]"` as an output, (2) `echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator), (3) `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`, and (4) cowboy.
+Command line on MacOS :term:`terminal`, where, (1) :term:`echo` will return `"[`some text`]"` as an output, (2) :term:`echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator), (3) `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`, and (4) cowboy.
 :::
 
 Example of the `terminal` on a Macbook ({numref}`terminal-header`). The line you are working on is noted with the `$`. The format of this line is: computer name, `;` , username, and then `$` . `Bash` commands are typed by line, and ran by hitting the `[enter]` key.
