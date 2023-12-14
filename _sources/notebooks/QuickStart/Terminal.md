@@ -108,3 +108,27 @@ When the user opens `terminal`, a {term}`shell` session is immediately started
 
 An {term}`interactive prompt`, is when the user runs each "command" line by line 
   * Combining all lines into 1 file is called a "shell {term}`script`."
+
+
+## Commands in Command Line
+
+In a `shell`, you have `commands`, which are computer processes that are predefined by the chosen `shell` structure.
+
+`commands` are typed, and interpreted by the computer to run some process. In other words, the user provides some `input` in the form of commands, and the computer `output` the result. The `output` is printed on your screen, and does not change. To update the `output`, you will need to run the command again!
+
+Some `commands` can be modified by `options` which follow the command with a hyphen `-`.
+
+Some `commmands` take in arguments, which is the `input` for the commands
+
+### Helpful Commands
+
+Common ones are:
+
+1. {term}`pwd`
+2. {term}`echo`
+3. {term}`cat`
+4. {term}`tail`
+5. {term}`head`
+6. {term}`touch`.
+
+

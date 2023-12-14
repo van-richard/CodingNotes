@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../_static/tippy/notebooks/quickstart/SSH.d2db25b1-9047-4b60-a9f9-0dc9c2e0d62f.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/quickstart/SSH';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/quickstart/SSH.html" />
+    <script defer="defer" src="../../_static/tippy/notebooks/quickstart/ssh.ba7b5b85-ff1e-4273-b18e-314a1b92b924.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/quickstart/ssh';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/quickstart/ssh.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.4. HPC Managment" href="Slurm.html" />
+    <link rel="next" title="2.4. Upload, Download, &amp; Extras" href="ssh-extra.html" />
     <link rel="prev" title="2. Supercomputers" href="Supercomputer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -158,12 +158,15 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="overview.html">A (not so) Quick Start Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="terminal.html">1. Terminal, Shell, &amp; Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="navigation.html">1.3. Navigating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html">1.4. Navigating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vim.html">1.5. Text Editors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filemanagement.html">1.6. File Management</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="Supercomputer.html">2. Supercomputers</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">2.3. Accessing the HPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Slurm.html">2.4. HPC Managment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ssh-extra.html">2.4. Upload, Download, &amp; Extras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slurm.html">2.5. HPC Job Managmer</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="Python.html">3. Python</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -265,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../python/jupyterbook.html">DIY GitHub Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../linux.html">Linux/Unix Commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux.html">List of Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../simulation/amberinstall.html">Compiling Amber</a></li>
 </ul>
 
@@ -321,7 +324,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/notebooks/quickstart/SSH.md" target="_blank"
+      <li><a href="../../_sources/notebooks/quickstart/ssh.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -413,9 +416,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh">2.3.1. SSH</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transferring-files-folders-remotely">2.3.2. Transferring Files/Folders Remotely</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-execution-with-ssh">2.3.3. Command Execution with <span class="xref std std-term">ssh</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-login">2.3.1. Remote Login</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-hostname">2.3.2. What is the <em>hostname</em>?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-accessing-the-hpc">2.3.3. Task: Accessing the HPC</a></li>
 </ul>
             </nav>
         </div>
@@ -429,19 +432,27 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="accessing-the-hpc">
 <h1><span class="section-number">2.3. </span>Accessing the HPC<a class="headerlink" href="#accessing-the-hpc" title="Permalink to this heading">#</a></h1>
-<section id="ssh">
-<h2><span class="section-number">2.3.1. </span>SSH<a class="headerlink" href="#ssh" title="Permalink to this heading">#</a></h2>
-<p><a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> stands for Secure Shell protocol, and this is how what it looks like!</p>
-<p>The command looks like this</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@servername
+<section id="remote-login">
+<h2><span class="section-number">2.3.1. </span>Remote Login<a class="headerlink" href="#remote-login" title="Permalink to this heading">#</a></h2>
+<p>Accessing the supercomputer can be done on your laptop, in the comfort of your bed. The command is <a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a>, which stands for “Secure Shell protocol”.</p>
+<p>It has the following format:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@hostname
 </pre></div>
 </div>
 <p>Where,</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> is the username whatever you made when applying for the account</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&#64;servername</span></code> is the name and IP address of the supercomputer</p></li>
-</ul>
-<p>To log into Oscer/Schooner/Pete, we would type this (<em>change <code class="docutils literal notranslate"><span class="pre">username</span></code> to your username</em>):</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> is the username (whatever you made when applying for the account)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;</span></code> is always between <code class="docutils literal notranslate"><span class="pre">username</span></code> and <code class="docutils literal notranslate"><span class="pre">hostname</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> is the name and IP address of the supercomputer</p></li>
+</ol>
+<p><strong>Example</strong> For my username, <code class="docutils literal notranslate"><span class="pre">van</span></code>, the command would be:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@hostname
+</pre></div>
+</div>
+</section>
+<section id="what-is-the-hostname">
+<h2><span class="section-number">2.3.2. </span>What is the <em>hostname</em>?<a class="headerlink" href="#what-is-the-hostname" title="Permalink to this heading">#</a></h2>
+<p>It depends on the computing center. In Oklahoma, you can access Oscer (<code class="docutils literal notranslate"><span class="pre">schooner.oscer.ou.edu</span></code>) or Pete (<code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code>) by:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" data-sync-id="key1" for="sd-tab-item-0">
@@ -458,7 +469,10 @@ Pete</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>Try logging into one of the supercomputer. Change the <code class="docutils literal notranslate"><span class="pre">servername</span></code> to the <code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code> or ``schooner.oscer.ou.edu`.</p>
+</section>
+<section id="task-accessing-the-hpc">
+<h2><span class="section-number">2.3.3. </span>Task: Accessing the HPC<a class="headerlink" href="#task-accessing-the-hpc" title="Permalink to this heading">#</a></h2>
+<p>Try logging into one of the supercomputer. Change the <code class="docutils literal notranslate"><span class="pre">hostname</span></code> to the <code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code> or ``schooner.oscer.ou.edu`.</p>
 <p>My username is <code class="docutils literal notranslate"><span class="pre">van</span></code>, so logging in looks like this:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
@@ -476,62 +490,18 @@ Pete</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>In the very first login to the computer, you will get the following prompt:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On the first login attempt, you will get the following prompt:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>The<span class="w"> </span>authenticity<span class="w"> </span>of<span class="w"> </span>host<span class="w"> </span><span class="s1">&#39;pete.hpc.okstate.edu&#39;</span><span class="w"> </span>cannot<span class="w"> </span>be<span class="w"> </span>established.
 <span class="w"> </span>DSA<span class="w"> </span>key<span class="w"> </span>fingerprint<span class="w"> </span>is<span class="w"> </span><span class="m">01</span>:23:45:67:89:ab:cd:ef:ff:fe:dc:ba:98:76:54:32:10.
 <span class="w"> </span>Are<span class="w"> </span>you<span class="w"> </span>sure<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span><span class="k">continue</span><span class="w"> </span>connecting<span class="w"> </span><span class="o">(</span>yes/no<span class="o">)</span>?
 </pre></div>
 </div>
 <p>Answering <code class="docutils literal notranslate"><span class="pre">yes</span></code> to the prompt will cause the session to continue, and the host key is stored in the local system’s known_hosts file. This is a hidden file, stored by default in a hidden directory, called <code class="docutils literal notranslate"><span class="pre">/.ssh/known_hosts</span></code>, in the your home directory. Once the host key has been stored in the known_hosts file, the client system can connect directly to that server again without need for any approvals.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p><strong>Answer <code class="docutils literal notranslate"><span class="pre">yes</span></code> by typing into your terminal. This will only happen on the first login!</strong></p>
 </div>
 <p><em>Congratulations! You logged into the supercomputer!</em></p>
-</section>
-<section id="transferring-files-folders-remotely">
-<h2><span class="section-number">2.3.2. </span>Transferring Files/Folders Remotely<a class="headerlink" href="#transferring-files-folders-remotely" title="Permalink to this heading">#</a></h2>
-<p>Previously, we learned <a class="reference internal" href="../linux.html#term-cp"><span class="xref std std-term">cp</span></a> and <a class="reference internal" href="../linux.html#term-mv"><span class="xref std std-term">mv</span></a> to manage files locally on our computer. However, to copy files through <a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a>, we need to use one of these 2 commands:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rsync</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">scp</span></code></p></li>
-</ol>
-<p>Type:</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-rsync</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rsync<span class="w"> </span>/path/to/source/<span class="w"> </span>/path/to/destination
-</pre></div>
-</div>
-</div>
-<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
-scp</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>/path/to/source<span class="w"> </span>/path/to/destination/
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>I recommend using <code class="docutils literal notranslate"><span class="pre">rsync</span></code> because this will check files sizes and modify timestamps of both files or folders. It will skip any further processing if they match. Additionally, if the destination file already exists, the transfer algorithm will make sure only differences between the files are sent over the wire.</p>
-</div>
-<p>We won’t go any futher, but remember you can find more information about <a class="reference internal" href="../linux.html#term-rsync"><span class="xref std std-term">rsync</span></a> and <a class="reference internal" href="../linux.html#term-scp"><span class="xref std std-term">scp</span></a>!</p>
-<p>One last thing about <a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> is that, you can also run commands without going through the whole process of logging in.</p>
-</section>
-<section id="command-execution-with-ssh">
-<h2><span class="section-number">2.3.3. </span>Command Execution with <a class="reference internal" href="../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a><a class="headerlink" href="#command-execution-with-ssh" title="Permalink to this heading">#</a></h2>
-<p>What if the only thing you need to do over the SSH connection is execute a single quick command? You might not want to take the separate actions of connecting and authenticating, running the command, and then disconnecting. The <code class="docutils literal notranslate"><span class="pre">ssh</span></code> command allows us to execute command on remote machine without logging into that machine. Here is the general notation:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu<span class="w"> </span><span class="o">[</span>COMMAND<span class="o">]</span>
-</pre></div>
-</div>
-<p>Where <code class="docutils literal notranslate"><span class="pre">[COMMAND]</span></code> is some <code class="docutils literal notranslate"><span class="pre">bash</span></code> commands.</p>
-<p>Here is an example of making a new directory, <code class="docutils literal notranslate"><span class="pre">test</span></code>, without logging in:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nb">test</span>
-</pre></div>
-</div>
-<p>Log into the supercomputer, and list the contents of your home directory. You should see that you have a new <code class="docutils literal notranslate"><span class="pre">test/</span></code> directory.</p>
 </section>
 </section>
 
@@ -576,11 +546,11 @@ scp</label><div class="sd-tab-content docutils">
       </div>
     </a>
     <a class="right-next"
-       href="Slurm.html"
+       href="ssh-extra.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.4. </span>HPC Managment</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>Upload, Download, &amp; Extras</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -602,9 +572,9 @@ scp</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh">2.3.1. SSH</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transferring-files-folders-remotely">2.3.2. Transferring Files/Folders Remotely</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-execution-with-ssh">2.3.3. Command Execution with <span class="xref std std-term">ssh</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-login">2.3.1. Remote Login</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-hostname">2.3.2. What is the <em>hostname</em>?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-accessing-the-hpc">2.3.3. Task: Accessing the HPC</a></li>
 </ul>
   </nav></div>
 

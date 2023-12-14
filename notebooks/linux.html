@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Linux/Unix Commands &#8212; Coding Notes</title>
+    <title>List of Commands &#8212; Coding Notes</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../_static/tippy/notebooks/linux.0d5950dd-3600-4fa4-9e5b-284bac1ee5b3.js"></script>
+    <script defer="defer" src="../_static/tippy/notebooks/linux.14cf1913-d8de-4b58-ad6c-12cd4bc944c3.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/linux';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/linux.html" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -158,12 +158,15 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="quickstart/overview.html">A (not so) Quick Start Guide</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="quickstart/terminal.html">1. Terminal, Shell, &amp; Bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="quickstart/navigation.html">1.3. Navigating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart/navigation.html">1.4. Navigating</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart/vim.html">1.5. Text Editors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart/filemanagement.html">1.6. File Management</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="quickstart/Supercomputer.html">2. Supercomputers</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="quickstart/SSH.html">2.3. Accessing the HPC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="quickstart/Slurm.html">2.4. HPC Managment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart/ssh.html">2.3. Accessing the HPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart/ssh-extra.html">2.4. Upload, Download, &amp; Extras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="quickstart/slurm.html">2.5. HPC Job Managmer</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="quickstart/Python.html">3. Python</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -265,7 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="python/jupyterbook.html">DIY GitHub Website</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Linux/Unix Commands</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">List of Commands</a></li>
 <li class="toctree-l1"><a class="reference internal" href="simulation/amberinstall.html">Compiling Amber</a></li>
 </ul>
 
@@ -390,9 +393,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -403,19 +404,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Linux/Unix Commands</h1>
+    <h1>List of Commands</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-commands">List of Commands</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -425,10 +418,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="linux-unix-commands">
-<h1>Linux/Unix Commands<a class="headerlink" href="#linux-unix-commands" title="Permalink to this heading">#</a></h1>
-<section id="list-of-commands">
-<h2>List of Commands<a class="headerlink" href="#list-of-commands" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="list-of-commands">
+<h1>List of Commands<a class="headerlink" href="#list-of-commands" title="Permalink to this heading">#</a></h1>
 <dl class="simple glossary">
 <dt id="term-awk"><a class="reference internal" href="commands/awk.html"><span class="doc std std-doc">awk</span></a><a class="headerlink" href="#term-awk" title="Permalink to this term">#</a></dt><dd><p>manipulate text</p>
 </dd>
@@ -439,6 +430,8 @@ document.write(`
 <dt id="term-chsh"><a class="reference internal" href="commands/chsh.html"><span class="doc std std-doc">chsh</span></a><a class="headerlink" href="#term-chsh" title="Permalink to this term">#</a></dt><dd><p>change shell</p>
 </dd>
 <dt id="term-cp"><a class="reference internal" href="commands/cp.html"><span class="doc std std-doc">cp</span></a><a class="headerlink" href="#term-cp" title="Permalink to this term">#</a></dt><dd><p>copy files or folders</p>
+</dd>
+<dt id="term-echo"><a class="reference internal" href="commands/echo.html"><span class="doc std std-doc">echo</span></a><a class="headerlink" href="#term-echo" title="Permalink to this term">#</a></dt><dd><p>Print Argument</p>
 </dd>
 <dt id="term-grep"><a class="reference internal" href="commands/grep.html"><span class="doc std std-doc">grep</span></a><a class="headerlink" href="#term-grep" title="Permalink to this term">#</a></dt><dd><p>search for pattern in file or folders</p>
 </dd>
@@ -488,10 +481,11 @@ document.write(`
 </dd>
 <dt id="term-tar"><a class="reference internal" href="commands/tar.html"><span class="doc std std-doc">tar</span></a><a class="headerlink" href="#term-tar" title="Permalink to this term">#</a></dt><dd><p>compress/uncompress files</p>
 </dd>
+<dt id="term-touch"><a class="reference internal" href="commands/touch.html"><span class="doc std std-doc">touch</span></a><a class="headerlink" href="#term-touch" title="Permalink to this term">#</a></dt><dd><p>Make File</p>
+</dd>
 <dt id="term-trap"><a class="reference internal" href="commands/trap.html"><span class="doc std std-doc">trap</span></a><a class="headerlink" href="#term-trap" title="Permalink to this term">#</a></dt><dd><p>signalled execution</p>
 </dd>
 </dl>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -552,20 +546,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-commands">List of Commands</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

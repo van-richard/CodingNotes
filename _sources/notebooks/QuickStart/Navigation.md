@@ -19,7 +19,7 @@ Navigating the terminal will rely on you being in the right location. As you're 
 
 
 
-## What is Here?
+## What Files/Folders are Here?
 
 ````{margin}
 ```{tip}
@@ -58,8 +58,7 @@ mkdir test
 ```
 
 
-## Moving between Directories
-
+## Enter/Exit Folders
 
 We can enter a folder with the `cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
 
@@ -98,15 +97,11 @@ pwd
 There are 2 types of paths we can use
 
 1. Absolute
+   1. The path to files/folders/programs relative to the root directory (i.e. `/home`, `/Users`, etc.)
 2. Relative. 
+   1. The path to files/folders/programs is relative to where _you_ are (i.e. current working directory)
    
 Whenever we refer to a file or directory we are using one of these paths.
 
 To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what's called the root directory. It is denoted by a single slash (`/`). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.
 
-```{important}
-
-Absolute paths specify a location of a file/folder in relation to the root directory `/`
-
-Relative paths specify a location file/folder  in relation to where *you* currently are in the system.
-```

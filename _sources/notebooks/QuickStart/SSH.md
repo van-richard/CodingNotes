@@ -1,21 +1,30 @@
 # Accessing the HPC 
 
-## SSH
+## Remote Login
 
-{term}`ssh` stands for Secure Shell protocol, and this is how what it looks like!
+Accessing the supercomputer can be done on your laptop, in the comfort of your bed. The command is {term}`ssh`, which stands for "Secure Shell protocol".
 
-The command looks like this
+It has the following format:
 
 ```bash
-ssh username@servername
+ssh username@hostname
 ```
 
 Where,
 
-- `username` is the username whatever you made when applying for the account
-- `@servername` is the name and IP address of the supercomputer
+1. `username` is the username (whatever you made when applying for the account)
+2. `@` is always between `username` and `hostname`
+3. `hostname` is the name and IP address of the supercomputer
 
-To log into Oscer/Schooner/Pete, we would type this (*change `username` to your username*):
+
+**Example** For my username, `van`, the command would be:
+```bash
+ssh van@hostname
+```
+
+## What is the *hostname*?
+
+It depends on the computing center. In Oklahoma, you can access Oscer (`schooner.oscer.ou.edu`) or Pete (`pete.hpc.okstate.edu`) by:
 
 ::::{tab-set} 
 :::{tab-item} Oscer/Schooner
@@ -32,7 +41,9 @@ ssh username@pete.hpc.okstate.edu
 :::
 ::::
 
-Try logging into one of the supercomputer. Change the `servername` to the `pete.hpc.okstate.edu` or ``schooner.oscer.ou.edu`.
+## Task: Accessing the HPC
+ 
+Try logging into one of the supercomputer. Change the `hostname` to the `pete.hpc.okstate.edu` or ``schooner.oscer.ou.edu`.
 
 My username is `van`, so logging in looks like this:
 
@@ -51,7 +62,8 @@ ssh van@pete.hpc.okstate.edu
 :::
 ::::
 
-In the very first login to the computer, you will get the following prompt:
+:::{note}
+On the first login attempt, you will get the following prompt:
 
 ```bash
 The authenticity of host 'pete.hpc.okstate.edu' cannot be established.
@@ -61,60 +73,8 @@ The authenticity of host 'pete.hpc.okstate.edu' cannot be established.
 
 Answering `yes` to the prompt will cause the session to continue, and the host key is stored in the local system's known_hosts file. This is a hidden file, stored by default in a hidden directory, called `/.ssh/known_hosts`, in the your home directory. Once the host key has been stored in the known_hosts file, the client system can connect directly to that server again without need for any approvals.
 
-```{note} 
-
 **Answer `yes` by typing into your terminal. This will only happen on the first login!**
 
-```
+:::
 
 *Congratulations! You logged into the supercomputer!*
-
-
-## Transferring Files/Folders Remotely
-
-Previously, we learned {term}`cp` and {term}`mv` to manage files locally on our computer. However, to copy files through {term}`ssh`, we need to use one of these 2 commands:
-
-1. `rsync` 
-2. `scp`
-
-Type:
-
-::::{tab-set}
-:::{tab-item} rsync 
-```bash
-rsync /path/to/source/ /path/to/destination
-```
-:::
-:::{tab-item} scp
-```bash
-scp /path/to/source /path/to/destination/
-```
-:::
-::::
-
-```{note}
-I recommend using `rsync` because this will check files sizes and modify timestamps of both files or folders. It will skip any further processing if they match. Additionally, if the destination file already exists, the transfer algorithm will make sure only differences between the files are sent over the wire.
-```
-
-We won't go any futher, but remember you can find more information about {term}`rsync` and {term}`scp`! 
-
-One last thing about {term}`ssh` is that, you can also run commands without going through the whole process of logging in.
-
-## Command Execution with {term}`ssh`
-
-What if the only thing you need to do over the SSH connection is execute a single quick command? You might not want to take the separate actions of connecting and authenticating, running the command, and then disconnecting. The `ssh` command allows us to execute command on remote machine without logging into that machine. Here is the general notation:
-
-```bash
-ssh van@pete.hpc.okstate.edu [COMMAND]
-```
-
-Where `[COMMAND]` is some `bash` commands. 
-
-Here is an example of making a new directory, `test`, without logging in:
-
-```bash
-ssh van@pete.hpc.okstate.edu mkdir -p test
-```
-
-Log into the supercomputer, and list the contents of your home directory. You should see that you have a new `test/` directory.
-

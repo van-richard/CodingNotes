@@ -1,6 +1,6 @@
-# HPC Managment
+# HPC Job Managmer
 
-## SLURM
+## SLURM Language
 
 Slurm is the software which manages the individual user and group jobs in a supercomputer center.
 
@@ -8,11 +8,13 @@ This is a helpful refernce: [slurm.schemd.com](https://slurm.schedmd.com/overvie
 
 ::::{margin}
 ```{tip}
-We use the SSH protocol to remotely access the computer. Slurm commands also start with the letter `s`, so they're not to hard to remember!
+We use the SSH protocol to remotely access the computer. Slurm commands also start with the letter `s`, so they're not to hard to remember~
+
+Commands: `sbatch`, `scancel`, `squeue`, `sinfo`
 ```
 ::::
 
-When you access the supercomputer remotely (`ssh username@servername`), you always start in your home directory (*/home/username*)
+When you access the supercomputer remotely (`ssh username@hostname`), you will always start at `/home`.
 
 If you run {term}`pwd`, you should see that you're it!
 
