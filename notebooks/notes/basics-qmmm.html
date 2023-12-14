@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>QM/MM Simulations &#8212; Coding Notes</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -40,15 +40,15 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../_static/tippy/notebooks/notes/basics-qmmm.83b90016-81ea-4785-9a7f-3b32b1a90ac2.js"></script>
+    <script defer="defer" src="../../_static/tippy/notebooks/notes/basics-qmmm.2257bd5a-a6e9-4349-a156-852b1f1a2c12.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/notes/basics-qmmm';</script>
@@ -85,15 +85,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -147,11 +138,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
-
   
 
 <a class="navbar-brand logo" href="../../index.html">
-  
   
   
   
@@ -161,8 +150,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/logo2.png" class="logo__image only-light" alt="Coding Notes - Home"/>
-    <script>document.write(`<img src="../../_static/logo2.png" class="logo__image only-dark" alt="Coding Notes - Home"/>`);</script>
+    <img src="../../_static/logo2.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/logo2.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -361,22 +350,20 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
-
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
 
-
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -437,7 +424,7 @@ document.write(`
 <li><p>Interactions between particles in MM region</p></li>
 <li><p>Interaction between QM and MM particles</p></li>
 </ol>
-<p>Points 1 and 2 are straightforward descriptions of the system. Point number 3 requires calculating the energy of the combined system, whic can be done in 2 ways:</p>
+<p>Points 1 and 2 are straightforward descriptions of the system. Point number 3 requires calculating the energy of the combined system, which can be done in 2 ways:</p>
 <ol class="arabic simple">
 <li><p>Subtractive scheme</p></li>
 </ol>
@@ -459,7 +446,7 @@ E = E_\mathrm{QM} + E_\mathrm{QM-MM} + E_\mathrm{MM}
 \[
 E_\mathrm{QM-MM} = E_\mathrm{bonded}^\mathrm{QM-MM} + _\mathrm{nonbonded}^\mathrm{QM-MM}
 \]</div>
-<p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and non bonded terms</p>
+<p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and nonbonded terms</p>
 </section>
 <section id="bonded-interactions">
 <h2>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
@@ -473,7 +460,7 @@ E_\mathrm{bonded}^\mathrm{QM-MM}
 <ol class="arabic simple">
 <li><p><strong>Monovalent capping atom:</strong> hydrogen atoms are placed along bond vector.</p></li>
 <li><p><strong>Link atom pseudopotential:</strong> linking atoms with scaled down psudopotential and requires a valence change which requires to constraint bond distance.</p></li>
-<li><p><strong>Generalized hybrid orbitals:</strong> hybrid orbitals are olacced on boundary atom and one participates in SCF calculation for wave function of QM region</p></li>
+<li><p><strong>Generalized hybrid orbitals:</strong> hybrid orbitals are placed on boundary atom and one participates in SCF calculation for wave function of QM region</p></li>
 </ol>
 </section>
 <section id="nonbonded-interactions">
@@ -487,7 +474,7 @@ E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm
 <ol class="arabic simple">
 <li><p><strong>Mechanical embedding:</strong> No influence of MM charge on QM part, i.e.  QM calculation is gas-phase -like without additional potential due to MM atoms</p>
 <ul class="simple">
-<li><p>This neglects. established by assigning fixed set of effective charges to QM region. QM partial charges re=computed at every integration step of simulation (least-squares fitting procedure</p></li>
+<li><p>This neglects. established by assigning fixed set of effective charges to QM region. QM partial charges re=computed at every integration step of simulation (least-squares fitting procedure)</p></li>
 </ul>
 </li>
 <li><p><strong>Electrostatic embedding:</strong> QM polarization due to MM part included</p>
@@ -507,7 +494,7 @@ E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm
 <p>Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.</p>
 <div class="math notranslate nohighlight">
 \[
-E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}_{i}} - {\textbf{R}_{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
+E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}_i} - {\textbf{R}_{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
 \]</div>
 <p>Two problems arise due to the short-range and long-range behavior of this term…</p>
 <ol class="arabic simple">
@@ -526,7 +513,7 @@ E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \f
 \[
 E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})v^{smear}(|\textbf{r}_i - \textbf{R}_i|)}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
 \]</div>
-<p>Where, the <em>smearing function</em> can be a Gaussian distrubtion or another suitable function centered at the MM atom.</p>
+<p>Where, the <em>smearing function</em> can be a Gaussian distribution or another suitable function centered at the MM atom.</p>
 <div class="math notranslate nohighlight">
 \[
 v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
@@ -534,9 +521,6 @@ v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
 <ul class="simple">
 <li><p>Smearing function in CP2P, where <span class="math notranslate nohighlight">\(r_{c,I}\)</span> is the covalent radius of atom <span class="math notranslate nohighlight">\(I\)</span></p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </section>
 </section>
 </section>
@@ -566,10 +550,11 @@ v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
 
               
               
-              
-              
-                <footer class="prev-next-footer">
+                <footer class="bd-footer-article">
                   
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="alchemical/workflow.html"
@@ -589,7 +574,10 @@ v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -632,7 +620,6 @@ By Richard Van
   
   <div class="footer-item">
     
-
   <p class="copyright">
     
       © Copyright 2023.
@@ -659,8 +646,8 @@ By Richard Van
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
