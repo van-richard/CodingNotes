@@ -1,15 +1,15 @@
 # Navigating
 
 ## Objective
-* Understand the general layout of the `terminal`, and how it differs from GUIs like `Finder` 
-* Find where your start, currently are, and can go in `terminal`
+* Understand the general layout of the :term:`terminal`, and how it differs from GUIs like `Finder` 
+* Find where your start, currently are, and can go in :term:`terminal`
 * See files/folders 
 * Difference between absolute and relative paths
 
 
 ## Where are we?
 
-The first command to learn is `pwd` which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. `pwd` tells you what your current or present working directory (folder) is.
+The first command to learn is :term:`pwd` which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. :term:`pwd` tells you what your current or present working directory (folder) is.
 
 ```bash
 pwd
@@ -49,9 +49,9 @@ More examples can be found here: [](../commands/mkdir.md)
 :::
 ::::
 
-Let's make a new folder/directory so our current working directory isn't so lonely. To do this, use the `mkdir` command, short for make directory. This command takes an argument, i.e. the new folder name!
+Let's make a new folder/directory, so our current working directory isn't so lonely. To do this, use the :term:`mkdir` command, short for make directory. This command takes an argument, i.e. the new folder name!
 
-The syntax is `mkdir [argument]` or in other words `mkdir [new folder name]`. Here, I will use the braket notations (`[]`) to imply this is some sort of input given by you. We can start by making a new folder called `test/`.
+The syntax is `mkdir [argument]` or in other words `mkdir [new folder name]`. Here, I will use the bracket notations (`[]`) to imply this is some sort of input given by you. We can start by making a new folder called `test/`.
 
 ```bash
 mkdir test
@@ -60,7 +60,7 @@ mkdir test
 
 ## Enter/Exit Folders
 
-We can enter a folder with the `cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
+We can enter a folder with the :term:`cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
 
 ```bash
 cd test

@@ -8,17 +8,17 @@ Using the terminal means you need to learn how to communicate with the computer 
 
 Tasks like:
 
-- Copying files/folders ({term}`cp`)
-- Moving files/folders ({term}`mv`)
-- Renaming files/folders ({term}`mv`)
-- Deleting files/folders ({term}`rm`)
+- Copying files/folders (:term:`cp`)
+- Moving files/folders (:term:`mv`)
+- Renaming files/folders (:term:`mv`)
+- Deleting files/folders (:term:`rm`)
 
 Need to be typed!
 
 
 ## Copying
 
-To copy files, you use the command, {term}`cp`, where you include the file or folder you want to copy followed by the path you want the copy to go!
+To copy files, you use the command, :term:`cp`, where you include the file or folder you want to copy followed by the path you want the copy to go!
 
 ::::{tab-set}
 :::{tab-item} General Notation
@@ -50,7 +50,7 @@ Copying a directory requires the option `-r`, otherwise it is the same as copyin
 
 ## Moving & Renaming
 
-Yes. They are the same command, {term}`mv`. The notation for {term}`mv` is the same as {term}`cp`!
+Yes. They are the same command, :term:`mv`. The notation for :term:`mv` is the same as :term:`cp`!
 
 ::::{tab-set}
 :::{tab-item} General Notation
@@ -89,7 +89,7 @@ This command is permanent. There is no trash can to recover your files from.....
 
 ```
 
-{term}`rm` is used to delete files/folders, and is written like {term}`cp` and {term}`mv`
+:term:`rm` is used to delete files/folders, and is written like :term:`cp` and :term:`mv`
 
 ::::{tab-set}
 :::{tab-item} General Notation
