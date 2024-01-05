@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 
@@ -7,7 +6,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Exploring PDB Files &#8212; Coding Notes</title>
   
@@ -29,52 +28,57 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/card.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css?v=7bc2f056" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css?v=37217874" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css?v=6227e517" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css?v=94669e23" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css?v=21a39f42" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css?v=a18b2449" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css?v=dbff53e4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css?v=d7bf34ee" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=ca93fcec" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/card.css?v=62255d5d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css?v=6ad1a40c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/js/hoverxref.js"></script>
-    <script src="../../_static/js/tooltipster.bundle.min.js"></script>
-    <script src="../../_static/js/micromodal.min.js"></script>
+    <script src="../../_static/js/hoverxref.js?v=6ec0b4cd"></script>
+    <script src="../../_static/js/tooltipster.bundle.min.js?v=18bf091b"></script>
+    <script src="../../_static/js/micromodal.min.js?v=04d6302d"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/quickstart/PDBFiles';</script>
@@ -447,7 +451,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exploring-pdb-files">
-<h1>Exploring PDB Files<a class="headerlink" href="#exploring-pdb-files" title="Permalink to this heading">#</a></h1>
+<h1>Exploring PDB Files<a class="headerlink" href="#exploring-pdb-files" title="Link to this heading">#</a></h1>
 <p>Get the hen egg-white lysozyme structure, PDB code “1AKI”, from the Protein Data Bank. Visit the <a class="reference external" href="https://www.rcsb.org">RCSB website</a>, and in the search bar type, “1AKI”.</p>
 <figure class="align-center" style="width: 75%">
 <img alt="../../_images/rcsb_1aki0.mov" src="../../_images/rcsb_1aki0.mov" />
@@ -457,7 +461,7 @@ document.write(`
 <img alt="../../_images/rcsb_1aki1.mov" src="../../_images/rcsb_1aki1.mov" />
 </figure>
 <section id="viewing-the-contents-of-1aki-pdb">
-<h2>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code><a class="headerlink" href="#viewing-the-contents-of-1aki-pdb" title="Permalink to this heading">#</a></h2>
+<h2>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code><a class="headerlink" href="#viewing-the-contents-of-1aki-pdb" title="Link to this heading">#</a></h2>
 <p>This should be in your <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code> directory. Using your terminal, change directories into this directory with <a class="reference internal" href="../linux.html#term-cd"><span class="xref std std-term">cd</span></a>, and then use <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a> to view the file. Example on MacOS:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span><span class="w">             </span><span class="c1"># Print the current working directory to see where you are</span>
 <span class="nb">cd</span><span class="w">              </span><span class="c1"># Change directories to /Users/[username]</span>
@@ -493,7 +497,7 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 <p>Although this information is helpful, one of the most important parts (<em>for us anyways…</em>) are lines beginning with <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> and <code class="docutils literal notranslate"><span class="pre">HETATM</span></code>. These lines contain the x-, y-, z- coordinates required to visualize the structure on Chimera, ChimeraX, or VMD.</p>
 </section>
 <section id="what-are-atom-lines-in-pdb-files">
-<h2>What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?<a class="headerlink" href="#what-are-atom-lines-in-pdb-files" title="Permalink to this heading">#</a></h2>
+<h2>What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?<a class="headerlink" href="#what-are-atom-lines-in-pdb-files" title="Link to this heading">#</a></h2>
 <p>Lines beginning with <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> are reserved for atoms in standard residues of protein, DNA or RNA.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -536,7 +540,7 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 </table>
 </section>
 <section id="atom-lines-pdb-1aki">
-<h2><code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)<a class="headerlink" href="#atom-lines-pdb-1aki" title="Permalink to this heading">#</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)<a class="headerlink" href="#atom-lines-pdb-1aki" title="Link to this heading">#</a></h2>
 <p>Use your d-pad to get to first <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> line (this is line number, 347).</p>
 <p>The first 20 ‘ATOM` lines in PDB 1AKI file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">347</span>ATOM<span class="w">      </span><span class="m">1</span><span class="w">  </span>N<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">35</span>.365<span class="w">  </span><span class="m">22</span>.342<span class="w"> </span>-11.980<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">22</span>.28<span class="w">           </span>N<span class="w">  </span>
@@ -573,12 +577,12 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 </ul>
 </section>
 <section id="chain-identifiers-column-5-of-atom">
-<h2>Chain Identifiers (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?<a class="headerlink" href="#chain-identifiers-column-5-of-atom" title="Permalink to this heading">#</a></h2>
+<h2>Chain Identifiers (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?<a class="headerlink" href="#chain-identifiers-column-5-of-atom" title="Link to this heading">#</a></h2>
 <p>A chain identifier is a single-character label used to distinguish and identify different polypeptide chains or structural components within a macromolecular structure. Each chain in a PDB file is assigned a unique chain identifier, allowing for the unambiguous identification of individual protein or nucleic acid chains within the structure.</p>
 <p>It is commonly represented as a single uppercase letter, such as ‘A,’ ‘B,’ ‘C,’ and so on. It’s important to note that the chain identifier is case-sensitive, and it must be unique within the PDB file for each distinct chain.</p>
 </section>
 <section id="example-with-spycas9-ternary-complex">
-<h2>Example with SpyCas9 Ternary Complex<a class="headerlink" href="#example-with-spycas9-ternary-complex" title="Permalink to this heading">#</a></h2>
+<h2>Example with SpyCas9 Ternary Complex<a class="headerlink" href="#example-with-spycas9-ternary-complex" title="Link to this heading">#</a></h2>
 <p>We will visualize the PDB file of the ternary structure of SpyCas9 (SpyCas9 bound to RNA, DNA, and metal ions) using ChimeraX:</p>
 <ol class="arabic simple">
 <li><p>Visit the Protein Data Bank</p></li>
@@ -622,7 +626,7 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 <p>In this video, I zoom into the the HNH domain where target-strand DNA gets cleaved, and show all residues within 5 Å of the magnesium ion. Chain C is on the right, while Chain c is on the left.</p>
 </section>
 <section id="chains-are-separated-by-ter-lines">
-<h2>Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines<a class="headerlink" href="#chains-are-separated-by-ter-lines" title="Permalink to this heading">#</a></h2>
+<h2>Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines<a class="headerlink" href="#chains-are-separated-by-ter-lines" title="Link to this heading">#</a></h2>
 <p>Each Chain is identified by an alphabetical letter, and an additional <code class="docutils literal notranslate"><span class="pre">TER</span></code> line. The <code class="docutils literal notranslate"><span class="pre">TER</span></code> line occurs at the end of the chain. If we’re looking at proteins, then usually the C-terminal Oxygen will have the atom type ,<code class="docutils literal notranslate"><span class="pre">OXT</span></code>, followed by a <code class="docutils literal notranslate"><span class="pre">TER</span></code>!</p>
 <p>View the contents of PDB <strong>7Z4J</strong> using less, and you can see for yourself:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Downloads/<span class="w"> </span><span class="c1"># Change directories to /Users/[username] on MacOS</span>
@@ -661,9 +665,9 @@ END<span class="w">                                                             
 <p>We see here that following Chain B, we have a <code class="docutils literal notranslate"><span class="pre">TER</span></code> line, indicating the end of the protein. Following our SpyCas9 enzyme, we have some <code class="docutils literal notranslate"><span class="pre">HETATM</span></code> or non-standard residues such as, magnesium ions and waters, solved with the Cryo-EM structure.</p>
 </section>
 <section id="what-is-occupancy">
-<h2>What is Occupancy?<a class="headerlink" href="#what-is-occupancy" title="Permalink to this heading">#</a></h2>
+<h2>What is Occupancy?<a class="headerlink" href="#what-is-occupancy" title="Link to this heading">#</a></h2>
 <dl class="simple glossary">
-<dt id="term-Occupancy">Occupancy<a class="headerlink" href="#term-Occupancy" title="Permalink to this term">#</a></dt><dd><p>A parameter that represents the fractional occupancy of a particular atom or group of atoms in a crystal structure. The occupancy value typically ranges from 0.00 to 1.00, where:</p>
+<dt id="term-Occupancy">Occupancy<a class="headerlink" href="#term-Occupancy" title="Link to this term">#</a></dt><dd><p>A parameter that represents the fractional occupancy of a particular atom or group of atoms in a crystal structure. The occupancy value typically ranges from 0.00 to 1.00, where:</p>
 <ul class="simple">
 <li><p><strong>1.00:</strong> That atom is fully occupied,</p></li>
 <li><p><strong>0.00:</strong> That atom is completely unoccupied or not present.</p></li>
@@ -677,16 +681,16 @@ END<span class="w">                                                             
 </div>
 </section>
 <section id="what-is-b-factor">
-<h2>What is B-factor?<a class="headerlink" href="#what-is-b-factor" title="Permalink to this heading">#</a></h2>
+<h2>What is B-factor?<a class="headerlink" href="#what-is-b-factor" title="Link to this heading">#</a></h2>
 <dl class="simple glossary">
-<dt id="term-B-factor">B-factor <a class="headerlink" href="#term-B-factor" title="Permalink to this term">#</a></dt><dd><p>(aka the temperature factor or Debye-Waller factor) is a parameter that represents the thermal vibrations or disorder of atoms in a crystal structure. It is used to describe the uncertainty in the precise position of each atom due to thermal motion.</p>
+<dt id="term-B-factor">B-factor <a class="headerlink" href="#term-B-factor" title="Link to this term">#</a></dt><dd><p>(aka the temperature factor or Debye-Waller factor) is a parameter that represents the thermal vibrations or disorder of atoms in a crystal structure. It is used to describe the uncertainty in the precise position of each atom due to thermal motion.</p>
 </dd>
 </dl>
 <p>The B-factor is a real number associated with each atom or group of atoms in the PDB file. It quantifies how much an atom fluctuates or vibrates around its average position in the crystal lattice. A higher B-factor indicates greater thermal motion or disorder, while a lower B-factor indicates less thermal motion and greater positional certainty.</p>
 <p>This value can be used to gain insights into the flexibility of a molecule or a particular region within a crystal structure. For example, in a protein crystallography study, regions of a protein that are more flexible or less well-ordered may have higher B-factors, whereas well-ordered regions with less thermal motion will have lower B-factors.</p>
 </section>
 <section id="summary-records-in-pdb-files">
-<h2>Summary Records in PDB Files<a class="headerlink" href="#summary-records-in-pdb-files" title="Permalink to this heading">#</a></h2>
+<h2>Summary Records in PDB Files<a class="headerlink" href="#summary-records-in-pdb-files" title="Link to this heading">#</a></h2>
 <table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Record</p></th>
