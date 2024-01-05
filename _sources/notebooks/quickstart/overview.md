@@ -4,7 +4,6 @@
 
 ..toctree::
   numbered: true
-  maxdepth: two
 
    terminal
    supercomputer
