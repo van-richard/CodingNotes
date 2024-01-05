@@ -175,21 +175,32 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/logo2.png" class="logo__image only-light" alt="Coding Notes - Home"/>
-    <script>document.write(`<img src="../../_static/logo2.png" class="logo__image only-dark" alt="Coding Notes - Home"/>`);</script>
   
+    <p class="title logo__title">Coding Notes</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Subtree Caption</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">A (not so) Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bash/overview.html">bash Shell</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../bash/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bash/startup.html">Start-Up Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/overview.html">SLURM &amp; ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/autologin.html">Automate Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/config.html">Configuring ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/overview.html">Github &amp; git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/git.html">git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/branch.html">Branching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/overview.html">Python &amp; Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/installconda.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/condaenv.html">Conda Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/myenv.html">My Recommended Conda Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/condaintel.html">Intel Environments on M1/M2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 
     </div>
@@ -371,7 +382,7 @@ document.write(`
 <p>First, open your terminal, and follow the directions for Oscer or Pete SSH. Change the <code class="docutils literal notranslate"><span class="pre">[username]</span></code> part, to the username you created!!</p>
 </section>
 <section id="what-is-slurm">
-<h2>What is <a class="reference internal" href="../../glossary.html#term-SLURM"><span class="xref std std-term">Slurm</span></a>?<a class="headerlink" href="#what-is-slurm" title="Link to this heading">#</a></h2>
+<h2>What is <span class="xref std std-term">Slurm</span>?<a class="headerlink" href="#what-is-slurm" title="Link to this heading">#</a></h2>
 <p>Since high-performace computing centers are composed of many parts (CPU, GPU, RAM, SSD, HDD, etc.), involving many different users (biological science, machine learning, etc.) with different needs. They require a job scheduling and resource management system. One system is Slurm.</p>
 <p>Slurm is like a traffic cop for computers. It’s a software system used in big computer clusters, like those in data centers or supercomputers. Slurm helps manage and allocate the computing resources, like processors and memory, to different tasks or jobs that people want to run on the cluster.</p>
 <p>Imagine a busy intersection where the traffic cop directs cars to different lanes or tells them when to go. Slurm does something similar but for computer tasks, making sure they don’t crash into each other and efficiently use the available resources, so everything runs smoothly. It helps coordinate and schedule who gets to use the computers and when.</p>

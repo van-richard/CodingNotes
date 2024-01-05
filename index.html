@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Coding Notes</title>
+    <title>CodingNotes &#8212; Coding Notes</title>
   
   
   
@@ -176,21 +176,32 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="_static/logo2.png" class="logo__image only-light" alt="Coding Notes - Home"/>
-    <script>document.write(`<img src="_static/logo2.png" class="logo__image only-dark" alt="Coding Notes - Home"/>`);</script>
   
+    <p class="title logo__title">Coding Notes</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Subtree Caption</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/quickstart/overview.html">A (not so) Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/bash/overview.html">bash Shell</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="notebooks/bash/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/bash/startup.html">Start-Up Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hpc/overview.html">SLURM &amp; ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hpc/autologin.html">Automate Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hpc/config.html">Configuring ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/git/overview.html">Github &amp; git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/git/git.html">git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/git/branch.html">Branching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/overview.html">Python &amp; Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/python.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/installconda.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/condaenv.html">Conda Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/myenv.html">My Recommended Conda Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/condaintel.html">Intel Environments on M1/M2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 
     </div>
@@ -316,9 +327,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -329,7 +338,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>CodingNotes</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -343,47 +352,49 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <!-- # CodingNotes
-
-**Notes I wish I had showed me when I started**
-
-:::{figure} _static/images/welcome.png
----
-width: 275px
-align: right
----
-:::
-
-This collection was an attempt to consolidated my experiences in computational chemistry. Entering the field with no background in mathematics or computers, a lot was learned through trial and error. Despite these shortcomings, I am forever grateful to the exceptional guidance and continued support of Dr. Genwei Zhang, Dr. Zheng Pei, Dr. Xiaoliang Pan, and Dr. Yihan Shao.
-
-I hope many of you will find this information useful in your future endeavors.
-
-1. [A (Not So) Quick Start Guide](notebooks/quickstart/overview)
-    * Introduction to Terminal, Shell, and Bash
-    * Navigating Supercomputers
-    * Basic Python Programming 
-    * Molecular Structures and File Formats
-
-
-2. Programming
-    *  [bash](notebooks/bash/overview) 
-    *  [SLURM & ssh](notebooks/hpc/overview)
-    *  [GitHub & git](notebooks/git/overview)
-    *  [Python & Conda](notebooks/python/overview)
-
-
-3. Molecular Visualization
-    * ChimeraX
-    * VMD
-
-
-4.  Tutorials
-    * Molecular Simulations with Amber
-    * Analysis techniques
-
- -->
+  <section class="tex2jax_ignore mathjax_ignore" id="codingnotes">
+<h1>CodingNotes<a class="headerlink" href="#codingnotes" title="Link to this heading">#</a></h1>
+<p><strong>Notes I wish I had showed me when I started</strong></p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="_images/welcome.png"><img alt="_images/welcome.png" src="_images/welcome.png" style="width: 275px;" /></a>
+</figure>
+<p>&lt;–
+This collection was an attempt to consolidated my experiences in computational chemistry. Entering the field with no background in mathematics or computers, a lot was learned through trial and error. Despite these shortcomings, I am forever grateful to the exceptional guidance and continued support of Dr. Genwei Zhang, Dr. Zheng Pei, Dr. Xiaoliang Pan, and Dr. Yihan Shao.</p>
+<p>I hope many of you will find this information useful in your future endeavors.</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="notebooks/quickstart/overview.html"><span class="doc std std-doc">A (Not So) Quick Start Guide</span></a></p>
+<ul class="simple">
+<li><p>Introduction to Terminal, Shell, and Bash</p></li>
+<li><p>Navigating Supercomputers</p></li>
+<li><p>Basic Python Programming</p></li>
+<li><p>Molecular Structures and File Formats</p></li>
+</ul>
+</li>
+<li><p>Programming</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="notebooks/bash/overview.html"><span class="doc std std-doc">bash</span></a></p></li>
+<li><p><a class="reference internal" href="notebooks/hpc/overview.html"><span class="doc std std-doc">SLURM &amp; ssh</span></a></p></li>
+<li><p><a class="reference internal" href="notebooks/git/overview.html"><span class="doc std std-doc">GitHub &amp; git</span></a></p></li>
+<li><p><a class="reference internal" href="notebooks/python/overview.html"><span class="doc std std-doc">Python &amp; Conda</span></a></p></li>
+</ul>
+</li>
+<li><p>Molecular Visualization</p>
+<ul class="simple">
+<li><p>ChimeraX</p></li>
+<li><p>VMD</p></li>
+</ul>
+</li>
+<li><p>Tutorials</p>
+<ul class="simple">
+<li><p>Molecular Simulations with Amber</p></li>
+<li><p>Analysis techniques</p></li>
+</ul>
+</li>
+</ol>
+<p>–&gt;</p>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {

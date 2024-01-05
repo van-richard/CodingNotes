@@ -175,21 +175,32 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/logo2.png" class="logo__image only-light" alt="Coding Notes - Home"/>
-    <script>document.write(`<img src="../../_static/logo2.png" class="logo__image only-dark" alt="Coding Notes - Home"/>`);</script>
   
+    <p class="title logo__title">Coding Notes</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Subtree Caption</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../quickstart/overview.html">A (not so) Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bash/overview.html">bash Shell</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../bash/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bash/startup.html">Start-Up Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/overview.html">SLURM &amp; ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/autologin.html">Automate Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/config.html">Configuring ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/overview.html">Github &amp; git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/git.html">git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/branch.html">Branching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/overview.html">Python &amp; Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/installconda.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/condaenv.html">Conda Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/myenv.html">My Recommended Conda Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/condaintel.html">Intel Environments on M1/M2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 
     </div>
@@ -364,8 +375,8 @@ document.write(`
 <h1>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Link to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-03e21cf9-5f26-47f2-b26b-1dd3656d4db7">
-<span class="eqno">()<a class="headerlink" href="#equation-03e21cf9-5f26-47f2-b26b-1dd3656d4db7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d35ce451-f1b1-412f-84de-1ed2cce10938">
+<span class="eqno">()<a class="headerlink" href="#equation-d35ce451-f1b1-412f-84de-1ed2cce10938" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -378,8 +389,8 @@ document.write(`
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-13ad1b96-ed97-43fa-9cf1-6df08d6965ff">
-<span class="eqno">()<a class="headerlink" href="#equation-13ad1b96-ed97-43fa-9cf1-6df08d6965ff" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9b964c2c-9597-428d-b767-3b7f1be20f9d">
+<span class="eqno">()<a class="headerlink" href="#equation-9b964c2c-9597-428d-b767-3b7f1be20f9d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}

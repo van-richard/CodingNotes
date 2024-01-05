@@ -175,21 +175,32 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../_static/logo2.png" class="logo__image only-light" alt="Coding Notes - Home"/>
-    <script>document.write(`<img src="../../_static/logo2.png" class="logo__image only-dark" alt="Coding Notes - Home"/>`);</script>
   
+    <p class="title logo__title">Coding Notes</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Subtree Caption</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">A (not so) Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bash/overview.html">bash Shell</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../bash/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bash/startup.html">Start-Up Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/overview.html">SLURM &amp; ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/autologin.html">Automate Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hpc/config.html">Configuring ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/overview.html">Github &amp; git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/git.html">git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/branch.html">Branching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/overview.html">Python &amp; Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/installconda.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/condaenv.html">Conda Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/myenv.html">My Recommended Conda Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/condaintel.html">Intel Environments on M1/M2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 
     </div>
@@ -369,10 +380,10 @@ document.write(`
 <figure class="align-center" id="terminal-header">
 <img alt="https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif" src="https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Command line on MacOS :term:<code class="docutils literal notranslate"><span class="pre">terminal</span></code>, where, (1) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> will return <code class="docutils literal notranslate"><span class="pre">&quot;[</span></code>some text<code class="docutils literal notranslate"><span class="pre">]&quot;</span></code> as an output, (2) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> to output “2 + 2”, the <code class="docutils literal notranslate"><span class="pre">|</span></code> (pipe) takes this as input for the next command, <code class="docutils literal notranslate"><span class="pre">bc</span> <span class="pre">-l</span></code> (calculator), (3) <code class="docutils literal notranslate"><span class="pre">echo</span></code> prints the variable, <code class="docutils literal notranslate"><span class="pre">$SHELL</span></code>, which points to the program <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>, and (4) cowboy.</span><a class="headerlink" href="#terminal-header" title="Link to this image">#</a></p>
+<p><span class="caption-text">Command line on MacOS :term:<code class="docutils literal notranslate"><span class="pre">terminal</span></code>, where, (1) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> will return <code class="docutils literal notranslate"><span class="pre">&quot;[</span></code>some text<code class="docutils literal notranslate"><span class="pre">]&quot;</span></code> as an output, (2) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> to output “2 + 2”, the <code class="docutils literal notranslate"><span class="pre">|</span></code> (pipe) takes this as input for the next command, <code class="docutils literal notranslate"><span class="pre">bc</span> <span class="pre">-l</span></code> (calculator), (3) <code class="docutils literal notranslate"><span class="pre">echo</span></code> prints the variable, <code class="docutils literal notranslate"><span class="pre">$SHELL</span></code>, which points to the program <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>, and (4) cowboy.</span><a class="headerlink" href="#terminal-header" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Example of the <code class="docutils literal notranslate"><span class="pre">terminal</span></code> on a Macbook (<a class="reference internal" href="#terminal-header"><span class="std std-numref">Fig. 1</span></a>). The line you are working on is noted with the <code class="docutils literal notranslate"><span class="pre">$</span></code>. The format of this line is: computer name, <code class="docutils literal notranslate"><span class="pre">;</span></code> , username, and then <code class="docutils literal notranslate"><span class="pre">$</span></code>. <code class="docutils literal notranslate"><span class="pre">Bash</span></code> commands are typed by line, and ran by hitting the <code class="docutils literal notranslate"><span class="pre">[enter]</span></code> key.</p>
+<p>Example of the <code class="docutils literal notranslate"><span class="pre">terminal</span></code> on a Macbook (<code class="xref std std-numref docutils literal notranslate"><span class="pre">terminal-header</span></code>). The line you are working on is noted with the <code class="docutils literal notranslate"><span class="pre">$</span></code>. The format of this line is: computer name, <code class="docutils literal notranslate"><span class="pre">;</span></code> , username, and then <code class="docutils literal notranslate"><span class="pre">$</span></code>. <code class="docutils literal notranslate"><span class="pre">Bash</span></code> commands are typed by line, and ran by hitting the <code class="docutils literal notranslate"><span class="pre">[enter]</span></code> key.</p>
 <p><strong><em>Why do we start here?</em></strong>
 The command line is a tool that everyone uses in computational research.</p>
 <p>Some advantages:</p>
@@ -402,12 +413,12 @@ The command line is a tool that everyone uses in computational research.</p>
 </ul>
 <p>Alternatively,</p>
 <ul class="simple">
-<li><p>Other programs operating with a <a class="reference internal" href="../../glossary.html#term-Command-Line-Interface-CLI"><span class="xref std std-term">Command Line Interface (CLI)</span></a></p></li>
+<li><p>Other programs operating with a <span class="xref std std-term">Command Line Interface (CLI)</span></p></li>
 <li><p>Only require input from a keyboard</p></li>
 <li><p>Instructions are typed to perform the tasks</p></li>
 <li><p>Often for computing a large number of files, or automating repetitive tasks</p></li>
 </ul>
-<p>The CLI can be accessed via <a class="reference internal" href="../../glossary.html#term-terminal"><span class="xref std std-term">terminal</span></a> app.</p>
+<p>The CLI can be accessed via <span class="xref std std-term">terminal</span> app.</p>
 <ul class="simple">
 <li><p>Pre-installed on many computers</p></li>
 <li><p>Text-based graphical interface</p></li>
@@ -437,7 +448,7 @@ Windows</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <aside class="important sidebar">
-<p>Notation and pre-defined commands will depend on your <a class="reference internal" href="../../glossary.html#term-shell"><span class="xref std std-term">shell</span></a>!</p>
+<p>Notation and pre-defined commands will depend on your <span class="xref std std-term">shell</span>!</p>
 </aside>
 <p>Users can send instructions to the computer by running <code class="docutils literal notranslate"><span class="pre">commands</span></code></p>
 <ul class="simple">
@@ -463,14 +474,14 @@ Windows</label><div class="sd-tab-content docutils">
 </aside>
 <section id="shells-provides-structure">
 <h3>Shells Provides Structure<a class="headerlink" href="#shells-provides-structure" title="Link to this heading">#</a></h3>
-<p>When the user opens <code class="docutils literal notranslate"><span class="pre">terminal</span></code>, a <a class="reference internal" href="../../glossary.html#term-shell"><span class="xref std std-term">shell</span></a> session is immediately started</p>
+<p>When the user opens <code class="docutils literal notranslate"><span class="pre">terminal</span></code>, a <span class="xref std std-term">shell</span> session is immediately started</p>
 <ul class="simple">
-<li><p>These contain the current state, or <a class="reference internal" href="../../glossary.html#term-environment"><span class="xref std std-term">environment</span></a>, of the shell.</p>
+<li><p>These contain the current state, or <span class="xref std std-term">environment</span>, of the shell.</p>
 <ul>
 <li><p>Only one session per shell</p></li>
 </ul>
 </li>
-<li><p>They are programs that understand and executes the <a class="reference internal" href="../../glossary.html#term-command"><span class="xref std std-term">command</span></a> from the user</p>
+<li><p>They are programs that understand and executes the <span class="xref std std-term">command</span> from the user</p>
 <ul>
 <li><p>Interprets human language (text input) into computer language (output)</p></li>
 </ul>
@@ -482,9 +493,9 @@ Windows</label><div class="sd-tab-content docutils">
 </li>
 </ul>
 <p><strong>I mainly use the <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell.</strong></p>
-<p>An <a class="reference internal" href="../../glossary.html#term-interactive-prompt"><span class="xref std std-term">interactive prompt</span></a>, is when the user runs each “command” line by line</p>
+<p>An <span class="xref std std-term">interactive prompt</span>, is when the user runs each “command” line by line</p>
 <ul class="simple">
-<li><p>Combining all lines into 1 file is called a “shell <a class="reference internal" href="../../glossary.html#term-script"><span class="xref std std-term">script</span></a>.”</p></li>
+<li><p>Combining all lines into 1 file is called a “shell <span class="xref std std-term">script</span>.”</p></li>
 </ul>
 </section>
 </section>

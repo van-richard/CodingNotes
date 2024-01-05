@@ -174,21 +174,32 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-    
-    
-      
-    
-    
-    <img src="_static/logo2.png" class="logo__image only-light" alt="Coding Notes - Home"/>
-    <script>document.write(`<img src="_static/logo2.png" class="logo__image only-dark" alt="Coding Notes - Home"/>`);</script>
   
+    <p class="title logo__title">Coding Notes</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Subtree Caption</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples &amp; Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks/quickstart/overview.html">A (not so) Quick Start Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/bash/overview.html">bash Shell</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="notebooks/bash/scripting.html">Scripting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/bash/startup.html">Start-Up Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hpc/overview.html">SLURM &amp; ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hpc/autologin.html">Automate Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/hpc/config.html">Configuring ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/git/overview.html">Github &amp; git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/git/git.html">git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/git/branch.html">Branching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/overview.html">Python &amp; Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/python.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/conda.html">Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/installconda.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/condaenv.html">Conda Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/myenv.html">My Recommended Conda Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/condaintel.html">Intel Environments on M1/M2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/python/jupyter.html">Jupyter Notebooks</a></li>
 </ul>
 
     </div>
@@ -302,7 +313,6 @@ document.write(`
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
- | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#O"><strong>O</strong></a>
@@ -336,13 +346,9 @@ document.write(`
 </li>
       <li><a href="notebooks/linux.html#term-cd"><strong>cd</strong></a>
 </li>
-      <li><a href="notebooks/linux.html#term-chsh"><strong>chsh</strong></a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-command"><strong>command</strong></a>
-</li>
-      <li><a href="glossary.html#term-Command-Line-Interface-CLI"><strong>Command Line Interface (CLI)</strong></a>
+      <li><a href="notebooks/linux.html#term-chsh"><strong>chsh</strong></a>
 </li>
       <li><a href="notebooks/linux.html#term-cp"><strong>cp</strong></a>
 </li>
@@ -353,10 +359,6 @@ document.write(`
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="notebooks/linux.html#term-echo"><strong>echo</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-environment"><strong>environment</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -372,10 +374,6 @@ document.write(`
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-Graphical-User-Interface-GUI"><strong>Graphical User Interface (GUI)</strong></a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="notebooks/linux.html#term-grep"><strong>grep</strong></a>
 </li>
   </ul></td>
@@ -389,14 +387,6 @@ document.write(`
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="notebooks/linux.html#term-help"><strong>help</strong></a>
-</li>
-  </ul></td>
-</tr></table>
-
-<h2 id="I">I</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-interactive-prompt"><strong>interactive prompt</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -418,12 +408,10 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="notebooks/linux.html#term-man"><strong>man</strong></a>
 </li>
-      <li><a href="glossary.html#term-miniforge"><strong>miniforge</strong></a>
+      <li><a href="notebooks/linux.html#term-mkdir"><strong>mkdir</strong></a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="notebooks/linux.html#term-mkdir"><strong>mkdir</strong></a>
-</li>
       <li><a href="notebooks/linux.html#term-module"><strong>module</strong></a>
 </li>
       <li><a href="notebooks/linux.html#term-mv"><strong>mv</strong></a>
@@ -472,10 +460,6 @@ document.write(`
 </li>
       <li><a href="notebooks/linux.html#term-scp"><strong>scp</strong></a>
 </li>
-      <li><a href="glossary.html#term-script"><strong>script</strong></a>
-</li>
-      <li><a href="glossary.html#term-scripts"><strong>scripts</strong></a>
-</li>
       <li><a href="notebooks/linux.html#term-sed"><strong>sed</strong></a>
 </li>
       <li><a href="notebooks/linux.html#term-seq"><strong>seq</strong></a>
@@ -484,11 +468,7 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="notebooks/linux.html#term-setfacl"><strong>setfacl</strong></a>
 </li>
-      <li><a href="glossary.html#term-shell"><strong>shell</strong></a>
-</li>
       <li><a href="notebooks/linux.html#term-sinfo"><strong>sinfo</strong></a>
-</li>
-      <li><a href="glossary.html#term-SLURM"><strong>SLURM</strong></a>
 </li>
       <li><a href="notebooks/linux.html#term-sort"><strong>sort</strong></a>
 </li>
@@ -508,8 +488,6 @@ document.write(`
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term-terminal"><strong>terminal</strong></a>
-</li>
       <li><a href="notebooks/linux.html#term-touch"><strong>touch</strong></a>
 </li>
       <li><a href="notebooks/linux.html#term-trap"><strong>trap</strong></a>
