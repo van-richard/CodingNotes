@@ -4,12 +4,11 @@ author: Richard Van
 copyright: "2023"
 logo: "_static/images/logo2.png"
 
-
 exclude_patterns: ["README.md", "drafts", "assets", "assets/*", "linuxlist.sh", "build.sh"]
 
 
 execute:
-  execute_notebooks: cache
+  execute_notebooks: 'off'
 
 
 html:
@@ -41,7 +40,7 @@ parse:
   myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
   myst_dmath_double_inline: true
 
-sphinx: 
+sphinx:
   extra_extensions:
     - hoverxref.extension
     - sphinx_design
