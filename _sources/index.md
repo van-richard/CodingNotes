@@ -1,4 +1,4 @@
-# CodingNotes
+<!-- # CodingNotes
 
 **Notes I wish I had showed me when I started**
 
@@ -36,4 +36,4 @@ I hope many of you will find this information useful in your future endeavors.
     * Molecular Simulations with Amber
     * Analysis techniques
 
-
+ -->
