@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
@@ -54,7 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -67,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/programming/git/branch.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Python &amp; Conda" href="../python/overview.html" />
+    <link rel="prev" title="git" href="git.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +104,36 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../quickstart/overview.html">
+  A (not so) Quick Start Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bash/overview.html">
+  bash Shell
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../simulation/md.html">
+  Classical MD
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../simulation/qmmm.html">
+  QM/MM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notes/binding.html">
+  Binding Affinity
+ </a>
+</li>
+
     
 </ul>
       </div>
@@ -114,7 +144,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -134,7 +187,74 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bash/scripting.html">
+   Scripting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bash/startup.html">
+   Start-Up Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../hpc/overview.html">
+   SLURM &amp; ssh
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Github &amp; git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="git.html">
+   git
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Branching
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/overview.html">
+   Python &amp; Conda
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/python.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/conda.html">
+   Conda
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/installconda.html">
+   Installing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/condaenv.html">
+   Conda Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/myenv.html">
+   My Recommended Conda Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../python/jupyter.html">
+   Jupyter Notebooks
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -175,19 +295,19 @@ const thebe_selector_output = ".output, .cell_output"
   <section class="tex2jax_ignore mathjax_ignore" id="branching">
 <h1>Branching<a class="headerlink" href="#branching" title="Permalink to this headline">#</a></h1>
 <p>List all branches in repository</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch
 </pre></div>
 </div>
 <p>Make a new branch called <em>NAME</em> (does not check out!)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch *NAME* 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>*NAME*<span class="w"> </span>
 </pre></div>
 </div>
 <p>Delete the specified branch. This is a “safe” operation in that Git prevents you from deleting the branch if it has unmerged changes.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -d *NAME*
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>*NAME*
 </pre></div>
 </div>
 <p>Rename current branch</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git branch -m *NEW_NAME*
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>*NEW_NAME*
 </pre></div>
 </div>
 <p>Commits to branch needs <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code> followed by the usual <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code>, and <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p>
@@ -218,6 +338,20 @@ const thebe_selector_output = ".output, .cell_output"
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="git.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">git</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../python/overview.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python &amp; Conda</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>

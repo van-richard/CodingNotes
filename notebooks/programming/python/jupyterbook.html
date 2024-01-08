@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -199,38 +222,38 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h2>
 <p>Adapted from their webpage.</p>
 <p>In a <code class="docutils literal notranslate"><span class="pre">conda</span></code> environment, install the package, <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge jupyter-book
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyter-book
 </pre></div>
 </div>
 <p>Create a new book</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book create mynewbook/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>create<span class="w"> </span>mynewbook/
 </pre></div>
 </div>
 <p>Building the book</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build mybookname/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book<span class="w"> </span>build<span class="w"> </span>mybookname/
 </pre></div>
 </div>
 <p>To publish the book to a Github repository, I use ghp-import.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install ghp-import
-ghp-import -n -p -f _build/html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>ghp-import
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html
 </pre></div>
 </div>
 <p>Then</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
-git commit -a 
-git push
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-a<span class="w"> </span>
+git<span class="w"> </span>push
 </pre></div>
 </div>
 <p>I automated this with a <code class="docutils literal notranslate"><span class="pre">build.sh</span></code> script:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Import aliases</span>
-<span class="nb">shopt</span> -s expand_aliases 
-<span class="nb">source</span> ~/.bash_aliases  
+<span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>expand_aliases<span class="w"> </span>
+<span class="nb">source</span><span class="w"> </span>~/.bash_aliases<span class="w">  </span>
 
 <span class="c1"># Build book and push changes</span>
-myconda jupyter-book build . --all 
-ghp-import -n -p -f _build/html 
+myconda<span class="w"> </span>jupyter-book<span class="w"> </span>build<span class="w"> </span>.<span class="w"> </span>--all<span class="w"> </span>
+ghp-import<span class="w"> </span>-n<span class="w"> </span>-p<span class="w"> </span>-f<span class="w"> </span>_build/html<span class="w"> </span>
 </pre></div>
 </div>
 <p>To publish you book online, you need to host it on a public repository on Github.</p>
@@ -239,19 +262,19 @@ ghp-import -n -p -f _build/html
 <li><p>Next, give your online repository a name and a description. Make your repository public and do not initialize it with a README file, then click “Create repository”.</p></li>
 <li><p>Now, clone the (currently empty) online repository to a location on your local computer. You can do this via the command line with:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/&lt;my-org&gt;/&lt;my-repository-name&gt; 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/&lt;my-org&gt;/&lt;my-repository-name&gt;<span class="w"> </span>
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Copy all of your book files and folders into this newly cloned repository. For example, if you created your book locally with <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">mylocalbook</span></code> and your new repository is called ”myonlinebook,“ you could do this via the command line with:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp -r mylocalbook/* myonlinebook/ 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>mylocalbook/*<span class="w"> </span>myonlinebook/<span class="w"> </span>
 </pre></div>
 </div>
 <ol class="simple">
 <li><p>Now you need to sync your local and remote (i.e., online) repositories. You can do this with the following commands:</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash build.sh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>build.sh
 </pre></div>
 </div>
 <ol class="simple">

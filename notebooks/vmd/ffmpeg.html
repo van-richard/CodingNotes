@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -177,7 +200,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p><a class="reference external" href="https://ffmpeg.org">ffmpeg Download</a></p>
 <p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code> can convert image files to a video. Download the program, and add this to your <code class="docutils literal notranslate"><span class="pre">~/Programs</span></code> folder.</p>
 <p>After creating image files from VMD, use <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code> to make the video by:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/Programs/ffmpeg file.%05d.ppm -b:v 500M output.mp4
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/Programs/ffmpeg<span class="w"> </span>file.%05d.ppm<span class="w"> </span>-b:v<span class="w"> </span>500M<span class="w"> </span>output.mp4
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">file.%05d.ppm</span></code> - <code class="docutils literal notranslate"><span class="pre">file</span></code> is the name of your output, <code class="docutils literal notranslate"><span class="pre">%05d</span></code> is a a 5 digit number left-padded with zeros, and <code class="docutils literal notranslate"><span class="pre">ppm</span></code> is the file type.</p>

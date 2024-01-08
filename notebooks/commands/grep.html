@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -175,41 +198,41 @@ const thebe_selector_output = ".output, .cell_output"
   <section class="tex2jax_ignore mathjax_ignore" id="grep-search-for-pattern-in-file-or-folders">
 <h1><code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders<a class="headerlink" href="#grep-search-for-pattern-in-file-or-folders" title="Permalink to this headline">#</a></h1>
 <p>Example</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="s1">&#39;PATTERN&#39;</span> FILE
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="s1">&#39;PATTERN&#39;</span><span class="w"> </span>FILE
 </pre></div>
 </div>
 <p>Search pattern ignoring case</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -i PATTERN FILE
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-i<span class="w"> </span>PATTERN<span class="w"> </span>FILE
 </pre></div>
 </div>
 <p>Search pattern and get NEXT NUMBER of lines</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -A NUMBER PATTERN FILE
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-A<span class="w"> </span>NUMBER<span class="w"> </span>PATTERN<span class="w"> </span>FILE
 </pre></div>
 </div>
 <p>Search pattern and get previous NUMBER of  lines</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -B NUMBER PATTERN FILE
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-B<span class="w"> </span>NUMBER<span class="w"> </span>PATTERN<span class="w"> </span>FILE
 </pre></div>
 </div>
 <p>Print to stdout all lines of file.txt which match some regex. The example prints lines which begin with “foo” and end in “bar”</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep <span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span> file.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt
 </pre></div>
 </div>
 <p>Pass the option “-c” to instead print the number of lines matching the regex</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -c <span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span> file.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt
 </pre></div>
 </div>
 <p>Other useful options are:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep -r <span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span> someDir/ <span class="c1"># recursively `grep`</span>
-grep -n <span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span> file.txt <span class="c1"># give line numbers</span>
-grep -rI <span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span> someDir/ <span class="c1"># recursively `grep`, but ignore binary files</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>someDir/<span class="w"> </span><span class="c1"># recursively `grep`</span>
+grep<span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt<span class="w"> </span><span class="c1"># give line numbers</span>
+grep<span class="w"> </span>-rI<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>someDir/<span class="w"> </span><span class="c1"># recursively `grep`, but ignore binary files</span>
 </pre></div>
 </div>
 <p>Perform the same initial search, but filter out the lines containing “baz”</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep <span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span> file.txt <span class="p">|</span> grep -v <span class="s2">&quot;baz&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>grep<span class="w"> </span><span class="s2">&quot;^foo.*bar</span>$<span class="s2">&quot;</span><span class="w"> </span>file.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span><span class="s2">&quot;baz&quot;</span>
 </pre></div>
 </div>
 <p>If you literally want to search for the string, and not the regex, use <code class="docutils literal notranslate"><span class="pre">fgrep</span></code> (or <code class="docutils literal notranslate"><span class="pre">grep</span> <span class="pre">-F</span></code>)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fgrep <span class="s2">&quot;foobar&quot;</span> file.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fgrep<span class="w"> </span><span class="s2">&quot;foobar&quot;</span><span class="w"> </span>file.txt
 </pre></div>
 </div>
 </section>

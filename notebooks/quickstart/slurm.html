@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
@@ -54,7 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -67,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/quickstart/slurm.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python" href="Python.html" />
+    <link rel="prev" title="Accessing the HPC" href="ssh.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +104,36 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="overview.html">
+  A (not so) Quick Start Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../programming/bash/overview.html">
+  bash Shell
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../simulation/md.html">
+  Classical MD
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../simulation/qmmm.html">
+  QM/MM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../notes/binding.html">
+  Binding Affinity
+ </a>
+</li>
+
     
 </ul>
       </div>
@@ -114,7 +144,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -134,7 +187,51 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="terminal.html">
+   Terminal, Shell, &amp; Bash
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Supercomputer.html">
+   Supercomputers
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="ssh.html">
+     Accessing the HPC
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     HPC Job Managmer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Python.html">
+     Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Conda.html">
+     Conda Package Management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="StructureFiles.html">
+   Molecular Structure Files
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -165,7 +262,7 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#hpc-resources">
    HPC Resources
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pre-installed-softwares">
      Pre-Installed Softwares
@@ -177,7 +274,7 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#slurm-scripts">
    Slurm Scripts
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#directives-sbatch">
      Directives (
@@ -232,13 +329,13 @@ const thebe_selector_output = ".output, .cell_output"
 <section id="hpc-resources">
 <h2>HPC Resources<a class="headerlink" href="#hpc-resources" title="Permalink to this headline">#</a></h2>
 <p><span class="xref std std-term">sinfo</span> prints information about the different paritions, and their current status.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span>
 </pre></div>
 </div>
 <section id="pre-installed-softwares">
 <h3>Pre-Installed Softwares<a class="headerlink" href="#pre-installed-softwares" title="Permalink to this headline">#</a></h3>
 <p>Clusters often has preinstalled software you can use. They’re called using the command <span class="xref std std-term">module</span> . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span>
 </pre></div>
 </div>
 </section>
@@ -250,8 +347,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)<a class="headerlink" href="#directives-sbatch" title="Permalink to this headline">#</a></h3>
 <p>The way that Slurm determines how to allocate your jobs to the cluster (<em>i.e. across how many compute nodes, with how many CPUs, for how long etc</em>) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>. Common types of jobs are:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="f71198e0-7787-4441-97b7-a20649c95c74" name="320a5035-cccb-4ee0-907d-8c6dd96a3f7f" type="radio">
-</input><label class="sd-tab-label" for="f71198e0-7787-4441-97b7-a20649c95c74">
+<input checked="checked" id="fddbe3d0-a082-4bf6-8288-2918a27a4d08" name="3c8b501e-aa70-4717-a673-e381c8a6030e" type="radio">
+</input><label class="sd-tab-label" for="fddbe3d0-a082-4bf6-8288-2918a27a4d08">
 CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=PARTITION</span>
@@ -262,12 +359,12 @@ CPU Jobs</label><div class="sd-tab-content docutils">
 <span class="c1">#SBATCH --error=%j.err</span>
 <span class="c1">#SBATCH --name=JOBNAME</span>
 
-<span class="nb">echo</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World!&quot;</span>
 </pre></div>
 </div>
 </div>
-<input id="e3ff2ea8-438e-4d47-8bc9-b46c4ccb024a" name="320a5035-cccb-4ee0-907d-8c6dd96a3f7f" type="radio">
-</input><label class="sd-tab-label" for="e3ff2ea8-438e-4d47-8bc9-b46c4ccb024a">
+<input id="02e61af0-0667-42bd-b9ac-73f56610174e" name="3c8b501e-aa70-4717-a673-e381c8a6030e" type="radio">
+</input><label class="sd-tab-label" for="02e61af0-0667-42bd-b9ac-73f56610174e">
 GPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=GPU_PARTITION</span>
@@ -279,12 +376,12 @@ GPU Jobs</label><div class="sd-tab-content docutils">
 <span class="c1">#SBATCH --name=JOBNAME</span>
 <span class="c1">#SBATCH --gres=gpu:1</span>
 
-<span class="nb">echo</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World!&quot;</span>
 </pre></div>
 </div>
 </div>
-<input id="628c75c1-f07b-4cb5-adbc-afab603c754a" name="320a5035-cccb-4ee0-907d-8c6dd96a3f7f" type="radio">
-</input><label class="sd-tab-label" for="628c75c1-f07b-4cb5-adbc-afab603c754a">
+<input id="8cf475f9-2f6c-4d9d-908a-02d929059c4f" name="3c8b501e-aa70-4717-a673-e381c8a6030e" type="radio">
+</input><label class="sd-tab-label" for="8cf475f9-2f6c-4d9d-908a-02d929059c4f">
 Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">##!/bin/bash</span>
 <span class="c1">##SBATCH --partition=GPU_PARTITION</span>
@@ -297,32 +394,32 @@ Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 <span class="c1">##SBATCH --mem=0</span>
 <span class="c1">##SBATCH --exclusive</span>
 
-<span class="nb">echo</span> <span class="s2">&quot; Wow you dick.&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot; Wow you dick.&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>To submit a <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> job use <span class="xref std std-term">sbatch</span>. Alternatively, you can cancel it with <span class="xref std std-term">scancel</span>.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="763f0779-e295-49b6-8643-a0ba2b91a044" name="aa730187-50d0-4fe4-aaf1-41b71887d3c0" type="radio">
-</input><label class="sd-tab-label" for="763f0779-e295-49b6-8643-a0ba2b91a044">
+<input checked="checked" id="b45e9386-996a-43c1-b814-b7040cba5580" name="3be00f08-d35c-4d87-b416-52dd39cb44e5" type="radio">
+</input><label class="sd-tab-label" for="b45e9386-996a-43c1-b814-b7040cba5580">
 Submit a Job</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch job.slurm   <span class="c1"># This will print a JOB_ID</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm<span class="w">   </span><span class="c1"># This will print a JOB_ID</span>
 </pre></div>
 </div>
 </div>
-<input id="8252fb2b-448f-4b43-a73e-101791d23a0f" name="aa730187-50d0-4fe4-aaf1-41b71887d3c0" type="radio">
-</input><label class="sd-tab-label" for="8252fb2b-448f-4b43-a73e-101791d23a0f">
+<input id="6190f0d5-e31e-4766-82e7-6d1571fa0ce6" name="3be00f08-d35c-4d87-b416-52dd39cb44e5" type="radio">
+</input><label class="sd-tab-label" for="6190f0d5-e31e-4766-82e7-6d1571fa0ce6">
 Cancel a Job</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel JOB_ID
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel<span class="w"> </span>JOB_ID
 </pre></div>
 </div>
 </div>
-<input id="a8d54231-712c-4a29-8bef-e60b762b0678" name="aa730187-50d0-4fe4-aaf1-41b71887d3c0" type="radio">
-</input><label class="sd-tab-label" for="a8d54231-712c-4a29-8bef-e60b762b0678">
+<input id="9c9aa884-8499-4781-a35e-b6a4be43d233" name="3be00f08-d35c-4d87-b416-52dd39cb44e5" type="radio">
+</input><label class="sd-tab-label" for="9c9aa884-8499-4781-a35e-b6a4be43d233">
 Check jobs</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue             <span class="c1"># All jobs queue</span>
-squeue -u username <span class="c1"># your usernameUSERNAME queue</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w">             </span><span class="c1"># All jobs queue</span>
+squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w"> </span><span class="c1"># your usernameUSERNAME queue</span>
 </pre></div>
 </div>
 </div>
@@ -356,6 +453,20 @@ squeue -u username <span class="c1"># your usernameUSERNAME queue</span>
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="ssh.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Accessing the HPC</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Python.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>

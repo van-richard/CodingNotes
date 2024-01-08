@@ -1,4 +1,5 @@
-# CodingNotes
+CodingNotes
+===========
 
 **Notes I wish I had showed me when I started**
 
@@ -20,7 +21,7 @@ I hope many of you will find this information useful in your future endeavors.
     * Molecular Structures and File Formats
 
 
-2. [Programming Examples](notebooks/programming/programming)
+2. Programming Examples
     *  bash
     *  SLURM & ssh
     *  GitHub & git
@@ -35,6 +36,4 @@ I hope many of you will find this information useful in your future endeavors.
 
 4.  Tutorials
     * Molecular Simulations with Amber
-    * Analysis techniques
-
-
+    * Analysis technique

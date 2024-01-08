@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -176,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h1><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions<a class="headerlink" href="#setfacl-change-file-folder-permissions" title="Permalink to this headline">#</a></h1>
 <p>Give specific user permission to read/write/execute a folder.</p>
 <p><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> is short for set File ACL (Access Control List). This sets permissions for specific users, without changing the owndership of the directory.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setfacl -m u:username:rwx myfolder
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:username:rwx<span class="w"> </span>myfolder
 </pre></div>
 </div>
 <p>Helpful options.</p>

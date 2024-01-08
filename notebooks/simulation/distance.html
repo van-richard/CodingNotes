@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -240,25 +263,25 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Permalink to this headline">#</a></h2>
 <p>Make a project folder, called “distance” in the <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code> directory, and change to that directory. <em>Optionally, if you downloaded the reference file, we will move <code class="docutils literal notranslate"><span class="pre">distance.tar.bz2</span></code> into the reference folder.</em></p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="f6b3c639-5bf0-4d67-9ade-0369a18bd4b7" name="34dc5b6c-a199-45d2-9a03-80bb9a9bd23b" type="radio">
-</input><label class="sd-tab-label" for="f6b3c639-5bf0-4d67-9ade-0369a18bd4b7">
+<input checked="checked" id="115247d3-ca33-4b5d-a8eb-238567ebb74f" name="e6d8c12e-b8dd-4611-a9a3-10436426577b" type="radio">
+</input><label class="sd-tab-label" for="115247d3-ca33-4b5d-a8eb-238567ebb74f">
 Skip Reference File</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Tutorials <span class="c1"># Go to $HOME/Tutorials</span>
-mkdir distance <span class="c1"># Make &quot;distance&quot; folder</span>
-<span class="nb">cd</span> distance    <span class="c1"># Go to &quot;distance&quot; folder</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Tutorials<span class="w"> </span><span class="c1"># Go to $HOME/Tutorials</span>
+mkdir<span class="w"> </span>distance<span class="w"> </span><span class="c1"># Make &quot;distance&quot; folder</span>
+<span class="nb">cd</span><span class="w"> </span>distance<span class="w">    </span><span class="c1"># Go to &quot;distance&quot; folder</span>
 </pre></div>
 </div>
 </div>
-<input id="cd403ca5-aae8-4b4d-b709-1577d959983f" name="34dc5b6c-a199-45d2-9a03-80bb9a9bd23b" type="radio">
-</input><label class="sd-tab-label" for="cd403ca5-aae8-4b4d-b709-1577d959983f">
+<input id="34a0bbc9-8d3a-4c3e-be69-dcb84e3f6452" name="e6d8c12e-b8dd-4611-a9a3-10436426577b" type="radio">
+</input><label class="sd-tab-label" for="34a0bbc9-8d3a-4c3e-be69-dcb84e3f6452">
 Download Reference File</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Tutorials/references <span class="c1"># Go to $HOME/reference (Made in simple tutorial)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Tutorials/references<span class="w"> </span><span class="c1"># Go to $HOME/reference (Made in simple tutorial)</span>
 <span class="c1"># I use curl on my Macbook</span>
-curl -O 
-tar xvfj distance.tar.bz2 <span class="c1"># Extract file with tar</span>
-<span class="nb">cd</span> ../                    <span class="c1"># Go back one directory level</span>
-mkdir distance            <span class="c1"># Make &quot;distance&quot; folder </span>
-<span class="nb">cd</span> distance               <span class="c1"># Go to &quot;distance&quot; folder</span>
+curl<span class="w"> </span>-O<span class="w"> </span>
+tar<span class="w"> </span>xvfj<span class="w"> </span>distance.tar.bz2<span class="w"> </span><span class="c1"># Extract file with tar</span>
+<span class="nb">cd</span><span class="w"> </span>../<span class="w">                    </span><span class="c1"># Go back one directory level</span>
+mkdir<span class="w"> </span>distance<span class="w">            </span><span class="c1"># Make &quot;distance&quot; folder </span>
+<span class="nb">cd</span><span class="w"> </span>distance<span class="w">               </span><span class="c1"># Go to &quot;distance&quot; folder</span>
 </pre></div>
 </div>
 </div>
@@ -268,18 +291,18 @@ mkdir distance            <span class="c1"># Make &quot;distance&quot; folder </
 <h2>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Permalink to this headline">#</a></h2>
 <p>Similar to the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial. We use <code class="docutils literal notranslate"><span class="pre">leap</span></code> to prepare our Amber topology and coordinate file. Since Alanine Dipeptide is still an amino acid, we can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate the topology (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code>) and coordinate files(<code class="docutils literal notranslate"><span class="pre">.rst7</span></code>). The <code class="docutils literal notranslate"><span class="pre">tleap</span></code> program contains reference coordinates for standard residues to generate  missing atoms, this function is base on the residue name.</p>
 <p>Give <code class="docutils literal notranslate"><span class="pre">tleap</span></code> instructions by making a file called “<a class="reference external" href="http://tleap.in">tleap.in</a>” containing:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> leaprc.protein.ff19SB
-<span class="nb">source</span> leaprc.water.TIP3P
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
+<span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
 
-<span class="nv">sys1</span> <span class="o">=</span> sequence <span class="o">{</span> ACE ALA NME <span class="o">}</span>
-<span class="nv">sys2</span> <span class="o">=</span> sequence <span class="o">{</span> ACE ALA NME <span class="o">}</span>
-translate sys2 <span class="o">{</span> <span class="m">5</span> <span class="m">0</span> <span class="m">0</span> <span class="o">}</span>
-<span class="nv">system</span> <span class="o">=</span> combine <span class="o">{</span> sys1 sys2 <span class="o">}</span>
+<span class="nv">sys1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sequence<span class="w"> </span><span class="o">{</span><span class="w"> </span>ACE<span class="w"> </span>ALA<span class="w"> </span>NME<span class="w"> </span><span class="o">}</span>
+<span class="nv">sys2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sequence<span class="w"> </span><span class="o">{</span><span class="w"> </span>ACE<span class="w"> </span>ALA<span class="w"> </span>NME<span class="w"> </span><span class="o">}</span>
+translate<span class="w"> </span>sys2<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">}</span>
+<span class="nv">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>combine<span class="w"> </span><span class="o">{</span><span class="w"> </span>sys1<span class="w"> </span>sys2<span class="w"> </span><span class="o">}</span>
 
-solvatebox system TIP3PBOX <span class="m">12</span>.0 iso <span class="m">0</span>.8
+solvatebox<span class="w"> </span>system<span class="w"> </span>TIP3PBOX<span class="w"> </span><span class="m">12</span>.0<span class="w"> </span>iso<span class="w"> </span><span class="m">0</span>.8
 
-saveamberparm system step3_pbcsetup.parm7 step3_pbcsetup.rst7
-savepdb system step3_pbcsetup.pdb
+saveamberparm<span class="w"> </span>system<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>step3_pbcsetup.rst7
+savepdb<span class="w"> </span>system<span class="w"> </span>step3_pbcsetup.pdb
 
 quit
 </pre></div>
@@ -312,7 +335,7 @@ quit
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.pdb</span></code></p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap -sf tleap.in
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
 </pre></div>
 </div>
 <div class="admonition note">
@@ -329,66 +352,66 @@ quit
 <li><p>Heating (for 10 ps at 300 K)</p></li>
 </ol>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="d09e0d26-00b8-4e35-8d95-608d78b0c74c" name="abff7b21-6c3c-405a-957a-f06b9ec356e6" type="radio">
-</input><label class="sd-tab-label" for="d09e0d26-00b8-4e35-8d95-608d78b0c74c">
+<input checked="checked" id="1622446e-0d14-4780-a784-0093f7e5b20c" name="ec10634e-dea0-4a4c-88c1-4ebbe2e9d440" type="radio">
+</input><label class="sd-tab-label" for="1622446e-0d14-4780-a784-0093f7e5b20c">
 min.mdin</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Minimization input file <span class="k">in</span> explicit solvent
- <span class="p">&amp;</span>cntrl
-  ! Minimization options
-  <span class="nv">imin</span><span class="o">=</span><span class="m">1</span>         ! Turn on minimization
-  <span class="nv">maxcyc</span><span class="o">=</span><span class="m">2000</span>,   !  Maximum number of minimization cycles
-  <span class="nv">ncyc</span><span class="o">=</span><span class="m">1000</span>,     ! Steepest-descent steps, better <span class="k">for</span> strained systems       
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Minimization<span class="w"> </span>input<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>explicit<span class="w"> </span>solvent
+<span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="w">  </span>!<span class="w"> </span>Minimization<span class="w"> </span>options
+<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">         </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>minimization
+<span class="w">  </span><span class="nv">maxcyc</span><span class="o">=</span><span class="m">2000</span>,<span class="w">   </span>!<span class="w">  </span>Maximum<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>minimization<span class="w"> </span>cycles
+<span class="w">  </span><span class="nv">ncyc</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Steepest-descent<span class="w"> </span>steps,<span class="w"> </span>better<span class="w"> </span><span class="k">for</span><span class="w"> </span>strained<span class="w"> </span>systems<span class="w">       </span>
 
-  ! Potential energy <span class="k">function</span> options
-  <span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,       ! nonbonded cutoff, <span class="k">in</span> angstroms
- 
-  ! Control how often information is printed to the output file
-  <span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,      ! Print energies every <span class="m">100</span> steps
- /
- 
+<span class="w">  </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span><span class="k">function</span><span class="w"> </span>options
+<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>angstroms
+<span class="w"> </span>
+<span class="w">  </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>file
+<span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps
+<span class="w"> </span>/
+<span class="w"> </span>
 </pre></div>
 </div>
 </div>
-<input id="c57678b1-ef50-4163-9332-e378943ef544" name="abff7b21-6c3c-405a-957a-f06b9ec356e6" type="radio">
-</input><label class="sd-tab-label" for="c57678b1-ef50-4163-9332-e378943ef544">
+<input id="57d695ae-f99e-4d4f-9271-993d59ce4bc6" name="ec10634e-dea0-4a4c-88c1-4ebbe2e9d440" type="radio">
+</input><label class="sd-tab-label" for="57d695ae-f99e-4d4f-9271-993d59ce4bc6">
 heat.mdin</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A NVT simulation <span class="k">for</span> common production-level simulations
- <span class="p">&amp;</span>cntrl
-    <span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,        ! No minimization
-    <span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,       ! This is NOT a restart of an old MD simulation
-    <span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,         ! So our inpcrd file has no velocities
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
+<span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
+<span class="w">    </span><span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>NOT<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
+<span class="w">    </span><span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>velocities
 
-    ! Temperature control
-    <span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,         ! Langevin dynamics
-    <span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,  ! Friction coefficient <span class="o">(</span>ps^-1<span class="o">)</span>
-    <span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,     ! Target temperature
+<span class="w">    </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
+<span class="w">    </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>dynamics
+<span class="w">    </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
+<span class="w">    </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,<span class="w">     </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
 
-    ! Potential energy control
-    <span class="nv">cut</span><span class="o">=</span><span class="m">9</span>.0,       ! nonbonded cutoff, <span class="k">in</span> angstroms
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">cut</span><span class="o">=</span><span class="m">9</span>.0,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>angstroms
 
-    ! MD settings
-    <span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,  ! 10K steps, <span class="m">10</span> ps total
-    <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,      ! <span class="nb">time</span> step <span class="o">(</span>ps<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>MD<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,<span class="w">  </span>!<span class="w"> </span>10K<span class="w"> </span>steps,<span class="w"> </span><span class="m">10</span><span class="w"> </span>ps<span class="w"> </span>total
+<span class="w">    </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,<span class="w">      </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
 
-    ! SHAKE
-    <span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,         ! Constrain bonds containing hydrogen
-    <span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,         ! Do not calculate forces of bonds containing hydrogen
+<span class="w">    </span>!<span class="w"> </span>SHAKE
+<span class="w">    </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
 
-    ! Control how often information is printed
-    <span class="nv">ntpr</span><span class="o">=</span><span class="m">1000</span>,     ! Print energies every <span class="m">1000</span> steps
-    <span class="nv">ntwx</span><span class="o">=</span><span class="m">1000</span>,     ! Print coordinates every <span class="m">5000</span> steps to the trajectory
-    <span class="nv">ntwr</span><span class="o">=</span><span class="m">1000</span>,     ! Print a restart file every 10K steps <span class="o">(</span>can be less frequent<span class="o">)</span>
-    <span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,        ! Write NetCDF format
-    <span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,      ! Write NetCDF format <span class="o">(</span>always <span class="k">do</span> this!<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
+<span class="w">    </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">1000</span><span class="w"> </span>steps
+<span class="w">    </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span><span class="m">5000</span><span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
+<span class="w">    </span><span class="nv">ntwr</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>file<span class="w"> </span>every<span class="w"> </span>10K<span class="w"> </span>steps<span class="w"> </span><span class="o">(</span>can<span class="w"> </span>be<span class="w"> </span>less<span class="w"> </span>frequent<span class="o">)</span>
+<span class="w">    </span><span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,<span class="w">        </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format
+<span class="w">    </span><span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>always<span class="w"> </span><span class="k">do</span><span class="w"> </span>this!<span class="o">)</span>
 
-    ! Wrap coordinates when printing them to the same unit cell
-    <span class="nv">iwrap</span><span class="o">=</span><span class="m">1</span>,
+<span class="w">    </span>!<span class="w"> </span>Wrap<span class="w"> </span>coordinates<span class="w"> </span>when<span class="w"> </span>printing<span class="w"> </span>them<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>unit<span class="w"> </span>cell
+<span class="w">    </span><span class="nv">iwrap</span><span class="o">=</span><span class="m">1</span>,
 
-    ! Restraint options
-    <span class="nv">ntr</span><span class="o">=</span><span class="m">1</span>,
-    <span class="nv">restraint_wt</span><span class="o">=</span><span class="m">5</span>,
-    <span class="nv">restraintmask</span><span class="o">=</span><span class="s1">&#39;:1-6&#39;</span>, ! Apply weak positional restraint on residues
- /
+<span class="w">    </span>!<span class="w"> </span>Restraint<span class="w"> </span>options
+<span class="w">    </span><span class="nv">ntr</span><span class="o">=</span><span class="m">1</span>,
+<span class="w">    </span><span class="nv">restraint_wt</span><span class="o">=</span><span class="m">5</span>,
+<span class="w">    </span><span class="nv">restraintmask</span><span class="o">=</span><span class="s1">&#39;:1-6&#39;</span>,<span class="w"> </span>!<span class="w"> </span>Apply<span class="w"> </span>weak<span class="w"> </span>positional<span class="w"> </span>restraint<span class="w"> </span>on<span class="w"> </span>residues
+<span class="w"> </span>/
 </pre></div>
 </div>
 </div>
@@ -427,57 +450,57 @@ heat.mdin</label><div class="sd-tab-content docutils">
 </table>
 <p>The following is a template for preparing the 4 copies of <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code> and <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="b08d1461-b889-49cb-b396-3fbf6526cd10" name="ca7f9b09-7816-46a5-9e8b-6305009d33ef" type="radio">
-</input><label class="sd-tab-label" for="b08d1461-b889-49cb-b396-3fbf6526cd10">
+<input checked="checked" id="79561dd0-dc2c-41e6-b4fb-97ac7b1b62ce" name="4587a9d9-619f-4387-bf3e-fb0128cf0caa" type="radio">
+</input><label class="sd-tab-label" for="79561dd0-dc2c-41e6-b4fb-97ac7b1b62ce">
 Template for “prod.mdin”</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A NVT simulation <span class="k">for</span> common production-level simulations
- <span class="p">&amp;</span>cntrl
-    <span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,        ! No minimization
-    <span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,       ! This IS a restart of an old MD simulation
-    <span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,         ! So our inpcrd file has velocities
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
+<span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
+<span class="w">    </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>IS<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
+<span class="w">    </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>velocities
 
-    ! Temperature control
-    <span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,         ! Langevin dynamics
-    <span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,  ! Friction coefficient <span class="o">(</span>ps^-1<span class="o">)</span>
-    <span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,   ! Target temperature
+<span class="w">    </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
+<span class="w">    </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>dynamics
+<span class="w">    </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
+<span class="w">    </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,<span class="w">   </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
 
-    ! Potential energy control
-    <span class="nv">cut</span><span class="o">=</span><span class="m">9</span>.0,       ! nonbonded cutoff, <span class="k">in</span> Angstroms
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">cut</span><span class="o">=</span><span class="m">9</span>.0,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>Angstroms
 
-    ! MD settings
-    <span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,  ! &lt;span <span class="nv">style</span><span class="o">=</span><span class="s2">&quot;font-size:1.5em;&quot;</span>&gt;**Options <span class="k">in</span> <span class="sb">`</span>cv.rst<span class="sb">`</span>**&lt;/span&gt;MD steps
-    <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,      ! <span class="nb">time</span> step <span class="o">(</span>ps<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>MD<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,<span class="w">  </span>!<span class="w"> </span>&lt;span<span class="w"> </span><span class="nv">style</span><span class="o">=</span><span class="s2">&quot;font-size:1.5em;&quot;</span>&gt;**Options<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>cv.rst<span class="sb">`</span>**&lt;/span&gt;MD<span class="w"> </span>steps
+<span class="w">    </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,<span class="w">      </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
 
-    ! SHAKE
-    <span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,         ! Constrain bonds containing hydrogen
-    <span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,         ! Do not calculate forces of bonds containing hydrogen
+<span class="w">    </span>!<span class="w"> </span>SHAKE
+<span class="w">    </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
 
-    ! Control how often information is printed
-    <span class="nv">ntpr</span><span class="o">=</span><span class="m">1000</span>,     ! Print energies every ntpr steps
-    <span class="nv">ntwx</span><span class="o">=</span><span class="m">1000</span>,     ! Print coordinates every ntwx steps to the trajectory
-    <span class="nv">ntwr</span><span class="o">=</span><span class="m">1000</span>,     ! Print a restart file every 10K steps <span class="o">(</span>can be less frequent<span class="o">)</span>
-    <span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,        ! Write NetCDF format
-    <span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,      ! Write NetCDF format <span class="o">(</span>always <span class="k">do</span> this!<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
+<span class="w">    </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span>ntpr<span class="w"> </span>steps
+<span class="w">    </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span>ntwx<span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
+<span class="w">    </span><span class="nv">ntwr</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>file<span class="w"> </span>every<span class="w"> </span>10K<span class="w"> </span>steps<span class="w"> </span><span class="o">(</span>can<span class="w"> </span>be<span class="w"> </span>less<span class="w"> </span>frequent<span class="o">)</span>
+<span class="w">    </span><span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,<span class="w">        </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format
+<span class="w">    </span><span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>always<span class="w"> </span><span class="k">do</span><span class="w"> </span>this!<span class="o">)</span>
 
-    ! Wrap coordinates when printing them to the same unit cell
-    <span class="nv">iwrap</span><span class="o">=</span><span class="m">1</span>,
-        
-    ! Restraints
-    <span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,      ! Turn on restraints
+<span class="w">    </span>!<span class="w"> </span>Wrap<span class="w"> </span>coordinates<span class="w"> </span>when<span class="w"> </span>printing<span class="w"> </span>them<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>unit<span class="w"> </span>cell
+<span class="w">    </span><span class="nv">iwrap</span><span class="o">=</span><span class="m">1</span>,
+<span class="w">        </span>
+<span class="w">    </span>!<span class="w"> </span>Restraints
+<span class="w">    </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>restraints
 
- /
- 
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>, <span class="nv">istep1</span><span class="o">=</span><span class="m">10</span> / ! Print restraint value every <span class="m">10</span> steps
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span> /
- <span class="nv">DISANG</span><span class="o">=</span>cv__NUMBER__.rst  
- <span class="nv">DUMPAVE</span><span class="o">=</span>prod__NUMBER__.cv 
+<span class="w"> </span>/
+<span class="w"> </span>
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>/<span class="w"> </span>!<span class="w"> </span>Print<span class="w"> </span>restraint<span class="w"> </span>value<span class="w"> </span>every<span class="w"> </span><span class="m">10</span><span class="w"> </span>steps
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
+<span class="w"> </span><span class="nv">DISANG</span><span class="o">=</span>cv__NUMBER__.rst<span class="w">  </span>
+<span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>prod__NUMBER__.cv<span class="w"> </span>
 
- /
+<span class="w"> </span>/
 </pre></div>
 </div>
 </div>
-<input id="681d6bde-6de9-4341-9260-e97bf265cea5" name="ca7f9b09-7816-46a5-9e8b-6305009d33ef" type="radio">
-</input><label class="sd-tab-label" for="681d6bde-6de9-4341-9260-e97bf265cea5">
+<input id="0a077fef-fb16-42fa-967c-602438aaf1c5" name="4587a9d9-619f-4387-bf3e-fb0128cf0caa" type="radio">
+</input><label class="sd-tab-label" for="0a077fef-fb16-42fa-967c-602438aaf1c5">
 Template for “cv.rst”</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```shell
  &amp;rst
@@ -513,39 +536,39 @@ date
 
 <span class="nv">sander</span><span class="o">=</span><span class="s2">&quot;sander&quot;</span>
 
-<span class="nv">$sander</span> -O -i min.mdin -p step3_pbcsetup.parm7 -c step3_pbcsetup.rst7 -o min.mdout -r min.ncrst -inf min.mdinfo
+<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.mdout<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo
 
-<span class="nv">$sander</span> -O -i heat.mdin -p step3_pbcsetup.parm7 -c min.ncrst -o heat.mdout -r heat.ncrst -inf heat.mdinfo -ref min.ncrst -x heat.nc
+<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>heat.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>min.ncrst<span class="w"> </span>-o<span class="w"> </span>heat.mdout<span class="w"> </span>-r<span class="w"> </span>heat.ncrst<span class="w"> </span>-inf<span class="w"> </span>heat.mdinfo<span class="w"> </span>-ref<span class="w"> </span>min.ncrst<span class="w"> </span>-x<span class="w"> </span>heat.nc
 
-<span class="nv">$sander</span> -O -i prod0.mdin -p step3_pbcsetup.parm7 -c heat.ncrst -o prod0.mdout -r prod0.ncrst -inf prod0.mdinfo -x prod0.nc
+<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod0.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>heat.ncrst<span class="w"> </span>-o<span class="w"> </span>prod0.mdout<span class="w"> </span>-r<span class="w"> </span>prod0.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod0.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod0.nc
 
-<span class="nv">$sander</span> -O -i prod1.mdin -p step3_pbcsetup.parm7 -c prod0.ncrst -o prod1.mdout -r prod1.ncrst -inf prod1.mdinfo -x prod1.nc
+<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod1.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>prod0.ncrst<span class="w"> </span>-o<span class="w"> </span>prod1.mdout<span class="w"> </span>-r<span class="w"> </span>prod1.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod1.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod1.nc
 
-<span class="nv">$sander</span> -O -i prod2.mdin -p step3_pbcsetup.parm7 -c prod1.ncrst -o prod2.mdout -r prod2.ncrst -inf prod2.mdinfo -x prod2.nc
+<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod2.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>prod1.ncrst<span class="w"> </span>-o<span class="w"> </span>prod2.mdout<span class="w"> </span>-r<span class="w"> </span>prod2.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod2.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod2.nc
 
-<span class="nv">$sander</span> -O -i prod3.mdin -p step3_pbcsetup.parm7 -c prod2.ncrst -o prod3.mdout -r prod3.ncrst -inf prod3.mdinfo -x prod3.nc
+<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod3.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>prod2.ncrst<span class="w"> </span>-o<span class="w"> </span>prod3.mdout<span class="w"> </span>-r<span class="w"> </span>prod3.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod3.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod3.nc
 
 date
 </pre></div>
 </div>
 <p>After saving the file, run the script in as a background process with the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> symbol:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash runmd.sh <span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>runmd.sh<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>While we wait for this job to run, we can look at file we made.</p>
 <p><span style="font-size:1.5em;"><strong>Options in <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code></strong></span></p>
 <p>The last 10 lines of <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code> are:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    ! Restraints
-    <span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,      ! Turn on restraints
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>!<span class="w"> </span>Restraints
+<span class="w">    </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>restraints
 
- /
- 
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>, <span class="nv">istep1</span><span class="o">=</span><span class="m">10</span> / ! Print restraint value every <span class="m">10</span> steps
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span> /
- <span class="nv">DISANG</span><span class="o">=</span>cv__NUMBER__.rst  
- <span class="nv">DUMPAVE</span><span class="o">=</span>prod__NUMBER__.cv 
+<span class="w"> </span>/
+<span class="w"> </span>
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>/<span class="w"> </span>!<span class="w"> </span>Print<span class="w"> </span>restraint<span class="w"> </span>value<span class="w"> </span>every<span class="w"> </span><span class="m">10</span><span class="w"> </span>steps
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
+<span class="w"> </span><span class="nv">DISANG</span><span class="o">=</span>cv__NUMBER__.rst<span class="w">  </span>
+<span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>prod__NUMBER__.cv<span class="w"> </span>
 
- /
+<span class="w"> </span>/
 </pre></div>
 </div>
 <p><span style="font-size:1.5em;"><strong>Options in <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></strong></span></p>

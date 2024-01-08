@@ -1,6 +1,7 @@
 # Terminal, Shell, & Bash
 ## Terminal
 
+
 :::{figure} https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif
 ---
 align: center

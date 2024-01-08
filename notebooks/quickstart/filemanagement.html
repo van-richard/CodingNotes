@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
@@ -54,7 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -67,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/quickstart/filemanagement.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Supercomputers" href="Supercomputer.html" />
+    <link rel="prev" title="Text Editors" href="vim.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +104,36 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="overview.html">
+  A (not so) Quick Start Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../programming/bash/overview.html">
+  bash Shell
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../simulation/md.html">
+  Classical MD
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../simulation/qmmm.html">
+  QM/MM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../notes/binding.html">
+  Binding Affinity
+ </a>
+</li>
+
     
 </ul>
       </div>
@@ -114,7 +144,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -134,7 +187,41 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="terminal.html">
+   Terminal, Shell, &amp; Bash
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="vim.html">
+     Text Editors
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     File Management
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Supercomputer.html">
+   Supercomputers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="StructureFiles.html">
+   Molecular Structure Files
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -216,26 +303,26 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">#</a></h2>
 <p>To copy files, you use the command, :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code>, where you include the file or folder you want to copy followed by the path you want the copy to go!</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="004df187-96e0-4687-ad77-97c3f5fc2abe" name="49aa165a-f2be-4855-b625-ff69ddfd1539" type="radio">
-</input><label class="sd-tab-label" for="004df187-96e0-4687-ad77-97c3f5fc2abe">
+<input checked="checked" id="433392f8-5790-471c-8352-32fb9c0acb74" name="05c5d1e6-4508-48b7-9997-a441129dbf3d" type="radio">
+</input><label class="sd-tab-label" for="433392f8-5790-471c-8352-32fb9c0acb74">
 General Notation</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp <span class="o">[</span>source<span class="o">]</span> <span class="o">[</span>destination<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
 </pre></div>
 </div>
 <p>For both <code class="docutils literal notranslate"><span class="pre">[source]</span></code> and <code class="docutils literal notranslate"><span class="pre">[destination]</span></code>, you can use the absolute or relative path</p>
 </div>
-<input id="0cf18fa5-215d-4992-9811-2d4ed2d24bac" name="49aa165a-f2be-4855-b625-ff69ddfd1539" type="radio">
-</input><label class="sd-tab-label" for="0cf18fa5-215d-4992-9811-2d4ed2d24bac">
+<input id="030ecad3-2ebf-48da-8f6f-3c0e2b88aaf7" name="05c5d1e6-4508-48b7-9997-a441129dbf3d" type="radio">
+</input><label class="sd-tab-label" for="030ecad3-2ebf-48da-8f6f-3c0e2b88aaf7">
 Copy Files</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp file.txt /path/to/destination/file-copy.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>file.txt<span class="w"> </span>/path/to/destination/file-copy.txt
 </pre></div>
 </div>
 <p>Copying a file is straight forward, you can even give the file a new name at the destination.</p>
 </div>
-<input id="540b1688-669e-43ed-9103-24b3c257c5c7" name="49aa165a-f2be-4855-b625-ff69ddfd1539" type="radio">
-</input><label class="sd-tab-label" for="540b1688-669e-43ed-9103-24b3c257c5c7">
+<input id="3fe483b2-bce2-4b1d-949d-30a60dfe687f" name="05c5d1e6-4508-48b7-9997-a441129dbf3d" type="radio">
+</input><label class="sd-tab-label" for="3fe483b2-bce2-4b1d-949d-30a60dfe687f">
 Copy Folders</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp -r directory/ path/to/destination
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>directory/<span class="w"> </span>path/to/destination
 </pre></div>
 </div>
 <p>Copying a directory requires the option <code class="docutils literal notranslate"><span class="pre">-r</span></code>, otherwise it is the same as copying files.</p>
@@ -246,27 +333,27 @@ Copy Folders</label><div class="sd-tab-content docutils">
 <h2>Moving &amp; Renaming<a class="headerlink" href="#moving-renaming" title="Permalink to this headline">#</a></h2>
 <p>Yes. They are the same command, :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code>. The notation for :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code> is the same as :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code>!</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="c1b5a059-2e47-482a-812f-7a1e4e8697d5" name="69f8f666-3eb1-4d0d-afa1-4071f38298ae" type="radio">
-</input><label class="sd-tab-label" for="c1b5a059-2e47-482a-812f-7a1e4e8697d5">
+<input checked="checked" id="ec8788c0-a623-4925-8a52-3108f83015f9" name="3544f5e4-8582-49eb-b316-617d2c38697e" type="radio">
+</input><label class="sd-tab-label" for="ec8788c0-a623-4925-8a52-3108f83015f9">
 General Notation</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv <span class="o">[</span>source<span class="o">]</span> <span class="o">[</span>destination<span class="o">]</span>  <span class="c1"># Moving</span>
-mv <span class="o">[</span>source<span class="o">]</span> <span class="o">[</span>newname<span class="o">]</span>      <span class="c1"># Renaming</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span><span class="w">  </span><span class="c1"># Moving</span>
+mv<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>newname<span class="o">]</span><span class="w">      </span><span class="c1"># Renaming</span>
 </pre></div>
 </div>
 <p>For both source and destination you can use the absolute or relative path</p>
 </div>
-<input id="5cad17c9-6f45-45ea-9958-c62d484f6498" name="69f8f666-3eb1-4d0d-afa1-4071f38298ae" type="radio">
-</input><label class="sd-tab-label" for="5cad17c9-6f45-45ea-9958-c62d484f6498">
+<input id="3f706dee-cc6b-445f-964a-5e5b83fe6f88" name="3544f5e4-8582-49eb-b316-617d2c38697e" type="radio">
+</input><label class="sd-tab-label" for="3f706dee-cc6b-445f-964a-5e5b83fe6f88">
 Move/Rename Files</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv file.txt /path/to/destination/newname.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>file.txt<span class="w"> </span>/path/to/destination/newname.txt
 </pre></div>
 </div>
 <p>Moving a file is straight forward, you can even give the file a new name at the destination.</p>
 </div>
-<input id="6be0cf02-99e5-487c-8e4e-6597d666aec9" name="69f8f666-3eb1-4d0d-afa1-4071f38298ae" type="radio">
-</input><label class="sd-tab-label" for="6be0cf02-99e5-487c-8e4e-6597d666aec9">
+<input id="4a7ff808-282a-4813-8308-fba24145b76e" name="3544f5e4-8582-49eb-b316-617d2c38697e" type="radio">
+</input><label class="sd-tab-label" for="4a7ff808-282a-4813-8308-fba24145b76e">
 Move/Rename Folders</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv directory/ path/to/desitination/newname
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>directory/<span class="w"> </span>path/to/desitination/newname
 </pre></div>
 </div>
 <p>Moving a directory is the same as the previous examples.</p>
@@ -281,26 +368,26 @@ Move/Rename Folders</label><div class="sd-tab-content docutils">
 </div>
 <p>:term:<code class="docutils literal notranslate"><span class="pre">rm</span></code> is used to delete files/folders, and is written like :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code> and :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code></p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="74aa9122-a0d4-490f-9fb3-5bcc35bb119e" name="669982f3-5406-4f7d-8595-e7fa04089261" type="radio">
-</input><label class="sd-tab-label" for="74aa9122-a0d4-490f-9fb3-5bcc35bb119e">
+<input checked="checked" id="fbb4c6f8-0102-4bc7-a379-e57a40162413" name="e1e937b0-de03-403d-b09a-125ffd8f7a7e" type="radio">
+</input><label class="sd-tab-label" for="fbb4c6f8-0102-4bc7-a379-e57a40162413">
 General Notation</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm <span class="o">[</span>sources<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span><span class="o">[</span>sources<span class="o">]</span>
 </pre></div>
 </div>
 <p>Where,  <code class="docutils literal notranslate"><span class="pre">[source]</span></code>, can be the absolute or relative path</p>
 </div>
-<input id="d05271b6-d2ff-4f3e-9d09-3141b00fe1e7" name="669982f3-5406-4f7d-8595-e7fa04089261" type="radio">
-</input><label class="sd-tab-label" for="d05271b6-d2ff-4f3e-9d09-3141b00fe1e7">
+<input id="16f4e7bf-6326-4c23-90c0-2550547449da" name="e1e937b0-de03-403d-b09a-125ffd8f7a7e" type="radio">
+</input><label class="sd-tab-label" for="16f4e7bf-6326-4c23-90c0-2550547449da">
 Delete Files</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm file1.txt file2.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
 </pre></div>
 </div>
 <p>You can delete multiple files at once.</p>
 </div>
-<input id="1558183e-035d-4b7c-ac4a-474e2d7abca3" name="669982f3-5406-4f7d-8595-e7fa04089261" type="radio">
-</input><label class="sd-tab-label" for="1558183e-035d-4b7c-ac4a-474e2d7abca3">
+<input id="c907fe13-9ddf-4c85-bf4f-8b0b3a701d94" name="e1e937b0-de03-403d-b09a-125ffd8f7a7e" type="radio">
+</input><label class="sd-tab-label" for="c907fe13-9ddf-4c85-bf4f-8b0b3a701d94">
 Copy Folders</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -r directory/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-r<span class="w"> </span>directory/
 </pre></div>
 </div>
 <p>Include the option, <code class="docutils literal notranslate"><span class="pre">-r</span></code>, to delete a folder.</p>
@@ -334,6 +421,20 @@ Copy Folders</label><div class="sd-tab-content docutils">
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="vim.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Text Editors</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Supercomputer.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Supercomputers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>

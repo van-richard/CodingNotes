@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
@@ -54,7 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -67,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/programming/python/condaenv.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="My Recommended Conda Setup" href="myenv.html" />
+    <link rel="prev" title="Installing" href="installconda.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +104,36 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../quickstart/overview.html">
+  A (not so) Quick Start Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../bash/overview.html">
+  bash Shell
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../simulation/md.html">
+  Classical MD
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../simulation/qmmm.html">
+  QM/MM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../notes/binding.html">
+  Binding Affinity
+ </a>
+</li>
+
     
 </ul>
       </div>
@@ -114,7 +144,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -134,7 +187,74 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bash/scripting.html">
+   Scripting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../bash/startup.html">
+   Start-Up Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../hpc/overview.html">
+   SLURM &amp; ssh
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../git/overview.html">
+   Github &amp; git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../git/git.html">
+   git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../git/branch.html">
+   Branching
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="overview.html">
+   Python &amp; Conda
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conda.html">
+   Conda
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="installconda.html">
+   Installing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Conda Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="myenv.html">
+   My Recommended Conda Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter.html">
+   Jupyter Notebooks
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -227,15 +347,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">VERSION</span></code> is the version number of python</p></li>
 </ul>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="298e6356-e758-4dda-a4b0-560772e6febb" name="a9cd40b8-9893-46d4-9754-b2744a365081" type="radio">
-</input><label class="sd-tab-label" for="298e6356-e758-4dda-a4b0-560772e6febb">
+<input checked="checked" id="73e6d48d-1fc8-415f-9cf4-b0d567750dec" name="d9bb48d5-e5ff-4326-8fff-90eea730c183" type="radio">
+</input><label class="sd-tab-label" for="73e6d48d-1fc8-415f-9cf4-b0d567750dec">
 New Environment</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n NAME                          
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>NAME<span class="w">                          </span>
 </pre></div>
 </div>
 </div>
-<input id="dc7adae5-48ff-4a4c-bcb5-4fef46aa643d" name="a9cd40b8-9893-46d4-9754-b2744a365081" type="radio">
-</input><label class="sd-tab-label" for="dc7adae5-48ff-4a4c-bcb5-4fef46aa643d">
+<input id="50cc8bff-7faa-4d35-aaa0-aba1e9d49f52" name="d9bb48d5-e5ff-4326-8fff-90eea730c183" type="radio">
+</input><label class="sd-tab-label" for="50cc8bff-7faa-4d35-aaa0-aba1e9d49f52">
 env w/ python verion</label><div class="sd-tab-content docutils">
 <p>conda create -n NAME python=VERSION</p>
 </div>
@@ -255,13 +375,13 @@ env w/ python verion</label><div class="sd-tab-content docutils">
 <section id="leaving-environment">
 <h2>Leaving Environment<a class="headerlink" href="#leaving-environment" title="Permalink to this headline">#</a></h2>
 <p>Use <code class="docutils literal notranslate"><span class="pre">deactivate</span></code> if you want to leave or switch to a different conda environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda deactivate
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>deactivate
 </pre></div>
 </div>
 </section>
 <section id="deleting-conda-environments-and-related-packages">
 <h2>Deleting conda environments and related packages.<a class="headerlink" href="#deleting-conda-environments-and-related-packages" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda env remove -n NAME --all
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>NAME<span class="w"> </span>--all
 </pre></div>
 </div>
 </section>
@@ -318,6 +438,20 @@ env w/ python verion</label><div class="sd-tab-content docutils">
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="installconda.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Installing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="myenv.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">My Recommended Conda Setup</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>

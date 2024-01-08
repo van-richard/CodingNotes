@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -198,7 +221,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Generate Keys<a class="headerlink" href="#generate-keys" title="Permalink to this headline">#</a></h2>
 <p>Start on your local computer in your home directory.</p>
 <p>Use the command, <span class="xref std std-term">ssh-keygen</span>, for authentication key generation, management and conversion:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t rsa -b <span class="m">4096</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span>
 </pre></div>
 </div>
 <p>We include the options <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">rsa</span></code> to generate the key in RSA format. The RSA is compatible with most SSH clients and servers. The option, <code class="docutils literal notranslate"><span class="pre">-b</span> <span class="pre">4096</span></code>, specifies the number of bits in the key to create.</p>
@@ -207,11 +230,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Do not set a passphrase when creating the key (Press enter 3 times).</strong></p>
 </div>
 <p>Create a <code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code> directory on the supercomputer from <strong>your local machine</strong>, without logging in.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh van@pete.hpc.okstate.edu mkdir -p .ssh
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>.ssh
 </pre></div>
 </div>
 <p>Now you can add your <strong>public key</strong>, <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>, to the server (This will be the last time you enter your password.) with the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat ~/.ssh/id_rsa.pub <span class="p">|</span> ssh van@pete.hpc.okstate.edu <span class="s1">&#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu<span class="w"> </span><span class="s1">&#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39;</span>
 </pre></div>
 </div>
 <ul class="simple">

@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
@@ -54,7 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -67,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/quickstart/PDBFiles.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="What are XYZ Files?" href="XYZFiles.html" />
+    <link rel="prev" title="Molecular Structure Files" href="StructureFiles.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +104,36 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="overview.html">
+  A (not so) Quick Start Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../programming/bash/overview.html">
+  bash Shell
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../simulation/md.html">
+  Classical MD
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../simulation/qmmm.html">
+  QM/MM
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../notes/binding.html">
+  Binding Affinity
+ </a>
+</li>
+
     
 </ul>
       </div>
@@ -114,7 +144,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -134,7 +187,46 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="terminal.html">
+   Terminal, Shell, &amp; Bash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Supercomputer.html">
+   Supercomputers
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="StructureFiles.html">
+   Molecular Structure Files
+  </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exploring PDB Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="XYZFiles.html">
+     What are XYZ Files?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="BasicMD.html">
+     Briefly, Molecular Dynamics
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -263,34 +355,34 @@ const thebe_selector_output = ".output, .cell_output"
 <section id="viewing-the-contents-of-1aki-pdb">
 <h2>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code><a class="headerlink" href="#viewing-the-contents-of-1aki-pdb" title="Permalink to this headline">#</a></h2>
 <p>This should be in your <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code> directory. Using your terminal, change directories into this directory with <span class="xref std std-term">cd</span>, and then use <span class="xref std std-term">less</span> to view the file. Example on MacOS:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>             <span class="c1"># Print the current working directory to see where you are</span>
-<span class="nb">cd</span>              <span class="c1"># Change directories to /Users/[username]</span>
-<span class="nb">cd</span> Downloads/   <span class="c1"># Change directories to Downloads</span>
-less 1aki.pdb   <span class="c1"># View the contents using the command &quot;less&quot;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span><span class="w">             </span><span class="c1"># Print the current working directory to see where you are</span>
+<span class="nb">cd</span><span class="w">              </span><span class="c1"># Change directories to /Users/[username]</span>
+<span class="nb">cd</span><span class="w"> </span>Downloads/<span class="w">   </span><span class="c1"># Change directories to Downloads</span>
+less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1"># View the contents using the command &quot;less&quot;</span>
 </pre></div>
 </div>
 <p>The <span class="xref std std-term">less</span> command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn’t access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).</p>
 <p>When you get PDB files the from RCSB, they will start with some information pertaining to RCSB data, biological system, experiments performed, and journal/author details. Here is the first 20 lines of the files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>HEADER    HYDROLASE                               <span class="m">19</span>-MAY-97   1AKI     
-<span class="linenos"> 2</span>TITLE     THE STRUCTURE OF THE ORTHORHOMBIC FORM OF HEN EGG-WHITE LYSOZYME AT   
-<span class="linenos"> 3</span>TITLE    <span class="m">2</span> <span class="m">1</span>.5 ANGSTROMS RESOLUTION     
-<span class="linenos"> 4</span>COMPND    MOL_ID: <span class="m">1</span><span class="p">;</span>     
-<span class="linenos"> 5</span>COMPND   <span class="m">2</span> MOLECULE: LYSOZYME<span class="p">;</span>     
-<span class="linenos"> 6</span>COMPND   <span class="m">3</span> CHAIN: A<span class="p">;</span>     
-<span class="linenos"> 7</span>COMPND   <span class="m">4</span> EC: <span class="m">3</span>.2.1.17     
-<span class="linenos"> 8</span>SOURCE    MOL_ID: <span class="m">1</span><span class="p">;</span>     
-<span class="linenos"> 9</span>SOURCE   <span class="m">2</span> ORGANISM_SCIENTIFIC: GALLUS GALLUS<span class="p">;</span>     
-<span class="linenos">10</span>SOURCE   <span class="m">3</span> ORGANISM_COMMON: CHICKEN<span class="p">;</span>     
-<span class="linenos">11</span>SOURCE   <span class="m">4</span> ORGANISM_TAXID: <span class="m">9031</span><span class="p">;</span>     
-<span class="linenos">12</span>SOURCE   <span class="m">5</span> CELL: EGG     
-<span class="linenos">13</span>KEYWDS    HYDROLASE, GLYCOSIDASE     
-<span class="linenos">14</span>EXPDTA    X-RAY DIFFRACTION     
-<span class="linenos">15</span>AUTHOR    D.CARTER,J.HE,J.R.RUBLE,B.WRIGHT     
-<span class="linenos">16</span>REVDAT   <span class="m">3</span>   <span class="m">02</span>-AUG-23 1AKI    <span class="m">1</span>       REMARK     
-<span class="linenos">17</span>REVDAT   <span class="m">2</span>   <span class="m">24</span>-FEB-09 1AKI    <span class="m">1</span>       VERSN     
-<span class="linenos">18</span>REVDAT   <span class="m">1</span>   <span class="m">19</span>-NOV-97 1AKI    <span class="m">0</span>     
-<span class="linenos">19</span>JRNL        AUTH   P.J.ARTYMIUK,C.C.F.BLAKE,D.W.RICE,K.S.WILSON     
-<span class="linenos">20</span>JRNL        TITL   THE STRUCTURES OF THE MONOCLINIC AND ORTHORHOMBIC FORMS OF    
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>HEADER<span class="w">    </span>HYDROLASE<span class="w">                               </span><span class="m">19</span>-MAY-97<span class="w">   </span>1AKI<span class="w">     </span>
+<span class="linenos"> 2</span>TITLE<span class="w">     </span>THE<span class="w"> </span>STRUCTURE<span class="w"> </span>OF<span class="w"> </span>THE<span class="w"> </span>ORTHORHOMBIC<span class="w"> </span>FORM<span class="w"> </span>OF<span class="w"> </span>HEN<span class="w"> </span>EGG-WHITE<span class="w"> </span>LYSOZYME<span class="w"> </span>AT<span class="w">   </span>
+<span class="linenos"> 3</span>TITLE<span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>.5<span class="w"> </span>ANGSTROMS<span class="w"> </span>RESOLUTION<span class="w">     </span>
+<span class="linenos"> 4</span>COMPND<span class="w">    </span>MOL_ID:<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w">     </span>
+<span class="linenos"> 5</span>COMPND<span class="w">   </span><span class="m">2</span><span class="w"> </span>MOLECULE:<span class="w"> </span>LYSOZYME<span class="p">;</span><span class="w">     </span>
+<span class="linenos"> 6</span>COMPND<span class="w">   </span><span class="m">3</span><span class="w"> </span>CHAIN:<span class="w"> </span>A<span class="p">;</span><span class="w">     </span>
+<span class="linenos"> 7</span>COMPND<span class="w">   </span><span class="m">4</span><span class="w"> </span>EC:<span class="w"> </span><span class="m">3</span>.2.1.17<span class="w">     </span>
+<span class="linenos"> 8</span>SOURCE<span class="w">    </span>MOL_ID:<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w">     </span>
+<span class="linenos"> 9</span>SOURCE<span class="w">   </span><span class="m">2</span><span class="w"> </span>ORGANISM_SCIENTIFIC:<span class="w"> </span>GALLUS<span class="w"> </span>GALLUS<span class="p">;</span><span class="w">     </span>
+<span class="linenos">10</span>SOURCE<span class="w">   </span><span class="m">3</span><span class="w"> </span>ORGANISM_COMMON:<span class="w"> </span>CHICKEN<span class="p">;</span><span class="w">     </span>
+<span class="linenos">11</span>SOURCE<span class="w">   </span><span class="m">4</span><span class="w"> </span>ORGANISM_TAXID:<span class="w"> </span><span class="m">9031</span><span class="p">;</span><span class="w">     </span>
+<span class="linenos">12</span>SOURCE<span class="w">   </span><span class="m">5</span><span class="w"> </span>CELL:<span class="w"> </span>EGG<span class="w">     </span>
+<span class="linenos">13</span>KEYWDS<span class="w">    </span>HYDROLASE,<span class="w"> </span>GLYCOSIDASE<span class="w">     </span>
+<span class="linenos">14</span>EXPDTA<span class="w">    </span>X-RAY<span class="w"> </span>DIFFRACTION<span class="w">     </span>
+<span class="linenos">15</span>AUTHOR<span class="w">    </span>D.CARTER,J.HE,J.R.RUBLE,B.WRIGHT<span class="w">     </span>
+<span class="linenos">16</span>REVDAT<span class="w">   </span><span class="m">3</span><span class="w">   </span><span class="m">02</span>-AUG-23<span class="w"> </span>1AKI<span class="w">    </span><span class="m">1</span><span class="w">       </span>REMARK<span class="w">     </span>
+<span class="linenos">17</span>REVDAT<span class="w">   </span><span class="m">2</span><span class="w">   </span><span class="m">24</span>-FEB-09<span class="w"> </span>1AKI<span class="w">    </span><span class="m">1</span><span class="w">       </span>VERSN<span class="w">     </span>
+<span class="linenos">18</span>REVDAT<span class="w">   </span><span class="m">1</span><span class="w">   </span><span class="m">19</span>-NOV-97<span class="w"> </span>1AKI<span class="w">    </span><span class="m">0</span><span class="w">     </span>
+<span class="linenos">19</span>JRNL<span class="w">        </span>AUTH<span class="w">   </span>P.J.ARTYMIUK,C.C.F.BLAKE,D.W.RICE,K.S.WILSON<span class="w">     </span>
+<span class="linenos">20</span>JRNL<span class="w">        </span>TITL<span class="w">   </span>THE<span class="w"> </span>STRUCTURES<span class="w"> </span>OF<span class="w"> </span>THE<span class="w"> </span>MONOCLINIC<span class="w"> </span>AND<span class="w"> </span>ORTHORHOMBIC<span class="w"> </span>FORMS<span class="w"> </span>OF<span class="w">    </span>
 </pre></div>
 </div>
 <p>Other lines that start with <code class="docutils literal notranslate"><span class="pre">REMARK</span></code>, <code class="docutils literal notranslate"><span class="pre">HELIX</span></code>, <code class="docutils literal notranslate"><span class="pre">SHEET</span></code>, <code class="docutils literal notranslate"><span class="pre">SSBOND</span></code>, etc. (lines up to <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>) contain experimental details and structural/sequence information.</p>
@@ -343,26 +435,26 @@ less 1aki.pdb   <span class="c1"># View the contents using the command &quot;les
 <h2><code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)<a class="headerlink" href="#atom-lines-pdb-1aki" title="Permalink to this headline">#</a></h2>
 <p>Use your d-pad to get to first <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> line (this is line number, 347).</p>
 <p>The first 20 ‘ATOM` lines in PDB 1AKI file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">347</span>ATOM      <span class="m">1</span>  N   LYS A   <span class="m">1</span>      <span class="m">35</span>.365  <span class="m">22</span>.342 -11.980  <span class="m">1</span>.00 <span class="m">22</span>.28           N  
-<span class="linenos">348</span>ATOM      <span class="m">2</span>  CA  LYS A   <span class="m">1</span>      <span class="m">35</span>.892  <span class="m">21</span>.073 -11.427  <span class="m">1</span>.00 <span class="m">21</span>.12           C  
-<span class="linenos">349</span>ATOM      <span class="m">3</span>  C   LYS A   <span class="m">1</span>      <span class="m">34</span>.741  <span class="m">20</span>.264 -10.844  <span class="m">1</span>.00 <span class="m">16</span>.85           C  
-<span class="linenos">350</span>ATOM      <span class="m">4</span>  O   LYS A   <span class="m">1</span>      <span class="m">33</span>.945  <span class="m">20</span>.813 -10.081  <span class="m">1</span>.00 <span class="m">18</span>.94           O  
-<span class="linenos">351</span>ATOM      <span class="m">5</span>  CB  LYS A   <span class="m">1</span>      <span class="m">36</span>.872  <span class="m">21</span>.435 -10.306  <span class="m">1</span>.00 <span class="m">20</span>.78           C  
-<span class="linenos">352</span>ATOM      <span class="m">6</span>  CG  LYS A   <span class="m">1</span>      <span class="m">37</span>.453  <span class="m">20</span>.248  -9.565  <span class="m">1</span>.00 <span class="m">18</span>.47           C  
-<span class="linenos">353</span>ATOM      <span class="m">7</span>  CD  LYS A   <span class="m">1</span>      <span class="m">38</span>.688  <span class="m">20</span>.649  -8.775  <span class="m">1</span>.00 <span class="m">20</span>.32           C  
-<span class="linenos">354</span>ATOM      <span class="m">8</span>  CE  LYS A   <span class="m">1</span>      <span class="m">39</span>.057  <span class="m">19</span>.508  -7.837  <span class="m">1</span>.00 <span class="m">24</span>.76           C  
-<span class="linenos">355</span>ATOM      <span class="m">9</span>  NZ  LYS A   <span class="m">1</span>      <span class="m">40</span>.423  <span class="m">19</span>.771  -7.299  <span class="m">1</span>.00 <span class="m">28</span>.27           N  
-<span class="linenos">356</span>ATOM     <span class="m">10</span>  N   VAL A   <span class="m">2</span>      <span class="m">34</span>.739  <span class="m">18</span>.961 -11.042  <span class="m">1</span>.00 <span class="m">19</span>.96           N  
-<span class="linenos">357</span>ATOM     <span class="m">11</span>  CA  VAL A   <span class="m">2</span>      <span class="m">33</span>.903  <span class="m">17</span>.998 -10.333  <span class="m">1</span>.00 <span class="m">18</span>.10           C  
-<span class="linenos">358</span>ATOM     <span class="m">12</span>  C   VAL A   <span class="m">2</span>      <span class="m">34</span>.800  <span class="m">17</span>.312  -9.294  <span class="m">1</span>.00 <span class="m">19</span>.39           C  
-<span class="linenos">359</span>ATOM     <span class="m">13</span>  O   VAL A   <span class="m">2</span>      <span class="m">35</span>.759  <span class="m">16</span>.605  -9.665  <span class="m">1</span>.00 <span class="m">22</span>.14           O  
-<span class="linenos">360</span>ATOM     <span class="m">14</span>  CB  VAL A   <span class="m">2</span>      <span class="m">33</span>.140  <span class="m">17</span>.034 -11.232  <span class="m">1</span>.00 <span class="m">16</span>.81           C  
-<span class="linenos">361</span>ATOM     <span class="m">15</span>  CG1 VAL A   <span class="m">2</span>      <span class="m">32</span>.251  <span class="m">16</span>.084 -10.434  <span class="m">1</span>.00 <span class="m">21</span>.92           C  
-<span class="linenos">362</span>ATOM     <span class="m">16</span>  CG2 VAL A   <span class="m">2</span>      <span class="m">32</span>.294  <span class="m">17</span>.714 -12.290  <span class="m">1</span>.00 <span class="m">19</span>.46           C  
-<span class="linenos">363</span>ATOM     <span class="m">17</span>  N   PHE A   <span class="m">3</span>      <span class="m">34</span>.491  <span class="m">17</span>.546  -8.038  <span class="m">1</span>.00 <span class="m">19</span>.89           N  
-<span class="linenos">364</span>ATOM     <span class="m">18</span>  CA  PHE A   <span class="m">3</span>      <span class="m">35</span>.185  <span class="m">16</span>.903  -6.918  <span class="m">1</span>.00 <span class="m">17</span>.43           C  
-<span class="linenos">365</span>ATOM     <span class="m">19</span>  C   PHE A   <span class="m">3</span>      <span class="m">34</span>.742  <span class="m">15</span>.441  -6.771  <span class="m">1</span>.00 <span class="m">15</span>.70           C  
-<span class="linenos">366</span>ATOM     <span class="m">20</span>  O   PHE A   <span class="m">3</span>      <span class="m">33</span>.525  <span class="m">15</span>.162  -6.862  <span class="m">1</span>.00 <span class="m">18</span>.52           O 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">347</span>ATOM<span class="w">      </span><span class="m">1</span><span class="w">  </span>N<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">35</span>.365<span class="w">  </span><span class="m">22</span>.342<span class="w"> </span>-11.980<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">22</span>.28<span class="w">           </span>N<span class="w">  </span>
+<span class="linenos">348</span>ATOM<span class="w">      </span><span class="m">2</span><span class="w">  </span>CA<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">35</span>.892<span class="w">  </span><span class="m">21</span>.073<span class="w"> </span>-11.427<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">21</span>.12<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">349</span>ATOM<span class="w">      </span><span class="m">3</span><span class="w">  </span>C<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">34</span>.741<span class="w">  </span><span class="m">20</span>.264<span class="w"> </span>-10.844<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">16</span>.85<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">350</span>ATOM<span class="w">      </span><span class="m">4</span><span class="w">  </span>O<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">33</span>.945<span class="w">  </span><span class="m">20</span>.813<span class="w"> </span>-10.081<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.94<span class="w">           </span>O<span class="w">  </span>
+<span class="linenos">351</span>ATOM<span class="w">      </span><span class="m">5</span><span class="w">  </span>CB<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">36</span>.872<span class="w">  </span><span class="m">21</span>.435<span class="w"> </span>-10.306<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">20</span>.78<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">352</span>ATOM<span class="w">      </span><span class="m">6</span><span class="w">  </span>CG<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">37</span>.453<span class="w">  </span><span class="m">20</span>.248<span class="w">  </span>-9.565<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.47<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">353</span>ATOM<span class="w">      </span><span class="m">7</span><span class="w">  </span>CD<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">38</span>.688<span class="w">  </span><span class="m">20</span>.649<span class="w">  </span>-8.775<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">20</span>.32<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">354</span>ATOM<span class="w">      </span><span class="m">8</span><span class="w">  </span>CE<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">39</span>.057<span class="w">  </span><span class="m">19</span>.508<span class="w">  </span>-7.837<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">24</span>.76<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">355</span>ATOM<span class="w">      </span><span class="m">9</span><span class="w">  </span>NZ<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">40</span>.423<span class="w">  </span><span class="m">19</span>.771<span class="w">  </span>-7.299<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">28</span>.27<span class="w">           </span>N<span class="w">  </span>
+<span class="linenos">356</span>ATOM<span class="w">     </span><span class="m">10</span><span class="w">  </span>N<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">34</span>.739<span class="w">  </span><span class="m">18</span>.961<span class="w"> </span>-11.042<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.96<span class="w">           </span>N<span class="w">  </span>
+<span class="linenos">357</span>ATOM<span class="w">     </span><span class="m">11</span><span class="w">  </span>CA<span class="w">  </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">33</span>.903<span class="w">  </span><span class="m">17</span>.998<span class="w"> </span>-10.333<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.10<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">358</span>ATOM<span class="w">     </span><span class="m">12</span><span class="w">  </span>C<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">34</span>.800<span class="w">  </span><span class="m">17</span>.312<span class="w">  </span>-9.294<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.39<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">359</span>ATOM<span class="w">     </span><span class="m">13</span><span class="w">  </span>O<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">35</span>.759<span class="w">  </span><span class="m">16</span>.605<span class="w">  </span>-9.665<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">22</span>.14<span class="w">           </span>O<span class="w">  </span>
+<span class="linenos">360</span>ATOM<span class="w">     </span><span class="m">14</span><span class="w">  </span>CB<span class="w">  </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">33</span>.140<span class="w">  </span><span class="m">17</span>.034<span class="w"> </span>-11.232<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">16</span>.81<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">361</span>ATOM<span class="w">     </span><span class="m">15</span><span class="w">  </span>CG1<span class="w"> </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">32</span>.251<span class="w">  </span><span class="m">16</span>.084<span class="w"> </span>-10.434<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">21</span>.92<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">362</span>ATOM<span class="w">     </span><span class="m">16</span><span class="w">  </span>CG2<span class="w"> </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">32</span>.294<span class="w">  </span><span class="m">17</span>.714<span class="w"> </span>-12.290<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.46<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">363</span>ATOM<span class="w">     </span><span class="m">17</span><span class="w">  </span>N<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">34</span>.491<span class="w">  </span><span class="m">17</span>.546<span class="w">  </span>-8.038<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.89<span class="w">           </span>N<span class="w">  </span>
+<span class="linenos">364</span>ATOM<span class="w">     </span><span class="m">18</span><span class="w">  </span>CA<span class="w">  </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">35</span>.185<span class="w">  </span><span class="m">16</span>.903<span class="w">  </span>-6.918<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">17</span>.43<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">365</span>ATOM<span class="w">     </span><span class="m">19</span><span class="w">  </span>C<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">34</span>.742<span class="w">  </span><span class="m">15</span>.441<span class="w">  </span>-6.771<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">15</span>.70<span class="w">           </span>C<span class="w">  </span>
+<span class="linenos">366</span>ATOM<span class="w">     </span><span class="m">20</span><span class="w">  </span>O<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">33</span>.525<span class="w">  </span><span class="m">15</span>.162<span class="w">  </span>-6.862<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.52<span class="w">           </span>O<span class="w"> </span>
 </pre></div>
 </div>
 <p>Explanation of each column:</p>
@@ -429,8 +521,8 @@ less 1aki.pdb   <span class="c1"># View the contents using the command &quot;les
 <h2>Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines<a class="headerlink" href="#chains-are-separated-by-ter-lines" title="Permalink to this headline">#</a></h2>
 <p>Each Chain is identified by an alphabetical letter, and an additional <code class="docutils literal notranslate"><span class="pre">TER</span></code> line. The <code class="docutils literal notranslate"><span class="pre">TER</span></code> line occurs at the end of the chain. If we’re looking at proteins, then usually the C-terminal Oxygen will have the atom type ,<code class="docutils literal notranslate"><span class="pre">OXT</span></code>, followed by a <code class="docutils literal notranslate"><span class="pre">TER</span></code>!</p>
 <p>View the contents of PDB <strong>7Z4J</strong> using less, and you can see for yourself:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Downloads/ <span class="c1"># Change directories to /Users/[username] on MacOS</span>
-less 7z4j.pdb   <span class="c1"># View file</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Downloads/<span class="w"> </span><span class="c1"># Change directories to /Users/[username] on MacOS</span>
+less<span class="w"> </span>7z4j.pdb<span class="w">   </span><span class="c1"># View file</span>
 <span class="c1"># While in less, you start at the top of 7z4j.pdb  </span>
 <span class="c1"># You can skip to the bottom of the file by pressing &quot;Shift + g&quot;</span>
 </pre></div>
@@ -440,26 +532,26 @@ less 7z4j.pdb   <span class="c1"># View file</span>
 <p>In <span class="xref std std-term">less</span>, you can skip to the bottom of the file by pressing <code class="docutils literal notranslate"><span class="pre">shift</span></code>+<code class="docutils literal notranslate"><span class="pre">g</span></code>. To go back to the top, just press <code class="docutils literal notranslate"><span class="pre">g</span></code>.</p>
 </div>
 <p>The last ~20 lines containing ‘ATOM’, ‘HETATM’, ‘TER’ should look like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ATOM  <span class="m">13936</span>  CD2 LEU B1365     <span class="m">105</span>.073 <span class="m">161</span>.302 <span class="m">113</span>.513  <span class="m">1</span>.00152.63           C  
-ATOM  <span class="m">13937</span>  N   GLY B1366     <span class="m">106</span>.547 <span class="m">165</span>.755 <span class="m">115</span>.990  <span class="m">1</span>.00154.73           N  
-ATOM  <span class="m">13938</span>  CA  GLY B1366     <span class="m">106</span>.450 <span class="m">166</span>.850 <span class="m">116</span>.936  <span class="m">1</span>.00153.70           C  
-ATOM  <span class="m">13939</span>  C   GLY B1366     <span class="m">107</span>.728 <span class="m">167</span>.109 <span class="m">117</span>.706  <span class="m">1</span>.00153.60           C  
-ATOM  <span class="m">13940</span>  O   GLY B1366     <span class="m">107</span>.771 <span class="m">167</span>.980 <span class="m">118</span>.575  <span class="m">1</span>.00151.76           O  
-TER   <span class="m">13941</span>      GLY B1366                                                      
-HETATM13942 MG    MG A <span class="m">201</span>     <span class="m">108</span>.471 <span class="m">130</span>.166 <span class="m">143</span>.047  <span class="m">1</span>.00124.93          MG  
-HETATM13943 MG    MG B1401     <span class="m">128</span>.982 <span class="m">134</span>.222 <span class="m">104</span>.696  <span class="m">1</span>.00 <span class="m">62</span>.38          MG  
-HETATM13944 MG    MG B1402     <span class="m">129</span>.678 <span class="m">130</span>.604 <span class="m">104</span>.214  <span class="m">1</span>.00 <span class="m">83</span>.43          MG  
-HETATM13945 MG    MG B1403     <span class="m">134</span>.288 <span class="m">121</span>.616 <span class="m">135</span>.973  <span class="m">1</span>.00 <span class="m">56</span>.44          MG  
-HETATM13946  O   HOH A <span class="m">301</span>     <span class="m">107</span>.802 <span class="m">131</span>.851 <span class="m">143</span>.930  <span class="m">1</span>.00 <span class="m">99</span>.69           O  
-HETATM13947  O   HOH A <span class="m">302</span>     <span class="m">108</span>.431 <span class="m">129</span>.318 <span class="m">144</span>.849  <span class="m">1</span>.00 <span class="m">93</span>.31           O  
-HETATM13948  O   HOH A <span class="m">303</span>     <span class="m">108</span>.156 <span class="m">131</span>.547 <span class="m">141</span>.770  <span class="m">1</span>.00 <span class="m">95</span>.01           O  
-HETATM13949  O   HOH A <span class="m">304</span>     <span class="m">109</span>.489 <span class="m">129</span>.827 <span class="m">141</span>.295  <span class="m">1</span>.00 <span class="m">95</span>.43           O  
-HETATM13950  O   HOH A <span class="m">305</span>     <span class="m">107</span>.313 <span class="m">129</span>.453 <span class="m">141</span>.610  <span class="m">1</span>.00 <span class="m">95</span>.40           O  
-HETATM13951  O   HOH A <span class="m">306</span>     <span class="m">106</span>.637 <span class="m">129</span>.981 <span class="m">143</span>.643  <span class="m">1</span>.00113.87           O  
-HETATM13952  O   HOH C <span class="m">101</span>     <span class="m">134</span>.709 <span class="m">123</span>.362 <span class="m">135</span>.209  <span class="m">1</span>.00 <span class="m">86</span>.02           O  
-HETATM13953  O   HOH B1501     <span class="m">134</span>.738 <span class="m">122</span>.897 <span class="m">137</span>.348  <span class="m">1</span>.00 <span class="m">88</span>.14           O  
-MASTER      <span class="m">282</span>    <span class="m">0</span>    <span class="m">4</span>   <span class="m">69</span>   <span class="m">32</span>    <span class="m">0</span>    <span class="m">0</span>    <span class="m">613948</span>    <span class="m">5</span>   <span class="m">24</span>  <span class="m">122</span>          
-END                                                                             
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ATOM<span class="w">  </span><span class="m">13936</span><span class="w">  </span>CD2<span class="w"> </span>LEU<span class="w"> </span>B1365<span class="w">     </span><span class="m">105</span>.073<span class="w"> </span><span class="m">161</span>.302<span class="w"> </span><span class="m">113</span>.513<span class="w">  </span><span class="m">1</span>.00152.63<span class="w">           </span>C<span class="w">  </span>
+ATOM<span class="w">  </span><span class="m">13937</span><span class="w">  </span>N<span class="w">   </span>GLY<span class="w"> </span>B1366<span class="w">     </span><span class="m">106</span>.547<span class="w"> </span><span class="m">165</span>.755<span class="w"> </span><span class="m">115</span>.990<span class="w">  </span><span class="m">1</span>.00154.73<span class="w">           </span>N<span class="w">  </span>
+ATOM<span class="w">  </span><span class="m">13938</span><span class="w">  </span>CA<span class="w">  </span>GLY<span class="w"> </span>B1366<span class="w">     </span><span class="m">106</span>.450<span class="w"> </span><span class="m">166</span>.850<span class="w"> </span><span class="m">116</span>.936<span class="w">  </span><span class="m">1</span>.00153.70<span class="w">           </span>C<span class="w">  </span>
+ATOM<span class="w">  </span><span class="m">13939</span><span class="w">  </span>C<span class="w">   </span>GLY<span class="w"> </span>B1366<span class="w">     </span><span class="m">107</span>.728<span class="w"> </span><span class="m">167</span>.109<span class="w"> </span><span class="m">117</span>.706<span class="w">  </span><span class="m">1</span>.00153.60<span class="w">           </span>C<span class="w">  </span>
+ATOM<span class="w">  </span><span class="m">13940</span><span class="w">  </span>O<span class="w">   </span>GLY<span class="w"> </span>B1366<span class="w">     </span><span class="m">107</span>.771<span class="w"> </span><span class="m">167</span>.980<span class="w"> </span><span class="m">118</span>.575<span class="w">  </span><span class="m">1</span>.00151.76<span class="w">           </span>O<span class="w">  </span>
+TER<span class="w">   </span><span class="m">13941</span><span class="w">      </span>GLY<span class="w"> </span>B1366<span class="w">                                                      </span>
+HETATM13942<span class="w"> </span>MG<span class="w">    </span>MG<span class="w"> </span>A<span class="w"> </span><span class="m">201</span><span class="w">     </span><span class="m">108</span>.471<span class="w"> </span><span class="m">130</span>.166<span class="w"> </span><span class="m">143</span>.047<span class="w">  </span><span class="m">1</span>.00124.93<span class="w">          </span>MG<span class="w">  </span>
+HETATM13943<span class="w"> </span>MG<span class="w">    </span>MG<span class="w"> </span>B1401<span class="w">     </span><span class="m">128</span>.982<span class="w"> </span><span class="m">134</span>.222<span class="w"> </span><span class="m">104</span>.696<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">62</span>.38<span class="w">          </span>MG<span class="w">  </span>
+HETATM13944<span class="w"> </span>MG<span class="w">    </span>MG<span class="w"> </span>B1402<span class="w">     </span><span class="m">129</span>.678<span class="w"> </span><span class="m">130</span>.604<span class="w"> </span><span class="m">104</span>.214<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">83</span>.43<span class="w">          </span>MG<span class="w">  </span>
+HETATM13945<span class="w"> </span>MG<span class="w">    </span>MG<span class="w"> </span>B1403<span class="w">     </span><span class="m">134</span>.288<span class="w"> </span><span class="m">121</span>.616<span class="w"> </span><span class="m">135</span>.973<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">56</span>.44<span class="w">          </span>MG<span class="w">  </span>
+HETATM13946<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">301</span><span class="w">     </span><span class="m">107</span>.802<span class="w"> </span><span class="m">131</span>.851<span class="w"> </span><span class="m">143</span>.930<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">99</span>.69<span class="w">           </span>O<span class="w">  </span>
+HETATM13947<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">302</span><span class="w">     </span><span class="m">108</span>.431<span class="w"> </span><span class="m">129</span>.318<span class="w"> </span><span class="m">144</span>.849<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">93</span>.31<span class="w">           </span>O<span class="w">  </span>
+HETATM13948<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">303</span><span class="w">     </span><span class="m">108</span>.156<span class="w"> </span><span class="m">131</span>.547<span class="w"> </span><span class="m">141</span>.770<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">95</span>.01<span class="w">           </span>O<span class="w">  </span>
+HETATM13949<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">304</span><span class="w">     </span><span class="m">109</span>.489<span class="w"> </span><span class="m">129</span>.827<span class="w"> </span><span class="m">141</span>.295<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">95</span>.43<span class="w">           </span>O<span class="w">  </span>
+HETATM13950<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">305</span><span class="w">     </span><span class="m">107</span>.313<span class="w"> </span><span class="m">129</span>.453<span class="w"> </span><span class="m">141</span>.610<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">95</span>.40<span class="w">           </span>O<span class="w">  </span>
+HETATM13951<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>A<span class="w"> </span><span class="m">306</span><span class="w">     </span><span class="m">106</span>.637<span class="w"> </span><span class="m">129</span>.981<span class="w"> </span><span class="m">143</span>.643<span class="w">  </span><span class="m">1</span>.00113.87<span class="w">           </span>O<span class="w">  </span>
+HETATM13952<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>C<span class="w"> </span><span class="m">101</span><span class="w">     </span><span class="m">134</span>.709<span class="w"> </span><span class="m">123</span>.362<span class="w"> </span><span class="m">135</span>.209<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">86</span>.02<span class="w">           </span>O<span class="w">  </span>
+HETATM13953<span class="w">  </span>O<span class="w">   </span>HOH<span class="w"> </span>B1501<span class="w">     </span><span class="m">134</span>.738<span class="w"> </span><span class="m">122</span>.897<span class="w"> </span><span class="m">137</span>.348<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">88</span>.14<span class="w">           </span>O<span class="w">  </span>
+MASTER<span class="w">      </span><span class="m">282</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">4</span><span class="w">   </span><span class="m">69</span><span class="w">   </span><span class="m">32</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">0</span><span class="w">    </span><span class="m">613948</span><span class="w">    </span><span class="m">5</span><span class="w">   </span><span class="m">24</span><span class="w">  </span><span class="m">122</span><span class="w">          </span>
+END<span class="w">                                                                             </span>
 </pre></div>
 </div>
 <p>We see here that following Chain B, we have a <code class="docutils literal notranslate"><span class="pre">TER</span></code> line, indicating the end of the protein. Following our SpyCas9 enzyme, we have some <code class="docutils literal notranslate"><span class="pre">HETATM</span></code> or non-standard residues such as, magnesium ions and waters, solved with the Cryo-EM structure.</p>
@@ -576,6 +668,20 @@ END
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="StructureFiles.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Molecular Structure Files</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="XYZFiles.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">What are XYZ Files?</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>

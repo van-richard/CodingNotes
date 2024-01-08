@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -175,29 +198,29 @@ const thebe_selector_output = ".output, .cell_output"
   <section class="tex2jax_ignore mathjax_ignore" id="scp-copy-files-folders-over-ssh">
 <h1><code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh<a class="headerlink" href="#scp-copy-files-folders-over-ssh" title="Permalink to this headline">#</a></h1>
 <p>Using the command, <code class="docutils literal notranslate"><span class="pre">scp</span></code>, is helpful for copying single files or folders that aren’t too large in size. The general notation is similar to <code class="docutils literal notranslate"><span class="pre">rsync</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp -r <span class="o">[</span>source<span class="o">]</span> <span class="o">[</span>destination<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>-r<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
 </pre></div>
 </div>
 <p>The option, <code class="docutils literal notranslate"><span class="pre">-r</span></code>, allows you to copy folders (<em>but this can be used with files regardless</em>). Here are some examples:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="94928287-918d-4a65-ac61-fbe0f60931a9" name="abeeeb61-4dd2-45bf-9953-ceafc9bef7c2" type="radio">
-</input><label class="sd-tab-label" for="94928287-918d-4a65-ac61-fbe0f60931a9">
+<input checked="checked" id="7b83aa1e-4968-49ee-9822-b29061a85aa5" name="2b7cb5d1-282a-4f1b-8a5d-62eb2c1781ba" type="radio">
+</input><label class="sd-tab-label" for="7b83aa1e-4968-49ee-9822-b29061a85aa5">
 File: Local to Server</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp file.txt van@pete.hpc.okstate.edu:/path/to/directory 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>file.txt<span class="w"> </span>van@pete.hpc.okstate.edu:/path/to/directory<span class="w"> </span>
 </pre></div>
 </div>
 </div>
-<input id="47f35e25-a0ff-4867-9567-bf997b520223" name="abeeeb61-4dd2-45bf-9953-ceafc9bef7c2" type="radio">
-</input><label class="sd-tab-label" for="47f35e25-a0ff-4867-9567-bf997b520223">
+<input id="5eaaf99e-335b-40a3-9a7e-fc7f62b47f3c" name="2b7cb5d1-282a-4f1b-8a5d-62eb2c1781ba" type="radio">
+</input><label class="sd-tab-label" for="5eaaf99e-335b-40a3-9a7e-fc7f62b47f3c">
 Directory: Local to Server</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp -r folder van@pete.hpc.okstate.edu:/path/to/directory 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>-r<span class="w"> </span>folder<span class="w"> </span>van@pete.hpc.okstate.edu:/path/to/directory<span class="w"> </span>
 </pre></div>
 </div>
 </div>
-<input id="a2f8baf9-9313-4c24-bfe0-89bf36992569" name="abeeeb61-4dd2-45bf-9953-ceafc9bef7c2" type="radio">
-</input><label class="sd-tab-label" for="a2f8baf9-9313-4c24-bfe0-89bf36992569">
+<input id="3ec9364f-3451-4e98-a4aa-b2b356e972de" name="2b7cb5d1-282a-4f1b-8a5d-62eb2c1781ba" type="radio">
+</input><label class="sd-tab-label" for="3ec9364f-3451-4e98-a4aa-b2b356e972de">
 Directory: Server to Local</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp -r van@pete.hpc.okstate.edu:/path/to/directory .
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>-r<span class="w"> </span>van@pete.hpc.okstate.edu:/path/to/directory<span class="w"> </span>.
 </pre></div>
 </div>
 </div>

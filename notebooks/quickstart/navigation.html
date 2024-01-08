@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -252,14 +275,14 @@ const thebe_selector_output = ".output, .cell_output"
 </aside>
 <p>Let’s make a new folder/directory, so our current working directory isn’t so lonely. To do this, use the :term:<code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command, short for make directory. This command takes an argument, i.e. the new folder name!</p>
 <p>The syntax is <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[argument]</span></code> or in other words <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[new</span> <span class="pre">folder</span> <span class="pre">name]</span></code>. Here, I will use the bracket notations (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) to imply this is some sort of input given by you. We can start by making a new folder called <code class="docutils literal notranslate"><span class="pre">test/</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir <span class="nb">test</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span><span class="nb">test</span>
 </pre></div>
 </div>
 </section>
 <section id="enter-exit-folders">
 <h2>Enter/Exit Folders<a class="headerlink" href="#enter-exit-folders" title="Permalink to this headline">#</a></h2>
 <p>We can enter a folder with the :term:<code class="docutils literal notranslate"><span class="pre">cd</span></code> command, short for change directories. This command takes an argument, following the syntax <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[argument]</span></code> or in other words <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[folder</span> <span class="pre">name]</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> <span class="nb">test</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
 </pre></div>
 </div>
 <p>Check where you are with <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, and you should see that you’re in the new working directory!</p>
@@ -267,12 +290,12 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>To go back one directory, use the argument <code class="docutils literal notranslate"><span class="pre">../</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ../
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../
 </pre></div>
 </div>
 <p>To go back to your “home” directory, you have two options:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span>    <span class="c1"># Option 1</span>
-<span class="nb">cd</span> ~  <span class="c1"># Option 2</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w">    </span><span class="c1"># Option 1</span>
+<span class="nb">cd</span><span class="w"> </span>~<span class="w">  </span><span class="c1"># Option 2</span>
 </pre></div>
 </div>
 <p>If you check your current working directory again, you should see that you’re back home</p>

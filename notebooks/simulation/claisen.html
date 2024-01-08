@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -313,13 +336,13 @@ const thebe_selector_output = ".output, .cell_output"
 <section id="prepare-project-folder-on-the-cluster">
 <h2>Prepare Project Folder on the Cluster<a class="headerlink" href="#prepare-project-folder-on-the-cluster" title="Permalink to this headline">#</a></h2>
 <p>Login to Pete with <code class="docutils literal notranslate"><span class="pre">ssh</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh USERNAME@pete.hpc.okstate.edu  <span class="c1"># Change `USERNAME` to your username</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>USERNAME@pete.hpc.okstate.edu<span class="w">  </span><span class="c1"># Change `USERNAME` to your username</span>
 </pre></div>
 </div>
 <p>Go to your <code class="docutils literal notranslate"><span class="pre">/scratch/USERNAME</span></code> directory, and make the project folder, “claisen”, and in it, make another folder called “pm3”. PME is the semiempirical method we will use to define the QM atoms.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /scratch/USERNAME/  <span class="c1"># Change `Username` to your username</span>
-mkdir -p claisen/pm3   <span class="c1"># Make project folder, and method folder</span>
-<span class="nb">cd</span> claisen/pm3         <span class="c1"># Go there</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/scratch/USERNAME/<span class="w">  </span><span class="c1"># Change `Username` to your username</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>claisen/pm3<span class="w">   </span><span class="c1"># Make project folder, and method folder</span>
+<span class="nb">cd</span><span class="w"> </span>claisen/pm3<span class="w">         </span><span class="c1"># Go there</span>
 </pre></div>
 </div>
 <p><em>Before moving on, we should talk about file management.</em></p>
@@ -347,13 +370,13 @@ mkdir -p claisen/pm3   <span class="c1"># Make project folder, and method folder
 <section id="reference-files-to-input-directory">
 <h2>Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory<a class="headerlink" href="#reference-files-to-input-directory" title="Permalink to this headline">#</a></h2>
 <p>Make the <code class="docutils literal notranslate"><span class="pre">input</span></code> directory. This is where we will store the PDB files and generate Amber inputs. Go into the folder, and use <code class="docutils literal notranslate"><span class="pre">pwd</span></code> to print the current working directory. We will copthe the output from <code class="docutils literal notranslate"><span class="pre">pwd</span></code> for our <code class="docutils literal notranslate"><span class="pre">scp</span></code> command later.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir input <span class="c1"># Make folder</span>
-<span class="nb">cd</span> input    <span class="c1"># Go into folder</span>
-<span class="nb">pwd</span>         <span class="c1"># Print working directory (Copy this output for scp)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>input<span class="w"> </span><span class="c1"># Make folder</span>
+<span class="nb">cd</span><span class="w"> </span>input<span class="w">    </span><span class="c1"># Go into folder</span>
+<span class="nb">pwd</span><span class="w">         </span><span class="c1"># Print working directory (Copy this output for scp)</span>
 </pre></div>
 </div>
 <p>Copy the PDB file of allyl vinyl ether you made (locally with IQmol) into the <code class="docutils literal notranslate"><span class="pre">input</span></code> folder using <code class="docutils literal notranslate"><span class="pre">scp</span></code>. This will look different depending where you saved files, but open terminal on your local computer and use <code class="docutils literal notranslate"><span class="pre">scp</span></code> to upload the file to this directory (copied from <code class="docutils literal notranslate"><span class="pre">pwd</span></code>):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp /path/to/allyl_vinyl_ether.pdb USERNAME@pete.hpc.okstate.edu:---PASTE_THE_PWD_HERE---
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>/path/to/allyl_vinyl_ether.pdb<span class="w"> </span>USERNAME@pete.hpc.okstate.edu:---PASTE_THE_PWD_HERE---
 </pre></div>
 </div>
 <p>Before moving on, check if the file transferred correctly. In the Pete terminal window, check if the PDB file is in the <code class="docutils literal notranslate"><span class="pre">input/</span></code> folder.</p>
@@ -378,10 +401,10 @@ mkdir -p claisen/pm3   <span class="c1"># Make project folder, and method folder
 <span class="c1">#SBATCH --error=%j.err</span>
 <span class="c1">#SBATCH --job-name=antechamber</span>
 
-date                                  
+date<span class="w">                                  </span>
 
 <span class="c1"># Load Amber QMMM. I made a file that ~looks~ cleaner </span>
-<span class="nb">source</span> /scratch/van/Scripts/pete_setqmmm.sh
+<span class="nb">source</span><span class="w"> </span>/scratch/van/Scripts/pete_setqmmm.sh
 
 <span class="c1"># Variable &quot;name&quot; is allyl_vinyl_ether, which is a pain to write, so we should only do it once</span>
 <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;allyl_vinyl_ether&quot;</span>
@@ -389,11 +412,11 @@ date
 <span class="c1"># Antechamebr is a program with AmberTools for generating FF parameters.</span>
 <span class="c1"># parmck2 program figures out what parameters and checks if they&#39;re available. </span>
 <span class="c1">#        If not, it tries to make educated guesses, and adds it to .frmod here</span>
-antechamber -fi pdb -fo mol2 -i <span class="si">${</span><span class="nv">name</span><span class="si">}</span>.pdb -o <span class="si">${</span><span class="nv">name</span><span class="si">}</span>.mol2 -c bcc -pf y -nc <span class="m">0</span>
-parmchk2 -i <span class="si">${</span><span class="nv">name</span><span class="si">}</span>.mol2 -f mol2 -o <span class="si">${</span><span class="nv">name</span><span class="si">}</span>.frcmod
+antechamber<span class="w"> </span>-fi<span class="w"> </span>pdb<span class="w"> </span>-fo<span class="w"> </span>mol2<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span>.pdb<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span>.mol2<span class="w"> </span>-c<span class="w"> </span>bcc<span class="w"> </span>-pf<span class="w"> </span>y<span class="w"> </span>-nc<span class="w"> </span><span class="m">0</span>
+parmchk2<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span>.mol2<span class="w"> </span>-f<span class="w"> </span>mol2<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span>.frcmod
 
 <span class="c1"># The &quot;cat &lt;&lt;_EOF &gt; tleap&quot; makes the files tleap containing everything until &quot;_EOF&quot;</span>
-cat <span class="s">&lt;&lt;_EOF &gt; tleap.in</span>
+cat<span class="w"> </span><span class="s">&lt;&lt;_EOF &gt; tleap.in</span>
 <span class="s">source leaprc.gaff</span>
 <span class="s">source leaprc.water.tip3p </span>
 
@@ -410,13 +433,13 @@ cat <span class="s">&lt;&lt;_EOF &gt; tleap.in</span>
 <span class="s">_EOF</span>
 
 <span class="c1"># Run tleap in</span>
-tleap -sf tleap.in
+tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
 
 date
 </pre></div>
 </div>
 <p>Copy of this script to the <code class="docutils literal notranslate"><span class="pre">inputs/</span></code> folder and submit the job to Slurm, it should take about &gt;1 minute.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch generate.slurm
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>generate.slurm
 </pre></div>
 </div>
 <p>When you <code class="docutils literal notranslate"><span class="pre">ls</span></code> the directory you should see a few new files:</p>
@@ -454,12 +477,12 @@ date
 <h3>Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#notation-of-cv-rst" title="Permalink to this headline">#</a></h3>
 <p>Using all of that information, we can make the refernce file for <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>. The file looks like this:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># r1 - r2 (CC - CO bond)</span>
- <span class="p">&amp;</span>rst
-  <span class="nv">iat</span><span class="o">=</span><span class="m">3</span>,4,1,6,
-  <span class="nv">rstwt</span><span class="o">=</span><span class="m">1</span>.,-1.,
-  <span class="nv">r1</span><span class="o">=</span>-99, <span class="nv">r2</span><span class="o">=</span>__REST__, <span class="nv">r3</span><span class="o">=</span>__REST__, <span class="nv">r4</span><span class="o">=</span><span class="m">99</span>,
-  <span class="nv">rk2</span><span class="o">=</span><span class="m">150</span>.0, <span class="nv">rk3</span><span class="o">=</span><span class="m">150</span>.0,
- <span class="p">&amp;</span>end
+<span class="w"> </span><span class="p">&amp;</span>rst
+<span class="w">  </span><span class="nv">iat</span><span class="o">=</span><span class="m">3</span>,4,1,6,
+<span class="w">  </span><span class="nv">rstwt</span><span class="o">=</span><span class="m">1</span>.,-1.,
+<span class="w">  </span><span class="nv">r1</span><span class="o">=</span>-99,<span class="w"> </span><span class="nv">r2</span><span class="o">=</span>__REST__,<span class="w"> </span><span class="nv">r3</span><span class="o">=</span>__REST__,<span class="w"> </span><span class="nv">r4</span><span class="o">=</span><span class="m">99</span>,
+<span class="w">  </span><span class="nv">rk2</span><span class="o">=</span><span class="m">150</span>.0,<span class="w"> </span><span class="nv">rk3</span><span class="o">=</span><span class="m">150</span>.0,
+<span class="w"> </span><span class="p">&amp;</span>end
 </pre></div>
 </div>
 <p>Each parameter is described by:</p>
@@ -482,145 +505,145 @@ date
 <p>We need at leat 2 MD input files. The first file (<code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.mdin</span></code>) is for simulating the initial pathway, and only runs for a few picoseconds. The second file (<code class="docutils literal notranslate"><span class="pre">step6.00_equilibration.mdin</span></code>) is will restart from the previous <code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.ncrst</span></code> for additional 10 ps.</p>
 <p>The general format of a QM/MM MD input file differs from classical MD with the <code class="docutils literal notranslate"><span class="pre">&amp;qmmm</span></code> section.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="05f26726-e892-433b-a97d-2c684f70fffe" name="a33c95a0-b0d9-49ba-ab17-e695e83056c7" type="radio">
-</input><label class="sd-tab-label" for="05f26726-e892-433b-a97d-2c684f70fffe">
+<input checked="checked" id="821ccc4e-1a07-4582-b89a-6c869404626e" name="be988757-9f73-42f3-98fd-4798071d8d45" type="radio">
+</input><label class="sd-tab-label" for="821ccc4e-1a07-4582-b89a-6c869404626e">
 step5.00_equilibration.mdin</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A NVT simulation <span class="k">for</span> common production-level simulations
- <span class="p">&amp;</span>cntrl
-    <span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,        ! No minimization
-    <span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,       ! This IS a restart of an old MD simulation
-    <span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,         ! So our inpcrd file has velocities
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
+<span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
+<span class="w">    </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>IS<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
+<span class="w">    </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>velocities
 
-    ! Boundary conditions
-    <span class="nv">ntb</span><span class="o">=</span><span class="m">0</span>,         ! Non-Periodic 
-    <span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,         ! No pressure control
+<span class="w">    </span>!<span class="w"> </span>Boundary<span class="w"> </span>conditions
+<span class="w">    </span><span class="nv">ntb</span><span class="o">=</span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>Non-Periodic<span class="w"> </span>
+<span class="w">    </span><span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>No<span class="w"> </span>pressure<span class="w"> </span>control
 
-    ! Temperature control
-    <span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,         ! Langevin Dynamics
-    <span class="nv">gamma_ln</span><span class="o">=</span><span class="m">5</span>.0,  ! Friction coefficient <span class="o">(</span>ps^-1<span class="o">)</span>
-    <span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,   ! Target temperature
-    <span class="nv">ig</span><span class="o">=</span>-1,         ! Random number seed
+<span class="w">    </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
+<span class="w">    </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>Dynamics
+<span class="w">    </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">5</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
+<span class="w">    </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,<span class="w">   </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
+<span class="w">    </span><span class="nv">ig</span><span class="o">=</span>-1,<span class="w">         </span>!<span class="w"> </span>Random<span class="w"> </span>number<span class="w"> </span>seed
 
-    ! Potential energy control
-    <span class="nv">cut</span><span class="o">=</span><span class="m">999</span>.0,      ! nonbonded cutoff, <span class="k">in</span> Angstroms
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">cut</span><span class="o">=</span><span class="m">999</span>.0,<span class="w">      </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>Angstroms
 
-    ! MD settings
-    <span class="nv">nstlim</span><span class="o">=</span><span class="m">500</span>,    ! <span class="m">1</span> ps total
-    <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,      ! <span class="nb">time</span> step <span class="o">(</span>ps<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>MD<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">500</span>,<span class="w">    </span>!<span class="w"> </span><span class="m">1</span><span class="w"> </span>ps<span class="w"> </span>total
+<span class="w">    </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,<span class="w">      </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
 
-    ! SHAKE
-    <span class="nv">ntc</span><span class="o">=</span><span class="m">1</span>,         ! Constrain bonds containing hydrogen
-    <span class="nv">ntf</span><span class="o">=</span><span class="m">1</span>,         ! Do not calculate forces of bonds containing hydrogen
-    <span class="nv">tol</span><span class="o">=</span><span class="m">0</span>.000001,  ! Shake tolerance
+<span class="w">    </span>!<span class="w"> </span>SHAKE
+<span class="w">    </span><span class="nv">ntc</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">ntf</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">tol</span><span class="o">=</span><span class="m">0</span>.000001,<span class="w">  </span>!<span class="w"> </span>Shake<span class="w"> </span>tolerance
 
-    ! Control how often information is printed
-    <span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,      ! Print energies every <span class="m">100</span> steps
-    <span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,      ! Print coordinates every <span class="m">100</span> steps to the trajectory
-    <span class="nv">ntwr</span><span class="o">=</span><span class="m">100</span>,      ! Print a restart file every 5K steps <span class="o">(</span>can be less frequent<span class="o">)</span>
-    <span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,        ! Write NetCDF format
-    <span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,      ! Write NetCDF format <span class="o">(</span>always <span class="k">do</span> this!<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
+<span class="w">    </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps
+<span class="w">    </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
+<span class="w">    </span><span class="nv">ntwr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>file<span class="w"> </span>every<span class="w"> </span>5K<span class="w"> </span>steps<span class="w"> </span><span class="o">(</span>can<span class="w"> </span>be<span class="w"> </span>less<span class="w"> </span>frequent<span class="o">)</span>
+<span class="w">    </span><span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,<span class="w">        </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format
+<span class="w">    </span><span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>always<span class="w"> </span><span class="k">do</span><span class="w"> </span>this!<span class="o">)</span>
 
-    ! Restraints
-    <span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,      ! Turn on restraints
+<span class="w">    </span>!<span class="w"> </span>Restraints
+<span class="w">    </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>restraints
 
-    ! QM/MM
-    <span class="nv">ifqnt</span><span class="o">=</span><span class="m">1</span>,       ! Turn on QM/MM
- /
+<span class="w">    </span>!<span class="w"> </span>QM/MM
+<span class="w">    </span><span class="nv">ifqnt</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>QM/MM
+<span class="w"> </span>/
 
 
- <span class="p">&amp;</span>qmmm
-    ! QM atoms
-    <span class="nv">qmmask</span><span class="o">=</span><span class="s1">&#39;:1&#39;</span>    ! Amber residue mask <span class="k">for</span> QM atoms
+<span class="w"> </span><span class="p">&amp;</span>qmmm
+<span class="w">    </span>!<span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w">    </span><span class="nv">qmmask</span><span class="o">=</span><span class="s1">&#39;:1&#39;</span><span class="w">    </span>!<span class="w"> </span>Amber<span class="w"> </span>residue<span class="w"> </span>mask<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM<span class="w"> </span>atoms
 
-    ! QM settings
-    <span class="nv">qm_theory</span><span class="o">=</span><span class="s1">&#39;PM3&#39;</span>, ! Semiempirical method
-    <span class="nv">qmcharge</span><span class="o">=</span><span class="m">0</span>,    ! Charge of QM subsystem
+<span class="w">    </span>!<span class="w"> </span>QM<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">qm_theory</span><span class="o">=</span><span class="s1">&#39;PM3&#39;</span>,<span class="w"> </span>!<span class="w"> </span>Semiempirical<span class="w"> </span>method
+<span class="w">    </span><span class="nv">qmcharge</span><span class="o">=</span><span class="m">0</span>,<span class="w">    </span>!<span class="w"> </span>Charge<span class="w"> </span>of<span class="w"> </span>QM<span class="w"> </span>subsystem
 
-    ! Shake
-    <span class="nv">qmshake</span><span class="o">=</span><span class="m">0</span>,     ! Use Shake <span class="k">for</span> QM atoms
+<span class="w">    </span>!<span class="w"> </span>Shake
+<span class="w">    </span><span class="nv">qmshake</span><span class="o">=</span><span class="m">0</span>,<span class="w">     </span>!<span class="w"> </span>Use<span class="w"> </span>Shake<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM<span class="w"> </span>atoms
 
-    ! Potential energy control
-    <span class="nv">qmcut</span><span class="o">=</span><span class="m">999</span>.0,    ! Cutoff <span class="k">for</span> QM/MM electrostatic interactions
-    <span class="nv">writepdb</span><span class="o">=</span><span class="m">1</span>,    ! Check QM atoms
- /
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">qmcut</span><span class="o">=</span><span class="m">999</span>.0,<span class="w">    </span>!<span class="w"> </span>Cutoff<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM/MM<span class="w"> </span>electrostatic<span class="w"> </span>interactions
+<span class="w">    </span><span class="nv">writepdb</span><span class="o">=</span><span class="m">1</span>,<span class="w">    </span>!<span class="w"> </span>Check<span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w"> </span>/
 
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>, <span class="nv">istep1</span><span class="o">=</span><span class="m">10</span> /
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span> /
- <span class="nv">DISANG</span><span class="o">=</span>cv.rst
- <span class="nv">DUMPAVE</span><span class="o">=</span>step5.00_equilibration.cv
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>/
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
+<span class="w"> </span><span class="nv">DISANG</span><span class="o">=</span>cv.rst
+<span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>step5.00_equilibration.cv
 </pre></div>
 </div>
 </div>
-<input id="8e27d9b8-8947-4164-b8e2-5aa086149e7e" name="a33c95a0-b0d9-49ba-ab17-e695e83056c7" type="radio">
-</input><label class="sd-tab-label" for="8e27d9b8-8947-4164-b8e2-5aa086149e7e">
+<input id="4c356bf6-a609-4210-ab9e-08035df4340b" name="be988757-9f73-42f3-98fd-4798071d8d45" type="radio">
+</input><label class="sd-tab-label" for="4c356bf6-a609-4210-ab9e-08035df4340b">
 step6.00_equilibration.mdin</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A NVT simulation <span class="k">for</span> common production-level simulations
- <span class="p">&amp;</span>cntrl
-    <span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,        ! No minimization
-    <span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,       ! This IS a restart of an old MD simulation
-    <span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,         ! So our inpcrd file has velocities
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
+<span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
+<span class="w">    </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>IS<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
+<span class="w">    </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>velocities
 
-    ! Boundary conditions
-    <span class="nv">ntb</span><span class="o">=</span><span class="m">0</span>,         ! Non-Periodic
-    <span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,         ! No pressure control
+<span class="w">    </span>!<span class="w"> </span>Boundary<span class="w"> </span>conditions
+<span class="w">    </span><span class="nv">ntb</span><span class="o">=</span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>Non-Periodic
+<span class="w">    </span><span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>No<span class="w"> </span>pressure<span class="w"> </span>control
 
-    ! Temperature control
-    <span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,         ! Langevin Dynamics 
-    <span class="nv">gamma_ln</span><span class="o">=</span><span class="m">5</span>.0,  ! Friction coefficient <span class="o">(</span>ps^-1<span class="o">)</span>
-    <span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,   ! Target temperature
-    <span class="nv">ig</span><span class="o">=</span>-1,         ! Random number seed
+<span class="w">    </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
+<span class="w">    </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>Dynamics<span class="w"> </span>
+<span class="w">    </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">5</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
+<span class="w">    </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,<span class="w">   </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
+<span class="w">    </span><span class="nv">ig</span><span class="o">=</span>-1,<span class="w">         </span>!<span class="w"> </span>Random<span class="w"> </span>number<span class="w"> </span>seed
 
-    ! Potential energy control
-    <span class="nv">cut</span><span class="o">=</span><span class="m">999</span>.0,      ! nonbonded cutoff, <span class="k">in</span> Angstroms
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">cut</span><span class="o">=</span><span class="m">999</span>.0,<span class="w">      </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>Angstroms
 
-    ! MD settings
-    <span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,   ! <span class="m">1</span> ps total
-    <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,      ! <span class="nb">time</span> step <span class="o">(</span>ps<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>MD<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,<span class="w">   </span>!<span class="w"> </span><span class="m">1</span><span class="w"> </span>ps<span class="w"> </span>total
+<span class="w">    </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,<span class="w">      </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
 
-    ! SHAKE
-    <span class="nv">ntc</span><span class="o">=</span><span class="m">1</span>,         ! Constrain bonds containing hydrogen
-    <span class="nv">ntf</span><span class="o">=</span><span class="m">1</span>,         ! Do not calculate forces of bonds containing hydrogen
-    <span class="nv">tol</span><span class="o">=</span><span class="m">0</span>.000001,  ! Shake tolerance
+<span class="w">    </span>!<span class="w"> </span>SHAKE
+<span class="w">    </span><span class="nv">ntc</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">ntf</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">tol</span><span class="o">=</span><span class="m">0</span>.000001,<span class="w">  </span>!<span class="w"> </span>Shake<span class="w"> </span>tolerance
 
-    ! Control how often information is printed
-    <span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,      ! Print energies every <span class="m">100</span> steps
-    <span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,      ! Print coordinates every <span class="m">100</span> steps to the trajectory
-    <span class="nv">ntwr</span><span class="o">=</span><span class="m">100</span>,     ! Print a restart file every 5K steps <span class="o">(</span>can be less frequent<span class="o">)</span>
-!   <span class="nv">ntwv</span><span class="o">=</span>-1,       ! Uncomment to also print velocities to trajectory
-!   <span class="nv">ntwf</span><span class="o">=</span>-1,       ! Uncomment to also print forces to trajectory
-    <span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,        ! Write NetCDF format
-    <span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,      ! Write NetCDF format <span class="o">(</span>always <span class="k">do</span> this!<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
+<span class="w">    </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps
+<span class="w">    </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
+<span class="w">    </span><span class="nv">ntwr</span><span class="o">=</span><span class="m">100</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>file<span class="w"> </span>every<span class="w"> </span>5K<span class="w"> </span>steps<span class="w"> </span><span class="o">(</span>can<span class="w"> </span>be<span class="w"> </span>less<span class="w"> </span>frequent<span class="o">)</span>
+!<span class="w">   </span><span class="nv">ntwv</span><span class="o">=</span>-1,<span class="w">       </span>!<span class="w"> </span>Uncomment<span class="w"> </span>to<span class="w"> </span>also<span class="w"> </span>print<span class="w"> </span>velocities<span class="w"> </span>to<span class="w"> </span>trajectory
+!<span class="w">   </span><span class="nv">ntwf</span><span class="o">=</span>-1,<span class="w">       </span>!<span class="w"> </span>Uncomment<span class="w"> </span>to<span class="w"> </span>also<span class="w"> </span>print<span class="w"> </span>forces<span class="w"> </span>to<span class="w"> </span>trajectory
+<span class="w">    </span><span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,<span class="w">        </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format
+<span class="w">    </span><span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>always<span class="w"> </span><span class="k">do</span><span class="w"> </span>this!<span class="o">)</span>
 
-    ! Restraints
-    <span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,      ! Turn on restraints
+<span class="w">    </span>!<span class="w"> </span>Restraints
+<span class="w">    </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>restraints
 
-    ! QM/MM
-    <span class="nv">ifqnt</span><span class="o">=</span><span class="m">1</span>,       ! Turn on QM/MM
- /
+<span class="w">    </span>!<span class="w"> </span>QM/MM
+<span class="w">    </span><span class="nv">ifqnt</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>QM/MM
+<span class="w"> </span>/
 
- <span class="p">&amp;</span>ewald
-    <span class="nv">dsum_tol</span><span class="o">=</span><span class="m">0</span>.000001,
- /
+<span class="w"> </span><span class="p">&amp;</span>ewald
+<span class="w">    </span><span class="nv">dsum_tol</span><span class="o">=</span><span class="m">0</span>.000001,
+<span class="w"> </span>/
 
- <span class="p">&amp;</span>qmmm
-    ! QM atoms
-    <span class="nv">qmmask</span><span class="o">=</span><span class="s1">&#39;:1&#39;</span>
+<span class="w"> </span><span class="p">&amp;</span>qmmm
+<span class="w">    </span>!<span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w">    </span><span class="nv">qmmask</span><span class="o">=</span><span class="s1">&#39;:1&#39;</span>
 
-    ! QM settings
-    <span class="nv">qm_theory</span><span class="o">=</span><span class="s1">&#39;PM3&#39;</span>,
-    <span class="nv">qmcharge</span><span class="o">=</span><span class="m">0</span>,
+<span class="w">    </span>!<span class="w"> </span>QM<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">qm_theory</span><span class="o">=</span><span class="s1">&#39;PM3&#39;</span>,
+<span class="w">    </span><span class="nv">qmcharge</span><span class="o">=</span><span class="m">0</span>,
 
-    ! Shake
-    <span class="nv">qmshake</span><span class="o">=</span><span class="m">0</span>,     ! Use Shake <span class="k">for</span> QM atoms
-    ! Potential energy control
-    <span class="nv">qmcut</span><span class="o">=</span><span class="m">999</span>.0,    ! Cutoff <span class="k">for</span> QM/MM electrostatic interactions
-    <span class="nv">writepdb</span><span class="o">=</span><span class="m">1</span>,    ! Check QM atoms
- /
+<span class="w">    </span>!<span class="w"> </span>Shake
+<span class="w">    </span><span class="nv">qmshake</span><span class="o">=</span><span class="m">0</span>,<span class="w">     </span>!<span class="w"> </span>Use<span class="w"> </span>Shake<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">qmcut</span><span class="o">=</span><span class="m">999</span>.0,<span class="w">    </span>!<span class="w"> </span>Cutoff<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM/MM<span class="w"> </span>electrostatic<span class="w"> </span>interactions
+<span class="w">    </span><span class="nv">writepdb</span><span class="o">=</span><span class="m">1</span>,<span class="w">    </span>!<span class="w"> </span>Check<span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w"> </span>/
 
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>, <span class="nv">istep1</span><span class="o">=</span><span class="m">10</span> /
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span> /
- <span class="nv">DISANG</span><span class="o">=</span>cv.rst
- <span class="nv">DUMPAVE</span><span class="o">=</span>step6.00_equilibration.cv
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>/
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
+<span class="w"> </span><span class="nv">DISANG</span><span class="o">=</span>cv.rst
+<span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>step6.00_equilibration.cv
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
@@ -637,61 +660,61 @@ step6.00_equilibration.mdin</label><div class="sd-tab-content docutils">
 <section id="automate-the-umbrella-windows">
 <h2>Automate the Umbrella Windows<a class="headerlink" href="#automate-the-umbrella-windows" title="Permalink to this headline">#</a></h2>
 <p>Go back one directory to the <code class="docutils literal notranslate"><span class="pre">pm3/</span></code> folder</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ../ <span class="c1"># Return back one directory</span>
-<span class="nb">pwd</span>    <span class="c1"># Check where y</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../<span class="w"> </span><span class="c1"># Return back one directory</span>
+<span class="nb">pwd</span><span class="w">    </span><span class="c1"># Check where y</span>
 </pre></div>
 </div>
 <p>The script <code class="docutils literal notranslate"><span class="pre">gen_inputs.in</span></code> will help you prepare windows for umbrella sampling. This includes the modification in  <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file so that each window has a different restraint value.</p>
 <p>We will have 21 windows corresponding to restraint values -2.00 to 2.00 Å.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="bb51adca-3011-4fdd-b81f-dea896afdd69" name="d433113c-e6ce-46f0-8f74-dfac0524a578" type="radio">
-</input><label class="sd-tab-label" for="bb51adca-3011-4fdd-b81f-dea896afdd69">
+<input checked="checked" id="3ba20516-6a5a-4c04-9ea1-37868bccaf40" name="78ef2de3-eae5-44b5-9752-7086c0a78253" type="radio">
+</input><label class="sd-tab-label" for="3ba20516-6a5a-4c04-9ea1-37868bccaf40">
 gen_inputs.in</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Section 1</span>
-mkdir -p <span class="m">00</span>
-<span class="nb">cd</span> <span class="m">00</span>/
-ln -sf ../input/step3_pbcsetup.parm7
-ln -sf ../input/step6.00_equilibration.mdin .
-sed -e <span class="s1">&#39;s/irest=1/irest=0/;s/ntx=5/nts=1,/&#39;</span> ../input/step5.00_equilibration.mdin &gt; step5.00_equilibration.mdin
-<span class="nb">cd</span> ..
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="m">00</span>
+<span class="nb">cd</span><span class="w"> </span><span class="m">00</span>/
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step3_pbcsetup.parm7
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibration.mdin<span class="w"> </span>.
+sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/irest=1/irest=0/;s/ntx=5/nts=1,/&#39;</span><span class="w"> </span>../input/step5.00_equilibration.mdin<span class="w"> </span>&gt;<span class="w"> </span>step5.00_equilibration.mdin
+<span class="nb">cd</span><span class="w"> </span>..
 
 <span class="c1"># Section 2</span>
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -w <span class="m">1</span> <span class="m">20</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
-mkdir -p <span class="nv">$i</span>
-<span class="nb">cd</span> <span class="nv">$i</span>
-ln -sf ../input/step3_pbcsetup.parm7
-ln -sf ../input/step5.00_equilibration.mdin .
-ln -sf ../input/step6.00_equilibration .
-<span class="nb">cd</span> ..
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$i</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$i</span>
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step3_pbcsetup.parm7
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step5.00_equilibration.mdin<span class="w"> </span>.
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibration<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
 <span class="k">done</span>
 
 <span class="c1"># Section 3</span>
-cp input/step3_pbcsetup.rst7 <span class="m">00</span>/step5.00_equilibration_inp.rst7
+cp<span class="w"> </span>input/step3_pbcsetup.rst7<span class="w"> </span><span class="m">00</span>/step5.00_equilibration_inp.rst7
 
 <span class="nv">n</span><span class="o">=</span>-2.0
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -f<span class="s2">&quot;%02g&quot;</span> <span class="m">0</span> <span class="m">20</span><span class="sb">`</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-f<span class="s2">&quot;%02g&quot;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span>
 <span class="k">do</span>
-    <span class="nv">nn</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span> <span class="s2">&quot;%.2f&quot;</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span><span class="k">)</span>
-    sed <span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span> input/cv.rst &gt; <span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
-    <span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$n</span> + <span class="m">0</span>.20 <span class="p">|</span> bc<span class="sb">`</span>
+<span class="w">    </span><span class="nv">nn</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;%.2f&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="w">    </span>sed<span class="w"> </span><span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span><span class="w"> </span>input/cv.rst<span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
+<span class="w">    </span><span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$n</span><span class="w"> </span>+<span class="w"> </span><span class="m">0</span>.20<span class="w"> </span><span class="p">|</span><span class="w"> </span>bc<span class="sb">`</span>
 <span class="k">done</span>
 </pre></div>
 </div>
 </div>
-<input id="0c33dc6e-c370-48f5-8758-97505ae6c4ac" name="d433113c-e6ce-46f0-8f74-dfac0524a578" type="radio">
-</input><label class="sd-tab-label" for="0c33dc6e-c370-48f5-8758-97505ae6c4ac">
+<input id="1a3cac2b-0752-4433-945e-59912d2a46db" name="78ef2de3-eae5-44b5-9752-7086c0a78253" type="radio">
+</input><label class="sd-tab-label" for="1a3cac2b-0752-4433-945e-59912d2a46db">
 Section 1 - DEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Section 1</span>
-mkdir -p <span class="m">00</span>
-<span class="nb">cd</span> <span class="m">00</span>/
-ln -sf ../input/step3_pbcsetup.parm7
-ln -sf ../input/step6.00_equilibration.mdin .
-sed -e <span class="s1">&#39;s/irest=1/irest=0/;s/ntx=5/ntx=1,/&#39;</span> ../input/step5.00_equilibration.mdin &gt; step5.00_equilibration.mdin
-<span class="nb">cd</span> ..
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="m">00</span>
+<span class="nb">cd</span><span class="w"> </span><span class="m">00</span>/
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step3_pbcsetup.parm7
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibration.mdin<span class="w"> </span>.
+sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/irest=1/irest=0/;s/ntx=5/ntx=1,/&#39;</span><span class="w"> </span>../input/step5.00_equilibration.mdin<span class="w"> </span>&gt;<span class="w"> </span>step5.00_equilibration.mdin
+<span class="nb">cd</span><span class="w"> </span>..
 </pre></div>
 </div>
 <p>First, we make the window <code class="docutils literal notranslate"><span class="pre">00/</span></code>. I did this outside of section 2, so it is easier to read than adding an <code class="docutils literal notranslate"><span class="pre">if...else</span></code> statement.
@@ -699,17 +722,17 @@ Essentially, since we just made our <code class="docutils literal notranslate"><
 <p><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-sf</span></code> make a symbolic link pointing to the original file! Do this becuause you do not want too many copies of the same file…</p>
 <p><code class="docutils literal notranslate"><span class="pre">sed</span></code> does the test transformation for our initial <code class="docutils literal notranslate"><span class="pre">.mdin</span></code> file.</p>
 </div>
-<input id="9ae1c5d3-052b-4e7b-8a0e-71b2f320b5a1" name="d433113c-e6ce-46f0-8f74-dfac0524a578" type="radio">
-</input><label class="sd-tab-label" for="9ae1c5d3-052b-4e7b-8a0e-71b2f320b5a1">
+<input id="d3d00dab-1116-4024-9ebc-8c203235bcd1" name="78ef2de3-eae5-44b5-9752-7086c0a78253" type="radio">
+</input><label class="sd-tab-label" for="d3d00dab-1116-4024-9ebc-8c203235bcd1">
 Section 2 - WEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Section 2</span>
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -w <span class="m">1</span> <span class="m">20</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
-mkdir -p <span class="nv">$i</span>
-<span class="nb">cd</span> <span class="nv">$i</span>
-ln -sf ../input/step3_pbcsetup.parm7
-ln -sf ../input/step5.00_equilibration.mdin .
-ln -sf ../input/step6.00_equilibration .
-<span class="nb">cd</span> ..
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$i</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$i</span>
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step3_pbcsetup.parm7
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step5.00_equilibration.mdin<span class="w"> </span>.
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibration<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
 <span class="k">done</span>
 </pre></div>
 </div>
@@ -725,18 +748,18 @@ ln -sf ../input/step6.00_equilibration .
 <li><p>done, GO BACK TO BEGINNING OF LOOP AND GET NEXT NUMBER. THEN REPEAT CYCLE UNTIL LIST IS DONE</p></li>
 </ol>
 </div>
-<input id="d7a2e44f-dc1d-4ccd-887e-6fddbb3f20f2" name="d433113c-e6ce-46f0-8f74-dfac0524a578" type="radio">
-</input><label class="sd-tab-label" for="d7a2e44f-dc1d-4ccd-887e-6fddbb3f20f2">
+<input id="b38c91e5-39f1-4169-aa9a-4ce005fd89c8" name="78ef2de3-eae5-44b5-9752-7086c0a78253" type="radio">
+</input><label class="sd-tab-label" for="b38c91e5-39f1-4169-aa9a-4ce005fd89c8">
 Section 3 - YEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Section 3</span>
-cp ../input/step3_pbcsetup.rst7 <span class="m">00</span>/step5.00_equilibration_inp.rst7
+cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><span class="m">00</span>/step5.00_equilibration_inp.rst7
 
 <span class="nv">n</span><span class="o">=</span>-2.0
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -f<span class="s2">&quot;%02g&quot;</span> <span class="m">0</span> <span class="m">20</span><span class="sb">`</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-f<span class="s2">&quot;%02g&quot;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span>
 <span class="k">do</span>
-    <span class="nv">nn</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span> <span class="s2">&quot;%.2f&quot;</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span><span class="k">)</span>
-    sed <span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span> input/cv.rst &gt; <span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
-    <span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$n</span> + <span class="m">0</span>.20 <span class="p">|</span> bc<span class="sb">`</span>
+<span class="w">    </span><span class="nv">nn</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;%.2f&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="w">    </span>sed<span class="w"> </span><span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span><span class="w"> </span>input/cv.rst<span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
+<span class="w">    </span><span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$n</span><span class="w"> </span>+<span class="w"> </span><span class="m">0</span>.20<span class="w"> </span><span class="p">|</span><span class="w"> </span>bc<span class="sb">`</span>
 <span class="k">done</span>
 </pre></div>
 </div>
@@ -751,7 +774,7 @@ cp ../input/step3_pbcsetup.rst7 <span class="m">00</span>/step5.00_equilibration
 </div>
 </div>
 <p>I hope that wasn’t too bad, you can run the script by typing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash gen_inputs.in
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>gen_inputs.in
 </pre></div>
 </div>
 <div class="admonition tip">
@@ -770,8 +793,8 @@ cp ../input/step3_pbcsetup.rst7 <span class="m">00</span>/step5.00_equilibration
 </ol>
 <p>Submit <code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code> to Slurm.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="d49271e0-5a8a-49cd-a03f-b20a3cb2f3e7" name="e80de4db-0350-4955-bb15-af5d7d15ac1a" type="radio">
-</input><label class="sd-tab-label" for="d49271e0-5a8a-49cd-a03f-b20a3cb2f3e7">
+<input checked="checked" id="834c08bd-3b43-44da-a208-3a143050cd0f" name="c73dc279-2645-42d7-8a67-d03dbd308555" type="radio">
+</input><label class="sd-tab-label" for="834c08bd-3b43-44da-a208-3a143050cd0f">
 runqmmm1.slurm</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=express</span>
@@ -784,7 +807,7 @@ runqmmm1.slurm</label><div class="sd-tab-content docutils">
 
 date
 
-<span class="nb">source</span> /scratch/van/Scripts/pete_setqmmm.sh
+<span class="nb">source</span><span class="w"> </span>/scratch/van/Scripts/pete_setqmmm.sh
 
 <span class="nv">SANDER</span><span class="o">=</span><span class="s2">&quot;srun -n 16 sander.MPI&quot;</span>
 
@@ -792,13 +815,13 @@ date
 
 <span class="nv">istep</span><span class="o">=</span><span class="s2">&quot;step5.00_equilibration&quot;</span>
 
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">0</span> <span class="m">20</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
-    <span class="nb">printf</span> -v j <span class="s2">&quot;%02d&quot;</span> <span class="nv">$i</span>
-    <span class="nb">cd</span> <span class="nv">$j</span>
-    <span class="nv">$SANDER</span> -O -i <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdin -o <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdout -p <span class="si">${</span><span class="nv">init</span><span class="si">}</span>.parm7 -c <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>_inp.rst7 -r <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst -x <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.nc -inf <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdinfo
-    <span class="nb">printf</span> -v j <span class="s2">&quot;%02d&quot;</span> <span class="k">$((</span><span class="nv">$i</span> <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
-    cp <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst ../<span class="si">${</span><span class="nv">j</span><span class="si">}</span>/<span class="si">${</span><span class="nv">istep</span><span class="si">}</span>_inp.ncrst
-    <span class="nb">cd</span> ..
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span>-v<span class="w"> </span>j<span class="w"> </span><span class="s2">&quot;%02d&quot;</span><span class="w"> </span><span class="nv">$i</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$j</span>
+<span class="w">    </span><span class="nv">$SANDER</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdin<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdout<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">init</span><span class="si">}</span>.parm7<span class="w"> </span>-c<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>_inp.rst7<span class="w"> </span>-r<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst<span class="w"> </span>-x<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.nc<span class="w"> </span>-inf<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdinfo
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span>-v<span class="w"> </span>j<span class="w"> </span><span class="s2">&quot;%02d&quot;</span><span class="w"> </span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
+<span class="w">    </span>cp<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst<span class="w"> </span>../<span class="si">${</span><span class="nv">j</span><span class="si">}</span>/<span class="si">${</span><span class="nv">istep</span><span class="si">}</span>_inp.ncrst
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>..
 <span class="k">done</span>
 
 date
@@ -816,8 +839,8 @@ date
 </ul>
 <p>The last thing we do is use then coordintates from this run as the initial coorindates for the next window! Leave go to the next window, and REPEATTTTTTTT</p>
 </div>
-<input id="17850f46-a904-413a-b7ed-1d93337373b2" name="e80de4db-0350-4955-bb15-af5d7d15ac1a" type="radio">
-</input><label class="sd-tab-label" for="17850f46-a904-413a-b7ed-1d93337373b2">
+<input id="d9ff52c9-4e2d-45e0-a1c2-ec5242755af3" name="c73dc279-2645-42d7-8a67-d03dbd308555" type="radio">
+</input><label class="sd-tab-label" for="d9ff52c9-4e2d-45e0-a1c2-ec5242755af3">
 runqmmm2.slurm</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=express</span>
@@ -830,7 +853,7 @@ runqmmm2.slurm</label><div class="sd-tab-content docutils">
 
 date
 
-<span class="nb">source</span> /scratch/van/Scripts/pete_setqmmm.sh
+<span class="nb">source</span><span class="w"> </span>/scratch/van/Scripts/pete_setqmmm.sh
 
 <span class="nv">SANDER</span><span class="o">=</span><span class="s2">&quot;srun -n 16 sander.MPI&quot;</span>
 
@@ -839,10 +862,10 @@ date
 <span class="nv">pstep</span><span class="o">=</span><span class="s2">&quot;step5.00_equilibration&quot;</span>
 <span class="nv">istep</span><span class="o">=</span><span class="s2">&quot;step6.00_equilibration&quot;</span>
 
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -w <span class="m">0</span> <span class="m">20</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
-    <span class="nb">cd</span> <span class="nv">$i</span>
-    <span class="nv">$SANDER</span> -O -i <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdin -o <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdout -p <span class="si">${</span><span class="nv">init</span><span class="si">}</span>.parm7 -c <span class="si">${</span><span class="nv">pstep</span><span class="si">}</span>.ncrst -r <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst -x <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.nc -inf <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdinfo
-    <span class="nb">cd</span> ..
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$i</span>
+<span class="w">    </span><span class="nv">$SANDER</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdin<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdout<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">init</span><span class="si">}</span>.parm7<span class="w"> </span>-c<span class="w"> </span><span class="si">${</span><span class="nv">pstep</span><span class="si">}</span>.ncrst<span class="w"> </span>-r<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst<span class="w"> </span>-x<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.nc<span class="w"> </span>-inf<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdinfo
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>..
 <span class="k">done</span>
 
 date

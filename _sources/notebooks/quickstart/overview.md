@@ -2,17 +2,6 @@
 
 *I intended for this to be read within 30 minutes... Sorry! (December 9, 2023)*
 
-..toctree::
-  numbered: true
-
-   terminal
-   supercomputer
-   Python
-   Conda
-   StructureFiles
-   BasicMD
-
-
 :::{important}
 :class: sidebar
 **Info, Example, and Task** This guide is intended to provide enough information to get yourself set up no lab. Honestly, it is quite bare. Once you feel comfortable, try the other sections! If you're confused, don't hesitate to send me questions! 
@@ -51,5 +40,3 @@ and/or make an account with:
 **Other Resources I enjoyed:**
 
   - [The Sherrill Group: Notes](http://vergil.chemistry.gatech.edu/notes/)
-
-

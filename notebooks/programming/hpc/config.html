@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -183,40 +206,40 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p>For example, I have multiple supercomputer accounts and would like to configure my <span class="xref std std-term">ssh</span> login.</p>
 <p>First, I made the file, <code class="docutils literal notranslate"><span class="pre">config</span></code>, in my <code class="docutils literal notranslate"><span class="pre">~/.ssh/</span></code> directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch ~/.ssh/config
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>~/.ssh/config
 </pre></div>
 </div>
 <p>Next, edit the file with <code class="docutils literal notranslate"><span class="pre">vi</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi ~/.ssh/config
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>~/.ssh/config
 </pre></div>
 </div>
 <p>Finally, I added these configuration options and saved the file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Host *                            <span class="c1"># Apply these options to all hosts</span>
-ServerAliveInterval <span class="m">90</span>            <span class="c1"># Keeps the server alive by sending null packet (90 seconds)</span>
-StrictHostKeyChecking no          <span class="c1"># Automatically add new host keys to the known_hosts </span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Host<span class="w"> </span>*<span class="w">                            </span><span class="c1"># Apply these options to all hosts</span>
+ServerAliveInterval<span class="w"> </span><span class="m">90</span><span class="w">            </span><span class="c1"># Keeps the server alive by sending null packet (90 seconds)</span>
+StrictHostKeyChecking<span class="w"> </span>no<span class="w">          </span><span class="c1"># Automatically add new host keys to the known_hosts </span>
 
-Host ou                           <span class="c1"># Alias for OU supercomputer, Oscer/Schooner</span>
-  Hostname schooner.oscer.ou.edu  <span class="c1"># IP address of Oscer/Schooner</span>
-  User van                        <span class="c1"># My username</span>
-  
-Host osu                          <span class="c1"># Alias for OSU supercomputer, Pete</span>
-  Hostname pete.hpc.okstate.edu   <span class="c1"># IP address of Pete</span>
-  User van                        <span class="c1"># My username</span>
+Host<span class="w"> </span>ou<span class="w">                           </span><span class="c1"># Alias for OU supercomputer, Oscer/Schooner</span>
+<span class="w">  </span>Hostname<span class="w"> </span>schooner.oscer.ou.edu<span class="w">  </span><span class="c1"># IP address of Oscer/Schooner</span>
+<span class="w">  </span>User<span class="w"> </span>van<span class="w">                        </span><span class="c1"># My username</span>
+<span class="w">  </span>
+Host<span class="w"> </span>osu<span class="w">                          </span><span class="c1"># Alias for OSU supercomputer, Pete</span>
+<span class="w">  </span>Hostname<span class="w"> </span>pete.hpc.okstate.edu<span class="w">   </span><span class="c1"># IP address of Pete</span>
+<span class="w">  </span>User<span class="w"> </span>van<span class="w">                        </span><span class="c1"># My username</span>
 </pre></div>
 </div>
 <p>Now to log into either supercomputers, I just type:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="96fc881b-e94b-4e74-a80c-fa7ee793fca8" name="48226aa4-1bd2-4093-a112-ff2dd4b0d3ab" type="radio">
-</input><label class="sd-tab-label" for="96fc881b-e94b-4e74-a80c-fa7ee793fca8">
+<input checked="checked" id="9b199add-615c-497b-9b11-f1ccc9f07936" name="fc662790-201f-43c4-b0b3-dc976bab60c3" type="radio">
+</input><label class="sd-tab-label" for="9b199add-615c-497b-9b11-f1ccc9f07936">
 Oscer/Schooner</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh ou
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ou
 </pre></div>
 </div>
 </div>
-<input id="730bf417-bf8b-44f3-bcb3-d14f93a37de5" name="48226aa4-1bd2-4093-a112-ff2dd4b0d3ab" type="radio">
-</input><label class="sd-tab-label" for="730bf417-bf8b-44f3-bcb3-d14f93a37de5">
+<input id="8b8bfb77-5a04-4f75-91cb-b073f5ae002c" name="fc662790-201f-43c4-b0b3-dc976bab60c3" type="radio">
+</input><label class="sd-tab-label" for="8b8bfb77-5a04-4f75-91cb-b073f5ae002c">
 Pete</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh osu
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>osu
 </pre></div>
 </div>
 </div>

@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -187,45 +210,45 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Vi/Vim is a text editor you can use in your terminal. Unfortunately, this program isn’t like the ones you may be familiar with like Notepad, TextEdit, etc… There are a lot of key bindings you will need to remember, but once you’re use to it, you’ll realize this text editor designed for speed and increased productivity. The numerous keybindings will be your best friend for speedy navigation to specific points in the file, and for fast editing.</p>
 <section id="overview-of-some-commands">
 <h2>Overview of Some Commands<a class="headerlink" href="#overview-of-some-commands" title="Permalink to this headline">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    vi &lt;filename&gt;     <span class="c1"># Open &lt;filename&gt; in vim</span>
-    :help &lt;topic&gt;     <span class="c1"># Open up built-in help docs about &lt;topic&gt; if any exists</span>
-    :q                <span class="c1"># Quit vim</span>
-    :w                <span class="c1"># Save current file</span>
-    :wq               <span class="c1"># Save file and quit vim</span>
-    ZZ                <span class="c1"># Save file and quit vim</span>
-    :q!               <span class="c1"># Quit vim without saving file</span>
-                      <span class="c1"># ! *forces* :q to execute, hence quitting vim without saving</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>vi<span class="w"> </span>&lt;filename&gt;<span class="w">     </span><span class="c1"># Open &lt;filename&gt; in vim</span>
+<span class="w">    </span>:help<span class="w"> </span>&lt;topic&gt;<span class="w">     </span><span class="c1"># Open up built-in help docs about &lt;topic&gt; if any exists</span>
+<span class="w">    </span>:q<span class="w">                </span><span class="c1"># Quit vim</span>
+<span class="w">    </span>:w<span class="w">                </span><span class="c1"># Save current file</span>
+<span class="w">    </span>:wq<span class="w">               </span><span class="c1"># Save file and quit vim</span>
+<span class="w">    </span>ZZ<span class="w">                </span><span class="c1"># Save file and quit vim</span>
+<span class="w">    </span>:q!<span class="w">               </span><span class="c1"># Quit vim without saving file</span>
+<span class="w">                      </span><span class="c1"># ! *forces* :q to execute, hence quitting vim without saving</span>
 
-    ZQ                <span class="c1"># Quit vim without saving file</span>
-    :x                <span class="c1"># Save file(only when the file is modified) and quit vim</span>
+<span class="w">    </span>ZQ<span class="w">                </span><span class="c1"># Quit vim without saving file</span>
+<span class="w">    </span>:x<span class="w">                </span><span class="c1"># Save file(only when the file is modified) and quit vim</span>
 
-    u                 <span class="c1"># Undo</span>
-    CTRL+R            <span class="c1"># Redo</span>
+<span class="w">    </span>u<span class="w">                 </span><span class="c1"># Undo</span>
+<span class="w">    </span>CTRL+R<span class="w">            </span><span class="c1"># Redo</span>
 
-    h                 <span class="c1"># Move left one character</span>
-    j                 <span class="c1"># Move down one line</span>
-    k                 <span class="c1"># Move up one line</span>
-    l                 <span class="c1"># Move right one character</span>
+<span class="w">    </span>h<span class="w">                 </span><span class="c1"># Move left one character</span>
+<span class="w">    </span>j<span class="w">                 </span><span class="c1"># Move down one line</span>
+<span class="w">    </span>k<span class="w">                 </span><span class="c1"># Move up one line</span>
+<span class="w">    </span>l<span class="w">                 </span><span class="c1"># Move right one character</span>
 
 <span class="c1"># Searching in the text</span>
-    /word             <span class="c1"># Highlights all occurrences of word after cursor</span>
-    ?word             <span class="c1"># Highlights all occurrences of word before cursor</span>
-    n                 <span class="c1"># Moves cursor to next occurrence of word after search</span>
-    N                 <span class="c1"># Moves cursor to previous occurrence of word</span>
+<span class="w">    </span>/word<span class="w">             </span><span class="c1"># Highlights all occurrences of word after cursor</span>
+<span class="w">    </span>?word<span class="w">             </span><span class="c1"># Highlights all occurrences of word before cursor</span>
+<span class="w">    </span>n<span class="w">                 </span><span class="c1"># Moves cursor to next occurrence of word after search</span>
+<span class="w">    </span>N<span class="w">                 </span><span class="c1"># Moves cursor to previous occurrence of word</span>
 
-    :%s/foo/bar/g     <span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on every line in the file</span>
-    :s/foo/bar/g      <span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on the current line</span>
-    :%s/<span class="se">\n</span>/<span class="se">\r</span>/g       <span class="c1"># Replace new line characters with new line characters</span>
-    :<span class="s1">&#39;&lt;,&#39;</span>&gt;s/foo/bar/g <span class="c1"># Change &#39;foo&#39; to &#39;bar on every line in the current visual</span>
+<span class="w">    </span>:%s/foo/bar/g<span class="w">     </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on every line in the file</span>
+<span class="w">    </span>:s/foo/bar/g<span class="w">      </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on the current line</span>
+<span class="w">    </span>:%s/<span class="se">\n</span>/<span class="se">\r</span>/g<span class="w">       </span><span class="c1"># Replace new line characters with new line characters</span>
+<span class="w">    </span>:<span class="s1">&#39;&lt;,&#39;</span>&gt;s/foo/bar/g<span class="w"> </span><span class="c1"># Change &#39;foo&#39; to &#39;bar on every line in the current visual</span>
 
-    <span class="c1"># Other characters for moving around</span>
+<span class="w">    </span><span class="c1"># Other characters for moving around</span>
 
-    gg                <span class="c1"># Go to the top of the file</span>
-    G                 <span class="c1"># Go to the bottom of the file</span>
-    :NUM              <span class="c1"># Go to line number NUM (NUM is any number)</span>
-    H                 <span class="c1"># Move to the top of the screen</span>
-    M                 <span class="c1"># Move to the middle of the screen</span>
-    L                 <span class="c1"># Move to the bottom of the screen</span>
+<span class="w">    </span>gg<span class="w">                </span><span class="c1"># Go to the top of the file</span>
+<span class="w">    </span>G<span class="w">                 </span><span class="c1"># Go to the bottom of the file</span>
+<span class="w">    </span>:NUM<span class="w">              </span><span class="c1"># Go to line number NUM (NUM is any number)</span>
+<span class="w">    </span>H<span class="w">                 </span><span class="c1"># Move to the top of the screen</span>
+<span class="w">    </span>M<span class="w">                 </span><span class="c1"># Move to the middle of the screen</span>
+<span class="w">    </span>L<span class="w">                 </span><span class="c1"># Move to the bottom of the screen</span>
 </pre></div>
 </div>
 </section>

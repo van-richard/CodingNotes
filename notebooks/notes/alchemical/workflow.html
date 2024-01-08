@@ -23,7 +23,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
@@ -54,7 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -67,6 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/notes/alchemical/workflow.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="QM/MM Simulations" href="../basics-qmmm.html" />
+    <link rel="prev" title="Alchemical States" href="potentials.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,7 +104,36 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
-    
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../quickstart/overview.html">
+  A (not so) Quick Start Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../programming/bash/overview.html">
+  bash Shell
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../simulation/md.html">
+  Classical MD
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../simulation/qmmm.html">
+  QM/MM
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../binding.html">
+  Binding Affinity
+ </a>
+</li>
+
     
 </ul>
       </div>
@@ -114,7 +144,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -134,7 +187,44 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../modelling.html">
+   Simulation Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics-classical.html">
+   Classical Molecular Dynamics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fe-alchemical.html">
+   Alchemical Free Energy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="potentials.html">
+   Alchemical States
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Simulation Workflows
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../basics-qmmm.html">
+   QM/MM Simulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../fe-estimators.html">
+   Free Energy Estimators
+  </a>
+ </li>
+</ul>
+
   </div>
 </nav>
               </div>
@@ -165,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
     </span>
    </code>
   </a>
-  <ul class="nav section-nav flex-column">
+  <ul class="visible nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#code">
      Code
@@ -215,8 +305,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">parmed</span></code> to remove redundant bonding terms for more efficient calculation (<code class="docutils literal notranslate"><span class="pre">timerge</span></code>)</p></li>
 </ul>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="44dbe2ab-0664-4178-be84-8aab209cc20b" name="a7deabef-08c4-463a-9ec3-352f261534d6" type="radio">
-</input><label class="sd-tab-label" for="44dbe2ab-0664-4178-be84-8aab209cc20b">
+<input checked="checked" id="459ed106-ca31-4c2f-aafe-f38a162cd9fe" name="03822f04-6d73-4e31-9b51-41c41d2c1b52" type="radio">
+</input><label class="sd-tab-label" for="459ed106-ca31-4c2f-aafe-f38a162cd9fe">
 1. Preparing PDB files</label><div class="sd-tab-content docutils">
 <p>To get an idea of the number of atoms and charge of wildtype vs mutant, I create an <code class="docutils literal notranslate"><span class="pre">init</span></code> folder, run <code class="docutils literal notranslate"><span class="pre">tleap</span></code>, and grab some information.</p>
 <ol class="simple">
@@ -235,8 +325,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ol>
 </div>
-<input id="ebcddee1-e4c8-4f23-8ec9-af5961d96ce3" name="a7deabef-08c4-463a-9ec3-352f261534d6" type="radio">
-</input><label class="sd-tab-label" for="ebcddee1-e4c8-4f23-8ec9-af5961d96ce3">
+<input id="de51b426-3cd7-48df-99ef-ec61fa032f84" name="03822f04-6d73-4e31-9b51-41c41d2c1b52" type="radio">
+</input><label class="sd-tab-label" for="de51b426-3cd7-48df-99ef-ec61fa032f84">
 2. Split components of system </label><div class="sd-tab-content docutils">
 <p>Now that we’re familiar with the protein systems we’re simulating, make PDBs containing the components for our alchemical calculation</p>
 <ul class="simple">
@@ -258,8 +348,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ol>
 </div>
-<input id="016254f8-11f7-472f-8752-62278ca2d4db" name="a7deabef-08c4-463a-9ec3-352f261534d6" type="radio">
-</input><label class="sd-tab-label" for="016254f8-11f7-472f-8752-62278ca2d4db">
+<input id="c0280c91-d24a-447c-9b6c-6ce8b559298f" name="03822f04-6d73-4e31-9b51-41c41d2c1b52" type="radio">
+</input><label class="sd-tab-label" for="c0280c91-d24a-447c-9b6c-6ce8b559298f">
 3. Files for Alchemical</label><div class="sd-tab-content docutils">
 <p>Preparing the topology and coordinate files for alchemical simulation</p>
 <ol class="simple">
@@ -282,21 +372,21 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="dropdown admonition">
 <p class="admonition-title">Scripts</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="3f4eb475-b247-439a-b758-d209dd40c511" name="42652158-ee14-4d8a-a721-b91c56c0d75e" type="radio">
-</input><label class="sd-tab-label" for="3f4eb475-b247-439a-b758-d209dd40c511">
+<input checked="checked" id="c9aea382-eb3c-477b-906d-3a7ae2dba9f6" name="8bffb95a-da34-42b7-afaa-b346ee1aae86" type="radio">
+</input><label class="sd-tab-label" for="c9aea382-eb3c-477b-906d-3a7ae2dba9f6">
 1_leap.sh</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/sh</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>date
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="nb">shopt</span> -s expand_aliases
-<span class="linenos"> 6</span><span class="nb">source</span> ~/.bash_aliases
+<span class="linenos"> 5</span><span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>expand_aliases
+<span class="linenos"> 6</span><span class="nb">source</span><span class="w"> </span>~/.bash_aliases
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span>myconda<span class="p">;</span> conda activate ambertools
+<span class="linenos"> 8</span>myconda<span class="p">;</span><span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="nv">basedir</span><span class="o">=</span>leap
 <span class="linenos">11</span>
-<span class="linenos">12</span>tleap -f - <span class="s">&lt;&lt;_EOF</span>
+<span class="linenos">12</span>tleap<span class="w"> </span>-f<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;_EOF</span>
 <span class="linenos">13</span><span class="s"># load the AMBER force fields</span>
 <span class="linenos">14</span><span class="s">source leaprc.protein.ff14SB</span>
 <span class="linenos">15</span><span class="s">source leaprc.DNA.OL15</span>
@@ -333,23 +423,23 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<input id="a8ab0943-c8f3-4c1b-bda6-1c871b219185" name="42652158-ee14-4d8a-a721-b91c56c0d75e" type="radio">
-</input><label class="sd-tab-label" for="a8ab0943-c8f3-4c1b-bda6-1c871b219185">
+<input id="f89a9785-d2e1-4f44-8a3a-75b021cae9b8" name="8bffb95a-da34-42b7-afaa-b346ee1aae86" type="radio">
+</input><label class="sd-tab-label" for="f89a9785-d2e1-4f44-8a3a-75b021cae9b8">
 2_eliminate_duplicate.sh</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>date
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="nb">shopt</span> -s expand_aliases
-<span class="linenos"> 6</span><span class="nb">source</span> ~/.bash_aliases
+<span class="linenos"> 5</span><span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>expand_aliases
+<span class="linenos"> 6</span><span class="nb">source</span><span class="w"> </span>~/.bash_aliases
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span>myconda<span class="p">;</span> conda activate ambertools
+<span class="linenos"> 8</span>myconda<span class="p">;</span><span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="c1"># wildtype res = 854</span>
 <span class="linenos">11</span><span class="c1"># num = 854 - 1 = 853</span>
 <span class="linenos">12</span><span class="c1"># mutant res = 1366 + 853 = 2219</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span>parmed protein.parm7 <span class="s">&lt;&lt;_EOF</span>
+<span class="linenos">14</span>parmed<span class="w"> </span>protein.parm7<span class="w"> </span><span class="s">&lt;&lt;_EOF</span>
 <span class="linenos">15</span><span class="s">loadRestrt protein.rst7</span>
 <span class="linenos">16</span><span class="s">setOverwrite True</span>
 <span class="linenos">17</span><span class="s"># [all res of wt] [all res of mt] [wt] [mt]</span>
@@ -359,7 +449,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="linenos">21</span><span class="s">quit</span>
 <span class="linenos">22</span><span class="s">_EOF</span>
 <span class="linenos">23</span>
-<span class="linenos">24</span>parmed complex.parm7 <span class="s">&lt;&lt;_EOF</span>
+<span class="linenos">24</span>parmed<span class="w"> </span>complex.parm7<span class="w"> </span><span class="s">&lt;&lt;_EOF</span>
 <span class="linenos">25</span><span class="s">loadRestrt complex.rst7</span>
 <span class="linenos">26</span><span class="s">setOverwrite True</span>
 <span class="linenos">27</span><span class="s"># [all res of wt] [all res of mt] [wt] [mt]</span>
@@ -395,160 +485,160 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="dropdown admonition">
 <p class="admonition-title">Templates for MD inputs</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="74a0eb51-04bf-49d5-ba7c-cd69cd5b2e58" name="eb2e667a-146b-49f3-964f-23ffa4aaf389" type="radio">
-</input><label class="sd-tab-label" for="74a0eb51-04bf-49d5-ba7c-cd69cd5b2e58">
+<input checked="checked" id="a65e7ca9-3ed7-4584-b6f7-e252e7a6b761" name="81f12736-a89d-48df-9e4d-9f93b7785eb7" type="radio">
+</input><label class="sd-tab-label" for="a65e7ca9-3ed7-4584-b6f7-e252e7a6b761">
 1. min.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>minimisation
-<span class="linenos"> 2</span> <span class="p">&amp;</span>cntrl
-<span class="linenos"> 3</span>   ! Minimization Options
-<span class="linenos"> 4</span>   <span class="nv">imin</span> <span class="o">=</span> <span class="m">1</span>, 
-<span class="linenos"> 5</span>   <span class="nv">ntmin</span> <span class="o">=</span> <span class="m">2</span>, 
-<span class="linenos"> 6</span>   <span class="nv">maxcyc</span> <span class="o">=</span> <span class="m">500</span>,
-<span class="linenos"> 7</span>   <span class="nv">ntpr</span> <span class="o">=</span> <span class="m">50</span>, 
-<span class="linenos"> 8</span>   <span class="nv">ntwe</span> <span class="o">=</span> <span class="m">50</span>,
-<span class="linenos"> 9</span>   <span class="nv">dx0</span> <span class="o">=</span> <span class="m">1</span>.0D-7,
+<span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="linenos"> 3</span><span class="w">   </span>!<span class="w"> </span>Minimization<span class="w"> </span>Options
+<span class="linenos"> 4</span><span class="w">   </span><span class="nv">imin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>
+<span class="linenos"> 5</span><span class="w">   </span><span class="nv">ntmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>,<span class="w"> </span>
+<span class="linenos"> 6</span><span class="w">   </span><span class="nv">maxcyc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span>,
+<span class="linenos"> 7</span><span class="w">   </span><span class="nv">ntpr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>,<span class="w"> </span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="nv">ntwe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>,
+<span class="linenos"> 9</span><span class="w">   </span><span class="nv">dx0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>.0D-7,
 <span class="linenos">10</span>
-<span class="linenos">11</span>   <span class="nv">icfe</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">ifsc</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">clambda</span> <span class="o">=</span> %L%, <span class="nv">scalpha</span> <span class="o">=</span> <span class="m">0</span>.5, <span class="nv">scbeta</span> <span class="o">=</span> <span class="m">12</span>.0,
-<span class="linenos">12</span>   <span class="nv">logdvdl</span> <span class="o">=</span> <span class="m">0</span>,
-<span class="linenos">13</span>   <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">14</span>   <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">15</span>   <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">16</span>   <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">17</span>   ! <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">18</span>   ! <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">19</span>   ! <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">20</span>   ! <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">21</span>   
-<span class="linenos">22</span> /
+<span class="linenos">11</span><span class="w">   </span><span class="nv">icfe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">ifsc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">clambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>%L%,<span class="w"> </span><span class="nv">scalpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.5,<span class="w"> </span><span class="nv">scbeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span>.0,
+<span class="linenos">12</span><span class="w">   </span><span class="nv">logdvdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,
+<span class="linenos">13</span><span class="w">   </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">14</span><span class="w">   </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">15</span><span class="w">   </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">16</span><span class="w">   </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">17</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">18</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">19</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">20</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">21</span><span class="w">   </span>
+<span class="linenos">22</span><span class="w"> </span>/
 <span class="linenos">23</span>
-<span class="linenos">24</span> <span class="p">&amp;</span>ewald
-<span class="linenos">25</span> / 
+<span class="linenos">24</span><span class="w"> </span><span class="p">&amp;</span>ewald
+<span class="linenos">25</span><span class="w"> </span>/<span class="w"> </span>
 </pre></div>
 </div>
 </div>
-<input id="73f89dba-8457-4712-8b2f-f073e86be8c5" name="eb2e667a-146b-49f3-964f-23ffa4aaf389" type="radio">
-</input><label class="sd-tab-label" for="73f89dba-8457-4712-8b2f-f073e86be8c5">
+<input id="60d36d0b-8c68-402e-92d3-0a8e7b587b79" name="81f12736-a89d-48df-9e4d-9f93b7785eb7" type="radio">
+</input><label class="sd-tab-label" for="60d36d0b-8c68-402e-92d3-0a8e7b587b79">
 2. heat.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>heating
-<span class="linenos"> 2</span> <span class="p">&amp;</span>cntrl
-<span class="linenos"> 3</span>   <span class="nv">imin</span> <span class="o">=</span> <span class="m">0</span>, 
-<span class="linenos"> 4</span>   <span class="nv">irest</span> <span class="o">=</span> <span class="m">0</span>, 
-<span class="linenos"> 5</span>   <span class="nv">ntx</span> <span class="o">=</span> <span class="m">1</span>, 
-<span class="linenos"> 6</span>   
-<span class="linenos"> 7</span>   ! MD
-<span class="linenos"> 8</span>   <span class="nv">nstlim</span> <span class="o">=</span> <span class="m">20000</span>, 
-<span class="linenos"> 9</span>   <span class="nv">dt</span> <span class="o">=</span> <span class="m">0</span>.001,
-<span class="linenos">10</span>   <span class="nv">ntb</span> <span class="o">=</span> <span class="m">1</span>, ! NVT
+<span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="linenos"> 3</span><span class="w">   </span><span class="nv">imin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,<span class="w"> </span>
+<span class="linenos"> 4</span><span class="w">   </span><span class="nv">irest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,<span class="w"> </span>
+<span class="linenos"> 5</span><span class="w">   </span><span class="nv">ntx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>
+<span class="linenos"> 6</span><span class="w">   </span>
+<span class="linenos"> 7</span><span class="w">   </span>!<span class="w"> </span>MD
+<span class="linenos"> 8</span><span class="w">   </span><span class="nv">nstlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20000</span>,<span class="w"> </span>
+<span class="linenos"> 9</span><span class="w">   </span><span class="nv">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.001,
+<span class="linenos">10</span><span class="w">   </span><span class="nv">ntb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>!<span class="w"> </span>NVT
 <span class="linenos">11</span>
-<span class="linenos">12</span>   ! SHAKE
-<span class="linenos">13</span>   <span class="nv">ntc</span> <span class="o">=</span> <span class="m">2</span>,
-<span class="linenos">14</span>   <span class="nv">ntf</span> <span class="o">=</span> <span class="m">1</span>, ! alchemical
+<span class="linenos">12</span><span class="w">   </span>!<span class="w"> </span>SHAKE
+<span class="linenos">13</span><span class="w">   </span><span class="nv">ntc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>,
+<span class="linenos">14</span><span class="w">   </span><span class="nv">ntf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>!<span class="w"> </span>alchemical
 <span class="linenos">15</span>
-<span class="linenos">16</span>   ! Temperature Regulation
-<span class="linenos">17</span>   <span class="nv">ntt</span> <span class="o">=</span> <span class="m">3</span>, 
-<span class="linenos">18</span>   <span class="nv">temp0</span> <span class="o">=</span> <span class="m">300</span>.0, 
-<span class="linenos">19</span>   <span class="nv">tempi</span> <span class="o">=</span> <span class="m">50</span>.0, 
-<span class="linenos">20</span>   <span class="nv">gamma_ln</span> <span class="o">=</span> <span class="m">1</span>.0,
+<span class="linenos">16</span><span class="w">   </span>!<span class="w"> </span>Temperature<span class="w"> </span>Regulation
+<span class="linenos">17</span><span class="w">   </span><span class="nv">ntt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>,<span class="w"> </span>
+<span class="linenos">18</span><span class="w">   </span><span class="nv">temp0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span>.0,<span class="w"> </span>
+<span class="linenos">19</span><span class="w">   </span><span class="nv">tempi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>.0,<span class="w"> </span>
+<span class="linenos">20</span><span class="w">   </span><span class="nv">gamma_ln</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>.0,
 <span class="linenos">21</span>
-<span class="linenos">22</span>   ! output
-<span class="linenos">23</span>   <span class="nv">ioutfm</span> <span class="o">=</span> <span class="m">1</span>, 
-<span class="linenos">24</span>   <span class="nv">iwrap</span> <span class="o">=</span> <span class="m">1</span>,
-<span class="linenos">25</span>   <span class="nv">ntwe</span> <span class="o">=</span> <span class="m">1000</span>, 
-<span class="linenos">26</span>   <span class="nv">ntwx</span> <span class="o">=</span> <span class="m">1000</span>, 
-<span class="linenos">27</span>   <span class="nv">ntpr</span> <span class="o">=</span> <span class="m">1000</span>, 
-<span class="linenos">28</span>   <span class="nv">ntwr</span> <span class="o">=</span> <span class="m">5000</span>,
+<span class="linenos">22</span><span class="w">   </span>!<span class="w"> </span>output
+<span class="linenos">23</span><span class="w">   </span><span class="nv">ioutfm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>
+<span class="linenos">24</span><span class="w">   </span><span class="nv">iwrap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,
+<span class="linenos">25</span><span class="w">   </span><span class="nv">ntwe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span>,<span class="w"> </span>
+<span class="linenos">26</span><span class="w">   </span><span class="nv">ntwx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span>,<span class="w"> </span>
+<span class="linenos">27</span><span class="w">   </span><span class="nv">ntpr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span>,<span class="w"> </span>
+<span class="linenos">28</span><span class="w">   </span><span class="nv">ntwr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5000</span>,
 <span class="linenos">29</span>
-<span class="linenos">30</span>   !needed <span class="k">for</span> method <span class="m">2</span>, also <span class="nb">set</span> <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001
-<span class="linenos">31</span>   <span class="nv">noshakemask</span> <span class="o">=</span> <span class="s1">&#39;:865,2230&#39;</span>,
+<span class="linenos">30</span><span class="w">   </span>!needed<span class="w"> </span><span class="k">for</span><span class="w"> </span>method<span class="w"> </span><span class="m">2</span>,<span class="w"> </span>also<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001
+<span class="linenos">31</span><span class="w">   </span><span class="nv">noshakemask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;:865,2230&#39;</span>,
 <span class="linenos">32</span>
-<span class="linenos">33</span>   <span class="nv">nmropt</span> <span class="o">=</span> <span class="m">1</span>,
-<span class="linenos">34</span>   <span class="nv">ntr</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">restraint_wt</span> <span class="o">=</span> <span class="m">5</span>.00,
-<span class="linenos">35</span>   <span class="nv">restraintmask</span><span class="o">=</span><span class="s1">&#39;@CA &amp; @P&#39;</span>,
+<span class="linenos">33</span><span class="w">   </span><span class="nv">nmropt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,
+<span class="linenos">34</span><span class="w">   </span><span class="nv">ntr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">restraint_wt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>.00,
+<span class="linenos">35</span><span class="w">   </span><span class="nv">restraintmask</span><span class="o">=</span><span class="s1">&#39;@CA &amp; @P&#39;</span>,
 <span class="linenos">36</span>
-<span class="linenos">37</span>   <span class="nv">icfe</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">ifsc</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">clambda</span> <span class="o">=</span> %L%, <span class="nv">scalpha</span> <span class="o">=</span> <span class="m">0</span>.5, <span class="nv">scbeta</span> <span class="o">=</span> <span class="m">12</span>.0,
-<span class="linenos">38</span>   <span class="nv">logdvdl</span> <span class="o">=</span> <span class="m">0</span>,
-<span class="linenos">39</span>   <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">40</span>   <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">41</span>   <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">42</span>   <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">43</span>   ! <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">44</span>   ! <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">45</span>   ! <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">46</span>   ! <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">37</span><span class="w">   </span><span class="nv">icfe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">ifsc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">clambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>%L%,<span class="w"> </span><span class="nv">scalpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.5,<span class="w"> </span><span class="nv">scbeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span>.0,
+<span class="linenos">38</span><span class="w">   </span><span class="nv">logdvdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,
+<span class="linenos">39</span><span class="w">   </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">40</span><span class="w">   </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">41</span><span class="w">   </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">42</span><span class="w">   </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">43</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">44</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">45</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">46</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
 <span class="linenos">47</span>
-<span class="linenos">48</span> /
+<span class="linenos">48</span><span class="w"> </span>/
 <span class="linenos">49</span>
-<span class="linenos">50</span> <span class="p">&amp;</span>ewald
-<span class="linenos">51</span> / 
+<span class="linenos">50</span><span class="w"> </span><span class="p">&amp;</span>ewald
+<span class="linenos">51</span><span class="w"> </span>/<span class="w"> </span>
 <span class="linenos">52</span>
-<span class="linenos">53</span> <span class="p">&amp;</span>wt
-<span class="linenos">54</span>   <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;TEMP0&#39;</span>,
-<span class="linenos">55</span>   <span class="nv">istep1</span> <span class="o">=</span> <span class="m">0</span>, <span class="nv">istep2</span> <span class="o">=</span> <span class="m">18000</span>,                                      
-<span class="linenos">56</span>   <span class="nv">value1</span> <span class="o">=</span> <span class="m">50</span>.0, <span class="nv">value2</span> <span class="o">=</span> <span class="m">300</span>.0
-<span class="linenos">57</span> /
+<span class="linenos">53</span><span class="w"> </span><span class="p">&amp;</span>wt
+<span class="linenos">54</span><span class="w">   </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;TEMP0&#39;</span>,
+<span class="linenos">55</span><span class="w">   </span><span class="nv">istep1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="nv">istep2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18000</span>,<span class="w">                                      </span>
+<span class="linenos">56</span><span class="w">   </span><span class="nv">value1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>.0,<span class="w"> </span><span class="nv">value2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span>.0
+<span class="linenos">57</span><span class="w"> </span>/
 <span class="linenos">58</span>
-<span class="linenos">59</span> <span class="p">&amp;</span>wt <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;END&#39;</span>
-<span class="linenos">60</span> /
+<span class="linenos">59</span><span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;END&#39;</span>
+<span class="linenos">60</span><span class="w"> </span>/
 </pre></div>
 </div>
 </div>
-<input id="aa2d85a5-375c-4a92-a331-ce48af3694e4" name="eb2e667a-146b-49f3-964f-23ffa4aaf389" type="radio">
-</input><label class="sd-tab-label" for="aa2d85a5-375c-4a92-a331-ce48af3694e4">
+<input id="b9500d24-57f2-4551-84b5-1b2f06443cb7" name="81f12736-a89d-48df-9e4d-9f93b7785eb7" type="radio">
+</input><label class="sd-tab-label" for="b9500d24-57f2-4551-84b5-1b2f06443cb7">
 3. prod.tmpl</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>TI simulation
-<span class="linenos"> 2</span> <span class="p">&amp;</span>cntrl
-<span class="linenos"> 3</span>   <span class="nv">imin</span> <span class="o">=</span> <span class="m">0</span>,         ! Turn on minimization
-<span class="linenos"> 4</span>   <span class="nv">irest</span> <span class="o">=</span> <span class="m">1</span>,        ! <span class="nv">1</span> <span class="o">=</span> restart simulation
-<span class="linenos"> 5</span>   <span class="nv">ntx</span> <span class="o">=</span> <span class="m">5</span>,          ! <span class="nv">5</span> <span class="o">=</span> <span class="nb">read</span> coordinates/velocities from file
-<span class="linenos"> 6</span>   
-<span class="linenos"> 7</span>   ! Molecular Dynamics
-<span class="linenos"> 8</span>   <span class="nv">nstlim</span> <span class="o">=</span> <span class="m">1000000</span>,  ! Number of MD-steps
-<span class="linenos"> 9</span>   <span class="nv">dt</span> <span class="o">=</span> <span class="m">0</span>.002,       ! <span class="nb">time</span> step <span class="o">(</span>psec<span class="o">)</span>
-<span class="linenos">10</span>   <span class="nv">ntb</span> <span class="o">=</span> <span class="m">1</span>,          ! NVT
-<span class="linenos">11</span>   <span class="nv">ntc</span> <span class="o">=</span> <span class="m">2</span>,          ! Turn on SHAKE <span class="o">(</span>bonds involving hydrogen constrainted<span class="o">)</span> 
-<span class="linenos">12</span>   <span class="nv">ntf</span> <span class="o">=</span> <span class="m">1</span>,
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>TI<span class="w"> </span>simulation
+<span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="linenos"> 3</span><span class="w">   </span><span class="nv">imin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>minimization
+<span class="linenos"> 4</span><span class="w">   </span><span class="nv">irest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">        </span>!<span class="w"> </span><span class="nv">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>restart<span class="w"> </span>simulation
+<span class="linenos"> 5</span><span class="w">   </span><span class="nv">ntx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>,<span class="w">          </span>!<span class="w"> </span><span class="nv">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>coordinates/velocities<span class="w"> </span>from<span class="w"> </span>file
+<span class="linenos"> 6</span><span class="w">   </span>
+<span class="linenos"> 7</span><span class="w">   </span>!<span class="w"> </span>Molecular<span class="w"> </span>Dynamics
+<span class="linenos"> 8</span><span class="w">   </span><span class="nv">nstlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000000</span>,<span class="w">  </span>!<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>MD-steps
+<span class="linenos"> 9</span><span class="w">   </span><span class="nv">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.002,<span class="w">       </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>psec<span class="o">)</span>
+<span class="linenos">10</span><span class="w">   </span><span class="nv">ntb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">          </span>!<span class="w"> </span>NVT
+<span class="linenos">11</span><span class="w">   </span><span class="nv">ntc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>,<span class="w">          </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>SHAKE<span class="w"> </span><span class="o">(</span>bonds<span class="w"> </span>involving<span class="w"> </span>hydrogen<span class="w"> </span>constrainted<span class="o">)</span><span class="w"> </span>
+<span class="linenos">12</span><span class="w">   </span><span class="nv">ntf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,
 <span class="linenos">13</span>
-<span class="linenos">14</span>   ! Temperature Regulation
-<span class="linenos">15</span>   <span class="nv">ntt</span> <span class="o">=</span> <span class="m">3</span>,               ! <span class="nv">0</span><span class="o">=</span>NVE,1<span class="o">=</span>NVT,2<span class="o">=</span>Anderson,3<span class="o">=</span>Langevin
-<span class="linenos">16</span>   <span class="nv">temp0</span> <span class="o">=</span> <span class="m">300</span>.0,         ! Reference temperature
-<span class="linenos">17</span>   <span class="nv">gamma_ln</span> <span class="o">=</span> <span class="m">1</span>.0,        ! Collision frequency <span class="k">in</span> ps^-1
-<span class="linenos">18</span>   <span class="nv">ig</span> <span class="o">=</span> -1,               ! Random initial velocities
-<span class="linenos">19</span>   
-<span class="linenos">20</span>   ! Outputs
-<span class="linenos">21</span>   <span class="nv">ntwx</span> <span class="o">=</span> <span class="m">500000</span>,          ! Write coordinates to .nc 
-<span class="linenos">22</span>   <span class="nv">ntpr</span> <span class="o">=</span> <span class="m">500000</span>,          ! Print energy every ntpr steps
-<span class="linenos">23</span>   <span class="nv">ntwr</span> <span class="o">=</span> <span class="m">2500000</span>,          ! Write rsrt every ntwr steps
-<span class="linenos">24</span>   <span class="nv">ntwe</span> <span class="o">=</span> <span class="m">250000</span>,           ! Write energy/temp to mden
-<span class="linenos">25</span>   <span class="nv">ioutfm</span> <span class="o">=</span> <span class="m">1</span>,            ! Format of coordinate/v 
-<span class="linenos">26</span>   <span class="nv">iwrap</span> <span class="o">=</span> <span class="m">1</span>,             ! PBC
+<span class="linenos">14</span><span class="w">   </span>!<span class="w"> </span>Temperature<span class="w"> </span>Regulation
+<span class="linenos">15</span><span class="w">   </span><span class="nv">ntt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>,<span class="w">               </span>!<span class="w"> </span><span class="nv">0</span><span class="o">=</span>NVE,1<span class="o">=</span>NVT,2<span class="o">=</span>Anderson,3<span class="o">=</span>Langevin
+<span class="linenos">16</span><span class="w">   </span><span class="nv">temp0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span>.0,<span class="w">         </span>!<span class="w"> </span>Reference<span class="w"> </span>temperature
+<span class="linenos">17</span><span class="w">   </span><span class="nv">gamma_ln</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>.0,<span class="w">        </span>!<span class="w"> </span>Collision<span class="w"> </span>frequency<span class="w"> </span><span class="k">in</span><span class="w"> </span>ps^-1
+<span class="linenos">18</span><span class="w">   </span><span class="nv">ig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1,<span class="w">               </span>!<span class="w"> </span>Random<span class="w"> </span>initial<span class="w"> </span>velocities
+<span class="linenos">19</span><span class="w">   </span>
+<span class="linenos">20</span><span class="w">   </span>!<span class="w"> </span>Outputs
+<span class="linenos">21</span><span class="w">   </span><span class="nv">ntwx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500000</span>,<span class="w">          </span>!<span class="w"> </span>Write<span class="w"> </span>coordinates<span class="w"> </span>to<span class="w"> </span>.nc<span class="w"> </span>
+<span class="linenos">22</span><span class="w">   </span><span class="nv">ntpr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500000</span>,<span class="w">          </span>!<span class="w"> </span>Print<span class="w"> </span>energy<span class="w"> </span>every<span class="w"> </span>ntpr<span class="w"> </span>steps
+<span class="linenos">23</span><span class="w">   </span><span class="nv">ntwr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2500000</span>,<span class="w">          </span>!<span class="w"> </span>Write<span class="w"> </span>rsrt<span class="w"> </span>every<span class="w"> </span>ntwr<span class="w"> </span>steps
+<span class="linenos">24</span><span class="w">   </span><span class="nv">ntwe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">250000</span>,<span class="w">           </span>!<span class="w"> </span>Write<span class="w"> </span>energy/temp<span class="w"> </span>to<span class="w"> </span>mden
+<span class="linenos">25</span><span class="w">   </span><span class="nv">ioutfm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">            </span>!<span class="w"> </span>Format<span class="w"> </span>of<span class="w"> </span>coordinate/v<span class="w"> </span>
+<span class="linenos">26</span><span class="w">   </span><span class="nv">iwrap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">             </span>!<span class="w"> </span>PBC
 <span class="linenos">27</span>
-<span class="linenos">28</span>   ! Amber TI Free Energy Calculation <span class="o">(</span>pmemd/sander<span class="o">)</span>
-<span class="linenos">29</span>   <span class="nv">icfe</span> <span class="o">=</span> <span class="m">1</span>,              ! Turn on TI estimates
-<span class="linenos">30</span>   <span class="nv">ifsc</span> <span class="o">=</span> <span class="m">1</span>,		  ! Turn on Softcore-Potential electrostatics
-<span class="linenos">31</span>   <span class="nv">clambda</span> <span class="o">=</span> %L%,         ! lambda value <span class="o">(</span><span class="nv">0</span><span class="o">=</span>unperturb Hamiltonian<span class="o">)</span>
-<span class="linenos">32</span>   <span class="nv">scalpha</span> <span class="o">=</span> <span class="m">0</span>.5,         ! alpha parameter <span class="o">(</span><span class="nv">default</span><span class="o">=</span><span class="m">0</span>.5<span class="o">)</span>
-<span class="linenos">33</span>   <span class="nv">scbeta</span> <span class="o">=</span> <span class="m">12</span>.0,         ! beta parameter <span class="o">(</span>defulat<span class="o">(</span><span class="m">12</span> Angstrom^2<span class="o">)</span>
-<span class="linenos">34</span>   <span class="nv">logdvdl</span> <span class="o">=</span> <span class="m">1</span>,           ! Print pV/vlamba <span class="k">for</span> postprocessing
+<span class="linenos">28</span><span class="w">   </span>!<span class="w"> </span>Amber<span class="w"> </span>TI<span class="w"> </span>Free<span class="w"> </span>Energy<span class="w"> </span>Calculation<span class="w"> </span><span class="o">(</span>pmemd/sander<span class="o">)</span>
+<span class="linenos">29</span><span class="w">   </span><span class="nv">icfe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">              </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>TI<span class="w"> </span>estimates
+<span class="linenos">30</span><span class="w">   </span><span class="nv">ifsc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">		  </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>Softcore-Potential<span class="w"> </span>electrostatics
+<span class="linenos">31</span><span class="w">   </span><span class="nv">clambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>%L%,<span class="w">         </span>!<span class="w"> </span>lambda<span class="w"> </span>value<span class="w"> </span><span class="o">(</span><span class="nv">0</span><span class="o">=</span>unperturb<span class="w"> </span>Hamiltonian<span class="o">)</span>
+<span class="linenos">32</span><span class="w">   </span><span class="nv">scalpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.5,<span class="w">         </span>!<span class="w"> </span>alpha<span class="w"> </span>parameter<span class="w"> </span><span class="o">(</span><span class="nv">default</span><span class="o">=</span><span class="m">0</span>.5<span class="o">)</span>
+<span class="linenos">33</span><span class="w">   </span><span class="nv">scbeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span>.0,<span class="w">         </span>!<span class="w"> </span>beta<span class="w"> </span>parameter<span class="w"> </span><span class="o">(</span>defulat<span class="o">(</span><span class="m">12</span><span class="w"> </span>Angstrom^2<span class="o">)</span>
+<span class="linenos">34</span><span class="w">   </span><span class="nv">logdvdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">           </span>!<span class="w"> </span>Print<span class="w"> </span>pV/vlamba<span class="w"> </span><span class="k">for</span><span class="w"> </span>postprocessing
 <span class="linenos">35</span>
-<span class="linenos">36</span>   ! Output files <span class="k">for</span> MBAR post-processing
-<span class="linenos">37</span>   <span class="nv">ifmbar</span> <span class="o">=</span> <span class="m">1</span>,            ! Print potential E <span class="k">for</span> MBAR
-<span class="linenos">38</span>   <span class="nv">mbar_states</span> <span class="o">=</span> <span class="m">11</span>,      ! Number of lambda windows
-<span class="linenos">39</span>   ! Lambda Windows simulated
-<span class="linenos">40</span>   <span class="nv">mbar_lambda</span> <span class="o">=</span> <span class="m">0</span>.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,
+<span class="linenos">36</span><span class="w">   </span>!<span class="w"> </span>Output<span class="w"> </span>files<span class="w"> </span><span class="k">for</span><span class="w"> </span>MBAR<span class="w"> </span>post-processing
+<span class="linenos">37</span><span class="w">   </span><span class="nv">ifmbar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">            </span>!<span class="w"> </span>Print<span class="w"> </span>potential<span class="w"> </span>E<span class="w"> </span><span class="k">for</span><span class="w"> </span>MBAR
+<span class="linenos">38</span><span class="w">   </span><span class="nv">mbar_states</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span>,<span class="w">      </span>!<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>lambda<span class="w"> </span>windows
+<span class="linenos">39</span><span class="w">   </span>!<span class="w"> </span>Lambda<span class="w"> </span>Windows<span class="w"> </span>simulated
+<span class="linenos">40</span><span class="w">   </span><span class="nv">mbar_lambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,
 <span class="linenos">41</span>
-<span class="linenos">42</span>   ! TI Amber mask selection
-<span class="linenos">43</span>   <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">44</span>   <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">45</span>   <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">46</span>   <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">47</span>   ! <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">48</span>   ! <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">49</span>   ! <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">50</span>   ! <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">51</span> /
+<span class="linenos">42</span><span class="w">   </span>!<span class="w"> </span>TI<span class="w"> </span>Amber<span class="w"> </span>mask<span class="w"> </span>selection
+<span class="linenos">43</span><span class="w">   </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">44</span><span class="w">   </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">45</span><span class="w">   </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">46</span><span class="w">   </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">47</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">48</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">49</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">50</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">51</span><span class="w"> </span>/
 <span class="linenos">52</span>
-<span class="linenos">53</span> <span class="p">&amp;</span>ewald
-<span class="linenos">54</span> / 
+<span class="linenos">53</span><span class="w"> </span><span class="p">&amp;</span>ewald
+<span class="linenos">54</span><span class="w"> </span>/<span class="w"> </span>
 </pre></div>
 </div>
 </div>
@@ -591,6 +681,20 @@ const thebe_selector_output = ".output, .cell_output"
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="potentials.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Alchemical States</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../basics-qmmm.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">QM/MM Simulations</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
               
           </main>

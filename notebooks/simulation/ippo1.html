@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -194,13 +217,13 @@ const thebe_selector_output = ".output, .cell_output"
 <section id="input-files">
 <h2>Input Files<a class="headerlink" href="#input-files" title="Permalink to this headline">#</a></h2>
 <p>Make a new working directory.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir ippoi
-<span class="nb">cd</span> ippoi
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>ippoi
+<span class="nb">cd</span><span class="w"> </span>ippoi
 </pre></div>
 </div>
 <p>Make an <code class="docutils literal notranslate"><span class="pre">input</span></code> directory. This is where we will store the PDB files and generate Amber inputs.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir input
-<span class="nb">cd</span> input
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>input
+<span class="nb">cd</span><span class="w"> </span>input
 </pre></div>
 </div>
 <p>Now we can use tleap to make our <code class="docutils literal notranslate"><span class="pre">.parm7</span></code> and <code class="docutils literal notranslate"><span class="pre">.rst7</span></code> files.</p>
@@ -208,7 +231,7 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <p>Run tleap, and you should get step3_pbcsetup.parm7 and step3_pbcsetup.rst7.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap -sf tleap.in
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
 </pre></div>
 </div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>

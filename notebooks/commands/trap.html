@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -175,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
   <section class="tex2jax_ignore mathjax_ignore" id="trap-signalled-execution">
 <h1><code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution<a class="headerlink" href="#trap-signalled-execution" title="Permalink to this headline">#</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">trap</span></code> command allows you to execute a command whenever your script receives a signal. Here, <code class="docutils literal notranslate"><span class="pre">trap</span></code> will execute <code class="docutils literal notranslate"><span class="pre">rm</span></code> if it receives any of the three listed signals.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">trap</span> <span class="s2">&quot;rm </span><span class="nv">$TEMP_FILE</span><span class="s2">; exit&quot;</span> SIGHUP SIGINT SIGTERM
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">trap</span><span class="w"> </span><span class="s2">&quot;rm </span><span class="nv">$TEMP_FILE</span><span class="s2">; exit&quot;</span><span class="w"> </span>SIGHUP<span class="w"> </span>SIGINT<span class="w"> </span>SIGTERM
 </pre></div>
 </div>
 </section>

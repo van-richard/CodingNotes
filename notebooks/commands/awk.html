@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -195,25 +218,25 @@ const thebe_selector_output = ".output, .cell_output"
   <section class="tex2jax_ignore mathjax_ignore" id="awk-manipulate-text">
 <h1><code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text<a class="headerlink" href="#awk-manipulate-text" title="Permalink to this headline">#</a></h1>
 <p>Treating a text file, were each space is a column, you can print the columns with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk <span class="s1">&#39;{print $1}&#39;</span> file
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Where <code class="docutils literal notranslate"><span class="pre">$1</span></code> is the first column. Index starts at 1.</p>
 <section id="separator">
 <h2>Separator<a class="headerlink" href="#separator" title="Permalink to this headline">#</a></h2>
 <p>You can chose the field separator with, <code class="docutils literal notranslate"><span class="pre">-F</span></code>. This example choses the comma as the separator, and print the 5th column:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk -F <span class="s1">&#39;,&#39;</span> <span class="s1">&#39;{print $5} file&#39;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s1">&#39;,&#39;</span><span class="w"> </span><span class="s1">&#39;{print $5} file&#39;</span>
 </pre></div>
 </div>
 </section>
 <section id="awk-can-do-math">
 <h2><code class="docutils literal notranslate"><span class="pre">awk</span></code> can do math.<a class="headerlink" href="#awk-can-do-math" title="Permalink to this headline">#</a></h2>
 <p>Average a column:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk <span class="s1">&#39;{ total += $2; count++ } END { print total/count }&#39;</span> file
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{ total += $2; count++ } END { print total/count }&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 <p>Add to value in column</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk <span class="s1">&#39;{print $1 + 1}&#39;</span> file
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span><span class="s1">&#39;{print $1 + 1}&#39;</span><span class="w"> </span>file
 </pre></div>
 </div>
 </section>

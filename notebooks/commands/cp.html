@@ -114,7 +114,30 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
+            <label class="sr-only">Google</label></a>
+        </li>
       </ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
       </div>
       
     </div>
@@ -175,11 +198,11 @@ const thebe_selector_output = ".output, .cell_output"
   <section class="tex2jax_ignore mathjax_ignore" id="cp-copy-files-or-folders">
 <h1><code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders<a class="headerlink" href="#cp-copy-files-or-folders" title="Permalink to this headline">#</a></h1>
 <p>To copy file1 to file2 (new name):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp <span class="o">[</span>FILE_1<span class="o">]</span> <span class="o">[</span>FILE_2<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>FILE_1<span class="o">]</span><span class="w"> </span><span class="o">[</span>FILE_2<span class="o">]</span>
 </pre></div>
 </div>
 <p>Copy folders:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp -r <span class="o">[</span>FOLDER_1<span class="o">]</span> <span class="o">[</span>FOLDER_2<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span><span class="o">[</span>FOLDER_1<span class="o">]</span><span class="w"> </span><span class="o">[</span>FOLDER_2<span class="o">]</span>
 </pre></div>
 </div>
 <p>Use <code class="docutils literal notranslate"><span class="pre">cp</span></code> to copy files or directories from one place to another.</p>
@@ -187,15 +210,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">cp</span></code> creates NEW versions of the sources, so editing the copy won’t affect the original (and vice versa).</p></li>
 </ul>
 <p><strong>Note that it will overwrite the destination if it already exists.</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp srcFile.txt clone.txt
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>srcFile.txt<span class="w"> </span>clone.txt
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp -r srcDirectory/ dst/ <span class="c1"># recursively copy</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>srcDirectory/<span class="w"> </span>dst/<span class="w"> </span><span class="c1"># recursively copy</span>
 </pre></div>
 </div>
 <p>Copying can be down with paths</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp -r /path/to/dir_1 /path/to/dir_2
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>/path/to/dir_1<span class="w"> </span>/path/to/dir_2
 </pre></div>
 </div>
 </section>
