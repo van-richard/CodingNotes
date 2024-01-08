@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/card.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -53,6 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -347,8 +348,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)<a class="headerlink" href="#directives-sbatch" title="Permalink to this headline">#</a></h3>
 <p>The way that Slurm determines how to allocate your jobs to the cluster (<em>i.e. across how many compute nodes, with how many CPUs, for how long etc</em>) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>. Common types of jobs are:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="fddbe3d0-a082-4bf6-8288-2918a27a4d08" name="3c8b501e-aa70-4717-a673-e381c8a6030e" type="radio">
-</input><label class="sd-tab-label" for="fddbe3d0-a082-4bf6-8288-2918a27a4d08">
+<input checked="checked" id="c5d97895-f82e-4839-8f8a-bae8bbd80a02" name="0d27b66f-1568-4e2b-898b-653b8aa97977" type="radio">
+</input><label class="sd-tab-label" for="c5d97895-f82e-4839-8f8a-bae8bbd80a02">
 CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=PARTITION</span>
@@ -363,8 +364,8 @@ CPU Jobs</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="02e61af0-0667-42bd-b9ac-73f56610174e" name="3c8b501e-aa70-4717-a673-e381c8a6030e" type="radio">
-</input><label class="sd-tab-label" for="02e61af0-0667-42bd-b9ac-73f56610174e">
+<input id="a9ae2a46-189e-4a6a-8987-c06cd524f982" name="0d27b66f-1568-4e2b-898b-653b8aa97977" type="radio">
+</input><label class="sd-tab-label" for="a9ae2a46-189e-4a6a-8987-c06cd524f982">
 GPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=GPU_PARTITION</span>
@@ -380,8 +381,8 @@ GPU Jobs</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="8cf475f9-2f6c-4d9d-908a-02d929059c4f" name="3c8b501e-aa70-4717-a673-e381c8a6030e" type="radio">
-</input><label class="sd-tab-label" for="8cf475f9-2f6c-4d9d-908a-02d929059c4f">
+<input id="ddd406b2-47c2-4c7f-b85f-1e44152496a0" name="0d27b66f-1568-4e2b-898b-653b8aa97977" type="radio">
+</input><label class="sd-tab-label" for="ddd406b2-47c2-4c7f-b85f-1e44152496a0">
 Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">##!/bin/bash</span>
 <span class="c1">##SBATCH --partition=GPU_PARTITION</span>
@@ -401,22 +402,22 @@ Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 </div>
 <p>To submit a <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> job use <span class="xref std std-term">sbatch</span>. Alternatively, you can cancel it with <span class="xref std std-term">scancel</span>.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="b45e9386-996a-43c1-b814-b7040cba5580" name="3be00f08-d35c-4d87-b416-52dd39cb44e5" type="radio">
-</input><label class="sd-tab-label" for="b45e9386-996a-43c1-b814-b7040cba5580">
+<input checked="checked" id="a2814eda-5687-44f4-9166-fc1e822698b3" name="404c651a-945a-4025-941f-656089ec1d39" type="radio">
+</input><label class="sd-tab-label" for="a2814eda-5687-44f4-9166-fc1e822698b3">
 Submit a Job</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm<span class="w">   </span><span class="c1"># This will print a JOB_ID</span>
 </pre></div>
 </div>
 </div>
-<input id="6190f0d5-e31e-4766-82e7-6d1571fa0ce6" name="3be00f08-d35c-4d87-b416-52dd39cb44e5" type="radio">
-</input><label class="sd-tab-label" for="6190f0d5-e31e-4766-82e7-6d1571fa0ce6">
+<input id="cbb465f8-b4ff-4291-aa84-90dbc72ae241" name="404c651a-945a-4025-941f-656089ec1d39" type="radio">
+</input><label class="sd-tab-label" for="cbb465f8-b4ff-4291-aa84-90dbc72ae241">
 Cancel a Job</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel<span class="w"> </span>JOB_ID
 </pre></div>
 </div>
 </div>
-<input id="9c9aa884-8499-4781-a35e-b6a4be43d233" name="3be00f08-d35c-4d87-b416-52dd39cb44e5" type="radio">
-</input><label class="sd-tab-label" for="9c9aa884-8499-4781-a35e-b6a4be43d233">
+<input id="4689f2b5-fa88-41b9-874a-56dd2d324934" name="404c651a-945a-4025-941f-656089ec1d39" type="radio">
+</input><label class="sd-tab-label" for="4689f2b5-fa88-41b9-874a-56dd2d324934">
 Check jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w">             </span><span class="c1"># All jobs queue</span>
 squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w"> </span><span class="c1"># your usernameUSERNAME queue</span>
