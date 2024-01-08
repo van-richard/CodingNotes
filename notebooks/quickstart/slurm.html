@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/_static/css/custom.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -53,7 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script src="../../_static/custom.js"></script>
+    <script src="../../_static/js/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -106,7 +106,7 @@ const thebe_selector_output = ".output, .cell_output"
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
- <a class="reference internal nav-link" href="overview.html">
+ <a class="reference internal nav-link" href="00overview.html">
   A (not so) Quick Start Guide
  </a>
 </li>
@@ -190,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="terminal.html">
+  <a class="reference internal" href="01terminal.html">
    Terminal, Shell, &amp; Bash
   </a>
  </li>
@@ -226,10 +226,32 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="StructureFiles.html">
    Molecular Structure Files
   </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="PDBFiles.html">
+     Exploring PDB Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="XYZFiles.html">
+     What are XYZ Files?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="BasicMD.html">
+     Briefly, Molecular Dynamics
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -348,8 +370,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h3>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)<a class="headerlink" href="#directives-sbatch" title="Permalink to this headline">#</a></h3>
 <p>The way that Slurm determines how to allocate your jobs to the cluster (<em>i.e. across how many compute nodes, with how many CPUs, for how long etc</em>) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>. Common types of jobs are:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="c5d97895-f82e-4839-8f8a-bae8bbd80a02" name="0d27b66f-1568-4e2b-898b-653b8aa97977" type="radio">
-</input><label class="sd-tab-label" for="c5d97895-f82e-4839-8f8a-bae8bbd80a02">
+<input checked="checked" id="9fc98561-dd83-4c0a-8029-0a94504ad5b4" name="4883763a-8c5f-4b25-9484-91b24a3a6eaa" type="radio">
+</input><label class="sd-tab-label" for="9fc98561-dd83-4c0a-8029-0a94504ad5b4">
 CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=PARTITION</span>
@@ -364,8 +386,8 @@ CPU Jobs</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="a9ae2a46-189e-4a6a-8987-c06cd524f982" name="0d27b66f-1568-4e2b-898b-653b8aa97977" type="radio">
-</input><label class="sd-tab-label" for="a9ae2a46-189e-4a6a-8987-c06cd524f982">
+<input id="81ad656c-0641-48a9-9ff6-ab7f80f43259" name="4883763a-8c5f-4b25-9484-91b24a3a6eaa" type="radio">
+</input><label class="sd-tab-label" for="81ad656c-0641-48a9-9ff6-ab7f80f43259">
 GPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=GPU_PARTITION</span>
@@ -381,8 +403,8 @@ GPU Jobs</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="ddd406b2-47c2-4c7f-b85f-1e44152496a0" name="0d27b66f-1568-4e2b-898b-653b8aa97977" type="radio">
-</input><label class="sd-tab-label" for="ddd406b2-47c2-4c7f-b85f-1e44152496a0">
+<input id="53663d5a-6401-4d87-a534-6646d46acd15" name="4883763a-8c5f-4b25-9484-91b24a3a6eaa" type="radio">
+</input><label class="sd-tab-label" for="53663d5a-6401-4d87-a534-6646d46acd15">
 Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">##!/bin/bash</span>
 <span class="c1">##SBATCH --partition=GPU_PARTITION</span>
@@ -402,22 +424,22 @@ Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 </div>
 <p>To submit a <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> job use <span class="xref std std-term">sbatch</span>. Alternatively, you can cancel it with <span class="xref std std-term">scancel</span>.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="a2814eda-5687-44f4-9166-fc1e822698b3" name="404c651a-945a-4025-941f-656089ec1d39" type="radio">
-</input><label class="sd-tab-label" for="a2814eda-5687-44f4-9166-fc1e822698b3">
+<input checked="checked" id="f46f9916-b408-42c3-ac51-9030f17919de" name="f2eef8be-f992-4540-98b4-49b522bf2b79" type="radio">
+</input><label class="sd-tab-label" for="f46f9916-b408-42c3-ac51-9030f17919de">
 Submit a Job</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm<span class="w">   </span><span class="c1"># This will print a JOB_ID</span>
 </pre></div>
 </div>
 </div>
-<input id="cbb465f8-b4ff-4291-aa84-90dbc72ae241" name="404c651a-945a-4025-941f-656089ec1d39" type="radio">
-</input><label class="sd-tab-label" for="cbb465f8-b4ff-4291-aa84-90dbc72ae241">
+<input id="4d38d8bb-9f54-400b-afe4-5de1489858a0" name="f2eef8be-f992-4540-98b4-49b522bf2b79" type="radio">
+</input><label class="sd-tab-label" for="4d38d8bb-9f54-400b-afe4-5de1489858a0">
 Cancel a Job</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel<span class="w"> </span>JOB_ID
 </pre></div>
 </div>
 </div>
-<input id="4689f2b5-fa88-41b9-874a-56dd2d324934" name="404c651a-945a-4025-941f-656089ec1d39" type="radio">
-</input><label class="sd-tab-label" for="4689f2b5-fa88-41b9-874a-56dd2d324934">
+<input id="e29697d6-6704-4e2e-88e6-45b5c9f6ece5" name="f2eef8be-f992-4540-98b4-49b522bf2b79" type="radio">
+</input><label class="sd-tab-label" for="e29697d6-6704-4e2e-88e6-45b5c9f6ece5">
 Check jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w">             </span><span class="c1"># All jobs queue</span>
 squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w"> </span><span class="c1"># your usernameUSERNAME queue</span>

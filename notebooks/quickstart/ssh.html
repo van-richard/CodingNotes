@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/_static/css/custom.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -53,7 +53,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script src="../../_static/custom.js"></script>
+    <script src="../../_static/js/custom.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -106,7 +106,7 @@ const thebe_selector_output = ".output, .cell_output"
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
- <a class="reference internal nav-link" href="overview.html">
+ <a class="reference internal nav-link" href="00overview.html">
   A (not so) Quick Start Guide
  </a>
 </li>
@@ -190,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="terminal.html">
+  <a class="reference internal" href="01terminal.html">
    Terminal, Shell, &amp; Bash
   </a>
  </li>
@@ -226,10 +226,32 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="StructureFiles.html">
    Molecular Structure Files
   </a>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="PDBFiles.html">
+     Exploring PDB Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="XYZFiles.html">
+     What are XYZ Files?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="BasicMD.html">
+     Briefly, Molecular Dynamics
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -318,15 +340,15 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>What is the <em>hostname</em>?<a class="headerlink" href="#what-is-the-hostname" title="Permalink to this headline">#</a></h2>
 <p>It depends on the computing center. In Oklahoma, you can access Oscer (<code class="docutils literal notranslate"><span class="pre">schooner.oscer.ou.edu</span></code>) or Pete (<code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code>) by:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="6488c614-ca70-4e3f-b5b5-c5241cc9aa51" name="7962d3d8-2548-4f3e-82de-f2accec4827d" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="6488c614-ca70-4e3f-b5b5-c5241cc9aa51">
+<input checked="checked" id="af2545c9-7a07-4e01-8256-fb26ad88d767" name="5e1cad8d-713a-4447-9a97-64eacc80330e" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="af2545c9-7a07-4e01-8256-fb26ad88d767">
 Oscer/Schooner</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@schooner.oscer.ou.edu<span class="w"> </span>
 </pre></div>
 </div>
 </div>
-<input id="cd741f32-c25d-4adb-8ecd-ebcd25456ee6" name="7962d3d8-2548-4f3e-82de-f2accec4827d" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="cd741f32-c25d-4adb-8ecd-ebcd25456ee6">
+<input id="1b97c5bd-923f-49a5-b0b4-a980fee62516" name="5e1cad8d-713a-4447-9a97-64eacc80330e" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="1b97c5bd-923f-49a5-b0b4-a980fee62516">
 Pete</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@pete.hpc.okstate.edu
 </pre></div>
@@ -339,15 +361,15 @@ Pete</label><div class="sd-tab-content docutils">
 <p>Try logging into one of the supercomputer. Change the <code class="docutils literal notranslate"><span class="pre">hostname</span></code> to the <code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code> or ``schooner.oscer.ou.edu`.</p>
 <p>My username is <code class="docutils literal notranslate"><span class="pre">van</span></code>, so logging in looks like this:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="3f25234b-7450-4938-8409-ec4fae2be191" name="54d23730-f9d6-40ce-9fcd-a393d315f633" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="3f25234b-7450-4938-8409-ec4fae2be191">
+<input checked="checked" id="c251be5e-0b3d-4962-85e8-7c427b119391" name="1d1cc667-2e68-4e6c-a78a-016b2c68986d" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="c251be5e-0b3d-4962-85e8-7c427b119391">
 Oscer/Schooner</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@schooner.oscer.ou.edu<span class="w"> </span>
 </pre></div>
 </div>
 </div>
-<input id="27ca41da-1614-4f55-93d2-1f13c3c581a0" name="54d23730-f9d6-40ce-9fcd-a393d315f633" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="27ca41da-1614-4f55-93d2-1f13c3c581a0">
+<input id="9705cb6e-242c-494b-ae31-cf2b4ebaa979" name="1d1cc667-2e68-4e6c-a78a-016b2c68986d" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="9705cb6e-242c-494b-ae31-cf2b4ebaa979">
 Pete</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu
 </pre></div>

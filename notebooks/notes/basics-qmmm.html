@@ -34,7 +34,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -106,32 +107,20 @@ const thebe_selector_output = ".output, .cell_output"
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../quickstart/overview.html">
+ <a class="reference internal nav-link" href="../quickstart/00overview.html">
   A (not so) Quick Start Guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../programming/bash/overview.html">
-  bash Shell
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../simulation/md.html">
-  Classical MD
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../simulation/qmmm.html">
-  QM/MM
+ <a class="reference internal nav-link" href="../programming/00overview.html">
+  Example Code
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
- <a class="reference internal nav-link" href="binding.html">
-  Binding Affinity
+ <a class="reference internal nav-link" href="../simulation/00overview.html">
+  Tutorials
  </a>
 </li>
 
@@ -145,30 +134,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
-            <label class="sr-only">Twitter</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
-            <label class="sr-only">LinkedIn</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
-            <label class="sr-only">Google</label></a>
-        </li>
       </ul>
-      </div>
-      
-      <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
       </div>
       
     </div>
@@ -185,44 +151,97 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="col-12 col-md-3 bd-sidebar">
               <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="modelling.html">
-   Simulation Methods
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../simulation/md.html">
+   Classical MD
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="basics-classical.html">
-   Classical Molecular Dynamics
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../simulation/qmmm.html">
+   QM/MM
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="fe-alchemical.html">
-   Alchemical Free Energy
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../simulation/analysis.html">
+   Analysis
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="alchemical/potentials.html">
-   Alchemical States
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="00overview.html">
+   General Notes
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="alchemical/workflow.html">
-   Simulation Workflows
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   QM/MM Simulations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="fe-estimators.html">
-   Free Energy Estimators
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="binding.html">
+     Binding Affinity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modelling.html">
+     Simulation Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics-classical.html">
+     Classical Molecular Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fe-alchemical.html">
+     Alchemical Free Energy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alchemical/potentials.html">
+     Alchemical States
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alchemical/workflow.html">
+     Simulation Workflows
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     QM/MM Simulations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="fe-estimators.html">
+     Free Energy Estimators
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -266,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#electrostatic-embedding">
    Electrostatic Embedding
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#short-range">
      Short-Range
@@ -315,32 +334,28 @@ const thebe_selector_output = ".output, .cell_output"
 <ol class="simple">
 <li><p>Subtractive scheme</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E = E_\mathrm{QM}  + E_\mathrm{MM} - E_\mathrm{QM-MM}
-\]</div>
+$$</p>
 <p>Pros: No communication between QM and MM routines.
 Cons: Force field needed for QM. FF needs to be ‘flexible’ to describe change when reaction occurs. No QM polarization</p>
 <ol class="simple">
 <li><p>Additive scheme</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E = E_\mathrm{QM} + E_\mathrm{QM-MM} + E_\mathrm{MM}
-\]</div>
-<p>QM energy (<span class="math notranslate nohighlight">\(E_\mathrm{QM}\)</span>) is from DFT Kohn-Sham Hamiltonian. MM energy (<span class="math notranslate nohighlight">\(E_\mathrm{MM}\)</span>) is from force field. QM-MM interaction energy (<span class="math notranslate nohighlight">\(E_\mathrm{QM-MM}\)</span>) is:</p>
-<div class="math notranslate nohighlight">
-\[
+$$</p>
+<p>QM energy ($E_\mathrm{QM}$) is from DFT Kohn-Sham Hamiltonian. MM energy ($E_\mathrm{MM}$) is from force field. QM-MM interaction energy ($E_\mathrm{QM-MM}$) is:</p>
+<p>$$
 E_\mathrm{QM-MM} = E_\mathrm{bonded}^\mathrm{QM-MM} + _\mathrm{nonbonded}^\mathrm{QM-MM}
-\]</div>
+$$</p>
 <p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and nonbonded terms</p>
 </section>
 <section id="bonded-interactions">
 <h2>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this headline">#</a></h2>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_\mathrm{bonded}^\mathrm{QM-MM}
-\]</div>
+$$</p>
 <p>Bonded interactions are introduced when covalent bonds connecting QM and MM regions are cut.</p>
 <p>This term is chosen at classical FF level.</p>
 <p>Care has to be taken when evaluating the QM wave function, to address this, several approaches have been developed:</p>
@@ -353,11 +368,10 @@ E_\mathrm{bonded}^\mathrm{QM-MM}
 <section id="nonbonded-interactions">
 <h2>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this headline">#</a></h2>
 <p>Non bonded term is:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm{pol.}^\mathrm{QM-MM}
-\]</div>
-<p>QM Polarization energy (<span class="math notranslate nohighlight">\(E_\mathrm{pol.}^\mathrm{QM-MM}\)</span>) describes the <em>electrostatic</em> interaction between MM charges and QM charge density. This can be calculated in one of three ways:</p>
+$$</p>
+<p>QM Polarization energy ($E_\mathrm{pol.}^\mathrm{QM-MM}$) describes the <em>electrostatic</em> interaction between MM charges and QM charge density. This can be calculated in one of three ways:</p>
 <ol class="simple">
 <li><p><strong>Mechanical embedding:</strong> No influence of MM charge on QM part, i.e.  QM calculation is gas-phase -like without additional potential due to MM atoms</p>
 <ul class="simple">
@@ -379,10 +393,9 @@ E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm
 <section id="electrostatic-embedding">
 <h2>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this headline">#</a></h2>
 <p>Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.</p>
-<div class="math notranslate nohighlight">
-\[
-E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}_i} - {\textbf{R}_{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
-\]</div>
+<p>$$
+E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
+$$</p>
 <p>Two problems arise due to the short-range and long-range behavior of this term…</p>
 <ol class="simple">
 <li><p>Short-Range - Electron spill-out; problems at the boundary</p></li>
@@ -396,17 +409,15 @@ E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \f
 </ul>
 <p>These artifacts can become serious if a large basis set (e.g. with polarization and diffuse functions), or plane waves are used in the QM calculation…</p>
 <p>This can be avoided by <strong>smeared-out charges</strong> instead of traditional point charges</p>
-<div class="math notranslate nohighlight">
-\[
+<p>$$
 E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})v^{smear}(|\textbf{r}_i - \textbf{R}_i|)}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
-\]</div>
+$$</p>
 <p>Where, the <em>smearing function</em> can be a Gaussian distribution or another suitable function centered at the MM atom.</p>
-<div class="math notranslate nohighlight">
-\[
-v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
-\]</div>
+<p>$$
+v^{smear}® = \frac{Erf(\frac{r}{r_{c,I}})}{r}
+$$</p>
 <ul class="simple">
-<li><p>Smearing function in CP2P, where <span class="math notranslate nohighlight">\(r_{c,I}\)</span> is the covalent radius of atom <span class="math notranslate nohighlight">\(I\)</span></p></li>
+<li><p>Smearing function in CP2P, where $r_{c,I}$ is the covalent radius of atom $I$</p></li>
 </ul>
 </section>
 </section>

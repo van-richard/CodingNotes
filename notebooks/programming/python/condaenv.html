@@ -34,7 +34,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -106,32 +107,20 @@ const thebe_selector_output = ".output, .cell_output"
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../quickstart/overview.html">
+ <a class="reference internal nav-link" href="../../quickstart/00overview.html">
   A (not so) Quick Start Guide
  </a>
 </li>
 
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../bash/overview.html">
-  bash Shell
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../00overview.html">
+  Example Code
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../simulation/md.html">
-  Classical MD
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../simulation/qmmm.html">
-  QM/MM
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../notes/binding.html">
-  Binding Affinity
+ <a class="reference internal nav-link" href="../../simulation/00overview.html">
+  Tutorials
  </a>
 </li>
 
@@ -145,30 +134,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
-            <label class="sr-only">Twitter</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
-            <label class="sr-only">LinkedIn</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
-            <label class="sr-only">Google</label></a>
-        </li>
       </ul>
-      </div>
-      
-      <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
       </div>
       
     </div>
@@ -185,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="col-12 col-md-3 bd-sidebar">
               <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
@@ -348,15 +314,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><code class="docutils literal notranslate"><span class="pre">VERSION</span></code> is the version number of python</p></li>
 </ul>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="f949de9b-af02-4bb7-906f-7762dea8a85b" name="e6aa076a-fea8-4b70-8a5e-589a282da4e1" type="radio">
-</input><label class="sd-tab-label" for="f949de9b-af02-4bb7-906f-7762dea8a85b">
+<input checked="checked" id="daef9e88-7eb6-4674-800a-7a54ca268aef" name="9992a481-c823-4728-8df1-49467f65202b" type="radio">
+</input><label class="sd-tab-label" for="daef9e88-7eb6-4674-800a-7a54ca268aef">
 New Environment</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>NAME<span class="w">                          </span>
 </pre></div>
 </div>
 </div>
-<input id="59328419-d704-45f1-834e-4be314a16326" name="e6aa076a-fea8-4b70-8a5e-589a282da4e1" type="radio">
-</input><label class="sd-tab-label" for="59328419-d704-45f1-834e-4be314a16326">
+<input id="963e1874-28c8-40d2-8c2f-1aa534be6e0c" name="9992a481-c823-4728-8df1-49467f65202b" type="radio">
+</input><label class="sd-tab-label" for="963e1874-28c8-40d2-8c2f-1aa534be6e0c">
 env w/ python verion</label><div class="sd-tab-content docutils">
 <p>conda create -n NAME python=VERSION</p>
 </div>

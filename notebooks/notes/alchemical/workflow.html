@@ -34,7 +34,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -106,32 +107,20 @@ const thebe_selector_output = ".output, .cell_output"
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../quickstart/overview.html">
+ <a class="reference internal nav-link" href="../../quickstart/00overview.html">
   A (not so) Quick Start Guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../programming/bash/overview.html">
-  bash Shell
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../simulation/md.html">
-  Classical MD
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../simulation/qmmm.html">
-  QM/MM
+ <a class="reference internal nav-link" href="../../programming/00overview.html">
+  Example Code
  </a>
 </li>
 
 <li class="toctree-l1 current active nav-item">
- <a class="reference internal nav-link" href="../binding.html">
-  Binding Affinity
+ <a class="reference internal nav-link" href="../../simulation/00overview.html">
+  Tutorials
  </a>
 </li>
 
@@ -145,30 +134,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
-            <label class="sr-only">Twitter</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
-            <label class="sr-only">LinkedIn</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
-            <label class="sr-only">Google</label></a>
-        </li>
       </ul>
-      </div>
-      
-      <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
       </div>
       
     </div>
@@ -185,44 +151,97 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="col-12 col-md-3 bd-sidebar">
               <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../modelling.html">
-   Simulation Methods
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../simulation/md.html">
+   Classical MD
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../basics-classical.html">
-   Classical Molecular Dynamics
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../simulation/qmmm.html">
+   QM/MM
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fe-alchemical.html">
-   Alchemical Free Energy
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../simulation/analysis.html">
+   Analysis
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="simple">
+  </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="potentials.html">
-   Alchemical States
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../00overview.html">
+   General Notes
   </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Simulation Workflows
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../basics-qmmm.html">
-   QM/MM Simulations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../fe-estimators.html">
-   Free Energy Estimators
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../binding.html">
+     Binding Affinity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modelling.html">
+     Simulation Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics-classical.html">
+     Classical Molecular Dynamics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fe-alchemical.html">
+     Alchemical Free Energy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="potentials.html">
+     Alchemical States
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Simulation Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics-qmmm.html">
+     QM/MM Simulations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../fe-estimators.html">
+     Free Energy Estimators
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -256,7 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
     </span>
    </code>
   </a>
-  <ul class="visible nav section-nav flex-column">
+  <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#code">
      Code
@@ -306,8 +325,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">parmed</span></code> to remove redundant bonding terms for more efficient calculation (<code class="docutils literal notranslate"><span class="pre">timerge</span></code>)</p></li>
 </ul>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="558d23fd-1bf8-4545-8d57-024526baa155" name="7d5601c1-a6ed-4aac-befc-c9ee5d092813" type="radio">
-</input><label class="sd-tab-label" for="558d23fd-1bf8-4545-8d57-024526baa155">
+<input checked="checked" id="3f24f6db-818d-42f4-a584-367de440c95c" name="91f84c69-a2a7-41ad-b11f-793d2710db87" type="radio">
+</input><label class="sd-tab-label" for="3f24f6db-818d-42f4-a584-367de440c95c">
 1. Preparing PDB files</label><div class="sd-tab-content docutils">
 <p>To get an idea of the number of atoms and charge of wildtype vs mutant, I create an <code class="docutils literal notranslate"><span class="pre">init</span></code> folder, run <code class="docutils literal notranslate"><span class="pre">tleap</span></code>, and grab some information.</p>
 <ol class="simple">
@@ -326,8 +345,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ol>
 </div>
-<input id="522f2a9b-4996-4643-a544-ca6a6eba7e3f" name="7d5601c1-a6ed-4aac-befc-c9ee5d092813" type="radio">
-</input><label class="sd-tab-label" for="522f2a9b-4996-4643-a544-ca6a6eba7e3f">
+<input id="eb3eadbc-d241-43fa-a0a0-631a2b09cfbe" name="91f84c69-a2a7-41ad-b11f-793d2710db87" type="radio">
+</input><label class="sd-tab-label" for="eb3eadbc-d241-43fa-a0a0-631a2b09cfbe">
 2. Split components of system </label><div class="sd-tab-content docutils">
 <p>Now that we’re familiar with the protein systems we’re simulating, make PDBs containing the components for our alchemical calculation</p>
 <ul class="simple">
@@ -349,8 +368,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ol>
 </div>
-<input id="12c2a204-08ca-479f-935d-4306585d91b0" name="7d5601c1-a6ed-4aac-befc-c9ee5d092813" type="radio">
-</input><label class="sd-tab-label" for="12c2a204-08ca-479f-935d-4306585d91b0">
+<input id="a9092600-317d-436c-9c3a-dd010f8a791c" name="91f84c69-a2a7-41ad-b11f-793d2710db87" type="radio">
+</input><label class="sd-tab-label" for="a9092600-317d-436c-9c3a-dd010f8a791c">
 3. Files for Alchemical</label><div class="sd-tab-content docutils">
 <p>Preparing the topology and coordinate files for alchemical simulation</p>
 <ol class="simple">
@@ -373,8 +392,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="dropdown admonition">
 <p class="admonition-title">Scripts</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="66606c14-bf2d-4b7c-89f7-92fe6dfe7f2c" name="69e8f411-8aa2-48c2-a7b6-6f048844996a" type="radio">
-</input><label class="sd-tab-label" for="66606c14-bf2d-4b7c-89f7-92fe6dfe7f2c">
+<input checked="checked" id="e4363e40-d201-41c6-9e6b-cccb4e70616e" name="7474a5b6-2a23-4504-945a-b140b44322f9" type="radio">
+</input><label class="sd-tab-label" for="e4363e40-d201-41c6-9e6b-cccb4e70616e">
 1_leap.sh</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/sh</span>
 <span class="linenos"> 2</span>
@@ -424,8 +443,8 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<input id="f53f6b16-79a1-498d-ac82-61191f1d90ca" name="69e8f411-8aa2-48c2-a7b6-6f048844996a" type="radio">
-</input><label class="sd-tab-label" for="f53f6b16-79a1-498d-ac82-61191f1d90ca">
+<input id="74191e6c-6f0e-4f9f-9744-59856fdb7d44" name="7474a5b6-2a23-4504-945a-b140b44322f9" type="radio">
+</input><label class="sd-tab-label" for="74191e6c-6f0e-4f9f-9744-59856fdb7d44">
 2_eliminate_duplicate.sh</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
@@ -486,8 +505,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="dropdown admonition">
 <p class="admonition-title">Templates for MD inputs</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="fb7d5c30-aeb7-4749-b879-86edbd2e4422" name="5c6fd0ee-bd77-47df-a541-a56871da682a" type="radio">
-</input><label class="sd-tab-label" for="fb7d5c30-aeb7-4749-b879-86edbd2e4422">
+<input checked="checked" id="448c7a6f-a0f9-4b6f-a8b8-fabc2d610668" name="5502b1b4-dc0e-4471-b3a0-da5802f5f24d" type="radio">
+</input><label class="sd-tab-label" for="448c7a6f-a0f9-4b6f-a8b8-fabc2d610668">
 1. min.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>minimisation
 <span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
@@ -517,8 +536,8 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<input id="54dfe7bb-a47a-4b30-ae42-ee9261376052" name="5c6fd0ee-bd77-47df-a541-a56871da682a" type="radio">
-</input><label class="sd-tab-label" for="54dfe7bb-a47a-4b30-ae42-ee9261376052">
+<input id="043e49af-cf91-498c-875c-6d5f48a3c7a0" name="5502b1b4-dc0e-4471-b3a0-da5802f5f24d" type="radio">
+</input><label class="sd-tab-label" for="043e49af-cf91-498c-875c-6d5f48a3c7a0">
 2. heat.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>heating
 <span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
@@ -583,8 +602,8 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<input id="e979183e-4b77-4c88-a309-70c9f917fdfe" name="5c6fd0ee-bd77-47df-a541-a56871da682a" type="radio">
-</input><label class="sd-tab-label" for="e979183e-4b77-4c88-a309-70c9f917fdfe">
+<input id="598c6bfb-2b93-45bf-a56e-e65dd2143550" name="5502b1b4-dc0e-4471-b3a0-da5802f5f24d" type="radio">
+</input><label class="sd-tab-label" for="598c6bfb-2b93-45bf-a56e-e65dd2143550">
 3. prod.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>TI<span class="w"> </span>simulation
 <span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl

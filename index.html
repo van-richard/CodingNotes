@@ -34,7 +34,8 @@
     <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/index.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="A (not so) Quick Start Guide" href="notebooks/quickstart/overview.html" />
+    <link rel="next" title="A (not so) Quick Start Guide" href="notebooks/quickstart/00overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -105,32 +106,20 @@ const thebe_selector_output = ".output, .cell_output"
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="notebooks/quickstart/overview.html">
+ <a class="reference internal nav-link" href="notebooks/quickstart/00overview.html">
   A (not so) Quick Start Guide
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="notebooks/programming/bash/overview.html">
-  bash Shell
+ <a class="reference internal nav-link" href="notebooks/programming/00overview.html">
+  Example Code
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="notebooks/simulation/md.html">
-  Classical MD
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="notebooks/simulation/qmmm.html">
-  QM/MM
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="notebooks/notes/binding.html">
-  Binding Affinity
+ <a class="reference internal nav-link" href="notebooks/simulation/00overview.html">
+  Tutorials
  </a>
 </li>
 
@@ -144,30 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
-            <label class="sr-only">Twitter</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
-            <label class="sr-only">LinkedIn</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
-            <label class="sr-only">Google</label></a>
-        </li>
       </ul>
-      </div>
-      
-      <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
       </div>
       
     </div>
@@ -180,20 +146,7 @@ const thebe_selector_output = ".output, .cell_output"
       <div class="row">
           
             
-            <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar">
-              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <div class="bd-toc-item active">
-    
-  </div>
-</nav>
-              </div>
-              <div class="sidebar-end-items">
-              </div>
-            </div>
+            <div class="col-12 col-md-1 col-xl-2 bd-sidebar no-sidebar"></div>
             
           
 
@@ -221,20 +174,55 @@ const thebe_selector_output = ".output, .cell_output"
           
             
           
-          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+          <main class="col-12 col-md-11 col-xl-8 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
               
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="codingnotes">
+  <style>
+  .gradient-custom {
+    /* fallback for old browsers */
+    /* background: #a18cd1; */
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(
+      45deg,
+      rgba(29, 236, 197, 0.6),
+      rgba(91, 14, 214, 0.6) 100%
+    );
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(
+      45deg,
+      rgba(29, 236, 197, 0.6),
+      rgba(91, 14, 214, 0.6) 100%
+    );
+  }
+</style>
+<!-- Background image -->
+<div
+  class="bg-image"
+  style="
+    background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/011.webp');
+    height: 100vh;
+  "
+>
+  <div class="mask gradient-custom">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <h1 class="text-white mb-0">Page title</h1>
+    </div>
+  </div>
+</div>
+<!-- Background image -->
+<section class="tex2jax_ignore mathjax_ignore" id="codingnotes">
 <h1>CodingNotes<a class="headerlink" href="#codingnotes" title="Permalink to this headline">#</a></h1>
 <p><strong>Notes I wish I had showed me when I started</strong></p>
-<figure class="align-right">
-<a class="reference internal image-reference" href="_images/welcome.png"><img alt="_images/welcome.png" src="_images/welcome.png" style="width: 275px;" /></a>
+<figure class="align-center">
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/images/van-wordmark.svg"><img alt="https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/images/van-wordmark.svg" src="https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/images/van-wordmark.svg" width="100%" /></a>
 </figure>
 <p>This collection was an attempt to consolidated my experiences in computational chemistry. Entering the field with no background in mathematics or computers, a lot was learned through trial and error. Despite these shortcomings, I am forever grateful to the exceptional guidance and continued support of Dr. Genwei Zhang, Dr. Zheng Pei, Dr. Xiaoliang Pan, and Dr. Yihan Shao.</p>
 <p>I hope many of you will find this information useful in your future endeavors.</p>
 <ol class="simple">
-<li><p><a class="reference internal" href="notebooks/quickstart/overview.html"><span class="doc std std-doc">A (Not So) Quick Start Guide</span></a></p>
+<li><p><a class="reference internal" href="notebooks/quickstart/00overview.html"><span class="doc std std-doc">A (Not So) Quick Start Guide</span></a></p>
 <ul class="simple">
 <li><p>Introduction to Terminal, Shell, and Bash</p></li>
 <li><p>Navigating Supercomputers</p></li>
@@ -292,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="notebooks/quickstart/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks/quickstart/00overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">A (not so) Quick Start Guide</p>
