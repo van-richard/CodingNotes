@@ -1,576 +1,222 @@
 
 <!DOCTYPE html>
 
-
-<html lang="en" data-content_root="../../" >
-
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Applying Distance Restraints in Classical MD SImulations &#8212; Coding Notes</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css?v=7bc2f056" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css?v=37217874" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css?v=6227e517" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css?v=94669e23" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css?v=21a39f42" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css?v=a18b2449" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css?v=dbff53e4" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css?v=d7bf34ee" />
-    <link rel="stylesheet" type="text/css" href="../../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css?v=6ad1a40c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/card.css?v=62255d5d" />
-  
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/card.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/js/hoverxref.js?v=82c55261"></script>
-    <script src="../../_static/js/tooltipster.bundle.min.js?v=18bf091b"></script>
-    <script src="../../_static/js/micromodal.min.js?v=04d6302d"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/js/hoverxref.js"></script>
+    <script src="../../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../../_static/js/micromodal.min.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=afe5de03"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/simulation/distance';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/simulation/distance.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/van-abstract.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-
-  <header>
-  
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-<div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-    <span class="fa-solid fa-bars"></span>
-  </label>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-
-<a class="navbar-brand logo" href="../../index.html">
-  
-  
-  
-  
-  
-    
-    
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
     
     
-    <img src="../../_static/van-abstract.svg" class="logo__image only-light" alt="Coding Notes - Home"/>
-    <script>document.write(`<img src="../../_static/van-abstract.svg" class="logo__image only-dark" alt="Coding Notes - Home"/>`);</script>
-  
-  
-</a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav class="navbar-nav">
-  <ul class="bd-navbar-elements navbar-nav">
-    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../bash/overview.html">
-                        bash Shell
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../bash/scripting.html">
-                        Scripting
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../bash/startup.html">
-                        Start-Up Files
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../hpc/overview.html">
-                        SLURM & ssh
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../hpc/autologin.html">
-                        Automate Login
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../hpc/config.html">
-                        Configuring ssh
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../git/overview.html">
-                        Github & git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../git/git.html">
-                        git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../git/branch.html">
-                        Branching
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/overview.html">
-                        Python & Conda
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/python.html">
-                        Overview
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/conda.html">
-                        Conda
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/installconda.html">
-                        Installing
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/condaenv.html">
-                        Conda Environments
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/myenv.html">
-                        My Recommended Conda Setup
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/condaintel.html">
-                        Intel Environments on M1/M2
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/jupyter.html">
-                        Jupyter Notebooks
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
-  </ul>
-</nav></div>
+</ul>
+      </div>
       
     </div>
-    
-    
-    <div class="navbar-header-items__end">
+
+    <div id="navbar-end">
       
-        <div class="navbar-item navbar-persistent--container">
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-        </div>
-      
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-    </div>
-  
-
-  
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
-</div>
-
-    </div>
-  
-  </header>
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          <div class="navbar-item">
-<nav class="navbar-nav">
-  <ul class="bd-navbar-elements navbar-nav">
-    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../bash/overview.html">
-                        bash Shell
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../bash/scripting.html">
-                        Scripting
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../bash/startup.html">
-                        Start-Up Files
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../hpc/overview.html">
-                        SLURM & ssh
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../hpc/autologin.html">
-                        Automate Login
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
-                    More
-                </button>
-                <ul id="pst-nav-more-links-2" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../hpc/config.html">
-                        Configuring ssh
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../git/overview.html">
-                        Github & git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../git/git.html">
-                        git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../git/branch.html">
-                        Branching
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/overview.html">
-                        Python & Conda
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/python.html">
-                        Overview
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/conda.html">
-                        Conda
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/installconda.html">
-                        Installing
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/condaenv.html">
-                        Conda Environments
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/myenv.html">
-                        My Recommended Conda Setup
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/condaintel.html">
-                        Intel Environments on M1/M2
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../python/jupyter.html">
-                        Jupyter Notebooks
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
             
-  </ul>
-</nav></div>
-        
-      </div>
-    
-    
-    
-  </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-          <div class="bd-content">
-            <div class="bd-article-container">
               
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
-
-
-
-<nav aria-label="Breadcrumb">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">Applying...</li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
-              
-              
-              
+              <div class="toc-item">
                 
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-files-folders">
+   Prepare Files &amp; Folders
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-topology-and-coordinate-files">
+   Make Topology and Coordinate Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">
+   Prepare MD Inputs - Simulation Settings
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restraint-files">
+     Restraint Files
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-md-with-bash-script">
+   Run MD with Bash Script
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualize-and-analysis">
+   Visualize and Analysis
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <section class="tex2jax_ignore mathjax_ignore" id="applying-distance-restraints-in-classical-md-simulations">
-<h1>Applying Distance Restraints in Classical MD SImulations<a class="headerlink" href="#applying-distance-restraints-in-classical-md-simulations" title="Link to this heading">#</a></h1>
+<h1>Applying Distance Restraints in Classical MD SImulations<a class="headerlink" href="#applying-distance-restraints-in-classical-md-simulations" title="Permalink to this headline">#</a></h1>
 <p>We can apply restraints to atoms or residues if we are interested in modelling a specific process such as diffusion or binding.</p>
 <p>Buiding on from the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial, the goal here is to simulate the process of 2 Alanine Dipeptide molecules slowly diffusing away from each other using <code class="docutils literal notranslate"><span class="pre">sander</span></code> in the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/distance.mov"><img alt="../../_images/distance.mov" src="../../_images/distance.mov" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-text">MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-text">MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In this tutorial, we will:</p>
@@ -587,53 +233,53 @@ const thebe_selector_output = ".output, .cell_output"
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>This tutorial can be perform on your local computer</p></li>
-<li><p>Download my files for reference: <a class="reference download internal" download="" href="../../_downloads/469b76657ac995126a66d750b01b05bc/distance.tar.bz2"><span class="xref download myst">distance.tar.bz2</span></a></p></li>
+<li><p>Download my files for reference: <span class="xref myst">distance.tar.bz2</span></p></li>
 </ul>
 </div>
 <section id="prepare-files-folders">
-<h2>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Link to this heading">#</a></h2>
+<h2>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Permalink to this headline">#</a></h2>
 <p>Make a project folder, called “distance” in the <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code> directory, and change to that directory. <em>Optionally, if you downloaded the reference file, we will move <code class="docutils literal notranslate"><span class="pre">distance.tar.bz2</span></code> into the reference folder.</em></p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<input checked="checked" id="f6b3c639-5bf0-4d67-9ade-0369a18bd4b7" name="34dc5b6c-a199-45d2-9a03-80bb9a9bd23b" type="radio">
+</input><label class="sd-tab-label" for="f6b3c639-5bf0-4d67-9ade-0369a18bd4b7">
 Skip Reference File</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Tutorials<span class="w"> </span><span class="c1"># Go to $HOME/Tutorials</span>
-mkdir<span class="w"> </span>distance<span class="w"> </span><span class="c1"># Make &quot;distance&quot; folder</span>
-<span class="nb">cd</span><span class="w"> </span>distance<span class="w">    </span><span class="c1"># Go to &quot;distance&quot; folder</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Tutorials <span class="c1"># Go to $HOME/Tutorials</span>
+mkdir distance <span class="c1"># Make &quot;distance&quot; folder</span>
+<span class="nb">cd</span> distance    <span class="c1"># Go to &quot;distance&quot; folder</span>
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<input id="cd403ca5-aae8-4b4d-b709-1577d959983f" name="34dc5b6c-a199-45d2-9a03-80bb9a9bd23b" type="radio">
+</input><label class="sd-tab-label" for="cd403ca5-aae8-4b4d-b709-1577d959983f">
 Download Reference File</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Tutorials/references<span class="w"> </span><span class="c1"># Go to $HOME/reference (Made in simple tutorial)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ~/Tutorials/references <span class="c1"># Go to $HOME/reference (Made in simple tutorial)</span>
 <span class="c1"># I use curl on my Macbook</span>
-curl<span class="w"> </span>-O<span class="w"> </span>
-tar<span class="w"> </span>xvfj<span class="w"> </span>distance.tar.bz2<span class="w"> </span><span class="c1"># Extract file with tar</span>
-<span class="nb">cd</span><span class="w"> </span>../<span class="w">                    </span><span class="c1"># Go back one directory level</span>
-mkdir<span class="w"> </span>distance<span class="w">            </span><span class="c1"># Make &quot;distance&quot; folder </span>
-<span class="nb">cd</span><span class="w"> </span>distance<span class="w">               </span><span class="c1"># Go to &quot;distance&quot; folder</span>
+curl -O 
+tar xvfj distance.tar.bz2 <span class="c1"># Extract file with tar</span>
+<span class="nb">cd</span> ../                    <span class="c1"># Go back one directory level</span>
+mkdir distance            <span class="c1"># Make &quot;distance&quot; folder </span>
+<span class="nb">cd</span> distance               <span class="c1"># Go to &quot;distance&quot; folder</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="make-topology-and-coordinate-files">
-<h2>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Link to this heading">#</a></h2>
+<h2>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Permalink to this headline">#</a></h2>
 <p>Similar to the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial. We use <code class="docutils literal notranslate"><span class="pre">leap</span></code> to prepare our Amber topology and coordinate file. Since Alanine Dipeptide is still an amino acid, we can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate the topology (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code>) and coordinate files(<code class="docutils literal notranslate"><span class="pre">.rst7</span></code>). The <code class="docutils literal notranslate"><span class="pre">tleap</span></code> program contains reference coordinates for standard residues to generate  missing atoms, this function is base on the residue name.</p>
 <p>Give <code class="docutils literal notranslate"><span class="pre">tleap</span></code> instructions by making a file called “<a class="reference external" href="http://tleap.in">tleap.in</a>” containing:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
-<span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> leaprc.protein.ff19SB
+<span class="nb">source</span> leaprc.water.TIP3P
 
-<span class="nv">sys1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sequence<span class="w"> </span><span class="o">{</span><span class="w"> </span>ACE<span class="w"> </span>ALA<span class="w"> </span>NME<span class="w"> </span><span class="o">}</span>
-<span class="nv">sys2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>sequence<span class="w"> </span><span class="o">{</span><span class="w"> </span>ACE<span class="w"> </span>ALA<span class="w"> </span>NME<span class="w"> </span><span class="o">}</span>
-translate<span class="w"> </span>sys2<span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">}</span>
-<span class="nv">system</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>combine<span class="w"> </span><span class="o">{</span><span class="w"> </span>sys1<span class="w"> </span>sys2<span class="w"> </span><span class="o">}</span>
+<span class="nv">sys1</span> <span class="o">=</span> sequence <span class="o">{</span> ACE ALA NME <span class="o">}</span>
+<span class="nv">sys2</span> <span class="o">=</span> sequence <span class="o">{</span> ACE ALA NME <span class="o">}</span>
+translate sys2 <span class="o">{</span> <span class="m">5</span> <span class="m">0</span> <span class="m">0</span> <span class="o">}</span>
+<span class="nv">system</span> <span class="o">=</span> combine <span class="o">{</span> sys1 sys2 <span class="o">}</span>
 
-solvatebox<span class="w"> </span>system<span class="w"> </span>TIP3PBOX<span class="w"> </span><span class="m">12</span>.0<span class="w"> </span>iso<span class="w"> </span><span class="m">0</span>.8
+solvatebox system TIP3PBOX <span class="m">12</span>.0 iso <span class="m">0</span>.8
 
-saveamberparm<span class="w"> </span>system<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>step3_pbcsetup.rst7
-savepdb<span class="w"> </span>system<span class="w"> </span>step3_pbcsetup.pdb
+saveamberparm system step3_pbcsetup.parm7 step3_pbcsetup.rst7
+savepdb system step3_pbcsetup.pdb
 
 quit
 </pre></div>
@@ -661,12 +307,12 @@ quit
 <li><p><code class="docutils literal notranslate"><span class="pre">quit</span></code> line exits the tleap program.</p></li>
 </ul>
 <p>Run <code class="docutils literal notranslate"><span class="pre">tleap</span></code>, check if you have the 3 new files, and visualize them!</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.parm7</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.rst7</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.pdb</span></code></p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tleap -sf tleap.in
 </pre></div>
 </div>
 <div class="admonition note">
@@ -676,84 +322,84 @@ quit
 </div>
 </section>
 <section id="prepare-md-inputs-simulation-settings">
-<h2>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Link to this heading">#</a></h2>
+<h2>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Permalink to this headline">#</a></h2>
 <p>Prepare 2 MD input files, <code class="docutils literal notranslate"><span class="pre">min.mdin</span></code>, and <code class="docutils literal notranslate"><span class="pre">heat.mdin</span></code>. These files contain the settings for the first stage of the simulations.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Minimization</p></li>
 <li><p>Heating (for 10 ps at 300 K)</p></li>
 </ol>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<input checked="checked" id="d09e0d26-00b8-4e35-8d95-608d78b0c74c" name="abff7b21-6c3c-405a-957a-f06b9ec356e6" type="radio">
+</input><label class="sd-tab-label" for="d09e0d26-00b8-4e35-8d95-608d78b0c74c">
 min.mdin</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Minimization<span class="w"> </span>input<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>explicit<span class="w"> </span>solvent
-<span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">  </span>!<span class="w"> </span>Minimization<span class="w"> </span>options
-<span class="w">  </span><span class="nv">imin</span><span class="o">=</span><span class="m">1</span><span class="w">         </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>minimization
-<span class="w">  </span><span class="nv">maxcyc</span><span class="o">=</span><span class="m">2000</span>,<span class="w">   </span>!<span class="w">  </span>Maximum<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>minimization<span class="w"> </span>cycles
-<span class="w">  </span><span class="nv">ncyc</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Steepest-descent<span class="w"> </span>steps,<span class="w"> </span>better<span class="w"> </span><span class="k">for</span><span class="w"> </span>strained<span class="w"> </span>systems<span class="w">       </span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Minimization input file <span class="k">in</span> explicit solvent
+ <span class="p">&amp;</span>cntrl
+  ! Minimization options
+  <span class="nv">imin</span><span class="o">=</span><span class="m">1</span>         ! Turn on minimization
+  <span class="nv">maxcyc</span><span class="o">=</span><span class="m">2000</span>,   !  Maximum number of minimization cycles
+  <span class="nv">ncyc</span><span class="o">=</span><span class="m">1000</span>,     ! Steepest-descent steps, better <span class="k">for</span> strained systems       
 
-<span class="w">  </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span><span class="k">function</span><span class="w"> </span>options
-<span class="w">  </span><span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>angstroms
-<span class="w"> </span>
-<span class="w">  </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>file
-<span class="w">  </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps
-<span class="w"> </span>/
-<span class="w"> </span>
+  ! Potential energy <span class="k">function</span> options
+  <span class="nv">cut</span><span class="o">=</span><span class="m">8</span>.0,       ! nonbonded cutoff, <span class="k">in</span> angstroms
+ 
+  ! Control how often information is printed to the output file
+  <span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,      ! Print energies every <span class="m">100</span> steps
+ /
+ 
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<input id="c57678b1-ef50-4163-9332-e378943ef544" name="abff7b21-6c3c-405a-957a-f06b9ec356e6" type="radio">
+</input><label class="sd-tab-label" for="c57678b1-ef50-4163-9332-e378943ef544">
 heat.mdin</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
-<span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
-<span class="w">    </span><span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>is<span class="w"> </span>NOT<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
-<span class="w">    </span><span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>velocities
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A NVT simulation <span class="k">for</span> common production-level simulations
+ <span class="p">&amp;</span>cntrl
+    <span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,        ! No minimization
+    <span class="nv">irest</span><span class="o">=</span><span class="m">0</span>,       ! This is NOT a restart of an old MD simulation
+    <span class="nv">ntx</span><span class="o">=</span><span class="m">1</span>,         ! So our inpcrd file has no velocities
 
-<span class="w">    </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
-<span class="w">    </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>dynamics
-<span class="w">    </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
-<span class="w">    </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,<span class="w">     </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
+    ! Temperature control
+    <span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,         ! Langevin dynamics
+    <span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,  ! Friction coefficient <span class="o">(</span>ps^-1<span class="o">)</span>
+    <span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,     ! Target temperature
 
-<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
-<span class="w">    </span><span class="nv">cut</span><span class="o">=</span><span class="m">9</span>.0,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>angstroms
+    ! Potential energy control
+    <span class="nv">cut</span><span class="o">=</span><span class="m">9</span>.0,       ! nonbonded cutoff, <span class="k">in</span> angstroms
 
-<span class="w">    </span>!<span class="w"> </span>MD<span class="w"> </span>settings
-<span class="w">    </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,<span class="w">  </span>!<span class="w"> </span>10K<span class="w"> </span>steps,<span class="w"> </span><span class="m">10</span><span class="w"> </span>ps<span class="w"> </span>total
-<span class="w">    </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,<span class="w">      </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
+    ! MD settings
+    <span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,  ! 10K steps, <span class="m">10</span> ps total
+    <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,      ! <span class="nb">time</span> step <span class="o">(</span>ps<span class="o">)</span>
 
-<span class="w">    </span>!<span class="w"> </span>SHAKE
-<span class="w">    </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
-<span class="w">    </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+    ! SHAKE
+    <span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,         ! Constrain bonds containing hydrogen
+    <span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,         ! Do not calculate forces of bonds containing hydrogen
 
-<span class="w">    </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
-<span class="w">    </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">1000</span><span class="w"> </span>steps
-<span class="w">    </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span><span class="m">5000</span><span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
-<span class="w">    </span><span class="nv">ntwr</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>file<span class="w"> </span>every<span class="w"> </span>10K<span class="w"> </span>steps<span class="w"> </span><span class="o">(</span>can<span class="w"> </span>be<span class="w"> </span>less<span class="w"> </span>frequent<span class="o">)</span>
-<span class="w">    </span><span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,<span class="w">        </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format
-<span class="w">    </span><span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>always<span class="w"> </span><span class="k">do</span><span class="w"> </span>this!<span class="o">)</span>
+    ! Control how often information is printed
+    <span class="nv">ntpr</span><span class="o">=</span><span class="m">1000</span>,     ! Print energies every <span class="m">1000</span> steps
+    <span class="nv">ntwx</span><span class="o">=</span><span class="m">1000</span>,     ! Print coordinates every <span class="m">5000</span> steps to the trajectory
+    <span class="nv">ntwr</span><span class="o">=</span><span class="m">1000</span>,     ! Print a restart file every 10K steps <span class="o">(</span>can be less frequent<span class="o">)</span>
+    <span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,        ! Write NetCDF format
+    <span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,      ! Write NetCDF format <span class="o">(</span>always <span class="k">do</span> this!<span class="o">)</span>
 
-<span class="w">    </span>!<span class="w"> </span>Wrap<span class="w"> </span>coordinates<span class="w"> </span>when<span class="w"> </span>printing<span class="w"> </span>them<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>unit<span class="w"> </span>cell
-<span class="w">    </span><span class="nv">iwrap</span><span class="o">=</span><span class="m">1</span>,
+    ! Wrap coordinates when printing them to the same unit cell
+    <span class="nv">iwrap</span><span class="o">=</span><span class="m">1</span>,
 
-<span class="w">    </span>!<span class="w"> </span>Restraint<span class="w"> </span>options
-<span class="w">    </span><span class="nv">ntr</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">    </span><span class="nv">restraint_wt</span><span class="o">=</span><span class="m">5</span>,
-<span class="w">    </span><span class="nv">restraintmask</span><span class="o">=</span><span class="s1">&#39;:1-6&#39;</span>,<span class="w"> </span>!<span class="w"> </span>Apply<span class="w"> </span>weak<span class="w"> </span>positional<span class="w"> </span>restraint<span class="w"> </span>on<span class="w"> </span>residues
-<span class="w"> </span>/
+    ! Restraint options
+    <span class="nv">ntr</span><span class="o">=</span><span class="m">1</span>,
+    <span class="nv">restraint_wt</span><span class="o">=</span><span class="m">5</span>,
+    <span class="nv">restraintmask</span><span class="o">=</span><span class="s1">&#39;:1-6&#39;</span>, ! Apply weak positional restraint on residues
+ /
 </pre></div>
 </div>
 </div>
 </div>
 <section id="restraint-files">
-<h3>Restraint Files<a class="headerlink" href="#restraint-files" title="Link to this heading">#</a></h3>
+<h3>Restraint Files<a class="headerlink" href="#restraint-files" title="Permalink to this headline">#</a></h3>
 <p>To apply a distance restraint, I typically use the Umbrella Sampling approach. If I avoid all the gritty details, the setup only requires 1 additional restraint file (<code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>) for each restraint value.</p>
 <p>If our initial distance between the 2 molecules is 5 Å, and the goal is to observe some property of the system when the distance is 15 Å. Then I want to sample some distances &lt; 5 Å and increment that distance at some value until I reach 15 Å. The increment between distance will depend on the system and property you’re studying.</p>
 <p>Since this is a simple example, we will start with a restraint value of 4 Å and increment this by 4, until we reach 16 Å (i.e.,** our restraint values are 4, 8, 12,and 16 Å**)</p>
 <p>The files we need to make are, <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code> and  <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>, but each file must have a restraint value of 4, 8, 12, or 16. To keep files organized, I recommend sequentially ordering the files like:</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Produdction MD File</p></th>
 <th class="head"><p>Restraint File</p></th>
@@ -781,57 +427,57 @@ heat.mdin</label><div class="sd-tab-content docutils">
 </table>
 <p>The following is a template for preparing the 4 copies of <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code> and <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<input checked="checked" id="b08d1461-b889-49cb-b396-3fbf6526cd10" name="ca7f9b09-7816-46a5-9e8b-6305009d33ef" type="radio">
+</input><label class="sd-tab-label" for="b08d1461-b889-49cb-b396-3fbf6526cd10">
 Template for “prod.mdin”</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
-<span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
-<span class="w">    </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>IS<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
-<span class="w">    </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>velocities
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A NVT simulation <span class="k">for</span> common production-level simulations
+ <span class="p">&amp;</span>cntrl
+    <span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,        ! No minimization
+    <span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,       ! This IS a restart of an old MD simulation
+    <span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,         ! So our inpcrd file has velocities
 
-<span class="w">    </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
-<span class="w">    </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>dynamics
-<span class="w">    </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
-<span class="w">    </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,<span class="w">   </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
+    ! Temperature control
+    <span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,         ! Langevin dynamics
+    <span class="nv">gamma_ln</span><span class="o">=</span><span class="m">1</span>.0,  ! Friction coefficient <span class="o">(</span>ps^-1<span class="o">)</span>
+    <span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>,   ! Target temperature
 
-<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
-<span class="w">    </span><span class="nv">cut</span><span class="o">=</span><span class="m">9</span>.0,<span class="w">       </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>Angstroms
+    ! Potential energy control
+    <span class="nv">cut</span><span class="o">=</span><span class="m">9</span>.0,       ! nonbonded cutoff, <span class="k">in</span> Angstroms
 
-<span class="w">    </span>!<span class="w"> </span>MD<span class="w"> </span>settings
-<span class="w">    </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,<span class="w">  </span>!<span class="w"> </span>&lt;span<span class="w"> </span><span class="nv">style</span><span class="o">=</span><span class="s2">&quot;font-size:1.5em;&quot;</span>&gt;**Options<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>cv.rst<span class="sb">`</span>**&lt;/span&gt;MD<span class="w"> </span>steps
-<span class="w">    </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,<span class="w">      </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
+    ! MD settings
+    <span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,  ! &lt;span <span class="nv">style</span><span class="o">=</span><span class="s2">&quot;font-size:1.5em;&quot;</span>&gt;**Options <span class="k">in</span> <span class="sb">`</span>cv.rst<span class="sb">`</span>**&lt;/span&gt;MD steps
+    <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,      ! <span class="nb">time</span> step <span class="o">(</span>ps<span class="o">)</span>
 
-<span class="w">    </span>!<span class="w"> </span>SHAKE
-<span class="w">    </span><span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
-<span class="w">    </span><span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+    ! SHAKE
+    <span class="nv">ntc</span><span class="o">=</span><span class="m">2</span>,         ! Constrain bonds containing hydrogen
+    <span class="nv">ntf</span><span class="o">=</span><span class="m">2</span>,         ! Do not calculate forces of bonds containing hydrogen
 
-<span class="w">    </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
-<span class="w">    </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span>ntpr<span class="w"> </span>steps
-<span class="w">    </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span>ntwx<span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
-<span class="w">    </span><span class="nv">ntwr</span><span class="o">=</span><span class="m">1000</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>file<span class="w"> </span>every<span class="w"> </span>10K<span class="w"> </span>steps<span class="w"> </span><span class="o">(</span>can<span class="w"> </span>be<span class="w"> </span>less<span class="w"> </span>frequent<span class="o">)</span>
-<span class="w">    </span><span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,<span class="w">        </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format
-<span class="w">    </span><span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>always<span class="w"> </span><span class="k">do</span><span class="w"> </span>this!<span class="o">)</span>
+    ! Control how often information is printed
+    <span class="nv">ntpr</span><span class="o">=</span><span class="m">1000</span>,     ! Print energies every ntpr steps
+    <span class="nv">ntwx</span><span class="o">=</span><span class="m">1000</span>,     ! Print coordinates every ntwx steps to the trajectory
+    <span class="nv">ntwr</span><span class="o">=</span><span class="m">1000</span>,     ! Print a restart file every 10K steps <span class="o">(</span>can be less frequent<span class="o">)</span>
+    <span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,        ! Write NetCDF format
+    <span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,      ! Write NetCDF format <span class="o">(</span>always <span class="k">do</span> this!<span class="o">)</span>
 
-<span class="w">    </span>!<span class="w"> </span>Wrap<span class="w"> </span>coordinates<span class="w"> </span>when<span class="w"> </span>printing<span class="w"> </span>them<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>unit<span class="w"> </span>cell
-<span class="w">    </span><span class="nv">iwrap</span><span class="o">=</span><span class="m">1</span>,
-<span class="w">        </span>
-<span class="w">    </span>!<span class="w"> </span>Restraints
-<span class="w">    </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>restraints
+    ! Wrap coordinates when printing them to the same unit cell
+    <span class="nv">iwrap</span><span class="o">=</span><span class="m">1</span>,
+        
+    ! Restraints
+    <span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,      ! Turn on restraints
 
-<span class="w"> </span>/
-<span class="w"> </span>
-<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>/<span class="w"> </span>!<span class="w"> </span>Print<span class="w"> </span>restraint<span class="w"> </span>value<span class="w"> </span>every<span class="w"> </span><span class="m">10</span><span class="w"> </span>steps
-<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
-<span class="w"> </span><span class="nv">DISANG</span><span class="o">=</span>cv__NUMBER__.rst<span class="w">  </span>
-<span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>prod__NUMBER__.cv<span class="w"> </span>
+ /
+ 
+ <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>, <span class="nv">istep1</span><span class="o">=</span><span class="m">10</span> / ! Print restraint value every <span class="m">10</span> steps
+ <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span> /
+ <span class="nv">DISANG</span><span class="o">=</span>cv__NUMBER__.rst  
+ <span class="nv">DUMPAVE</span><span class="o">=</span>prod__NUMBER__.cv 
 
-<span class="w"> </span>/
+ /
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<input id="681d6bde-6de9-4341-9260-e97bf265cea5" name="ca7f9b09-7816-46a5-9e8b-6305009d33ef" type="radio">
+</input><label class="sd-tab-label" for="681d6bde-6de9-4341-9260-e97bf265cea5">
 Template for “cv.rst”</label><div class="sd-tab-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```shell
  &amp;rst
@@ -859,7 +505,7 @@ Template for “cv.rst”</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="run-md-with-bash-script">
-<h2>Run MD with Bash Script<a class="headerlink" href="#run-md-with-bash-script" title="Link to this heading">#</a></h2>
+<h2>Run MD with Bash Script<a class="headerlink" href="#run-md-with-bash-script" title="Permalink to this headline">#</a></h2>
 <p>Instead of running each simulation one command at a time (like we did in the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial), we can write a script to run it for us! Make a file called, <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">runmd.sh</span></code> with:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
@@ -867,39 +513,39 @@ date
 
 <span class="nv">sander</span><span class="o">=</span><span class="s2">&quot;sander&quot;</span>
 
-<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>min.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>step3_pbcsetup.rst7<span class="w"> </span>-o<span class="w"> </span>min.mdout<span class="w"> </span>-r<span class="w"> </span>min.ncrst<span class="w"> </span>-inf<span class="w"> </span>min.mdinfo
+<span class="nv">$sander</span> -O -i min.mdin -p step3_pbcsetup.parm7 -c step3_pbcsetup.rst7 -o min.mdout -r min.ncrst -inf min.mdinfo
 
-<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>heat.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>min.ncrst<span class="w"> </span>-o<span class="w"> </span>heat.mdout<span class="w"> </span>-r<span class="w"> </span>heat.ncrst<span class="w"> </span>-inf<span class="w"> </span>heat.mdinfo<span class="w"> </span>-ref<span class="w"> </span>min.ncrst<span class="w"> </span>-x<span class="w"> </span>heat.nc
+<span class="nv">$sander</span> -O -i heat.mdin -p step3_pbcsetup.parm7 -c min.ncrst -o heat.mdout -r heat.ncrst -inf heat.mdinfo -ref min.ncrst -x heat.nc
 
-<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod0.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>heat.ncrst<span class="w"> </span>-o<span class="w"> </span>prod0.mdout<span class="w"> </span>-r<span class="w"> </span>prod0.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod0.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod0.nc
+<span class="nv">$sander</span> -O -i prod0.mdin -p step3_pbcsetup.parm7 -c heat.ncrst -o prod0.mdout -r prod0.ncrst -inf prod0.mdinfo -x prod0.nc
 
-<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod1.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>prod0.ncrst<span class="w"> </span>-o<span class="w"> </span>prod1.mdout<span class="w"> </span>-r<span class="w"> </span>prod1.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod1.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod1.nc
+<span class="nv">$sander</span> -O -i prod1.mdin -p step3_pbcsetup.parm7 -c prod0.ncrst -o prod1.mdout -r prod1.ncrst -inf prod1.mdinfo -x prod1.nc
 
-<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod2.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>prod1.ncrst<span class="w"> </span>-o<span class="w"> </span>prod2.mdout<span class="w"> </span>-r<span class="w"> </span>prod2.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod2.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod2.nc
+<span class="nv">$sander</span> -O -i prod2.mdin -p step3_pbcsetup.parm7 -c prod1.ncrst -o prod2.mdout -r prod2.ncrst -inf prod2.mdinfo -x prod2.nc
 
-<span class="nv">$sander</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span>prod3.mdin<span class="w"> </span>-p<span class="w"> </span>step3_pbcsetup.parm7<span class="w"> </span>-c<span class="w"> </span>prod2.ncrst<span class="w"> </span>-o<span class="w"> </span>prod3.mdout<span class="w"> </span>-r<span class="w"> </span>prod3.ncrst<span class="w"> </span>-inf<span class="w"> </span>prod3.mdinfo<span class="w"> </span>-x<span class="w"> </span>prod3.nc
+<span class="nv">$sander</span> -O -i prod3.mdin -p step3_pbcsetup.parm7 -c prod2.ncrst -o prod3.mdout -r prod3.ncrst -inf prod3.mdinfo -x prod3.nc
 
 date
 </pre></div>
 </div>
 <p>After saving the file, run the script in as a background process with the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> symbol:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>runmd.sh<span class="w"> </span><span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash runmd.sh <span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>While we wait for this job to run, we can look at file we made.</p>
 <p><span style="font-size:1.5em;"><strong>Options in <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code></strong></span></p>
 <p>The last 10 lines of <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code> are:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>!<span class="w"> </span>Restraints
-<span class="w">    </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>restraints
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>    ! Restraints
+    <span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,      ! Turn on restraints
 
-<span class="w"> </span>/
-<span class="w"> </span>
-<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>/<span class="w"> </span>!<span class="w"> </span>Print<span class="w"> </span>restraint<span class="w"> </span>value<span class="w"> </span>every<span class="w"> </span><span class="m">10</span><span class="w"> </span>steps
-<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
-<span class="w"> </span><span class="nv">DISANG</span><span class="o">=</span>cv__NUMBER__.rst<span class="w">  </span>
-<span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>prod__NUMBER__.cv<span class="w"> </span>
+ /
+ 
+ <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>, <span class="nv">istep1</span><span class="o">=</span><span class="m">10</span> / ! Print restraint value every <span class="m">10</span> steps
+ <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span> /
+ <span class="nv">DISANG</span><span class="o">=</span>cv__NUMBER__.rst  
+ <span class="nv">DUMPAVE</span><span class="o">=</span>prod__NUMBER__.cv 
 
-<span class="w"> </span>/
+ /
 </pre></div>
 </div>
 <p><span style="font-size:1.5em;"><strong>Options in <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></strong></span></p>
@@ -912,7 +558,7 @@ date
 <p><strong>PHEWWWW</strong>*, that was kind of confusing, huh?</p>
 </section>
 <section id="visualize-and-analysis">
-<h2>Visualize and Analysis<a class="headerlink" href="#visualize-and-analysis" title="Link to this heading">#</a></h2>
+<h2>Visualize and Analysis<a class="headerlink" href="#visualize-and-analysis" title="Permalink to this headline">#</a></h2>
 <p>Now you can visual the results with VMD or Chimera, and perform some analysis.</p>
 </section>
 </section>
@@ -929,7 +575,7 @@ date
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./notebooks/simulation"
         },
         predefinedOutput: true
@@ -937,74 +583,37 @@ date
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
               
-              
-              
-              
-                <footer class="prev-next-footer">
-                  
-<div class="prev-next-area">
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
 </div>
-                </footer>
               
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+          </main>
+          
 
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">Prepare Files &amp; Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">Make Topology and Coordinate Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">Restraint Files</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">Run MD with Bash Script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">Visualize and Analysis</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
-        
-      </main>
+      </div>
     </div>
-  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
-
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
-</p></div>
-      
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright .<br>
+</p>
     </div>
-  
-</div>
-
-  </footer>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
   </body>
 </html>

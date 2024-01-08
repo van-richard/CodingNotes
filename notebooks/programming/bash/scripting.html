@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Scripting &#8212; Coding Notes</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/card.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../../_static/js/hoverxref.js"></script>
+    <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../../../_static/js/micromodal.min.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/programming/bash/scripting.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/van-abstract.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#redirect-commands">
+   Redirect Commands
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looping">
+   Looping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="scripting">
+<h1>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">#</a></h1>
+<section id="redirect-commands">
+<h2>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this headline">#</a></h2>
+<p>You can redirect command input and output (stdin, stdout, and stderr) using “redirection operators”. Unlike a pipe, which passes output to a command, a redirection operator has a command’s input come from a file or stream, or sends its output to a file or stream.</p>
+<p>Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite <a class="reference external" href="http://hello.py">hello.py</a> with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat &gt; hello.py <span class="s">&lt;&lt; EOF</span>
+<span class="s">#!/usr/bin/env python</span>
+<span class="s">from __future__ import print_function</span>
+<span class="s">import sys</span>
+<span class="s">print(&quot;#stdout&quot;, file=sys.stdout)</span>
+<span class="s">print(&quot;#stderr&quot;, file=sys.stderr)</span>
+<span class="s">for line in sys.stdin:</span>
+<span class="s">    print(line, file=sys.stdout)</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+<p>Variables will be expanded if the first “EOF” is not quoted. Run the <a class="reference external" href="http://hello.py">hello.py</a> Python script with various stdin, stdout, and stderr redirections:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python hello.py &lt; <span class="s2">&quot;input.in&quot;</span> <span class="c1"># pass input.in as input to the script</span>
+
+python hello.py &gt; <span class="s2">&quot;output.out&quot;</span> <span class="c1"># redirect output from the script to output.out</span>
+
+python hello.py <span class="m">2</span>&gt; <span class="s2">&quot;error.err&quot;</span> <span class="c1"># redirect error output to error.err</span>
+
+python hello.py &gt; <span class="s2">&quot;output-and-error.log&quot;</span> <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="c1"># redirect both output and errors to output-and-error.log</span>
+<span class="c1"># &amp;1 means file descriptor 1 (stdout), so 2&gt;&amp;1 redirects stderr (2) to the current</span>
+<span class="c1"># destination of stdout (1), which has been redirected to output-and-error.log.</span>
+
+python hello.py &gt; /dev/null <span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+<span class="c1"># redirect all output and errors to the black hole, /dev/null, i.e., no output</span>
+
+<span class="c1"># The output error will overwrite the file if it exists,</span>
+<span class="c1"># if you want to append instead, use &quot;&gt;&gt;&quot;:</span>
+python hello.py &gt;&gt; <span class="s2">&quot;output.out&quot;</span> <span class="m">2</span>&gt;&gt; <span class="s2">&quot;error.err&quot;</span>
+
+<span class="c1"># Overwrite output.out, append to error.err, and count lines:</span>
+info bash <span class="s1">&#39;Basic Shell Features&#39;</span> <span class="s1">&#39;Redirections&#39;</span> &gt; output.out <span class="m">2</span>&gt;&gt; error.err
+wc -l output.out error.err
+
+<span class="c1"># Run a command and print its file descriptor (e.g. /dev/fd/123)</span>
+<span class="c1"># see: man fd</span>
+<span class="nb">echo</span> &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">&quot;#helloworld&quot;</span><span class="o">)</span>
+
+<span class="c1"># Overwrite output.out with &quot;#helloworld&quot;:</span>
+cat &gt; output.out &lt;<span class="o">(</span><span class="nb">echo</span> <span class="s2">&quot;#helloworld&quot;</span><span class="o">)</span>
+<span class="nb">echo</span> <span class="s2">&quot;#helloworld&quot;</span> &gt; output.out
+<span class="nb">echo</span> <span class="s2">&quot;#helloworld&quot;</span> <span class="p">|</span> cat &gt; output.out
+<span class="nb">echo</span> <span class="s2">&quot;#helloworld&quot;</span> <span class="p">|</span> tee output.out &gt;/dev/null
+</pre></div>
+</div>
+<p>Commands can be substituted within other commands using <code class="docutils literal notranslate"><span class="pre">$(</span> <span class="pre">):</span></code> The following command displays the number of files and directories in the current directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;There are </span><span class="k">$(</span>ls <span class="p">|</span> wc -l<span class="k">)</span><span class="s2"> items here.&quot;</span>
+</pre></div>
+</div>
+<p>Bash uses a <code class="docutils literal notranslate"><span class="pre">case</span></code> statement that works similarly to switch in Java and C++:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="s2">&quot;</span><span class="nv">$Variable</span><span class="s2">&quot;</span> <span class="k">in</span>
+    <span class="c1"># List patterns for the conditions you want to meet</span>
+    <span class="m">0</span><span class="o">)</span> <span class="nb">echo</span> <span class="s2">&quot;There is a zero.&quot;</span><span class="p">;;</span>
+    <span class="m">1</span><span class="o">)</span> <span class="nb">echo</span> <span class="s2">&quot;There is a one.&quot;</span><span class="p">;;</span>
+    *<span class="o">)</span> <span class="nb">echo</span> <span class="s2">&quot;It is not null.&quot;</span><span class="p">;;</span>  <span class="c1"># match everything</span>
+<span class="k">esac</span>
+</pre></div>
+</div>
+</section>
+<section id="looping">
+<h2>Looping<a class="headerlink" href="#looping" title="Permalink to this headline">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops iterate for as many arguments given:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#The contents of $Variable is printed three times.</span>
+<span class="k">for</span> Variable <span class="k">in</span> <span class="o">{</span><span class="m">1</span>..3<span class="o">}</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$Variable</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+<span class="c1"># =&gt; 1</span>
+<span class="c1"># =&gt; 2</span>
+<span class="c1"># =&gt; 3</span>
+</pre></div>
+</div>
+<p>Or write it the “traditional for loop” way:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="o">((</span><span class="nv">a</span><span class="o">=</span><span class="m">1</span><span class="p">;</span> a &lt;<span class="o">=</span> <span class="m">3</span><span class="p">;</span> a++<span class="o">))</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$a</span>
+<span class="k">done</span>
+<span class="c1"># =&gt; 1</span>
+<span class="c1"># =&gt; 2</span>
+<span class="c1"># =&gt; 3</span>
+</pre></div>
+</div>
+<p>They can also be used to act on files. This will run the command <code class="docutils literal notranslate"><span class="pre">cat</span></code> on file1 and file2.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> Variable <span class="k">in</span> file1 file2
+<span class="k">do</span>
+    cat <span class="s2">&quot;</span><span class="nv">$Variable</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p>… or the output from a command, this will <code class="docutils literal notranslate"><span class="pre">cat</span></code> the output from <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> Output <span class="k">in</span> <span class="k">$(</span>ls<span class="k">)</span>
+<span class="k">do</span>
+    cat <span class="s2">&quot;</span><span class="nv">$Output</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p>Bash can also accept patterns, like this to <code class="docutils literal notranslate"><span class="pre">cat</span></code> all the Markdown files in current directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> Output <span class="k">in</span> ./*.markdown
+<span class="k">do</span>
+    cat <span class="s2">&quot;</span><span class="nv">$Output</span><span class="s2">&quot;</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="o">[</span> <span class="nb">true</span> <span class="o">]</span>
+<span class="k">do</span>
+    <span class="nb">echo</span> <span class="s2">&quot;loop body here...&quot;</span>
+    <span class="nb">break</span>
+<span class="k">done</span>
+<span class="c1"># =&gt; loop body here...</span>
+</pre></div>
+</div>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">#</a></h2>
+<p>You can also define functions</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Definition:
+function foo ()
+{
+    echo &quot;Arguments work just like script arguments: $@&quot;
+    echo &quot;And: $1 $2...&quot;
+    echo &quot;This is a function&quot;
+    returnValue=0    # Variable values can be returned
+    return $returnValue
+}
+# Call the function `foo` with two arguments, arg1 and arg2:
+foo arg1 arg2
+# =&gt; Arguments work just like script arguments: arg1 arg2
+# =&gt; And: arg1 arg2...
+# =&gt; This is a function
+</pre></div>
+</div>
+<p>More than 9 arguments are also possible by using braces, e.g. <code class="docutils literal notranslate"><span class="pre">${10},</span> <span class="pre">${11},</span> <span class="pre">...</span></code> or simply</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bar <span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&quot;Another way to declare functions!&quot;</span>
+    <span class="k">return</span> <span class="m">0</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Call the function <code class="docutils literal notranslate"><span class="pre">bar</span></code> with no arguments:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bar <span class="c1"># =&gt; Another way to declare functions!</span>
+</pre></div>
+</div>
+<p>Calling your function</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>foo <span class="s2">&quot;My name is&quot;</span> <span class="nv">$Name</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/programming/bash"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright .<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

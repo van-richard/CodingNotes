@@ -1,577 +1,213 @@
 
 <!DOCTYPE html>
 
-
-<html lang="en" data-content_root="../../../" >
-
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Simulation Workflows &#8212; Coding Notes</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css?v=7bc2f056" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css?v=37217874" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css?v=6227e517" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css?v=94669e23" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css?v=21a39f42" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css?v=a18b2449" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css?v=dbff53e4" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css?v=d7bf34ee" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css?v=ca93fcec" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css?v=6ad1a40c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/card.css?v=62255d5d" />
-  
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/card.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../../_static/js/hoverxref.js?v=82c55261"></script>
-    <script src="../../../_static/js/tooltipster.bundle.min.js?v=18bf091b"></script>
-    <script src="../../../_static/js/micromodal.min.js?v=04d6302d"></script>
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../../_static/js/hoverxref.js"></script>
+    <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+    <script src="../../../_static/js/micromodal.min.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js?v=afe5de03"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/notes/alchemical/workflow';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/notes/alchemical/workflow.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <div class="container-fluid" id="banner"></div>
 
-  
-  
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
 
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../../index.html">
+  <img src="../../../_static/van-abstract.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
   </button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-
-  <header>
-  
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-<div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-    <span class="fa-solid fa-bars"></span>
-  </label>
-  
-  
-  <div class="col-lg-3 navbar-header-items__start">
-    
-      <div class="navbar-item">
-
-  
-
-<a class="navbar-brand logo" href="../../../index.html">
-  
-  
-  
-  
-  
-    
-    
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
       
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
     
     
-    <img src="../../../_static/van-abstract.svg" class="logo__image only-light" alt="Coding Notes - Home"/>
-    <script>document.write(`<img src="../../../_static/van-abstract.svg" class="logo__image only-dark" alt="Coding Notes - Home"/>`);</script>
-  
-  
-</a></div>
-    
-  </div>
-  
-  <div class="col-lg-9 navbar-header-items">
-    
-    <div class="me-auto navbar-header-items__center">
-      
-        <div class="navbar-item">
-<nav class="navbar-nav">
-  <ul class="bd-navbar-elements navbar-nav">
-    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../bash/overview.html">
-                        bash Shell
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../bash/scripting.html">
-                        Scripting
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../bash/startup.html">
-                        Start-Up Files
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../hpc/overview.html">
-                        SLURM & ssh
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../hpc/autologin.html">
-                        Automate Login
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../hpc/config.html">
-                        Configuring ssh
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../git/overview.html">
-                        Github & git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../git/git.html">
-                        git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../git/branch.html">
-                        Branching
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/overview.html">
-                        Python & Conda
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/python.html">
-                        Overview
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/conda.html">
-                        Conda
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/installconda.html">
-                        Installing
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/condaenv.html">
-                        Conda Environments
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/myenv.html">
-                        My Recommended Conda Setup
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/condaintel.html">
-                        Intel Environments on M1/M2
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/jupyter.html">
-                        Jupyter Notebooks
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
-  </ul>
-</nav></div>
+</ul>
+      </div>
       
     </div>
-    
-    
-    <div class="navbar-header-items__end">
+
+    <div id="navbar-end">
       
-        <div class="navbar-item navbar-persistent--container">
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-        </div>
-      
-      
-    </div>
-    
-  </div>
-  
-  
-    <div class="navbar-persistent--mobile">
-
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
-    </div>
-  
-
-  
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
-      <span class="fa-solid fa-outdent"></span>
-    </label>
-  
-</div>
-
-    </div>
-  
-  </header>
-
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
-      
-      
-      
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-      <div class="sidebar-header-items__center">
-        
-          <div class="navbar-item">
-<nav class="navbar-nav">
-  <ul class="bd-navbar-elements navbar-nav">
-    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../bash/overview.html">
-                        bash Shell
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../bash/scripting.html">
-                        Scripting
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../bash/startup.html">
-                        Start-Up Files
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../hpc/overview.html">
-                        SLURM & ssh
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../hpc/autologin.html">
-                        Automate Login
-                      </a>
-                    </li>
-                
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
-                    More
-                </button>
-                <ul id="pst-nav-more-links-2" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../hpc/config.html">
-                        Configuring ssh
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../git/overview.html">
-                        Github & git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../git/git.html">
-                        git
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../git/branch.html">
-                        Branching
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/overview.html">
-                        Python & Conda
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/python.html">
-                        Overview
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/conda.html">
-                        Conda
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/installconda.html">
-                        Installing
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/condaenv.html">
-                        Conda Environments
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/myenv.html">
-                        My Recommended Conda Setup
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/condaintel.html">
-                        Intel Environments on M1/M2
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../../python/jupyter.html">
-                        Jupyter Notebooks
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
             
-  </ul>
-</nav></div>
-        
-      </div>
-    
-    
-    
-  </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-          <div class="bd-content">
-            <div class="bd-article-container">
               
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item">
-
-
-
-<nav aria-label="Breadcrumb">
-  <ul class="bd-breadcrumbs">
-    
-    <li class="breadcrumb-item breadcrumb-home">
-      <a href="../../../index.html" class="nav-link" aria-label="Home">
-        <i class="fa-solid fa-home"></i>
-      </a>
-    </li>
-    <li class="breadcrumb-item active" aria-current="page">Simulation Workflows</li>
-  </ul>
-</nav>
-</div>
-      
-    </div>
-  
-  
-</div>
-</div>
-              
-              
-              
+              <div class="toc-item">
                 
-<div id="searchbox"></div>
-                <article class="bd-article">
-                  
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup-amber-files-for-pmemd">
+   Setup Amber Files for
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pmemd
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code">
+     Code
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#free-energy-setup">
+   Free Energy Setup
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For more information, refer to the
 <a class="reference external" href="https://livecomsjournal.org/index.php/livecoms/article/view/v2i1e18378">Best Practices for Alchemical Free Energy Calculations</a> paper by Xu et. al.</p>
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="simulation-workflows">
-<h1>Simulation Workflows<a class="headerlink" href="#simulation-workflows" title="Link to this heading">#</a></h1>
+<h1>Simulation Workflows<a class="headerlink" href="#simulation-workflows" title="Permalink to this headline">#</a></h1>
 <section id="setup-amber-files-for-pmemd">
-<h2>Setup Amber Files for <code class="docutils literal notranslate"><span class="pre">pmemd</span></code><a class="headerlink" href="#setup-amber-files-for-pmemd" title="Link to this heading">#</a></h2>
+<h2>Setup Amber Files for <code class="docutils literal notranslate"><span class="pre">pmemd</span></code><a class="headerlink" href="#setup-amber-files-for-pmemd" title="Permalink to this headline">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">pmemd</span></code> requires the single topology file approach.</p>
 <ul class="simple">
 <li><p>First I make initial PDB files for the wildtype and mutation to compare the number of atoms and charge of both systems</p></li>
@@ -579,62 +215,62 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">parmed</span></code> to remove redundant bonding terms for more efficient calculation (<code class="docutils literal notranslate"><span class="pre">timerge</span></code>)</p></li>
 </ul>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-0">
+<input checked="checked" id="44dbe2ab-0664-4178-be84-8aab209cc20b" name="a7deabef-08c4-463a-9ec3-352f261534d6" type="radio">
+</input><label class="sd-tab-label" for="44dbe2ab-0664-4178-be84-8aab209cc20b">
 1. Preparing PDB files</label><div class="sd-tab-content docutils">
 <p>To get an idea of the number of atoms and charge of wildtype vs mutant, I create an <code class="docutils literal notranslate"><span class="pre">init</span></code> folder, run <code class="docutils literal notranslate"><span class="pre">tleap</span></code>, and grab some information.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Go to the <code class="docutils literal notranslate"><span class="pre">setup/leap/ref</span></code> directory</p></li>
 <li><p>Copy <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup_wt.pdb</span></code> to <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup_mt.pdb</span></code> with the residue mutation</p></li>
 <li><p>Go back one level, and into the <code class="docutils literal notranslate"><span class="pre">init</span></code> directory (we will generate inital PDB files for wildtype and mutant)</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">1_leap.sh</span></code> to get <code class="docutils literal notranslate"><span class="pre">wt_wat.pdb</span></code> and <code class="docutils literal notranslate"><span class="pre">mt_wat.pdb</span></code></p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Check (visualize) PDBs, and make sure you introduced the correct mutation</p></li>
 </ol>
 </li>
 <li><p>Get PDB information with <code class="docutils literal notranslate"><span class="pre">2_info.sh</span></code> for differences in atom number and ions</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>We use this to see what other atoms need to be transformed w/ mutation (i.e. charges)</p></li>
 </ol>
 </li>
 </ol>
 </div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-1">
+<input id="ebcddee1-e4c8-4f23-8ec9-af5961d96ce3" name="a7deabef-08c4-463a-9ec3-352f261534d6" type="radio">
+</input><label class="sd-tab-label" for="ebcddee1-e4c8-4f23-8ec9-af5961d96ce3">
 2. Split components of system </label><div class="sd-tab-content docutils">
 <p>Now that we’re familiar with the protein systems we’re simulating, make PDBs containing the components for our alchemical calculation</p>
 <ul class="simple">
 <li><p>We need a pdb file for wildtype protein, mutant protein, nucleic acids (sgRNA + dsDNA), and one with ions/waters.</p></li>
 </ul>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Go back one level (to <code class="docutils literal notranslate"><span class="pre">setup/leap</span></code>)</p></li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">1_prep.sh</span></code></p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>This makes <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup_wt.pdb</span></code> and <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup_mt.pdb</span></code> from the <code class="docutils literal notranslate"><span class="pre">/init/*_wat.pdb</span></code></p></li>
 <li><p>Only has protein information.</p></li>
 </ol>
 </li>
 <li><p>Copy <code class="docutils literal notranslate"><span class="pre">init/mt_wat.pdb</span></code> to the following:</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup_nt.pdb</span></code> - contains only nucleic acid residues</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">step3_pbcsetup_ion_wat.pdb</span></code> - contains only counterions and water</p></li>
 </ol>
 </li>
 </ol>
 </div>
-<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
+<input id="016254f8-11f7-472f-8752-62278ca2d4db" name="a7deabef-08c4-463a-9ec3-352f261534d6" type="radio">
+</input><label class="sd-tab-label" for="016254f8-11f7-472f-8752-62278ca2d4db">
 3. Files for Alchemical</label><div class="sd-tab-content docutils">
 <p>Preparing the topology and coordinate files for alchemical simulation</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">1_leap.sh</span></code> to get:</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>The files <code class="docutils literal notranslate"><span class="pre">protein.*</span></code> which contain wildtype/mutant protein, and ions/waters</p></li>
 <li><p>The files <code class="docutils literal notranslate"><span class="pre">complex.*</span></code> which contain wildtype/mutant protein, sgRNA, dsDNA, and ions/waters</p></li>
 </ol>
 </li>
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">2_eliminate_duplicates.sh</span></code> to remove redundant terms</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>We will only use the files <code class="docutils literal notranslate"><span class="pre">merged_protein.*</span></code>, and <code class="docutils literal notranslate"><span class="pre">merged_complex.*</span></code></p></li>
 </ol>
 </li>
@@ -642,25 +278,25 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <section id="code">
-<h3>Code<a class="headerlink" href="#code" title="Link to this heading">#</a></h3>
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">#</a></h3>
 <div class="dropdown admonition">
 <p class="admonition-title">Scripts</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
+<input checked="checked" id="3f4eb475-b247-439a-b758-d209dd40c511" name="42652158-ee14-4d8a-a721-b91c56c0d75e" type="radio">
+</input><label class="sd-tab-label" for="3f4eb475-b247-439a-b758-d209dd40c511">
 1_leap.sh</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/sh</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>date
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>expand_aliases
-<span class="linenos"> 6</span><span class="nb">source</span><span class="w"> </span>~/.bash_aliases
+<span class="linenos"> 5</span><span class="nb">shopt</span> -s expand_aliases
+<span class="linenos"> 6</span><span class="nb">source</span> ~/.bash_aliases
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span>myconda<span class="p">;</span><span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
+<span class="linenos"> 8</span>myconda<span class="p">;</span> conda activate ambertools
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="nv">basedir</span><span class="o">=</span>leap
 <span class="linenos">11</span>
-<span class="linenos">12</span>tleap<span class="w"> </span>-f<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;_EOF</span>
+<span class="linenos">12</span>tleap -f - <span class="s">&lt;&lt;_EOF</span>
 <span class="linenos">13</span><span class="s"># load the AMBER force fields</span>
 <span class="linenos">14</span><span class="s">source leaprc.protein.ff14SB</span>
 <span class="linenos">15</span><span class="s">source leaprc.DNA.OL15</span>
@@ -697,23 +333,23 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
+<input id="a8ab0943-c8f3-4c1b-bda6-1c871b219185" name="42652158-ee14-4d8a-a721-b91c56c0d75e" type="radio">
+</input><label class="sd-tab-label" for="a8ab0943-c8f3-4c1b-bda6-1c871b219185">
 2_eliminate_duplicate.sh</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span>date
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>expand_aliases
-<span class="linenos"> 6</span><span class="nb">source</span><span class="w"> </span>~/.bash_aliases
+<span class="linenos"> 5</span><span class="nb">shopt</span> -s expand_aliases
+<span class="linenos"> 6</span><span class="nb">source</span> ~/.bash_aliases
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span>myconda<span class="p">;</span><span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ambertools
+<span class="linenos"> 8</span>myconda<span class="p">;</span> conda activate ambertools
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="c1"># wildtype res = 854</span>
 <span class="linenos">11</span><span class="c1"># num = 854 - 1 = 853</span>
 <span class="linenos">12</span><span class="c1"># mutant res = 1366 + 853 = 2219</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span>parmed<span class="w"> </span>protein.parm7<span class="w"> </span><span class="s">&lt;&lt;_EOF</span>
+<span class="linenos">14</span>parmed protein.parm7 <span class="s">&lt;&lt;_EOF</span>
 <span class="linenos">15</span><span class="s">loadRestrt protein.rst7</span>
 <span class="linenos">16</span><span class="s">setOverwrite True</span>
 <span class="linenos">17</span><span class="s"># [all res of wt] [all res of mt] [wt] [mt]</span>
@@ -723,7 +359,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="linenos">21</span><span class="s">quit</span>
 <span class="linenos">22</span><span class="s">_EOF</span>
 <span class="linenos">23</span>
-<span class="linenos">24</span>parmed<span class="w"> </span>complex.parm7<span class="w"> </span><span class="s">&lt;&lt;_EOF</span>
+<span class="linenos">24</span>parmed complex.parm7 <span class="s">&lt;&lt;_EOF</span>
 <span class="linenos">25</span><span class="s">loadRestrt complex.rst7</span>
 <span class="linenos">26</span><span class="s">setOverwrite True</span>
 <span class="linenos">27</span><span class="s"># [all res of wt] [all res of mt] [wt] [mt]</span>
@@ -745,11 +381,11 @@ const thebe_selector_output = ".output, .cell_output"
 </section>
 </section>
 <section id="free-energy-setup">
-<h2>Free Energy Setup<a class="headerlink" href="#free-energy-setup" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
+<h2>Free Energy Setup<a class="headerlink" href="#free-energy-setup" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
 <li><p>Go back on level to the <code class="docutils literal notranslate"><span class="pre">free_energy</span></code> folder</p></li>
 <li><p>I prepared 3 template files for MD inputs:</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>min.tmpl</p></li>
 <li><p>heat.tmpl</p></li>
 <li><p>prod.tmpl</p></li>
@@ -759,169 +395,169 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="dropdown admonition">
 <p class="admonition-title">Templates for MD inputs</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
+<input checked="checked" id="74a0eb51-04bf-49d5-ba7c-cd69cd5b2e58" name="eb2e667a-146b-49f3-964f-23ffa4aaf389" type="radio">
+</input><label class="sd-tab-label" for="74a0eb51-04bf-49d5-ba7c-cd69cd5b2e58">
 1. min.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>minimisation
-<span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="linenos"> 3</span><span class="w">   </span>!<span class="w"> </span>Minimization<span class="w"> </span>Options
-<span class="linenos"> 4</span><span class="w">   </span><span class="nv">imin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>
-<span class="linenos"> 5</span><span class="w">   </span><span class="nv">ntmin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>,<span class="w"> </span>
-<span class="linenos"> 6</span><span class="w">   </span><span class="nv">maxcyc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span>,
-<span class="linenos"> 7</span><span class="w">   </span><span class="nv">ntpr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>,<span class="w"> </span>
-<span class="linenos"> 8</span><span class="w">   </span><span class="nv">ntwe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>,
-<span class="linenos"> 9</span><span class="w">   </span><span class="nv">dx0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>.0D-7,
+<span class="linenos"> 2</span> <span class="p">&amp;</span>cntrl
+<span class="linenos"> 3</span>   ! Minimization Options
+<span class="linenos"> 4</span>   <span class="nv">imin</span> <span class="o">=</span> <span class="m">1</span>, 
+<span class="linenos"> 5</span>   <span class="nv">ntmin</span> <span class="o">=</span> <span class="m">2</span>, 
+<span class="linenos"> 6</span>   <span class="nv">maxcyc</span> <span class="o">=</span> <span class="m">500</span>,
+<span class="linenos"> 7</span>   <span class="nv">ntpr</span> <span class="o">=</span> <span class="m">50</span>, 
+<span class="linenos"> 8</span>   <span class="nv">ntwe</span> <span class="o">=</span> <span class="m">50</span>,
+<span class="linenos"> 9</span>   <span class="nv">dx0</span> <span class="o">=</span> <span class="m">1</span>.0D-7,
 <span class="linenos">10</span>
-<span class="linenos">11</span><span class="w">   </span><span class="nv">icfe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">ifsc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">clambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>%L%,<span class="w"> </span><span class="nv">scalpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.5,<span class="w"> </span><span class="nv">scbeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span>.0,
-<span class="linenos">12</span><span class="w">   </span><span class="nv">logdvdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,
-<span class="linenos">13</span><span class="w">   </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">14</span><span class="w">   </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">15</span><span class="w">   </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">16</span><span class="w">   </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">17</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">18</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">19</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">20</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">21</span><span class="w">   </span>
-<span class="linenos">22</span><span class="w"> </span>/
+<span class="linenos">11</span>   <span class="nv">icfe</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">ifsc</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">clambda</span> <span class="o">=</span> %L%, <span class="nv">scalpha</span> <span class="o">=</span> <span class="m">0</span>.5, <span class="nv">scbeta</span> <span class="o">=</span> <span class="m">12</span>.0,
+<span class="linenos">12</span>   <span class="nv">logdvdl</span> <span class="o">=</span> <span class="m">0</span>,
+<span class="linenos">13</span>   <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">14</span>   <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">15</span>   <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">16</span>   <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">17</span>   ! <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">18</span>   ! <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">19</span>   ! <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">20</span>   ! <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">21</span>   
+<span class="linenos">22</span> /
 <span class="linenos">23</span>
-<span class="linenos">24</span><span class="w"> </span><span class="p">&amp;</span>ewald
-<span class="linenos">25</span><span class="w"> </span>/<span class="w"> </span>
+<span class="linenos">24</span> <span class="p">&amp;</span>ewald
+<span class="linenos">25</span> / 
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
+<input id="73f89dba-8457-4712-8b2f-f073e86be8c5" name="eb2e667a-146b-49f3-964f-23ffa4aaf389" type="radio">
+</input><label class="sd-tab-label" for="73f89dba-8457-4712-8b2f-f073e86be8c5">
 2. heat.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>heating
-<span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="linenos"> 3</span><span class="w">   </span><span class="nv">imin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,<span class="w"> </span>
-<span class="linenos"> 4</span><span class="w">   </span><span class="nv">irest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,<span class="w"> </span>
-<span class="linenos"> 5</span><span class="w">   </span><span class="nv">ntx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>
-<span class="linenos"> 6</span><span class="w">   </span>
-<span class="linenos"> 7</span><span class="w">   </span>!<span class="w"> </span>MD
-<span class="linenos"> 8</span><span class="w">   </span><span class="nv">nstlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20000</span>,<span class="w"> </span>
-<span class="linenos"> 9</span><span class="w">   </span><span class="nv">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.001,
-<span class="linenos">10</span><span class="w">   </span><span class="nv">ntb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>!<span class="w"> </span>NVT
+<span class="linenos"> 2</span> <span class="p">&amp;</span>cntrl
+<span class="linenos"> 3</span>   <span class="nv">imin</span> <span class="o">=</span> <span class="m">0</span>, 
+<span class="linenos"> 4</span>   <span class="nv">irest</span> <span class="o">=</span> <span class="m">0</span>, 
+<span class="linenos"> 5</span>   <span class="nv">ntx</span> <span class="o">=</span> <span class="m">1</span>, 
+<span class="linenos"> 6</span>   
+<span class="linenos"> 7</span>   ! MD
+<span class="linenos"> 8</span>   <span class="nv">nstlim</span> <span class="o">=</span> <span class="m">20000</span>, 
+<span class="linenos"> 9</span>   <span class="nv">dt</span> <span class="o">=</span> <span class="m">0</span>.001,
+<span class="linenos">10</span>   <span class="nv">ntb</span> <span class="o">=</span> <span class="m">1</span>, ! NVT
 <span class="linenos">11</span>
-<span class="linenos">12</span><span class="w">   </span>!<span class="w"> </span>SHAKE
-<span class="linenos">13</span><span class="w">   </span><span class="nv">ntc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>,
-<span class="linenos">14</span><span class="w">   </span><span class="nv">ntf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>!<span class="w"> </span>alchemical
+<span class="linenos">12</span>   ! SHAKE
+<span class="linenos">13</span>   <span class="nv">ntc</span> <span class="o">=</span> <span class="m">2</span>,
+<span class="linenos">14</span>   <span class="nv">ntf</span> <span class="o">=</span> <span class="m">1</span>, ! alchemical
 <span class="linenos">15</span>
-<span class="linenos">16</span><span class="w">   </span>!<span class="w"> </span>Temperature<span class="w"> </span>Regulation
-<span class="linenos">17</span><span class="w">   </span><span class="nv">ntt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>,<span class="w"> </span>
-<span class="linenos">18</span><span class="w">   </span><span class="nv">temp0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span>.0,<span class="w"> </span>
-<span class="linenos">19</span><span class="w">   </span><span class="nv">tempi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>.0,<span class="w"> </span>
-<span class="linenos">20</span><span class="w">   </span><span class="nv">gamma_ln</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>.0,
+<span class="linenos">16</span>   ! Temperature Regulation
+<span class="linenos">17</span>   <span class="nv">ntt</span> <span class="o">=</span> <span class="m">3</span>, 
+<span class="linenos">18</span>   <span class="nv">temp0</span> <span class="o">=</span> <span class="m">300</span>.0, 
+<span class="linenos">19</span>   <span class="nv">tempi</span> <span class="o">=</span> <span class="m">50</span>.0, 
+<span class="linenos">20</span>   <span class="nv">gamma_ln</span> <span class="o">=</span> <span class="m">1</span>.0,
 <span class="linenos">21</span>
-<span class="linenos">22</span><span class="w">   </span>!<span class="w"> </span>output
-<span class="linenos">23</span><span class="w">   </span><span class="nv">ioutfm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span>
-<span class="linenos">24</span><span class="w">   </span><span class="nv">iwrap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,
-<span class="linenos">25</span><span class="w">   </span><span class="nv">ntwe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span>,<span class="w"> </span>
-<span class="linenos">26</span><span class="w">   </span><span class="nv">ntwx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span>,<span class="w"> </span>
-<span class="linenos">27</span><span class="w">   </span><span class="nv">ntpr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span>,<span class="w"> </span>
-<span class="linenos">28</span><span class="w">   </span><span class="nv">ntwr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5000</span>,
+<span class="linenos">22</span>   ! output
+<span class="linenos">23</span>   <span class="nv">ioutfm</span> <span class="o">=</span> <span class="m">1</span>, 
+<span class="linenos">24</span>   <span class="nv">iwrap</span> <span class="o">=</span> <span class="m">1</span>,
+<span class="linenos">25</span>   <span class="nv">ntwe</span> <span class="o">=</span> <span class="m">1000</span>, 
+<span class="linenos">26</span>   <span class="nv">ntwx</span> <span class="o">=</span> <span class="m">1000</span>, 
+<span class="linenos">27</span>   <span class="nv">ntpr</span> <span class="o">=</span> <span class="m">1000</span>, 
+<span class="linenos">28</span>   <span class="nv">ntwr</span> <span class="o">=</span> <span class="m">5000</span>,
 <span class="linenos">29</span>
-<span class="linenos">30</span><span class="w">   </span>!needed<span class="w"> </span><span class="k">for</span><span class="w"> </span>method<span class="w"> </span><span class="m">2</span>,<span class="w"> </span>also<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001
-<span class="linenos">31</span><span class="w">   </span><span class="nv">noshakemask</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;:865,2230&#39;</span>,
+<span class="linenos">30</span>   !needed <span class="k">for</span> method <span class="m">2</span>, also <span class="nb">set</span> <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001
+<span class="linenos">31</span>   <span class="nv">noshakemask</span> <span class="o">=</span> <span class="s1">&#39;:865,2230&#39;</span>,
 <span class="linenos">32</span>
-<span class="linenos">33</span><span class="w">   </span><span class="nv">nmropt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,
-<span class="linenos">34</span><span class="w">   </span><span class="nv">ntr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">restraint_wt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>.00,
-<span class="linenos">35</span><span class="w">   </span><span class="nv">restraintmask</span><span class="o">=</span><span class="s1">&#39;@CA &amp; @P&#39;</span>,
+<span class="linenos">33</span>   <span class="nv">nmropt</span> <span class="o">=</span> <span class="m">1</span>,
+<span class="linenos">34</span>   <span class="nv">ntr</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">restraint_wt</span> <span class="o">=</span> <span class="m">5</span>.00,
+<span class="linenos">35</span>   <span class="nv">restraintmask</span><span class="o">=</span><span class="s1">&#39;@CA &amp; @P&#39;</span>,
 <span class="linenos">36</span>
-<span class="linenos">37</span><span class="w">   </span><span class="nv">icfe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">ifsc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="nv">clambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>%L%,<span class="w"> </span><span class="nv">scalpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.5,<span class="w"> </span><span class="nv">scbeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span>.0,
-<span class="linenos">38</span><span class="w">   </span><span class="nv">logdvdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,
-<span class="linenos">39</span><span class="w">   </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">40</span><span class="w">   </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">41</span><span class="w">   </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">42</span><span class="w">   </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">43</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">44</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">45</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">46</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">37</span>   <span class="nv">icfe</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">ifsc</span> <span class="o">=</span> <span class="m">1</span>, <span class="nv">clambda</span> <span class="o">=</span> %L%, <span class="nv">scalpha</span> <span class="o">=</span> <span class="m">0</span>.5, <span class="nv">scbeta</span> <span class="o">=</span> <span class="m">12</span>.0,
+<span class="linenos">38</span>   <span class="nv">logdvdl</span> <span class="o">=</span> <span class="m">0</span>,
+<span class="linenos">39</span>   <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">40</span>   <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">41</span>   <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">42</span>   <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">43</span>   ! <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">44</span>   ! <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">45</span>   ! <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">46</span>   ! <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
 <span class="linenos">47</span>
-<span class="linenos">48</span><span class="w"> </span>/
+<span class="linenos">48</span> /
 <span class="linenos">49</span>
-<span class="linenos">50</span><span class="w"> </span><span class="p">&amp;</span>ewald
-<span class="linenos">51</span><span class="w"> </span>/<span class="w"> </span>
+<span class="linenos">50</span> <span class="p">&amp;</span>ewald
+<span class="linenos">51</span> / 
 <span class="linenos">52</span>
-<span class="linenos">53</span><span class="w"> </span><span class="p">&amp;</span>wt
-<span class="linenos">54</span><span class="w">   </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;TEMP0&#39;</span>,
-<span class="linenos">55</span><span class="w">   </span><span class="nv">istep1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,<span class="w"> </span><span class="nv">istep2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">18000</span>,<span class="w">                                      </span>
-<span class="linenos">56</span><span class="w">   </span><span class="nv">value1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>.0,<span class="w"> </span><span class="nv">value2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span>.0
-<span class="linenos">57</span><span class="w"> </span>/
+<span class="linenos">53</span> <span class="p">&amp;</span>wt
+<span class="linenos">54</span>   <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;TEMP0&#39;</span>,
+<span class="linenos">55</span>   <span class="nv">istep1</span> <span class="o">=</span> <span class="m">0</span>, <span class="nv">istep2</span> <span class="o">=</span> <span class="m">18000</span>,                                      
+<span class="linenos">56</span>   <span class="nv">value1</span> <span class="o">=</span> <span class="m">50</span>.0, <span class="nv">value2</span> <span class="o">=</span> <span class="m">300</span>.0
+<span class="linenos">57</span> /
 <span class="linenos">58</span>
-<span class="linenos">59</span><span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nb">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;END&#39;</span>
-<span class="linenos">60</span><span class="w"> </span>/
+<span class="linenos">59</span> <span class="p">&amp;</span>wt <span class="nb">type</span> <span class="o">=</span> <span class="s1">&#39;END&#39;</span>
+<span class="linenos">60</span> /
 </pre></div>
 </div>
 </div>
-<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
+<input id="aa2d85a5-375c-4a92-a331-ce48af3694e4" name="eb2e667a-146b-49f3-964f-23ffa4aaf389" type="radio">
+</input><label class="sd-tab-label" for="aa2d85a5-375c-4a92-a331-ce48af3694e4">
 3. prod.tmpl</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>TI<span class="w"> </span>simulation
-<span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
-<span class="linenos"> 3</span><span class="w">   </span><span class="nv">imin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>minimization
-<span class="linenos"> 4</span><span class="w">   </span><span class="nv">irest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">        </span>!<span class="w"> </span><span class="nv">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>restart<span class="w"> </span>simulation
-<span class="linenos"> 5</span><span class="w">   </span><span class="nv">ntx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>,<span class="w">          </span>!<span class="w"> </span><span class="nv">5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>coordinates/velocities<span class="w"> </span>from<span class="w"> </span>file
-<span class="linenos"> 6</span><span class="w">   </span>
-<span class="linenos"> 7</span><span class="w">   </span>!<span class="w"> </span>Molecular<span class="w"> </span>Dynamics
-<span class="linenos"> 8</span><span class="w">   </span><span class="nv">nstlim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000000</span>,<span class="w">  </span>!<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>MD-steps
-<span class="linenos"> 9</span><span class="w">   </span><span class="nv">dt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.002,<span class="w">       </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>psec<span class="o">)</span>
-<span class="linenos">10</span><span class="w">   </span><span class="nv">ntb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">          </span>!<span class="w"> </span>NVT
-<span class="linenos">11</span><span class="w">   </span><span class="nv">ntc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>,<span class="w">          </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>SHAKE<span class="w"> </span><span class="o">(</span>bonds<span class="w"> </span>involving<span class="w"> </span>hydrogen<span class="w"> </span>constrainted<span class="o">)</span><span class="w"> </span>
-<span class="linenos">12</span><span class="w">   </span><span class="nv">ntf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>TI simulation
+<span class="linenos"> 2</span> <span class="p">&amp;</span>cntrl
+<span class="linenos"> 3</span>   <span class="nv">imin</span> <span class="o">=</span> <span class="m">0</span>,         ! Turn on minimization
+<span class="linenos"> 4</span>   <span class="nv">irest</span> <span class="o">=</span> <span class="m">1</span>,        ! <span class="nv">1</span> <span class="o">=</span> restart simulation
+<span class="linenos"> 5</span>   <span class="nv">ntx</span> <span class="o">=</span> <span class="m">5</span>,          ! <span class="nv">5</span> <span class="o">=</span> <span class="nb">read</span> coordinates/velocities from file
+<span class="linenos"> 6</span>   
+<span class="linenos"> 7</span>   ! Molecular Dynamics
+<span class="linenos"> 8</span>   <span class="nv">nstlim</span> <span class="o">=</span> <span class="m">1000000</span>,  ! Number of MD-steps
+<span class="linenos"> 9</span>   <span class="nv">dt</span> <span class="o">=</span> <span class="m">0</span>.002,       ! <span class="nb">time</span> step <span class="o">(</span>psec<span class="o">)</span>
+<span class="linenos">10</span>   <span class="nv">ntb</span> <span class="o">=</span> <span class="m">1</span>,          ! NVT
+<span class="linenos">11</span>   <span class="nv">ntc</span> <span class="o">=</span> <span class="m">2</span>,          ! Turn on SHAKE <span class="o">(</span>bonds involving hydrogen constrainted<span class="o">)</span> 
+<span class="linenos">12</span>   <span class="nv">ntf</span> <span class="o">=</span> <span class="m">1</span>,
 <span class="linenos">13</span>
-<span class="linenos">14</span><span class="w">   </span>!<span class="w"> </span>Temperature<span class="w"> </span>Regulation
-<span class="linenos">15</span><span class="w">   </span><span class="nv">ntt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>,<span class="w">               </span>!<span class="w"> </span><span class="nv">0</span><span class="o">=</span>NVE,1<span class="o">=</span>NVT,2<span class="o">=</span>Anderson,3<span class="o">=</span>Langevin
-<span class="linenos">16</span><span class="w">   </span><span class="nv">temp0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span>.0,<span class="w">         </span>!<span class="w"> </span>Reference<span class="w"> </span>temperature
-<span class="linenos">17</span><span class="w">   </span><span class="nv">gamma_ln</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>.0,<span class="w">        </span>!<span class="w"> </span>Collision<span class="w"> </span>frequency<span class="w"> </span><span class="k">in</span><span class="w"> </span>ps^-1
-<span class="linenos">18</span><span class="w">   </span><span class="nv">ig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>-1,<span class="w">               </span>!<span class="w"> </span>Random<span class="w"> </span>initial<span class="w"> </span>velocities
-<span class="linenos">19</span><span class="w">   </span>
-<span class="linenos">20</span><span class="w">   </span>!<span class="w"> </span>Outputs
-<span class="linenos">21</span><span class="w">   </span><span class="nv">ntwx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500000</span>,<span class="w">          </span>!<span class="w"> </span>Write<span class="w"> </span>coordinates<span class="w"> </span>to<span class="w"> </span>.nc<span class="w"> </span>
-<span class="linenos">22</span><span class="w">   </span><span class="nv">ntpr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500000</span>,<span class="w">          </span>!<span class="w"> </span>Print<span class="w"> </span>energy<span class="w"> </span>every<span class="w"> </span>ntpr<span class="w"> </span>steps
-<span class="linenos">23</span><span class="w">   </span><span class="nv">ntwr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2500000</span>,<span class="w">          </span>!<span class="w"> </span>Write<span class="w"> </span>rsrt<span class="w"> </span>every<span class="w"> </span>ntwr<span class="w"> </span>steps
-<span class="linenos">24</span><span class="w">   </span><span class="nv">ntwe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">250000</span>,<span class="w">           </span>!<span class="w"> </span>Write<span class="w"> </span>energy/temp<span class="w"> </span>to<span class="w"> </span>mden
-<span class="linenos">25</span><span class="w">   </span><span class="nv">ioutfm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">            </span>!<span class="w"> </span>Format<span class="w"> </span>of<span class="w"> </span>coordinate/v<span class="w"> </span>
-<span class="linenos">26</span><span class="w">   </span><span class="nv">iwrap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">             </span>!<span class="w"> </span>PBC
+<span class="linenos">14</span>   ! Temperature Regulation
+<span class="linenos">15</span>   <span class="nv">ntt</span> <span class="o">=</span> <span class="m">3</span>,               ! <span class="nv">0</span><span class="o">=</span>NVE,1<span class="o">=</span>NVT,2<span class="o">=</span>Anderson,3<span class="o">=</span>Langevin
+<span class="linenos">16</span>   <span class="nv">temp0</span> <span class="o">=</span> <span class="m">300</span>.0,         ! Reference temperature
+<span class="linenos">17</span>   <span class="nv">gamma_ln</span> <span class="o">=</span> <span class="m">1</span>.0,        ! Collision frequency <span class="k">in</span> ps^-1
+<span class="linenos">18</span>   <span class="nv">ig</span> <span class="o">=</span> -1,               ! Random initial velocities
+<span class="linenos">19</span>   
+<span class="linenos">20</span>   ! Outputs
+<span class="linenos">21</span>   <span class="nv">ntwx</span> <span class="o">=</span> <span class="m">500000</span>,          ! Write coordinates to .nc 
+<span class="linenos">22</span>   <span class="nv">ntpr</span> <span class="o">=</span> <span class="m">500000</span>,          ! Print energy every ntpr steps
+<span class="linenos">23</span>   <span class="nv">ntwr</span> <span class="o">=</span> <span class="m">2500000</span>,          ! Write rsrt every ntwr steps
+<span class="linenos">24</span>   <span class="nv">ntwe</span> <span class="o">=</span> <span class="m">250000</span>,           ! Write energy/temp to mden
+<span class="linenos">25</span>   <span class="nv">ioutfm</span> <span class="o">=</span> <span class="m">1</span>,            ! Format of coordinate/v 
+<span class="linenos">26</span>   <span class="nv">iwrap</span> <span class="o">=</span> <span class="m">1</span>,             ! PBC
 <span class="linenos">27</span>
-<span class="linenos">28</span><span class="w">   </span>!<span class="w"> </span>Amber<span class="w"> </span>TI<span class="w"> </span>Free<span class="w"> </span>Energy<span class="w"> </span>Calculation<span class="w"> </span><span class="o">(</span>pmemd/sander<span class="o">)</span>
-<span class="linenos">29</span><span class="w">   </span><span class="nv">icfe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">              </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>TI<span class="w"> </span>estimates
-<span class="linenos">30</span><span class="w">   </span><span class="nv">ifsc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">		  </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>Softcore-Potential<span class="w"> </span>electrostatics
-<span class="linenos">31</span><span class="w">   </span><span class="nv">clambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>%L%,<span class="w">         </span>!<span class="w"> </span>lambda<span class="w"> </span>value<span class="w"> </span><span class="o">(</span><span class="nv">0</span><span class="o">=</span>unperturb<span class="w"> </span>Hamiltonian<span class="o">)</span>
-<span class="linenos">32</span><span class="w">   </span><span class="nv">scalpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.5,<span class="w">         </span>!<span class="w"> </span>alpha<span class="w"> </span>parameter<span class="w"> </span><span class="o">(</span><span class="nv">default</span><span class="o">=</span><span class="m">0</span>.5<span class="o">)</span>
-<span class="linenos">33</span><span class="w">   </span><span class="nv">scbeta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span>.0,<span class="w">         </span>!<span class="w"> </span>beta<span class="w"> </span>parameter<span class="w"> </span><span class="o">(</span>defulat<span class="o">(</span><span class="m">12</span><span class="w"> </span>Angstrom^2<span class="o">)</span>
-<span class="linenos">34</span><span class="w">   </span><span class="nv">logdvdl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">           </span>!<span class="w"> </span>Print<span class="w"> </span>pV/vlamba<span class="w"> </span><span class="k">for</span><span class="w"> </span>postprocessing
+<span class="linenos">28</span>   ! Amber TI Free Energy Calculation <span class="o">(</span>pmemd/sander<span class="o">)</span>
+<span class="linenos">29</span>   <span class="nv">icfe</span> <span class="o">=</span> <span class="m">1</span>,              ! Turn on TI estimates
+<span class="linenos">30</span>   <span class="nv">ifsc</span> <span class="o">=</span> <span class="m">1</span>,		  ! Turn on Softcore-Potential electrostatics
+<span class="linenos">31</span>   <span class="nv">clambda</span> <span class="o">=</span> %L%,         ! lambda value <span class="o">(</span><span class="nv">0</span><span class="o">=</span>unperturb Hamiltonian<span class="o">)</span>
+<span class="linenos">32</span>   <span class="nv">scalpha</span> <span class="o">=</span> <span class="m">0</span>.5,         ! alpha parameter <span class="o">(</span><span class="nv">default</span><span class="o">=</span><span class="m">0</span>.5<span class="o">)</span>
+<span class="linenos">33</span>   <span class="nv">scbeta</span> <span class="o">=</span> <span class="m">12</span>.0,         ! beta parameter <span class="o">(</span>defulat<span class="o">(</span><span class="m">12</span> Angstrom^2<span class="o">)</span>
+<span class="linenos">34</span>   <span class="nv">logdvdl</span> <span class="o">=</span> <span class="m">1</span>,           ! Print pV/vlamba <span class="k">for</span> postprocessing
 <span class="linenos">35</span>
-<span class="linenos">36</span><span class="w">   </span>!<span class="w"> </span>Output<span class="w"> </span>files<span class="w"> </span><span class="k">for</span><span class="w"> </span>MBAR<span class="w"> </span>post-processing
-<span class="linenos">37</span><span class="w">   </span><span class="nv">ifmbar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>,<span class="w">            </span>!<span class="w"> </span>Print<span class="w"> </span>potential<span class="w"> </span>E<span class="w"> </span><span class="k">for</span><span class="w"> </span>MBAR
-<span class="linenos">38</span><span class="w">   </span><span class="nv">mbar_states</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">11</span>,<span class="w">      </span>!<span class="w"> </span>Number<span class="w"> </span>of<span class="w"> </span>lambda<span class="w"> </span>windows
-<span class="linenos">39</span><span class="w">   </span>!<span class="w"> </span>Lambda<span class="w"> </span>Windows<span class="w"> </span>simulated
-<span class="linenos">40</span><span class="w">   </span><span class="nv">mbar_lambda</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,
+<span class="linenos">36</span>   ! Output files <span class="k">for</span> MBAR post-processing
+<span class="linenos">37</span>   <span class="nv">ifmbar</span> <span class="o">=</span> <span class="m">1</span>,            ! Print potential E <span class="k">for</span> MBAR
+<span class="linenos">38</span>   <span class="nv">mbar_states</span> <span class="o">=</span> <span class="m">11</span>,      ! Number of lambda windows
+<span class="linenos">39</span>   ! Lambda Windows simulated
+<span class="linenos">40</span>   <span class="nv">mbar_lambda</span> <span class="o">=</span> <span class="m">0</span>.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,
 <span class="linenos">41</span>
-<span class="linenos">42</span><span class="w">   </span>!<span class="w"> </span>TI<span class="w"> </span>Amber<span class="w"> </span>mask<span class="w"> </span>selection
-<span class="linenos">43</span><span class="w">   </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">44</span><span class="w">   </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">45</span><span class="w">   </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
-<span class="linenos">46</span><span class="w">   </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
-<span class="linenos">47</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">48</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
-<span class="linenos">49</span><span class="w">   </span>!<span class="w"> </span><span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">50</span><span class="w">   </span>!<span class="w"> </span><span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
-<span class="linenos">51</span><span class="w"> </span>/
+<span class="linenos">42</span>   ! TI Amber mask selection
+<span class="linenos">43</span>   <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">44</span>   <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">45</span>   <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;@14195,14196,14197,14198,14199,14200,14201,14202,14203,14204,14205,14206,14207,14208,14209,14210,14211,14212,14213,14214,14215,14216&#39;</span>,
+<span class="linenos">46</span>   <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;@22497,22498,22499,22500,22501,22502,22503,22504,22505,22506&#39;</span>,
+<span class="linenos">47</span>   ! <span class="nv">timask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">48</span>   ! <span class="nv">scmask1</span><span class="o">=</span><span class="s1">&#39;:865&#39;</span>,
+<span class="linenos">49</span>   ! <span class="nv">timask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">50</span>   ! <span class="nv">scmask2</span><span class="o">=</span><span class="s1">&#39;:2230&#39;</span>,
+<span class="linenos">51</span> /
 <span class="linenos">52</span>
-<span class="linenos">53</span><span class="w"> </span><span class="p">&amp;</span>ewald
-<span class="linenos">54</span><span class="w"> </span>/<span class="w"> </span>
+<span class="linenos">53</span> <span class="p">&amp;</span>ewald
+<span class="linenos">54</span> / 
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<ol class="arabic simple" start="3">
+<ol class="simple">
 <li><p>Prepare lambda directories by running <code class="docutils literal notranslate"><span class="pre">./setup.sh</span></code></p></li>
 <li><p>Run independent simulations with:</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">run_protein.slurm</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">run_complex.slurm</span></code></p></li>
 </ol>
@@ -942,7 +578,7 @@ const thebe_selector_output = ".output, .cell_output"
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./notebooks/notes/alchemical"
         },
         predefinedOutput: true
@@ -950,71 +586,37 @@ const thebe_selector_output = ".output, .cell_output"
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
               
-              
-              
-              
-                <footer class="prev-next-footer">
-                  
-<div class="prev-next-area">
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
 </div>
-                </footer>
               
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+          </main>
+          
 
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-amber-files-for-pmemd">Setup Amber Files for <code class="docutils literal notranslate"><span class="pre">pmemd</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code">Code</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-setup">Free Energy Setup</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-          </footer>
-        
-      </main>
+      </div>
     </div>
-  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
-
-  <footer class="bd-footer">
-<div class="bd-footer__inner bd-page-width">
-  
-  
-  
-    <div class="footer-items__end">
-      
-        <div class="footer-item">
-<p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
-</p></div>
-      
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright .<br>
+</p>
     </div>
-  
-</div>
-
-  </footer>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
   </body>
 </html>
