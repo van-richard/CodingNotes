@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -55,6 +54,8 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/custom.js"></script>
+    <script src="../../../_static/bootstrap.js"></script>
+    <script src="../../../_static/pydata-sphinx-theme.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -66,10 +67,9 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/notes/alchemical/workflow.html" />
+    <link rel="shortcut icon" href="../../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="QM/MM Simulations" href="../basics-qmmm.html" />
-    <link rel="prev" title="Alchemical States" href="potentials.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
  </a>
 </li>
 
-<li class="toctree-l1 current active nav-item">
+<li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../../simulation/00overview.html">
   Tutorials
  </a>
@@ -154,97 +154,7 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../simulation/md.html">
-   Classical MD
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../simulation/qmmm.html">
-   QM/MM
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../simulation/analysis.html">
-   Analysis
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="simple">
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../00overview.html">
-   General Notes
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../binding.html">
-     Binding Affinity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../modelling.html">
-     Simulation Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../basics-classical.html">
-     Classical Molecular Dynamics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fe-alchemical.html">
-     Alchemical Free Energy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="potentials.html">
-     Alchemical States
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Simulation Workflows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../basics-qmmm.html">
-     QM/MM Simulations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../fe-estimators.html">
-     Free Energy Estimators
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
+    
   </div>
 </nav>
               </div>
@@ -325,8 +235,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">parmed</span></code> to remove redundant bonding terms for more efficient calculation (<code class="docutils literal notranslate"><span class="pre">timerge</span></code>)</p></li>
 </ul>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="3f24f6db-818d-42f4-a584-367de440c95c" name="91f84c69-a2a7-41ad-b11f-793d2710db87" type="radio">
-</input><label class="sd-tab-label" for="3f24f6db-818d-42f4-a584-367de440c95c">
+<input checked="checked" id="e9161ead-69b8-4eaa-be2c-cef892c274ef" name="b5b7766f-eef0-470c-bacf-92325bb84723" type="radio">
+</input><label class="sd-tab-label" for="e9161ead-69b8-4eaa-be2c-cef892c274ef">
 1. Preparing PDB files</label><div class="sd-tab-content docutils">
 <p>To get an idea of the number of atoms and charge of wildtype vs mutant, I create an <code class="docutils literal notranslate"><span class="pre">init</span></code> folder, run <code class="docutils literal notranslate"><span class="pre">tleap</span></code>, and grab some information.</p>
 <ol class="simple">
@@ -345,8 +255,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ol>
 </div>
-<input id="eb3eadbc-d241-43fa-a0a0-631a2b09cfbe" name="91f84c69-a2a7-41ad-b11f-793d2710db87" type="radio">
-</input><label class="sd-tab-label" for="eb3eadbc-d241-43fa-a0a0-631a2b09cfbe">
+<input id="e32040d0-9cc0-439f-8304-493beb9d5f47" name="b5b7766f-eef0-470c-bacf-92325bb84723" type="radio">
+</input><label class="sd-tab-label" for="e32040d0-9cc0-439f-8304-493beb9d5f47">
 2. Split components of system </label><div class="sd-tab-content docutils">
 <p>Now that we’re familiar with the protein systems we’re simulating, make PDBs containing the components for our alchemical calculation</p>
 <ul class="simple">
@@ -368,8 +278,8 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ol>
 </div>
-<input id="a9092600-317d-436c-9c3a-dd010f8a791c" name="91f84c69-a2a7-41ad-b11f-793d2710db87" type="radio">
-</input><label class="sd-tab-label" for="a9092600-317d-436c-9c3a-dd010f8a791c">
+<input id="6eceafc5-1613-4a4e-ae22-6add9f1c3a7b" name="b5b7766f-eef0-470c-bacf-92325bb84723" type="radio">
+</input><label class="sd-tab-label" for="6eceafc5-1613-4a4e-ae22-6add9f1c3a7b">
 3. Files for Alchemical</label><div class="sd-tab-content docutils">
 <p>Preparing the topology and coordinate files for alchemical simulation</p>
 <ol class="simple">
@@ -392,8 +302,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="dropdown admonition">
 <p class="admonition-title">Scripts</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="e4363e40-d201-41c6-9e6b-cccb4e70616e" name="7474a5b6-2a23-4504-945a-b140b44322f9" type="radio">
-</input><label class="sd-tab-label" for="e4363e40-d201-41c6-9e6b-cccb4e70616e">
+<input checked="checked" id="163070bb-3330-4be5-bd0a-8716bad8cb46" name="02fdb4bb-ef0e-4a2b-8158-bbf9ca35a25d" type="radio">
+</input><label class="sd-tab-label" for="163070bb-3330-4be5-bd0a-8716bad8cb46">
 1_leap.sh</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/sh</span>
 <span class="linenos"> 2</span>
@@ -443,8 +353,8 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<input id="74191e6c-6f0e-4f9f-9744-59856fdb7d44" name="7474a5b6-2a23-4504-945a-b140b44322f9" type="radio">
-</input><label class="sd-tab-label" for="74191e6c-6f0e-4f9f-9744-59856fdb7d44">
+<input id="e8253adc-20fb-4b1c-89dc-4e60bc350a5f" name="02fdb4bb-ef0e-4a2b-8158-bbf9ca35a25d" type="radio">
+</input><label class="sd-tab-label" for="e8253adc-20fb-4b1c-89dc-4e60bc350a5f">
 2_eliminate_duplicate.sh</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
 <span class="linenos"> 2</span>
@@ -505,8 +415,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="dropdown admonition">
 <p class="admonition-title">Templates for MD inputs</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="448c7a6f-a0f9-4b6f-a8b8-fabc2d610668" name="5502b1b4-dc0e-4471-b3a0-da5802f5f24d" type="radio">
-</input><label class="sd-tab-label" for="448c7a6f-a0f9-4b6f-a8b8-fabc2d610668">
+<input checked="checked" id="d317169c-8d43-40b7-b878-b5f26e211731" name="d4e5c8ec-75a7-46d0-ab30-64bc4dc40a1f" type="radio">
+</input><label class="sd-tab-label" for="d317169c-8d43-40b7-b878-b5f26e211731">
 1. min.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>minimisation
 <span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
@@ -536,8 +446,8 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<input id="043e49af-cf91-498c-875c-6d5f48a3c7a0" name="5502b1b4-dc0e-4471-b3a0-da5802f5f24d" type="radio">
-</input><label class="sd-tab-label" for="043e49af-cf91-498c-875c-6d5f48a3c7a0">
+<input id="dc46cab1-0b42-4416-8b97-f6c2565dae77" name="d4e5c8ec-75a7-46d0-ab30-64bc4dc40a1f" type="radio">
+</input><label class="sd-tab-label" for="dc46cab1-0b42-4416-8b97-f6c2565dae77">
 2. heat.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>heating
 <span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
@@ -602,8 +512,8 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<input id="598c6bfb-2b93-45bf-a56e-e65dd2143550" name="5502b1b4-dc0e-4471-b3a0-da5802f5f24d" type="radio">
-</input><label class="sd-tab-label" for="598c6bfb-2b93-45bf-a56e-e65dd2143550">
+<input id="5b12ef2a-9ccc-4780-af38-07f2b48c1817" name="d4e5c8ec-75a7-46d0-ab30-64bc4dc40a1f" type="radio">
+</input><label class="sd-tab-label" for="5b12ef2a-9ccc-4780-af38-07f2b48c1817">
 3. prod.tmpl</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>TI<span class="w"> </span>simulation
 <span class="linenos"> 2</span><span class="w"> </span><span class="p">&amp;</span>cntrl
@@ -701,20 +611,6 @@ const thebe_selector_output = ".output, .cell_output"
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="potentials.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Alchemical States</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../basics-qmmm.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QM/MM Simulations</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
               
           </main>

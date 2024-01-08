@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/css/micromodal.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/_static/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -53,7 +53,9 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script src="../../../_static/js/custom.js"></script>
+    <script src="../../../_static/custom.js"></script>
+    <script src="../../../_static/bootstrap.js"></script>
+    <script src="../../../_static/pydata-sphinx-theme.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -65,10 +67,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/programming/bash/overview.html" />
+    <link rel="shortcut icon" href="../../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Scripting" href="scripting.html" />
-    <link rel="prev" title="Briefly, Molecular Dynamics" href="../../quickstart/BasicMD.html" />
+    <link rel="prev" title="Example Code" href="../00overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,26 +115,14 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 
 <li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
-  bash Shell
+ <a class="reference internal nav-link" href="../00overview.html">
+  Example Code
  </a>
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../simulation/md.html">
-  Classical MD
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../simulation/qmmm.html">
-  QM/MM
- </a>
-</li>
-
-<li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../notes/binding.html">
-  Binding Affinity
+ <a class="reference internal nav-link" href="../../simulation/00overview.html">
+  Tutorials
  </a>
 </li>
 
@@ -145,30 +136,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-        <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/OMGITSvanADIUM" rel="noopener" target="_blank" title="Twitter"><span><i class="fa-brands fa-twitter"></i></span>
-            <label class="sr-only">Twitter</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/van-richard" rel="noopener" target="_blank" title="GitHub"><span><i class="fa-brands fa-github"></i></span>
-            <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://linkedin.com/van-richard" rel="noopener" target="_blank" title="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span>
-            <label class="sr-only">LinkedIn</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://scholar.google.com/{citations?user=YQmlIIwAAAAJ&hl=en" rel="noopener" target="_blank" title="Google"><span><i class="fa-brands fa-google"></i></span>
-            <label class="sr-only">Google</label></a>
-        </li>
       </ul>
-      </div>
-      
-      <div class="navbar-end-item">
-        <form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
       </div>
       
     </div>
@@ -185,74 +153,51 @@ const thebe_selector_output = ".output, .cell_output"
             <div class="col-12 col-md-3 bd-sidebar">
               <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   <div class="bd-toc-item active">
-    <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="scripting.html">
-   Scripting
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   bash Shell
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="startup.html">
-   Start-Up Files
+  <a class="reference internal" href="../vi/overview.html">
+   Text Editing with Vi/Vim
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../hpc/overview.html">
-   SLURM &amp; ssh
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/overview.html">
-   Github &amp; git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/git.html">
-   git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/branch.html">
-   Branching
-  </a>
- </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../python/overview.html">
    Python &amp; Conda
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/python.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/conda.html">
-   Conda
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/installconda.html">
-   Installing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/condaenv.html">
-   Conda Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/myenv.html">
-   My Recommended Conda Setup
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../python/jupyter.html">
-   Jupyter Notebooks
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/python.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/conda.html">
+     Conda
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/condaenv.html">
+     Conda Environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/jupyter.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -577,11 +522,11 @@ const thebe_selector_output = ".output, .cell_output"
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../../quickstart/BasicMD.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../00overview.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Briefly, Molecular Dynamics</p>
+            <p class="prev-next-title">Example Code</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="scripting.html" title="next page">

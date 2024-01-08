@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -55,6 +54,8 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/custom.js"></script>
+    <script src="../../_static/bootstrap.js"></script>
+    <script src="../../_static/pydata-sphinx-theme.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -66,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/quickstart/03Supercomputer.html" />
+    <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Python" href="04PythonConda.html" />
@@ -395,15 +397,15 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>What is the <em>hostname</em>?<a class="headerlink" href="#what-is-the-hostname" title="Permalink to this headline">#</a></h2>
 <p>It depends on the computing center. In Oklahoma, you can access Oscer (<code class="docutils literal notranslate"><span class="pre">schooner.oscer.ou.edu</span></code>) or Pete (<code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code>) by:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="5a812b51-68a5-4be4-884f-b61fc0998213" name="d0b321dd-384c-4370-a91f-ca440578d690" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="5a812b51-68a5-4be4-884f-b61fc0998213">
+<input checked="checked" id="54c609e2-0769-4fc4-994c-3ef7f8c44602" name="a2231a1b-53fa-4731-b65a-40452eda79b6" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="54c609e2-0769-4fc4-994c-3ef7f8c44602">
 Oscer/Schooner</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@schooner.oscer.ou.edu<span class="w"> </span>
 </pre></div>
 </div>
 </div>
-<input id="1c502691-5887-4d14-a06d-231684dfe1cf" name="d0b321dd-384c-4370-a91f-ca440578d690" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="1c502691-5887-4d14-a06d-231684dfe1cf">
+<input id="3a2fdcf3-e2d8-4722-b91d-abb1fb4b7f3a" name="a2231a1b-53fa-4731-b65a-40452eda79b6" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="3a2fdcf3-e2d8-4722-b91d-abb1fb4b7f3a">
 Pete</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@pete.hpc.okstate.edu
 </pre></div>
@@ -416,15 +418,15 @@ Pete</label><div class="sd-tab-content docutils">
 <p>Try logging into one of the supercomputer. Change the <code class="docutils literal notranslate"><span class="pre">hostname</span></code> to the <code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code> or ``schooner.oscer.ou.edu`.</p>
 <p>My username is <code class="docutils literal notranslate"><span class="pre">van</span></code>, so logging in looks like this:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="f8c339fb-1f8e-43ac-9306-f16ddb149172" name="5d2629ca-6cf3-4033-8eb6-f04a17900957" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key1" for="f8c339fb-1f8e-43ac-9306-f16ddb149172">
+<input checked="checked" id="88fd067a-451c-4108-bc4e-1214b953ef5d" name="f69a03d0-1130-43ad-91e8-ac2b6462826c" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="88fd067a-451c-4108-bc4e-1214b953ef5d">
 Oscer/Schooner</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@schooner.oscer.ou.edu<span class="w"> </span>
 </pre></div>
 </div>
 </div>
-<input id="266b8a0c-334c-4e74-b91d-65c799631358" name="5d2629ca-6cf3-4033-8eb6-f04a17900957" type="radio">
-</input><label class="sd-tab-label" data-sync-id="key2" for="266b8a0c-334c-4e74-b91d-65c799631358">
+<input id="7dec67c5-34e8-4965-a322-c4098a02aecc" name="f69a03d0-1130-43ad-91e8-ac2b6462826c" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="7dec67c5-34e8-4965-a322-c4098a02aecc">
 Pete</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu
 </pre></div>
@@ -483,8 +485,8 @@ Pete</label><div class="sd-tab-content docutils">
 <h3>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)<a class="headerlink" href="#directives-sbatch" title="Permalink to this headline">#</a></h3>
 <p>The way that Slurm determines how to allocate your jobs to the cluster (<em>i.e. across how many compute nodes, with how many CPUs, for how long etc</em>) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>. Common types of jobs are:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="d96d88de-dd1b-4a93-b8aa-a9ab1515df01" name="b063d42b-d641-4686-befb-47bbab59c57a" type="radio">
-</input><label class="sd-tab-label" for="d96d88de-dd1b-4a93-b8aa-a9ab1515df01">
+<input checked="checked" id="893a36a0-87a4-4856-8e14-aa184f5aca84" name="f5476f84-6ca2-4906-96a3-a158f64ad0e7" type="radio">
+</input><label class="sd-tab-label" for="893a36a0-87a4-4856-8e14-aa184f5aca84">
 CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=PARTITION</span>
@@ -499,8 +501,8 @@ CPU Jobs</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="233a5e7a-0b33-404b-8a6a-64d5ee450ee9" name="b063d42b-d641-4686-befb-47bbab59c57a" type="radio">
-</input><label class="sd-tab-label" for="233a5e7a-0b33-404b-8a6a-64d5ee450ee9">
+<input id="6f232971-3ce6-4b79-8bff-66bea0787357" name="f5476f84-6ca2-4906-96a3-a158f64ad0e7" type="radio">
+</input><label class="sd-tab-label" for="6f232971-3ce6-4b79-8bff-66bea0787357">
 GPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=GPU_PARTITION</span>
@@ -516,8 +518,8 @@ GPU Jobs</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="3d39ec4f-73b0-4d21-901b-b7b7df37df46" name="b063d42b-d641-4686-befb-47bbab59c57a" type="radio">
-</input><label class="sd-tab-label" for="3d39ec4f-73b0-4d21-901b-b7b7df37df46">
+<input id="27665163-b524-49a0-83ad-8016ee5628a2" name="f5476f84-6ca2-4906-96a3-a158f64ad0e7" type="radio">
+</input><label class="sd-tab-label" for="27665163-b524-49a0-83ad-8016ee5628a2">
 Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">##!/bin/bash</span>
 <span class="c1">##SBATCH --partition=GPU_PARTITION</span>
@@ -537,22 +539,22 @@ Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 </div>
 <p>To submit a <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> job use <span class="xref std std-term">sbatch</span>. Alternatively, you can cancel it with <span class="xref std std-term">scancel</span>.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="b7998ed8-85b5-4264-bbee-d3cbf229478b" name="d7b7764b-241e-4a3d-b02f-1a953b58a41a" type="radio">
-</input><label class="sd-tab-label" for="b7998ed8-85b5-4264-bbee-d3cbf229478b">
+<input checked="checked" id="5325584b-084b-45da-9846-ce78a0dcb746" name="13f58182-1a07-46b9-b327-d43ec438f178" type="radio">
+</input><label class="sd-tab-label" for="5325584b-084b-45da-9846-ce78a0dcb746">
 Submit a Job</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>job.slurm<span class="w">   </span><span class="c1"># This will print a JOB_ID</span>
 </pre></div>
 </div>
 </div>
-<input id="5f5f2c0f-78d8-49bf-9872-e44e30c6d8a5" name="d7b7764b-241e-4a3d-b02f-1a953b58a41a" type="radio">
-</input><label class="sd-tab-label" for="5f5f2c0f-78d8-49bf-9872-e44e30c6d8a5">
+<input id="09706d24-754b-4931-806e-5e65626123f2" name="13f58182-1a07-46b9-b327-d43ec438f178" type="radio">
+</input><label class="sd-tab-label" for="09706d24-754b-4931-806e-5e65626123f2">
 Cancel a Job</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel<span class="w"> </span>JOB_ID
 </pre></div>
 </div>
 </div>
-<input id="834e35a1-751b-4c33-badc-2457189f4a63" name="d7b7764b-241e-4a3d-b02f-1a953b58a41a" type="radio">
-</input><label class="sd-tab-label" for="834e35a1-751b-4c33-badc-2457189f4a63">
+<input id="20151db6-812f-451e-8fde-a17f1029e3a8" name="13f58182-1a07-46b9-b327-d43ec438f178" type="radio">
+</input><label class="sd-tab-label" for="20151db6-812f-451e-8fde-a17f1029e3a8">
 Check jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue<span class="w">             </span><span class="c1"># All jobs queue</span>
 squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w"> </span><span class="c1"># your usernameUSERNAME queue</span>

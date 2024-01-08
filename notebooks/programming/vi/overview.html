@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Jupyter Notebooks &#8212; Coding Notes</title>
+    <title>Text Editing with Vi/Vim &#8212; Coding Notes</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -66,12 +66,12 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/programming/python/jupyter.html" />
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/programming/vi/overview.html" />
     <link rel="shortcut icon" href="../../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tutorials" href="../../simulation/00overview.html" />
-    <link rel="prev" title="Conda Environments" href="condaenv.html" />
+    <link rel="next" title="Python &amp; Conda" href="../python/overview.html" />
+    <link rel="prev" title="Start-Up Files" href="../bash/startup.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -162,38 +162,38 @@ const thebe_selector_output = ".output, .cell_output"
    bash Shell
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../vi/overview.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Text Editing with Vi/Vim
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../python/overview.html">
    Python &amp; Conda
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="python.html">
+    <a class="reference internal" href="../python/python.html">
      Overview
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="conda.html">
+    <a class="reference internal" href="../python/conda.html">
      Conda
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="condaenv.html">
+    <a class="reference internal" href="../python/condaenv.html">
      Conda Environments
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../python/jupyter.html">
      Jupyter Notebooks
     </a>
    </li>
@@ -222,14 +222,14 @@ const thebe_selector_output = ".output, .cell_output"
 
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-kernals">
-   What are Kernals?
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Text Editing with Vi/Vim
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#switch-conda-environments">
-   Switch Conda Environments
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview-of-some-commands">
+   Overview of Some Commands
   </a>
  </li>
 </ul>
@@ -253,31 +253,53 @@ const thebe_selector_output = ".output, .cell_output"
               
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="jupyter-notebooks">
-<h1>Jupyter Notebooks<a class="headerlink" href="#jupyter-notebooks" title="Permalink to this headline">#</a></h1>
-<p>The Jupyter Notebook App is a server-client application that allows editing and running notebook documents via a web browser. The Jupyter Notebook App can be executed on a local desktop requiring no internet access (as described in this document) or can be installed on a remote server and accessed through the internet.</p>
-<p>In addition to displaying/editing/running notebook documents, the Jupyter Notebook App has a “Dashboard” (Notebook Dashboard), a “control panel” showing local files and allowing to open notebook documents or shutting down their kernels.</p>
-<section id="what-are-kernals">
-<h2>What are Kernals?<a class="headerlink" href="#what-are-kernals" title="Permalink to this headline">#</a></h2>
-<p>A notebook kernel is a “computational engine” that executes the code contained in a Notebook document. The ipython kernel, referenced in this guide, executes python code. Kernels for many other languages exist (official kernels).</p>
-<p>When you open a Notebook document, the associated kernel is automatically launched. When the notebook is executed (either cell-by-cell or with menu Cell -&gt; Run All), the kernel performs the computation and produces the results. Depending on the type of computations, the kernel may consume significant CPU and RAM. Note that the RAM is not released until the kernel is shut-down.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="text-editing-with-vi-vim">
+<h1>Text Editing with Vi/Vim<a class="headerlink" href="#text-editing-with-vi-vim" title="Permalink to this headline">#</a></h1>
+<p>Vi/Vim is a text editor you can use in your terminal. Unfortunately, this program isn’t like the ones you may be familiar with like Notepad, TextEdit, etc… There are a lot of key bindings you will need to remember, but once you’re use to it, you’ll realize this text editor designed for speed and increased productivity. The numerous keybindings will be your best friend for speedy navigation to specific points in the file, and for fast editing.</p>
 </section>
-<section id="switch-conda-environments">
-<h2>Switch Conda Environments<a class="headerlink" href="#switch-conda-environments" title="Permalink to this headline">#</a></h2>
-<p>You can switch conda environments within <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> if you install <code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code> into your <code class="docutils literal notranslate"><span class="pre">base</span></code> conda environment.</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> package is for running notebooks.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code> package allows you to switch conda environments directly in the web browser.</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>jupyterlab<span class="w"> </span>nb_conda_kernels
+<section class="tex2jax_ignore mathjax_ignore" id="overview-of-some-commands">
+<h1>Overview of Some Commands<a class="headerlink" href="#overview-of-some-commands" title="Permalink to this headline">#</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>vi<span class="w"> </span>&lt;filename&gt;<span class="w">     </span><span class="c1"># Open &lt;filename&gt; in vim</span>
+<span class="w">    </span>:help<span class="w"> </span>&lt;topic&gt;<span class="w">     </span><span class="c1"># Open up built-in help docs about &lt;topic&gt; if any exists</span>
+<span class="w">    </span>:q<span class="w">                </span><span class="c1"># Quit vim</span>
+<span class="w">    </span>:w<span class="w">                </span><span class="c1"># Save current file</span>
+<span class="w">    </span>:wq<span class="w">               </span><span class="c1"># Save file and quit vim</span>
+<span class="w">    </span>ZZ<span class="w">                </span><span class="c1"># Save file and quit vim</span>
+<span class="w">    </span>:q!<span class="w">               </span><span class="c1"># Quit vim without saving file</span>
+<span class="w">                      </span><span class="c1"># ! *forces* :q to execute, hence quitting vim without saving</span>
+
+<span class="w">    </span>ZQ<span class="w">                </span><span class="c1"># Quit vim without saving file</span>
+<span class="w">    </span>:x<span class="w">                </span><span class="c1"># Save file(only when the file is modified) and quit vim</span>
+
+<span class="w">    </span>u<span class="w">                 </span><span class="c1"># Undo</span>
+<span class="w">    </span>CTRL+R<span class="w">            </span><span class="c1"># Redo</span>
+
+<span class="w">    </span>h<span class="w">                 </span><span class="c1"># Move left one character</span>
+<span class="w">    </span>j<span class="w">                 </span><span class="c1"># Move down one line</span>
+<span class="w">    </span>k<span class="w">                 </span><span class="c1"># Move up one line</span>
+<span class="w">    </span>l<span class="w">                 </span><span class="c1"># Move right one character</span>
+
+<span class="c1"># Searching in the text</span>
+<span class="w">    </span>/word<span class="w">             </span><span class="c1"># Highlights all occurrences of word after cursor</span>
+<span class="w">    </span>?word<span class="w">             </span><span class="c1"># Highlights all occurrences of word before cursor</span>
+<span class="w">    </span>n<span class="w">                 </span><span class="c1"># Moves cursor to next occurrence of word after search</span>
+<span class="w">    </span>N<span class="w">                 </span><span class="c1"># Moves cursor to previous occurrence of word</span>
+
+<span class="w">    </span>:%s/foo/bar/g<span class="w">     </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on every line in the file</span>
+<span class="w">    </span>:s/foo/bar/g<span class="w">      </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on the current line</span>
+<span class="w">    </span>:%s/<span class="se">\n</span>/<span class="se">\r</span>/g<span class="w">       </span><span class="c1"># Replace new line characters with new line characters</span>
+<span class="w">    </span>:<span class="s1">&#39;&lt;,&#39;</span>&gt;s/foo/bar/g<span class="w"> </span><span class="c1"># Change &#39;foo&#39; to &#39;bar on every line in the current visual</span>
+
+<span class="w">    </span><span class="c1"># Other characters for moving around</span>
+
+<span class="w">    </span>gg<span class="w">                </span><span class="c1"># Go to the top of the file</span>
+<span class="w">    </span>G<span class="w">                 </span><span class="c1"># Go to the bottom of the file</span>
+<span class="w">    </span>:NUM<span class="w">              </span><span class="c1"># Go to line number NUM (NUM is any number)</span>
+<span class="w">    </span>H<span class="w">                 </span><span class="c1"># Move to the top of the screen</span>
+<span class="w">    </span>M<span class="w">                 </span><span class="c1"># Move to the middle of the screen</span>
+<span class="w">    </span>L<span class="w">                 </span><span class="c1"># Move to the bottom of the screen</span>
 </pre></div>
 </div>
-<p>To run jupyter, type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lab
-</pre></div>
-</div>
-<p>This should open your brower automatically. If not, copy the first or second link.</p>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -293,7 +315,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./notebooks/programming/python"
+            path: "./notebooks/programming/vi"
         },
         predefinedOutput: true
     }
@@ -305,17 +327,17 @@ const thebe_selector_output = ".output, .cell_output"
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="condaenv.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../bash/startup.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Conda Environments</p>
+            <p class="prev-next-title">Start-Up Files</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../../simulation/00overview.html" title="next page">
+    <a class='right-next' id="next-link" href="../python/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorials</p>
+        <p class="prev-next-title">Python &amp; Conda</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

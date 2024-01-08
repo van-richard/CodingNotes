@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -55,6 +54,8 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/custom.js"></script>
+    <script src="../../_static/bootstrap.js"></script>
+    <script src="../../_static/pydata-sphinx-theme.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -66,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/quickstart/01terminal.html" />
+    <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Text Editors" href="02vim.html" />
@@ -413,8 +415,8 @@ The command line is a tool that everyone uses in computational research.</p>
 <h3>Terminal App<a class="headerlink" href="#terminal-app" title="Permalink to this headline">#</a></h3>
 <p>You can find the terminal by:</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="468f936b-f711-4a86-b6ff-81ca27a1c104" name="d645cc84-3aee-48f4-8fc6-80954fd3a2b1" type="radio">
-</input><label class="sd-tab-label" for="468f936b-f711-4a86-b6ff-81ca27a1c104">
+<input checked="checked" id="fbd09ed1-fad1-4e61-a5f3-4e97a027075e" name="7b3910ef-2d26-46b3-a19b-4bd830c04579" type="radio">
+</input><label class="sd-tab-label" for="fbd09ed1-fad1-4e61-a5f3-4e97a027075e">
 MacOS</label><div class="sd-tab-content docutils">
 <p>Manually looking through your files for it</p>
 <ul class="simple">
@@ -424,8 +426,8 @@ MacOS</label><div class="sd-tab-content docutils">
 <li><p>Press <code class="docutils literal notranslate"><span class="pre">cmd</span></code>+<code class="docutils literal notranslate"><span class="pre">[space]</span></code>. Then type <code class="docutils literal notranslate"><span class="pre">terminal</span></code>.</p></li>
 </ul>
 </div>
-<input id="bdaef758-0ec8-4976-b199-50d3f84118e9" name="d645cc84-3aee-48f4-8fc6-80954fd3a2b1" type="radio">
-</input><label class="sd-tab-label" for="bdaef758-0ec8-4976-b199-50d3f84118e9">
+<input id="350aae47-ecfc-4d4f-a2dc-4a0abfc6ef7c" name="7b3910ef-2d26-46b3-a19b-4bd830c04579" type="radio">
+</input><label class="sd-tab-label" for="350aae47-ecfc-4d4f-a2dc-4a0abfc6ef7c">
 Windows</label><div class="sd-tab-content docutils">
 <p>To use a Linux terminal on a Windows machine, you will need to install the Ubuntu application. This will differ if you’re using Windows 10 or Windows 11.</p>
 <p>I will write this up, but here is my reference.</p>
@@ -615,24 +617,24 @@ Windows</label><div class="sd-tab-content docutils">
 <h2>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">#</a></h2>
 <p>To copy files, you use the command, :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code>, where you include the file or folder you want to copy followed by the path you want the copy to go!</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="bc963866-8c1e-4099-9989-95332b9de473" name="ff02615e-af8c-4d98-88b9-50c44a6a7d67" type="radio">
-</input><label class="sd-tab-label" for="bc963866-8c1e-4099-9989-95332b9de473">
+<input checked="checked" id="a5c78be2-1c05-4faf-b642-190f4971e471" name="39695275-26f0-45a7-9006-205872f6e52f" type="radio">
+</input><label class="sd-tab-label" for="a5c78be2-1c05-4faf-b642-190f4971e471">
 General Notation</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
 </pre></div>
 </div>
 <p>For both <code class="docutils literal notranslate"><span class="pre">[source]</span></code> and <code class="docutils literal notranslate"><span class="pre">[destination]</span></code>, you can use the absolute or relative path</p>
 </div>
-<input id="c4b5ad9d-91d6-4483-ba8e-d4555bfc6419" name="ff02615e-af8c-4d98-88b9-50c44a6a7d67" type="radio">
-</input><label class="sd-tab-label" for="c4b5ad9d-91d6-4483-ba8e-d4555bfc6419">
+<input id="5df26b5a-2607-429f-aa59-61154b2bc4d2" name="39695275-26f0-45a7-9006-205872f6e52f" type="radio">
+</input><label class="sd-tab-label" for="5df26b5a-2607-429f-aa59-61154b2bc4d2">
 Copy Files</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>file.txt<span class="w"> </span>/path/to/destination/file-copy.txt
 </pre></div>
 </div>
 <p>Copying a file is straight forward, you can even give the file a new name at the destination.</p>
 </div>
-<input id="68c74fb3-1d58-4d09-9a13-084275fab5c7" name="ff02615e-af8c-4d98-88b9-50c44a6a7d67" type="radio">
-</input><label class="sd-tab-label" for="68c74fb3-1d58-4d09-9a13-084275fab5c7">
+<input id="f49cea1b-9365-4668-be6c-c825ca511645" name="39695275-26f0-45a7-9006-205872f6e52f" type="radio">
+</input><label class="sd-tab-label" for="f49cea1b-9365-4668-be6c-c825ca511645">
 Copy Folders</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>directory/<span class="w"> </span>path/to/destination
 </pre></div>
@@ -645,8 +647,8 @@ Copy Folders</label><div class="sd-tab-content docutils">
 <h2>Moving &amp; Renaming<a class="headerlink" href="#moving-renaming" title="Permalink to this headline">#</a></h2>
 <p>Yes. They are the same command, :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code>. The notation for :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code> is the same as :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code>!</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="761fd615-e173-4239-9bda-94dc60914f31" name="7178c284-a40e-4f04-9098-8db5c2c94b75" type="radio">
-</input><label class="sd-tab-label" for="761fd615-e173-4239-9bda-94dc60914f31">
+<input checked="checked" id="6ec2366d-f6b9-452d-b646-455881f48398" name="4f30fb63-eb4f-4224-acb8-15d3be41de09" type="radio">
+</input><label class="sd-tab-label" for="6ec2366d-f6b9-452d-b646-455881f48398">
 General Notation</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span><span class="w">  </span><span class="c1"># Moving</span>
 mv<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>newname<span class="o">]</span><span class="w">      </span><span class="c1"># Renaming</span>
@@ -654,16 +656,16 @@ mv<span class="w"> </span><span class="o">[</span>source<span class="o">]</span>
 </div>
 <p>For both source and destination you can use the absolute or relative path</p>
 </div>
-<input id="0536e1e3-fb69-4ab1-9212-3fadb2d3aa1b" name="7178c284-a40e-4f04-9098-8db5c2c94b75" type="radio">
-</input><label class="sd-tab-label" for="0536e1e3-fb69-4ab1-9212-3fadb2d3aa1b">
+<input id="9a702247-6e00-4778-ab53-8e4cabb6a81d" name="4f30fb63-eb4f-4224-acb8-15d3be41de09" type="radio">
+</input><label class="sd-tab-label" for="9a702247-6e00-4778-ab53-8e4cabb6a81d">
 Move/Rename Files</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>file.txt<span class="w"> </span>/path/to/destination/newname.txt
 </pre></div>
 </div>
 <p>Moving a file is straight forward, you can even give the file a new name at the destination.</p>
 </div>
-<input id="ff4444fc-b3e0-4bc7-abe7-8efd4684b0d6" name="7178c284-a40e-4f04-9098-8db5c2c94b75" type="radio">
-</input><label class="sd-tab-label" for="ff4444fc-b3e0-4bc7-abe7-8efd4684b0d6">
+<input id="6b72bef7-2183-4519-9266-c71e6586cfe3" name="4f30fb63-eb4f-4224-acb8-15d3be41de09" type="radio">
+</input><label class="sd-tab-label" for="6b72bef7-2183-4519-9266-c71e6586cfe3">
 Move/Rename Folders</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>directory/<span class="w"> </span>path/to/desitination/newname
 </pre></div>
@@ -680,24 +682,24 @@ Move/Rename Folders</label><div class="sd-tab-content docutils">
 </div>
 <p>:term:<code class="docutils literal notranslate"><span class="pre">rm</span></code> is used to delete files/folders, and is written like :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code> and :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code></p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="93999c9a-9f88-453f-9e56-0909016160f0" name="8dda49e9-f012-426b-a815-6ca567f8a631" type="radio">
-</input><label class="sd-tab-label" for="93999c9a-9f88-453f-9e56-0909016160f0">
+<input checked="checked" id="2f71c2ea-1fc3-454e-9593-4a4278d32d05" name="83f6addd-a8f2-450e-b83c-ccea47fc3fdc" type="radio">
+</input><label class="sd-tab-label" for="2f71c2ea-1fc3-454e-9593-4a4278d32d05">
 General Notation</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span><span class="o">[</span>sources<span class="o">]</span>
 </pre></div>
 </div>
 <p>Where,  <code class="docutils literal notranslate"><span class="pre">[source]</span></code>, can be the absolute or relative path</p>
 </div>
-<input id="023470ed-fc3f-4648-8017-7405d0c63649" name="8dda49e9-f012-426b-a815-6ca567f8a631" type="radio">
-</input><label class="sd-tab-label" for="023470ed-fc3f-4648-8017-7405d0c63649">
+<input id="be842096-d0d8-414c-b300-8cc78718802f" name="83f6addd-a8f2-450e-b83c-ccea47fc3fdc" type="radio">
+</input><label class="sd-tab-label" for="be842096-d0d8-414c-b300-8cc78718802f">
 Delete Files</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
 </pre></div>
 </div>
 <p>You can delete multiple files at once.</p>
 </div>
-<input id="4fd4e0bc-1396-41b6-a567-ae049e4d41da" name="8dda49e9-f012-426b-a815-6ca567f8a631" type="radio">
-</input><label class="sd-tab-label" for="4fd4e0bc-1396-41b6-a567-ae049e4d41da">
+<input id="a40d07b6-ec57-434c-975f-7e61ff72e2d9" name="83f6addd-a8f2-450e-b83c-ccea47fc3fdc" type="radio">
+</input><label class="sd-tab-label" for="a40d07b6-ec57-434c-975f-7e61ff72e2d9">
 Copy Folders</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-r<span class="w"> </span>directory/
 </pre></div>

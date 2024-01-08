@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -55,6 +54,8 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
     <script src="../../../_static/custom.js"></script>
+    <script src="../../../_static/bootstrap.js"></script>
+    <script src="../../../_static/pydata-sphinx-theme.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -66,10 +67,11 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/programming/python/overview.html" />
+    <link rel="shortcut icon" href="../../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Overview" href="python.html" />
-    <link rel="prev" title="Branching" href="../git/branch.html" />
+    <link rel="prev" title="Text Editing with Vi/Vim" href="../vi/overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -156,69 +158,46 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="bd-toc-item active">
     <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../bash/scripting.html">
-   Scripting
+  <a class="reference internal" href="../bash/overview.html">
+   bash Shell
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../bash/startup.html">
-   Start-Up Files
+  <a class="reference internal" href="../vi/overview.html">
+   Text Editing with Vi/Vim
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../hpc/overview.html">
-   SLURM &amp; ssh
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/overview.html">
-   Github &amp; git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/git.html">
-   git
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../git/branch.html">
-   Branching
-  </a>
- </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Python &amp; Conda
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python.html">
-   Overview
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="conda.html">
-   Conda
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="installconda.html">
-   Installing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="condaenv.html">
-   Conda Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="myenv.html">
-   My Recommended Conda Setup
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="jupyter.html">
-   Jupyter Notebooks
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conda.html">
+     Conda
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="condaenv.html">
+     Conda Environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="jupyter.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -283,6 +262,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Conda<a class="headerlink" href="#conda" title="Permalink to this headline">#</a></h2>
 <p>Program for managing <code class="docutils literal notranslate"><span class="pre">python</span></code> packages.</p>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -310,11 +291,11 @@ const thebe_selector_output = ".output, .cell_output"
               
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../git/branch.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../vi/overview.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Branching</p>
+            <p class="prev-next-title">Text Editing with Vi/Vim</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="python.html" title="next page">

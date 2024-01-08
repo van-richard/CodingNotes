@@ -35,7 +35,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/static/fontawesome-free-6.5.1-web/css/all.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
@@ -55,6 +54,8 @@
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/custom.js"></script>
+    <script src="../../_static/bootstrap.js"></script>
+    <script src="../../_static/pydata-sphinx-theme.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -66,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/simulation/00overview.html" />
+    <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Classical MD" href="md.html" />
@@ -191,58 +193,6 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="simple">
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../notes/00overview.html">
-   General Notes
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notes/binding.html">
-     Binding Affinity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notes/modelling.html">
-     Simulation Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notes/basics-classical.html">
-     Classical Molecular Dynamics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notes/fe-alchemical.html">
-     Alchemical Free Energy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notes/alchemical/potentials.html">
-     Alchemical States
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notes/alchemical/workflow.html">
-     Simulation Workflows
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notes/basics-qmmm.html">
-     QM/MM Simulations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../notes/fe-estimators.html">
-     Free Energy Estimators
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
   </div>
@@ -260,9 +210,29 @@ const thebe_selector_output = ".output, .cell_output"
               
               <div class="toc-item">
                 
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-molecular-dynamics">
+   Classical Molecular Dynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-mechanic-molecular-mechanic-md-simulations">
+   Quantum Mechanic/Molecular Mechanic MD Simulations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analysis-tools">
+   Analysis Tools
+  </a>
+ </li>
+</ul>
+
 </nav>
               </div>
               
@@ -284,7 +254,27 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="tutorials">
 <h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">#</a></h1>
-<p>MD stuff</p>
+<p>MD stuff with Amber</p>
+<section id="classical-molecular-dynamics">
+<h2><a class="reference external" href="#md">Classical Molecular Dynamics</a><a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="#simple">Alanine Dipeptide in Water</a></p></li>
+<li><p><a class="reference external" href="#distance">Simple Distance Restraint</a></p></li>
+</ol>
+</section>
+<section id="quantum-mechanic-molecular-mechanic-md-simulations">
+<h2><a class="reference external" href="#qmmm">Quantum Mechanic/Molecular Mechanic MD Simulations</a><a class="headerlink" href="#quantum-mechanic-molecular-mechanic-md-simulations" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="#claisen">Claisen</a></p></li>
+</ol>
+</section>
+<section id="analysis-tools">
+<h2><a class="reference external" href="#analysis">Analysis Tools</a><a class="headerlink" href="#analysis-tools" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="#rmsd">RMSD</a></p></li>
+<li><p><a class="reference external" href="#rmsf">RMSF</a></p></li>
+</ol>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>

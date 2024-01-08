@@ -1,3 +1,0 @@
-# General Notes
-
-on sims
