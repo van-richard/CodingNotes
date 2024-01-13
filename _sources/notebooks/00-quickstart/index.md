@@ -6,9 +6,7 @@ html_theme.sidebar_secondary.remove: true
 
 *I intended for this to be read within 30 minutes... Sorry! (December 9, 2023)*
 
-For those with no background in programming, there is a lot to take in. The goal of this section is
-
- So don't rush, look at other examples, and ask lots of questions! 
+For those with no background in programming, there is a lot to take in.
 
 **Objective.** To become familiar with:
 
