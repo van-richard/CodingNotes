@@ -67,6 +67,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="QM/MM Simulations" href="basics-qmmm.html" />
+    <link rel="prev" title="Classical Molecular Dynamics" href="basics-classical.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,7 +180,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../02-simulation/index.html">
-                        Tutorials
+                        MD Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Notes
                       </a>
                     </li>
                 
@@ -216,6 +225,58 @@ document.write(`
   </button>
 `);
 </script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-gitlab fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -283,7 +344,14 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../02-simulation/index.html">
-                        Tutorials
+                        MD Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Notes
                       </a>
                     </li>
                 
@@ -307,6 +375,58 @@ document.write(`
   </button>
 `);
 </script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-gitlab fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
         
       </div>
     
@@ -354,6 +474,9 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Some Notes</a></li>
+    
     <li class="breadcrumb-item active" aria-current="page">Alchemical...</li>
   </ul>
 </nav>
@@ -395,8 +518,8 @@ document.write(`
 <h1>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bcbb79fa-1b7d-402f-9e0c-00204e0e3909">
-<span class="eqno">()<a class="headerlink" href="#equation-bcbb79fa-1b7d-402f-9e0c-00204e0e3909" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-67f94907-e132-4498-a1ab-f420dba9b902">
+<span class="eqno">(1)<a class="headerlink" href="#equation-67f94907-e132-4498-a1ab-f420dba9b902" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -405,12 +528,12 @@ document.write(`
 <figure class="align-center" id="id1" style="width: 100%">
 <img alt="../../_images/fe-alchem-thermo-cycle.png" src="../../_images/fe-alchem-thermo-cycle.png" />
 <figcaption>
-<p><span class="caption-text">Example of thermodynamic cycle from the paper.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Example of thermodynamic cycle from the paper.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-70908f81-311b-448b-aea5-29723ddfc797">
-<span class="eqno">()<a class="headerlink" href="#equation-70908f81-311b-448b-aea5-29723ddfc797" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5b79b7fd-e2d6-4602-a4c9-edd90b6e4b44">
+<span class="eqno">(2)<a class="headerlink" href="#equation-5b79b7fd-e2d6-4602-a4c9-edd90b6e4b44" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}
@@ -464,6 +587,24 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="basics-classical.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Classical Molecular Dynamics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="basics-qmmm.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">QM/MM Simulations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -516,57 +657,10 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><ul class="navbar-icon-links navbar-nav"
-    aria-label="Quick Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Google Scholar</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-gitlab fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Linkedin</span></a>
-        </li>
-</ul></div>
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
       
     </div>
   
