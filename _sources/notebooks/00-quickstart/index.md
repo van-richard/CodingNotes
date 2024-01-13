@@ -1,4 +1,8 @@
-# A (not so) Quick Start Guide
+---
+html_theme.sidebar_secondary.remove: true
+---
+
+# Quick Start Guide
 
 *I intended for this to be read within 30 minutes... Sorry! (December 9, 2023)*
 
