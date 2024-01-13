@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Simple QM/MM Simulation of the Claisen Rearrangment Reaction &#8212; CodingNotes</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,657 +63,372 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/claisen';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/claisen.html" />
+    <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Analysis" href="analysis.html" />
     <link rel="prev" title="QM/MM" href="qmmm.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
     
-    <div class="container-fluid" id="banner"></div>
+      <div class="navbar-item">
 
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
     
+    
+      
+    
+    
+    <img src="../../_static/van-abstract.svg" class="logo__image only-light" alt="CodingNotes - Home"/>
+    <script>document.write(`<img src="../../_static/van-abstract.svg" class="logo__image only-dark" alt="CodingNotes - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/index.html">
+                        Quick Start Guide
+                      </a>
+                    </li>
+                
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="../../_static/van-abstract.svg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">CodingNotes</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../index.html">
-                    CodingNotes
-                </a>
-            </li>
-        </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Quick Start Guide
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-quickstart/index.html">
-   A (not so) Quick Start Guide
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-quickstart/01terminal.html">
-   Terminal, Shell, &amp; Bash
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-quickstart/02vim.html">
-   Text Editors
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-quickstart/03Supercomputer.html">
-   Supercomputers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-quickstart/04PythonConda.html">
-   Python
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../00-quickstart/05StructureFiles.html">
-   Molecular Structure Files
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-quickstart/06PDBFiles.html">
-     Exploring PDB Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../00-quickstart/07XYZFiles.html">
-     What are XYZ Files?
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../00-quickstart/08BasicMD.html">
-   Briefly, Molecular Dynamics
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Example Code &amp; More
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-scripting/index.html">
-   Example Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-scripting/bash/overview.html">
-   bash Shell
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../01-scripting/vi/overview.html">
-   Text Editing with Vi/Vim
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01-scripting/python/overview.html">
-   Python &amp; Conda
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01-scripting/python/python.html">
-     Overview
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01-scripting/python/conda.html">
-     Conda
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01-scripting/python/condaenv.html">
-     Conda Environments
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01-scripting/python/jupyter.html">
-     Jupyter Notebooks
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Tutorials
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="index.html">
-   Tutorials
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="md.html">
-   Classical MD
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="simple.html">
-     Simple MD Tutorial of Alanine Dipeptide
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="distance.html">
-     Applying Distance Restraints in Classical MD SImulations
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="qmmm.html">
-   QM/MM
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Simple QM/MM Simulation of the Claisen Rearrangment Reaction
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="analysis.html">
-   Analysis
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="rmsd.html">
-     RMSD
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="rmsf.html">
-     RMSF
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01-scripting/index.html">
+                        Scripting Examples & More
+                      </a>
+                    </li>
+                
 
-    </div>
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+  </ul>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
+      
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
     
-    <div class="header-article row sticky-top noprint">
-        
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
 
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
 
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/van-richard/CodingNotes/main?urlpath=tree/notebooks/notebooks/02-simulation/claisen.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
+`);
+</script></div>
       
-    </ul>
+    </div>
+    
   </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
+    </div>
   
+  </header>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
-</button>
-
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/van-richard/CodingNotes"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-      <li>
-        <a href="https://github.com/van-richard/CodingNotes/issues/new?title=Issue%20on%20page%20%2Fnotebooks/02-simulation/claisen.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
       
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/notebooks/02-simulation/claisen.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
       
-      <li>
         
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
-</div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">
-   Use IQmol to Make an
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     allyl_vinyl_ether.pdb
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">
-   Prepare Project Folder on the Cluster
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#directories-flow-structure-organization">
-   Directories: Flow, Structure, &amp; Organization
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference-files-to-input-directory">
-   Reference Files to
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     input/
-    </span>
-   </code>
-   Directory
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">
-     Generate Parameters for Allyl Vinyl Ether
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#restraint-files-cv-rst">
-     Restraint Files
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cv.rst
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notation-of-cv-rst">
-     Notation of
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cv.rst
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#qm-mm-md-input-files">
-     QM/MM MD Input files
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#automate-the-umbrella-windows">
-   Automate the Umbrella Windows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-the-qm-mm-simulations">
-   Running the QM/MM Simulations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualize-the-trajectories">
-   Visualize the Trajectories
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#free-energy-profile-with-mbar">
-   Free Energy Profile with MBAR
-  </a>
- </li>
-</ul>
-
-    </nav>
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Simple QM/MM Simulation of the Claisen Rearrangment Reaction</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">
-   Use IQmol to Make an
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     allyl_vinyl_ether.pdb
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">
-   Prepare Project Folder on the Cluster
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#directories-flow-structure-organization">
-   Directories: Flow, Structure, &amp; Organization
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#reference-files-to-input-directory">
-   Reference Files to
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     input/
-    </span>
-   </code>
-   Directory
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">
-     Generate Parameters for Allyl Vinyl Ether
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#restraint-files-cv-rst">
-     Restraint Files
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cv.rst
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#notation-of-cv-rst">
-     Notation of
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       cv.rst
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#qm-mm-md-input-files">
-     QM/MM MD Input files
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#automate-the-umbrella-windows">
-   Automate the Umbrella Windows
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#running-the-qm-mm-simulations">
-   Running the QM/MM Simulations
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visualize-the-trajectories">
-   Visualize the Trajectories
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#free-energy-profile-with-mbar">
-   Free Energy Profile with MBAR
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/index.html">
+                        Quick Start Guide
+                      </a>
+                    </li>
                 
-              <div>
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01-scripting/index.html">
+                        Scripting Examples & More
+                      </a>
+                    </li>
                 
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="index.html">
+                        Tutorials
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">Prepare Project Folder on the Cluster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directories-flow-structure-organization">Directories: Flow, Structure, &amp; Organization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-files-to-input-directory">Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">Generate Parameters for Allyl Vinyl Ether</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files-cv-rst">Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-of-cv-rst">Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">QM/MM MD Input files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">Automate the Umbrella Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">Running the QM/MM Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">Visualize the Trajectories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">Free Energy Profile with MBAR</a></li>
+</ul>
+  </nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
+  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
+  <ul class="indices-link">
+        <li class="toctree-l1">
+          <a class="reference internal"
+             href="../../genindex.html"
+             accesskey="I">General Index</a>
+        </li>
+  </ul>
+</nav></div>
+      <div class="sidebar-primary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">Prepare Project Folder on the Cluster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directories-flow-structure-organization">Directories: Flow, Structure, &amp; Organization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-files-to-input-directory">Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">Generate Parameters for Allyl Vinyl Ether</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files-cv-rst">Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-of-cv-rst">Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">QM/MM MD Input files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">Automate the Umbrella Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">Running the QM/MM Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">Visualize the Trajectories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">Free Energy Profile with MBAR</a></li>
+</ul>
+  </nav></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Tutorials</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="qmmm.html" class="nav-link">QM/MM</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Simple...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="simple-qm-mm-simulation-of-the-claisen-rearrangment-reaction">
-<h1>Simple QM/MM Simulation of the Claisen Rearrangment Reaction<a class="headerlink" href="#simple-qm-mm-simulation-of-the-claisen-rearrangment-reaction" title="Permalink to this headline">#</a></h1>
+<h1>Simple QM/MM Simulation of the Claisen Rearrangment Reaction<a class="headerlink" href="#simple-qm-mm-simulation-of-the-claisen-rearrangment-reaction" title="Permalink to this heading">#</a></h1>
 <p>In this tutorial, we will perform a QM/MM simulation of the claisen rearrangement reaction in Amber.</p>
 <p>We will study the reaction under implicit solvent, where all ligand atoms included into the QM region, defined by the PM3 semi-empirical method. Umbrella Sampling will be used to explore the reaction coordinate and MBAR to to obtain the free energy profile.</p>
 <p><strong>Objectives:</strong></p>
@@ -730,9 +456,9 @@ title="Print to PDF"
 </figure>
 <hr class="docutils" />
 <section id="use-iqmol-to-make-an-allyl-vinyl-ether-pdb">
-<h2>Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code><a class="headerlink" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb" title="Permalink to this headline">#</a></h2>
+<h2>Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code><a class="headerlink" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb" title="Permalink to this heading">#</a></h2>
 <p>Use IQmol to make a model of allyl vinyl ether, and save the file as <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code>, remember to:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Add hydrogens</p></li>
 <li><p>Minimize energy</p></li>
 <li><p>Save as <code class="docutils literal notranslate"><span class="pre">.pdb</span></code></p></li>
@@ -752,21 +478,21 @@ title="Print to PDF"
 </section>
 <hr class="docutils" />
 <section id="prepare-project-folder-on-the-cluster">
-<h2>Prepare Project Folder on the Cluster<a class="headerlink" href="#prepare-project-folder-on-the-cluster" title="Permalink to this headline">#</a></h2>
+<h2>Prepare Project Folder on the Cluster<a class="headerlink" href="#prepare-project-folder-on-the-cluster" title="Permalink to this heading">#</a></h2>
 <p>Login to Pete with <code class="docutils literal notranslate"><span class="pre">ssh</span></code>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh USERNAME@pete.hpc.okstate.edu  <span class="c1"># Change `USERNAME` to your username</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>USERNAME@pete.hpc.okstate.edu<span class="w">  </span><span class="c1"># Change `USERNAME` to your username</span>
 </pre></div>
 </div>
 <p>Go to your <code class="docutils literal notranslate"><span class="pre">/scratch/USERNAME</span></code> directory, and make the project folder, “claisen”, and in it, make another folder called “pm3”. PME is the semiempirical method we will use to define the QM atoms.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /scratch/USERNAME/  <span class="c1"># Change `Username` to your username</span>
-mkdir -p claisen/pm3   <span class="c1"># Make project folder, and method folder</span>
-<span class="nb">cd</span> claisen/pm3         <span class="c1"># Go there</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/scratch/USERNAME/<span class="w">  </span><span class="c1"># Change `Username` to your username</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>claisen/pm3<span class="w">   </span><span class="c1"># Make project folder, and method folder</span>
+<span class="nb">cd</span><span class="w"> </span>claisen/pm3<span class="w">         </span><span class="c1"># Go there</span>
 </pre></div>
 </div>
 <p><em>Before moving on, we should talk about file management.</em></p>
 </section>
 <section id="directories-flow-structure-organization">
-<h2>Directories: Flow, Structure, &amp; Organization<a class="headerlink" href="#directories-flow-structure-organization" title="Permalink to this headline">#</a></h2>
+<h2>Directories: Flow, Structure, &amp; Organization<a class="headerlink" href="#directories-flow-structure-organization" title="Permalink to this heading">#</a></h2>
 <p>Strongly recommend for a project folder to be organized like this schematic.</p>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">SYSTEM_DIR</span></code> could be whatever biological system you’re working on (i.e., cas9, cas12a, etc.). In this folder, we most investigate the same system using differnt methods, hence <code class="docutils literal notranslate"><span class="pre">METHOD1_DIR</span></code> and <code class="docutils literal notranslate"><span class="pre">METHOD2_DIR</span></code>.</p></li>
@@ -786,23 +512,23 @@ mkdir -p claisen/pm3   <span class="c1"># Make project folder, and method folder
 </div>
 </section>
 <section id="reference-files-to-input-directory">
-<h2>Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory<a class="headerlink" href="#reference-files-to-input-directory" title="Permalink to this headline">#</a></h2>
+<h2>Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory<a class="headerlink" href="#reference-files-to-input-directory" title="Permalink to this heading">#</a></h2>
 <p>Make the <code class="docutils literal notranslate"><span class="pre">input</span></code> directory. This is where we will store the PDB files and generate Amber inputs. Go into the folder, and use <code class="docutils literal notranslate"><span class="pre">pwd</span></code> to print the current working directory. We will copthe the output from <code class="docutils literal notranslate"><span class="pre">pwd</span></code> for our <code class="docutils literal notranslate"><span class="pre">scp</span></code> command later.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir input <span class="c1"># Make folder</span>
-<span class="nb">cd</span> input    <span class="c1"># Go into folder</span>
-<span class="nb">pwd</span>         <span class="c1"># Print working directory (Copy this output for scp)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>input<span class="w"> </span><span class="c1"># Make folder</span>
+<span class="nb">cd</span><span class="w"> </span>input<span class="w">    </span><span class="c1"># Go into folder</span>
+<span class="nb">pwd</span><span class="w">         </span><span class="c1"># Print working directory (Copy this output for scp)</span>
 </pre></div>
 </div>
 <p>Copy the PDB file of allyl vinyl ether you made (locally with IQmol) into the <code class="docutils literal notranslate"><span class="pre">input</span></code> folder using <code class="docutils literal notranslate"><span class="pre">scp</span></code>. This will look different depending where you saved files, but open terminal on your local computer and use <code class="docutils literal notranslate"><span class="pre">scp</span></code> to upload the file to this directory (copied from <code class="docutils literal notranslate"><span class="pre">pwd</span></code>):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp /path/to/allyl_vinyl_ether.pdb USERNAME@pete.hpc.okstate.edu:---PASTE_THE_PWD_HERE---
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>/path/to/allyl_vinyl_ether.pdb<span class="w"> </span>USERNAME@pete.hpc.okstate.edu:---PASTE_THE_PWD_HERE---
 </pre></div>
 </div>
 <p>Before moving on, check if the file transferred correctly. In the Pete terminal window, check if the PDB file is in the <code class="docutils literal notranslate"><span class="pre">input/</span></code> folder.</p>
 <section id="generate-parameters-for-allyl-vinyl-ether">
-<h3>Generate Parameters for Allyl Vinyl Ether<a class="headerlink" href="#generate-parameters-for-allyl-vinyl-ether" title="Permalink to this headline">#</a></h3>
+<h3>Generate Parameters for Allyl Vinyl Ether<a class="headerlink" href="#generate-parameters-for-allyl-vinyl-ether" title="Permalink to this heading">#</a></h3>
 <p>Since this is a simulation of a small molecule, we do not have Amber force field parameters for it.</p>
 <p>To make a Amber topology and coordinate file for a small molecule, we need to:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Add hydrogens (<em>We did this with IQmol</em>)</p></li>
 <li><p>Compute charges with <code class="docutils literal notranslate"><span class="pre">antechamber</span></code></p></li>
 <li><p>Write parameters with <code class="docutils literal notranslate"><span class="pre">parmchk2</span></code></p></li>
@@ -819,10 +545,10 @@ mkdir -p claisen/pm3   <span class="c1"># Make project folder, and method folder
 <span class="c1">#SBATCH --error=%j.err</span>
 <span class="c1">#SBATCH --job-name=antechamber</span>
 
-date                                  
+date<span class="w">                                  </span>
 
 <span class="c1"># Load Amber QMMM. I made a file that ~looks~ cleaner </span>
-<span class="nb">source</span> /scratch/van/Scripts/pete_setqmmm.sh
+<span class="nb">source</span><span class="w"> </span>/scratch/van/Scripts/pete_setqmmm.sh
 
 <span class="c1"># Variable &quot;name&quot; is allyl_vinyl_ether, which is a pain to write, so we should only do it once</span>
 <span class="nv">name</span><span class="o">=</span><span class="s2">&quot;allyl_vinyl_ether&quot;</span>
@@ -830,11 +556,11 @@ date
 <span class="c1"># Antechamebr is a program with AmberTools for generating FF parameters.</span>
 <span class="c1"># parmck2 program figures out what parameters and checks if they&#39;re available. </span>
 <span class="c1">#        If not, it tries to make educated guesses, and adds it to .frmod here</span>
-antechamber -fi pdb -fo mol2 -i <span class="si">${</span><span class="nv">name</span><span class="si">}</span>.pdb -o <span class="si">${</span><span class="nv">name</span><span class="si">}</span>.mol2 -c bcc -pf y -nc <span class="m">0</span>
-parmchk2 -i <span class="si">${</span><span class="nv">name</span><span class="si">}</span>.mol2 -f mol2 -o <span class="si">${</span><span class="nv">name</span><span class="si">}</span>.frcmod
+antechamber<span class="w"> </span>-fi<span class="w"> </span>pdb<span class="w"> </span>-fo<span class="w"> </span>mol2<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span>.pdb<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span>.mol2<span class="w"> </span>-c<span class="w"> </span>bcc<span class="w"> </span>-pf<span class="w"> </span>y<span class="w"> </span>-nc<span class="w"> </span><span class="m">0</span>
+parmchk2<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span>.mol2<span class="w"> </span>-f<span class="w"> </span>mol2<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">name</span><span class="si">}</span>.frcmod
 
 <span class="c1"># The &quot;cat &lt;&lt;_EOF &gt; tleap&quot; makes the files tleap containing everything until &quot;_EOF&quot;</span>
-cat <span class="s">&lt;&lt;_EOF &gt; tleap.in</span>
+cat<span class="w"> </span><span class="s">&lt;&lt;_EOF &gt; tleap.in</span>
 <span class="s">source leaprc.gaff</span>
 <span class="s">source leaprc.water.tip3p </span>
 
@@ -851,20 +577,20 @@ cat <span class="s">&lt;&lt;_EOF &gt; tleap.in</span>
 <span class="s">_EOF</span>
 
 <span class="c1"># Run tleap in</span>
-tleap -sf tleap.in
+tleap<span class="w"> </span>-sf<span class="w"> </span>tleap.in
 
 date
 </pre></div>
 </div>
 <p>Copy of this script to the <code class="docutils literal notranslate"><span class="pre">inputs/</span></code> folder and submit the job to Slurm, it should take about &gt;1 minute.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch generate.slurm
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch<span class="w"> </span>generate.slurm
 </pre></div>
 </div>
 <p>When you <code class="docutils literal notranslate"><span class="pre">ls</span></code> the directory you should see a few new files:</p>
 </section>
 <hr class="docutils" />
 <section id="restraint-files-cv-rst">
-<h3>Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#restraint-files-cv-rst" title="Permalink to this headline">#</a></h3>
+<h3>Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#restraint-files-cv-rst" title="Permalink to this heading">#</a></h3>
 <p>A restraint file (<code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>) contains information about the parameters for each umbrella window.</p>
 <p>The Amber protein has a lot of different restraints you can try, but for this reaction, we want to keep the bias on the bond breaking and bonding forming.</p>
 <p>We need to find the <strong>Amber atom numbers</strong> involved in the reaction. Load <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.pdb</span></code> into IQmol or VMD.</p>
@@ -892,15 +618,15 @@ date
 <p>We know which atoms to to use for our reaction coordinate now. We will take the bond breaking distance - the bond forming distance giving us a distance of about 2 Angstrom.</p>
 </section>
 <section id="notation-of-cv-rst">
-<h3>Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#notation-of-cv-rst" title="Permalink to this headline">#</a></h3>
+<h3>Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#notation-of-cv-rst" title="Permalink to this heading">#</a></h3>
 <p>Using all of that information, we can make the refernce file for <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>. The file looks like this:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># r1 - r2 (CC - CO bond)</span>
- <span class="p">&amp;</span>rst
-  <span class="nv">iat</span><span class="o">=</span><span class="m">3</span>,4,1,6,
-  <span class="nv">rstwt</span><span class="o">=</span><span class="m">1</span>.,-1.,
-  <span class="nv">r1</span><span class="o">=</span>-99, <span class="nv">r2</span><span class="o">=</span>__REST__, <span class="nv">r3</span><span class="o">=</span>__REST__, <span class="nv">r4</span><span class="o">=</span><span class="m">99</span>,
-  <span class="nv">rk2</span><span class="o">=</span><span class="m">150</span>.0, <span class="nv">rk3</span><span class="o">=</span><span class="m">150</span>.0,
- <span class="p">&amp;</span>end
+<span class="w"> </span><span class="p">&amp;</span>rst
+<span class="w">  </span><span class="nv">iat</span><span class="o">=</span><span class="m">3</span>,4,1,6,
+<span class="w">  </span><span class="nv">rstwt</span><span class="o">=</span><span class="m">1</span>.,-1.,
+<span class="w">  </span><span class="nv">r1</span><span class="o">=</span>-99,<span class="w"> </span><span class="nv">r2</span><span class="o">=</span>__REST__,<span class="w"> </span><span class="nv">r3</span><span class="o">=</span>__REST__,<span class="w"> </span><span class="nv">r4</span><span class="o">=</span><span class="m">99</span>,
+<span class="w">  </span><span class="nv">rk2</span><span class="o">=</span><span class="m">150</span>.0,<span class="w"> </span><span class="nv">rk3</span><span class="o">=</span><span class="m">150</span>.0,
+<span class="w"> </span><span class="p">&amp;</span>end
 </pre></div>
 </div>
 <p>Each parameter is described by:</p>
@@ -919,149 +645,149 @@ date
 </div>
 </section>
 <section id="qm-mm-md-input-files">
-<h3>QM/MM MD Input files<a class="headerlink" href="#qm-mm-md-input-files" title="Permalink to this headline">#</a></h3>
+<h3>QM/MM MD Input files<a class="headerlink" href="#qm-mm-md-input-files" title="Permalink to this heading">#</a></h3>
 <p>We need at leat 2 MD input files. The first file (<code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.mdin</span></code>) is for simulating the initial pathway, and only runs for a few picoseconds. The second file (<code class="docutils literal notranslate"><span class="pre">step6.00_equilibration.mdin</span></code>) is will restart from the previous <code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.ncrst</span></code> for additional 10 ps.</p>
 <p>The general format of a QM/MM MD input file differs from classical MD with the <code class="docutils literal notranslate"><span class="pre">&amp;qmmm</span></code> section.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="dec1e083-3521-4bed-82ca-d08c6540d42d" name="ef6a55f5-2ded-4f24-968a-a31ff4b447d2" type="radio">
-</input><label class="sd-tab-label" for="dec1e083-3521-4bed-82ca-d08c6540d42d">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
 step5.00_equilibration.mdin</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A NVT simulation <span class="k">for</span> common production-level simulations
- <span class="p">&amp;</span>cntrl
-    <span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,        ! No minimization
-    <span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,       ! This IS a restart of an old MD simulation
-    <span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,         ! So our inpcrd file has velocities
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
+<span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
+<span class="w">    </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>IS<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
+<span class="w">    </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>velocities
 
-    ! Boundary conditions
-    <span class="nv">ntb</span><span class="o">=</span><span class="m">0</span>,         ! Non-Periodic 
-    <span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,         ! No pressure control
+<span class="w">    </span>!<span class="w"> </span>Boundary<span class="w"> </span>conditions
+<span class="w">    </span><span class="nv">ntb</span><span class="o">=</span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>Non-Periodic<span class="w"> </span>
+<span class="w">    </span><span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>No<span class="w"> </span>pressure<span class="w"> </span>control
 
-    ! Temperature control
-    <span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,         ! Langevin Dynamics
-    <span class="nv">gamma_ln</span><span class="o">=</span><span class="m">5</span>.0,  ! Friction coefficient <span class="o">(</span>ps^-1<span class="o">)</span>
-    <span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,   ! Target temperature
-    <span class="nv">ig</span><span class="o">=</span>-1,         ! Random number seed
+<span class="w">    </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
+<span class="w">    </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>Dynamics
+<span class="w">    </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">5</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
+<span class="w">    </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,<span class="w">   </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
+<span class="w">    </span><span class="nv">ig</span><span class="o">=</span>-1,<span class="w">         </span>!<span class="w"> </span>Random<span class="w"> </span>number<span class="w"> </span>seed
 
-    ! Potential energy control
-    <span class="nv">cut</span><span class="o">=</span><span class="m">999</span>.0,      ! nonbonded cutoff, <span class="k">in</span> Angstroms
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">cut</span><span class="o">=</span><span class="m">999</span>.0,<span class="w">      </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>Angstroms
 
-    ! MD settings
-    <span class="nv">nstlim</span><span class="o">=</span><span class="m">500</span>,    ! <span class="m">1</span> ps total
-    <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,      ! <span class="nb">time</span> step <span class="o">(</span>ps<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>MD<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">500</span>,<span class="w">    </span>!<span class="w"> </span><span class="m">1</span><span class="w"> </span>ps<span class="w"> </span>total
+<span class="w">    </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,<span class="w">      </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
 
-    ! SHAKE
-    <span class="nv">ntc</span><span class="o">=</span><span class="m">1</span>,         ! Constrain bonds containing hydrogen
-    <span class="nv">ntf</span><span class="o">=</span><span class="m">1</span>,         ! Do not calculate forces of bonds containing hydrogen
-    <span class="nv">tol</span><span class="o">=</span><span class="m">0</span>.000001,  ! Shake tolerance
+<span class="w">    </span>!<span class="w"> </span>SHAKE
+<span class="w">    </span><span class="nv">ntc</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">ntf</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">tol</span><span class="o">=</span><span class="m">0</span>.000001,<span class="w">  </span>!<span class="w"> </span>Shake<span class="w"> </span>tolerance
 
-    ! Control how often information is printed
-    <span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,      ! Print energies every <span class="m">100</span> steps
-    <span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,      ! Print coordinates every <span class="m">100</span> steps to the trajectory
-    <span class="nv">ntwr</span><span class="o">=</span><span class="m">100</span>,      ! Print a restart file every 5K steps <span class="o">(</span>can be less frequent<span class="o">)</span>
-    <span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,        ! Write NetCDF format
-    <span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,      ! Write NetCDF format <span class="o">(</span>always <span class="k">do</span> this!<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
+<span class="w">    </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps
+<span class="w">    </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
+<span class="w">    </span><span class="nv">ntwr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>file<span class="w"> </span>every<span class="w"> </span>5K<span class="w"> </span>steps<span class="w"> </span><span class="o">(</span>can<span class="w"> </span>be<span class="w"> </span>less<span class="w"> </span>frequent<span class="o">)</span>
+<span class="w">    </span><span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,<span class="w">        </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format
+<span class="w">    </span><span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>always<span class="w"> </span><span class="k">do</span><span class="w"> </span>this!<span class="o">)</span>
 
-    ! Restraints
-    <span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,      ! Turn on restraints
+<span class="w">    </span>!<span class="w"> </span>Restraints
+<span class="w">    </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>restraints
 
-    ! QM/MM
-    <span class="nv">ifqnt</span><span class="o">=</span><span class="m">1</span>,       ! Turn on QM/MM
- /
+<span class="w">    </span>!<span class="w"> </span>QM/MM
+<span class="w">    </span><span class="nv">ifqnt</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>QM/MM
+<span class="w"> </span>/
 
 
- <span class="p">&amp;</span>qmmm
-    ! QM atoms
-    <span class="nv">qmmask</span><span class="o">=</span><span class="s1">&#39;:1&#39;</span>    ! Amber residue mask <span class="k">for</span> QM atoms
+<span class="w"> </span><span class="p">&amp;</span>qmmm
+<span class="w">    </span>!<span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w">    </span><span class="nv">qmmask</span><span class="o">=</span><span class="s1">&#39;:1&#39;</span><span class="w">    </span>!<span class="w"> </span>Amber<span class="w"> </span>residue<span class="w"> </span>mask<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM<span class="w"> </span>atoms
 
-    ! QM settings
-    <span class="nv">qm_theory</span><span class="o">=</span><span class="s1">&#39;PM3&#39;</span>, ! Semiempirical method
-    <span class="nv">qmcharge</span><span class="o">=</span><span class="m">0</span>,    ! Charge of QM subsystem
+<span class="w">    </span>!<span class="w"> </span>QM<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">qm_theory</span><span class="o">=</span><span class="s1">&#39;PM3&#39;</span>,<span class="w"> </span>!<span class="w"> </span>Semiempirical<span class="w"> </span>method
+<span class="w">    </span><span class="nv">qmcharge</span><span class="o">=</span><span class="m">0</span>,<span class="w">    </span>!<span class="w"> </span>Charge<span class="w"> </span>of<span class="w"> </span>QM<span class="w"> </span>subsystem
 
-    ! Shake
-    <span class="nv">qmshake</span><span class="o">=</span><span class="m">0</span>,     ! Use Shake <span class="k">for</span> QM atoms
+<span class="w">    </span>!<span class="w"> </span>Shake
+<span class="w">    </span><span class="nv">qmshake</span><span class="o">=</span><span class="m">0</span>,<span class="w">     </span>!<span class="w"> </span>Use<span class="w"> </span>Shake<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM<span class="w"> </span>atoms
 
-    ! Potential energy control
-    <span class="nv">qmcut</span><span class="o">=</span><span class="m">999</span>.0,    ! Cutoff <span class="k">for</span> QM/MM electrostatic interactions
-    <span class="nv">writepdb</span><span class="o">=</span><span class="m">1</span>,    ! Check QM atoms
- /
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">qmcut</span><span class="o">=</span><span class="m">999</span>.0,<span class="w">    </span>!<span class="w"> </span>Cutoff<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM/MM<span class="w"> </span>electrostatic<span class="w"> </span>interactions
+<span class="w">    </span><span class="nv">writepdb</span><span class="o">=</span><span class="m">1</span>,<span class="w">    </span>!<span class="w"> </span>Check<span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w"> </span>/
 
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>, <span class="nv">istep1</span><span class="o">=</span><span class="m">10</span> /
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span> /
- <span class="nv">DISANG</span><span class="o">=</span>cv.rst
- <span class="nv">DUMPAVE</span><span class="o">=</span>step5.00_equilibration.cv
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>/
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
+<span class="w"> </span><span class="nv">DISANG</span><span class="o">=</span>cv.rst
+<span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>step5.00_equilibration.cv
 </pre></div>
 </div>
 </div>
-<input id="e33237df-b1af-486f-aae2-0d7751f4c713" name="ef6a55f5-2ded-4f24-968a-a31ff4b447d2" type="radio">
-</input><label class="sd-tab-label" for="e33237df-b1af-486f-aae2-0d7751f4c713">
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
 step6.00_equilibration.mdin</label><div class="sd-tab-content docutils">
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A NVT simulation <span class="k">for</span> common production-level simulations
- <span class="p">&amp;</span>cntrl
-    <span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,        ! No minimization
-    <span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,       ! This IS a restart of an old MD simulation
-    <span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,         ! So our inpcrd file has velocities
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
+<span class="w"> </span><span class="p">&amp;</span>cntrl
+<span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
+<span class="w">    </span><span class="nv">irest</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>This<span class="w"> </span>IS<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>of<span class="w"> </span>an<span class="w"> </span>old<span class="w"> </span>MD<span class="w"> </span>simulation
+<span class="w">    </span><span class="nv">ntx</span><span class="o">=</span><span class="m">5</span>,<span class="w">         </span>!<span class="w"> </span>So<span class="w"> </span>our<span class="w"> </span>inpcrd<span class="w"> </span>file<span class="w"> </span>has<span class="w"> </span>velocities
 
-    ! Boundary conditions
-    <span class="nv">ntb</span><span class="o">=</span><span class="m">0</span>,         ! Non-Periodic
-    <span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,         ! No pressure control
+<span class="w">    </span>!<span class="w"> </span>Boundary<span class="w"> </span>conditions
+<span class="w">    </span><span class="nv">ntb</span><span class="o">=</span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>Non-Periodic
+<span class="w">    </span><span class="nv">ntp</span><span class="o">=</span><span class="m">0</span>,<span class="w">         </span>!<span class="w"> </span>No<span class="w"> </span>pressure<span class="w"> </span>control
 
-    ! Temperature control
-    <span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,         ! Langevin Dynamics 
-    <span class="nv">gamma_ln</span><span class="o">=</span><span class="m">5</span>.0,  ! Friction coefficient <span class="o">(</span>ps^-1<span class="o">)</span>
-    <span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,   ! Target temperature
-    <span class="nv">ig</span><span class="o">=</span>-1,         ! Random number seed
+<span class="w">    </span>!<span class="w"> </span>Temperature<span class="w"> </span>control
+<span class="w">    </span><span class="nv">ntt</span><span class="o">=</span><span class="m">3</span>,<span class="w">         </span>!<span class="w"> </span>Langevin<span class="w"> </span>Dynamics<span class="w"> </span>
+<span class="w">    </span><span class="nv">gamma_ln</span><span class="o">=</span><span class="m">5</span>.0,<span class="w">  </span>!<span class="w"> </span>Friction<span class="w"> </span>coefficient<span class="w"> </span><span class="o">(</span>ps^-1<span class="o">)</span>
+<span class="w">    </span><span class="nv">temp0</span><span class="o">=</span><span class="m">300</span>.0,<span class="w">   </span>!<span class="w"> </span>Target<span class="w"> </span>temperature
+<span class="w">    </span><span class="nv">ig</span><span class="o">=</span>-1,<span class="w">         </span>!<span class="w"> </span>Random<span class="w"> </span>number<span class="w"> </span>seed
 
-    ! Potential energy control
-    <span class="nv">cut</span><span class="o">=</span><span class="m">999</span>.0,      ! nonbonded cutoff, <span class="k">in</span> Angstroms
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">cut</span><span class="o">=</span><span class="m">999</span>.0,<span class="w">      </span>!<span class="w"> </span>nonbonded<span class="w"> </span>cutoff,<span class="w"> </span><span class="k">in</span><span class="w"> </span>Angstroms
 
-    ! MD settings
-    <span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,   ! <span class="m">1</span> ps total
-    <span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,      ! <span class="nb">time</span> step <span class="o">(</span>ps<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>MD<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">nstlim</span><span class="o">=</span><span class="m">10000</span>,<span class="w">   </span>!<span class="w"> </span><span class="m">1</span><span class="w"> </span>ps<span class="w"> </span>total
+<span class="w">    </span><span class="nv">dt</span><span class="o">=</span><span class="m">0</span>.001,<span class="w">      </span>!<span class="w"> </span><span class="nb">time</span><span class="w"> </span>step<span class="w"> </span><span class="o">(</span>ps<span class="o">)</span>
 
-    ! SHAKE
-    <span class="nv">ntc</span><span class="o">=</span><span class="m">1</span>,         ! Constrain bonds containing hydrogen
-    <span class="nv">ntf</span><span class="o">=</span><span class="m">1</span>,         ! Do not calculate forces of bonds containing hydrogen
-    <span class="nv">tol</span><span class="o">=</span><span class="m">0</span>.000001,  ! Shake tolerance
+<span class="w">    </span>!<span class="w"> </span>SHAKE
+<span class="w">    </span><span class="nv">ntc</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>Constrain<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">ntf</span><span class="o">=</span><span class="m">1</span>,<span class="w">         </span>!<span class="w"> </span>Do<span class="w"> </span>not<span class="w"> </span>calculate<span class="w"> </span>forces<span class="w"> </span>of<span class="w"> </span>bonds<span class="w"> </span>containing<span class="w"> </span>hydrogen
+<span class="w">    </span><span class="nv">tol</span><span class="o">=</span><span class="m">0</span>.000001,<span class="w">  </span>!<span class="w"> </span>Shake<span class="w"> </span>tolerance
 
-    ! Control how often information is printed
-    <span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,      ! Print energies every <span class="m">100</span> steps
-    <span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,      ! Print coordinates every <span class="m">100</span> steps to the trajectory
-    <span class="nv">ntwr</span><span class="o">=</span><span class="m">100</span>,     ! Print a restart file every 5K steps <span class="o">(</span>can be less frequent<span class="o">)</span>
-!   <span class="nv">ntwv</span><span class="o">=</span>-1,       ! Uncomment to also print velocities to trajectory
-!   <span class="nv">ntwf</span><span class="o">=</span>-1,       ! Uncomment to also print forces to trajectory
-    <span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,        ! Write NetCDF format
-    <span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,      ! Write NetCDF format <span class="o">(</span>always <span class="k">do</span> this!<span class="o">)</span>
+<span class="w">    </span>!<span class="w"> </span>Control<span class="w"> </span>how<span class="w"> </span>often<span class="w"> </span>information<span class="w"> </span>is<span class="w"> </span>printed
+<span class="w">    </span><span class="nv">ntpr</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>energies<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps
+<span class="w">    </span><span class="nv">ntwx</span><span class="o">=</span><span class="m">100</span>,<span class="w">      </span>!<span class="w"> </span>Print<span class="w"> </span>coordinates<span class="w"> </span>every<span class="w"> </span><span class="m">100</span><span class="w"> </span>steps<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>trajectory
+<span class="w">    </span><span class="nv">ntwr</span><span class="o">=</span><span class="m">100</span>,<span class="w">     </span>!<span class="w"> </span>Print<span class="w"> </span>a<span class="w"> </span>restart<span class="w"> </span>file<span class="w"> </span>every<span class="w"> </span>5K<span class="w"> </span>steps<span class="w"> </span><span class="o">(</span>can<span class="w"> </span>be<span class="w"> </span>less<span class="w"> </span>frequent<span class="o">)</span>
+!<span class="w">   </span><span class="nv">ntwv</span><span class="o">=</span>-1,<span class="w">       </span>!<span class="w"> </span>Uncomment<span class="w"> </span>to<span class="w"> </span>also<span class="w"> </span>print<span class="w"> </span>velocities<span class="w"> </span>to<span class="w"> </span>trajectory
+!<span class="w">   </span><span class="nv">ntwf</span><span class="o">=</span>-1,<span class="w">       </span>!<span class="w"> </span>Uncomment<span class="w"> </span>to<span class="w"> </span>also<span class="w"> </span>print<span class="w"> </span>forces<span class="w"> </span>to<span class="w"> </span>trajectory
+<span class="w">    </span><span class="nv">ntxo</span><span class="o">=</span><span class="m">2</span>,<span class="w">        </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format
+<span class="w">    </span><span class="nv">ioutfm</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Write<span class="w"> </span>NetCDF<span class="w"> </span>format<span class="w"> </span><span class="o">(</span>always<span class="w"> </span><span class="k">do</span><span class="w"> </span>this!<span class="o">)</span>
 
-    ! Restraints
-    <span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,      ! Turn on restraints
+<span class="w">    </span>!<span class="w"> </span>Restraints
+<span class="w">    </span><span class="nv">nmropt</span><span class="o">=</span><span class="m">1</span>,<span class="w">      </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>restraints
 
-    ! QM/MM
-    <span class="nv">ifqnt</span><span class="o">=</span><span class="m">1</span>,       ! Turn on QM/MM
- /
+<span class="w">    </span>!<span class="w"> </span>QM/MM
+<span class="w">    </span><span class="nv">ifqnt</span><span class="o">=</span><span class="m">1</span>,<span class="w">       </span>!<span class="w"> </span>Turn<span class="w"> </span>on<span class="w"> </span>QM/MM
+<span class="w"> </span>/
 
- <span class="p">&amp;</span>ewald
-    <span class="nv">dsum_tol</span><span class="o">=</span><span class="m">0</span>.000001,
- /
+<span class="w"> </span><span class="p">&amp;</span>ewald
+<span class="w">    </span><span class="nv">dsum_tol</span><span class="o">=</span><span class="m">0</span>.000001,
+<span class="w"> </span>/
 
- <span class="p">&amp;</span>qmmm
-    ! QM atoms
-    <span class="nv">qmmask</span><span class="o">=</span><span class="s1">&#39;:1&#39;</span>
+<span class="w"> </span><span class="p">&amp;</span>qmmm
+<span class="w">    </span>!<span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w">    </span><span class="nv">qmmask</span><span class="o">=</span><span class="s1">&#39;:1&#39;</span>
 
-    ! QM settings
-    <span class="nv">qm_theory</span><span class="o">=</span><span class="s1">&#39;PM3&#39;</span>,
-    <span class="nv">qmcharge</span><span class="o">=</span><span class="m">0</span>,
+<span class="w">    </span>!<span class="w"> </span>QM<span class="w"> </span>settings
+<span class="w">    </span><span class="nv">qm_theory</span><span class="o">=</span><span class="s1">&#39;PM3&#39;</span>,
+<span class="w">    </span><span class="nv">qmcharge</span><span class="o">=</span><span class="m">0</span>,
 
-    ! Shake
-    <span class="nv">qmshake</span><span class="o">=</span><span class="m">0</span>,     ! Use Shake <span class="k">for</span> QM atoms
-    ! Potential energy control
-    <span class="nv">qmcut</span><span class="o">=</span><span class="m">999</span>.0,    ! Cutoff <span class="k">for</span> QM/MM electrostatic interactions
-    <span class="nv">writepdb</span><span class="o">=</span><span class="m">1</span>,    ! Check QM atoms
- /
+<span class="w">    </span>!<span class="w"> </span>Shake
+<span class="w">    </span><span class="nv">qmshake</span><span class="o">=</span><span class="m">0</span>,<span class="w">     </span>!<span class="w"> </span>Use<span class="w"> </span>Shake<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w">    </span>!<span class="w"> </span>Potential<span class="w"> </span>energy<span class="w"> </span>control
+<span class="w">    </span><span class="nv">qmcut</span><span class="o">=</span><span class="m">999</span>.0,<span class="w">    </span>!<span class="w"> </span>Cutoff<span class="w"> </span><span class="k">for</span><span class="w"> </span>QM/MM<span class="w"> </span>electrostatic<span class="w"> </span>interactions
+<span class="w">    </span><span class="nv">writepdb</span><span class="o">=</span><span class="m">1</span>,<span class="w">    </span>!<span class="w"> </span>Check<span class="w"> </span>QM<span class="w"> </span>atoms
+<span class="w"> </span>/
 
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>, <span class="nv">istep1</span><span class="o">=</span><span class="m">10</span> /
- <span class="p">&amp;</span>wt <span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span> /
- <span class="nv">DISANG</span><span class="o">=</span>cv.rst
- <span class="nv">DUMPAVE</span><span class="o">=</span>step6.00_equilibration.cv
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;DUMPFREQ&#39;</span>,<span class="w"> </span><span class="nv">istep1</span><span class="o">=</span><span class="m">10</span><span class="w"> </span>/
+<span class="w"> </span><span class="p">&amp;</span>wt<span class="w"> </span><span class="nv">type</span><span class="o">=</span><span class="s1">&#39;END&#39;</span><span class="w"> </span>/
+<span class="w"> </span><span class="nv">DISANG</span><span class="o">=</span>cv.rst
+<span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>step6.00_equilibration.cv
 </pre></div>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
@@ -1076,63 +802,63 @@ step6.00_equilibration.mdin</label><div class="sd-tab-content docutils">
 </section>
 <hr class="docutils" />
 <section id="automate-the-umbrella-windows">
-<h2>Automate the Umbrella Windows<a class="headerlink" href="#automate-the-umbrella-windows" title="Permalink to this headline">#</a></h2>
+<h2>Automate the Umbrella Windows<a class="headerlink" href="#automate-the-umbrella-windows" title="Permalink to this heading">#</a></h2>
 <p>Go back one directory to the <code class="docutils literal notranslate"><span class="pre">pm3/</span></code> folder</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ../ <span class="c1"># Return back one directory</span>
-<span class="nb">pwd</span>    <span class="c1"># Check where y</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../<span class="w"> </span><span class="c1"># Return back one directory</span>
+<span class="nb">pwd</span><span class="w">    </span><span class="c1"># Check where y</span>
 </pre></div>
 </div>
 <p>The script <code class="docutils literal notranslate"><span class="pre">gen_inputs.in</span></code> will help you prepare windows for umbrella sampling. This includes the modification in  <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file so that each window has a different restraint value.</p>
 <p>We will have 21 windows corresponding to restraint values -2.00 to 2.00 Å.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="05566cdc-b8ad-4060-a208-06fb794c5d77" name="edbfed0b-4c89-4bab-8511-82cb17db21da" type="radio">
-</input><label class="sd-tab-label" for="05566cdc-b8ad-4060-a208-06fb794c5d77">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
 gen_inputs.in</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Section 1</span>
-mkdir -p <span class="m">00</span>
-<span class="nb">cd</span> <span class="m">00</span>/
-ln -sf ../input/step3_pbcsetup.parm7
-ln -sf ../input/step6.00_equilibration.mdin .
-sed -e <span class="s1">&#39;s/irest=1/irest=0/;s/ntx=5/nts=1,/&#39;</span> ../input/step5.00_equilibration.mdin &gt; step5.00_equilibration.mdin
-<span class="nb">cd</span> ..
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="m">00</span>
+<span class="nb">cd</span><span class="w"> </span><span class="m">00</span>/
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step3_pbcsetup.parm7
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibration.mdin<span class="w"> </span>.
+sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/irest=1/irest=0/;s/ntx=5/nts=1,/&#39;</span><span class="w"> </span>../input/step5.00_equilibration.mdin<span class="w"> </span>&gt;<span class="w"> </span>step5.00_equilibration.mdin
+<span class="nb">cd</span><span class="w"> </span>..
 
 <span class="c1"># Section 2</span>
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -w <span class="m">1</span> <span class="m">20</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
-mkdir -p <span class="nv">$i</span>
-<span class="nb">cd</span> <span class="nv">$i</span>
-ln -sf ../input/step3_pbcsetup.parm7
-ln -sf ../input/step5.00_equilibration.mdin .
-ln -sf ../input/step6.00_equilibration .
-<span class="nb">cd</span> ..
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$i</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$i</span>
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step3_pbcsetup.parm7
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step5.00_equilibration.mdin<span class="w"> </span>.
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibration<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
 <span class="k">done</span>
 
 <span class="c1"># Section 3</span>
-cp input/step3_pbcsetup.rst7 <span class="m">00</span>/step5.00_equilibration_inp.rst7
+cp<span class="w"> </span>input/step3_pbcsetup.rst7<span class="w"> </span><span class="m">00</span>/step5.00_equilibration_inp.rst7
 
 <span class="nv">n</span><span class="o">=</span>-2.0
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -f<span class="s2">&quot;%02g&quot;</span> <span class="m">0</span> <span class="m">20</span><span class="sb">`</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-f<span class="s2">&quot;%02g&quot;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span>
 <span class="k">do</span>
-    <span class="nv">nn</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span> <span class="s2">&quot;%.2f&quot;</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span><span class="k">)</span>
-    sed <span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span> input/cv.rst &gt; <span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
-    <span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$n</span> + <span class="m">0</span>.20 <span class="p">|</span> bc<span class="sb">`</span>
+<span class="w">    </span><span class="nv">nn</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;%.2f&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="w">    </span>sed<span class="w"> </span><span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span><span class="w"> </span>input/cv.rst<span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
+<span class="w">    </span><span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$n</span><span class="w"> </span>+<span class="w"> </span><span class="m">0</span>.20<span class="w"> </span><span class="p">|</span><span class="w"> </span>bc<span class="sb">`</span>
 <span class="k">done</span>
 </pre></div>
 </div>
 </div>
-<input id="04a13556-e0e2-43b9-b29f-5ea3ec9c013d" name="edbfed0b-4c89-4bab-8511-82cb17db21da" type="radio">
-</input><label class="sd-tab-label" for="04a13556-e0e2-43b9-b29f-5ea3ec9c013d">
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
 Section 1 - DEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Section 1</span>
-mkdir -p <span class="m">00</span>
-<span class="nb">cd</span> <span class="m">00</span>/
-ln -sf ../input/step3_pbcsetup.parm7
-ln -sf ../input/step6.00_equilibration.mdin .
-sed -e <span class="s1">&#39;s/irest=1/irest=0/;s/ntx=5/ntx=1,/&#39;</span> ../input/step5.00_equilibration.mdin &gt; step5.00_equilibration.mdin
-<span class="nb">cd</span> ..
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="m">00</span>
+<span class="nb">cd</span><span class="w"> </span><span class="m">00</span>/
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step3_pbcsetup.parm7
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibration.mdin<span class="w"> </span>.
+sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/irest=1/irest=0/;s/ntx=5/ntx=1,/&#39;</span><span class="w"> </span>../input/step5.00_equilibration.mdin<span class="w"> </span>&gt;<span class="w"> </span>step5.00_equilibration.mdin
+<span class="nb">cd</span><span class="w"> </span>..
 </pre></div>
 </div>
 <p>First, we make the window <code class="docutils literal notranslate"><span class="pre">00/</span></code>. I did this outside of section 2, so it is easier to read than adding an <code class="docutils literal notranslate"><span class="pre">if...else</span></code> statement.
@@ -1140,17 +866,17 @@ Essentially, since we just made our <code class="docutils literal notranslate"><
 <p><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-sf</span></code> make a symbolic link pointing to the original file! Do this becuause you do not want too many copies of the same file…</p>
 <p><code class="docutils literal notranslate"><span class="pre">sed</span></code> does the test transformation for our initial <code class="docutils literal notranslate"><span class="pre">.mdin</span></code> file.</p>
 </div>
-<input id="3906a03f-e270-4ae8-b6a6-6126d733fe03" name="edbfed0b-4c89-4bab-8511-82cb17db21da" type="radio">
-</input><label class="sd-tab-label" for="3906a03f-e270-4ae8-b6a6-6126d733fe03">
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
 Section 2 - WEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Section 2</span>
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -w <span class="m">1</span> <span class="m">20</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
-mkdir -p <span class="nv">$i</span>
-<span class="nb">cd</span> <span class="nv">$i</span>
-ln -sf ../input/step3_pbcsetup.parm7
-ln -sf ../input/step5.00_equilibration.mdin .
-ln -sf ../input/step6.00_equilibration .
-<span class="nb">cd</span> ..
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$i</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$i</span>
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step3_pbcsetup.parm7
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step5.00_equilibration.mdin<span class="w"> </span>.
+ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibration<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
 <span class="k">done</span>
 </pre></div>
 </div>
@@ -1158,7 +884,7 @@ ln -sf ../input/step6.00_equilibration .
 <p>In <code class="docutils literal notranslate"><span class="pre">bash</span></code> when you wrap a command in backtick (`), you can use the standard output of this command as the input, so this line is saying:</p>
 <p>for every NUMBER in NUMBERS (NUMBERS = list from 00, 01,02,03… all the way to 20); do <strong>THIS</strong></p>
 <p><strong>THIS</strong> meaning:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Make a directory for “NUMBER”</p></li>
 <li><p>Go into the directory, - &gt; “NUMBER”</p></li>
 <li><p>Make a symbolic link to these files…</p></li>
@@ -1166,18 +892,18 @@ ln -sf ../input/step6.00_equilibration .
 <li><p>done, GO BACK TO BEGINNING OF LOOP AND GET NEXT NUMBER. THEN REPEAT CYCLE UNTIL LIST IS DONE</p></li>
 </ol>
 </div>
-<input id="dd3f3094-7165-4283-8c9d-a3bb05b173ec" name="edbfed0b-4c89-4bab-8511-82cb17db21da" type="radio">
-</input><label class="sd-tab-label" for="dd3f3094-7165-4283-8c9d-a3bb05b173ec">
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
 Section 3 - YEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Section 3</span>
-cp ../input/step3_pbcsetup.rst7 <span class="m">00</span>/step5.00_equilibration_inp.rst7
+cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><span class="m">00</span>/step5.00_equilibration_inp.rst7
 
 <span class="nv">n</span><span class="o">=</span>-2.0
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -f<span class="s2">&quot;%02g&quot;</span> <span class="m">0</span> <span class="m">20</span><span class="sb">`</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-f<span class="s2">&quot;%02g&quot;</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span>
 <span class="k">do</span>
-    <span class="nv">nn</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span> <span class="s2">&quot;%.2f&quot;</span> <span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span><span class="k">)</span>
-    sed <span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span> input/cv.rst &gt; <span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
-    <span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$n</span> + <span class="m">0</span>.20 <span class="p">|</span> bc<span class="sb">`</span>
+<span class="w">    </span><span class="nv">nn</span><span class="o">=</span><span class="k">$(</span><span class="nb">printf</span><span class="w"> </span><span class="s2">&quot;%.2f&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$n</span><span class="s2">&quot;</span><span class="k">)</span>
+<span class="w">    </span>sed<span class="w"> </span><span class="s2">&quot;s/__REST__/</span><span class="si">${</span><span class="nv">nn</span><span class="si">}</span><span class="s2">/g&quot;</span><span class="w"> </span>input/cv.rst<span class="w"> </span>&gt;<span class="w"> </span><span class="si">${</span><span class="nv">i</span><span class="si">}</span>/cv.rst
+<span class="w">    </span><span class="nv">n</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$n</span><span class="w"> </span>+<span class="w"> </span><span class="m">0</span>.20<span class="w"> </span><span class="p">|</span><span class="w"> </span>bc<span class="sb">`</span>
 <span class="k">done</span>
 </pre></div>
 </div>
@@ -1192,7 +918,7 @@ cp ../input/step3_pbcsetup.rst7 <span class="m">00</span>/step5.00_equilibration
 </div>
 </div>
 <p>I hope that wasn’t too bad, you can run the script by typing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash gen_inputs.in
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>gen_inputs.in
 </pre></div>
 </div>
 <div class="admonition tip">
@@ -1203,16 +929,16 @@ cp ../input/step3_pbcsetup.rst7 <span class="m">00</span>/step5.00_equilibration
 </section>
 <hr class="docutils" />
 <section id="running-the-qm-mm-simulations">
-<h2>Running the QM/MM Simulations<a class="headerlink" href="#running-the-qm-mm-simulations" title="Permalink to this headline">#</a></h2>
+<h2>Running the QM/MM Simulations<a class="headerlink" href="#running-the-qm-mm-simulations" title="Permalink to this heading">#</a></h2>
 <p>We have 2 files to make.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code> - for <code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.mdin</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">runqmmm2.slurm</span></code> - for <code class="docutils literal notranslate"><span class="pre">step6.00_equilibration.mdin</span></code></p></li>
 </ol>
 <p>Submit <code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code> to Slurm.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="9a6beb3c-4dbd-44ad-9647-f9f985f4bcd9" name="ebcdc27a-8034-4ca4-b255-11056e3b2cd0" type="radio">
-</input><label class="sd-tab-label" for="9a6beb3c-4dbd-44ad-9647-f9f985f4bcd9">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
 runqmmm1.slurm</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=express</span>
@@ -1225,7 +951,7 @@ runqmmm1.slurm</label><div class="sd-tab-content docutils">
 
 date
 
-<span class="nb">source</span> /scratch/van/Scripts/pete_setqmmm.sh
+<span class="nb">source</span><span class="w"> </span>/scratch/van/Scripts/pete_setqmmm.sh
 
 <span class="nv">SANDER</span><span class="o">=</span><span class="s2">&quot;srun -n 16 sander.MPI&quot;</span>
 
@@ -1233,13 +959,13 @@ date
 
 <span class="nv">istep</span><span class="o">=</span><span class="s2">&quot;step5.00_equilibration&quot;</span>
 
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq <span class="m">0</span> <span class="m">20</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
-    <span class="nb">printf</span> -v j <span class="s2">&quot;%02d&quot;</span> <span class="nv">$i</span>
-    <span class="nb">cd</span> <span class="nv">$j</span>
-    <span class="nv">$SANDER</span> -O -i <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdin -o <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdout -p <span class="si">${</span><span class="nv">init</span><span class="si">}</span>.parm7 -c <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>_inp.rst7 -r <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst -x <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.nc -inf <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdinfo
-    <span class="nb">printf</span> -v j <span class="s2">&quot;%02d&quot;</span> <span class="k">$((</span><span class="nv">$i</span> <span class="o">+</span> <span class="m">1</span><span class="k">))</span>
-    cp <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst ../<span class="si">${</span><span class="nv">j</span><span class="si">}</span>/<span class="si">${</span><span class="nv">istep</span><span class="si">}</span>_inp.ncrst
-    <span class="nb">cd</span> ..
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span>-v<span class="w"> </span>j<span class="w"> </span><span class="s2">&quot;%02d&quot;</span><span class="w"> </span><span class="nv">$i</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$j</span>
+<span class="w">    </span><span class="nv">$SANDER</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdin<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdout<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">init</span><span class="si">}</span>.parm7<span class="w"> </span>-c<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>_inp.rst7<span class="w"> </span>-r<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst<span class="w"> </span>-x<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.nc<span class="w"> </span>-inf<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdinfo
+<span class="w">    </span><span class="nb">printf</span><span class="w"> </span>-v<span class="w"> </span>j<span class="w"> </span><span class="s2">&quot;%02d&quot;</span><span class="w"> </span><span class="k">$((</span><span class="nv">$i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="k">))</span>
+<span class="w">    </span>cp<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst<span class="w"> </span>../<span class="si">${</span><span class="nv">j</span><span class="si">}</span>/<span class="si">${</span><span class="nv">istep</span><span class="si">}</span>_inp.ncrst
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>..
 <span class="k">done</span>
 
 date
@@ -1257,8 +983,8 @@ date
 </ul>
 <p>The last thing we do is use then coordintates from this run as the initial coorindates for the next window! Leave go to the next window, and REPEATTTTTTTT</p>
 </div>
-<input id="99fc7c87-3362-4e78-a3ff-cee9c2b38258" name="ebcdc27a-8034-4ca4-b255-11056e3b2cd0" type="radio">
-</input><label class="sd-tab-label" for="99fc7c87-3362-4e78-a3ff-cee9c2b38258">
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
 runqmmm2.slurm</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=express</span>
@@ -1271,7 +997,7 @@ runqmmm2.slurm</label><div class="sd-tab-content docutils">
 
 date
 
-<span class="nb">source</span> /scratch/van/Scripts/pete_setqmmm.sh
+<span class="nb">source</span><span class="w"> </span>/scratch/van/Scripts/pete_setqmmm.sh
 
 <span class="nv">SANDER</span><span class="o">=</span><span class="s2">&quot;srun -n 16 sander.MPI&quot;</span>
 
@@ -1280,10 +1006,10 @@ date
 <span class="nv">pstep</span><span class="o">=</span><span class="s2">&quot;step5.00_equilibration&quot;</span>
 <span class="nv">istep</span><span class="o">=</span><span class="s2">&quot;step6.00_equilibration&quot;</span>
 
-<span class="k">for</span> i <span class="k">in</span> <span class="sb">`</span>seq -w <span class="m">0</span> <span class="m">20</span><span class="sb">`</span><span class="p">;</span> <span class="k">do</span>
-    <span class="nb">cd</span> <span class="nv">$i</span>
-    <span class="nv">$SANDER</span> -O -i <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdin -o <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdout -p <span class="si">${</span><span class="nv">init</span><span class="si">}</span>.parm7 -c <span class="si">${</span><span class="nv">pstep</span><span class="si">}</span>.ncrst -r <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst -x <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.nc -inf <span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdinfo
-    <span class="nb">cd</span> ..
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$i</span>
+<span class="w">    </span><span class="nv">$SANDER</span><span class="w"> </span>-O<span class="w"> </span>-i<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdin<span class="w"> </span>-o<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdout<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">init</span><span class="si">}</span>.parm7<span class="w"> </span>-c<span class="w"> </span><span class="si">${</span><span class="nv">pstep</span><span class="si">}</span>.ncrst<span class="w"> </span>-r<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.ncrst<span class="w"> </span>-x<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.nc<span class="w"> </span>-inf<span class="w"> </span><span class="si">${</span><span class="nv">istep</span><span class="si">}</span>.mdinfo
+<span class="w">    </span><span class="nb">cd</span><span class="w"> </span>..
 <span class="k">done</span>
 
 date
@@ -1304,12 +1030,12 @@ date
 </section>
 <hr class="docutils" />
 <section id="visualize-the-trajectories">
-<h2>Visualize the Trajectories<a class="headerlink" href="#visualize-the-trajectories" title="Permalink to this headline">#</a></h2>
+<h2>Visualize the Trajectories<a class="headerlink" href="#visualize-the-trajectories" title="Permalink to this heading">#</a></h2>
 <p>Prep some stuff from vmd here or converting</p>
 </section>
 <hr class="docutils" />
 <section id="free-energy-profile-with-mbar">
-<h2>Free Energy Profile with MBAR<a class="headerlink" href="#free-energy-profile-with-mbar" title="Permalink to this headline">#</a></h2>
+<h2>Free Energy Profile with MBAR<a class="headerlink" href="#free-energy-profile-with-mbar" title="Permalink to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>I do not know if this works on Windows, so try this on pete first!</p>
@@ -1385,7 +1111,7 @@ date
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebooks/02-simulation"
         },
         predefinedOutput: true
@@ -1393,50 +1119,167 @@ date
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="qmmm.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">QM/MM</p>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="qmmm.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">QM/MM</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="analysis.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="analysis.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Analysis</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Richard Van<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">Prepare Project Folder on the Cluster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directories-flow-structure-organization">Directories: Flow, Structure, &amp; Organization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-files-to-input-directory">Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">Generate Parameters for Allyl Vinyl Ether</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files-cv-rst">Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-of-cv-rst">Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">QM/MM MD Input files</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">Automate the Umbrella Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">Running the QM/MM Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">Visualize the Trajectories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">Free Energy Profile with MBAR</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
 
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-gitlab fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>
