@@ -1,9 +1,8 @@
-# Example Code
+# Scripting Examples & More
 
-Additional programming details & example code.
+Some more information and sample code
 
-
-## [Moore Bash](#bash/overview.md)
+## [More Bash](#bash/overview.md)
 
  1. [Scripting](#bash/scripting)
  2. [Startup Files](#bash/startup)

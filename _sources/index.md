@@ -1,4 +1,8 @@
-# CodingNotes
+---
+html_theme.sidebar_secondary.remove: true
+---
+
+# CodingNotes 
 
 **Notes I wish I had showed me when I started**
 
