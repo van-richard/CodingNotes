@@ -1,0 +1,5 @@
+General Notes
+=============
+
+.. contents::
+    :local:

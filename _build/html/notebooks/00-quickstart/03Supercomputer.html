@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Supercomputers &#8212; CodingNotes</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/00-quickstart/03Supercomputer.html" />
+    <link rel="shortcut icon" href="../../_static/van-abstract.svg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python &amp; Conda" href="04PythonConda.html" />
+    <link rel="prev" title="Text Editors" href="02vim.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CodingNotes</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../index.html">
+                    CodingNotes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quick Start Guide
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01terminal.html">
+   Terminal, Shell, &amp; Bash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02vim.html">
+   Text Editors
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Supercomputers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04PythonConda.html">
+   Python &amp; Conda
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="05StructureFiles.html">
+   Molecular Structure Files
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="06PDBFiles.html">
+     Exploring PDB Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="07XYZFiles.html">
+     What are XYZ Files?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08BasicMD.html">
+   Briefly, Molecular Dynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Example Code &amp; More
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-scripting/index.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-scripting/bash/overview.html">
+   bash Shell
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-scripting/vi/overview.html">
+   Text Editing with Vi/Vim
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-scripting/python/overview.html">
+   Python &amp; Conda
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-scripting/python/python.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-scripting/python/conda.html">
+     Conda
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-scripting/python/condaenv.html">
+     Conda Environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01-scripting/python/jupyter.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-simulation/index.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02-simulation/md.html">
+   Classical MD
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-simulation/simple.html">
+     Simple MD Tutorial of Alanine Dipeptide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-simulation/distance.html">
+     Applying Distance Restraints in Classical MD SImulations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02-simulation/qmmm.html">
+   QM/MM
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-simulation/claisen.html">
+     Simple QM/MM Simulation of the Claisen Rearrangment Reaction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02-simulation/analysis.html">
+   Analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-simulation/rmsd.html">
+     RMSD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-simulation/rmsf.html">
+     RMSF
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/notebooks/00-quickstart/03Supercomputer.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Supercomputers
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-ssh">
+     What is
+     <span class="xref std std-term">
+      ssh
+     </span>
+     ?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-slurm">
+     What is
+     <span class="xref std std-term">
+      Slurm
+     </span>
+     ?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-the-hpc">
+   Accessing the HPC
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remote-login">
+     Remote Login
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-the-hostname">
+     What is the
+     <em>
+      hostname
+     </em>
+     ?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-accessing-the-hpc">
+     Task: Accessing the HPC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hpc-job-managmer">
+   HPC Job Managmer
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slurm-language">
+     SLURM Language
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hpc-resources">
+     HPC Resources
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pre-installed-softwares">
+       Pre-Installed Softwares
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slurm-scripts">
+     Slurm Scripts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#directives-sbatch">
+       Directives (
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         #SBATCH
+        </span>
+       </code>
+       )
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Supercomputers</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Supercomputers
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-ssh">
+     What is
+     <span class="xref std std-term">
+      ssh
+     </span>
+     ?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-slurm">
+     What is
+     <span class="xref std std-term">
+      Slurm
+     </span>
+     ?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-the-hpc">
+   Accessing the HPC
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#remote-login">
+     Remote Login
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-the-hostname">
+     What is the
+     <em>
+      hostname
+     </em>
+     ?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-accessing-the-hpc">
+     Task: Accessing the HPC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hpc-job-managmer">
+   HPC Job Managmer
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slurm-language">
+     SLURM Language
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hpc-resources">
+     HPC Resources
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pre-installed-softwares">
+       Pre-Installed Softwares
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slurm-scripts">
+     Slurm Scripts
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#directives-sbatch">
+       Directives (
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         #SBATCH
+        </span>
+       </code>
+       )
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="supercomputers">
+<h1>Supercomputers<a class="headerlink" href="#supercomputers" title="Permalink to this headline">#</a></h1>
+<p>In simple terms, they are like giant, powerful versions of regular computers, much larger and involve many more parts. They can take up entire rooms or even buildings. Inside these machines, you’ll find thousands or even millions of smaller computer processors (like the brain of the computer) and a lot of memory (like the computer’s short-term memory). Think of these processors as workers and the memory as their workspace.</p>
+<p>In Oklahoma, we have access to 2 supercomputers:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://www.ou.edu/oscer">Oscer (aka. Schooner) at OU</a></p></li>
+<li><p><a class="reference external" href="https://hpcc.okstate.edu/pete-supercomputer.html">Pete at OSU</a></p></li>
+</ol>
+<p>Visit their websites to get more information and learn how to make an account!</p>
+<p>Two key points when using the supercomputer:</p>
+<ol class="simple">
+<li><p>We access the computers remotely with our terminal</p></li>
+<li><p>Slurm is used to manage jobs on the cluster</p></li>
+</ol>
+<section id="what-is-ssh">
+<h2>What is <span class="xref std std-term">ssh</span>?<a class="headerlink" href="#what-is-ssh" title="Permalink to this headline">#</a></h2>
+<p>To login remotely to a supercomputer, we use the command <span class="xref std std-term">ssh</span> on the terminal. This is short for secure shell protocol and can take a few arguments. The syntax is <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">[username]&#64;ssh.server.example.edu</span></code>.</p>
+<p>First, open your terminal, and follow the directions for Oscer or Pete SSH. Change the <code class="docutils literal notranslate"><span class="pre">[username]</span></code> part, to the username you created!!</p>
+</section>
+<section id="what-is-slurm">
+<h2>What is <span class="xref std std-term">Slurm</span>?<a class="headerlink" href="#what-is-slurm" title="Permalink to this headline">#</a></h2>
+<p>Since high-performace computing centers are composed of many parts (CPU, GPU, RAM, SSD, HDD, etc.), involving many different users (biological science, machine learning, etc.) with different needs. They require a job scheduling and resource management system. One system is Slurm.</p>
+<p>Slurm is like a traffic cop for computers. It’s a software system used in big computer clusters, like those in data centers or supercomputers. Slurm helps manage and allocate the computing resources, like processors and memory, to different tasks or jobs that people want to run on the cluster.</p>
+<p>Imagine a busy intersection where the traffic cop directs cars to different lanes or tells them when to go. Slurm does something similar but for computer tasks, making sure they don’t crash into each other and efficiently use the available resources, so everything runs smoothly. It helps coordinate and schedule who gets to use the computers and when.</p>
+<p>For us, the users, some key points when using Slurm are:</p>
+<ol class="simple">
+<li><p>Job Submission/Management</p></li>
+<li><p>Resource Allocation/Utilization</p></li>
+<li><p>Scripting and Automation</p></li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="accessing-the-hpc">
+<h1>Accessing the HPC<a class="headerlink" href="#accessing-the-hpc" title="Permalink to this headline">#</a></h1>
+<section id="remote-login">
+<h2>Remote Login<a class="headerlink" href="#remote-login" title="Permalink to this headline">#</a></h2>
+<p>Accessing the supercomputer can be done on your laptop, in the comfort of your bed. The command is <span class="xref std std-term">ssh</span>, which stands for “Secure Shell protocol”.</p>
+<p>It has the following format:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh username@hostname
+</pre></div>
+</div>
+<p>Where,</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> is the username (whatever you made when applying for the account)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;</span></code> is always between <code class="docutils literal notranslate"><span class="pre">username</span></code> and <code class="docutils literal notranslate"><span class="pre">hostname</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> is the name and IP address of the supercomputer</p></li>
+</ol>
+<p><strong>Example</strong> For my username, <code class="docutils literal notranslate"><span class="pre">van</span></code>, the command would be:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh van@hostname
+</pre></div>
+</div>
+</section>
+<section id="what-is-the-hostname">
+<h2>What is the <em>hostname</em>?<a class="headerlink" href="#what-is-the-hostname" title="Permalink to this headline">#</a></h2>
+<p>It depends on the computing center. In Oklahoma, you can access Oscer (<code class="docutils literal notranslate"><span class="pre">schooner.oscer.ou.edu</span></code>) or Pete (<code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code>) by:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="64a01242-f261-4562-9790-f5856d0f818e" name="4213d201-d5e1-42ce-b9a1-57fbf73e7f07" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="64a01242-f261-4562-9790-f5856d0f818e">
+Oscer/Schooner</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh username@schooner.oscer.ou.edu 
+</pre></div>
+</div>
+</div>
+<input id="1889e146-501d-4bdf-afb9-44fcb9a58648" name="4213d201-d5e1-42ce-b9a1-57fbf73e7f07" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="1889e146-501d-4bdf-afb9-44fcb9a58648">
+Pete</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh username@pete.hpc.okstate.edu
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="task-accessing-the-hpc">
+<h2>Task: Accessing the HPC<a class="headerlink" href="#task-accessing-the-hpc" title="Permalink to this headline">#</a></h2>
+<p>Try logging into one of the supercomputer. Change the <code class="docutils literal notranslate"><span class="pre">hostname</span></code> to the <code class="docutils literal notranslate"><span class="pre">pete.hpc.okstate.edu</span></code> or ``schooner.oscer.ou.edu`.</p>
+<p>My username is <code class="docutils literal notranslate"><span class="pre">van</span></code>, so logging in looks like this:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="01230b50-42e4-46ef-b674-d956656ef429" name="1e9dbaa0-4fb5-465f-bd73-5f95867aa16f" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key1" for="01230b50-42e4-46ef-b674-d956656ef429">
+Oscer/Schooner</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh van@schooner.oscer.ou.edu 
+</pre></div>
+</div>
+</div>
+<input id="182e5593-8070-4848-9f46-91f846f148fc" name="1e9dbaa0-4fb5-465f-bd73-5f95867aa16f" type="radio">
+</input><label class="sd-tab-label" data-sync-id="key2" for="182e5593-8070-4848-9f46-91f846f148fc">
+Pete</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh van@pete.hpc.okstate.edu
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On the first login attempt, you will get the following prompt:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>The authenticity of host <span class="s1">&#39;pete.hpc.okstate.edu&#39;</span> cannot be established.
+ DSA key fingerprint is <span class="m">01</span>:23:45:67:89:ab:cd:ef:ff:fe:dc:ba:98:76:54:32:10.
+ Are you sure you want to <span class="k">continue</span> connecting <span class="o">(</span>yes/no<span class="o">)</span>?
+</pre></div>
+</div>
+<p>Answering <code class="docutils literal notranslate"><span class="pre">yes</span></code> to the prompt will cause the session to continue, and the host key is stored in the local system’s known_hosts file. This is a hidden file, stored by default in a hidden directory, called <code class="docutils literal notranslate"><span class="pre">/.ssh/known_hosts</span></code>, in the your home directory. Once the host key has been stored in the known_hosts file, the client system can connect directly to that server again without need for any approvals.</p>
+<p><strong>Answer <code class="docutils literal notranslate"><span class="pre">yes</span></code> by typing into your terminal. This will only happen on the first login!</strong></p>
+</div>
+<p><em>Congratulations! You logged into the supercomputer!</em></p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="hpc-job-managmer">
+<h1>HPC Job Managmer<a class="headerlink" href="#hpc-job-managmer" title="Permalink to this headline">#</a></h1>
+<section id="slurm-language">
+<h2>SLURM Language<a class="headerlink" href="#slurm-language" title="Permalink to this headline">#</a></h2>
+<p>Slurm is the software which manages the individual user and group jobs in a supercomputer center.</p>
+<p>This is a helpful refernce: <a class="reference external" href="https://slurm.schedmd.com/overview.html">slurm.schemd.com</a></p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>We use the SSH protocol to remotely access the computer. Slurm commands also start with the letter <code class="docutils literal notranslate"><span class="pre">s</span></code>, so they’re not to hard to remember~</p>
+<p>Commands: <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>, <code class="docutils literal notranslate"><span class="pre">scancel</span></code>, <code class="docutils literal notranslate"><span class="pre">squeue</span></code>, <code class="docutils literal notranslate"><span class="pre">sinfo</span></code></p>
+</div>
+</aside>
+<p>When you access the supercomputer remotely (<code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">username&#64;hostname</span></code>), you will always start at <code class="docutils literal notranslate"><span class="pre">/home</span></code>.</p>
+<p>If you run <span class="xref std std-term">pwd</span>, you should see that you’re it!</p>
+</section>
+<section id="hpc-resources">
+<h2>HPC Resources<a class="headerlink" href="#hpc-resources" title="Permalink to this headline">#</a></h2>
+<p><span class="xref std std-term">sinfo</span> prints information about the different paritions, and their current status.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo 
+</pre></div>
+</div>
+<section id="pre-installed-softwares">
+<h3>Pre-Installed Softwares<a class="headerlink" href="#pre-installed-softwares" title="Permalink to this headline">#</a></h3>
+<p>Clusters often has preinstalled software you can use. They’re called using the command <span class="xref std std-term">module</span> . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo 
+</pre></div>
+</div>
+</section>
+</section>
+<section id="slurm-scripts">
+<h2>Slurm Scripts<a class="headerlink" href="#slurm-scripts" title="Permalink to this headline">#</a></h2>
+<p>It will be important for you to differentiat between a shell script and a Slurm script. When I make files, I typically use the file extention <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> for jobs I plan to submit to the cluster. The slurm scripts have a specific notation you must follow.</p>
+<section id="directives-sbatch">
+<h3>Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)<a class="headerlink" href="#directives-sbatch" title="Permalink to this headline">#</a></h3>
+<p>The way that Slurm determines how to allocate your jobs to the cluster (<em>i.e. across how many compute nodes, with how many CPUs, for how long etc</em>) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>. Common types of jobs are:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="8b0796c0-d969-47b5-a49f-ccd0b47e3a99" name="e5b00805-2d4a-4c78-a7bd-954ca2805df3" type="radio">
+</input><label class="sd-tab-label" for="8b0796c0-d969-47b5-a49f-ccd0b47e3a99">
+CPU Jobs</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --partition=PARTITION</span>
+<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
+<span class="c1">#SBATCH --nodes=NODES</span>
+<span class="c1">#SBATCH --ntasks=NTASKS</span>
+<span class="c1">#SBATCH --output=%j.out </span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH --name=JOBNAME</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Hello World!&quot;</span>
+</pre></div>
+</div>
+</div>
+<input id="fba90b1e-e071-4560-b66d-30c0aa600822" name="e5b00805-2d4a-4c78-a7bd-954ca2805df3" type="radio">
+</input><label class="sd-tab-label" for="fba90b1e-e071-4560-b66d-30c0aa600822">
+GPU Jobs</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --partition=GPU_PARTITION</span>
+<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
+<span class="c1">#SBATCH --nodes=NODES</span>
+<span class="c1">#SBATCH --ntasks=NTASKS</span>
+<span class="c1">#SBATCH --output=%j.out </span>
+<span class="c1">#SBATCH --error=%j.err</span>
+<span class="c1">#SBATCH --name=JOBNAME</span>
+<span class="c1">#SBATCH --gres=gpu:1</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Hello World!&quot;</span>
+</pre></div>
+</div>
+</div>
+<input id="a62d7452-8304-48d2-b860-fb24a8ad496d" name="e5b00805-2d4a-4c78-a7bd-954ca2805df3" type="radio">
+</input><label class="sd-tab-label" for="a62d7452-8304-48d2-b860-fb24a8ad496d">
+Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">##!/bin/bash</span>
+<span class="c1">##SBATCH --partition=GPU_PARTITION</span>
+<span class="c1">##SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
+<span class="c1">##SBATCH --nodes=NODES</span>
+<span class="c1">##SBATCH --ntasks=NTASKS</span>
+<span class="c1">##SBATCH --output=%j.out </span>
+<span class="c1">##SBATCH --error=%j.err</span>
+<span class="c1">##SBATCH --name=JOBNAME</span>
+<span class="c1">##SBATCH --mem=0</span>
+<span class="c1">##SBATCH --exclusive</span>
+
+<span class="nb">echo</span> <span class="s2">&quot; Wow you dick.&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To submit a <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> job use <span class="xref std std-term">sbatch</span>. Alternatively, you can cancel it with <span class="xref std std-term">scancel</span>.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="a0559546-6bce-4566-98aa-3395753f4c01" name="7e7e5292-f014-474d-9267-a0006c5d02f8" type="radio">
+</input><label class="sd-tab-label" for="a0559546-6bce-4566-98aa-3395753f4c01">
+Submit a Job</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sbatch job.slurm   <span class="c1"># This will print a JOB_ID</span>
+</pre></div>
+</div>
+</div>
+<input id="5ec7ac11-635c-4198-92c0-4ad0cf145991" name="7e7e5292-f014-474d-9267-a0006c5d02f8" type="radio">
+</input><label class="sd-tab-label" for="5ec7ac11-635c-4198-92c0-4ad0cf145991">
+Cancel a Job</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scancel JOB_ID
+</pre></div>
+</div>
+</div>
+<input id="3dc6653d-0ebc-4324-aa46-92d0ca030973" name="7e7e5292-f014-474d-9267-a0006c5d02f8" type="radio">
+</input><label class="sd-tab-label" for="3dc6653d-0ebc-4324-aa46-92d0ca030973">
+Check jobs</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue             <span class="c1"># All jobs queue</span>
+squeue -u username <span class="c1"># your usernameUSERNAME queue</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/00-quickstart"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="02vim.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Text Editors</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="04PythonConda.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python &amp; Conda</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Richard Van<br/>
+  
+      &copy; Copyright 2024.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

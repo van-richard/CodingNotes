@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>BAR &amp; MBAR &#8212; CodingNotes</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/03-notes/estimators/mbar.html" />
+    <link rel="shortcut icon" href="../../../_static/van-abstract.svg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">CodingNotes</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../index.html">
+                    CodingNotes
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Quick Start Guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00-quickstart/index.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00-quickstart/01terminal.html">
+   Terminal, Shell, &amp; Bash
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00-quickstart/02vim.html">
+   Text Editors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00-quickstart/03Supercomputer.html">
+   Supercomputers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00-quickstart/04PythonConda.html">
+   Python &amp; Conda
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../00-quickstart/05StructureFiles.html">
+   Molecular Structure Files
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00-quickstart/06PDBFiles.html">
+     Exploring PDB Files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../00-quickstart/07XYZFiles.html">
+     What are XYZ Files?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../00-quickstart/08BasicMD.html">
+   Briefly, Molecular Dynamics
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Example Code &amp; More
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01-scripting/index.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01-scripting/bash/overview.html">
+   bash Shell
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../01-scripting/vi/overview.html">
+   Text Editing with Vi/Vim
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../01-scripting/python/overview.html">
+   Python &amp; Conda
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-scripting/python/python.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-scripting/python/conda.html">
+     Conda
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-scripting/python/condaenv.html">
+     Conda Environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../01-scripting/python/jupyter.html">
+     Jupyter Notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../02-simulation/index.html">
+   Overview
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02-simulation/md.html">
+   Classical MD
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-simulation/simple.html">
+     Simple MD Tutorial of Alanine Dipeptide
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-simulation/distance.html">
+     Applying Distance Restraints in Classical MD SImulations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02-simulation/qmmm.html">
+   QM/MM
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-simulation/claisen.html">
+     Simple QM/MM Simulation of the Claisen Rearrangment Reaction
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../02-simulation/analysis.html">
+   Analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-simulation/rmsd.html">
+     RMSD
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../02-simulation/rmsf.html">
+     RMSF
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/notebooks/03-notes/estimators/mbar.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bennett-acceptance-ratio-bar">
+   Bennett Acceptance Ratio (BAR)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivations">
+   Derivations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multistate-bennett-acceptance-ratio-mbar">
+   Multistate Bennett Acceptance Ratio (MBAR)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Derivations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reduced-potentials-u-x">
+     Reduced Potentials (
+     <span class="math notranslate nohighlight">
+      \(u(x)\)
+     </span>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>BAR & MBAR</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bennett-acceptance-ratio-bar">
+   Bennett Acceptance Ratio (BAR)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#derivations">
+   Derivations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multistate-bennett-acceptance-ratio-mbar">
+   Multistate Bennett Acceptance Ratio (MBAR)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Derivations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reduced-potentials-u-x">
+     Reduced Potentials (
+     <span class="math notranslate nohighlight">
+      \(u(x)\)
+     </span>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="bar-mbar">
+<h1>BAR &amp; MBAR<a class="headerlink" href="#bar-mbar" title="Permalink to this headline">#</a></h1>
+<p>Bennett Acceptance Ratio (BAR) method draws on data from multiple states to estimate the free energy difference.</p>
+<p>While, TI requires the ensemble average from a <em>single</em> state to estimate free energies (TI needs the derivatives at state), it does not require the configurations from any neighboring state.</p>
+<p>However, BAR, requires configuration information from two states to estimate free energy differences.</p>
+<section id="bennett-acceptance-ratio-bar">
+<h2>Bennett Acceptance Ratio (BAR)<a class="headerlink" href="#bennett-acceptance-ratio-bar" title="Permalink to this headline">#</a></h2>
+<p>BAR works under the principal that at the same configuration, <span class="math notranslate nohighlight">\(\vec q\)</span>, at two separate states, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, there is a pathway connecting the two potentials and a difference of <span class="math notranslate nohighlight">\(\Delta U_{ij}(\vec{q})\)</span>. Because the states are in the same configuration, there is a exact relationship between the distributions of potential energy differences between <span class="math notranslate nohighlight">\(\Delta U_{ij}(\vec{q})\)</span> of states sampled from <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(\Delta U_{ji}(\vec{q})\)</span> the distribution of potential energy differences sampled from the state <span class="math notranslate nohighlight">\(j\)</span>. Since it’s an exact function of distributions, statistics can be applied to find the optimal way to use the information between two states, improving the free energy estimate.</p>
+</section>
+<section id="derivations">
+<h2>Derivations<a class="headerlink" href="#derivations" title="Permalink to this headline">#</a></h2>
+<p>This derivation starts from a slightly modified version of the free energy equation</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta A_{ij} = -k_{B} T \ln \frac{Q_j}{Q_i} = k_{B}T \ln \frac{\left\langle\alpha(\vec{q}) \exp[-\beta U_{i}(\vec{q})]\right\rangle_j}{\left\langle\alpha(\vec{q}) \exp[-\beta U_{j}(\vec{q})]\right\rangle_i}
+\]</div>
+<p>which is true for any <span class="math notranslate nohighlight">\(\alpha(\vec{q})\gt 0\)</span> for all <span class="math notranslate nohighlight">\(\vec{q}\)</span>. This was Bennett’s start point and he then used variational calculus to select the value of <span class="math notranslate nohighlight">\(\alpha(\vec{q})\)</span> minimizing the variance of the free energy. The end result is an implicit function of the free energy, and the number of samples at each state, <span class="math notranslate nohighlight">\(n_i\)</span> and <span class="math notranslate nohighlight">\(n_j\)</span>, and is</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i=1}^{n_i} \frac{1}{1 + \exp(\ln(n_i/n_j) + \beta \Delta U_{ij} - \beta \Delta A))} - \sum_{j=1}^{n_j} \frac{1}{1 + \exp(\ln(n_j/n_i) - \beta \Delta U_{ji} + \beta \Delta A))} = 0
+\]</div>
+<p>This is the full BAR equation and its full derivation can be found in <a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/0021999176900784">Bennett’s paper</a></p>
+</section>
+<section id="multistate-bennett-acceptance-ratio-mbar">
+<h2>Multistate Bennett Acceptance Ratio (MBAR)<a class="headerlink" href="#multistate-bennett-acceptance-ratio-mbar" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><p>“The Multistate Bennett Acceptance Ratio (MBAR) is a direct extension to BAR as it allows for assessing data from all states, and predicting the free energy at an unsampled state. MBAR reduces to BAR in the limit that only two states are sampled.Much like WHAM, the free energies provided by this method are only a statistical estimator, however, MBAR has been shown to have the lowest variance estimator to date.”</p>
+</div></blockquote>
+<p>Esseentially, it is a generalization of the  that calculates the (relative) free energies of several multi-states. It  reduces to the BAR method when only two super states are involved.</p>
+</section>
+<section id="id1">
+<h2>Derivations<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<!-- MBAR is derived from a set of $K x K$ weighting functions, $\alpha_{i,j}(\vec{q})$ that minimized the variance during the reweighting across the board.  -->
+<p>Starting from our core free energy equation, we have</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta A_{ij} = -\beta^{-1} \ln\frac{Q_j}{Q_i} 
+\]</div>
+<p>Using Bennett’s approach, we can come to the relation</p>
+<div class="math notranslate nohighlight">
+\[
+Q_i\left\langle\alpha_{ij}\exp\left(-\beta U_j\right)\right\rangle_i = Q_j\left\langle\alpha_{ij}\exp\left(-\beta U_i\right)\right\rangle_j
+\]</div>
+<p>and from here, we can write,</p>
+<div class="math notranslate nohighlight">
+\[
+\sum\limits_{j=1}^K \frac{\hat{Q_i}}{N_i} \sum\limits_{n=1}^{N_i} \alpha_{ij}\exp\left(-\beta U_j(\vec{q}_{i,n})\right) = \sum\limits_{j=1}^K \frac{\hat{Q_j}}{N_j} \sum\limits_{n=1}^{N_j} \alpha_{ij}\exp\left(-\beta U_i(\vec{q}_{j,n})\right)
+\]</div>
+<p><strong>assuming we use the empirical estimator for the expectation values of</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\left\langle g \right\rangle_i = N_i^{-1}\sum_{n=1}^{N_i}g(\vec{q}_{i,n})
+\]</div>
+<p>Choosing the optimal <span class="math notranslate nohighlight">\(\alpha_{ij}\)</span> can be done by looking through the literature at extended bridge sampling. We then get:</p>
+<div class="math notranslate nohighlight">
+\[
+\alpha_{ij} = \frac{N_j \hat{c_j}^{-1}}{\sum\limits_{k=1}^K N_k \hat{c_k}^{-1} \exp\left(-\beta U_k \right)} 
+\]</div>
+<p>After making some substitutions, we get an expression for an estimated free energy of</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{A_i} = -\beta^{-1} \ln \sum\limits_{j=1}^K \sum\limits_{n=1}^{N_j} \frac{\exp\left[-\beta U_i\right]}{\sum_{k=1}^K N_k \exp\left[\beta\hat{A_k} - \beta U_k\right]}
+\]</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>One of the first things you should notice is that we have a single free energy, not a difference. The free energies for a given set of states is only uniquely determined up to an additive constant.</p>
+<p>Because of this, one free energy must be taken in reference and thus we are once again calculating free energy differences.</p>
+</div>
+<p>It is important to note that the <span class="math notranslate nohighlight">\(U\)</span> that appears in the MBAR derivation and equation is not only valid for potential energies, but any generalized/reduced potential as a function of pressure, volume, chemical potential, and number of particles.</p>
+<section id="reduced-potentials-u-x">
+<h3>Reduced Potentials (<span class="math notranslate nohighlight">\(u(x)\)</span>)<a class="headerlink" href="#reduced-potentials-u-x" title="Permalink to this headline">#</a></h3>
+<p>In a general form, you can take some subset of the additive terms in the following to define the reduced potential <span class="math notranslate nohighlight">\(u_i(x)\)</span> for thermodynamic state <span class="math notranslate nohighlight">\(i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+u_i(x) \equiv \beta_i [ U_i(x) + P_i V(x) + {\bf \mu}_i^\mathrm{T} {\bf N}(x) ]
+\]</div>
+<p>The reduced potential function is uniquely defined by some combination of thermodynamic parameters <span class="math notranslate nohighlight">\(\beta\)</span> denoting the inverse temperature, <span class="math notranslate nohighlight">\(U\)</span> denoting the potential energy function, <span class="math notranslate nohighlight">\(P\)</span> denoting the pressure, and <span class="math notranslate nohighlight">\(\mu\)</span> denoting the chemical potential of one or more components of the system. These latter two thermodynamic variables are conjugate to the box volume <span class="math notranslate nohighlight">\(V\)</span> and particle numbers <span class="math notranslate nohighlight">\(N\)</span>. Use of the reduced potential simplifies the MBAR equations and generalizes them to the computation of arbitrary reduced free energy differences <span class="math notranslate nohighlight">\(\Delta f_{ij} \equiv \beta_j A_j - \beta_i A_i\)</span> among states.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember always the free energy will change depending on which reduced potential you use, so please take this into account when working with MBAR.</p>
+</div>
+</aside>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/03-notes/estimators"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Richard Van<br/>
+  
+      &copy; Copyright 2024.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

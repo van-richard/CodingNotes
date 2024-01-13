@@ -1,43 +1,49 @@
- 
-root: index
-subtrees:
-- caption: Comp. Chem.
-  entries:
-    - file: notebooks/quickstart/overview
-      entries:
-      - file: notebooks/quickstart/terminal
-        entries:
-        - file: notebooks/quickstart/vim
-        - file: notebooks/quickstart/filemanagement
-      - file: notebooks/quickstart/Supercomputer
-        entries:
-        - file: notebooks/quickstart/ssh
-        - file: notebooks/quickstart/ssh-extra
-        - file: notebooks/quickstart/slurm
-        - file: notebooks/quickstart/Python
-        - file: notebooks/quickstart/Conda
-      - file: notebooks/quickstart/StructureFiles
-        entries:
-        - file: notebooks/quickstart/PDBFiles
-        - file: notebooks/quickstart/XYZFiles
-        - file: notebooks/quickstart/BasicMD
-subtrees:
-- caption: Examples & Tutorials
-  entries:
-  - file: notebooks/bash/overview
-  - file: notebooks/bash/scripting
-  - file: notebooks/bash/startup
-  - file: notebooks/hpc/overview
-  - file: notebooks/hpc/autologin
-  - file: notebooks/hpc/config
-  - file: notebooks/git/overview
-  - file: notebooks/git/git
-  - file: notebooks/git/branch
-  - file: notebooks/python/overview
-  - file: notebooks/python/python
-  - file: notebooks/python/conda
-  - file: notebooks/python/installconda
-  - file: notebooks/python/condaenv
-  - file: notebooks/python/myenv
-  - file: notebooks/python/condaintel
-  - file: notebooks/python/jupyter
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index 
+parts:
+  - caption: Quick Start Guide
+    chapters:
+    - file: notebooks/00-quickstart/index.md
+      title: Overview
+    - file: notebooks/00-quickstart/01terminal
+    - file: notebooks/00-quickstart/02vim
+    - file: notebooks/00-quickstart/03Supercomputer
+    - file: notebooks/00-quickstart/04PythonConda
+    - file: notebooks/00-quickstart/05StructureFiles
+      sections:
+      - file: notebooks/00-quickstart/06PDBFiles
+      - file: notebooks/00-quickstart/07XYZFiles
+    - file: notebooks/00-quickstart/08BasicMD
+  - caption: Example Code & More
+    chapters:
+    - file: notebooks/01-scripting/index
+      title: Overview
+    - file: notebooks/01-scripting/bash/overview
+      sections:
+      - file: notebooks/01-scripting/bash/scripting
+      - file: notebooks/01-scripting/bash/startup
+    - file: notebooks/01-scripting/vi/overview
+    - file: notebooks/01-scripting/python/overview
+      sections:
+      - file: notebooks/01-scripting/python/python
+      - file: notebooks/01-scripting/python/conda
+      - file: notebooks/01-scripting/python/condaenv
+      - file: notebooks/01-scripting/python/jupyter
+  - caption: Tutorials
+    chapters:
+    - file: notebooks/02-simulation/index
+      title: Overview
+    - file: notebooks/02-simulation/md
+      sections:
+      - file: notebooks/02-simulation/simple
+      - file: notebooks/02-simulation/distance
+    - file: notebooks/02-simulation/qmmm
+      sections:
+      - file: notebooks/02-simulation/claisen
+    - file: notebooks/02-simulation/analysis
+      sections:
+      - file: notebooks/02-simulation/rmsd
+      - file: notebooks/02-simulation/rmsf
