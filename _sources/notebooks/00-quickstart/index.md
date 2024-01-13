@@ -6,36 +6,19 @@ html_theme.sidebar_secondary.remove: true
 
 *I intended for this to be read within 30 minutes... Sorry! (December 9, 2023)*
 
-For those with no background in programming, there is a lot to take in.
+- For those with ZERO experience in computers, this guide offers a basic introduction to several computational tools I used in my time as Ph.D candidate
 
-**Objective.** To become familiar with:
+- This section aims to familiarize you with language, workflow, and concepts, supporting your baseline understanding of these tools. In the next few pages
 
-  1. Using text-commands to navigate your computer
-  2. Accessing the supercomputer, and the job management system, SLURM
-  3. Installing python with the conda package
-  4. How to read/write molecular structure files (`.pdb`/`.xyz`) 
-  5. Overview of molecular dynamics simulations
+**Our Objective.** Is to become familiar with:
 
-**Recommended Software.** Some programs you might need to install are:
+  1. Use text commands to navigate your computer
+  2. Access the supercomputer and utilize SLURM
+  3. Code with Python and use a package manager
+  4. Understand molecular structure files (`.pdb`/`.xyz`)
+  5. Briefly discuss molecular dynamics simulation concepts
 
-* [AutoDock Tools](https://ccsb.scripps.edu/mgltools/)
-* [AutoDock Vina](https://vina.scripps.edu/downloads/)
-* [ChimeraX](https://www.cgl.ucsf.edu/chimerax/)
-* [IQmol](https://iqmol.org)
-* [PyMol](https://pymol.org/edu/)
-* [Schrodinger Maestro](https://www.ks.uiuc.edu/Research/vmd/)
-* [VMD](https://www.ks.uiuc.edu/Research/vmd/)
-
-***
-
-**Additional Online Tools.** 
-
-* [GitHub](https://github.com)
-* [Google Colaboratory](https://colab.research.google.com)
-* [Overleaf](https://overleaf.com)
-
-***
-
-**Other Resources I enjoyed.**
+**Other Resources.** In addition, to my notes (which is poorly written), I encourage you to explore other resources.
 
 * [The Sherrill Group: Notes](http://vergil.chemistry.gatech.edu/notes/)
+* [General Machine Learning](https://e2eml.school/blog.html)

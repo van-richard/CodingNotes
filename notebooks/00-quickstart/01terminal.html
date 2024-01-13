@@ -164,6 +164,13 @@ const thebe_selector_output = ".output, .cell_output"
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Pregame.html">
+                        Pregame
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="index.html">
                         Quick Start Guide
@@ -184,19 +191,19 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-notes/index.html">
-                        Notes
-                      </a>
-                    </li>
-                
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../03-notes/index.html">
+                        Notes
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../chimera/index.html">
                         ChimeraX
@@ -350,6 +357,13 @@ document.write(`
 <nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Pregame.html">
+                        Pregame
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="index.html">
                         Quick Start Guide
@@ -370,19 +384,19 @@ document.write(`
                       </a>
                     </li>
                 
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-notes/index.html">
-                        Notes
-                      </a>
-                    </li>
-                
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
                     More
                 </button>
                 <ul id="pst-nav-more-links-2" class="dropdown-menu">
                     
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../03-notes/index.html">
+                        Notes
+                      </a>
+                    </li>
+                
+
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../chimera/index.html">
                         ChimeraX
@@ -530,57 +544,37 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="terminal-shell-bash">
 <h1>Terminal, Shell, &amp; Bash<a class="headerlink" href="#terminal-shell-bash" title="Permalink to this heading">#</a></h1>
-<section id="terminal">
-<h2>Terminal<a class="headerlink" href="#terminal" title="Permalink to this heading">#</a></h2>
-<figure class="align-center" id="terminal-header">
+<figure class="align-center" id="terminal-header" style="width: 75%">
 <img alt="https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif" src="https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif" />
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Command line on MacOS :term:<code class="docutils literal notranslate"><span class="pre">terminal</span></code>, where, (1) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> will return <code class="docutils literal notranslate"><span class="pre">&quot;[</span></code>some text<code class="docutils literal notranslate"><span class="pre">]&quot;</span></code> as an output, (2) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> to output “2 + 2”, the <code class="docutils literal notranslate"><span class="pre">|</span></code> (pipe) takes this as input for the next command, <code class="docutils literal notranslate"><span class="pre">bc</span> <span class="pre">-l</span></code> (calculator), (3) <code class="docutils literal notranslate"><span class="pre">echo</span></code> prints the variable, <code class="docutils literal notranslate"><span class="pre">$SHELL</span></code>, which points to the program <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>, and (4) cowboy.</span><a class="headerlink" href="#terminal-header" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Example of command line in the <code class="docutils literal notranslate"><span class="pre">terminal</span></code> application of MacOS. The line you are working on is noted with the <code class="docutils literal notranslate"><span class="pre">$</span></code>. The format of this line is: computer name, <code class="docutils literal notranslate"><span class="pre">;</span></code> , username, and then <code class="docutils literal notranslate"><span class="pre">$</span></code>. <code class="docutils literal notranslate"><span class="pre">Bash</span></code> commands are typed by line, and ran by hitting the <code class="docutils literal notranslate"><span class="pre">[enter]</span></code> key.where, (1) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> will return <code class="docutils literal notranslate"><span class="pre">&quot;[</span></code>some text<code class="docutils literal notranslate"><span class="pre">]&quot;</span></code> as an output, (2) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> to output “2 + 2”, the <code class="docutils literal notranslate"><span class="pre">|</span></code> (pipe) takes this as input for the next command, <code class="docutils literal notranslate"><span class="pre">bc</span> <span class="pre">-l</span></code> (calculator), (3) <code class="docutils literal notranslate"><span class="pre">echo</span></code> prints the variable, <code class="docutils literal notranslate"><span class="pre">$SHELL</span></code>, which points to the program <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>, and (4) cowboy.</span><a class="headerlink" href="#terminal-header" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Example of the <code class="docutils literal notranslate"><span class="pre">terminal</span></code> on a Macbook (<a class="reference internal" href="#terminal-header"><span class="std std-numref">Fig. 1</span></a>). The line you are working on is noted with the <code class="docutils literal notranslate"><span class="pre">$</span></code>. The format of this line is: computer name, <code class="docutils literal notranslate"><span class="pre">;</span></code> , username, and then <code class="docutils literal notranslate"><span class="pre">$</span></code>. <code class="docutils literal notranslate"><span class="pre">Bash</span></code> commands are typed by line, and ran by hitting the <code class="docutils literal notranslate"><span class="pre">[enter]</span></code> key.</p>
-<p><strong><em>Why do we start here?</em></strong>
-The command line is a tool that everyone uses in computational research.</p>
-<p>Some advantages:</p>
+<p>In this section, we’ll delve into the basics of the terminal, its role, and why it’s crucial in computational research.</p>
+<p>Approaches to “using” computer programs:</p>
+<ol class="arabic simple">
+<li><p>A common way makes use of a Graphical User Interface (GUI)
+- Programs that use a mouse and keyboard with on-screen menus, buttons, sliders, etc.
+- Relies on the user to click on-screen options for specific instructions</p></li>
+<li><p>Alternatively, computer programs can be operated via the Command Line Interface (CLI)
+- Uses text-based instructions, only requiring input from the keyboard
+- Often used for computing many files or automating repetitive tasks.</p></li>
+</ol>
+<section id="wtf-is-a-terminal">
+<h2>Wtf is a Terminal?<a class="headerlink" href="#wtf-is-a-terminal" title="Permalink to this heading">#</a></h2>
+<p>Terminal is a graphical-based application, providing access to the CLI</p>
+<ul class="simple">
+<li><p>This is preinstalled on MacOS as the <code class="docutils literal notranslate"><span class="pre">terminal</span></code> app</p></li>
+<li><p>Windows has variations called <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code> and <code class="docutils literal notranslate"><span class="pre">PowerShell</span></code></p></li>
+</ul>
+<p>Using command line is a fundamental tool in computational research, offering advantages like:</p>
 <ul class="simple">
 <li><p>More control in running applications</p></li>
 <li><p>Faster management across operating systems (OS)</p></li>
 <li><p>Ability to automate repetitive tasks (scripting)</p></li>
 </ul>
-<p>Not to mention, many data analysis tools and computing servers requires proficiency with command line.</p>
-<ul class="simple">
-<li><p>For example,</p>
-<ul>
-<li><p>Accessing the supercomputer</p></li>
-<li><p>Managing files remotely/locally</p></li>
-<li><p>Port forwarding</p></li>
-</ul>
-</li>
-</ul>
-<p>Yes, there is a steep learning curve. This will be confusing. A little irritating. And probably involve some tears.</p>
-<p>BUT, once you get the hang of it, you’ll find yourself running the same few commands over and over again!</p>
-<section id="terminal-is-just-90-keyboard">
-<h3>Terminal is just 90% Keyboard<a class="headerlink" href="#terminal-is-just-90-keyboard" title="Permalink to this heading">#</a></h3>
-<p>Graphical Interfaces</p>
-<ul class="simple">
-<li><p>Most people are familiar with programs that require a mouse and keyboard to interact through visible (on-screen) menus, buttons, sliders, etc.</p></li>
-<li><p>These rely on the <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">User</span> <span class="pre">Interfaces</span> <span class="pre">(GUI)</span></code> to complete specific instructions like copying, deleting, or renaming</p></li>
-</ul>
-<p>Alternatively,</p>
-<ul class="simple">
-<li><p>Other programs operating with a <span class="xref std std-term">Command Line Interface (CLI)</span></p></li>
-<li><p>Only require input from a keyboard</p></li>
-<li><p>Instructions are typed to perform the tasks</p></li>
-<li><p>Often for computing a large number of files, or automating repetitive tasks</p></li>
-</ul>
-<p>The CLI can be accessed via <span class="xref std std-term">terminal</span> app.</p>
-<ul class="simple">
-<li><p>Pre-installed on many computers</p></li>
-<li><p>Text-based graphical interface</p></li>
-</ul>
-</section>
-<section id="terminal-app">
-<h3>Terminal App<a class="headerlink" href="#terminal-app" title="Permalink to this heading">#</a></h3>
+<section id="example-opening-the-terminal-app">
+<h3>Example: Opening the Terminal App<a class="headerlink" href="#example-opening-the-terminal-app" title="Permalink to this heading">#</a></h3>
 <p>You can find the terminal by:</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -602,9 +596,10 @@ Windows</label><div class="sd-tab-content docutils">
 <p><a class="reference external" href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview">Install Ubuntu on WSL</a></p>
 </div>
 </div>
-<aside class="important sidebar">
-<p>Notation and pre-defined commands will depend on your <span class="xref std std-term">shell</span>!</p>
-</aside>
+<p>Several data analysis tools and computing servers require proficiency with the command line. It may have a steep learning curve and be a bit confusing initially, but once you get the hang of it. Automation will be E Z!</p>
+<ul class="simple">
+<li><p>Notation and pre-defined commands will depend on your <span class="xref std std-term">shell</span>!</p></li>
+</ul>
 <p>Users can send instructions to the computer by running <code class="docutils literal notranslate"><span class="pre">commands</span></code></p>
 <ul class="simple">
 <li><p>Like GUIs, these instructions can be for manipulating files or running software</p></li>
@@ -614,267 +609,192 @@ Windows</label><div class="sd-tab-content docutils">
 </section>
 <hr class="docutils" />
 <section id="shell">
-<h2>Shell<a class="headerlink" href="#shell" title="Permalink to this heading">#</a></h2>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
+<h2>$SHELL<a class="headerlink" href="#shell" title="Permalink to this heading">#</a></h2>
+<aside class="sidebar">
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Essentially, one type of CLI, the choice in <code class="docutils literal notranslate"><span class="pre">shell</span></code> programs dictates how:</p>
+<p>Essentially, a type of CLI, the choice in <code class="docutils literal notranslate"><span class="pre">shell</span></code> programs dictates how you:</p>
 <ul class="simple">
 <li><p>Interact with the operating system</p></li>
-<li><p>Workflow and control of the program</p></li>
-<li><p>Command line combinations</p></li>
+<li><p>Manage workflow and program control</p></li>
+<li><p>Combine command line instructions</p></li>
 </ul>
 </div>
 </aside>
-<section id="shells-provides-structure">
-<h3>Shells Provides Structure<a class="headerlink" href="#shells-provides-structure" title="Permalink to this heading">#</a></h3>
-<p>When the user opens <code class="docutils literal notranslate"><span class="pre">terminal</span></code>, a <span class="xref std std-term">shell</span> session is immediately started</p>
+<p>When you open <code class="docutils literal notranslate"><span class="pre">terminal</span></code>, a <code class="docutils literal notranslate"><span class="pre">shell</span></code> session starts immediately, containing the current state or <code class="docutils literal notranslate"><span class="pre">environment</span></code></p>
 <ul class="simple">
-<li><p>These contain the current state, or <span class="xref std std-term">environment</span>, of the shell.</p>
-<ul>
-<li><p>Only one session per shell</p></li>
+<li><p>Only one session per shell exists</p></li>
 </ul>
-</li>
-<li><p>They are programs that understand and executes the <span class="xref std std-term">command</span> from the user</p>
-<ul>
-<li><p>Interprets human language (text input) into computer language (output)</p></li>
-</ul>
-</li>
-<li><p>Several <code class="docutils literal notranslate"><span class="pre">shells</span></code> are available</p>
-<ul>
-<li><p>Examples: <code class="docutils literal notranslate"><span class="pre">csh</span></code>, <code class="docutils literal notranslate"><span class="pre">zsh</span></code></p></li>
-</ul>
-</li>
-</ul>
-<p><strong>I mainly use the <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell.</strong></p>
-<p>An <span class="xref std std-term">interactive prompt</span>, is when the user runs each “command” line by line</p>
+<p>Shells are programs that understand and execute user commands:</p>
 <ul class="simple">
-<li><p>Combining all lines into 1 file is called a “shell <span class="xref std std-term">script</span>.”</p></li>
+<li><p>interpreting human language (text input) into computer language (output)</p></li>
+<li><p>Various <code class="docutils literal notranslate"><span class="pre">shells</span></code> are available, such as <code class="docutils literal notranslate"><span class="pre">csh</span></code>, <code class="docutils literal notranslate"><span class="pre">zsh</span></code></p></li>
 </ul>
-</section>
-<section id="commands-in-command-line">
-<h3>Commands in Command Line<a class="headerlink" href="#commands-in-command-line" title="Permalink to this heading">#</a></h3>
-<p>In a <code class="docutils literal notranslate"><span class="pre">shell</span></code>, you have <code class="docutils literal notranslate"><span class="pre">commands</span></code>, which are computer processes that are predefined by the chosen <code class="docutils literal notranslate"><span class="pre">shell</span></code> structure.</p>
-<p><code class="docutils literal notranslate"><span class="pre">commands</span></code> are typed, and interpreted by the computer to run some process. In other words, the user provides some <code class="docutils literal notranslate"><span class="pre">input</span></code> in the form of commands, and the computer <code class="docutils literal notranslate"><span class="pre">output</span></code> the result. The <code class="docutils literal notranslate"><span class="pre">output</span></code> is printed on your screen, and does not change. To update the <code class="docutils literal notranslate"><span class="pre">output</span></code>, you will need to run the command again!</p>
-<p>Some <code class="docutils literal notranslate"><span class="pre">commands</span></code> can be modified by <code class="docutils literal notranslate"><span class="pre">options</span></code> which follow the command with a hyphen <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p>
-<p>Some <code class="docutils literal notranslate"><span class="pre">commmands</span></code> take in arguments, which is the <code class="docutils literal notranslate"><span class="pre">input</span></code> for the commands</p>
-<section id="helpful-commands">
-<h4>Helpful Commands<a class="headerlink" href="#helpful-commands" title="Permalink to this heading">#</a></h4>
-<p>Common ones are:</p>
+<p><strong>I use <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell, so my notes will only cover <code class="docutils literal notranslate"><span class="pre">bash</span></code>!</strong></p>
+<p>An <code class="docutils literal notranslate"><span class="pre">interactive</span> <span class="pre">prompt</span></code> is when users run each “command” line by line.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Later, we will see that combining multiple command lines into one file is called a “shell <code class="docutils literal notranslate"><span class="pre">script</span></code>.”</p>
+</div>
+<section id="example-bash-shell-commands">
+<h3>Example: Bash Shell Commands<a class="headerlink" href="#example-bash-shell-commands" title="Permalink to this heading">#</a></h3>
+<p>In a <code class="docutils literal notranslate"><span class="pre">shell</span></code>, predefined <code class="docutils literal notranslate"><span class="pre">commands</span></code> are computer processes.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Commands</span></code> are typed and interpreted by the computer to run processes</p></li>
+<li><p>Users provide <code class="docutils literal notranslate"><span class="pre">input</span></code> in the form of commands, and the computer <code class="docutils literal notranslate"><span class="pre">outputs</span></code> the result</p></li>
+<li><p>To update the <code class="docutils literal notranslate"><span class="pre">output</span></code>, run the command again.</p></li>
+</ul>
+<p>Some <code class="docutils literal notranslate"><span class="pre">commands</span></code> can be modified by <code class="docutils literal notranslate"><span class="pre">options</span></code> following the command with a hyphen <code class="docutils literal notranslate"><span class="pre">-</span></code>. Others take <code class="docutils literal notranslate"><span class="pre">arguments</span></code> as input. Look at the following examples:</p>
 <ol class="arabic simple">
-<li><p><a class="reference internal" href="../linux.html#term-pwd"><span class="xref std std-term">pwd</span></a></p></li>
-<li><p><a class="reference internal" href="../linux.html#term-echo"><span class="xref std std-term">echo</span></a></p></li>
-<li><p><a class="reference internal" href="../linux.html#term-cat"><span class="xref std std-term">cat</span></a></p></li>
-<li><p><a class="reference internal" href="../linux.html#term-tail"><span class="xref std std-term">tail</span></a></p></li>
-<li><p><a class="reference internal" href="../linux.html#term-head"><span class="xref std std-term">head</span></a></p></li>
-<li><p><a class="reference internal" href="../linux.html#term-touch"><span class="xref std std-term">touch</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">echo</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">touch</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cat</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tail</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">head</span></code></p></li>
 </ol>
 </section>
 </section>
-</section>
+<hr class="docutils" />
 <section id="navigating">
 <h2>Navigating<a class="headerlink" href="#navigating" title="Permalink to this heading">#</a></h2>
-<section id="objective">
-<h3>Objective<a class="headerlink" href="#objective" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Understand the general layout of the :term:<code class="docutils literal notranslate"><span class="pre">terminal</span></code>, and how it differs from GUIs like <code class="docutils literal notranslate"><span class="pre">Finder</span></code></p></li>
-<li><p>Find where your start, currently are, and can go in :term:<code class="docutils literal notranslate"><span class="pre">terminal</span></code></p></li>
-<li><p>See files/folders</p></li>
-<li><p>Difference between absolute and relative paths</p></li>
+<li><p>Understand the general layout of the <code class="docutils literal notranslate"><span class="pre">terminal</span></code></p></li>
+<li><p>Compare differences from GUIs like <code class="docutils literal notranslate"><span class="pre">Finder</span></code> or <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Explorer</span></code></p></li>
+<li><p>Find your start, current position, and navigate in <code class="docutils literal notranslate"><span class="pre">terminal</span></code>.</p></li>
+<li><p>View files/folders.</p></li>
+<li><p>Differentiate between absolute and relative paths.</p></li>
 </ul>
+<section id="starting-location">
+<h3>Starting Location!<a class="headerlink" href="#starting-location" title="Permalink to this heading">#</a></h3>
+<p>The default location when you first login is called your “home” directory</p>
 </section>
 <section id="where-are-we">
-<h3>Where are we?<a class="headerlink" href="#where-are-we" title="Permalink to this heading">#</a></h3>
-<p>The first command to learn is :term:<code class="docutils literal notranslate"><span class="pre">pwd</span></code> which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. :term:<code class="docutils literal notranslate"><span class="pre">pwd</span></code> tells you what your current or present working directory (folder) is.</p>
+<h3>Where Are We?<a class="headerlink" href="#where-are-we" title="Permalink to this heading">#</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (Print Working Directory) to find your current working directory (folder).</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 </div>
-<p>Navigating the terminal will rely on you being in the right location. As you’re moving around directories, it is easy to lose track of where you are. Use this command often to remind yourself where you presently are.</p>
+<p>Navigate in the terminal, relying on being in the right location. As you move around directories, use <code class="docutils literal notranslate"><span class="pre">pwd</span></code> often to remind yourself where you are.</p>
 </section>
 <section id="what-files-folders-are-here">
 <h3>What Files/Folders are Here?<a class="headerlink" href="#what-files-folders-are-here" title="Permalink to this heading">#</a></h3>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="dropdown admonition tip">
-<p class="admonition-title">Tip</p>
-<p>More examples can be found here: <a class="reference internal" href="../commands/ls.html"><span class="doc std std-doc">ls - list information about files/folders</span></a></p>
-</div>
-</aside>
-<p>We know where we are, but we want to know what files/folders are here! To do this, use <code class="docutils literal notranslate"><span class="pre">ls</span></code>, short for list.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">ls</span></code> (List) to see what files/folders are in the current location.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
 </pre></div>
 </div>
 </section>
 <section id="how-to-make-a-new-folder-directory">
-<h3>How to make a new folder/directory?<a class="headerlink" href="#how-to-make-a-new-folder-directory" title="Permalink to this heading">#</a></h3>
-<aside class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="dropdown admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Avoid using spaces when choosing filenames/folders. For example, for a folder called “amino acids”, ather than using a space, you should use an underscore (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino_acids</span></code>) or hyphen (<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">amino-acids</span></code>).</p>
-<p>More examples can be found here: <a class="reference internal" href="../commands/mkdir.html"><span class="doc std std-doc">mkdir - make new directories.</span></a></p>
+<h3>How to Make a New Folder/Directory?<a class="headerlink" href="#how-to-make-a-new-folder-directory" title="Permalink to this heading">#</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (Make Directory) to create a new folder.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>folder<span class="w"> </span>name<span class="o">]</span>
+</pre></div>
 </div>
-</aside>
-<p>Let’s make a new folder/directory, so our current working directory isn’t so lonely. To do this, use the :term:<code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command, short for make directory. This command takes an argument, i.e. the new folder name!</p>
-<p>The syntax is <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[argument]</span></code> or in other words <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">[new</span> <span class="pre">folder</span> <span class="pre">name]</span></code>. Here, I will use the bracket notations (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) to imply this is some sort of input given by you. We can start by making a new folder called <code class="docutils literal notranslate"><span class="pre">test/</span></code>.</p>
+<p>For example, create a folder called <code class="docutils literal notranslate"><span class="pre">test</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span><span class="nb">test</span>
 </pre></div>
 </div>
 </section>
-</section>
 <section id="enter-exit-folders">
-<h2>Enter/Exit Folders<a class="headerlink" href="#enter-exit-folders" title="Permalink to this heading">#</a></h2>
-<p>We can enter a folder with the :term:<code class="docutils literal notranslate"><span class="pre">cd</span></code> command, short for change directories. This command takes an argument, following the syntax <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[argument]</span></code> or in other words <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[folder</span> <span class="pre">name]</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
+<h3>Enter/Exit Folders<a class="headerlink" href="#enter-exit-folders" title="Permalink to this heading">#</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">cd</span></code> (Change Directory) to enter a folder.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>folder<span class="w"> </span>name<span class="o">]</span>
 </pre></div>
 </div>
-<p>Check where you are with <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, and you should see that you’re in the new working directory!</p>
+<p>Check your current location with <code class="docutils literal notranslate"><span class="pre">pwd</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 </div>
-<p>To go back one directory, use the argument <code class="docutils literal notranslate"><span class="pre">../</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../
-</pre></div>
-</div>
-<p>To go back to your “home” directory, you have two options:</p>
+<p>To go back one directory, use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>. To return to your “home” directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w">    </span><span class="c1"># Option 1</span>
 <span class="nb">cd</span><span class="w"> </span>~<span class="w">  </span><span class="c1"># Option 2</span>
 </pre></div>
 </div>
-<p>If you check your current working directory again, you should see that you’re back home</p>
+<p>Check your current location again to ensure you’re back home.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
 </pre></div>
 </div>
 </section>
+</section>
 <section id="what-are-paths">
 <h2>What are Paths?<a class="headerlink" href="#what-are-paths" title="Permalink to this heading">#</a></h2>
-<p>There are 2 types of paths we can use</p>
+<p>Two types of paths:</p>
 <ol class="arabic simple">
-<li><p>Absolute</p>
-<ol class="arabic simple">
-<li><p>The path to files/folders/programs relative to the root directory (i.e. <code class="docutils literal notranslate"><span class="pre">/home</span></code>, <code class="docutils literal notranslate"><span class="pre">/Users</span></code>, etc.)</p></li>
+<li><p>Absolute - relative to the root directory (e.g., <code class="docutils literal notranslate"><span class="pre">/home</span></code>, <code class="docutils literal notranslate"><span class="pre">/Users</span></code>).</p></li>
+<li><p>Relative - relative to your current working directory.</p></li>
 </ol>
-</li>
-<li><p>Relative.</p>
-<ol class="arabic simple">
-<li><p>The path to files/folders/programs is relative to where <em>you</em> are (i.e. current working directory)</p></li>
-</ol>
-</li>
-</ol>
-<p>Whenever we refer to a file or directory we are using one of these paths.</p>
-<p>To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what’s called the root directory. It is denoted by a single slash (<code class="docutils literal notranslate"><span class="pre">/</span></code>). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.</p>
+<p>File or directory references use one of these paths.</p>
 </section>
 </section>
+<hr class="docutils" />
 <section class="tex2jax_ignore mathjax_ignore" id="file-management">
 <h1>File Management<a class="headerlink" href="#file-management" title="Permalink to this heading">#</a></h1>
 <section id="copy-move-rename-delete-files">
 <h2>Copy, Move, Rename, &amp; Delete Files<a class="headerlink" href="#copy-move-rename-delete-files" title="Permalink to this heading">#</a></h2>
-<p>Your mouse does not work in the way you expect when in the CLI.</p>
-<p>Using the terminal means you need to learn how to communicate with the computer through <strong>commands</strong>.</p>
-<p>Tasks like:</p>
-<ul class="simple">
-<li><p>Copying files/folders (:term:<code class="docutils literal notranslate"><span class="pre">cp</span></code>)</p></li>
-<li><p>Moving files/folders (:term:<code class="docutils literal notranslate"><span class="pre">mv</span></code>)</p></li>
-<li><p>Renaming files/folders (:term:<code class="docutils literal notranslate"><span class="pre">mv</span></code>)</p></li>
-<li><p>Deleting files/folders (:term:<code class="docutils literal notranslate"><span class="pre">rm</span></code>)</p></li>
-</ul>
-<p>Need to be typed!</p>
+<p>Your mouse doesn’t work the same way in the CLI. Using the terminal means communicating with the computer through commands.</p>
+<p>Tasks like copying, moving, renaming, and deleting files/folders (<code class="docutils literal notranslate"><span class="pre">cp</span></code>, <code class="docutils literal notranslate"><span class="pre">mv</span></code>, <code class="docutils literal notranslate"><span class="pre">rm</span></code>) need to be typed!</p>
 </section>
 <section id="copying">
 <h2>Copying<a class="headerlink" href="#copying" title="Permalink to this heading">#</a></h2>
-<p>To copy files, you use the command, :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code>, where you include the file or folder you want to copy followed by the path you want the copy to go!</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-2">
-General Notation</label><div class="sd-tab-content docutils">
+<p>Use <code class="docutils literal notranslate"><span class="pre">cp</span></code> (Copy) to copy files or folders.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
 </pre></div>
 </div>
-<p>For both <code class="docutils literal notranslate"><span class="pre">[source]</span></code> and <code class="docutils literal notranslate"><span class="pre">[destination]</span></code>, you can use the absolute or relative path</p>
-</div>
-<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-3">
-Copy Files</label><div class="sd-tab-content docutils">
+<p>Both <code class="docutils literal notranslate"><span class="pre">[source]</span></code> and <code class="docutils literal notranslate"><span class="pre">[destination]</span></code> can use absolute or relative paths.</p>
+<section id="copy-files">
+<h3>Copy Files<a class="headerlink" href="#copy-files" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>file.txt<span class="w"> </span>/path/to/destination/file-copy.txt
 </pre></div>
 </div>
-<p>Copying a file is straight forward, you can even give the file a new name at the destination.</p>
-</div>
-<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-4">
-Copy Folders</label><div class="sd-tab-content docutils">
+<p>Copying a file is straightforward; you can even give it a new name at the destination.</p>
+</section>
+<section id="copy-folders">
+<h3>Copy Folders<a class="headerlink" href="#copy-folders" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>-r<span class="w"> </span>directory/<span class="w"> </span>path/to/destination
 </pre></div>
 </div>
-<p>Copying a directory requires the option <code class="docutils literal notranslate"><span class="pre">-r</span></code>, otherwise it is the same as copying files.</p>
-</div>
-</div>
+<p>Copying a directory requires the option <code class="docutils literal notranslate"><span class="pre">-r</span></code>.</p>
+</section>
 </section>
 <section id="moving-renaming">
 <h2>Moving &amp; Renaming<a class="headerlink" href="#moving-renaming" title="Permalink to this heading">#</a></h2>
-<p>Yes. They are the same command, :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code>. The notation for :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code> is the same as :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code>!</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-5">
-General Notation</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span><span class="w">  </span><span class="c1"># Moving</span>
-mv<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>newname<span class="o">]</span><span class="w">      </span><span class="c1"># Renaming</span>
-</pre></div>
-</div>
-<p>For both source and destination you can use the absolute or relative path</p>
-</div>
-<input id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-6">
-Move/Rename Files</label><div class="sd-tab-content docutils">
+<p>Both are done with <code class="docutils literal notranslate"><span class="pre">mv</span></code> (Move). The notation is similar to <code class="docutils literal notranslate"><span class="pre">cp</span></code>.</p>
+<section id="move-rename-files">
+<h3>Move/Rename Files<a class="headerlink" href="#move-rename-files" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>file.txt<span class="w"> </span>/path/to/destination/newname.txt
 </pre></div>
 </div>
-<p>Moving a file is straight forward, you can even give the file a new name at the destination.</p>
-</div>
-<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-7">
-Move/Rename Folders</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>directory/<span class="w"> </span>path/to/desitination/newname
+<p>Moving a file is straightforward; you can even rename it at the destination.</p>
+</section>
+<section id="move-rename-folders">
+<h3>Move/Rename Folders<a class="headerlink" href="#move-rename-folders" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>directory/<span class="w"> </span>path/to/destination/newname
 </pre></div>
 </div>
-<p>Moving a directory is the same as the previous examples.</p>
-</div>
-</div>
+<p>Moving a directory is similar to previous examples.</p>
+</section>
 </section>
 <section id="deleting">
 <h2>Deleting<a class="headerlink" href="#deleting" title="Permalink to this heading">#</a></h2>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>This command is permanent. There is no trash can to recover your files from…</p>
+<p>This command is permanent. There’s no trash can to recover your files.</p>
 </div>
-<p>:term:<code class="docutils literal notranslate"><span class="pre">rm</span></code> is used to delete files/folders, and is written like :term:<code class="docutils literal notranslate"><span class="pre">cp</span></code> and :term:<code class="docutils literal notranslate"><span class="pre">mv</span></code></p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-8">
-General Notation</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span><span class="o">[</span>sources<span class="o">]</span>
-</pre></div>
-</div>
-<p>Where,  <code class="docutils literal notranslate"><span class="pre">[source]</span></code>, can be the absolute or relative path</p>
-</div>
-<input id="sd-tab-item-9" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-9">
-Delete Files</label><div class="sd-tab-content docutils">
+<p>Use <code class="docutils literal notranslate"><span class="pre">rm</span></code> (Remove) to delete files/folders.</p>
+<section id="delete-files">
+<h3>Delete Files<a class="headerlink" href="#delete-files" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
 </pre></div>
 </div>
-<p>You can delete multiple files at once.</p>
-</div>
-<input id="sd-tab-item-10" name="sd-tab-set-3" type="radio">
-</input><label class="sd-tab-label" for="sd-tab-item-10">
-Copy Folders</label><div class="sd-tab-content docutils">
+<p>Delete multiple files at once.</p>
+</section>
+<section id="delete-folders">
+<h3>Delete Folders<a class="headerlink" href="#delete-folders" title="Permalink to this heading">#</a></h3>
+<p>Include the option, <code class="docutils literal notranslate"><span class="pre">-r</span></code>, to delete a folder.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-r<span class="w"> </span>directory/
 </pre></div>
 </div>
-<p>Include the option, <code class="docutils literal notranslate"><span class="pre">-r</span></code>, to delete a folder.</p>
-</div>
-</div>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -944,35 +864,42 @@ Copy Folders</label><div class="sd-tab-content docutils">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Terminal, Shell, &amp; Bash</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal">Terminal</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal-is-just-90-keyboard">Terminal is just 90% Keyboard</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminal-app">Terminal App</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wtf-is-a-terminal">Wtf is a Terminal?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-opening-the-terminal-app">Example: Opening the Terminal App</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell">Shell</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shells-provides-structure">Shells Provides Structure</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commands-in-command-line">Commands in Command Line</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#helpful-commands">Helpful Commands</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell">$SHELL</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-bash-shell-commands">Example: Bash Shell Commands</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating">Navigating</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">Where are we?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-location">Starting Location!</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">Where Are We?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-files-folders-are-here">What Files/Folders are Here?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">How to make a new folder/directory?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">How to Make a New Folder/Directory?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-exit-folders">Enter/Exit Folders</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-exit-folders">Enter/Exit Folders</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">What are Paths?</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management">File Management</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-move-rename-delete-files">Copy, Move, Rename, &amp; Delete Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying">Copying</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-renaming">Moving &amp; Renaming</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting">Deleting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copying">Copying</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-files">Copy Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-folders">Copy Folders</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-renaming">Moving &amp; Renaming</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-rename-files">Move/Rename Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-rename-folders">Move/Rename Folders</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting">Deleting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-files">Delete Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-folders">Delete Folders</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

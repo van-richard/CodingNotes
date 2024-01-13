@@ -1,0 +1,1609 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 110
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 36
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: floating
+    title: Terminalizer
+    style:
+      border: 0px black solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 407
+    content: "\e[?2004h[ van ] "
+  - delay: 3890
+    content: l
+  - delay: 76
+    content: s
+  - delay: 117
+    content: "\r\n\e[?2004l\r"
+  - delay: 8
+    content: "c.yml                foo.yml              terminal-example.yml\r\nconfig.yml           s.sh                 terminal-header.gif\r\n\e[?2004h[ van ] "
+  - delay: 1150
+    content: l
+  - delay: 52
+    content: s
+  - delay: 140
+    content: ' '
+  - delay: 202
+    content: "\b\e[K"
+  - delay: 161
+    content: "\b\e[K"
+  - delay: 145
+    content: "\b\e[K"
+  - delay: 152
+    content: "\a"
+  - delay: 107
+    content: "\a"
+  - delay: 1251
+    content: ls
+  - delay: 199
+    content: "\b\bpwd"
+  - delay: 305
+    content: "\b\b\bterminalizer record foo -d pwd"
+  - delay: 1082
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[Cpwd\e[K"
+  - delay: 644
+    content: "\b\b\b\e[1Pls"
+  - delay: 793
+    content: "\b\e[K"
+  - delay: 131
+    content: "\b\e[K"
+  - delay: 153
+    content: t
+  - delay: 154
+    content: e
+  - delay: 121
+    content: r
+  - delay: 55
+    content: m
+  - delay: 575
+    content: i
+  - delay: 88
+    content: 'n'
+  - delay: 95
+    content: a
+  - delay: 107
+    content: l
+  - delay: 105
+    content: i
+  - delay: 141
+    content: z
+  - delay: 120
+    content: e
+  - delay: 154
+    content: r
+  - delay: 79
+    content: ' '
+  - delay: 157
+    content: r
+  - delay: 56
+    content: e
+  - delay: 156
+    content: 'n'
+  - delay: 90
+    content: d
+  - delay: 155
+    content: e
+  - delay: 73
+    content: r
+  - delay: 440
+    content: ' '
+  - delay: 94
+    content: f
+  - delay: 131
+    content: o
+  - delay: 131
+    content: o
+  - delay: 785
+    content: .
+  - delay: 280
+    content: 'y'
+  - delay: 257
+    content: m
+  - delay: 98
+    content: l
+  - delay: 2610
+    content: "\r\n\e[?2004l\r"
+  - delay: 164
+    content: "Error: \r\n  The provided file is not a valid YAML file\r\n\r\nHint:\r\n  Use the \e[32m--help\e[39m option to get help about the usage\r\n\e[?2004h[ van ] "
+  - delay: 2747
+    content: l
+  - delay: 141
+    content: s
+  - delay: 86
+    content: "\r\n\e[?2004l\r"
+  - delay: 9
+    content: "c.yml                foo.yml              terminal-example.yml\r\nconfig.yml           s.sh                 terminal-header.gif\r\n\e[?2004h[ van ] "
+  - delay: 429
+    content: l
+  - delay: 81
+    content: s
+  - delay: 43
+    content: ' '
+  - delay: 73
+    content: '-'
+  - delay: 176
+    content: l
+  - delay: 71
+    content: t
+  - delay: 83
+    content: "\r\n\e[?2004l\r"
+  - delay: 12
+    content: "total 2816\r\n-rw-r--r--@ 1 van  staff     2950 Jan 13 14:09 foo.yml\r\n-rw-r--r--@ 1 van  staff     2423 Jan 13 14:06 config.yml\r\n-rw-r--r--@ 1 van  staff     3120 Jan 13 14:01 terminal-example.yml\r\n-rw-r--r--@ 1 van  staff      111 Jan 13 14:01 s.sh\r\n-rw-r--r--@ 1 van  staff  1415947 Jan 13 06:35 terminal-header.gif\r\n-rw-r--r--@ 1 van  staff     5955 Jan 13 06:35 c.yml\r\n\e[?2004h[ van ] "
+  - delay: 1049
+    content: v
+  - delay: 78
+    content: i
+  - delay: 80
+    content: ' '
+  - delay: 204
+    content: f
+  - delay: 103
+    content: o
+  - delay: 125
+    content: 'o.yml '
+  - delay: 200
+    content: "\r\n\e[?2004l\r"
+  - delay: 37
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"foo.yml\" 115L, 2950B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m \e[31m'pwd'\e[m, \e[31m'ls'\e[m, \e[31m'ls -lt'\e[m\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m110\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m36\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m \e[95m'pwd'\e[m, \e[95m'ls'\e[m, \e[95m'ls -lt'\e[m\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m110\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m36\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"foo.yml\" 115L, 2950B\e[1;5H\e[?25h"
+  - delay: 581
+    content: "\e[?25l\e[1;2H\e[93m8\e[m\e[2C \e[1C\e[96m# The size of the font\e[m\e[1;29H\e[K\e[2;2H\e[93m8\e[m\e[2C  \e[1m\e[96mfontSize\e[m\e[38;5;224m:\e[m \e[95m12\e[m\e[3;2H\e[93m8\r\n 8\e[m\e[6C\e[96mThe height of lines\e[m\e[4;28H\e[K\e[5;2H\e[93m8\e[m\e[3C \e[1m\e[96mlineHeight\e[m\e[38;5;224m:\e[m \e[95m1\e[m\e[5;20H\e[K\e[6;2H\e[93m8\e[m\e[3C \e[6;7H\e[K\e[7;2H\e[93m8\e[m\e[6C\e[96mThe spacing between letters\e[m\e[7;36H\e[K\e[8;2H\e[93m8\e[m\e[4C\e[1m\e[96mletterSpacing\e[m\e[38;5;224m:\e[m \e[95m0\e[m\e[8;23H\e[K\e[9;2H\e[93m8\r\n 9\e[m\e[6C\e[96mTheme\e[m\e[10;14H\e[K\e[11;2H\e[93m9\e[m\e[3C \e[1m\e[96mtheme\e[m\e[38;5;224m:\e[m\e[11;13H\e[K\e[12;2H\e[93m9\e[m\e[4C  \e[1m\e[96mbackground\e[m\e[38;5;224m:\e[m \e[95m\"transparent\"\e[m\e[12;34H\e[K\e[13;2H\e[93m9\e[m\e[6C\e[1m\e[96mforeground\e[m\e[38;5;224m:\e[m \e[95m\"#afafaf\"\e[m\e[14;2H\e[93m9\e[m\e[3C   \e[1m\e[96mcursor\e[m\e[38;5;224m:\e[m \e[95m\"#c7c7c7\"\e[m\e[14;26H\e[K\e[15;2H\e[93m9\e[m\e[4C  \e[1m\e[96mblack\e[m\e[38;5;224m:\e[m \e[95m\"#232628\"\e[m\e[16;2H\e[93m9\e[m\e[8C\e[1m\e[96md\e[m\e[38;5;224m:\e[m \e[95m\"#fc4384\"\e[m\e[16;23H\e[K\e[17;2H\e[93m9\e[m\e[6C\e[1m\e[96mgreen\e[m\e[38;5;224m:\e[m \e[95m\"#b3e33b\"\e[m\e[18;2H\e[93m9\e[m\e[3C   \e[1m\e[96myellow\e[m\e[38;5;224m:\e[m \e[95m\"#ffa727\"\e[m\e[18;26H\e[K\e[19;2H\e[93m9\e[m\e[3C   \e[1m\e[96mblue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\e[19;24H\e[K\e[20;1H\e[93m10\e[m\e[3C   \e[1m\e[96mmagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\e[20;27H\e[K\e[21;1H\e[93m10\e[m\e[4C  \e[1m\e[96mcyan\e[m\e[38;5;224m:\e[m \e[95m\"#708387\"\e[m\r\n\e[93m10\e[m\e[6C\e[1m\e[96mwhite\e[m\e[38;5;224m:\e[m \e[95m\"#d5d5d0\"\e[m\r\n\e[93m10\e[m\e[3C   \e[1m\e[96mbrightBlack\e[m\e[38;5;224m:\e[m \e[95m\"#626566\"\e[m\e[23;31H\e[K\e[24;1H\e[93m10\e[m\e[3C   \e[1m\e[96mbrightRed\e[m\e[38;5;224m:\e[m \e[95m\"#ff7fac\"\e[m\e[24;29H\e[K\e[25;1H\e[93m10\e[m\e[3C   \e[1m\e[96mbrightGreen\e[m\e[38;5;224m:\e[m \e[95m\"#c8ed71\"\e[m\e[25;31H\e[K\e[26;1H\e[93m10\e[m\e[4C  \e[1m\e[96mbrightYellow\e[m\e[38;5;224m:\e[m \e[95m\"#ebdf86\"\e[m\r\n\e[93m10\e[m\e[6C\e[1m\e[96mbrightBlue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\r\n\e[93m10\e[m\e[3C   \e[1m\e[96mbrightMagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\e[28;33H\e[K\e[29;1H\e[93m10\e[m\e[3C   \e[1m\e[96mbrightCyan\e[m\e[38;5;224m:\e[m \e[95m\"#b1c6ca\"\e[m\e[29;30H\e[K\e[30;1H\e[93m11\e[m\e[3C   \e[1m\e[96mbrightWhite\e[m\e[38;5;224m:\e[m \e[95m\"#f9f9f4\"\e[m\e[30;31H\e[K\e[31;1H\e[93m11\e[m\e[3C \e[31;7H\e[K\e[32;1H\e[93m11\e[m\e[2C\e[96m# Records, feel free to edit them\e[m\r\n\e[93m11\e[m\e[2C\e[1m\e[96mrecords\e[m\e[38;5;224m:\e[m\r\n\e[93m11\e[m\e[3C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m148\e[m\r\n\e[93m11\e[m\e[3C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"/Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[35;9H\e[?25h"
+  - delay: 1372
+    content: "\e[?25l\e[m\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 143
+    content: q
+  - delay: 221
+    content: '!'
+  - delay: 322
+    content: "\r"
+  - delay: 5
+    content: "\e[?25l\e[?2004l\e[>4;m\e[23;2t\e[23;1t\e[36;1H\e[K\e[36;1H\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m\e[?2004h[ van ] "
+  - delay: 370
+    content: r
+  - delay: 155
+    content: m
+  - delay: 72
+    content: ' '
+  - delay: 222
+    content: g
+  - delay: 108
+    content: o
+  - delay: 263
+    content: "\b\e[K"
+  - delay: 112
+    content: "\b\e[K"
+  - delay: 109
+    content: f
+  - delay: 178
+    content: o
+  - delay: 159
+    content: o
+  - delay: 84
+    content: '.yml '
+  - delay: 583
+    content: "\r\n\e[?2004l\r"
+  - delay: 11
+    content: "\e[?2004h[ van ] "
+  - delay: 955
+    content: 'rm foo.yml '
+  - delay: 213
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[Cvi\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C"
+  - delay: 250
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[5Pls -lt"
+  - delay: 361
+    content: "\b\b\b\b\e[K"
+  - delay: 338
+    content: "\b\bterminalizer render foo.yml"
+  - delay: 804
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[Cls\e[K"
+  - delay: 194
+    content: "\b\bpwd"
+  - delay: 226
+    content: "\b\b\bterminalizer record foo -d pwd"
+  - delay: 1623
+    content: "\b\e[K"
+  - delay: 284
+    content: "\b\e[K"
+  - delay: 156
+    content: "\b\e[K"
+  - delay: 109
+    content: "\b\e[K"
+  - delay: 185
+    content: "\b\e[K"
+  - delay: 641
+    content: c
+  - delay: 250
+    content: ' '
+  - delay: 417
+    content: c
+  - delay: 93
+    content: o
+  - delay: 55
+    content: 'n'
+  - delay: 102
+    content: 'fig.yml '
+  - delay: 1872
+    content: "\r\n\e[?2004l\r"
+  - delay: 241
+    content: "The recording session is started\r\nPress \e[32mCTRL+D\e[39m to exit and save the recording\r\n"
+  - delay: 5
+    content: "(node:26302) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.\r\n(Use `node --trace-deprecation ...` to show where the warning was created)\r\n"
+  - delay: 79
+    content: "\e[?2004h[ van ] "
+  - delay: 6444
+    content: "\e[?2004l\r\r\r\nlogout\r\r\n\r\r\nSaving session..."
+  - delay: 15
+    content: "\r\r\n...copying shared history...\r\r\n...saving history..."
+  - delay: 6
+    content: "truncating history files...\r\r\n...completed.\r\r\n"
+  - delay: 8
+    content: "\e[32mSuccessfully Recorded\e[39m\r\nThe recording data is saved into the file:\r\n\e[35m/Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif/foo.yml\e[39m\r\nYou can edit the file and even change the configurations.\r\nThe command \e[35m`terminalizer share`\e[39mcan be used anytime to share recordings!\r\n"
+  - delay: 5
+    content: "\e[32m?\e[39m \e[1mWould you like to share your recording on www.terminalizer.com?\e[22m\e[0m \e[0m\e[2m(Y/n) \e[22m\e[72D\e[72C"
+  - delay: 1390
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mWould you like to share your recording on www.terminalizer.com?\e[22m\e[0m \e[0m\e[2m(Y/n) \e[22mn\e[73D\e[73C"
+  - delay: 273
+    content: "\e[2K\e[G\e[32m?\e[39m \e[1mWould you like to share your recording on www.terminalizer.com?\e[22m\e[0m \e[0m\e[36mNo\e[39m\e[68D\e[68C\r\n"
+  - delay: 14
+    content: "\e[?2004h[ van ] "
+  - delay: 495
+    content: l
+  - delay: 87
+    content: s
+  - delay: 80
+    content: "\r\n\e[?2004l\r"
+  - delay: 8
+    content: "c.yml                foo.yml              terminal-example.yml\r\nconfig.yml           s.sh                 terminal-header.gif\r\n\e[?2004h[ van ] "
+  - delay: 445
+    content: l
+  - delay: 83
+    content: s
+  - delay: 58
+    content: ' '
+  - delay: 78
+    content: '-'
+  - delay: 187
+    content: l
+  - delay: 126
+    content: t
+  - delay: 57
+    content: "\r\n\e[?2004l\r"
+  - delay: 10
+    content: "total 2816\r\n-rw-r--r--@ 1 van  staff     3120 Jan 13 14:10 foo.yml\r\n-rw-r--r--@ 1 van  staff     2423 Jan 13 14:06 config.yml\r\n-rw-r--r--@ 1 van  staff     3120 Jan 13 14:01 terminal-example.yml\r\n-rw-r--r--@ 1 van  staff      111 Jan 13 14:01 s.sh\r\n-rw-r--r--@ 1 van  staff  1415947 Jan 13 06:35 terminal-header.gif\r\n-rw-r--r--@ 1 van  staff     5955 Jan 13 06:35 c.yml\r\n\e[?2004h[ van ] "
+  - delay: 824
+    content: v
+  - delay: 93
+    content: i
+  - delay: 104
+    content: ' '
+  - delay: 185
+    content: f
+  - delay: 93
+    content: o
+  - delay: 121
+    content: 'o.yml '
+  - delay: 258
+    content: "\r\n\e[?2004l\r"
+  - delay: 36
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"foo.yml\" 121L, 3120B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m bash -l\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m110\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m36\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m110\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m36\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"foo.yml\" 121L, 3120B\e[1;5H\e[?25h"
+  - delay: 565
+    content: "\e[?25l\e[1;2H\e[93m87\e[m\e[1C \e[1C\e[96m# The spacing between letters\e[m\e[1;36H\e[K\e[2;2H\e[93m88\e[m\e[1C  \e[1m\e[96mletterSpacing\e[m\e[38;5;224m:\e[m \e[95m0\e[m\e[3;2H\e[93m89\r\n 90\e[m\e[5C\e[96mTheme\e[m\e[4;14H\e[K\e[5;2H\e[93m91\e[m\e[2C \e[1m\e[96mtheme\e[m\e[38;5;224m:\e[m\e[5;13H\e[K\e[6;2H\e[93m92\e[m\e[2C   \e[1m\e[96mbackground\e[m\e[38;5;224m:\e[m \e[95m\"transparent\"\e[m\e[6;34H\e[K\e[7;2H\e[93m93\e[m\e[2C   \e[1m\e[96mforeground\e[m\e[38;5;224m:\e[m \e[95m\"#afafaf\"\e[m\e[7;30H\e[K\e[8;2H\e[93m94\e[m\e[3C  \e[1m\e[96mcursor\e[m\e[38;5;224m:\e[m \e[95m\"#c7c7c7\"\e[m\e[9;2H\e[93m95\e[m\e[5C\e[1m\e[96mblack\e[m\e[38;5;224m:\e[m \e[95m\"#232628\"\e[m\e[10;2H\e[93m96\e[m\e[2C   \e[1m\e[96mred\e[m\e[38;5;224m:\e[m \e[95m\"#fc4384\"\e[m\e[10;23H\e[K\e[11;2H\e[93m97\e[m\e[2C   \e[1m\e[96mgreen\e[m\e[38;5;224m:\e[m \e[95m\"#b3e33b\"\e[m\e[11;25H\e[K\e[12;2H\e[93m98\e[m\e[3C  \e[1m\e[96myellow\e[m\e[38;5;224m:\e[m \e[95m\"#ffa727\"\e[m\e[12;26H\e[K\e[13;2H\e[93m99\e[m\e[5C\e[1m\e[96mblue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\r\n\e[93m100\e[m\e[2C   \e[1m\e[96mmagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\e[14;27H\e[K\e[15;1H\e[93m101\e[m\e[3C  \e[1m\e[96mcyan\e[m\e[38;5;224m:\e[m \e[95m\"#708387\"\e[m\r\n\e[93m102\e[m\e[5C\e[1m\e[96mwhite\e[m\e[38;5;224m:\e[m \e[95m\"#d5d5d0\"\e[m\r\n\e[93m103\e[m\e[5C\e[1m\e[96mbrightBlack\e[m\e[38;5;224m:\e[m \e[95m\"#626566\"\e[m\r\n\e[93m104\e[m\e[2C   \e[1m\e[96mbrightRed\e[m\e[38;5;224m:\e[m \e[95m\"#ff7fac\"\e[m\e[18;29H\e[K\e[19;1H\e[93m105\e[m\e[2C   \e[1m\e[96mbrightGreen\e[m\e[38;5;224m:\e[m \e[95m\"#c8ed71\"\e[m\e[19;31H\e[K\e[20;1H\e[93m106\e[m\e[2C   \e[1m\e[96mbrightYellow\e[m\e[38;5;224m:\e[m \e[95m\"#ebdf86\"\e[m\e[20;32H\e[K\e[21;1H\e[93m107\e[m\e[3C  \e[1m\e[96mbrightBlue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\r\n\e[93m108\e[m\e[5C\e[1m\e[96mbrightMagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\r\n\e[93m109\e[m\e[2C   \e[1m\e[96mbrightCyan\e[m\e[38;5;224m:\e[m \e[95m\"#b1c6ca\"\e[m\e[23;30H\e[K\e[24;1H\e[93m110\e[m\e[2C   \e[1m\e[96mbrightWhite\e[m\e[38;5;224m:\e[m \e[95m\"#f9f9f4\"\e[m\e[24;31H\e[K\e[25;1H\e[93m111\e[m\e[2C \e[25;7H\e[K\e[26;1H\e[93m112\e[m\e[1C\e[96m# Records, feel free to edit them\e[m\r\n\e[93m113\e[m\e[1C\e[1m\e[96mrecords\e[m\e[38;5;224m:\e[m\r\n\e[93m114\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m292\e[m\e[28;19H\e[K\e[29;1H\e[93m115\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\e\e[m\e[95m[?2004h[ van ] \"\e[m\r\n\e[93m116\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6444\e[m\e[30;20H\e[K\e[31;1H\e[93m117\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\e\e[m\e[95m[?2004l\e[m\e[38;5;224m\\r\\r\\n\e[m\e[95mlogout\e[m\e[38;5;224m\\r\\n\\r\\n\e[m\e[95mSaving session...\"\e[m\r\n\e[93m118\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m15\e[m\r\n\e[93m119\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...copying shared history...\e[m\e[38;5;224m\\r\\n\e[m\e[95m...saving history...\"\e[m\r\n\e[93m120\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\r\n\e[93m121\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"truncating history files...\e[m\e[38;5;224m\\r\\n\e[m\e[95m...completed.\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[35;9H\e[?25h"
+  - delay: 4317
+    content: "\e[?25l\e[m\e[1;2H\e[93m 1\e[m\e[1C\e[96m# The configurations that used for the recording, feel free to edit them\e[m\e[2;2H\e[93m 2\e[m\e[1C\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\e[2;12H\e[K\e[3;2H\e[93m 3\r\n  4\e[m\e[5C\e[96mSpecify a command to be executed\e[m\e[5;2H\e[93m 5\e[m\e[2C\e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\e[6;2H\e[93m 6\e[m\e[2C\e[96m # the default is bash for Linux\e[m\e[7;2H\e[93m 7\e[m\e[2C\e[96m # or powershell.exe for Windows\e[m\e[8;2H\e[93m 8\e[m\e[3C\e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\e[8;23H\e[K\e[9;2H\e[93m 9\e[m\e[9;9H\e[K\e[10;2H\e[93m10\e[m\e[2C\e[96m # Specify the current working directory path\e[m\e[11;2H\e[93m11\e[m\e[2C\e[96m # the default is the current working directory path\e[m\e[12;2H\e[93m12\e[m\e[3C\e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;2H\e[93m13\e[m\e[13;9H\e[K\e[14;1H\e[93m 14\e[m\e[2C\e[96m # Export additional ENV variables\e[m\r\n\e[93m 15\e[m\e[3C\e[1m\e[96menv\e[m\e[38;5;224m:\e[m\e[15;11H\e[K\e[16;1H\e[93m 16\e[m\e[5C\e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\e[16;24H\e[K\e[17;1H\e[93m 17\e[m\e[17;9H\e[K\e[18;1H\e[93m 18\e[m\e[2C\e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19\e[m\e[2C\e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20\e[m\e[2C\e[96m # number of columns of your shell\e[m\r\n\e[93m 21\e[m\e[3C\e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m110\e[m\e[21;16H\e[K\e[22;1H\e[93m 22\e[m\e[22;9H\e[K\e[23;1H\e[93m 23\e[m\e[2C\e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24\e[m\e[2C\e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25\e[m\e[2C\e[96m # number of rows of your shell\e[m\r\n\e[93m 26\e[m\e[1C  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m36\e[m\e[26;15H\e[K\e[27;1H\e[93m 27\e[m\e[1C  \e[27;7H\e[K\e[28;1H\e[93m 28\e[m\e[2C\e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29\e[m\e[2C\e[96m # If value is -1, play once\e[m\e[29;34H\e[K\e[30;1H\e[93m 30\e[m\e[2C\e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31\e[m\e[2C\e[96m # If value is a positive number, loop n times\e[m\e[31;52H\e[K\e[32;1H\e[93m 32\e[m\e[3C\e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\e[32;16H\e[K\e[33;1H\e[93m 33\e[m\e[33;9H\e[K\e[34;1H\e[93m 34\e[m\e[2C\e[96m # Quality\e[m\e[34;16H\e[K\e[35;1H\e[93m 35\e[m\e[2C\e[96m # 1 - 100\e[m\e[35;16H\e[K\e[1;5H\e[?25h"
+  - delay: 1043
+    content: "\e[?25l\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 171
+    content: q
+  - delay: 221
+    content: '!'
+  - delay: 134
+    content: "\r\e[?25l\e[?2004l\e[>4;m\e[23;2t\e[23;1t\e[36;1H\e[K\e[36;1H\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m\e[?2004h[ van ] "
+  - delay: 401
+    content: v
+  - delay: 84
+    content: i
+  - delay: 124
+    content: ' '
+  - delay: 116
+    content: c
+  - delay: 76
+    content: o
+  - delay: 77
+    content: 'n'
+  - delay: 99
+    content: 'fig.yml '
+  - delay: 226
+    content: "\r\n\e[?2004l\r"
+  - delay: 33
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"config.yml\" 107L, 2423B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# Specify a command to be executed\e[m\r\n\e[38;5;130m  2 \e[m\e[34m# like `/bin/bash -l`, `ls`, or any other commands\e[m\e[2;55H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[34m# the default is bash for Linux\e[m\e[3;36H\e[K\e[4;1H\e[38;5;130m  4 \e[m\e[34m# or powershell.exe for Windows\e[m\r\n\e[38;5;130m  5 \e[m\e[36mcommand\e[m\e[35m:\e[m \e[31mnull\e[m\r\n\e[38;5;130m  6 \r\n  7 \e[m\e[34m# Specify the current working directory path\e[m\r\n\e[38;5;130m  8 \e[m\e[34m# the default is the current working directory path\e[m\r\n\e[38;5;130m  9 \e[m\e[36mcwd\e[m\e[35m:\e[m \e[31mnull\e[m\r\n\e[38;5;130m 10 \r\n 11 \e[m\e[34m# Export additional ENV variables\e[m\r\n\e[38;5;130m 12 \e[m\e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 13 \e[m  \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 14 \r\n 15 \e[m\e[34m# Explicitly set the number of columns\e[m\r\n\e[38;5;130m 16 \e[m\e[34m# or use `auto` to take the current\e[m\r\n\e[38;5;130m 17 \e[m\e[34m# number of columns of your shell\e[m\r\n\e[38;5;130m 18 \e[m\e[36mcols\e[m\e[35m:\e[m auto\r\n\e[38;5;130m 19 \r\n 20 \e[m\e[34m# Explicitly set the number of rows\e[m\r\n\e[38;5;130m 21 \e[m\e[34m# or use `auto` to take the current\e[m\r\n\e[38;5;130m 22 \e[m\e[34m# number of rows of your shell\e[m\r\n\e[38;5;130m 23 \e[m\e[36mrows\e[m\e[35m:\e[m auto\r\n\e[38;5;130m 24 \r\n 25 \e[m\e[34m# Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 26 \e[m\e[34m# If value is -1, play once\e[m\r\n\e[38;5;130m 27 \e[m\e[34m# If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 28 \e[m\e[34m# If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 29 \e[m\e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 30 \r\n 31 \e[m\e[34m# Quality\e[m\r\n\e[38;5;130m 32 \e[m\e[34m# 1 - 100\e[m\r\n\e[38;5;130m 33 \e[m\e[36mquality\e[m\e[35m:\e[m \e[31m100\e[m\r\n\e[38;5;130m 34 \r\n 35 \e[m\e[34m# Delay between frames in ms\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# Specify a command to be executed\e[m\r\n\e[93m  2 \e[m\e[96m# like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  3 \e[m\e[96m# the default is bash for Linux\e[m\r\n\e[93m  4 \e[m\e[96m# or powershell.exe for Windows\e[m\r\n\e[93m  5 \e[m\e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m \e[95mnull\e[m\r\n\e[93m  6 \r\n  7 \e[m\e[96m# Specify the current working directory path\e[m\r\n\e[93m  8 \e[m\e[96m# the default is the current working directory path\e[m\r\n\e[93m  9 \e[m\e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m \e[95mnull\e[m\r\n\e[93m 10 \r\n 11 \e[m\e[96m# Export additional ENV variables\e[m\r\n\e[93m 12 \e[m\e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 13 \e[m  \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 14 \r\n 15 \e[m\e[96m# Explicitly set the number of columns\e[m\r\n\e[93m 16 \e[m\e[96m# or use `auto` to take the current\e[m\r\n\e[93m 17 \e[m\e[96m# number of columns of your shell\e[m\r\n\e[93m 18 \e[m\e[1m\e[96mcols\e[m\e[38;5;224m:\e[m auto\r\n\e[93m 19 \r\n 20 \e[m\e[96m# Explicitly set the number of rows\e[m\r\n\e[93m 21 \e[m\e[96m# or use `auto` to take the current\e[m\r\n\e[93m 22 \e[m\e[96m# number of rows of your shell\e[m\r\n\e[93m 23 \e[m\e[1m\e[96mrows\e[m\e[38;5;224m:\e[m auto\r\n\e[93m 24 \r\n 25 \e[m\e[96m# Amount of times to repeat GIF\e[m\r\n\e[93m 26 \e[m\e[96m# If value is -1, play once\e[m\r\n\e[93m 27 \e[m\e[96m# If value is 0, loop indefinitely\e[m\r\n\e[93m 28 \e[m\e[96m# If value is a positive number, loop n times\e[m\r\n\e[93m 29 \e[m\e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 30 \r\n 31 \e[m\e[96m# Quality\e[m\r\n\e[93m 32 \e[m\e[96m# 1 - 100\e[m\r\n\e[93m 33 \e[m\e[1m\e[96mquality\e[m\e[38;5;224m:\e[m \e[95m100\e[m\r\n\e[93m 34 \r\n 35 \e[m\e[96m# Delay between frames in ms\e[m\r\n\"config.yml\" 107L, 2423B\e[1;5H\e[?25h"
+  - delay: 654
+    content: "\e[?25l\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 81
+    content: Q
+  - delay: 214
+    content: '!'
+  - delay: 126
+    content: "\r\e[?25l\e[97m\e[41mE492: Not an editor command: Q!\e[1;5H\e[?25h"
+  - delay: 710
+    content: "\e[?25l\e[m\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 696
+    content: "\e[?25l\e[36;1H\e[K\e[1;5H\e[?25h"
+  - delay: 260
+    content: "\a"
+  - delay: 425
+    content: "\e[?25l\e[36;1H:\e[?25h"
+  - delay: 245
+    content: q
+  - delay: 230
+    content: '!'
+  - delay: 154
+    content: "\r\e[?25l\e[?2004l\e[>4;m\e[23;2t\e[23;1t\e[36;1H\e[K\e[36;1H\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m"
+  - delay: 5
+    content: "\e[?2004h[ van ] "
+  - delay: 257
+    content: v
+  - delay: 100
+    content: i
+  - delay: 111
+    content: ' '
+  - delay: 147
+    content: c
+  - delay: 313
+    content: "\b\e[K"
+  - delay: 100
+    content: f
+  - delay: 150
+    content: o
+  - delay: 119
+    content: 'o.yml '
+  - delay: 213
+    content: "\r\n\e[?2004l\r"
+  - delay: 34
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"foo.yml\" 121L, 3120B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m bash -l\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m110\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m36\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m110\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m36\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"foo.yml\" 121L, 3120B\e[1;5H\e[?25h"
+  - delay: 1629
+    content: "\e[2;5H"
+  - delay: 171
+    content: "\e[3;5H"
+  - delay: 159
+    content: "\e[4;5H"
+  - delay: 174
+    content: "\e[5;5H"
+  - delay: 169
+    content: "\e[6;5H"
+  - delay: 180
+    content: "\e[7;5H"
+  - delay: 723
+    content: "\e[8;5H"
+  - delay: 1391
+    content: '  '
+  - delay: 920
+    content: "\e[?25l\e[36;1H\e[1m-- INSERT --\e[m\e[36;13H\e[K\e[8;7H\e[?25h"
+  - delay: 1304
+    content: "\e[16C"
+  - delay: 638
+    content: "\e[?25l\e[8;22H\e[K\e[8;22H\e[?25h"
+  - delay: 209
+    content: "\e[?25l\e[8;21H\e[K\e[8;21H\e[?25h"
+  - delay: 120
+    content: "\e[?25l\b\e[?25h"
+  - delay: 141
+    content: "\e[?25l\e[8;19H\e[K\e[8;19H\e[?25h"
+  - delay: 145
+    content: "\e[?25l\e[8;18H\e[K\e[8;18H\e[?25h"
+  - delay: 373
+    content: "\e[?25l\e[8;17H\e[K\e[8;17H\e[?25h"
+  - delay: 787
+    content: "\e[?25l\e[8;16H\e[K\e[8;16H\e[?25h"
+  - delay: 547
+    content: "\e[?25l\e[95m'\e[9;5H  \e[10;5H  # Specify the current working directory path\e[11;5H  # the default is the current working directory path\e[12;5H  cwd: /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H  # Export additional ENV variables\e[15;5H  env:\e[16;5H    recording: \e[17;5H  \e[18;5H  # Explicitly set the number of columns\e[19;5H  # or use `auto` to take the current\e[20;5H  # number of columns of your shell\e[21;5H  cols: \e[22;5H  \e[23;5H  # Explicitly set the number of rows\e[24;5H  # or use `auto` to take the current\e[25;5H  # number of rows of your shell\e[26;5H  rows: \e[27;5H  \e[28;5H  # Amount of times to repeat GIF\e[29;5H  # If value is -1, play once\e[30;5H  # If value is 0, loop indefinitely\e[31;5H  # If value is a positive number, loop n times\e[32;5H  repeat: \e[33;5H  \e[34;5H  # Quality\e[35;5H  # 1 - 100\e[8;17H\e[?25h"
+  - delay: 710
+    content: "\e[?25lp\e[?25h"
+  - delay: 89
+    content: "\e[?25lw\e[?25h"
+  - delay: 140
+    content: "\e[?25ld\e[?25h"
+  - delay: 125
+    content: "\e[?25l'\e[m\e[9;5H  \e[10;5H \e[96m # Specify the current working directory path\e[m\e[11;5H \e[96m # the default is the current working directory path\e[m\e[12;5H  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H \e[96m # Export additional ENV variables\e[m\e[15;5H  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\e[16;5H    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[17;5H  \e[18;5H \e[96m # Explicitly set the number of columns\e[m\e[19;5H \e[96m # or use `auto` to take the current\e[m\e[20;5H \e[96m # number of columns of your shell\e[m\e[21;5H  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[22;5H  \e[23;5H \e[96m # Explicitly set the number of rows\e[m\e[24;5H \e[96m # or use `auto` to take the current\e[m\e[25;5H \e[96m # number of rows of your shell\e[m\e[26;5H  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[27;5H  \e[28;5H \e[96m # Amount of times to repeat GIF\e[m\e[29;5H \e[96m # If value is -1, play once\e[m\e[30;5H \e[96m # If value is 0, loop indefinitely\e[m\e[31;5H \e[96m # If value is a positive number, loop n times\e[m\e[32;5H  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[33;5H  \e[34;5H \e[96m # Quality\e[m\e[35;5H \e[96m # 1 - 100\e[8;21H\e[?25h"
+  - delay: 309
+    content: "\e[?25l\e[m,\e[?25h"
+  - delay: 132
+    content: "\e[?25l \e[?25h"
+  - delay: 162
+    content: "\e[?25l\e[95m'\e[9;5H  \e[10;5H  # Specify the current working directory path\e[11;5H  # the default is the current working directory path\e[12;5H  cwd: /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H  # Export additional ENV variables\e[15;5H  env:\e[16;5H    recording: \e[17;5H  \e[18;5H  # Explicitly set the number of columns\e[19;5H  # or use `auto` to take the current\e[20;5H  # number of columns of your shell\e[21;5H  cols: \e[22;5H  \e[23;5H  # Explicitly set the number of rows\e[24;5H  # or use `auto` to take the current\e[25;5H  # number of rows of your shell\e[26;5H  rows: \e[27;5H  \e[28;5H  # Amount of times to repeat GIF\e[29;5H  # If value is -1, play once\e[30;5H  # If value is 0, loop indefinitely\e[31;5H  # If value is a positive number, loop n times\e[32;5H  repeat: \e[33;5H  \e[34;5H  # Quality\e[35;5H  # 1 - 100\e[8;24H\e[?25h"
+  - delay: 381
+    content: "\e[?25ll\e[?25h"
+  - delay: 62
+    content: "\e[?25ls\e[?25h"
+  - delay: 204
+    content: "\e[?25l'\e[m\e[9;5H  \e[10;5H \e[96m # Specify the current working directory path\e[m\e[11;5H \e[96m # the default is the current working directory path\e[m\e[12;5H  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H \e[96m # Export additional ENV variables\e[m\e[15;5H  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\e[16;5H    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[17;5H  \e[18;5H \e[96m # Explicitly set the number of columns\e[m\e[19;5H \e[96m # or use `auto` to take the current\e[m\e[20;5H \e[96m # number of columns of your shell\e[m\e[21;5H  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[22;5H  \e[23;5H \e[96m # Explicitly set the number of rows\e[m\e[24;5H \e[96m # or use `auto` to take the current\e[m\e[25;5H \e[96m # number of rows of your shell\e[m\e[26;5H  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[27;5H  \e[28;5H \e[96m # Amount of times to repeat GIF\e[m\e[29;5H \e[96m # If value is -1, play once\e[m\e[30;5H \e[96m # If value is 0, loop indefinitely\e[m\e[31;5H \e[96m # If value is a positive number, loop n times\e[m\e[32;5H  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[33;5H  \e[34;5H \e[96m # Quality\e[m\e[35;5H \e[96m # 1 - 100\e[8;27H\e[?25h"
+  - delay: 354
+    content: "\e[?25l\e[m,\e[?25h"
+  - delay: 677
+    content: "\e[?25l \e[?25h"
+  - delay: 177
+    content: "\e[?25l\e[95m'\e[9;5H  \e[10;5H  # Specify the current working directory path\e[11;5H  # the default is the current working directory path\e[12;5H  cwd: /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H  # Export additional ENV variables\e[15;5H  env:\e[16;5H    recording: \e[17;5H  \e[18;5H  # Explicitly set the number of columns\e[19;5H  # or use `auto` to take the current\e[20;5H  # number of columns of your shell\e[21;5H  cols: \e[22;5H  \e[23;5H  # Explicitly set the number of rows\e[24;5H  # or use `auto` to take the current\e[25;5H  # number of rows of your shell\e[26;5H  rows: \e[27;5H  \e[28;5H  # Amount of times to repeat GIF\e[29;5H  # If value is -1, play once\e[30;5H  # If value is 0, loop indefinitely\e[31;5H  # If value is a positive number, loop n times\e[32;5H  repeat: \e[33;5H  \e[34;5H  # Quality\e[35;5H  # 1 - 100\e[8;30H\e[?25h"
+  - delay: 313
+    content: "\e[?25ll\e[?25h"
+  - delay: 89
+    content: "\e[?25ls\e[?25h"
+  - delay: 190
+    content: "\e[?25l-\e[?25h"
+  - delay: 220
+    content: "\e[?25ll\e[?25h"
+  - delay: 100
+    content: "\e[?25lt\e[?25h"
+  - delay: 160
+    content: "\e[?25l'\e[m\e[9;5H  \e[10;5H \e[96m # Specify the current working directory path\e[m\e[11;5H \e[96m # the default is the current working directory path\e[m\e[12;5H  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H \e[96m # Export additional ENV variables\e[m\e[15;5H  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\e[16;5H    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[17;5H  \e[18;5H \e[96m # Explicitly set the number of columns\e[m\e[19;5H \e[96m # or use `auto` to take the current\e[m\e[20;5H \e[96m # number of columns of your shell\e[m\e[21;5H  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[22;5H  \e[23;5H \e[96m # Explicitly set the number of rows\e[m\e[24;5H \e[96m # or use `auto` to take the current\e[m\e[25;5H \e[96m # number of rows of your shell\e[m\e[26;5H  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[27;5H  \e[28;5H \e[96m # Amount of times to repeat GIF\e[m\e[29;5H \e[96m # If value is -1, play once\e[m\e[30;5H \e[96m # If value is 0, loop indefinitely\e[m\e[31;5H \e[96m # If value is a positive number, loop n times\e[m\e[32;5H  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[33;5H  \e[34;5H \e[96m # Quality\e[m\e[35;5H \e[96m # 1 - 100\e[8;36H\e[?25h"
+  - delay: 897
+    content: "\b"
+  - delay: 165
+    content: "\b"
+  - delay: 158
+    content: "\b"
+  - delay: 374
+    content: "\b"
+  - delay: 342
+    content: "\e[?25l\e[m\e[95m -lt'\b\b\b\b\e[?25h"
+  - delay: 1750
+    content: "\e[9;7H"
+  - delay: 743
+    content: "\e[m\e[36;1H\e[K\e[9;6H"
+  - delay: 439
+    content: "\e[?25l\e[?25h\e[?25l\e[36;1H:\e[?25h"
+  - delay: 156
+    content: w
+  - delay: 86
+    content: q
+  - delay: 142
+    content: "\r\e[?25l\e[?2004l\e[>4;m\"foo.yml\""
+  - delay: 8
+    content: " 121L, 3134B written\r\e[23;2t\e[23;1t\r\r\n\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m\e[?2004h[ van ] "
+  - delay: 1869
+    content: 'vi foo.yml '
+  - delay: 180
+    content: "\b\b\b\b\b\b\b\b\e[3@config\e[C\e[C\e[C\e[C\e[C"
+  - delay: 157
+    content: "\b\b\b\b\b\b\b\b\b\b\b\e[3Pfoo\e[C\e[C\e[C\e[C\e[C"
+  - delay: 235
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[5Pls -lt"
+  - delay: 323
+    content: "\b\b\b\b\e[K"
+  - delay: 320
+    content: "\b\bterminalizer record foo -c config.yml "
+  - delay: 379
+    content: "\b"
+  - delay: 115
+    content: "\b"
+  - delay: 581
+    content: "\b"
+  - delay: 174
+    content: "\b"
+  - delay: 307
+    content: "\b\e[1P"
+  - delay: 133
+    content: "\b\e[1P"
+  - delay: 127
+    content: "\b\e[1P"
+  - delay: 143
+    content: "\b\e[1P"
+  - delay: 155
+    content: "\b\e[1P"
+  - delay: 293
+    content: "\b\e[1P"
+  - delay: 332
+    content: "\b\e[1P"
+  - delay: 166
+    content: "\b\e[1P"
+  - delay: 149
+    content: "\b\e[1P"
+  - delay: 127
+    content: "\b\e[1P"
+  - delay: 132
+    content: "\b\e[1P"
+  - delay: 152
+    content: "\b\e[1P"
+  - delay: 464
+    content: "\b\e[1P"
+  - delay: 742
+    content: "\e[1@ "
+  - delay: 163
+    content: "\e[1@-"
+  - delay: 405
+    content: "\e[1@ "
+  - delay: 424
+    content: "\b\e[1P"
+  - delay: 99
+    content: "\e[1@c"
+  - delay: 123
+    content: "\e[1@ "
+  - delay: 182
+    content: "\e[1@f"
+  - delay: 107
+    content: "\e[1@o"
+  - delay: 160
+    content: "\e[1@o"
+  - delay: 208
+    content: "\e[1@."
+  - delay: 875
+    content: "\r\n\e[?2004l\r"
+  - delay: 239
+    content: "Error: \r\n  The provided file is not a valid YAML file\r\n\r\nHint:\r\n  Use the \e[32m--help\e[39m option to get help about the usage\r\n\e[?2004h[ van ] "
+  - delay: 2353
+    content: 'terminalizer record f -c foo.yml '
+  - delay: 3574
+    content: "\b"
+  - delay: 419
+    content: "\b"
+  - delay: 83
+    content: "\b"
+  - delay: 82
+    content: "\b"
+  - delay: 84
+    content: "\b"
+  - delay: 83
+    content: "\b"
+  - delay: 83
+    content: "\b"
+  - delay: 85
+    content: "\b"
+  - delay: 83
+    content: "\b"
+  - delay: 85
+    content: "\b"
+  - delay: 84
+    content: "\b"
+  - delay: 84
+    content: "\b"
+  - delay: 3244
+    content: "^C\e[?2004l\r\e[?2004h\e[?2004l\r\r\n\e[?2004h[ van ] "
+  - delay: 1248
+    content: v
+  - delay: 109
+    content: i
+  - delay: 105
+    content: ' '
+  - delay: 132
+    content: f
+  - delay: 105
+    content: o
+  - delay: 145
+    content: o
+  - delay: 88
+    content: '.yml '
+  - delay: 229
+    content: "\r\n\e[?2004l\r"
+  - delay: 33
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"foo.yml\" 121L, 3134B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m \e[31m'pwd'\e[m, \e[31m'ls'\e[m, \e[31m'ls -lt'\e[m\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m110\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m36\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m \e[95m'pwd'\e[m, \e[95m'ls'\e[m, \e[95m'ls -lt'\e[m\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m110\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m36\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"foo.yml\" 121L, 3134B\e[1;5H\e[?25h"
+  - delay: 745
+    content: "\e[2;5H"
+  - delay: 289
+    content: "\e[3;5H"
+  - delay: 439
+    content: "\e[4;5H"
+  - delay: 281
+    content: "\e[5;5H"
+  - delay: 219
+    content: "\e[6;5H"
+  - delay: 197
+    content: "\e[7;5H"
+  - delay: 251
+    content: "\e[8;5H"
+  - delay: 592
+    content: "\e[9;5H"
+  - delay: 891
+    content: ' '
+  - delay: 641
+    content: "\e[8;36H"
+  - delay: 855
+    content: "\e[?25l\e[36;1H\e[1m-- INSERT --\e[m\e[36;13H\e[K\e[8;36H\e[?25h"
+  - delay: 784
+    content: "\e[?25l\b\e[95m'\e[m\e[8;36H\e[K\e[8;35H\e[?25h"
+  - delay: 417
+    content: "\e[?25l\b\e[95m'\e[m\e[8;35H\e[K\e[8;34H\e[?25h"
+  - delay: 84
+    content: "\e[?25l\b\e[95m'\e[m\e[8;34H\e[K\e[8;33H\e[?25h"
+  - delay: 80
+    content: "\e[?25l\b\e[95m'\e[m\e[8;33H\e[K\e[8;32H\e[?25h"
+  - delay: 86
+    content: "\e[?25l\b\e[95m'\e[m\e[8;32H\e[K\e[8;31H\e[?25h"
+  - delay: 84
+    content: "\e[?25l\b\e[95m'\e[m\e[8;31H\e[K\e[8;30H\e[?25h"
+  - delay: 84
+    content: "\e[?25l\e[8;30H\e[K\e[9;5H\e[95m  \e[10;5H  # Specify the current working directory path\e[11;5H  # the default is the current working directory path\e[12;5H  cwd: /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H  # Export additional ENV variables\e[15;5H  env:\e[16;5H    recording: \e[17;5H  \e[18;5H  # Explicitly set the number of columns\e[19;5H  # or use `auto` to take the current\e[20;5H  # number of columns of your shell\e[21;5H  cols: \e[22;5H  \e[23;5H  # Explicitly set the number of rows\e[24;5H  # or use `auto` to take the current\e[25;5H  # number of rows of your shell\e[26;5H  rows: \e[27;5H  \e[28;5H  # Amount of times to repeat GIF\e[29;5H  # If value is -1, play once\e[30;5H  # If value is 0, loop indefinitely\e[31;5H  # If value is a positive number, loop n times\e[32;5H  repeat: \e[33;5H  \e[34;5H  # Quality\e[35;5H  # 1 - 100\e[8;29H\e[?25h"
+  - delay: 86
+    content: "\e[?25l\b'\e[m\e[8;29H\e[K\e[8;28H\e[?25h"
+  - delay: 82
+    content: "\e[?25l\b\b\e[38;5;224m''\e[m\e[8;28H\e[K\e[8;27H\e[?25h"
+  - delay: 84
+    content: "\e[?25l\b\e[95m'\e[m\e[8;27H\e[K\e[9;5H  \e[10;5H \e[96m # Specify the current working directory path\e[m\e[11;5H \e[96m # the default is the current working directory path\e[m\e[12;5H  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H \e[96m # Export additional ENV variables\e[m\e[15;5H  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\e[16;5H    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[17;5H  \e[18;5H \e[96m # Explicitly set the number of columns\e[m\e[19;5H \e[96m # or use `auto` to take the current\e[m\e[20;5H \e[96m # number of columns of your shell\e[m\e[21;5H  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[22;5H  \e[23;5H \e[96m # Explicitly set the number of rows\e[m\e[24;5H \e[96m # or use `auto` to take the current\e[m\e[25;5H \e[96m # number of rows of your shell\e[m\e[26;5H  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[27;5H  \e[28;5H \e[96m # Amount of times to repeat GIF\e[m\e[29;5H \e[96m # If value is -1, play once\e[m\e[30;5H \e[96m # If value is 0, loop indefinitely\e[m\e[31;5H \e[96m # If value is a positive number, loop n times\e[m\e[32;5H  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[33;5H  \e[34;5H \e[96m # Quality\e[m\e[35;5H \e[96m # 1 - 100\e[8;26H\e[?25h"
+  - delay: 84
+    content: "\e[?25l\e[m\b\e[95m'\e[m\e[8;26H\e[K\e[8;25H\e[?25h"
+  - delay: 83
+    content: "\e[?25l\b\e[95m'\e[m\e[8;25H\e[K\e[8;24H\e[?25h"
+  - delay: 84
+    content: "\e[?25l\e[8;24H\e[K\e[9;5H\e[95m  \e[10;5H  # Specify the current working directory path\e[11;5H  # the default is the current working directory path\e[12;5H  cwd: /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H  # Export additional ENV variables\e[15;5H  env:\e[16;5H    recording: \e[17;5H  \e[18;5H  # Explicitly set the number of columns\e[19;5H  # or use `auto` to take the current\e[20;5H  # number of columns of your shell\e[21;5H  cols: \e[22;5H  \e[23;5H  # Explicitly set the number of rows\e[24;5H  # or use `auto` to take the current\e[25;5H  # number of rows of your shell\e[26;5H  rows: \e[27;5H  \e[28;5H  # Amount of times to repeat GIF\e[29;5H  # If value is -1, play once\e[30;5H  # If value is 0, loop indefinitely\e[31;5H  # If value is a positive number, loop n times\e[32;5H  repeat: \e[33;5H  \e[34;5H  # Quality\e[35;5H  # 1 - 100\e[8;23H\e[?25h"
+  - delay: 85
+    content: "\e[?25l\b'\e[m\e[8;23H\e[K\e[8;22H\e[?25h"
+  - delay: 178
+    content: "\e[?25l\b\b\e[38;5;224m''\e[m\e[8;22H\e[K\e[8;21H\e[?25h"
+  - delay: 449
+    content: "\e[36;1H\e[K\e[8;20H"
+  - delay: 1006
+    content: "\e[?25l\e[?25h"
+  - delay: 24
+    content: "\e[?25l\e[95m'\e[m\e[8;21H\e[K\e[9;5H  \e[10;5H \e[96m # Specify the current working directory path\e[m\e[11;5H \e[96m # the default is the current working directory path\e[m\e[12;5H  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[13;5H  \e[14;5H \e[96m # Export additional ENV variables\e[m\e[15;5H  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\e[16;5H    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[17;5H  \e[18;5H \e[96m # Explicitly set the number of columns\e[m\e[19;5H \e[96m # or use `auto` to take the current\e[m\e[20;5H \e[96m # number of columns of your shell\e[m\e[21;5H  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[22;5H  \e[23;5H \e[96m # Explicitly set the number of rows\e[m\e[24;5H \e[96m # or use `auto` to take the current\e[m\e[25;5H \e[96m # number of rows of your shell\e[m\e[26;5H  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[27;5H  \e[28;5H \e[96m # Amount of times to repeat GIF\e[m\e[29;5H \e[96m # If value is -1, play once\e[m\e[30;5H \e[96m # If value is 0, loop indefinitely\e[m\e[31;5H \e[96m # If value is a positive number, loop n times\e[m\e[32;5H  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[33;5H  \e[34;5H \e[96m # Quality\e[m\e[35;5H \e[96m # 1 - 100\e[8;20H\e[?25h"
+  - delay: 1246
+    content: "\a\e[?25l\e[36;1H\e[m:\e[?25h"
+  - delay: 134
+    content: w
+  - delay: 77
+    content: q
+  - delay: 174
+    content: "\r\e[?25l\e[?2004l\e[>4;m\"foo.yml\""
+  - delay: 9
+    content: " 121L, 3118B written\r\e[23;2t\e[23;1t\r\r\n\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m\e[?2004h[ van ] "
+  - delay: 516
+    content: 'vi foo.yml '
+  - delay: 263
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[22@terminalizer record f -c\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C"
+  - delay: 983
+    content: "\r\n\e[?2004l\r"
+  - delay: 249
+    content: "Error: \r\n  TypeError: Cannot convert undefined or null to object\r\n\r\nHint:\r\n  Use the \e[32m--help\e[39m option to get help about the usage\r\n\e[?2004h[ van ] "
+  - delay: 67984
+    content: m
+  - delay: 114
+    content: a
+  - delay: 91
+    content: 'n'
+  - delay: 96
+    content: ' '
+  - delay: 122
+    content: p
+  - delay: 96
+    content: w
+  - delay: 137
+    content: d
+  - delay: 106
+    content: "\r\n\e[?2004l\r"
+  - delay: 78
+    content: "\e[?1049h\e[?1h\e=\rPWD(1)                                     General Commands Manual                                    PWD(1)\r\n\r\n\e[1mNAME\e[0m\r\n     \e[1mpwd\e[0m – return working directory name\r\n\r\n\e[1mSYNOPSIS\e[0m\r\n     \e[1mpwd\e[0m [\e[1m-L\e[0m | \e[1m-P\e[0m]\r\n\r\n\e[1mDESCRIPTION\e[0m\r\n     The \e[1mpwd\e[0m utility writes the absolute pathname of the current working directory to the standard output.\r\n\r\n     Some shells may provide a builtin \e[1mpwd\e[0m command which is similar or identical to this utility.  Consult\r\n     the builtin(1) manual page.\r\n\r\n     The options are as follows:\r\n\r\n     \e[1m-L\e[0m      Display the logical current working directory.\r\n\r\n     \e[1m-P\e[0m      Display the physical current working directory (all symbolic links resolved).\r\n\r\n     If no options are specified, the \e[1m-L\e[0m option is assumed.\r\n\r\n\e[1mENVIRONMENT\e[0m\r\n     Environment variables used by \e[1mpwd\e[0m:\r\n\r\n     PWD      Logical current working directory.\r\n\r\n\e[1mEXIT\e[0m \e[1mSTATUS\e[0m\r\n     The \e[1mpwd\e[0m utility exits\_0 on success, and\_>0 if an error occurs.\r\n\r\n\e[1mEXAMPLES\e[0m\r\n     Show current working directory with symbolic links resolved:\r\n\r\n           $ /bin/pwd -P\r\n           /usr/home/fernape\r\n:\e[K"
+  - delay: 2557
+    content: "\r\e[K\e[?1l\e>\e[?1049l"
+  - delay: 5
+    content: "\e[?2004h[ van ] "
+  - delay: 551
+    content: p
+  - delay: 482
+    content: w
+  - delay: 199
+    content: d
+  - delay: 144
+    content: ' '
+  - delay: 148
+    content: '-'
+  - delay: 346
+    content: L
+  - delay: 241
+    content: "\r\n\e[?2004l\r/Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[?2004h[ van ] "
+  - delay: 2430
+    content: p
+  - delay: 103
+    content: w
+  - delay: 148
+    content: d
+  - delay: 132
+    content: ' '
+  - delay: 124
+    content: '-'
+  - delay: 727
+    content: l
+  - delay: 236
+    content: "\r\n\e[?2004l\rbash: pwd: -l: invalid option\r\npwd: usage: pwd [-LP]\r\n\e[?2004h[ van ] "
+  - delay: 1531
+    content: pwd -l
+  - delay: 345
+    content: "\b\e[K"
+  - delay: 324
+    content: P
+  - delay: 453
+    content: "\r\n\e[?2004l\r/Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[?2004h[ van ] "
+  - delay: 2606
+    content: l
+  - delay: 448
+    content: "\r\n\e[?2004l\r"
+  - delay: 12
+    content: "total 2816\r\n-rw-r--r--@ 1 van  staff     3118 Jan 13 14:11 foo.yml\r\n-rw-r--r--@ 1 van  staff     2423 Jan 13 14:06 config.yml\r\n-rw-r--r--@ 1 van  staff     3120 Jan 13 14:01 terminal-example.yml\r\n-rw-r--r--@ 1 van  staff      111 Jan 13 14:01 s.sh\r\n-rw-r--r--@ 1 van  staff  1415947 Jan 13 06:35 terminal-header.gif\r\n-rw-r--r--@ 1 van  staff     5955 Jan 13 06:35 c.yml\r\n\e[?2004h[ van ] "
+  - delay: 81
+    content: s
+  - delay: 417
+    content: "\b\e[K"
+  - delay: 141
+    content: "\a"
+  - delay: 135
+    content: "\a"
+  - delay: 824
+    content: v
+  - delay: 85
+    content: i
+  - delay: 313
+    content: "\b\e[K"
+  - delay: 151
+    content: "\b\e[K"
+  - delay: 131
+    content: "\a"
+  - delay: 138
+    content: "\a"
+  - delay: 2365
+    content: c
+  - delay: 371
+    content: "\b\e[K"
+  - delay: 153
+    content: "\a"
+  - delay: 128
+    content: "\a"
+  - delay: 1169
+    content: v
+  - delay: 98
+    content: i
+  - delay: 139
+    content: ' '
+  - delay: 190
+    content: t
+  - delay: 799
+    content: "\b\e[K"
+  - delay: 151
+    content: "\b\e[K"
+  - delay: 145
+    content: "\b\e[K"
+  - delay: 138
+    content: "\b\e[K"
+  - delay: 143
+    content: "\a"
+  - delay: 146
+    content: "\a"
+  - delay: 97
+    content: "\a"
+  - delay: 131
+    content: "\a"
+  - delay: 187
+    content: "\a"
+  - delay: 453
+    content: v
+  - delay: 64
+    content: i
+  - delay: 95
+    content: ' '
+  - delay: 197
+    content: c
+  - delay: 109
+    content: .
+  - delay: 272
+    content: 'yml '
+  - delay: 343
+    content: "\r\n\e[?2004l\r"
+  - delay: 39
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"c.yml\" 203L, 5955B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m bash -l\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m114\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m32\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m114\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m32\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"c.yml\" 203L, 5955B\e[1;5H\e[?25h"
+  - delay: 1732
+    content: "\e[?25l\r\e[93m175\e[m\e[1C    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m p\e[1;19H\e[K\e[2;1H\e[93m176\e[m\e[1C  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m986\e[m\r\n\e[93m177\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\a\e[m\e[95m\"\e[m\r\n\e[93m178\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m1926\e[m\e[4;20H\e[K\e[5;1H\e[93m179\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m l\e[5;19H\e[K\e[6;1H\e[93m180\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m110\e[m\e[6;19H\e[K\e[7;1H\e[93m181\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m s\e[7;19H\e[K\e[8;1H\e[93m182\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m1272\e[m\e[8;21H\e[K\e[9;1H\e[93m183\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[10;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\e[10;50H\e[K\e[11;1H\e[93m184\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m161\e[m\e[11;19H\e[K\e[12;1H\e[93m185\e[m\e[3C  \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[13;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m186\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m121\e[m\e[14;19H\e[K\e[15;1H\e[93m187\e[m\e[3C  \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[16;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m188\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m351\e[m\r\n\e[93m189\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m l\e[18;19H\e[K\e[19;1H\e[93m190\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m80\e[m\e[19;18H\e[K\e[20;1H\e[93m191\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m s\e[20;19H\e[K\e[21;1H\e[93m192\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m106\e[m\r\n\e[93m193\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[m\r\n\e[93m194\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\e[23;17H\e[K\e[24;1H\e[93m195\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"config.yml              render1702138841914.gif render1702139026949.gif terminal-header.gif\e[m\e[38;5;224m\\\\\e[m\e[25;1H\e[93m   \e[m\e[1C\e[38;5;224mr\\n\e[m\e[95mrender1702138034270.gif render1702138874477.gif render1702139061566.gif\e[m\e[38;5;224m\\r\\n\e[m\e[95mrender1702138778128.gif rendd\e[m\e[26;1H\e[93m   \e[m\e[1C\e[95mer1702138968594.gif render1702139116504.gif\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudSS\e[m\e[27;1H\e[93m   \e[m\e[1C\e[95mtorage/Dropbox/github/CodingNotes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m196\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m2080\e[m\e[28;20H\e[K\e[29;1H\e[93m197\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"logout\e[m\e[38;5;224m\\r\\n\\r\\n\e[m\e[95mSaving session...\"\e[m\r\n\e[93m198\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m13\e[m\e[30;18H\e[K\e[31;1H\e[93m199\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...copying shared history...\"\e[m\r\n\e[93m200\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m5\e[m\r\n\e[93m201\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...saving history...\"\e[m\r\n\e[93m202\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\r\n\e[93m203\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"truncating history files...\e[m\e[38;5;224m\\r\\n\e[m\e[95m...completed.\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[35;9H\e[?25h"
+  - delay: 3254
+    content: "\a\e[?25l\e[m\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 185
+    content: q
+  - delay: 254
+    content: '!'
+  - delay: 217
+    content: "\r"
+  - delay: 6
+    content: "\e[?25l\e[?2004l\e[>4;m\e[23;2t\e[23;1t\e[36;1H\e[K\e[36;1H\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m"
+  - delay: 5
+    content: "\e[?2004h[ van ] "
+  - delay: 726
+    content: c
+  - delay: 151
+    content: p
+  - delay: 50
+    content: ' '
+  - delay: 226
+    content: c
+  - delay: 222
+    content: .
+  - delay: 373
+    content: 'y'
+  - delay: 117
+    content: 'ml '
+  - delay: 1961
+    content: c
+  - delay: 115
+    content: o
+  - delay: 73
+    content: 'n'
+  - delay: 77
+    content: f
+  - delay: 125
+    content: i
+  - delay: 111
+    content: g
+  - delay: 169
+    content: .
+  - delay: 340
+    content: 'yml '
+  - delay: 580
+    content: "\r\n\e[?2004l\r"
+  - delay: 11
+    content: "\e[?2004h[ van ] "
+  - delay: 291
+    content: l
+  - delay: 107
+    content: s
+  - delay: 74
+    content: "\r\n\e[?2004l\r"
+  - delay: 6
+    content: "c.yml                foo.yml              terminal-example.yml\r\nconfig.yml           s.sh                 terminal-header.gif\r\n\e[?2004h[ van ] "
+  - delay: 2717
+    content: r
+  - delay: 151
+    content: m
+  - delay: 105
+    content: ' '
+  - delay: 771
+    content: f
+  - delay: 103
+    content: o
+  - delay: 138
+    content: o
+  - delay: 84
+    content: '.yml '
+  - delay: 413
+    content: "\r\n\e[?2004l\r"
+  - delay: 13
+    content: "\e[?2004h[ van ] "
+  - delay: 2921
+    content: t
+  - delay: 138
+    content: e
+  - delay: 93
+    content: r
+  - delay: 64
+    content: m
+  - delay: 111
+    content: i
+  - delay: 85
+    content: 'n'
+  - delay: 108
+    content: a
+  - delay: 117
+    content: l
+  - delay: 100
+    content: i
+  - delay: 168
+    content: z
+  - delay: 201
+    content: 'er '
+  - delay: 672
+    content: r
+  - delay: 70
+    content: e
+  - delay: 253
+    content: 'n'
+  - delay: 153
+    content: "\a"
+  - delay: 476
+    content: d
+  - delay: 315
+    content: "\a"
+  - delay: 696
+    content: e
+  - delay: 130
+    content: r
+  - delay: 686
+    content: "\b\e[K"
+  - delay: 161
+    content: "\b\e[K"
+  - delay: 138
+    content: "\b\e[K"
+  - delay: 156
+    content: "\b\e[K"
+  - delay: 122
+    content: "\b\e[K"
+  - delay: 210
+    content: "\b\e[K"
+  - delay: 5274
+    content: r
+  - delay: 84
+    content: e
+  - delay: 253
+    content: c
+  - delay: 98
+    content: o
+  - delay: 120
+    content: r
+  - delay: 157
+    content: d
+  - delay: 888
+    content: ' '
+  - delay: 2157
+    content: t
+  - delay: 160
+    content: e
+  - delay: 82
+    content: r
+  - delay: 89
+    content: m
+  - delay: 133
+    content: i
+  - delay: 78
+    content: 'n'
+  - delay: 101
+    content: a
+  - delay: 92
+    content: l
+  - delay: 261
+    content: '-'
+  - delay: 386
+    content: e
+  - delay: 205
+    content: x
+  - delay: 303
+    content: a
+  - delay: 119
+    content: m
+  - delay: 162
+    content: p
+  - delay: 237
+    content: l
+  - delay: 128
+    content: e
+  - delay: 2193
+    content: "\b"
+  - delay: 158
+    content: "\b"
+  - delay: 187
+    content: "\b"
+  - delay: 159
+    content: "\b"
+  - delay: 115
+    content: "\b"
+  - delay: 111
+    content: "\b"
+  - delay: 325
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 141
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 147
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 125
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 127
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 131
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 136
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 135
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 273
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 440
+    content: "\b\e[1Pxample\b\b\b\b\b\b"
+  - delay: 283
+    content: "bxample\b\b\b\b\b\b"
+  - delay: 92
+    content: "axample\b\b\b\b\b\b"
+  - delay: 86
+    content: "sxample\b\b\b\b\b\b"
+  - delay: 81
+    content: "hxample\b\b\b\b\b\b"
+  - delay: 1038
+    content: "\e[1Pample\b\b\b\b\b"
+  - delay: 987
+    content: "-ample\b\b\b\b\b"
+  - delay: 291
+    content: "eample\b\b\b\b\b"
+  - delay: 461
+    content: "xample\b\b\b\b\b"
+  - delay: 271
+    content: "\e[C"
+  - delay: 188
+    content: "\e[C"
+  - delay: 147
+    content: "\e[C"
+  - delay: 109
+    content: "\e[C"
+  - delay: 168
+    content: "\e[C"
+  - delay: 681
+    content: .
+  - delay: 102
+    content: s
+  - delay: 135
+    content: h
+  - delay: 2063
+    content: "\b\e[K"
+  - delay: 156
+    content: "\b\e[K"
+  - delay: 266
+    content: "\b\e[K"
+  - delay: 278
+    content: ' '
+  - delay: 199
+    content: '-'
+  - delay: 286
+    content: c
+  - delay: 166
+    content: ' '
+  - delay: 2914
+    content: c
+  - delay: 232
+    content: .
+  - delay: 283
+    content: 'y'
+  - delay: 175
+    content: 'ml '
+  - delay: 2413
+    content: "\r\n\e[?2004l\r"
+  - delay: 266
+    content: "Error: \r\n  TypeError: Cannot convert undefined or null to object\r\n\r\nHint:\r\n  Use the \e[32m--help\e[39m option to get help about the usage\r\n\e[?2004h[ van ] "
+  - delay: 12517
+    content: l
+  - delay: 88
+    content: s
+  - delay: 122
+    content: "\r\n\e[?2004l\r"
+  - delay: 8
+    content: "c.yml                config.yml           s.sh                 terminal-example.yml terminal-header.gif\r\n\e[?2004h[ van ] "
+  - delay: 387
+    content: v
+  - delay: 92
+    content: i
+  - delay: 105
+    content: ' '
+  - delay: 195
+    content: c
+  - delay: 86
+    content: .
+  - delay: 178
+    content: 'yml '
+  - delay: 243
+    content: "\r\n\e[?2004l\r"
+  - delay: 38
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"c.yml\" 203L, 5955B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m bash -l\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m114\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m32\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m114\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m32\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"c.yml\" 203L, 5955B\e[1;5H\e[?25h"
+  - delay: 1689
+    content: "\e[?25l\r\e[93m175\e[m\e[1C    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m p\e[1;19H\e[K\e[2;1H\e[93m176\e[m\e[1C  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m986\e[m\r\n\e[93m177\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\a\e[m\e[95m\"\e[m\r\n\e[93m178\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m1926\e[m\e[4;20H\e[K\e[5;1H\e[93m179\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m l\e[5;19H\e[K\e[6;1H\e[93m180\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m110\e[m\e[6;19H\e[K\e[7;1H\e[93m181\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m s\e[7;19H\e[K\e[8;1H\e[93m182\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m1272\e[m\e[8;21H\e[K\e[9;1H\e[93m183\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[10;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\e[10;50H\e[K\e[11;1H\e[93m184\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m161\e[m\e[11;19H\e[K\e[12;1H\e[93m185\e[m\e[3C  \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[13;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m186\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m121\e[m\e[14;19H\e[K\e[15;1H\e[93m187\e[m\e[3C  \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[16;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m188\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m351\e[m\r\n\e[93m189\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m l\e[18;19H\e[K\e[19;1H\e[93m190\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m80\e[m\e[19;18H\e[K\e[20;1H\e[93m191\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m s\e[20;19H\e[K\e[21;1H\e[93m192\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m106\e[m\r\n\e[93m193\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[m\r\n\e[93m194\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\e[23;17H\e[K\e[24;1H\e[93m195\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"config.yml              render1702138841914.gif render1702139026949.gif terminal-header.gif\e[m\e[38;5;224m\\\\\e[m\e[25;1H\e[93m   \e[m\e[1C\e[38;5;224mr\\n\e[m\e[95mrender1702138034270.gif render1702138874477.gif render1702139061566.gif\e[m\e[38;5;224m\\r\\n\e[m\e[95mrender1702138778128.gif rendd\e[m\e[26;1H\e[93m   \e[m\e[1C\e[95mer1702138968594.gif render1702139116504.gif\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudSS\e[m\e[27;1H\e[93m   \e[m\e[1C\e[95mtorage/Dropbox/github/CodingNotes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m196\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m2080\e[m\e[28;20H\e[K\e[29;1H\e[93m197\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"logout\e[m\e[38;5;224m\\r\\n\\r\\n\e[m\e[95mSaving session...\"\e[m\r\n\e[93m198\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m13\e[m\e[30;18H\e[K\e[31;1H\e[93m199\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...copying shared history...\"\e[m\r\n\e[93m200\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m5\e[m\r\n\e[93m201\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...saving history...\"\e[m\r\n\e[93m202\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\r\n\e[93m203\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"truncating history files...\e[m\e[38;5;224m\\r\\n\e[m\e[95m...completed.\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[35;9H\e[?25h"
+  - delay: 942
+    content: "\e[?25l\e[m\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 235
+    content: q
+  - delay: 653
+    content: '!'
+  - delay: 6724
+    content: "\r\e[?25l\e[?2004l\e[>4;m\e[23;2t\e[23;1t\e[36;1H\e[K\e[36;1H\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m"
+  - delay: 5
+    content: "\e[?2004h[ van ] "
+  - delay: 3020
+    content: v
+  - delay: 99
+    content: i
+  - delay: 56
+    content: ' '
+  - delay: 149
+    content: c
+  - delay: 47
+    content: o
+  - delay: 95
+    content: 'n'
+  - delay: 89
+    content: 'fig.yml '
+  - delay: 304
+    content: "\r\n\e[?2004l\r"
+  - delay: 32
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"config.yml\" 203L, 5955B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m bash -l\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m114\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m32\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m114\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m32\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"config.yml\" 203L, 5955B\e[1;5H\e[?25h"
+  - delay: 1097
+    content: "\e[?25l\r\e[93m175\e[m\e[1C    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m p\e[1;19H\e[K\e[2;1H\e[93m176\e[m\e[1C  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m986\e[m\r\n\e[93m177\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\a\e[m\e[95m\"\e[m\r\n\e[93m178\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m1926\e[m\e[4;20H\e[K\e[5;1H\e[93m179\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m l\e[5;19H\e[K\e[6;1H\e[93m180\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m110\e[m\e[6;19H\e[K\e[7;1H\e[93m181\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m s\e[7;19H\e[K\e[8;1H\e[93m182\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m1272\e[m\e[8;21H\e[K\e[9;1H\e[93m183\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[10;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\e[10;50H\e[K\e[11;1H\e[93m184\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m161\e[m\e[11;19H\e[K\e[12;1H\e[93m185\e[m\e[3C  \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[13;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m186\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m121\e[m\e[14;19H\e[K\e[15;1H\e[93m187\e[m\e[3C  \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[16;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m188\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m351\e[m\r\n\e[93m189\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m l\e[18;19H\e[K\e[19;1H\e[93m190\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m80\e[m\e[19;18H\e[K\e[20;1H\e[93m191\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m s\e[20;19H\e[K\e[21;1H\e[93m192\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m106\e[m\r\n\e[93m193\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[m\r\n\e[93m194\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\e[23;17H\e[K\e[24;1H\e[93m195\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"config.yml              render1702138841914.gif render1702139026949.gif terminal-header.gif\e[m\e[38;5;224m\\\\\e[m\e[25;1H\e[93m   \e[m\e[1C\e[38;5;224mr\\n\e[m\e[95mrender1702138034270.gif render1702138874477.gif render1702139061566.gif\e[m\e[38;5;224m\\r\\n\e[m\e[95mrender1702138778128.gif rendd\e[m\e[26;1H\e[93m   \e[m\e[1C\e[95mer1702138968594.gif render1702139116504.gif\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudSS\e[m\e[27;1H\e[93m   \e[m\e[1C\e[95mtorage/Dropbox/github/CodingNotes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m196\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m2080\e[m\e[28;20H\e[K\e[29;1H\e[93m197\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"logout\e[m\e[38;5;224m\\r\\n\\r\\n\e[m\e[95mSaving session...\"\e[m\r\n\e[93m198\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m13\e[m\e[30;18H\e[K\e[31;1H\e[93m199\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...copying shared history...\"\e[m\r\n\e[93m200\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m5\e[m\r\n\e[93m201\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...saving history...\"\e[m\r\n\e[93m202\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\r\n\e[93m203\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"truncating history files...\e[m\e[38;5;224m\\r\\n\e[m\e[95m...completed.\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[35;9H\e[?25h"
+  - delay: 1717
+    content: "\e[?25l\e[m\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 291
+    content: q
+  - delay: 319
+    content: '!'
+  - delay: 982
+    content: "\r\e[?25l\e[?2004l\e[>4;m\e[23;2t\e[23;1t\e[36;1H\e[K\e[36;1H\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m"
+  - delay: 5
+    content: "\e[?2004h[ van ] "
+  - delay: 490
+    content: v
+  - delay: 120
+    content: i
+  - delay: 96
+    content: m
+  - delay: 62
+    content: d
+  - delay: 126
+    content: i
+  - delay: 69
+    content: f
+  - delay: 136
+    content: f
+  - delay: 65
+    content: ' '
+  - delay: 189
+    content: c
+  - delay: 261
+    content: "\a"
+  - delay: 777
+    content: .
+  - delay: 307
+    content: 'y'
+  - delay: 124
+    content: 'ml '
+  - delay: 717
+    content: ' '
+  - delay: 207
+    content: c
+  - delay: 49
+    content: o
+  - delay: 56
+    content: 'n'
+  - delay: 150
+    content: 'fig.yml '
+  - delay: 417
+    content: "\r\n\e[?2004l\r"
+  - delay: 19
+    content: "2 files to edit\r\n"
+  - delay: 12
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"c.yml\" 203L, 5955B\r\"config.yml\" \e[36;15H\e[K\e[36;14H203L, 5955B"
+  - delay: 31
+    content: "\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[34m\e[48;5;248m+ \e[m\e[34m\e[48;5;248m  1 +--203 lines: The configurations that used for th\e[m\e[7m|\e[2;56H|\e[3;56H|\e[4;56H|\e[5;56H|\e[6;56H|\e[7;56H|\e[8;56H|\e[9;56H|\e[10;56H|\e[11;56H|\e[12;56H|\e[13;56H|\e[14;56H|\e[15;56H|\e[16;56H|\e[17;56H|\e[18;56H|\e[19;56H|\e[20;56H|\e[21;56H|\e[22;56H|\e[23;56H|\e[24;56H|\e[25;56H|\e[26;56H|\e[27;56H|\e[28;56H|\e[29;56H|\e[30;56H|\e[31;56H|\e[32;56H|\e[33;56H|\e[34;56H|\e[m\e[2;1H\e[94m~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \e[m\r\n\e[1m\e[7mc.yml                                                   \e[m\e[1;57H\e[34m\e[48;5;248m+ \e[m\e[34m\e[48;5;248m  1 +--203 lines: The configurations that used for t\e[m\e[2;57H\e[94m~                                                     \e[3;57H~                                                     \e[4;57H~                                                     \e[5;57H~                                                     \e[6;57H~                                                     \e[7;57H~                                                     \e[8;57H~                                                     \e[9;57H~                                                     \e[10;57H~                                                     \e[11;57H~                                                     \e[12;57H~                                                     \e[13;57H~                                                     \e[14;57H~                                                     \e[15;57H~                                                     \e[16;57H~                                                     \e[17;57H~                                                     \e[18;57H~                                                     \e[19;57H~                                                     \e[20;57H~                                                     \e[21;57H~                                                     \e[22;57H~                                                     \e[23;57H~                                                     \e[24;57H~                                                     \e[25;57H~                                                     \e[26;57H~                                                     \e[27;57H~                                                     \e[28;57H~                                                     \e[29;57H~                                                     \e[30;57H~                                                     \e[31;57H~                                                     \e[32;57H~                                                     \e[33;57H~                                                     \e[34;57H~                                                     \e[m\e[35;57H\e[7mconfig.yml                                            \e[1;7H\e[?25h\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[96m\e[48;5;242m+ \e[m\e[96m\e[48;5;242m  1 +--203 lines: The configurations that used for th\e[m\e[7m|\e[2;56H|\e[3;56H|\e[4;56H|\e[5;56H|\e[6;56H|\e[7;56H|\e[8;56H|\e[9;56H|\e[10;56H|\e[11;56H|\e[12;56H|\e[13;56H|\e[14;56H|\e[15;56H|\e[16;56H|\e[17;56H|\e[18;56H|\e[19;56H|\e[20;56H|\e[21;56H|\e[22;56H|\e[23;56H|\e[24;56H|\e[25;56H|\e[26;56H|\e[27;56H|\e[28;56H|\e[29;56H|\e[30;56H|\e[31;56H|\e[32;56H|\e[33;56H|\e[34;56H|\e[m\e[2;1H\e[94m~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \r\n~                                                      \e[m\r\n\e[1m\e[7mc.yml                                                   \e[m\e[1;57H\e[96m\e[48;5;242m+ \e[m\e[96m\e[48;5;242m  1 +--203 lines: The configurations that used for t\e[m\e[2;57H\e[94m~                                                     \e[3;57H~                                                     \e[4;57H~                                                     \e[5;57H~                                                     \e[6;57H~                                                     \e[7;57H~                                                     \e[8;57H~                                                     \e[9;57H~                                                     \e[10;57H~                                                     \e[11;57H~                                                     \e[12;57H~                                                     \e[13;57H~                                                     \e[14;57H~                                                     \e[15;57H~                                                     \e[16;57H~                                                     \e[17;57H~                                                     \e[18;57H~                                                     \e[19;57H~                                                     \e[20;57H~                                                     \e[21;57H~                                                     \e[22;57H~                                                     \e[23;57H~                                                     \e[24;57H~                                                     \e[25;57H~                                                     \e[26;57H~                                                     \e[27;57H~                                                     \e[28;57H~                                                     \e[29;57H~                                                     \e[30;57H~                                                     \e[31;57H~                                                     \e[32;57H~                                                     \e[33;57H~                                                     \e[34;57H~                                                     \e[m\e[35;57H\e[7mconfig.yml                                            \e[m\e[36;1H\"config.yml\" 203L, 5955B\e[1;7H\e[?25h"
+  - delay: 634
+    content: "\e[?25l\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 76
+    content: q
+  - delay: 248
+    content: '!'
+  - delay: 200
+    content: "\r\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\e[1;77H\e[K\e[2;1H\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\e[2;12H\e[K\e[3;1H\e[93m  3 \e[m\e[3;5H\e[K\e[4;1H\e[93m  4 \e[m \e[96m # Specify a command to be executed\e[m\e[4;41H\e[K\e[5;1H\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\e[5;57H\e[K\e[6;1H\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\e[6;38H\e[K\e[7;1H\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\e[7;38H\e[K\e[8;1H\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\e[8;23H\e[K\e[9;1H\e[93m  9 \e[m  \e[9;7H\e[K\e[10;1H\e[93m 10 \e[m \e[96m # Specify the current working directory path\e[m\e[10;51H\e[K\e[11;1H\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\e[11;58H\e[K\e[12;1H\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[12;82H\e[K\e[13;1H\e[93m 13 \e[m  \e[13;7H\e[K\e[14;1H\e[93m 14 \e[m \e[96m # Export additional ENV variables\e[m\e[14;40H\e[K\e[15;1H\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\e[15;11H\e[K\e[16;1H\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\e[16;24H\e[K\e[17;1H\e[93m 17 \e[m  \e[17;7H\e[K\e[18;1H\e[93m 18 \e[m \e[96m # Explicitly set the number of columns\e[m\e[18;45H\e[K\e[19;1H\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\e[19;42H\e[K\e[20;1H\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\e[20;40H\e[K\e[21;1H\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m114\e[m\e[21;16H\e[K\e[22;1H\e[93m 22 \e[m  \e[22;7H\e[K\e[23;1H\e[93m 23 \e[m \e[96m # Explicitly set the number of rows\e[m\e[23;42H\e[K\e[24;1H\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\e[24;42H\e[K\e[25;1H\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\e[25;37H\e[K\e[26;1H\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m32\e[m\e[26;15H\e[K\e[27;1H\e[93m 27 \e[m  \e[27;7H\e[K\e[28;1H\e[93m 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\e[28;38H\e[K\e[29;1H\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\e[29;34H\e[K\e[30;1H\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\e[30;41H\e[K\e[31;1H\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\e[31;52H\e[K\e[32;1H\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\e[32;16H\e[K\e[33;1H\e[93m 33 \e[m  \e[33;7H\e[K\e[34;1H\e[93m 34 \e[m \e[96m # Quality\e[m\e[34;16H\e[K\e[35;1H\e[93m 35 \e[m \e[96m # 1 - 100\e[m\e[35;16H\e[K\e[1;5H\e[?25h\e[?4m"
+  - delay: 670
+    content: "\e[?25l\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 65
+    content: Q
+  - delay: 231
+    content: '!'
+  - delay: 128
+    content: "\r\e[?25l\e[97m\e[41mE492: Not an editor command: Q!\e[1;5H\e[?25h"
+  - delay: 652
+    content: "\e[?25l\e[m\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 115
+    content: q
+  - delay: 202
+    content: '!'
+  - delay: 146
+    content: "\r"
+  - delay: 6
+    content: "\e[?25l\e[?2004l\e[>4;m\e[23;2t\e[23;1t\e[36;1H\e[K\e[36;1H\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m\e[?2004h[ van ] "
+  - delay: 655
+    content: 'vimdiff c.yml  config.yml '
+  - delay: 174
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[12P\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C"
+  - delay: 669
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[12@mdiff c.yml \e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C"
+  - delay: 252
+    content: "\b"
+  - delay: 166
+    content: "\b"
+  - delay: 344
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[K"
+  - delay: 211
+    content: 'vimdiff c.yml  config.yml '
+  - delay: 145
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[12P\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C"
+  - delay: 147
+    content: "\b\b\b\b\b\b\b\b\b\b\e[5P\e[C\e[C\e[C\e[C\e[C"
+  - delay: 349
+    content: "\b\b\b\b\b\b\b\b\bls\e[K"
+  - delay: 613
+    content: "\b\bterminalizer record bash-example -c c.yml "
+  - delay: 490
+    content: "\b"
+  - delay: 116
+    content: "\b"
+  - delay: 158
+    content: "\b"
+  - delay: 151
+    content: "\b"
+  - delay: 562
+    content: "\b"
+  - delay: 388
+    content: "\e[1@o"
+  - delay: 73
+    content: "\e[1@n"
+  - delay: 165
+    content: "\e[1@f"
+  - delay: 106
+    content: "\e[1@i"
+  - delay: 157
+    content: "\e[5@g.yml"
+  - delay: 511
+    content: "\b\e[1P"
+  - delay: 148
+    content: "\b\e[1P"
+  - delay: 138
+    content: "\b\e[1P"
+  - delay: 136
+    content: "\e[1P\b"
+  - delay: 235
+    content: "\r\n\e[?2004l\r"
+  - delay: 169
+    content: "Error: \r\n  TypeError: Cannot convert undefined or null to object\r\n\r\nHint:\r\n  Use the \e[32m--help\e[39m option to get help about the usage\r\n\e[?2004h[ van ] "
+  - delay: 2316
+    content: c
+  - delay: 116
+    content: p
+  - delay: 104
+    content: ' '
+  - delay: 215
+    content: o
+  - delay: 24
+    content: c
+  - delay: 124
+    content: 'n'
+  - delay: 199
+    content: "\a"
+  - delay: 474
+    content: "\b\e[K"
+  - delay: 136
+    content: "\b\e[K"
+  - delay: 133
+    content: "\b\e[K"
+  - delay: 251
+    content: c
+  - delay: 76
+    content: o
+  - delay: 73
+    content: 'n'
+  - delay: 141
+    content: 'fig.yml '
+  - delay: 2878
+    content: "^C\e[?2004l\r\e[?2004h\e[?2004l\r\r\n\e[?2004h[ van ] "
+  - delay: 332
+    content: v
+  - delay: 160
+    content: i
+  - delay: 146
+    content: ' '
+  - delay: 236
+    content: c
+  - delay: 57
+    content: o
+  - delay: 95
+    content: 'n'
+  - delay: 79
+    content: f
+  - delay: 119
+    content: i
+  - delay: 122
+    content: 'g.yml '
+  - delay: 462
+    content: "\r\n\e[?2004l\r"
+  - delay: 33
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"config.yml\" 203L, 5955B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m bash -l\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m114\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m32\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m114\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m32\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"config.yml\" 203L, 5955B\e[1;5H\e[?25h"
+  - delay: 532
+    content: "\e[?25l\r\e[93m175\e[m\e[1C    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m p\e[1;19H\e[K\e[2;1H\e[93m176\e[m\e[1C  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m986\e[m\r\n\e[93m177\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\a\e[m\e[95m\"\e[m\r\n\e[93m178\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m1926\e[m\e[4;20H\e[K\e[5;1H\e[93m179\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m l\e[5;19H\e[K\e[6;1H\e[93m180\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m110\e[m\e[6;19H\e[K\e[7;1H\e[93m181\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m s\e[7;19H\e[K\e[8;1H\e[93m182\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m1272\e[m\e[8;21H\e[K\e[9;1H\e[93m183\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[10;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\e[10;50H\e[K\e[11;1H\e[93m184\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m161\e[m\e[11;19H\e[K\e[12;1H\e[93m185\e[m\e[3C  \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[13;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m186\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m121\e[m\e[14;19H\e[K\e[15;1H\e[93m187\e[m\e[3C  \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNN\e[m\e[16;1H\e[93m   \e[m\e[1C\e[95motes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m188\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m351\e[m\r\n\e[93m189\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m l\e[18;19H\e[K\e[19;1H\e[93m190\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m80\e[m\e[19;18H\e[K\e[20;1H\e[93m191\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m s\e[20;19H\e[K\e[21;1H\e[93m192\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m106\e[m\r\n\e[93m193\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[m\r\n\e[93m194\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\e[23;17H\e[K\e[24;1H\e[93m195\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"config.yml              render1702138841914.gif render1702139026949.gif terminal-header.gif\e[m\e[38;5;224m\\\\\e[m\e[25;1H\e[93m   \e[m\e[1C\e[38;5;224mr\\n\e[m\e[95mrender1702138034270.gif render1702138874477.gif render1702139061566.gif\e[m\e[38;5;224m\\r\\n\e[m\e[95mrender1702138778128.gif rendd\e[m\e[26;1H\e[93m   \e[m\e[1C\e[95mer1702138968594.gif render1702139116504.gif\e[m\e[38;5;224m\\r\\n\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudSS\e[m\e[27;1H\e[93m   \e[m\e[1C\e[95mtorage/Dropbox/github/CodingNotes/_static/gif\e[m\e[38;5;224m\\a\e[m\e[95mvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m196\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m2080\e[m\e[28;20H\e[K\e[29;1H\e[93m197\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"logout\e[m\e[38;5;224m\\r\\n\\r\\n\e[m\e[95mSaving session...\"\e[m\r\n\e[93m198\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m13\e[m\e[30;18H\e[K\e[31;1H\e[93m199\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...copying shared history...\"\e[m\r\n\e[93m200\e[m\e[3C\e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m5\e[m\r\n\e[93m201\e[m\e[5C\e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\r\\n\e[m\e[95m...saving history...\"\e[m\r\n\e[93m202\e[m\e[2C \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m6\e[m\r\n\e[93m203\e[m\e[2C   \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"truncating history files...\e[m\e[38;5;224m\\r\\n\e[m\e[95m...completed.\e[m\e[38;5;224m\\r\\n\e[m\e[95m\"\e[35;9H\e[?25h"
+  - delay: 1650
+    content: "\e[34;9H"
+  - delay: 858
+    content: "\e[?25l\e[m\e[1;1H\e[93m  1\e[m\e[1C\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2\e[m\e[1C\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\e[2;12H\e[K\e[3;1H\e[93m  3\e[m\e[3;9H\e[K\e[4;1H\e[93m  4\e[m\e[2C\e[96m # Specify a command to be executed\e[m\r\n\e[93m  5\e[m\e[2C\e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6\e[m\e[2C\e[96m # the default is bash for Linux\e[m\r\n\e[93m  7\e[m\e[2C\e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8\e[m\e[3C\e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\r\n\e[93m  9\e[m\e[9;9H\e[K\e[10;2H\e[93m10\e[m\e[1C \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11\e[m\e[2C\e[96m # the default is the current working directory path\e[m\r\n\e[93m 12\e[m\e[3C\e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\e[12;82H\e[K\e[13;2H\e[93m13\e[m\e[1C  \e[13;7H\e[K\e[14;1H\e[93m 14\e[m\e[2C\e[96m # Export additional ENV variables\e[m\r\n\e[93m 15\e[m\e[3C\e[1m\e[96menv\e[m\e[38;5;224m:\e[m\e[15;11H\e[K\e[16;2H\e[93m16\e[m\e[1C    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\e[16;24H\e[K\e[17;1H\e[93m 17\e[m\e[17;7H\e[K\e[18;1H\e[93m 18\e[m\e[2C\e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19\e[m\e[2C\e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20\e[m\e[2C\e[96m # number of columns of your shell\e[m\r\n\e[93m 21\e[m\e[3C\e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m114\e[m\e[21;16H\e[K\e[22;1H\e[93m 22\e[m\e[22;9H\e[K\e[23;1H\e[93m 23\e[m\e[2C\e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24\e[m\e[2C\e[96m # or use `auto` to take the current\e[m\e[24;42H\e[K\e[25;2H\e[93m25\e[m\e[1C \e[96m # number of rows of your shell\e[m\e[25;37H\e[K\e[26;2H\e[93m26\e[m\e[1C  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m32\e[m\e[26;15H\e[K\e[27;2H\e[93m27\e[m\e[1C  \e[27;7H\e[K\e[28;1H\e[93m 28\e[m\e[2C\e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29\e[m\e[2C\e[96m # If value is -1, play once\e[m\e[29;34H\e[K\e[30;1H\e[93m 30\e[m\e[2C\e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31\e[m\e[2C\e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32\e[m\e[3C\e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\e[32;16H\e[K\e[33;1H\e[93m 33\e[m\e[33;9H\e[K\e[34;1H\e[93m 34\e[m\e[2C\e[96m # Quality\e[m\e[34;16H\e[K\e[35;1H\e[93m 35\e[m\e[2C\e[96m # 1 - 100\e[m\e[35;16H\e[K\e[1;5H\e[?25h"
+  - delay: 940
+    content: "\e[?25l\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[1;1H\e[93m 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\e[93m 36 \e[m  \e[1m\e[96mquality\e[m\e[38;5;224m:\e[m \e[95m100\e[m\r\n\e[93m 37 \r\n 38 \e[m \e[96m # Delay between frames in ms\e[m\r\n\e[93m 39 \e[m \e[96m # If the value is `auto` use the actual recording delays\e[m\r\n\e[93m 40 \e[m  \e[1m\e[96mframeDelay\e[m\e[38;5;224m:\e[m auto\r\n\e[93m 41 \r\n 42 \e[m \e[96m # Maximum delay between frames in ms\e[m\r\n\e[93m 43 \e[m \e[96m # Ignored if the `frameDelay` isn't set to `auto`\e[m\r\n\e[93m 44 \e[m \e[96m # Set to `auto` to prevent limiting the max idle time\e[m\r\n\e[93m 45 \e[m  \e[1m\e[96mmaxIdleTime\e[m\e[38;5;224m:\e[m \e[95m2000\e[m\r\n\e[93m 46 \r\n 47 \e[m \e[96m # The surrounding frame box\e[m\r\n\e[93m 48 \e[m \e[96m # The `type` can be null, window, floating, or solid`\e[m\r\n\e[93m 49 \e[m \e[96m # To hide the title use the value null\e[m\r\n\e[93m 50 \e[m \e[96m # Don't forget to add a backgroundColor style with a null as type\e[m\r\n\e[93m 51 \e[m  \e[1m\e[96mframeBox\e[m\e[38;5;224m:\e[m\r\n\e[93m 52 \e[m    \e[1m\e[96mtype\e[m\e[38;5;224m:\e[m floating\r\n\e[93m 53 \e[m    \e[1m\e[96mtitle\e[m\e[38;5;224m:\e[m Terminalizer\r\n\e[93m 54 \e[m    \e[1m\e[96mstyle\e[m\e[38;5;224m:\e[m\r\n\e[93m 55 \e[m      \e[1m\e[96mborder\e[m\e[38;5;224m:\e[m 0px black solid\r\n\e[93m 56 \e[m     \e[96m # boxShadow: none\e[m\r\n\e[93m 57 \e[m     \e[96m # margin: 0px\e[m\r\n\e[93m 58 \r\n 59 \e[m \e[96m # Add a watermark image to the rendered gif\e[m\r\n\e[93m 60 \e[m \e[96m # You need to specify an absolute path for\e[m\r\n\e[93m 61 \e[m \e[96m # the image on your machine or a URL, and you can also\e[m\r\n\e[93m 62 \e[m \e[96m # add your own CSS styles\e[m\r\n\e[93m 63 \e[m  \e[1m\e[96mwatermark\e[m\e[38;5;224m:\e[m\r\n\e[93m 64 \e[m    \e[1m\e[96mimagePath\e[m\e[38;5;224m:\e[m \e[95mnull\e[m\r\n\e[93m 65 \e[m    \e[1m\e[96mstyle\e[m\e[38;5;224m:\e[m\r\n\e[93m 66 \e[m      \e[1m\e[96mposition\e[m\e[38;5;224m:\e[m absolute\r\n\e[93m 67 \e[m      \e[1m\e[96mright\e[m\e[38;5;224m:\e[m 15px\r\n\e[93m 68 \e[m      \e[1m\e[96mbottom\e[m\e[38;5;224m:\e[m 15px\e[1;7H\e[?25h"
+  - delay: 414
+    content: "\e[?25l\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[1;1H\e[93m 67 \e[m      \e[1m\e[96mright\e[m\e[38;5;224m:\e[m 15px\r\n\e[93m 68 \e[m      \e[1m\e[96mbottom\e[m\e[38;5;224m:\e[m 15px\r\n\e[93m 69 \e[m      \e[1m\e[96mwidth\e[m\e[38;5;224m:\e[m 100px\r\n\e[93m 70 \e[m      \e[1m\e[96mopacity\e[m\e[38;5;224m:\e[m \e[95m0.9\e[m\r\n\e[93m 71 \r\n 72 \e[m \e[96m # Cursor style can be one of\e[m\r\n\e[93m 73 \e[m \e[96m # `block`, `underline`, or `bar`\e[m\r\n\e[93m 74 \e[m  \e[1m\e[96mcursorStyle\e[m\e[38;5;224m:\e[m block\r\n\e[93m 75 \r\n 76 \e[m \e[96m # Font family\e[m\r\n\e[93m 77 \e[m \e[96m # You can use any font that is installed on your machine\e[m\r\n\e[93m 78 \e[m \e[96m # in CSS-like syntax\e[m\r\n\e[93m 79 \e[m  \e[1m\e[96mfontFamily\e[m\e[38;5;224m:\e[m \e[95m\"Monaco, Lucida Console, Ubuntu Mono, Monospace\"\e[m\r\n\e[93m 80 \r\n 81 \e[m \e[96m # The size of the font\e[m\r\n\e[93m 82 \e[m  \e[1m\e[96mfontSize\e[m\e[38;5;224m:\e[m \e[95m12\e[m\r\n\e[93m 83 \r\n 84 \e[m \e[96m # The height of lines\e[m\r\n\e[93m 85 \e[m  \e[1m\e[96mlineHeight\e[m\e[38;5;224m:\e[m \e[95m1\e[m\r\n\e[93m 86 \r\n 87 \e[m \e[96m # The spacing between letters\e[m\r\n\e[93m 88 \e[m  \e[1m\e[96mletterSpacing\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 89 \r\n 90 \e[m \e[96m # Theme\e[m\r\n\e[93m 91 \e[m  \e[1m\e[96mtheme\e[m\e[38;5;224m:\e[m\r\n\e[93m 92 \e[m    \e[1m\e[96mbackground\e[m\e[38;5;224m:\e[m \e[95m\"transparent\"\e[m\r\n\e[93m 93 \e[m    \e[1m\e[96mforeground\e[m\e[38;5;224m:\e[m \e[95m\"#afafaf\"\e[m\r\n\e[93m 94 \e[m    \e[1m\e[96mcursor\e[m\e[38;5;224m:\e[m \e[95m\"#c7c7c7\"\e[m\r\n\e[93m 95 \e[m    \e[1m\e[96mblack\e[m\e[38;5;224m:\e[m \e[95m\"#232628\"\e[m\r\n\e[93m 96 \e[m    \e[1m\e[96mred\e[m\e[38;5;224m:\e[m \e[95m\"#fc4384\"\e[m\r\n\e[93m 97 \e[m    \e[1m\e[96mgreen\e[m\e[38;5;224m:\e[m \e[95m\"#b3e33b\"\e[m\r\n\e[93m 98 \e[m    \e[1m\e[96myellow\e[m\e[38;5;224m:\e[m \e[95m\"#ffa727\"\e[m\r\n\e[93m 99 \e[m    \e[1m\e[96mblue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\r\n\e[93m100 \e[m    \e[1m\e[96mmagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\r\n\e[93m101 \e[m    \e[1m\e[96mcyan\e[m\e[38;5;224m:\e[m \e[95m\"#708387\"\e[1;11H\e[?25h"
+  - delay: 1212
+    content: "\e[?25l\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[1;1H\e[93m100 \e[m    \e[1m\e[96mmagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\r\n\e[93m101 \e[m    \e[1m\e[96mcyan\e[m\e[38;5;224m:\e[m \e[95m\"#708387\"\e[m\r\n\e[93m102 \e[m    \e[1m\e[96mwhite\e[m\e[38;5;224m:\e[m \e[95m\"#d5d5d0\"\e[m\r\n\e[93m103 \e[m    \e[1m\e[96mbrightBlack\e[m\e[38;5;224m:\e[m \e[95m\"#626566\"\e[m\r\n\e[93m104 \e[m    \e[1m\e[96mbrightRed\e[m\e[38;5;224m:\e[m \e[95m\"#ff7fac\"\e[m\r\n\e[93m105 \e[m    \e[1m\e[96mbrightGreen\e[m\e[38;5;224m:\e[m \e[95m\"#c8ed71\"\e[m\r\n\e[93m106 \e[m    \e[1m\e[96mbrightYellow\e[m\e[38;5;224m:\e[m \e[95m\"#ebdf86\"\e[m\r\n\e[93m107 \e[m    \e[1m\e[96mbrightBlue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\r\n\e[93m108 \e[m    \e[1m\e[96mbrightMagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\r\n\e[93m109 \e[m    \e[1m\e[96mbrightCyan\e[m\e[38;5;224m:\e[m \e[95m\"#b1c6ca\"\e[m\r\n\e[93m110 \e[m    \e[1m\e[96mbrightWhite\e[m\e[38;5;224m:\e[m \e[95m\"#f9f9f4\"\e[m\r\n\e[93m111 \r\n112 \e[m\e[96m# Records, feel free to edit them\e[m\r\n\e[93m113 \e[m\e[1m\e[96mrecords\e[m\e[38;5;224m:\e[m\r\n\e[93m114 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m414\e[m\r\n\e[93m115 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNotess\e[m\e[17;1H\e[93m    \e[m\e[95m/_static/gif\e[m\e[38;5;224m\\a\\e\e[m\e[95m[?1034hvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m116 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m3946\e[m\r\n\e[93m117 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m e\r\n\e[93m118 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m211\e[m\r\n\e[93m119 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m c\r\n\e[93m120 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m163\e[m\r\n\e[93m121 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m h\r\n\e[93m122 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m88\e[m\r\n\e[93m123 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m o\r\n\e[93m124 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m251\e[m\r\n\e[93m125 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m' '\e[m\r\n\e[93m126 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m543\e[m\r\n\e[93m127 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m $\r\n\e[93m128 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m325\e[m\r\n\e[93m129 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m S\r\n\e[93m130 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m228\e[m\r\n\e[93m131 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m H\r\n\e[93m132 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m239\e[m\r\n\e[93m133 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m E\e[1;9H\e[?25h"
+  - delay: 906
+    content: "\e[2;9H"
+  - delay: 418
+    content: "\e[3;9H"
+  - delay: 85
+    content: "\e[4;9H"
+  - delay: 82
+    content: "\e[5;9H"
+  - delay: 84
+    content: "\e[6;9H"
+  - delay: 83
+    content: "\e[7;9H"
+  - delay: 83
+    content: "\e[8;9H"
+  - delay: 84
+    content: "\e[9;9H"
+  - delay: 85
+    content: "\e[10;9H"
+  - delay: 84
+    content: "\e[11;9H"
+  - delay: 84
+    content: "\e[12;6H"
+  - delay: 83
+    content: "\e[13;9H"
+  - delay: 84
+    content: "\e[14;9H"
+  - delay: 84
+    content: "\e[15;9H"
+  - delay: 4409
+    content: "\e[14;9H"
+  - delay: 248
+    content: "\e[15;9H"
+  - delay: 468
+    content: "\e[16;9H"
+  - delay: 724
+    content: "\e[15;9H"
+  - delay: 1648
+    content: "\e[16;9H"
+  - delay: 1653
+    content: "\e[18;9H"
+  - delay: 293
+    content: "\e[19;9H"
+  - delay: 672
+    content: "\e[20;9H"
+  - delay: 999
+    content: "\a"
+  - delay: 955
+    content: "\e[?25l\e[36;1H86 fewer lines\e[20;1H\e[94m~                                                                                                             \e[21;1H~                                                                                                             \e[22;1H~                                                                                                             \e[23;1H~                                                                                                             \e[24;1H~                                                                                                             \e[25;1H~                                                                                                             \e[26;1H~                                                                                                             \e[27;1H~                                                                                                             \e[28;1H~                                                                                                             \e[29;1H~                                                                                                             \e[30;1H~                                                                                                             \e[31;1H~                                                                                                             \e[32;1H~                                                                                                             \e[33;1H~                                                                                                             \e[34;1H~                                                                                                             \e[35;1H~                                                                                                             \e[19;9H\e[?25h"
+  - delay: 1206
+    content: "\a\e[?25l\e[m\e[36;1H\e[K\e[36;1H:\e[?25h"
+  - delay: 143
+    content: w
+  - delay: 75
+    content: q
+  - delay: 337
+    content: "\r\e[?25l\e[?2004l\e[>4;m\"config.yml\""
+  - delay: 8
+    content: " 117L, 3034B written\r\e[23;2t\e[23;1t\r\r\n\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m\e[?2004h[ van ] "
+  - delay: 1099
+    content: 'vi config.yml '
+  - delay: 248
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[33@terminalizer record bash-example -c\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C"
+  - delay: 1208
+    content: "\r\n\e[?2004l\r"
+  - delay: 178
+    content: "Error: \r\n  TypeError: Cannot convert undefined or null to object\r\n\r\nHint:\r\n  Use the \e[32m--help\e[39m option to get help about the usage\r\n\e[?2004h[ van ] "
+  - delay: 1427
+    content: v
+  - delay: 142
+    content: i
+  - delay: 109
+    content: ' '
+  - delay: 140
+    content: c
+  - delay: 30
+    content: o
+  - delay: 86
+    content: 'n'
+  - delay: 129
+    content: 'fig.yml '
+  - delay: 184
+    content: "\r\n\e[?2004l\r"
+  - delay: 38
+    content: "\e[?1049h\e[>4;2m\e[?1h\e=\e[?2004h\e[?1004h\e[1;36r\e[?12h\e[?12l\e[22;2t\e[22;1t\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[36;1H\"config.yml\" 117L, 3034B\e[2;1H▽\e[6n\e[2;1H  \e[3;1H\ePzz\e\\\e[0%m\e[6n\e[3;1H           \e[1;1H\e[>c\e]10;?\a\e]11;?\a\e[1;1H\e[38;5;130m  1 \e[m\e[34m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[38;5;130m  2 \e[m\e[36mconfig\e[m\e[35m:\e[m\e[2;12H\e[K\e[3;1H\e[38;5;130m  3 \e[m\e[3;5H\e[K\e[4;1H\e[38;5;130m  4 \e[m \e[34m # Specify a command to be executed\e[m\r\n\e[38;5;130m  5 \e[m \e[34m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[38;5;130m  6 \e[m \e[34m # the default is bash for Linux\e[m\r\n\e[38;5;130m  7 \e[m \e[34m # or powershell.exe for Windows\e[m\r\n\e[38;5;130m  8 \e[m  \e[36mcommand\e[m\e[35m:\e[m bash -l\r\n\e[38;5;130m  9 \r\n 10 \e[m \e[34m # Specify the current working directory path\e[m\r\n\e[38;5;130m 11 \e[m \e[34m # the default is the current working directory path\e[m\r\n\e[38;5;130m 12 \e[m  \e[36mcwd\e[m\e[35m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[38;5;130m 13 \r\n 14 \e[m \e[34m # Export additional ENV variables\e[m\r\n\e[38;5;130m 15 \e[m  \e[36menv\e[m\e[35m:\e[m\r\n\e[38;5;130m 16 \e[m    \e[36mrecording\e[m\e[35m:\e[m \e[31mtrue\e[m\r\n\e[38;5;130m 17 \r\n 18 \e[m \e[34m # Explicitly set the number of columns\e[m\r\n\e[38;5;130m 19 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 20 \e[m \e[34m # number of columns of your shell\e[m\r\n\e[38;5;130m 21 \e[m  \e[36mcols\e[m\e[35m:\e[m \e[31m114\e[m\r\n\e[38;5;130m 22 \r\n 23 \e[m \e[34m # Explicitly set the number of rows\e[m\r\n\e[38;5;130m 24 \e[m \e[34m # or use `auto` to take the current\e[m\r\n\e[38;5;130m 25 \e[m \e[34m # number of rows of your shell\e[m\r\n\e[38;5;130m 26 \e[m  \e[36mrows\e[m\e[35m:\e[m \e[31m32\e[m\r\n\e[38;5;130m 27 \r\n 28 \e[m \e[34m # Amount of times to repeat GIF\e[m\r\n\e[38;5;130m 29 \e[m \e[34m # If value is -1, play once\e[m\r\n\e[38;5;130m 30 \e[m \e[34m # If value is 0, loop indefinitely\e[m\r\n\e[38;5;130m 31 \e[m \e[34m # If value is a positive number, loop n times\e[m\r\n\e[38;5;130m 32 \e[m  \e[36mrepeat\e[m\e[35m:\e[m \e[31m0\e[m\r\n\e[38;5;130m 33 \r\n 34 \e[m \e[34m # Quality\e[m\r\n\e[38;5;130m 35 \e[m \e[34m # 1 - 100\e[1;5H\e[?25h\e[?4m\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[?25l\e[1;1H\e[93m  1 \e[m\e[96m# The configurations that used for the recording, feel free to edit them\e[m\r\n\e[93m  2 \e[m\e[1m\e[96mconfig\e[m\e[38;5;224m:\e[m\r\n\e[93m  3 \r\n  4 \e[m \e[96m # Specify a command to be executed\e[m\r\n\e[93m  5 \e[m \e[96m # like `/bin/bash -l`, `ls`, or any other commands\e[m\r\n\e[93m  6 \e[m \e[96m # the default is bash for Linux\e[m\r\n\e[93m  7 \e[m \e[96m # or powershell.exe for Windows\e[m\r\n\e[93m  8 \e[m  \e[1m\e[96mcommand\e[m\e[38;5;224m:\e[m bash -l\r\n\e[93m  9 \r\n 10 \e[m \e[96m # Specify the current working directory path\e[m\r\n\e[93m 11 \e[m \e[96m # the default is the current working directory path\e[m\r\n\e[93m 12 \e[m  \e[1m\e[96mcwd\e[m\e[38;5;224m:\e[m /Users/van/Library/CloudStorage/Dropbox/github/CodingNotes/_static/gif\r\n\e[93m 13 \r\n 14 \e[m \e[96m # Export additional ENV variables\e[m\r\n\e[93m 15 \e[m  \e[1m\e[96menv\e[m\e[38;5;224m:\e[m\r\n\e[93m 16 \e[m    \e[1m\e[96mrecording\e[m\e[38;5;224m:\e[m \e[95mtrue\e[m\r\n\e[93m 17 \r\n 18 \e[m \e[96m # Explicitly set the number of columns\e[m\r\n\e[93m 19 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 20 \e[m \e[96m # number of columns of your shell\e[m\r\n\e[93m 21 \e[m  \e[1m\e[96mcols\e[m\e[38;5;224m:\e[m \e[95m114\e[m\r\n\e[93m 22 \r\n 23 \e[m \e[96m # Explicitly set the number of rows\e[m\r\n\e[93m 24 \e[m \e[96m # or use `auto` to take the current\e[m\r\n\e[93m 25 \e[m \e[96m # number of rows of your shell\e[m\r\n\e[93m 26 \e[m  \e[1m\e[96mrows\e[m\e[38;5;224m:\e[m \e[95m32\e[m\r\n\e[93m 27 \r\n 28 \e[m \e[96m # Amount of times to repeat GIF\e[m\r\n\e[93m 29 \e[m \e[96m # If value is -1, play once\e[m\r\n\e[93m 30 \e[m \e[96m # If value is 0, loop indefinitely\e[m\r\n\e[93m 31 \e[m \e[96m # If value is a positive number, loop n times\e[m\r\n\e[93m 32 \e[m  \e[1m\e[96mrepeat\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 33 \r\n 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\"config.yml\" 117L, 3034B\e[1;5H\e[?25h"
+  - delay: 1481
+    content: "\e[2;5H"
+  - delay: 506
+    content: "\e[3;5H"
+  - delay: 430
+    content: "\e[4;5H"
+  - delay: 275
+    content: "\e[5;5H"
+  - delay: 237
+    content: "\e[6;5H"
+  - delay: 215
+    content: "\e[7;5H"
+  - delay: 1981
+    content: "\e[?25l\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[1;1H\e[93m 34 \e[m \e[96m # Quality\e[m\r\n\e[93m 35 \e[m \e[96m # 1 - 100\e[m\r\n\e[93m 36 \e[m  \e[1m\e[96mquality\e[m\e[38;5;224m:\e[m \e[95m100\e[m\r\n\e[93m 37 \r\n 38 \e[m \e[96m # Delay between frames in ms\e[m\r\n\e[93m 39 \e[m \e[96m # If the value is `auto` use the actual recording delays\e[m\r\n\e[93m 40 \e[m  \e[1m\e[96mframeDelay\e[m\e[38;5;224m:\e[m auto\r\n\e[93m 41 \r\n 42 \e[m \e[96m # Maximum delay between frames in ms\e[m\r\n\e[93m 43 \e[m \e[96m # Ignored if the `frameDelay` isn't set to `auto`\e[m\r\n\e[93m 44 \e[m \e[96m # Set to `auto` to prevent limiting the max idle time\e[m\r\n\e[93m 45 \e[m  \e[1m\e[96mmaxIdleTime\e[m\e[38;5;224m:\e[m \e[95m2000\e[m\r\n\e[93m 46 \r\n 47 \e[m \e[96m # The surrounding frame box\e[m\r\n\e[93m 48 \e[m \e[96m # The `type` can be null, window, floating, or solid`\e[m\r\n\e[93m 49 \e[m \e[96m # To hide the title use the value null\e[m\r\n\e[93m 50 \e[m \e[96m # Don't forget to add a backgroundColor style with a null as type\e[m\r\n\e[93m 51 \e[m  \e[1m\e[96mframeBox\e[m\e[38;5;224m:\e[m\r\n\e[93m 52 \e[m    \e[1m\e[96mtype\e[m\e[38;5;224m:\e[m floating\r\n\e[93m 53 \e[m    \e[1m\e[96mtitle\e[m\e[38;5;224m:\e[m Terminalizer\r\n\e[93m 54 \e[m    \e[1m\e[96mstyle\e[m\e[38;5;224m:\e[m\r\n\e[93m 55 \e[m      \e[1m\e[96mborder\e[m\e[38;5;224m:\e[m 0px black solid\r\n\e[93m 56 \e[m     \e[96m # boxShadow: none\e[m\r\n\e[93m 57 \e[m     \e[96m # margin: 0px\e[m\r\n\e[93m 58 \r\n 59 \e[m \e[96m # Add a watermark image to the rendered gif\e[m\r\n\e[93m 60 \e[m \e[96m # You need to specify an absolute path for\e[m\r\n\e[93m 61 \e[m \e[96m # the image on your machine or a URL, and you can also\e[m\r\n\e[93m 62 \e[m \e[96m # add your own CSS styles\e[m\r\n\e[93m 63 \e[m  \e[1m\e[96mwatermark\e[m\e[38;5;224m:\e[m\r\n\e[93m 64 \e[m    \e[1m\e[96mimagePath\e[m\e[38;5;224m:\e[m \e[95mnull\e[m\r\n\e[93m 65 \e[m    \e[1m\e[96mstyle\e[m\e[38;5;224m:\e[m\r\n\e[93m 66 \e[m      \e[1m\e[96mposition\e[m\e[38;5;224m:\e[m absolute\r\n\e[93m 67 \e[m      \e[1m\e[96mright\e[m\e[38;5;224m:\e[m 15px\r\n\e[93m 68 \e[m      \e[1m\e[96mbottom\e[m\e[38;5;224m:\e[m 15px\e[1;7H\e[?25h"
+  - delay: 2826
+    content: "\e[?25l\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[1;1H\e[93m 67 \e[m      \e[1m\e[96mright\e[m\e[38;5;224m:\e[m 15px\r\n\e[93m 68 \e[m      \e[1m\e[96mbottom\e[m\e[38;5;224m:\e[m 15px\r\n\e[93m 69 \e[m      \e[1m\e[96mwidth\e[m\e[38;5;224m:\e[m 100px\r\n\e[93m 70 \e[m      \e[1m\e[96mopacity\e[m\e[38;5;224m:\e[m \e[95m0.9\e[m\r\n\e[93m 71 \r\n 72 \e[m \e[96m # Cursor style can be one of\e[m\r\n\e[93m 73 \e[m \e[96m # `block`, `underline`, or `bar`\e[m\r\n\e[93m 74 \e[m  \e[1m\e[96mcursorStyle\e[m\e[38;5;224m:\e[m block\r\n\e[93m 75 \r\n 76 \e[m \e[96m # Font family\e[m\r\n\e[93m 77 \e[m \e[96m # You can use any font that is installed on your machine\e[m\r\n\e[93m 78 \e[m \e[96m # in CSS-like syntax\e[m\r\n\e[93m 79 \e[m  \e[1m\e[96mfontFamily\e[m\e[38;5;224m:\e[m \e[95m\"Monaco, Lucida Console, Ubuntu Mono, Monospace\"\e[m\r\n\e[93m 80 \r\n 81 \e[m \e[96m # The size of the font\e[m\r\n\e[93m 82 \e[m  \e[1m\e[96mfontSize\e[m\e[38;5;224m:\e[m \e[95m12\e[m\r\n\e[93m 83 \r\n 84 \e[m \e[96m # The height of lines\e[m\r\n\e[93m 85 \e[m  \e[1m\e[96mlineHeight\e[m\e[38;5;224m:\e[m \e[95m1\e[m\r\n\e[93m 86 \r\n 87 \e[m \e[96m # The spacing between letters\e[m\r\n\e[93m 88 \e[m  \e[1m\e[96mletterSpacing\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 89 \r\n 90 \e[m \e[96m # Theme\e[m\r\n\e[93m 91 \e[m  \e[1m\e[96mtheme\e[m\e[38;5;224m:\e[m\r\n\e[93m 92 \e[m    \e[1m\e[96mbackground\e[m\e[38;5;224m:\e[m \e[95m\"transparent\"\e[m\r\n\e[93m 93 \e[m    \e[1m\e[96mforeground\e[m\e[38;5;224m:\e[m \e[95m\"#afafaf\"\e[m\r\n\e[93m 94 \e[m    \e[1m\e[96mcursor\e[m\e[38;5;224m:\e[m \e[95m\"#c7c7c7\"\e[m\r\n\e[93m 95 \e[m    \e[1m\e[96mblack\e[m\e[38;5;224m:\e[m \e[95m\"#232628\"\e[m\r\n\e[93m 96 \e[m    \e[1m\e[96mred\e[m\e[38;5;224m:\e[m \e[95m\"#fc4384\"\e[m\r\n\e[93m 97 \e[m    \e[1m\e[96mgreen\e[m\e[38;5;224m:\e[m \e[95m\"#b3e33b\"\e[m\r\n\e[93m 98 \e[m    \e[1m\e[96myellow\e[m\e[38;5;224m:\e[m \e[95m\"#ffa727\"\e[m\r\n\e[93m 99 \e[m    \e[1m\e[96mblue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\r\n\e[93m100 \e[m    \e[1m\e[96mmagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\r\n\e[93m101 \e[m    \e[1m\e[96mcyan\e[m\e[38;5;224m:\e[m \e[95m\"#708387\"\e[1;11H\e[?25h"
+  - delay: 1301
+    content: "\e[?25l\e[m\e[1;2H\e[93m34\e[m\e[2C\e[96m # Quality\e[m\e[1;16H\e[K\e[2;2H\e[93m35\e[m\e[2C\e[96m # 1 - 100\e[m\e[2;16H\e[K\e[3;2H\e[93m36\e[m\e[3C\e[1m\e[96mquality\e[m\e[38;5;224m:\e[m \e[95m100\e[m\e[3;19H\e[K\e[4;2H\e[93m37\e[m\e[4;11H\e[K\e[5;2H\e[93m38\e[m\e[2C\e[96m # Delay between frames in ms\e[m\e[6;2H\e[93m39\e[m\e[5C\e[96mIf the value is `auto` use the actual recording delays\e[m\e[7;2H\e[93m40\e[m\e[2C \e[1m\e[96mframeDelay\e[m\e[38;5;224m:\e[m auto\e[7;23H\e[K\e[8;2H\e[93m41\e[m\e[8;7H\e[K\e[9;2H\e[93m42\e[m\e[2C\e[96m # Maximum delay between frames in ms\e[m\e[10;2H\e[93m43\e[m\e[5C\e[96mIgnored if the `frameDelay` isn't set to `auto`\e[m\e[11;2H\e[93m44\e[m\e[5C\e[96mSet to `auto` to prevent limiting the max idle time\e[m\e[11;60H\e[K\e[12;2H\e[93m45\e[m\e[2C \e[1m\e[96mmaxIdleTime\e[m\e[38;5;224m:\e[m \e[95m2000\e[m\e[12;24H\e[K\e[13;2H\e[93m46\e[m\e[13;7H\e[K\e[14;2H\e[93m47\e[m\e[2C\e[96m # The surrounding frame box\e[m\e[15;2H\e[93m48\e[m\e[9C\e[96m`type` can be null, window, floating, or solid`\e[m\e[16;2H\e[93m49\e[m\e[2C\e[96m # To hide the title use the value null\e[m\e[17;2H\e[93m50\e[m\e[2C\e[96m # Don't forget to add a backgroundColor style with a null as type\e[m\e[18;2H\e[93m51\e[m\e[2C \e[1m\e[96mframeBox\e[m\e[38;5;224m:\e[m\e[18;16H\e[K\e[19;2H\e[93m52\e[m\e[3C  \e[1m\e[96mtype\e[m\e[38;5;224m:\e[m floating\e[20;2H\e[93m53\e[m\e[5C\e[1m\e[96mtitle\e[m\e[38;5;224m:\e[m Terminalizer\e[21;2H\e[93m54\e[m\e[2C   \e[1m\e[96mstyle\e[m\e[38;5;224m:\e[m\e[21;15H\e[K\e[22;2H\e[93m55\e[m\e[3C    \e[1m\e[96mborder\e[m\e[38;5;224m:\e[m 0px black solid\e[23;2H\e[93m56\e[m\e[6C\e[96m # boxShadow: none\e[m\e[24;2H\e[93m57\e[m\e[2C    \e[96m # margin: 0px\e[m\e[25;2H\e[93m58\e[m\e[25;7H\e[K\e[26;2H\e[93m59\e[m\e[2C\e[96m # Add a watermark image to the rendered gif\e[m\e[27;2H\e[93m60\e[m\e[2C\e[96m # You need to specify an absolute path for\e[m\e[28;2H\e[93m61\e[m\e[2C\e[96m # the image on your machine or a URL, and you can also\e[m\e[29;2H\e[93m62\e[m\e[2C\e[96m # add your own CSS styles\e[m\e[30;2H\e[93m63\e[m\e[3C\e[1m\e[96mwatermark\e[m\e[38;5;224m:\e[m\e[30;17H\e[K\e[31;2H\e[93m64\e[m\e[5C\e[1m\e[96mimagePath\e[m\e[38;5;224m:\e[m \e[95mnull\e[m\e[31;24H\e[K\e[32;2H\e[93m65\e[m\e[5C\e[1m\e[96mstyle\e[m\e[38;5;224m:\e[m\e[32;15H\e[K\e[33;2H\e[93m66\e[m\e[5C  \e[1m\e[96mposition\e[m\e[38;5;224m:\e[m absolute\r\n\e[93m 67\e[m\e[5C  \e[1m\e[96mright\e[m\e[38;5;224m:\e[m 15px\e[34;22H\e[K\e[35;1H\e[93m 68\e[m\e[5C  \e[1m\e[96mbottom\e[m\e[38;5;224m:\e[m 15px\e[35;23H\e[K\e[35;11H\e[?25h"
+  - delay: 1065
+    content: "\e[?25l\e[1;35r\e[35;1H\r\n\e[1;36r\e[35;1H\e[93m 69 \e[m      \e[1m\e[96mwidth\e[m\e[38;5;224m:\e[m 100px\e[35;11H\e[?25h"
+  - delay: 594
+    content: "\e[?25l\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[1;1H\e[93m 68 \e[m      \e[1m\e[96mbottom\e[m\e[38;5;224m:\e[m 15px\r\n\e[93m 69 \e[m      \e[1m\e[96mwidth\e[m\e[38;5;224m:\e[m 100px\r\n\e[93m 70 \e[m      \e[1m\e[96mopacity\e[m\e[38;5;224m:\e[m \e[95m0.9\e[m\r\n\e[93m 71 \r\n 72 \e[m \e[96m # Cursor style can be one of\e[m\r\n\e[93m 73 \e[m \e[96m # `block`, `underline`, or `bar`\e[m\r\n\e[93m 74 \e[m  \e[1m\e[96mcursorStyle\e[m\e[38;5;224m:\e[m block\r\n\e[93m 75 \r\n 76 \e[m \e[96m # Font family\e[m\r\n\e[93m 77 \e[m \e[96m # You can use any font that is installed on your machine\e[m\r\n\e[93m 78 \e[m \e[96m # in CSS-like syntax\e[m\r\n\e[93m 79 \e[m  \e[1m\e[96mfontFamily\e[m\e[38;5;224m:\e[m \e[95m\"Monaco, Lucida Console, Ubuntu Mono, Monospace\"\e[m\r\n\e[93m 80 \r\n 81 \e[m \e[96m # The size of the font\e[m\r\n\e[93m 82 \e[m  \e[1m\e[96mfontSize\e[m\e[38;5;224m:\e[m \e[95m12\e[m\r\n\e[93m 83 \r\n 84 \e[m \e[96m # The height of lines\e[m\r\n\e[93m 85 \e[m  \e[1m\e[96mlineHeight\e[m\e[38;5;224m:\e[m \e[95m1\e[m\r\n\e[93m 86 \r\n 87 \e[m \e[96m # The spacing between letters\e[m\r\n\e[93m 88 \e[m  \e[1m\e[96mletterSpacing\e[m\e[38;5;224m:\e[m \e[95m0\e[m\r\n\e[93m 89 \r\n 90 \e[m \e[96m # Theme\e[m\r\n\e[93m 91 \e[m  \e[1m\e[96mtheme\e[m\e[38;5;224m:\e[m\r\n\e[93m 92 \e[m    \e[1m\e[96mbackground\e[m\e[38;5;224m:\e[m \e[95m\"transparent\"\e[m\r\n\e[93m 93 \e[m    \e[1m\e[96mforeground\e[m\e[38;5;224m:\e[m \e[95m\"#afafaf\"\e[m\r\n\e[93m 94 \e[m    \e[1m\e[96mcursor\e[m\e[38;5;224m:\e[m \e[95m\"#c7c7c7\"\e[m\r\n\e[93m 95 \e[m    \e[1m\e[96mblack\e[m\e[38;5;224m:\e[m \e[95m\"#232628\"\e[m\r\n\e[93m 96 \e[m    \e[1m\e[96mred\e[m\e[38;5;224m:\e[m \e[95m\"#fc4384\"\e[m\r\n\e[93m 97 \e[m    \e[1m\e[96mgreen\e[m\e[38;5;224m:\e[m \e[95m\"#b3e33b\"\e[m\r\n\e[93m 98 \e[m    \e[1m\e[96myellow\e[m\e[38;5;224m:\e[m \e[95m\"#ffa727\"\e[m\r\n\e[93m 99 \e[m    \e[1m\e[96mblue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\r\n\e[93m100 \e[m    \e[1m\e[96mmagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\r\n\e[93m101 \e[m    \e[1m\e[96mcyan\e[m\e[38;5;224m:\e[m \e[95m\"#708387\"\e[m\r\n\e[93m102 \e[m    \e[1m\e[96mwhite\e[m\e[38;5;224m:\e[m \e[95m\"#d5d5d0\"\e[1;11H\e[?25h"
+  - delay: 4837
+    content: "\e[?25l\e[27m\e[23m\e[29m\e[m\e[H\e[2J\e[1;1H\e[93m101 \e[m    \e[1m\e[96mcyan\e[m\e[38;5;224m:\e[m \e[95m\"#708387\"\e[m\r\n\e[93m102 \e[m    \e[1m\e[96mwhite\e[m\e[38;5;224m:\e[m \e[95m\"#d5d5d0\"\e[m\r\n\e[93m103 \e[m    \e[1m\e[96mbrightBlack\e[m\e[38;5;224m:\e[m \e[95m\"#626566\"\e[m\r\n\e[93m104 \e[m    \e[1m\e[96mbrightRed\e[m\e[38;5;224m:\e[m \e[95m\"#ff7fac\"\e[m\r\n\e[93m105 \e[m    \e[1m\e[96mbrightGreen\e[m\e[38;5;224m:\e[m \e[95m\"#c8ed71\"\e[m\r\n\e[93m106 \e[m    \e[1m\e[96mbrightYellow\e[m\e[38;5;224m:\e[m \e[95m\"#ebdf86\"\e[m\r\n\e[93m107 \e[m    \e[1m\e[96mbrightBlue\e[m\e[38;5;224m:\e[m \e[95m\"#75dff2\"\e[m\r\n\e[93m108 \e[m    \e[1m\e[96mbrightMagenta\e[m\e[38;5;224m:\e[m \e[95m\"#ae89fe\"\e[m\r\n\e[93m109 \e[m    \e[1m\e[96mbrightCyan\e[m\e[38;5;224m:\e[m \e[95m\"#b1c6ca\"\e[m\r\n\e[93m110 \e[m    \e[1m\e[96mbrightWhite\e[m\e[38;5;224m:\e[m \e[95m\"#f9f9f4\"\e[m\r\n\e[93m111 \r\n112 \e[m\e[96m# Records, feel free to edit them\e[m\r\n\e[93m113 \e[m\e[1m\e[96mrecords\e[m\e[38;5;224m:\e[m\r\n\e[93m114 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m414\e[m\r\n\e[93m115 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m \e[95m\"\e[m\e[38;5;224m\\e\e[m\e[95m]7;file://vans-MacBook-Pro.local/Users/van/Library/CloudStorage/Dropbox/github/CodingNotess\e[m\e[16;1H\e[93m    \e[m\e[95m/_static/gif\e[m\e[38;5;224m\\a\\e\e[m\e[95m[?1034hvans-MacBook-Pro:gif van$ \"\e[m\r\n\e[93m116 \e[m  \e[93m- \e[m\e[1m\e[96mdelay\e[m\e[38;5;224m:\e[m \e[95m3946\e[m\r\n\e[93m117 \e[m    \e[1m\e[96mcontent\e[m\e[38;5;224m:\e[m e\r\n\e[94m~                                                                                                             \e[20;1H~                                                                                                             \e[21;1H~                                                                                                             \e[22;1H~                                                                                                             \e[23;1H~                                                                                                             \e[24;1H~                                                                                                             \e[25;1H~                                                                                                             \e[26;1H~                                                                                                             \e[27;1H~                                                                                                             \e[28;1H~                                                                                                             \e[29;1H~                                                                                                             \e[30;1H~                                                                                                             \e[31;1H~                                                                                                             \e[32;1H~                                                                                                             \e[33;1H~                                                                                                             \e[34;1H~                                                                                                             \e[35;1H~                                                                                                             \e[1;9H\e[?25h"
+  - delay: 3038
+    content: "\a\e[?25l\e[36;1H\e[m:\e[?25h"
+  - delay: 139
+    content: w
+  - delay: 83
+    content: q
+  - delay: 159
+    content: "\r\e[?25l\e[?2004l\e[>4;m\"config.yml\""
+  - delay: 8
+    content: " 117L, 3034B written\r\e[23;2t\e[23;1t\r\r\n\e[?1004l\e[?2004l\e[?1l\e>\e[?1049l\e[?25h\e[>4;m\e[?2004h[ van ] "
+  - delay: 649
+    content: c
+  - delay: 94
+    content: o
+  - delay: 95
+    content: 'n'
+  - delay: 61
+    content: f
+  - delay: 131
+    content: i
+  - delay: 113
+    content: g
+  - delay: 1886
+    content: "^C\e[?2004l\r\e[?2004h\e[?2004l\r\r\n"
+  - delay: 8
+    content: "\e[?2004h[ van ] "
+  - delay: 20135
+    content: 'vi config.yml '
+  - delay: 311
+    content: "\r\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[33@terminalizer record bash-example -c\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C\e[C"
+  - delay: 389
+    content: "\b\b\b\b"
+  - delay: 193
+    content: "\b\b\b\b\b\b\b"
+  - delay: 216
+    content: "\b\b"
+  - delay: 854
+    content: "\e[1@-"
+  - delay: 6319
+    content: "\r\n\e[?2004l\r"
+  - delay: 235
+    content: "Error: \r\n  TypeError: Cannot convert undefined or null to object\r\n\r\nHint:\r\n  Use the \e[32m--help\e[39m option to get help about the usage\r\n\e[?2004h[ van ] "
+  - delay: 4045
+    content: t
+  - delay: 455
+    content: e
+  - delay: 114
+    content: r
+  - delay: 76
+    content: m
+  - delay: 211
+    content: 'inalizer '
+  - delay: 1017
+    content: r
+  - delay: 210
+    content: o
+  - delay: 315
+    content: "\b\e[K"
+  - delay: 80
+    content: e
+  - delay: 213
+    content: "\a"
+  - delay: 710
+    content: c
+  - delay: 328
+    content: "\a"
+  - delay: 188
+    content: "\a"
+  - delay: 187
+    content: "\a"
+  - delay: 221
+    content: "\a"
+  - delay: 308
+    content: "\b\e[K"
+  - delay: 166
+    content: "\a"
+  - delay: 168
+    content: "\a"
+  - delay: 249
+    content: "\b\e[K"
+  - delay: 542
+    content: "\b\e[K"
+  - delay: 528
+    content: "\a"
+  - delay: 1057
+    content: "\a"
+  - delay: 868
+    content: q
+  - delay: 605
+    content: "^C\e[?2004l\r\e[?2004h\e[?2004l\r\r\n\e[?2004h[ van ] "
+  - delay: 148
+    content: "^C\e[?2004l\r\e[?2004h\e[?2004l\r\r\n\e[?2004h[ van ] "
+  - delay: 589
+    content: "\e[?2004l\r\r\nlogout\r\n\r\nSaving session..."
+  - delay: 14
+    content: "\r\n...saving history..."
+  - delay: 9
+    content: "truncating history files...\r\n...completed.\r\n"
