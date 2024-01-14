@@ -164,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -212,6 +212,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -357,7 +364,7 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -405,6 +412,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -540,8 +554,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="automate-login">
 <h1>Automate Login<a class="headerlink" href="#automate-login" title="Permalink to this heading">#</a></h1>
 <p>Having to enter your password every time you log into a supercomputer and transfer files can become tedious. However, we can log into a supercomputer without the need to enter your password (<em>safely and securely</em>)!</p>
-<p>To do this, we will make a <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> key. This key is an access credential for the <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> network protocol. This authenticated and encrypted secure network protocol is used for remote communication between machines on an unsecured open network. <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> uses a pair of keys to initiate a secure handshake between the remote parties.</p>
-<p>You can think of <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> keys like a pair of magic keys that help keep your computer and other computers secure and let you connect to them easily.</p>
+<p>To do this, we will make a <span class="xref std std-term">ssh</span> key. This key is an access credential for the <span class="xref std std-term">ssh</span> network protocol. This authenticated and encrypted secure network protocol is used for remote communication between machines on an unsecured open network. <span class="xref std std-term">ssh</span> uses a pair of keys to initiate a secure handshake between the remote parties.</p>
+<p>You can think of <span class="xref std std-term">ssh</span> keys like a pair of magic keys that help keep your computer and other computers secure and let you connect to them easily.</p>
 <p>There are 3 components:</p>
 <ol class="arabic simple">
 <li><p><strong>Public Key:</strong> This key is like a special lock that you give to others. It’s safe to share with anyone. When someone wants to send you a secret message, they can use this lock to lock the message box.</p></li>
@@ -552,7 +566,7 @@ document.write(`
 <section id="generate-keys">
 <h2>Generate Keys<a class="headerlink" href="#generate-keys" title="Permalink to this heading">#</a></h2>
 <p>Start on your local computer in your home directory.</p>
-<p>Use the command, <a class="reference internal" href="../../linux.html#term-ssh-keygen"><span class="xref std std-term">ssh-keygen</span></a>, for authentication key generation, management and conversion:</p>
+<p>Use the command, <span class="xref std std-term">ssh-keygen</span>, for authentication key generation, management and conversion:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span>
 </pre></div>
 </div>

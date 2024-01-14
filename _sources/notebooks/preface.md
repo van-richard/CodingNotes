@@ -1,3 +1,11 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [1. Pregame](#1-pregame)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ---
 html_theme.sidebar_secondary.remove: true
 ---

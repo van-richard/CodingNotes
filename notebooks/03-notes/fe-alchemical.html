@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Alchemical Free Energy &#8212; CodingNotes</title>
+    <title>FE Alchem &#8212; CodingNotes</title>
   
   
   
@@ -168,7 +168,7 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -216,6 +216,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -361,7 +368,7 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -409,6 +416,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -525,9 +539,9 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Some Notes</a></li>
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">html_theme.sidebar_secondary.remove: true</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Alchemical...</li>
+    <li class="breadcrumb-item active" aria-current="page">FE Alchem</li>
   </ul>
 </nav>
 </div>
@@ -544,7 +558,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="dropdown admonition important">
+  <section class="tex2jax_ignore mathjax_ignore" id="fe-alchem">
+<h1>FE Alchem<a class="headerlink" href="#fe-alchem" title="Permalink to this heading">#</a></h1>
+<div class="dropdown admonition important">
 <p class="admonition-title">Important</p>
 <p>For more information, refer to the
 <a class="reference external" href="https://livecomsjournal.org/index.php/livecoms/article/view/v2i1e18378">Best Practices for Alchemical Free Energy Calculations</a> paper by Xu et. al.</p>
@@ -564,12 +580,13 @@ document.write(`
 </ul>
 </div></blockquote>
 </div>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="alchemical-free-energy">
 <h1>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b79f081-35b1-4890-8945-a5871fbed639">
-<span class="eqno">(1)<a class="headerlink" href="#equation-8b79f081-35b1-4890-8945-a5871fbed639" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7805209e-c42d-4027-a70a-c739d7fb7750">
+<span class="eqno">(1)<a class="headerlink" href="#equation-7805209e-c42d-4027-a70a-c739d7fb7750" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -582,8 +599,8 @@ document.write(`
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-2fb49d49-afaa-43f8-bb20-f73cd855b5ad">
-<span class="eqno">(2)<a class="headerlink" href="#equation-2fb49d49-afaa-43f8-bb20-f73cd855b5ad" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d2c21f69-ebd6-44b6-b422-87c751def279">
+<span class="eqno">(2)<a class="headerlink" href="#equation-d2c21f69-ebd6-44b6-b422-87c751def279" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}
@@ -662,7 +679,22 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">FE Alchem</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alchemical-free-energy">Alchemical Free Energy</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

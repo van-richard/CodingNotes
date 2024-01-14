@@ -6,9 +6,8 @@ html_theme.sidebar_secondary.remove: true
 
 *I intended for this to be read within 30 minutes... Sorry! (December 9, 2023)*
 
-- For those with ZERO experience in computers, this guide offers a basic introduction to several computational tools I used in my time as Ph.D candidate
-
-- This section aims to familiarize you with language, workflow, and concepts, supporting your baseline understanding of these tools. In the next few pages
+- For those with ZERO experience in computers, this guide offers a basic introduction to several computational tools I used in my time as Ph.D. candidate
+  - Become familiar with the language, workflow, and concepts, supporting your baseline understanding of these tools. In the next few pages
 
 **Our Objective.** Is to become familiar with:
 
@@ -22,3 +21,5 @@ html_theme.sidebar_secondary.remove: true
 
 * [The Sherrill Group: Notes](http://vergil.chemistry.gatech.edu/notes/)
 * [General Machine Learning](https://e2eml.school/blog.html)
+* [Learn X in Y Minutes](https://learnxinyminutes.com)
+* [3Brown1Blue](https://www.youtube.com/@3blue1brown)

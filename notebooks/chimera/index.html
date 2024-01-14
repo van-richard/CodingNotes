@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -214,6 +214,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -359,7 +366,7 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -407,6 +414,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -544,52 +558,14 @@ document.write(`
 <p>Chimera and <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a> are both great molecular visualization tools developed by UCSF.</p>
 <p>ChimeraX is the newest program, and it can efficiently handle large data (i.e. PDBs with thousands of atoms). It is my prefered GUI when exploring new structures and making videos/figures.</p>
 <p>Download the latest version of <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/download.html">ChimeraX</a>! You will need to register for an account, otherwise you’ll get a notification everytime you open the software.</p>
-<section id="opening-pdbs-from-rcsb">
-<h2>Opening PDBs from RCSB<a class="headerlink" href="#opening-pdbs-from-rcsb" title="Permalink to this heading">#</a></h2>
-<p>On ChimeraX command line, type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>open<span class="w"> </span>*PDB_CODE*
-</pre></div>
-</div>
-<p>Where <em>PDB_CODE</em> is the 4-letter code from <a class="reference external" href="https://www.google.com/search?client=safari&amp;rls=en&amp;q=rcsb&amp;ie=UTF-8&amp;oe=UTF-8">RCSB</a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The ChimeraX command line is independent of model panel!</p>
-</div>
-</section>
-<section id="summary-of-command-line-options">
-<h2>Summary of Command Line Options<a class="headerlink" href="#summary-of-command-line-options" title="Permalink to this heading">#</a></h2>
-<p>Rather than searching through the GUI (graphic user interface) for the function you need (i.e., Show/Hide atoms/ribbon/surface), you can use the commmand line interface to control the display.</p>
-<p><strong>Command Line Options:</strong></p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-left"><p>Option</p></th>
-<th class="head text-left"><p>Meaning</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-left"><p>show [model #] [ribbon, atom, etc.]</p></td>
-<td class="text-left"><p>Displays the selection in ribbon, atom, etc.</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>hide [model #] [ribbon, atom, etc.]</p></td>
-<td class="text-left"><p>Hides the selection in ribbon, atom, etc.</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>color byhetero</p></td>
-<td class="text-left"><p>Colors by hetero-atom</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>color bychain</p></td>
-<td class="text-left"><p>Colors by chain</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>color bymodel</p></td>
-<td class="text-left"><p>Colors by model #</p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>split [option: model #]</p></td>
-<td class="text-left"><p>Splits the model by chain</p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>sel [model, chain, residue, or atom #]</p></td>
-<td class="text-left"><p>Select the model, chain, residue, or atom</p></td>
-</tr>
-</tbody>
-</table>
+<p><a class="reference internal" href="cli.html"><span class="doc std std-doc">ChimeraX Command Line</span></a>
+<a class="reference internal" href="images.html"><span class="doc std std-doc">Saving Images</span></a></p>
+<section id="movie-making">
+<h2>Movie Making<a class="headerlink" href="#movie-making" title="Permalink to this heading">#</a></h2>
+<p><a class="reference internal" href="fade.html"><span class="doc std std-doc">Fade</span></a>
+<a class="reference internal" href="morph.html"><span class="doc std std-doc">Morph</span></a>
+<a class="reference internal" href="rock.html"><span class="doc std std-doc">Rock</span></a>
+<a class="reference internal" href="spin.html"><span class="doc std std-doc">Spin</span></a></p>
 </section>
 </section>
 
@@ -656,8 +632,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-pdbs-from-rcsb">Opening PDBs from RCSB</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-command-line-options">Summary of Command Line Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#movie-making">Movie Making</a></li>
 </ul>
   </nav></div>
 

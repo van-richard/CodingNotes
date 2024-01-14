@@ -164,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -212,6 +212,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -357,7 +364,7 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -405,6 +412,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -541,8 +555,8 @@ document.write(`
 <h1>Upload, Download, &amp; Extras<a class="headerlink" href="#upload-download-extras" title="Permalink to this heading">#</a></h1>
 <section id="transferring-files-folders-remotely">
 <h2>Transferring Files/Folders Remotely<a class="headerlink" href="#transferring-files-folders-remotely" title="Permalink to this heading">#</a></h2>
-<p>Previously, we learned the linux commmands, <a class="reference internal" href="../../linux.html#term-cp"><span class="xref std std-term">cp</span></a> and <a class="reference internal" href="../../linux.html#term-mv"><span class="xref std std-term">mv</span></a>, to manage files locally in the <code class="docutils literal notranslate"><span class="pre">terminal</span></code>.</p>
-<p>To copy files through <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a>, we need to use one of two commands:</p>
+<p>Previously, we learned the linux commmands, <span class="xref std std-term">cp</span> and <span class="xref std std-term">mv</span>, to manage files locally in the <code class="docutils literal notranslate"><span class="pre">terminal</span></code>.</p>
+<p>To copy files through <span class="xref std std-term">ssh</span>, we need to use one of two commands:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rsync</span></code> remote (and local) copy</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scp</span></code> - secure copy</p></li>
@@ -571,12 +585,12 @@ scp</label><div class="sd-tab-content docutils">
 </div>
 <p>Copying the local file to Oscer with <code class="docutils literal notranslate"><span class="pre">scp</span></code> needs <code class="docutils literal notranslate"><span class="pre">username&#64;hostname:</span></code> followed by the absolute path to the <code class="docutils literal notranslate"><span class="pre">destination</span></code>. <strong>Note the <code class="docutils literal notranslate"><span class="pre">:</span></code></strong></p>
 <p>I recommend using <code class="docutils literal notranslate"><span class="pre">rsync</span></code> because this will check files sizes and modify timestamps of both files or folders. It will skip any further processing if they match. Additionally, if the destination file already exists, the transfer algorithm will make sure only differences between the files are sent over the wire.</p>
-<p>I won’t go further here, but you can find more information about <a class="reference internal" href="../../linux.html#term-rsync"><span class="xref std std-term">rsync</span></a> and <a class="reference internal" href="../../linux.html#term-scp"><span class="xref std std-term">scp</span></a> later.</p>
+<p>I won’t go further here, but you can find more information about <span class="xref std std-term">rsync</span> and <span class="xref std std-term">scp</span> later.</p>
 <hr class="docutils" />
-<p>One last thing about <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> is that, you can also run commands without going through the whole process of logging in.</p>
+<p>One last thing about <span class="xref std std-term">ssh</span> is that, you can also run commands without going through the whole process of logging in.</p>
 </section>
 <section id="command-execution-with-ssh">
-<h2>Command Execution with <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a><a class="headerlink" href="#command-execution-with-ssh" title="Permalink to this heading">#</a></h2>
+<h2>Command Execution with <span class="xref std std-term">ssh</span><a class="headerlink" href="#command-execution-with-ssh" title="Permalink to this heading">#</a></h2>
 <p>What if the only thing you need to do over the SSH connection is execute a single quick command? You might not want to take the separate actions of connecting and authenticating, running the command, and then disconnecting. The <code class="docutils literal notranslate"><span class="pre">ssh</span></code> command allows us to execute command on remote machine without logging into that machine. Here is the general notation:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu<span class="w"> </span><span class="o">[</span>COMMAND<span class="o">]</span>
 </pre></div>

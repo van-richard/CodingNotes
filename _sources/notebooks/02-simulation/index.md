@@ -6,16 +6,12 @@ html_theme.sidebar_secondary.remove: true
 
 MD stuff with Amber
 
-## [Classical Molecular Dynamics](md)
+## Classical Molecular Dynamics
 
 1. [Alanine Dipeptide in Water](simple)
 2. [Simple Distance Restraint](distance)
 
-## [Quantum Mechanic/Molecular Mechanic MD Simulations](qmmm)
+## Quantum Mechanic/Molecular Mechanic MD Simulations
 
 1. [Claisen](claisen)
 
-## [Analysis Tools](analysis)
-
-1. [RMSD](rmsd)
-2. [RMSF](rmsf)

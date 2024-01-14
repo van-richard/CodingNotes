@@ -1,3 +1,15 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Simulation Methods](#simulation-methods)
+  - [Molecular Descriptors](#molecular-descriptors)
+  - [Properties of Interest](#properties-of-interest)
+  - [Other Methods](#other-methods)
+  - [Literature](#literature)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Simulation Methods
 
 Before running a simulation, ask yourself:

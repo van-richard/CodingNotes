@@ -166,7 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -214,6 +214,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -359,7 +366,7 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -407,6 +414,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -557,14 +571,14 @@ document.write(`
 </figure>
 <section id="viewing-the-contents-of-1aki-pdb">
 <h2>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code><a class="headerlink" href="#viewing-the-contents-of-1aki-pdb" title="Permalink to this heading">#</a></h2>
-<p>This should be in your <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code> directory. Using your terminal, change directories into this directory with <a class="reference internal" href="../linux.html#term-cd"><span class="xref std std-term">cd</span></a>, and then use <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a> to view the file. Example on MacOS:</p>
+<p>This should be in your <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code> directory. Using your terminal, change directories into this directory with <span class="xref std std-term">cd</span>, and then use <span class="xref std std-term">less</span> to view the file. Example on MacOS:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span><span class="w">             </span><span class="c1"># Print the current working directory to see where you are</span>
 <span class="nb">cd</span><span class="w">              </span><span class="c1"># Change directories to /Users/[username]</span>
 <span class="nb">cd</span><span class="w"> </span>Downloads/<span class="w">   </span><span class="c1"># Change directories to Downloads</span>
 less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1"># View the contents using the command &quot;less&quot;</span>
 </pre></div>
 </div>
-<p>The <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a> command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn’t access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).</p>
+<p>The <span class="xref std std-term">less</span> command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn’t access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).</p>
 <p>When you get PDB files the from RCSB, they will start with some information pertaining to RCSB data, biological system, experiments performed, and journal/author details. Here is the first 20 lines of the files:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>HEADER<span class="w">    </span>HYDROLASE<span class="w">                               </span><span class="m">19</span>-MAY-97<span class="w">   </span>1AKI<span class="w">     </span>
 <span class="linenos"> 2</span>TITLE<span class="w">     </span>THE<span class="w"> </span>STRUCTURE<span class="w"> </span>OF<span class="w"> </span>THE<span class="w"> </span>ORTHORHOMBIC<span class="w"> </span>FORM<span class="w"> </span>OF<span class="w"> </span>HEN<span class="w"> </span>EGG-WHITE<span class="w"> </span>LYSOZYME<span class="w"> </span>AT<span class="w">   </span>
@@ -732,7 +746,7 @@ less<span class="w"> </span>7z4j.pdb<span class="w">   </span><span class="c1">#
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In <a class="reference internal" href="../linux.html#term-less"><span class="xref std std-term">less</span></a>, you can skip to the bottom of the file by pressing <code class="docutils literal notranslate"><span class="pre">shift</span></code>+<code class="docutils literal notranslate"><span class="pre">g</span></code>. To go back to the top, just press <code class="docutils literal notranslate"><span class="pre">g</span></code>.</p>
+<p>In <span class="xref std std-term">less</span>, you can skip to the bottom of the file by pressing <code class="docutils literal notranslate"><span class="pre">shift</span></code>+<code class="docutils literal notranslate"><span class="pre">g</span></code>. To go back to the top, just press <code class="docutils literal notranslate"><span class="pre">g</span></code>.</p>
 </div>
 <p>The last ~20 lines containing ‘ATOM’, ‘HETATM’, ‘TER’ should look like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ATOM<span class="w">  </span><span class="m">13936</span><span class="w">  </span>CD2<span class="w"> </span>LEU<span class="w"> </span>B1365<span class="w">     </span><span class="m">105</span>.073<span class="w"> </span><span class="m">161</span>.302<span class="w"> </span><span class="m">113</span>.513<span class="w">  </span><span class="m">1</span>.00152.63<span class="w">           </span>C<span class="w">  </span>

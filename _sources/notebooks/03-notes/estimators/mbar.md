@@ -1,3 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [BAR & MBAR](#bar--mbar)
+  - [Bennett Acceptance Ratio (BAR)](#bennett-acceptance-ratio-bar)
+  - [Derivations](#derivations)
+  - [Multistate Bennett Acceptance Ratio (MBAR)](#multistate-bennett-acceptance-ratio-mbar)
+  - [Derivations](#derivations-1)
+    - [Reduced Potentials ($u(x)$)](#reduced-potentials-ux)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ---
 orphan: true
 ---

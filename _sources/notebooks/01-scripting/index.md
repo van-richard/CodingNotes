@@ -2,11 +2,11 @@
 html_theme.sidebar_secondary.remove: true
 ---
 
-# Scripting Examples & More
+# Scripting & More
 
 Some more information and sample code
 
-## [More Bash](bash/overview.md)
+## [Bash](bash/overview.md)
 
  1. [Scripting](bash/scripting)
  2. [Startup Files](bash/startup)

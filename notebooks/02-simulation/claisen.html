@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Simple QM/MM Simulation of the Claisen Rearrangment Reaction &#8212; CodingNotes</title>
+    <title>QM/MM Simulation of the Claisen Rearrangment Reaction &#8212; CodingNotes</title>
   
   
   
@@ -32,7 +32,6 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
@@ -68,8 +67,6 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Analysis" href="analysis.html" />
-    <link rel="prev" title="QM/MM" href="qmmm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -113,8 +110,8 @@ const thebe_selector_output = ".output, .cell_output"
          class="form-control"
          name="q"
          id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
+         placeholder="Search meeeeee"
+         aria-label="Search meeeeee"
          autocomplete="off"
          autocorrect="off"
          autocapitalize="off"
@@ -149,9 +146,11 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/van-abstract.svg" class="logo__image only-light" alt="CodingNotes - Home"/>
-    <script>document.write(`<img src="../../_static/van-abstract.svg" class="logo__image only-dark" alt="CodingNotes - Home"/>`);</script>
+    <img src="../../_static/van-abstract.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/van-abstract.svg" class="logo__image only-dark" alt=""/>`);</script>
   
+  
+    <p class="title logo__title">CodingNotes</p>
   
 </a></div>
     
@@ -166,6 +165,13 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Pregame.html">
+                        html_theme.sidebar_secondary.remove: true
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/index.html">
                         Quick Start Guide
                       </a>
@@ -174,17 +180,53 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/index.html">
-                        Scripting Examples & More
+                        Scripting & More
                       </a>
                     </li>
                 
 
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="index.html">
-                        Tutorials
+                        MD Tutorials
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../03-notes/index.html">
+                        Notes
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../chimera/index.html">
+                        ChimeraX
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
+                        VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
+                        Moore
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
       
@@ -219,6 +261,58 @@ document.write(`
   </button>
 `);
 </script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
       
     </div>
     
@@ -257,7 +351,7 @@ document.write(`
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -271,6 +365,13 @@ document.write(`
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Pregame.html">
+                        html_theme.sidebar_secondary.remove: true
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/index.html">
                         Quick Start Guide
                       </a>
@@ -279,17 +380,53 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/index.html">
-                        Scripting Examples & More
+                        Scripting & More
                       </a>
                     </li>
                 
 
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="index.html">
-                        Tutorials
+                        MD Tutorials
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../03-notes/index.html">
+                        Notes
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../chimera/index.html">
+                        ChimeraX
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
+                        VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
+                        Moore
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
         
@@ -311,69 +448,64 @@ document.write(`
 `);
 </script></div>
         
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+        
       </div>
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">Prepare Project Folder on the Cluster</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directories-flow-structure-organization">Directories: Flow, Structure, &amp; Organization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-files-to-input-directory">Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">Generate Parameters for Allyl Vinyl Ether</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files-cv-rst">Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-of-cv-rst">Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">QM/MM MD Input files</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">Automate the Umbrella Windows</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">Running the QM/MM Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">Visualize the Trajectories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">Free Energy Profile with MBAR</a></li>
-</ul>
-  </nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item"><nav class="sidebar-indices-items" aria-labelledby="pst-indices-navigation-heading-2">
-  <p id="pst-indices-navigation-heading-2" class="sidebar-indices-items__title" role="heading" aria-level="1">Indices</p>
-  <ul class="indices-link">
-        <li class="toctree-l1">
-          <a class="reference internal"
-             href="../../genindex.html"
-             accesskey="I">General Index</a>
-        </li>
-  </ul>
-</nav></div>
-      <div class="sidebar-primary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">Prepare Project Folder on the Cluster</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directories-flow-structure-organization">Directories: Flow, Structure, &amp; Organization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-files-to-input-directory">Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">Generate Parameters for Allyl Vinyl Ether</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files-cv-rst">Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-of-cv-rst">Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">QM/MM MD Input files</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">Automate the Umbrella Windows</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">Running the QM/MM Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">Visualize the Trajectories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">Free Energy Profile with MBAR</a></li>
-</ul>
-  </nav></div>
   </div>
   
   <div id="rtd-footer-container"></div>
@@ -404,13 +536,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Tutorials</a></li>
-    
-    
-    <li class="breadcrumb-item"><a href="qmmm.html" class="nav-link">QM/MM</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">Simple...</li>
+    <li class="breadcrumb-item active" aria-current="page">QM/MM...</li>
   </ul>
 </nav>
 </div>
@@ -427,10 +553,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="simple-qm-mm-simulation-of-the-claisen-rearrangment-reaction">
-<h1>Simple QM/MM Simulation of the Claisen Rearrangment Reaction<a class="headerlink" href="#simple-qm-mm-simulation-of-the-claisen-rearrangment-reaction" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="qm-mm-simulation-of-the-claisen-rearrangment-reaction">
+<h1>QM/MM Simulation of the Claisen Rearrangment Reaction<a class="headerlink" href="#qm-mm-simulation-of-the-claisen-rearrangment-reaction" title="Permalink to this heading">#</a></h1>
 <p>In this tutorial, we will perform a QM/MM simulation of the claisen rearrangement reaction in Amber.</p>
-<p>We will study the reaction under implicit solvent, where all ligand atoms included into the QM region, defined by the PM3 semi-empirical method. Umbrella Sampling will be used to explore the reaction coordinate and MBAR to to obtain the free energy profile.</p>
+<p>We will study the reaction under implicit solvent, where all ligand atoms included into the QM region, defined by the PM3 semi-empirical method. Umbrella Sampling will be used to explore the reaction coordinate and MBAR to obtain the free energy profile.</p>
 <p><strong>Objectives:</strong></p>
 <ul class="simple">
 <li><p>Set up QM/MM Simulations on the Supercomputer (Oscer/Pete)</p></li>
@@ -451,7 +577,7 @@ document.write(`
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/claisen.mp4"><video src="../../_images/claisen.mp4" title="../../_images/claisen.mp4" width="50%"><a href="../../_images/claisen.mp4">../../_images/claisen.mp4</a></video></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Trajectory of the claisen rearrangement reaction, allyl vinyl ether is shown in ball-and-stick, and the trajectory was viewed on VMD.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Trajectory of the claisen rearrangement reaction, allyl vinyl ether is shown in ball-and-stick, and the trajectory was viewed on VMD.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <hr class="docutils" />
@@ -472,7 +598,7 @@ document.write(`
 <figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/iqmol_claisen.mov"><img alt="../../_images/iqmol_claisen.mov" src="../../_images/iqmol_claisen.mov" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Using IQmol to make the allyl vinyl ester PDB file.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Using IQmol to make the allyl vinyl ester PDB file.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -500,8 +626,23 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>claisen/pm3<span class="w
 <li><p>Between the first umbrella window (<code class="docutils literal notranslate"><span class="pre">00/</span></code>) and the last (<code class="docutils literal notranslate"><span class="pre">NN/</span></code>), we can have as many windows needed to sample our chosen reaction coorindate (<strong>Note:</strong> The placeholder <code class="docutils literal notranslate"><span class="pre">0</span></code> before the <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>.).</p></li>
 <li><p>In each umbrella window, we have an independent simulation.</p></li>
 </ul>
-<p>To structure the directory like this, we will write a <code class="docutils literal notranslate"><span class="pre">bash</span></code> script, and make an <code class="docutils literal notranslate"><span class="pre">input/</span></code> directory containing our reference files.</p>
-<p>Adopted from Dr. Xiaoliang Pan (hehe)</p>
+<p>To structure the directory like this, we will write a <code class="docutils literal notranslate"><span class="pre">bash</span></code> script, and make an <code class="docutils literal notranslate"><span class="pre">input/</span></code> directory containing our reference files.
+hematic of Directory Levels:</p>
+<p>STEM_DIR/                        # Biological system or project name<br />
+─ METHOD1_DIR/                   # Like METHOD2_DIR but use QM method 1 (or other mutant+METHOD)
+─ METHOD2_DIR/                   # Like NETHOD1_DIR but use QM method 2 (or other mutant+METHOD)
+├── 00/                        # First umbrella window
+├── 01/                        # Second umbrella window
+├── …                        # …
+├── NN/                        # Up to however many windows needed
+│    ├── Trajectories Files    # Each window is an independent simulation
+├── input/                     # Contains input files:
+│    ├── PDB/in file           #     .mdin, .parm7, .rst7, etc.
+├── mbar/                # contains scripts for free energy analysis
+│    └── *.py, *.ipynb         # Python and Jupyter notebooks
+├── gen_inputs.in              # Script for making umbrella windows
+─ └── runmd.slurm                # Slurm scripts
+Adopted from Dr. Xiaoliang Pan (hehe)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
@@ -597,7 +738,7 @@ date
 <figure class="align-center" id="id3">
 <a class="reference internal image-reference" href="../../_images/iqmol_claisen_num.png"><img alt="../../_images/iqmol_claisen_num.png" src="../../_images/iqmol_claisen_num.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Open  the file, step3_pbcsetup.pdb, you made with tleap. This PDB file is made by amber so the atom numbers also correspond to the topology and cooridnate files.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-text">Open  the file, step3_pbcsetup.pdb, you made with tleap. This PDB file is made by amber so the atom numbers also correspond to the topology and cooridnate files.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition tip">
@@ -1128,24 +1269,6 @@ date
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="qmmm.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">QM/MM</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="analysis.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analysis</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -1224,57 +1347,10 @@ date
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><ul class="navbar-icon-links navbar-nav"
-    aria-label="Quick Links">
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Google Scholar</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-gitlab fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">GitHub</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
-            <span class="sr-only">Linkedin</span></a>
-        </li>
-</ul></div>
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
       
     </div>
   

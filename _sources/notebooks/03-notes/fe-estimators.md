@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # Free Energy Estimators
 
 A free energy estimator, in the context of statistical mechanics and thermodynamics, is a theoretical or computational tool used to calculate or estimate the free energy of a system. Free energy is a fundamental concept in thermodynamics and is related to the ability of a system to do work. It is often denoted by the letter F or A (Helmholtz free energy), depending on the context.

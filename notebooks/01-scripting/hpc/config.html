@@ -164,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -212,6 +212,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -357,7 +364,7 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../Pregame.html">
-                        Pregame
+                        html_theme.sidebar_secondary.remove: true
                       </a>
                     </li>
                 
@@ -405,6 +412,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link dropdown-item nav-internal" href="../../vmd/index.html">
                         VMD
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../../moore/index.html">
+                        Moore
                       </a>
                     </li>
                 
@@ -539,14 +553,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="configuring-ssh">
 <h1>Configuring ssh<a class="headerlink" href="#configuring-ssh" title="Permalink to this heading">#</a></h1>
-<p>The <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> program receives its configuration from either the command line or from configuration files <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> and <code class="docutils literal notranslate"><span class="pre">/etc/ssh/ssh_config</span></code>. Command-line options take precedence over configuration files. The user-specific configuration file <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> is used next. Finally, the global <code class="docutils literal notranslate"><span class="pre">/etc/ssh/ssh_config</span></code> file is used.</p>
+<p>The <span class="xref std std-term">ssh</span> program receives its configuration from either the command line or from configuration files <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> and <code class="docutils literal notranslate"><span class="pre">/etc/ssh/ssh_config</span></code>. Command-line options take precedence over configuration files. The user-specific configuration file <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code> is used next. Finally, the global <code class="docutils literal notranslate"><span class="pre">/etc/ssh/ssh_config</span></code> file is used.</p>
 <p>Some commonly used configuration options:</p>
 <ul class="simple">
 <li><p>X11 forwarding</p></li>
 <li><p>port forwarding</p></li>
 <li><p>configure public key authentication</p></li>
 </ul>
-<p>For example, I have multiple supercomputer accounts and would like to configure my <a class="reference internal" href="../../linux.html#term-ssh"><span class="xref std std-term">ssh</span></a> login.</p>
+<p>For example, I have multiple supercomputer accounts and would like to configure my <span class="xref std std-term">ssh</span> login.</p>
 <p>First, I made the file, <code class="docutils literal notranslate"><span class="pre">config</span></code>, in my <code class="docutils literal notranslate"><span class="pre">~/.ssh/</span></code> directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>touch<span class="w"> </span>~/.ssh/config
 </pre></div>
