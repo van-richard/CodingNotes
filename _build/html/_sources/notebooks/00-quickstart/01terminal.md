@@ -1,53 +1,38 @@
 # Terminal, Shell, & Bash
 
-## Terminal
-
 :::{figure} https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif
 ---
+figwidth: 75%
 align: center
 name: terminal-header
 ---
 
-Command line on MacOS :term:`terminal`, where, (1) :term:`echo` will return `"[`some text`]"` as an output, (2) :term:`echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator), (3) `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`, and (4) cowboy.
+Example of command line in the `terminal` application of MacOS. The line you are working on is noted with the `$`. The format of this line is: computer name, `;` , username, and then `$`. `Bash` commands are typed by line, and ran by hitting the `[enter]` key.where, (1) :term:`echo` will return `"[`some text`]"` as an output, (2) :term:`echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator), (3) `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`, and (4) cowboy.
 :::
 
-Example of the `terminal` on a Macbook ({numref}`terminal-header`). The line you are working on is noted with the `$`. The format of this line is: computer name, `;` , username, and then `$`. `Bash` commands are typed by line, and ran by hitting the `[enter]` key.
+In this section, we'll delve into the basics of the terminal, its role, and why it's crucial in computational research.
 
-**_Why do we start here?_**
-The command line is a tool that everyone uses in computational research. 
+Approaches to "using" computer programs:
+  1) A common way makes use of a Graphical User Interface (GUI)
+    - Programs that use a mouse and keyboard with on-screen menus, buttons, sliders, etc.
+    - Relies on the user to click on-screen options for specific instructions
+  2) Alternatively, computer programs can be operated via the Command Line Interface (CLI)
+    - Uses text-based instructions, only requiring input from the keyboard
+    - Often used for computing many files or automating repetitive tasks.
 
-Some advantages:
-  * More control in running applications
-  * Faster management across operating systems (OS)
-  * Ability to automate repetitive tasks (scripting)
 
-Not to mention, many data analysis tools and computing servers requires proficiency with command line.
-* For example,
-  * Accessing the supercomputer 
-  * Managing files remotely/locally
-  * Port forwarding
-  
-Yes, there is a steep learning curve. This will be confusing. A little irritating. And probably involve some tears. 
+## Wtf is a Terminal?
 
-BUT, once you get the hang of it, you'll find yourself running the same few commands over and over again!
+Terminal is a graphical-based application, providing access to the CLI
+  - This is preinstalled on MacOS as the `terminal` app
+  - Windows has variations called `Command Prompt` and `PowerShell`  
 
-### Terminal is just 90% Keyboard
+Using command line is a fundamental tool in computational research, offering advantages like:
+  - More control in running applications
+  - Faster management across operating systems (OS)
+  - Ability to automate repetitive tasks (scripting)
 
-Graphical Interfaces
-  * Most people are familiar with programs that require a mouse and keyboard to interact through visible (on-screen) menus, buttons, sliders, etc.
-  * These rely on the `Graphical User Interfaces (GUI)` to complete specific instructions like copying, deleting, or renaming
-
-Alternatively,
-  * Other programs operating with a {term}`Command Line Interface (CLI)`
-  * Only require input from a keyboard
-   * Instructions are typed to perform the tasks
-   * Often for computing a large number of files, or automating repetitive tasks
-
-The CLI can be accessed via {term}`terminal` app.
-  * Pre-installed on many computers
-  * Text-based graphical interface
-
-### Terminal App
+### Example: Opening the Terminal App
 
 You can find the terminal by:
 
@@ -70,290 +55,216 @@ I will write this up, but here is my reference.
 :::
 ::::
 
-:::{sidebar} 
-:class: important
-Notation and pre-defined commands will depend on your {term}`shell`!
-:::
+Several data analysis tools and computing servers require proficiency with the command line. It may have a steep learning curve and be a bit confusing initially, but once you get the hang of it. Automation will be E Z!
+  - Notation and pre-defined commands will depend on your {term}`shell`!
 
 Users can send instructions to the computer by running `commands` 
-  * Like GUIs, these instructions can be for manipulating files or running software
-  * Often, a `command` is an abbreviation of common words (copy = `cp`, move = `mv`)
-  
-***
+  - Like GUIs, these instructions can be for manipulating files or running software
+  - Often, a `command` is an abbreviation of common words (copy = `cp`, move = `mv`)
 
-## Shell
+---
 
-::::{margin} 
+## $SHELL
+
+::::{sidebar}
 :::{important}
-Essentially, one type of CLI, the choice in `shell` programs dictates how:
-  * Interact with the operating system
-  * Workflow and control of the program
-  * Command line combinations
+Essentially, a type of CLI, the choice in `shell` programs dictates how you:
+- Interact with the operating system
+- Manage workflow and program control
+- Combine command line instructions
 :::
 ::::
 
-### Shells Provides Structure
+When you open `terminal`, a `shell` session starts immediately, containing the current state or `environment` 
+  - Only one session per shell exists
 
-When the user opens `terminal`, a {term}`shell` session is immediately started
-* These contain the current state, or {term}`environment`, of the shell. 
-  * Only one session per shell 
+Shells are programs that understand and execute user commands:
+  - interpreting human language (text input) into computer language (output)
+  - Various `shells` are available, such as `csh`, `zsh`
 
-* They are programs that understand and executes the {term}`command` from the user
-  * Interprets human language (text input) into computer language (output)
-  
-* Several `shells` are available
-  * Examples: `csh`, `zsh` 
+**I use `bash` shell, so my notes will only cover `bash`!**
 
-**I mainly use the `bash` shell.**
+An `interactive prompt` is when users run each "command" line by line. 
 
+:::{note}
 
-An {term}`interactive prompt`, is when the user runs each "command" line by line 
-  * Combining all lines into 1 file is called a "shell {term}`script`."
+Later, we will see that combining multiple command lines into one file is called a "shell `script`."
+:::
 
+### Example: Bash Shell Commands
 
-### Commands in Command Line
+In a `shell`, predefined `commands` are computer processes. 
+  - `Commands` are typed and interpreted by the computer to run processes
+  - Users provide `input` in the form of commands, and the computer `outputs` the result
+  - To update the `output`, run the command again.
 
-In a `shell`, you have `commands`, which are computer processes that are predefined by the chosen `shell` structure.
+Some `commands` can be modified by `options` following the command with a hyphen `-`. Others take `arguments` as input. Look at the following examples:
 
-`commands` are typed, and interpreted by the computer to run some process. In other words, the user provides some `input` in the form of commands, and the computer `output` the result. The `output` is printed on your screen, and does not change. To update the `output`, you will need to run the command again!
+1. `pwd`
+2. `echo`
+3. `touch`
+3. `cat`
+4. `tail`
+5. `head`
 
-Some `commands` can be modified by `options` which follow the command with a hyphen `-`.
-
-Some `commmands` take in arguments, which is the `input` for the commands
-
-#### Helpful Commands
-
-Common ones are:
-
-1. {term}`pwd`
-2. {term}`echo`
-3. {term}`cat`
-4. {term}`tail`
-5. {term}`head`
-6. {term}`touch`.
-
+---
 
 ## Navigating
 
-### Objective
-* Understand the general layout of the :term:`terminal`, and how it differs from GUIs like `Finder` 
-* Find where your start, currently are, and can go in :term:`terminal`
-* See files/folders 
-* Difference between absolute and relative paths
+- Understand the general layout of the `terminal` 
+- Compare differences from GUIs like `Finder` or `File Explorer`
+- Find your start, current position, and navigate in `terminal`.
+- View files/folders.
+- Differentiate between absolute and relative paths.
+
+### Starting Location! 
+
+The default location when you first login is called your "home" directory
 
 
-### Where are we?
+### Where Are We?
 
-The first command to learn is :term:`pwd` which stands for Print Working Directory. A lot of commands are named as an abbreviation of a word or words describing them. :term:`pwd` tells you what your current or present working directory (folder) is.
+Use `pwd` (Print Working Directory) to find your current working directory (folder).
 
 ```bash
 pwd
 ```
 
-Navigating the terminal will rely on you being in the right location. As you're moving around directories, it is easy to lose track of where you are. Use this command often to remind yourself where you presently are.
-
-
+Navigate in the terminal, relying on being in the right location. As you move around directories, use `pwd` often to remind yourself where you are.
 
 ### What Files/Folders are Here?
 
-````{margin}
-```{tip}
-:class: dropdown
-
-More examples can be found here: [](../commands/ls.md)
-```
-````
-
-We know where we are, but we want to know what files/folders are here! To do this, use `ls`, short for list.
+Use `ls` (List) to see what files/folders are in the current location.
 
 ```bash
 ls
 ```
 
-### How to make a new folder/directory?
+### How to Make a New Folder/Directory?
 
-::::{margin}
-:::{tip}
-:class: dropdown
+Use `mkdir` (Make Directory) to create a new folder.
 
-Avoid using spaces when choosing filenames/folders. For example, for a folder called "amino acids", ather than using a space, you should use an underscore (`mkdir amino_acids`) or hyphen (`mkdir amino-acids`).
+```bash
+mkdir [new folder name]
+```
 
-More examples can be found here: [](../commands/mkdir.md)
-:::
-::::
-
-Let's make a new folder/directory, so our current working directory isn't so lonely. To do this, use the :term:`mkdir` command, short for make directory. This command takes an argument, i.e. the new folder name!
-
-The syntax is `mkdir [argument]` or in other words `mkdir [new folder name]`. Here, I will use the bracket notations (`[]`) to imply this is some sort of input given by you. We can start by making a new folder called `test/`.
+For example, create a folder called `test`.
 
 ```bash
 mkdir test
 ```
 
+### Enter/Exit Folders
 
-## Enter/Exit Folders
-
-We can enter a folder with the :term:`cd` command, short for change directories. This command takes an argument, following the syntax `cd [argument]` or in other words `cd [folder name]`.
+Use `cd` (Change Directory) to enter a folder.
 
 ```bash
-cd test
+cd [folder name]
 ```
 
-Check where you are with `pwd`, and you should see that you're in the new working directory!
+Check your current location with `pwd`.
 
 ```bash
 pwd
 ```
 
-To go back one directory, use the argument `../`.
-
-```bash
-cd ../
-```
-
-To go back to your "home" directory, you have two options:
+To go back one directory, use `cd ../`. To return to your "home" directory:
 
 ```bash
 cd    # Option 1
 cd ~  # Option 2
 ```
 
-If you check your current working directory again, you should see that you're back home
+Check your current location again to ensure you're back home.
 
 ```bash
 pwd
 ```
 
-
 ## What are Paths?
 
-There are 2 types of paths we can use
+Two types of paths:
+1. Absolute - relative to the root directory (e.g., `/home`, `/Users`).
+2. Relative - relative to your current working directory.
 
-1. Absolute
-   1. The path to files/folders/programs relative to the root directory (i.e. `/home`, `/Users`, etc.)
-2. Relative. 
-   1. The path to files/folders/programs is relative to where _you_ are (i.e. current working directory)
-   
-Whenever we refer to a file or directory we are using one of these paths.
+File or directory references use one of these paths.
 
-To begin with, we have to understand that the file system under linux is a hierarchical structure. At the very top of the structure is what's called the root directory. It is denoted by a single slash (`/`). It has subdirectories, they have subdirectories and so on. Files may reside in any of these directories.
+---
 
 # File Management
 
 ## Copy, Move, Rename, & Delete Files
 
-Your mouse does not work in the way you expect when in the CLI.
+Your mouse doesn't work the same way in the CLI. Using the terminal means communicating with the computer through commands.
 
-Using the terminal means you need to learn how to communicate with the computer through __commands__.
-
-Tasks like:
-
-- Copying files/folders (:term:`cp`)
-- Moving files/folders (:term:`mv`)
-- Renaming files/folders (:term:`mv`)
-- Deleting files/folders (:term:`rm`)
-
-Need to be typed!
-
+Tasks like copying, moving, renaming, and deleting files/folders (`cp`, `mv`, `rm`) need to be typed!
 
 ## Copying
 
-To copy files, you use the command, :term:`cp`, where you include the file or folder you want to copy followed by the path you want the copy to go!
+Use `cp` (Copy) to copy files or folders.
 
-::::{tab-set}
-:::{tab-item} General Notation
 ```bash
 cp [source] [destination]
 ```
 
-For both `[source]` and `[destination]`, you can use the absolute or relative path
+Both `[source]` and `[destination]` can use absolute or relative paths.
 
-:::
-:::{tab-item} Copy Files
+### Copy Files
+
 ```bash
 cp file.txt /path/to/destination/file-copy.txt
 ```
 
-Copying a file is straight forward, you can even give the file a new name at the destination.
+Copying a file is straightforward; you can even give it a new name at the destination.
 
-:::
-:::{tab-item} Copy Folders
+### Copy Folders
+
 ```bash
 cp -r directory/ path/to/destination
 ```
 
-Copying a directory requires the option `-r`, otherwise it is the same as copying files.
-
-:::
-::::
-
+Copying a directory requires the option `-r`.
 
 ## Moving & Renaming
 
-Yes. They are the same command, :term:`mv`. The notation for :term:`mv` is the same as :term:`cp`!
+Both are done with `mv` (Move). The notation is similar to `cp`.
 
-::::{tab-set}
-:::{tab-item} General Notation
-```bash
-mv [source] [destination]  # Moving
-mv [source] [newname]      # Renaming
-```
+### Move/Rename Files
 
-For both source and destination you can use the absolute or relative path
-
-:::
-:::{tab-item} Move/Rename Files
 ```bash
 mv file.txt /path/to/destination/newname.txt
 ```
 
-Moving a file is straight forward, you can even give the file a new name at the destination.
+Moving a file is straightforward; you can even rename it at the destination.
 
-:::
-:::{tab-item} Move/Rename Folders
+### Move/Rename Folders
+
 ```bash
-mv directory/ path/to/desitination/newname
+mv directory/ path/to/destination/newname
 ```
 
-Moving a directory is the same as the previous examples.
-
-:::
-::::
-
+Moving a directory is similar to previous examples.
 
 ## Deleting
 
 ```{caution}
-
-This command is permanent. There is no trash can to recover your files from.....
-
+This command is permanent. There's no trash can to recover your files.
 ```
 
-:term:`rm` is used to delete files/folders, and is written like :term:`cp` and :term:`mv`
+Use `rm` (Remove) to delete files/folders.
 
-::::{tab-set}
-:::{tab-item} General Notation
-```bash
-rm [sources]
-```
+### Delete Files
 
-Where,  `[source]`, can be the absolute or relative path
-
-:::
-:::{tab-item} Delete Files
 ```bash
 rm file1.txt file2.txt
 ```
 
-You can delete multiple files at once.
+Delete multiple files at once.
 
-:::
-:::{tab-item} Copy Folders
-```bash
-rm -r directory/
-```
+### Delete Folders
 
 Include the option, `-r`, to delete a folder.
 
-:::
-::::
+```bash
+rm -r directory/
+```

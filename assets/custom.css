@@ -1,0 +1,105 @@
+html {
+  /*****************************************************************************
+  * Overall Layout Variables
+  */
+
+  /* Header height will impact the top offset for many sections */
+  /* Article header is 66% of Header */
+  --pst-header-height: 2rem;
+  --pst-header-article-height: calc(var(--pst-header-height) * 2 / 3);
+  --pst-sidebar-secondary: 17rem;
+
+  /*****************************************************************************
+  * Font features used in this theme
+  */
+
+  /* base font size - applied at body/html level*/
+  --pst-font-size-base: 1.5rem;
+
+  /* heading font sizes based on bootstrap sizing */
+  --pst-font-size-h1: 2rem;
+  --pst-font-size-h2: 1.75rem;
+  --pst-font-size-h3: 1.5rem;
+  --pst-font-size-h4: 1.25rem;
+  --pst-font-size-h5: 1.15rem;
+  --pst-font-size-h6: 1.1rem;
+
+  /* smaller than heading font sizes */
+  --pst-font-size-milli: 0.9rem;
+
+  /* Sidebar styles */
+  --pst-sidebar-font-size: 1rem;
+  --pst-sidebar-font-size-mobile: 1.1rem;
+  --pst-sidebar-header-font-size: 1.2rem;
+  --pst-sidebar-header-font-weight: 600;
+
+  /* Admonition styles */
+  --pst-admonition-font-weight-heading: 600;
+
+  /* Font weights */
+  --pst-font-weight-caption: 150;
+  --pst-font-weight-heading: 600;
+
+  /* Font family */
+  /* These are adapted from https://systemfontstack.com/ */
+  --pst-font-family-base-system: -apple-system, BlinkMacSystemFont, Segoe UI,
+    "Helvetica Neue", Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  --pst-font-family-monospace-system: "SFMono-Regular", Menlo, Consolas, Monaco,
+    Liberation Mono, Lucida Console, monospace;
+
+  --pst-font-family-base: var(--pst-font-family-base-system);
+  --pst-font-family-heading: var(--pst-font-family-base-system);
+  --pst-font-family-monospace: var(--pst-font-family-monospace-system);
+
+  /*****************************************************************************
+  * Icon
+  */
+
+  /* Font size across all icons */
+  --pst-font-size-icon: 4rem;
+
+  /* Font Awesome default icons */
+  --pst-icon-check-circle: "\f058"; /* fa-solid fa-circle-check */
+  --pst-icon-info-circle: "\f05a"; /* fa-solid fa-circle-info */
+  --pst-icon-exclamation-triangle: "\f071"; /* fa-solid fa-triangle-exclamation */
+  --pst-icon-exclamation-circle: "\f06a"; /* fa-solid fa-circle-exclamation */
+  --pst-icon-times-circle: "\f057"; /* fa-solid fa-circle-xmark */
+  --pst-icon-lightbulb: "\f0eb"; /* fa-solid fa-lightbulb */
+  --pst-icon-download: "\f019"; /* fa-solid fa-download */
+  --pst-icon-angle-left: "\f104"; /* fa-solid fa-angle-left*/
+  --pst-icon-angle-right: "\f105"; /* fa-solid fa-angle-right */
+  --pst-icon-external-link: "\f35d"; /* fa-solid fa-up-right-from-square */
+  --pst-icon-search-minus: "\f010"; /* fa-solid fa-magnifying-glass-minus */
+  --pst-icon-github: "\f09b"; /* fa-brands fa-github */
+  --pst-icon-gitlab: "\f296"; /* fa-brands fa-gitlab */
+  --pst-icon-share: "\f064"; /* fa-solid fa-share */
+  --pst-icon-bell: "\f0f3"; /* fa-solid fa-bell */
+  --pst-icon-pencil: "\f303"; /* fa-solid fa-pencil */
+
+  /* Bootstrap icons */
+  --pst-breadcrumb-divider: "\f105";
+}
+
+/*******************************************************************************
+* Breakpoints that trigger UI changes
+*
+* Note that media-breakpoint-down begins at the next highest level!
+* So we should choose a media-breakpoint-down one *lower* than when we want to start
+* example: media-breakpoint-up(md) and media-breakpoint-down(sm) trigger at the same time
+* ref: https://github.com/twbs/bootstrap/issues/31214
+*/
+$breakpoint-sidebar-primary: xl; /* When we collapse the primary sidebar */
+$breakpoint-sidebar-secondary: xl; /* When we collapse the secondary sidebar */
+$breakpoint-page-width: 88rem; /* taken from sphinx-basic-ng, which we are ultimately going to inherit */
+
+/*******************************************************************************
+* Define the animation behaviour
+*/
+/* $animation-time: 500ms; */
+
+/*******************************************************************************
+* UI shaping and padding
+*/
+/* $admonition-border-radius: 0.25rem;
+$admo: 50%; */

@@ -1,6 +1,3 @@
----
-orphan: true
----
 # Classical Molecular Dynamics
  
 ## Potential Energy

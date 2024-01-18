@@ -1,3 +1,0 @@
-# Analysis
-
-Trajectory Analysis Tips

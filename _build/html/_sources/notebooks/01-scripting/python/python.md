@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Overview](#overview)
+  - [Primitive Datatypes and Operators](#primitive-datatypes-and-operators)
+  - [2. Variables and Collections](#2-variables-and-collections)
+  - [3. Control Flow and Iterables](#3-control-flow-and-iterables)
+  - [4. Functions](#4-functions)
+  - [5. Classes](#5-classes)
+  - [6.1 Inheritance](#61-inheritance)
+  - [6.2 Multiple Inheritance](#62-multiple-inheritance)
+  - [7. Advanced](#7-advanced)
+    - [Decorators](#decorators)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Overview
 
 ```python

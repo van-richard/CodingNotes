@@ -1,20 +1,23 @@
-# Example Code
+---
+html_theme.sidebar_secondary.remove: true
+---
 
-Additional programming details & example code.
+# Scripting & More
 
+Some more information and sample code
 
-## [Moore Bash](#bash/overview.md)
+## [Bash](bash/overview.md)
 
- 1. [Scripting](#bash/scripting)
- 2. [Startup Files](#bash/startup)
+ 1. [Scripting](bash/scripting)
+ 2. [Startup Files](bash/startup)
 
-## [vi/vim](#vi/overview)
+## [vi/vim](vi/overview)
 
-3. [Text Editors](#vi/vi)
+3. [Text Editors](vi/vi)
 
-## [Hello Snakes (Python & Conda)](#python/overview)
+## [Hello Snakes (Python & Conda)](python/overview)
 
-1. [Some Python](#python/python)
-2. [MiniConda](#python/conda)
-3. [Environments](#python/condaenv)
-4. [Jupyter Notebooks](#python/jupyter)
+1. [Some Python](python/python)
+2. [MiniConda](python/conda)
+3. [Environments](python/condaenv)
+4. [Jupyter Notebooks](python/jupyter)

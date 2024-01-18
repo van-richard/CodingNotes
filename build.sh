@@ -3,7 +3,9 @@
 shopt -s expand_aliases
 source ~/.bash_aliases
 
-myconda; conda activate web
+myconda; conda activate webdev
 
-jb build ./ --all
+#jb build ./ --all
+sphinx-build ./ _build/html
+
 ghp-import -n -p -f _build/html

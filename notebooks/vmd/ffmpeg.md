@@ -18,6 +18,3 @@ After creating image files from VMD, use `ffmpeg` to make the video by:
 
 
 
-```python
-
-```
