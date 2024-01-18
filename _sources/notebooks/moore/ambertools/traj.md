@@ -1,3 +1,0 @@
-# CPPTRAJ/PYTRAJ
-
-
