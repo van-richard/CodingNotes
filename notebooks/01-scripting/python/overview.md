@@ -1,18 +1,76 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+# Python
 
-- [Python & Conda](#python--conda)
-  - [Python](#python)
-  - [Conda](#conda)
+Curated list of Python frameworks, libraries, software and resources.
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+## Data Visualization
 
-# Python & Conda
+- boke
+- matplotlib
+- seaborn
 
-## Python
+## Database
 
-## Conda 
+- pickleDB
+- tinydb
 
-Program for managing `python` packages.
+## Documentation
 
+- sphinx
+
+## GUI Development
+
+- DearPyGui
+- Tkinter
+- pywebview
+
+## Interactive Interpreters
+
+- jupyter notebook (ipython)
+
+## Logging
+
+- loggin
+- logbook
+
+## Machine Learning / Neural Networks / AI
+
+- pytorch
+- scikit-learn
+- xgboost
+
+## Package Management
+
+- pip
+- conda
+
+## Science 
+
+- ambertools
+- alchemlyb
+- biopython
+- colorur
+- numpy
+- openbabel
+- scipy
+- rdkit
+- pytraj
+- parmed
+
+
+## Templating
+
+- jinja2
+- mako
+
+## Testing
+
+- hypothesis
+- pytest
+- mamba
+- tox 
+-unittests
+
+## Website Generators
+
+- jupyterbook
+- pysphinx
