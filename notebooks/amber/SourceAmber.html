@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Briefly, Molecular Dynamics &#8212; CodingNotes</title>
+    <title>Load Amber Software &#8212; CodingNotes</title>
   
   
   
@@ -60,15 +60,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/00-quickstart/08BasicMD';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/00-quickstart/08BasicMD.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/amber/SourceAmber';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/amber/SourceAmber.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Scripting &amp; More" href="../01-scripting/index.html" />
-    <link rel="prev" title="What are XYZ Files?" href="07XYZFiles.html" />
+    <link rel="next" title="Moore" href="../moore/index.html" />
+    <link rel="prev" title="CPPTRAJ/PYTRAJ" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,8 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/index.html">
                         Quick Start Guide
                       </a>
                     </li>
@@ -220,8 +218,8 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../amber/index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="index.html">
                         Amber Notes
                       </a>
                     </li>
@@ -395,8 +393,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/index.html">
                         Quick Start Guide
                       </a>
                     </li>
@@ -442,8 +440,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../amber/index.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="index.html">
                         Amber Notes
                       </a>
                     </li>
@@ -556,9 +554,9 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Quick Start Guide</a></li>
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">CPPTRAJ/PYTRAJ</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Briefly,...</li>
+    <li class="breadcrumb-item active" aria-current="page">Load Amber Software</li>
   </ul>
 </nav>
 </div>
@@ -575,62 +573,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="briefly-molecular-dynamics">
-<h1>Briefly, Molecular Dynamics<a class="headerlink" href="#briefly-molecular-dynamics" title="Permalink to this heading">#</a></h1>
-<p>The general steps of molecular dynamics (MD) simulations are shown below, consider the following questions for each step:</p>
-<ol class="arabic simple">
-<li><p>System Preparations</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="load-amber-software">
+<h1>Load Amber Software<a class="headerlink" href="#load-amber-software" title="Permalink to this heading">#</a></h1>
+<section id="pete-osu">
+<h2>PETE (OSU)<a class="headerlink" href="#pete-osu" title="Permalink to this heading">#</a></h2>
+<section id="default-amber22-programs">
+<h3>Default Amber22 Programs<a class="headerlink" href="#default-amber22-programs" title="Permalink to this heading">#</a></h3>
+<p>Compiled using original Amber22 programs</p>
 <ul class="simple">
-<li><p>What ions or molecules are in your system?</p></li>
-<li><p>Is the force field for each type of ion/molecule sufficient?</p></li>
-<li><p>What protonation states are your titratable residues?</p></li>
+<li><p>sander / pmemd</p></li>
+<li><p>sander.MPI / pmemd.MPI</p></li>
+<li><p>AmberTools23</p></li>
 </ul>
-</li>
-<li><p>Equilibrate the System</p>
-<ul class="simple">
-<li><p>What is the target environmental conditions for your system?</p></li>
-<li><p>Is temperature, pressure, and/or the energy of the system stable?</p></li>
-</ul>
-</li>
-<li><p>Production Simulations</p>
-<ul class="simple">
-<li><p>How long do you need your simulation?</p></li>
-</ul>
-</li>
-<li><p>Analysis of Trajectories</p>
-<ul class="simple">
-<li><p>What property of the system addresses your hypothesis?</p></li>
-</ul>
-</li>
-</ol>
-<section id="classical-mechanics">
-<h2>Classical Mechanics<a class="headerlink" href="#classical-mechanics" title="Permalink to this heading">#</a></h2>
-<p>Molecular dynamic (MD) simulations use classical Newtonian mechanics to describe the motions of atoms and molecules.</p>
-<p>These simulations involve:</p>
-<ul class="simple">
-<li><p>Explicit a particles (atoms, ions)</p></li>
-<li><p>Particles interact via relatively simple analytical potential (i.e. <em>force field</em>)</p></li>
-<li><p>Newton’s equations of motion are integrated for all particles simultaneously</p></li>
-<li><p>Hundreds to millions of particles depending on model</p></li>
-<li><p>Simulation time could be from 10 ps to 1 μs depending on model (typically nanosecond)</p></li>
-</ul>
-<p>Energy is:</p>
-<div class="math notranslate nohighlight">
-\[
-E_{total} = E_{bonded} + E_{nonbonded}
-\]</div>
-<p>The bonded and nonbonded terms are:</p>
-<div class="math notranslate nohighlight">
-\[
-E_{total} = E_{bonds} + E_{angles} + E_{torsion} + E_{vDW} + E_{Coulomb}
-\]</div>
-<p>and each energy contribution term has a potential function, for example, the van der waals term <span class="math notranslate nohighlight">\(E_{vDW}\)</span> is defined by the Lennard-Jones potential:</p>
-<div class="math notranslate nohighlight">
-\[
-E_{vDW} = 4\epsilon  \left[ (\frac{\sigma}{r})^{12} - (\frac{\sigma}{r})^{6} \right]
-\]</div>
-<p>The potential functions have preset bonding arrangements, therefore, classical MD on its own cannot be used to model chemical reactions.</p>
-<p>MD simulation generates a sequence of configurations phase space connected by time. This is called a <em>trajectory</em> of all particles in the system as a function of time. Time averages and other properties can be calculated from a trajectory.</p>
+<section id="source">
+<h4><code class="docutils literal notranslate"><span class="pre">source</span></code><a class="headerlink" href="#source" title="Permalink to this heading">#</a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>cmake3/3.24.3
+module<span class="w"> </span>load<span class="w"> </span>gcc/11.2.0<span class="w"> </span><span class="c1"># for pmemd-mpi</span>
+module<span class="w"> </span>load<span class="w"> </span>openmpi-4.1.1/gcc
+module<span class="w"> </span>load<span class="w"> </span>cuda/10.2<span class="w"> </span><span class="c1"># 12.1 not w/ amber, 11.0 lib problem</span>
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 </section>
 
@@ -647,7 +611,7 @@ E_{vDW} = 4\epsilon  \left[ (\frac{\sigma}{r})^{12} - (\frac{\sigma}{r})^{6} \ri
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/00-quickstart"
+            path: "./notebooks/amber"
         },
         predefinedOutput: true
     }
@@ -664,20 +628,20 @@ E_{vDW} = 4\epsilon  \left[ (\frac{\sigma}{r})^{12} - (\frac{\sigma}{r})^{6} \ri
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="07XYZFiles.html"
+       href="index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">What are XYZ Files?</p>
+        <p class="prev-next-title">CPPTRAJ/PYTRAJ</p>
       </div>
     </a>
     <a class="right-next"
-       href="../01-scripting/index.html"
+       href="../moore/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Scripting &amp; More</p>
+        <p class="prev-next-title">Moore</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -697,14 +661,20 @@ E_{vDW} = 4\epsilon  \left[ (\frac{\sigma}{r})^{12} - (\frac{\sigma}{r})^{6} \ri
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-mechanics">Classical Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pete-osu">PETE (OSU)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-amber22-programs">Default Amber22 Programs</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#source"><code class="docutils literal notranslate"><span class="pre">source</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/00-quickstart/08BasicMD.md">
+    <a href="../../_sources/notebooks/amber/SourceAmber.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
