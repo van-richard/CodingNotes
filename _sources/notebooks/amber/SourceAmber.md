@@ -1,21 +1,87 @@
 # Load Amber Software
 
+To-Do:
+- [] Combine Amber22 and Amber/QMhub source
+
+I made several files to with setting up the environment for different Amber compilations. Just source the file by running:
+
+  ```
+  source /PATH/TO/VAN/SCRIPTS/SOURCEFILE.sh
+  ```
+
+Example with Amber22 on PETE:
+
+  ```
+  #!/bin/bash
+  #SBATCH ...
+
+  source /scratch/van/scripts/pete-qmhub.sh
+
+  # sander / pmemd
+  # sander.MPI/pmemd.MPI
+  # pmemd.cuda
+
+  # MD INPUTS ...
+
+  ```
+
 ## PETE (OSU)
 
-### Default Amber22 Programs
+### Amber22 (Original Code)
 
-Compiled using original Amber22 programs
-
-- sander / pmemd
-- sander.MPI / pmemd.MPI
-- AmberTools23
-
-#### `source`
-
-```bash
-module load cmake3/3.24.3
-module load gcc/11.2.0 # for pmemd-mpi
-module load openmpi-4.1.1/gcc
-module load cuda/10.2 # 12.1 not w/ amber, 11.0 lib problem
+```{note}
+---
+class: sidebar
+---
+QUICK was excluded in this build because CUDA = 12
 ```
+
+- The following have been compiled, and should run..
+
+  - [x] sander / pmemd
+  - [x] sander.MPI / pmemd.MPI
+  - [x] pmemd.cuda
+  - [] pmemd.cuda.MPI
+  - [x] AmberTools
+
+- Source file:
+  
+  ```
+  source /scratch/van/Scripts/pete-amber22.sh
+  ```
+
+
+### Amber22 + QMHub
+
+- The following have been compiled, and should run..
+
+  - [x] sander / pmemd
+  - [x] sander.MPI / pmemd.MPI
+  - [x] pmemd.cuda
+  - [] pmemd.cuda.MPI
+  - [x] AmberTools
+
+- Source file:
+  
+  ```
+  source /scratch/van/Scripts/pete-qmhub.sh
+  ```
+
+### Amber22 + QMHub + QChem
+
+- The following have been compiled, and should run..
+
+  - [x] sander / pmemd
+  - [x] sander.MPI / pmemd.MPI
+  - [] pmemd.cuda
+  - [] pmemd.cuda.MPI
+  - [] AmberTools
+
+- Source file:
+  
+  ```
+  source /scratch/van/Scripts/pete-qmhub-qchem.sh
+  ```
+
+
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>CPPTRAJ/PYTRAJ &#8212; CodingNotes</title>
+    <title>Running Amber &#8212; CodingNotes</title>
   
   
   
@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -65,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Load Amber Software" href="SourceAmber.html" />
-    <link rel="prev" title="VMD" href="../vmd/index.html" />
+    <link rel="next" title="Pairwise Distance" href="pytraj/pairwisedistance.html" />
+    <link rel="prev" title="Load Amber Software" href="SourceAmber.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,49 +192,13 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../03-notes/index.html">
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../03-notes/index.html">
                         Notes
                       </a>
                     </li>
                 
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../chimera/index.html">
-                        ChimeraX
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
-                        VMD
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="#">
-                        Amber Notes
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
-                        idk
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -371,9 +336,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -413,49 +376,13 @@ document.write(`
                       </a>
                     </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
-                    More
-                </button>
-                <ul id="pst-nav-more-links-2" class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../03-notes/index.html">
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../03-notes/index.html">
                         Notes
                       </a>
                     </li>
                 
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../chimera/index.html">
-                        ChimeraX
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
-                        VMD
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="#">
-                        Amber Notes
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
-                        idk
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
         
@@ -521,6 +448,48 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03-notes/modelling.html">Simulation Methods</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03-notes/basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-notes/binding.html">Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-notes/fe-alchemical.html">FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../03-notes/basics-qmmm.html">QM/MM Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03-notes/fe-estimators.html">Free Energy Estimators</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chimera/cli.html">ChimeraX Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/rock.html">Rocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/spin.html">Spin</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vmd/index.html">VMD</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="SourceAmber.html">Load Amber Software</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Running Amber</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="pytraj/pairwisedistance.html">Pairwise Distance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj/pca.html">Principal Component Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj/rmsd.html">RMSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj/rmsf.html">RMSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpptraj/nowater.html">Delete water from trajectories (&amp; combine)</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -553,7 +522,10 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">CPPTRAJ/PYTRAJ</li>
+    
+    <li class="breadcrumb-item"><a href="../03-notes/index.html" class="nav-link">Some Notes</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Running Amber</li>
   </ul>
 </nav>
 </div>
@@ -570,16 +542,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="cpptraj-pytraj">
+  <section class="tex2jax_ignore mathjax_ignore" id="running-amber">
+<h1>Running Amber<a class="headerlink" href="#running-amber" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="SourceAmber.html"><span class="doc std std-doc">Running Amber</span></a></p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="cpptraj-pytraj">
 <h1>CPPTRAJ/PYTRAJ<a class="headerlink" href="#cpptraj-pytraj" title="Permalink to this heading">#</a></h1>
 <p>Files</p>
-<p><span class="xref myst">Dry</span>
-<span class="xref myst">PCA</span>
-<span class="xref myst">RMSF</span>
-<span class="xref myst">RMSD</span>
-<span class="xref myst">Pairwise</span></p>
-<div class="toctree-wrapper compound">
-</div>
+<p><a class="reference internal" href="cpptraj/nowater.html"><span class="doc std std-doc">Dry</span></a>
+<a class="reference internal" href="pytraj/pca.html"><span class="doc std std-doc">PCA</span></a>
+<a class="reference internal" href="pytraj/rmsf.html"><span class="doc std std-doc">RMSF</span></a>
+<a class="reference internal" href="pytraj/rmsd.html"><span class="doc std std-doc">RMSD</span></a>
+<a class="reference internal" href="pytraj/pairwisedistance.html"><span class="doc std std-doc">Pairwise</span></a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -612,20 +588,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../vmd/index.html"
+       href="SourceAmber.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">VMD</p>
+        <p class="prev-next-title">Load Amber Software</p>
       </div>
     </a>
     <a class="right-next"
-       href="SourceAmber.html"
+       href="pytraj/pairwisedistance.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Load Amber Software</p>
+        <p class="prev-next-title">Pairwise Distance</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -638,6 +614,18 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Running Amber</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#cpptraj-pytraj">CPPTRAJ/PYTRAJ</a></li>
+</ul>
+
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 
