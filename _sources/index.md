@@ -10,8 +10,7 @@ This collection was an attempt to consolidated my experiences in computational c
 
 I hope many of you will find this information useful in your future endeavors.
 
-
-:::{figure} https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/images/van-wordmark.svg
+:::{figure} https://github.com/van-richard/CodingNotes/blob/fde93548fe927dfbdfc37a2878d85c629dd67e1d/_static/images/van-wordmark-dark.svg
 ---
 width: 75%
 align: center

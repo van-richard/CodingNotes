@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>4.2. Applying Distance Restraints in Classical MD Simulations &#8212; CodingNotes</title>
   
@@ -671,7 +671,7 @@ heat.mdin</label><div class="sd-tab-content docutils">
 <p>If our initial distance between the 2 molecules is 5 Å, and the goal is to observe some property of the system when the distance is 15 Å. Then I want to sample some distances &lt; 5 Å and increment that distance at some value until I reach 15 Å. The increment between distance will depend on the system and property you’re studying.</p>
 <p>Since this is a simple example, we will start with a restraint value of 4 Å and increment this by 4, until we reach 16 Å (i.e.,** our restraint values are 4, 8, 12,and 16 Å**)</p>
 <p>The files we need to make are, <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code> and  <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>, but each file must have a restraint value of 4, 8, 12, or 16. To keep files organized, I recommend sequentially ordering the files like:</p>
-<table class="table">
+<table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Produdction MD File</p></th>
 <th class="head"><p>Restraint File</p></th>
