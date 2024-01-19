@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
@@ -37,9 +37,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Simulation Methods" href="modelling.html" />
+    <link rel="next" title="Running Amber" href="../amber.html" />
     <link rel="prev" title="Tutorials" href="../02-simulation/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -80,7 +80,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -120,10 +119,8 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
     <span class="fa-solid fa-bars"></span>
@@ -327,9 +324,8 @@ document.write(`
   
 </div>
 
-    </div>
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -454,36 +450,29 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="modelling.html">Simulation Methods</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="basics-classical.html">Classical Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="binding.html">Binding Affinity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fe-alchemical.html">FE Alchem</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="basics-qmmm.html">QM/MM Simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fe-estimators.html">Free Energy Estimators</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../amber.html">Running Amber</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../amber/SourceAmber.html">Load Amber Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../amber/cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chimera.html">ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/cli.html">ChimeraX Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">Spin</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../amber/SourceAmber.html">Load Amber Software</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../git.html">Github &amp; git</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git/branch.html">Branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/git.html">git</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../chimera/cli.html">ChimeraX Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/rock.html">Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/spin.html">Spin</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../vmd.html">VMD</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/pairwisedistance.html">Pairwise Distance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/rmsd.html">RMSD</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/rmsf.html">RMSF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/cpptraj/nowater.html">Delete water from trajectories (&amp; combine)</a></li>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -542,66 +531,39 @@ document.write(`
 <h1>Some Notes<a class="headerlink" href="#some-notes" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="modelling.html">Simulation Methods</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="modelling.html#molecular-descriptors">Molecular Descriptors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modelling.html#properties-of-interest">Properties of Interest</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modelling.html#other-methods">Other Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="modelling.html#literature">Literature</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../amber/SourceAmber.html">Load Amber Software</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../amber/SourceAmber.html#pete-osu">PETE (OSU)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../amber/SourceAmber.html#amber22-original-code">Amber22 (Original Code)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../amber/SourceAmber.html#amber22-qmhub">Amber22 + QMHub</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../amber/SourceAmber.html#amber22-qmhub-qchem">Amber22 + QMHub + QChem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber.html">Running Amber</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../amber/SourceAmber.html">Load Amber Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../amber/SourceAmber.html#pete-osu">PETE (OSU)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../amber/SourceAmber.html#amber22-original-code">Amber22 (Original Code)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../amber/SourceAmber.html#amber22-qmhub">Amber22 + QMHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../amber/SourceAmber.html#amber22-qmhub-qchem">Amber22 + QMHub + QChem</a></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/cli.html">ChimeraX Command Line</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/cli.html#opening-pdbs-from-rcsb">Opening PDBs from RCSB</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/cli.html#summary-of-command-line-options">Summary of Command Line Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../amber/cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/morph.html">Morphing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html#morphing-transition-between-2-pdb-structures">Morphing transition between 2 PDB structures</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html#example">Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera.html">ChimeraX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera.html#movie-making">Movie Making</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../git.html">Github &amp; git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git/branch.html">Branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/git.html">git</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../git/git.html#basics">Basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../git/git.html#copy-repository-from-github">Copy repository from GitHub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../git/git.html#push-your-changes">Push your changes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/rock.html">Rocking</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html#spinning-the-pdb-in-a-movie">Spinning the PDB in a Movie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../git/git.html#commands">Commands</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/spin.html">Spin</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/pairwisedistance.html">Pairwise Distance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/rmsd.html">RMSD</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../amber/pytraj/rmsd.html#pairwise-root-mean-square-deviation">Pairwise Root Mean Square Deviation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html#github">Github</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git.html#git">git</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/rmsf.html">RMSF</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/cpptraj/nowater.html">Delete water from trajectories (&amp; combine)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vmd.html">VMD</a></li>
 </ul>
 </div>
 </section>
@@ -645,11 +607,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="modelling.html"
+       href="../amber.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Simulation Methods</p>
+        <p class="prev-next-title">Running Amber</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -685,8 +647,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -719,7 +681,7 @@ document.write(`
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
 </p></div>
       
     </div>
