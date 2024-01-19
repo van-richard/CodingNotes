@@ -1,5 +1,8 @@
 # Quick Start Guide
 
+<!-- ```{tableofcontents}
+``` -->
+
 *I intended for this to be read within 30 minutes... Sorry! (December 9, 2023)*
 
 - For those with ZERO experience in computers, this guide offers a basic introduction to several computational tools I used in my time as Ph.D. candidate

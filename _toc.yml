@@ -1,6 +1,9 @@
 root: index
 subtrees:
-- entries:
+- caption: CodingNotes
+  numbered: True
+  maxdepth: 3
+  entries:
   - file: notebooks/Pregame
   - file: notebooks/00-quickstart/index
     entries:
@@ -14,61 +17,43 @@ subtrees:
       - file: notebooks/00-quickstart/07XYZFiles
     - file: notebooks/00-quickstart/08BasicMD
   - file: notebooks/01-scripting/index
-    title: Scripting & More
-    subtrees:
-    - entries:
-      - file: notebooks/01-scripting/bash/overview
-        entries:
-        - file: notebooks/01-scripting/bash/scripting
-        - file: notebooks/01-scripting/bash/startup
-      - file: notebooks/01-scripting/vi/overview
-      - file: notebooks/01-scripting/python/overview
-        entries:
-        - file: notebooks/01-scripting/python/python
-        - file: notebooks/01-scripting/python/conda
-        - file: notebooks/01-scripting/python/condaenv
-        - file: notebooks/01-scripting/python/jupyter
+    title: Scripting 
+    entries:
+    - file: notebooks/01-scripting/bash/overview
+      entries:
+      - file: notebooks/01-scripting/bash/scripting
+      - file: notebooks/01-scripting/bash/startup
+    - file: notebooks/01-scripting/vi/overview
+    - file: notebooks/01-scripting/python/overview
+      entries:
+      - file: notebooks/01-scripting/python/python
+      - file: notebooks/01-scripting/python/conda
+      - file: notebooks/01-scripting/python/condaenv
+      - file: notebooks/01-scripting/python/jupyter
   - file: notebooks/02-simulation/index
-    title: MD Tutorials
-    subtrees:
-    - entries:
-      - file: notebooks/02-simulation/md
-        entries:
-        - file: notebooks/02-simulation/simple
-        - file: notebooks/02-simulation/distance
-      - file: notebooks/02-simulation/qmmm
-        entries:
-        - file: notebooks/02-simulation/claisen
-      - file: notebooks/02-simulation/analysis
-        entries:
-        - file: notebooks/02-simulation/rmsd
-        - file: notebooks/02-simulation/rmsf
-  - file: notebooks/03-notes/index
+    entries:
+    - file: notebooks/02-simulation/simple
+    - file: notebooks/02-simulation/distance
+    - file: notebooks/02-simulation/claisen
+  - file: notebooks/notes
     title: Notes
-    options:
-      numbered: true
     subtrees:
-    - entries:
-      - file: notebooks/03-notes/modelling
+    - caption: More Info.
+      numbered: True
+      maxdepth: 3
+      entries:
+      - file: notebooks/theory
         entries:
-        - file: notebooks/03-notes/basics-classical
-        - file: notebooks/03-notes/binding
-        - file: notebooks/03-notes/fe-alchemical
-        - file: notebooks/03-notes/alchemical/potential
-        - file: notebooks/03-notes/basics-qmmm
-        - file: notebooks/03-notes/fe-estimators
-    - file: notebokoks/amber
-      entries:
-      - glob: notebooks/amber/*
-    - file: notebooks/chimera
-      entries:
-      - glob: notebooks/chimera/*
-    - file: notebooks/vmd
-      entries:
-      - glob: notebooks/vmd/*
-    - file: notebooks/amber    
-      entries:
-      - glob: notebooks/amber/*
-      - glob: notebooks/amber/pytraj/*
-      - glob: notebooks/amber/cpptraj/*
-
+        - glob: notebooks/theory/*
+      - file: notebooks/amber
+        entries:
+        - glob: notebooks/amber/*
+      - file: notebooks/chimera
+        entries:
+        - glob: notebooks/chimera/*
+      - file: notebooks/git
+        entries:
+        - glob: notebooks/git/*
+      - file: notebooks/vmd
+        entries:
+        - glob: notebooks/vmd/*
