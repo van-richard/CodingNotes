@@ -6,12 +6,12 @@
 author = 'Richard Van'
 comments_config = {'hypothesis': False, 'utterances': False}
 copyright = '2024'
-exclude_patterns = ['**.ipynb_checkpoints', '.DS_Store', '.git', '.gitignore', 'Thumbs.db', '_build', '_static', 'build.sh', 'drafts/', 'notebooks/linux', 'requirements.txt', 'bak']
-extensions = ['sphinx_togglebutton', 'sphinx_copybutton', 'myst_parser', 'jupyter_book', 'sphinx_thebe', 'sphinx_comments', 'sphinx_external_toc', 'sphinx.ext.intersphinx', 'sphinx_design', 'sphinx_book_theme', 'pydata_sphinx_theme', 'sphinx_jupyterbook_latex']
+exclude_patterns = ['**.ipynb_checkpoints', '.DS_Store', '.git', '.gitignore', '.vscode', 'Thumbs.db', '_build', '_static', 'build.sh', 'drafts/', 'notebooks/linux', 'requirements.txt', 'bak']
+extensions = ['sphinx_togglebutton', 'sphinx_copybutton', 'jupyter_book', 'sphinx_thebe', 'sphinx_comments', 'sphinx_external_toc', 'sphinx.ext.intersphinx', 'sphinx_design', 'sphinx_book_theme', 'pydata_sphinx_theme', 'sphinx_jupyterbook_latex', 'myst_nb']
 source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'markdown',
-    '.md': 'markdown',
+    # '.md': 'markdown',
 }
 external_toc_exclude_missing = True
 external_toc_path = '_toc.yml'
@@ -63,9 +63,9 @@ html_theme_options = {
         },
     ],
     'navbar_persistent': ['theme-switcher', 'search-button-field'],
-    "show_nav_level": 3,
+    "show_nav_level": 1,
     "show_toc_level": 3,
-    "header_links_before_dropdown": 4,
+    "header_links_before_dropdown": 5,
     'search_bar_text': 'Search meeeeee', 
     'check_switcher': True,
     }

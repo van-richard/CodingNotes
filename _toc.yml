@@ -45,18 +45,30 @@ subtrees:
         - file: notebooks/02-simulation/rmsf
   - file: notebooks/03-notes/index
     title: Notes
+    options:
+      numbered: true
     subtrees:
     - entries:
-      - file: notebooks/03-notes/binding
       - file: notebooks/03-notes/modelling
-      - file: notebooks/03-notes/basics-classical
-      - file: notebooks/03-notes/fe-alchemical
-      - file: notebooks/03-notes/alchemical/potential
-      - file: notebooks/03-notes/basics-qmmm
-      - file: notebooks/03-notes/fe-estimators
-  - file: notebooks/chimera/index
-    title: ChimeraX
-  - file: notebooks/vmd/index
-    title: VMD
-  - file: notebooks/moore/index
-    title: idk
+        entries:
+        - file: notebooks/03-notes/basics-classical
+        - file: notebooks/03-notes/binding
+        - file: notebooks/03-notes/fe-alchemical
+        - file: notebooks/03-notes/alchemical/potential
+        - file: notebooks/03-notes/basics-qmmm
+        - file: notebooks/03-notes/fe-estimators
+    - file: notebokoks/amber
+      entries:
+      - glob: notebooks/amber/*
+    - file: notebooks/chimera
+      entries:
+      - glob: notebooks/chimera/*
+    - file: notebooks/vmd
+      entries:
+      - glob: notebooks/vmd/*
+    - file: notebooks/amber    
+      entries:
+      - glob: notebooks/amber/*
+      - glob: notebooks/amber/pytraj/*
+      - glob: notebooks/amber/cpptraj/*
+

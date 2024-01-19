@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -65,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Binding Affinity" href="binding.html" />
+    <link rel="next" title="Simulation Methods" href="modelling.html" />
     <link rel="prev" title="Tutorials" href="../02-simulation/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -191,42 +192,13 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
                     </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
+
                     <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="#">
+                      <a class="nav-link nav-internal" href="#">
                         Notes
                       </a>
                     </li>
                 
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../chimera/index.html">
-                        ChimeraX
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
-                        VMD
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
-                        idk
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -349,6 +321,10 @@ document.write(`
   
 
   
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
 </div>
 
     </div>
@@ -360,9 +336,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -402,42 +376,13 @@ document.write(`
                       </a>
                     </li>
                 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
-                    More
-                </button>
-                <ul id="pst-nav-more-links-2" class="dropdown-menu">
-                    
+
                     <li class="nav-item current active">
-                      <a class="nav-link dropdown-item nav-internal" href="#">
+                      <a class="nav-link nav-internal" href="#">
                         Notes
                       </a>
                     </li>
                 
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../chimera/index.html">
-                        ChimeraX
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../vmd/index.html">
-                        VMD
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link dropdown-item nav-internal" href="../moore/index.html">
-                        idk
-                      </a>
-                    </li>
-                
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
         
@@ -503,6 +448,47 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="modelling.html">Simulation Methods</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binding.html">Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe-alchemical.html">FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="basics-qmmm.html">QM/MM Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe-estimators.html">Free Energy Estimators</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../amber/SourceAmber.html">Load Amber Software</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chimera/cli.html">ChimeraX Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/morph.html">Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/rock.html">Rocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/spin.html">Spin</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/pairwisedistance.html">Pairwise Distance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/pca.html">Principal Component Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/rmsd.html">RMSD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/rmsf.html">RMSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/cpptraj/nowater.html">Delete water from trajectories (&amp; combine)</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -554,8 +540,69 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="some-notes">
 <h1>Some Notes<a class="headerlink" href="#some-notes" title="Permalink to this heading">#</a></h1>
-<p>notes.</p>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modelling.html">Simulation Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modelling.html#molecular-descriptors">Molecular Descriptors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelling.html#properties-of-interest">Properties of Interest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelling.html#other-methods">Other Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="modelling.html#literature">Literature</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../amber/SourceAmber.html">Load Amber Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../amber/SourceAmber.html#pete-osu">PETE (OSU)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../amber/SourceAmber.html#amber22-original-code">Amber22 (Original Code)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../amber/SourceAmber.html#amber22-qmhub">Amber22 + QMHub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../amber/SourceAmber.html#amber22-qmhub-qchem">Amber22 + QMHub + QChem</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/cli.html">ChimeraX Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/cli.html#opening-pdbs-from-rcsb">Opening PDBs from RCSB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/cli.html#summary-of-command-line-options">Summary of Command Line Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/fade.html">Fading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/images.html">Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/morph.html">Morphing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html#morphing-transition-between-2-pdb-structures">Morphing transition between 2 PDB structures</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../chimera/morph.html#example">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/rock.html">Rocking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html#spinning-the-pdb-in-a-movie">Spinning the PDB in a Movie</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/spin.html">Spin</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">ffmpeg</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/pairwisedistance.html">Pairwise Distance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/pca.html">Principal Component Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/rmsd.html">RMSD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../amber/pytraj/rmsd.html#pairwise-root-mean-square-deviation">Pairwise Root Mean Square Deviation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj/rmsf.html">RMSF</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/cpptraj/nowater.html">Delete water from trajectories (&amp; combine)</a></li>
+</ul>
 </div>
 </section>
 
@@ -598,11 +645,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="binding.html"
+       href="modelling.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Binding Affinity</p>
+        <p class="prev-next-title">Simulation Methods</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -612,6 +659,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/notebooks/03-notes/index.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
               
             
           </div>

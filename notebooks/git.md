@@ -8,5 +8,5 @@ Website
 
 Version control
 
-[Branching](./branch.md)
-[git](./git.md)
+[Branching](git/branch.md)
+[git](git/git.md)

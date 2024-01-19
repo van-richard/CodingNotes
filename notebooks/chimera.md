@@ -7,12 +7,12 @@ ChimeraX is the newest program, and it can efficiently handle large data (i.e. P
 Download the latest version of [ChimeraX](https://www.cgl.ucsf.edu/chimerax/download.html)! You will need to register for an account, otherwise you'll get a notification everytime you open the software.
 
 
-[ChimeraX Command Line](cli)
-[Saving Images](images)
+[ChimeraX Command Line](chimera/cli)
+[Saving Images](chimera/images)
 
 ## Movie Making
 
-[Fade](fade)
-[Morph](morph)
-[Rock](rock)
-[Spin](spin)
+[Fade](chimera/fade)
+[Morph](chimera/morph)
+[Rock](chimera/rock)
+[Spin](chimera/spin)

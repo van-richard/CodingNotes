@@ -51,7 +51,7 @@ make helpmelib
 
 ## Amber 
 
-1. In `Programs/sources`, uncompress the AmberTools file *then* Amber
+1. In `Programs/sources`, decompress AmberTools *then* Amber
 
 ```bash
 tar xvjf AmberTools
