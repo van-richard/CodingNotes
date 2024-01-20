@@ -1,7 +1,9 @@
 # Load Amber Software
 
 To-Do:
-- [] Combine Amber22 and Amber/QMhub source
+- [ ] Combine Amber22 and Amber/QMhub source
+- [ ] Compile this for OSCER
+- [ ] Build pmemd.cuda.mpi for (testing 3+ gpu simulation)
 
 I made several files to with setting up the environment for different Amber compilations. Just source the file by running:
 
