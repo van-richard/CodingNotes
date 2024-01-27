@@ -336,9 +336,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -450,6 +448,30 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01terminal.html">2.1. Terminal, Shell, &amp; Bash</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="02vim.html">2.3. Text Editors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">2.4. Supercomputers</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">2.7. Python &amp; Conda</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="05StructureFiles.html">2.8. Molecular Structure Files</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html">2.8.3. Exploring PDB Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07XYZFiles.html">2.8.4. What are XYZ Files?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">2.9. Briefly, Molecular Dynamics</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -475,8 +497,91 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="quick-start-guide">
 <h1><span class="section-number">2. </span>Quick Start Guide<a class="headerlink" href="#quick-start-guide" title="Permalink to this heading">#</a></h1>
-<!-- ```{tableofcontents}
-``` -->
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01terminal.html">2.1. Terminal, Shell, &amp; Bash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01terminal.html#wtf-is-a-terminal">2.1.1. Wtf is a Terminal?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#example-opening-the-terminal-app">2.1.1.1. Example: Opening the Terminal App</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01terminal.html#shell">2.1.2. $SHELL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#example-bash-shell-commands">2.1.2.1. Example: Bash Shell Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01terminal.html#navigating">2.1.3. Navigating</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#starting-location">2.1.3.1. Starting Location!</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#where-are-we">2.1.3.2. Where Are We?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#what-files-folders-are-here">2.1.3.3. What Files/Folders are Here?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#how-to-make-a-new-folder-directory">2.1.3.4. How to Make a New Folder/Directory?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#enter-exit-folders">2.1.3.5. Enter/Exit Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01terminal.html#what-are-paths">2.1.4. What are Paths?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="01terminal.html#file-management">2.2. File Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01terminal.html#copy-move-rename-delete-files">2.2.1. Copy, Move, Rename, &amp; Delete Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01terminal.html#copying">2.2.2. Copying</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#copy-files">2.2.2.1. Copy Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#copy-folders">2.2.2.2. Copy Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01terminal.html#moving-renaming">2.2.3. Moving &amp; Renaming</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#move-rename-files">2.2.3.1. Move/Rename Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#move-rename-folders">2.2.3.2. Move/Rename Folders</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="01terminal.html#deleting">2.2.4. Deleting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#delete-files">2.2.4.1. Delete Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01terminal.html#delete-folders">2.2.4.2. Delete Folders</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02vim.html">2.3. Text Editors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02vim.html#vi-vim">2.3.1. vi/vim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02vim.html#how-to-use-vi-vim">2.3.2. How to Use vi/vim?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02vim.html#save-quit">2.3.3. Save &amp; Quit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">2.4. Supercomputers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#what-is-ssh">2.4.1. What is <span class="xref std std-term">ssh</span>?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#what-is-slurm">2.4.2. What is <span class="xref std std-term">Slurm</span>?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html#accessing-the-hpc">2.5. Accessing the HPC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#remote-login">2.5.1. Remote Login</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#what-is-the-hostname">2.5.2. What is the <em>hostname</em>?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#task-accessing-the-hpc">2.5.3. Task: Accessing the HPC</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html#hpc-job-managmer">2.6. HPC Job Managmer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#slurm-language">2.6.1. SLURM Language</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#hpc-resources">2.6.2. HPC Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03Supercomputer.html#pre-installed-softwares">2.6.2.1. Pre-Installed Softwares</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#slurm-scripts">2.6.3. Slurm Scripts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03Supercomputer.html#directives-sbatch">2.6.3.1. Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">2.7. Python &amp; Conda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04PythonConda.html#conda">2.7.1. Conda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">2.8. Molecular Structure Files</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05StructureFiles.html#what-are-pdb-files">2.8.1. What are PDB files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05StructureFiles.html#what-are-xyz-files">2.8.2. What are XYZ Files?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">2.9. Briefly, Molecular Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="08BasicMD.html#classical-mechanics">2.9.1. Classical Mechanics</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p><em>I intended for this to be read within 30 minutes… Sorry! (December 9, 2023)</em></p>
 <ul class="simple">
 <li><p>For those with ZERO experience in computers, this guide offers a basic introduction to several computational tools I used in my time as Ph.D. candidate</p>
@@ -500,8 +605,6 @@ document.write(`
 <li><p><a class="reference external" href="https://learnxinyminutes.com">Learn X in Y Minutes</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/&#64;3blue1brown">3Brown1Blue</a></p></li>
 </ul>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">

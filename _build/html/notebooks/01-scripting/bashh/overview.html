@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.4. bash Shell &#8212; CodingNotes</title>
+    <title>3.1. bash Shell &#8212; CodingNotes</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3.6. Text Editing with Vi/Vim" href="../vi/overview.html" />
+    <link rel="next" title="3.3. Text Editing with Vi/Vim" href="../vi/overview.html" />
     <link rel="prev" title="3. Scripting &amp; More" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -336,9 +336,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -450,6 +448,28 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.1. bash Shell</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../vi/overview.html">3.3. Text Editing with Vi/Vim</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../python/overview.html">3.5. Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/python.html">3.5.13. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/conda.html">3.5.14. Conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/condaenv.html">3.5.15. Conda Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/jupyter.html">3.5.16. Jupyter Notebooks</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -474,25 +494,25 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="bash-shell">
-<h1><span class="section-number">3.4. </span>bash Shell<a class="headerlink" href="#bash-shell" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.1. </span>bash Shell<a class="headerlink" href="#bash-shell" title="Permalink to this heading">#</a></h1>
 <p>First line of the script is the shebang which tells the system how to execute the script:</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Shebang</a></p>
 <section id="comments">
-<h2><span class="section-number">3.4.1. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1.1. </span>Comments<a class="headerlink" href="#comments" title="Permalink to this heading">#</a></h2>
 <p>Comments start with <code class="docutils literal notranslate"><span class="pre">#</span></code>. The <code class="docutils literal notranslate"><span class="pre">shebang</span></code> is also a comment.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/bash</span>
 </pre></div>
 </div>
 </section>
 <section id="command">
-<h2><span class="section-number">3.4.2. </span>Command<a class="headerlink" href="#command" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1.2. </span>Command<a class="headerlink" href="#command" title="Permalink to this heading">#</a></h2>
 <p>Each command starts on a new line, or after a semicolon:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the first command&quot;</span><span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the second command&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="variables">
-<h2><span class="section-number">3.4.3. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1.3. </span>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
 <p>Declaring a variable looks like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">variable</span><span class="o">=</span><span class="s2">&quot;Some string&quot;</span>
 </pre></div>
@@ -551,7 +571,7 @@ document.write(`
 <p>This works for null (<code class="docutils literal notranslate"><span class="pre">foo=</span></code>) and empty string (<code class="docutils literal notranslate"><span class="pre">foo=&quot;&quot;</span></code>); zero (<code class="docutils literal notranslate"><span class="pre">foo=0</span></code>) returns <code class="docutils literal notranslate"><span class="pre">0</span></code>. Note that it only returns default value and doesn’t change variable value.</p>
 </section>
 <section id="arrays">
-<h2><span class="section-number">3.4.4. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1.4. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h2>
 <p>Declare an array with 6 elements:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">array</span><span class="o">=(</span>one<span class="w"> </span>two<span class="w"> </span>three<span class="w"> </span>four<span class="w"> </span>five<span class="w"> </span>six<span class="o">)</span>
 </pre></div>
@@ -584,14 +604,14 @@ document.write(`
 </div>
 </section>
 <section id="standard-in-out-err">
-<h2><span class="section-number">3.4.5. </span>Standard In/Out/Err<a class="headerlink" href="#standard-in-out-err" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1.5. </span>Standard In/Out/Err<a class="headerlink" href="#standard-in-out-err" title="Permalink to this heading">#</a></h2>
 <p>Results (stdout) of the previous command can be passed as input (stdin) to the next command using a pipe <code class="docutils literal notranslate"><span class="pre">|</span></code>. Commands chained in this way are called a “pipeline”, and are run concurrently. The <code class="docutils literal notranslate"><span class="pre">grep</span></code> command filters the input with provided patterns. That’s how we can list .txt files in the current directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;\.txt&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="built-in-variables">
-<h2><span class="section-number">3.4.6. </span>Built-in Variables<a class="headerlink" href="#built-in-variables" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1.6. </span>Built-in Variables<a class="headerlink" href="#built-in-variables" title="Permalink to this heading">#</a></h2>
 <p>There are some useful built-in variables, like:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Last program&#39;s return value: </span><span class="nv">$?</span><span class="s2">&quot;</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Script&#39;s PID: </span><span class="nv">$$</span><span class="s2">&quot;</span>
@@ -628,7 +648,7 @@ document.write(`
 </div>
 </section>
 <section id="conditional-execution">
-<h2><span class="section-number">3.4.7. </span>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1.7. </span>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command fails&quot;</span>
 <span class="c1"># =&gt; Always executed</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Always executed&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Only executed if first command does NOT fail&quot;</span>
@@ -639,7 +659,7 @@ document.write(`
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="ampersand">
-<h1><span class="section-number">3.5. </span>Ampersand<a class="headerlink" href="#ampersand" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.2. </span>Ampersand<a class="headerlink" href="#ampersand" title="Permalink to this heading">#</a></h1>
 <p>A single ampersand <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> after a command runs it in the background. A background command’s output is printed to the terminal, but it cannot read from the input.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sleep<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
@@ -663,7 +683,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">%1</span></code>, <code class="docutils literal notranslate"><span class="pre">%2</span></code>, etc. can be used for <code class="docutils literal notranslate"><span class="pre">fg</span></code> and <code class="docutils literal notranslate"><span class="pre">bg</span></code> as well</p>
 <p>Redefine command <code class="docutils literal notranslate"><span class="pre">ping</span></code> as alias to send only 5 packets</p>
 <section id="expressions">
-<h2><span class="section-number">3.5.1. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.1. </span>Expressions<a class="headerlink" href="#expressions" title="Permalink to this heading">#</a></h2>
 <p>Expressions are denoted with the following format:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="k">$((</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="k">))</span><span class="w"> </span><span class="c1"># =&gt; 15</span>
 </pre></div>
@@ -714,7 +734,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.6. </span>Text Editing with Vi/Vim</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Text Editing with Vi/Vim</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -734,18 +754,18 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.4. bash Shell</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">3.4.1. Comments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command">3.4.2. Command</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3.4.3. Variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">3.4.4. Arrays</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-in-out-err">3.4.5. Standard In/Out/Err</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">3.4.6. Built-in Variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">3.4.7. Conditional Execution</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.1. bash Shell</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comments">3.1.1. Comments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command">3.1.2. Command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">3.1.3. Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">3.1.4. Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-in-out-err">3.1.5. Standard In/Out/Err</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#built-in-variables">3.1.6. Built-in Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-execution">3.1.7. Conditional Execution</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">3.5. Ampersand</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">3.5.1. Expressions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ampersand">3.2. Ampersand</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions">3.2.1. Expressions</a></li>
 </ul>
 </li>
 </ul>
