@@ -1,7 +1,7 @@
 # Quick Start Guide
 
-<!-- ```{tableofcontents}
-``` -->
+```{tableofcontents}
+``` 
 
 *I intended for this to be read within 30 minutes... Sorry! (December 9, 2023)*
 
