@@ -510,12 +510,12 @@ document.write(`
 <li><p>Slurm is used to manage jobs on the cluster</p></li>
 </ol>
 <section id="what-is-ssh">
-<h2><span class="section-number">2.4.1. </span>What is <span class="xref std std-term">ssh</span>?<a class="headerlink" href="#what-is-ssh" title="Permalink to this heading">#</a></h2>
-<p>To login remotely to a supercomputer, we use the command <span class="xref std std-term">ssh</span> on the terminal. This is short for secure shell protocol and can take a few arguments. The syntax is <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">[username]&#64;ssh.server.example.edu</span></code>.</p>
+<h2><span class="section-number">2.4.1. </span>What is <code class="docutils literal notranslate"><span class="pre">ssh</span></code>?<a class="headerlink" href="#what-is-ssh" title="Permalink to this heading">#</a></h2>
+<p>To login remotely to a supercomputer, we use the command <code class="docutils literal notranslate"><span class="pre">ssh</span></code> on the terminal. This is short for secure shell protocol and can take a few arguments. The syntax is <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">[username]&#64;ssh.server.example.edu</span></code>.</p>
 <p>First, open your terminal, and follow the directions for Oscer or Pete SSH. Change the <code class="docutils literal notranslate"><span class="pre">[username]</span></code> part, to the username you created!!</p>
 </section>
 <section id="what-is-slurm">
-<h2><span class="section-number">2.4.2. </span>What is <span class="xref std std-term">Slurm</span>?<a class="headerlink" href="#what-is-slurm" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.4.2. </span>What is <code class="docutils literal notranslate"><span class="pre">Slurm</span></code>?<a class="headerlink" href="#what-is-slurm" title="Permalink to this heading">#</a></h2>
 <p>Since high-performace computing centers are composed of many parts (CPU, GPU, RAM, SSD, HDD, etc.), involving many different users (biological science, machine learning, etc.) with different needs. They require a job scheduling and resource management system. One system is Slurm.</p>
 <p>Slurm is like a traffic cop for computers. It’s a software system used in big computer clusters, like those in data centers or supercomputers. Slurm helps manage and allocate the computing resources, like processors and memory, to different tasks or jobs that people want to run on the cluster.</p>
 <p>Imagine a busy intersection where the traffic cop directs cars to different lanes or tells them when to go. Slurm does something similar but for computer tasks, making sure they don’t crash into each other and efficiently use the available resources, so everything runs smoothly. It helps coordinate and schedule who gets to use the computers and when.</p>
@@ -531,7 +531,7 @@ document.write(`
 <h1><span class="section-number">2.5. </span>Accessing the HPC<a class="headerlink" href="#accessing-the-hpc" title="Permalink to this heading">#</a></h1>
 <section id="remote-login">
 <h2><span class="section-number">2.5.1. </span>Remote Login<a class="headerlink" href="#remote-login" title="Permalink to this heading">#</a></h2>
-<p>Accessing the supercomputer can be done on your laptop, in the comfort of your bed. The command is <span class="xref std std-term">ssh</span>, which stands for “Secure Shell protocol”.</p>
+<p>Accessing the supercomputer can be done on your laptop, in the comfort of your bed. The command is <code class="docutils literal notranslate"><span class="pre">ssh</span></code>, which stands for “Secure Shell protocol”.</p>
 <p>It has the following format:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>username@hostname
 </pre></div>
@@ -616,17 +616,17 @@ Pete</label><div class="sd-tab-content docutils">
 </div>
 </aside>
 <p>When you access the supercomputer remotely (<code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">username&#64;hostname</span></code>), you will always start at <code class="docutils literal notranslate"><span class="pre">/home</span></code>.</p>
-<p>If you run <span class="xref std std-term">pwd</span>, you should see that you’re it!</p>
+<p>If you run <code class="docutils literal notranslate"><span class="pre">pwd</span></code>, you should see that you’re it!</p>
 </section>
 <section id="hpc-resources">
 <h2><span class="section-number">2.6.2. </span>HPC Resources<a class="headerlink" href="#hpc-resources" title="Permalink to this heading">#</a></h2>
-<p><span class="xref std std-term">sinfo</span> prints information about the different paritions, and their current status.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sinfo</span></code> prints information about the different paritions, and their current status.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span>
 </pre></div>
 </div>
 <section id="pre-installed-softwares">
 <h3><span class="section-number">2.6.2.1. </span>Pre-Installed Softwares<a class="headerlink" href="#pre-installed-softwares" title="Permalink to this heading">#</a></h3>
-<p>Clusters often has preinstalled software you can use. They’re called using the command <span class="xref std std-term">module</span> . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
+<p>Clusters often has preinstalled software you can use. They’re called using the command <code class="docutils literal notranslate"><span class="pre">module</span></code> . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo<span class="w"> </span>
 </pre></div>
 </div>
@@ -691,7 +691,7 @@ Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </div>
-<p>To submit a <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> job use <span class="xref std std-term">sbatch</span>. Alternatively, you can cancel it with <span class="xref std std-term">scancel</span>.</p>
+<p>To submit a <code class="docutils literal notranslate"><span class="pre">.slurm</span></code> job use <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>. Alternatively, you can cancel it with <code class="docutils literal notranslate"><span class="pre">scancel</span></code>.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-7">
@@ -784,8 +784,8 @@ squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w">
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">2.4. Supercomputers</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ssh">2.4.1. What is <span class="xref std std-term">ssh</span>?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-slurm">2.4.2. What is <span class="xref std std-term">Slurm</span>?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ssh">2.4.1. What is <code class="docutils literal notranslate"><span class="pre">ssh</span></code>?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-slurm">2.4.2. What is <code class="docutils literal notranslate"><span class="pre">Slurm</span></code>?</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-the-hpc">2.5. Accessing the HPC</a><ul class="visible nav section-nav flex-column">

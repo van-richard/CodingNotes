@@ -15,13 +15,13 @@ Two key points when using the supercomputer:
 1. We access the computers remotely with our terminal
 2. Slurm is used to manage jobs on the cluster
 
-## What is {term}`ssh`?
+## What is `ssh`?
 
-To login remotely to a supercomputer, we use the command {term}`ssh` on the terminal. This is short for secure shell protocol and can take a few arguments. The syntax is `ssh [username]@ssh.server.example.edu`.
+To login remotely to a supercomputer, we use the command `ssh` on the terminal. This is short for secure shell protocol and can take a few arguments. The syntax is `ssh [username]@ssh.server.example.edu`.
 
 First, open your terminal, and follow the directions for Oscer or Pete SSH. Change the `[username]` part, to the username you created!!
 
-## What is {term}`Slurm`?
+## What is `Slurm`?
 
 Since high-performace computing centers are composed of many parts (CPU, GPU, RAM, SSD, HDD, etc.), involving many different users (biological science, machine learning, etc.) with different needs. They require a job scheduling and resource management system. One system is Slurm.
 
@@ -39,7 +39,7 @@ For us, the users, some key points when using Slurm are:
 
 ## Remote Login
 
-Accessing the supercomputer can be done on your laptop, in the comfort of your bed. The command is {term}`ssh`, which stands for "Secure Shell protocol".
+Accessing the supercomputer can be done on your laptop, in the comfort of your bed. The command is `ssh`, which stands for "Secure Shell protocol".
 
 It has the following format:
 
@@ -135,12 +135,12 @@ Commands: `sbatch`, `scancel`, `squeue`, `sinfo`
 
 When you access the supercomputer remotely (`ssh username@hostname`), you will always start at `/home`.
 
-If you run {term}`pwd`, you should see that you're it!
+If you run `pwd`, you should see that you're it!
 
 
 ## HPC Resources
 
-{term}`sinfo` prints information about the different paritions, and their current status.
+`sinfo` prints information about the different paritions, and their current status.
 
 ```bash 
 sinfo 
@@ -148,7 +148,7 @@ sinfo
 
 ### Pre-Installed Softwares
 
-Clusters often has preinstalled software you can use. They're called using the command {term}`module` . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.
+Clusters often has preinstalled software you can use. They're called using the command `module` . Some software may not be accessible by default and must be loaded in. This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.
 
 ```bash 
 sinfo 
@@ -213,7 +213,7 @@ echo " Wow you dick."
 :::
 ::::
 
-To submit a `.slurm` job use {term}`sbatch`. Alternatively, you can cancel it with {term}`scancel`.
+To submit a `.slurm` job use `sbatch`. Alternatively, you can cancel it with `scancel`.
 
 ::::{tab-set}
 :::{tab-item} Submit a Job

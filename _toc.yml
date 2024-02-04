@@ -19,11 +19,9 @@ subtrees:
   - file: notebooks/01-scripting/index
     title: Scripting 
     entries:
-    - file: notebooks/01-scripting/bashh/overview
-    - file: notebooks/01-scripting/vi/overview
-    - file: notebooks/01-scripting/python/overview
-      entries:
-      - glob: noteboooks/01-scripting/python/*
+    - file: notebooks/01-scripting/bash-overview
+    - file: notebooks/01-scripting/vi-overview
+    - file: notebooks/01-scripting/python-overview
   - file: notebooks/02-simulation/index
     entries:
     - file: notebooks/02-simulation/simple
@@ -32,23 +30,25 @@ subtrees:
   - file: notebooks/morenotes
     title: Notes
     subtrees:
-    - caption: More Info.
-      numbered: True
-      maxdepth: 3
-      entries:
-      - file: notebooks/bash
-        entries:
-        - glob: notebooks/bash/*
+    - caption: All Notes
+      maxdepth: 2
+      hidden: False
       entries:
       - file: notebooks/amber
         entries:
         - glob: notebooks/amber/*
+      - file: notebooks/bash
+        entries:
+        - glob: notebooks/bash/*
       - file: notebooks/chimera
         entries:
         - glob: notebooks/chimera/*
       - file: notebooks/git
         entries:
         - glob: notebooks/git/*
+      - file: notebooks/python
+        entries: 
+        - glob: noteboks/python/*
       - file: notebooks/theory
         entries:
         - glob: notebooks/theory/*

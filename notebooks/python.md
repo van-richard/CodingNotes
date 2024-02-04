@@ -4,7 +4,7 @@ Curated list of Python frameworks, libraries, software and resources.
 
 ## Data Visualization
 
-- boke
+- bokeh
 - matplotlib
 - seaborn
 
