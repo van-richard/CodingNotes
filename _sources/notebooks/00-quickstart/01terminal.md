@@ -56,7 +56,7 @@ I will write this up, but here is my reference.
 ::::
 
 Several data analysis tools and computing servers require proficiency with the command line. It may have a steep learning curve and be a bit confusing initially, but once you get the hang of it. Automation will be E Z!
-  - Notation and pre-defined commands will depend on your {term}`shell`!
+  - Notation and pre-defined commands will depend on your shell!
 
 Users can send instructions to the computer by running `commands` 
   - Like GUIs, these instructions can be for manipulating files or running software
