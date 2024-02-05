@@ -24,7 +24,7 @@ In this tutorial, we will:
 
 ````{note}
 - This tutorial can be perform on your local computer
-- Download my files for reference: [distance.tar.bz2](../../assets/distance.tar.bz2 "download")
+- Download my files for reference: [distance.tar.bz2](https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/distance.tar.xz "download")
 ````
 
 ## Prepare Files & Folders

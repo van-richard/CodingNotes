@@ -1,4 +1,4 @@
-# ChimeraX 
+# Chimera/ChimeraX Overview
 
 ```{tableofcontents}
 ```

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.4.2. QM/MM Simulations &#8212; CodingNotes</title>
+    <title>2. QM/MM Simulations &#8212; CodingNotes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.4.3. Binding Affinity" href="binding.html" />
-    <link rel="prev" title="1.4.1. Classical Molecular Dynamics" href="basics-classical.html" />
+    <link rel="next" title="3. Binding Affinity" href="binding.html" />
+    <link rel="prev" title="1. Classical Molecular Dynamics" href="basics-classical.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
-                        Introduction
+                        Quick Start Guide
                       </a>
                     </li>
                 
@@ -360,7 +360,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
-                        Introduction
+                        Quick Start Guide
                       </a>
                     </li>
                 
@@ -457,7 +457,7 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber Simulations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../amber.html">1. Amber</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../amber.html">1. Amber Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../amber/usage-sourceamber.html">1.1. Load Amber Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../amber/install-amber.html">1.2. Compiling Amber</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../amber/cpptraj-dry.html">1.3. Export Dry Trajectory (no water)</a></li>
@@ -470,36 +470,71 @@ document.write(`
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Command Line Stuff</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../bash.html">1. bash</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bash.html">1. bash Overview</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../commandline/bash-startup.html">1.1. Start-Up Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh-autologin.html">1.2. Automate Login</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh-config.html">1.3. Configuring ssh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../commandline/ssh-extra.html">1.4. Upload, Download, &amp; Extras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/awk.html">1.2. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/cat.html">1.3. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/cd.html">1.4. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/chsh.html">1.5. chsh - change shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/cp.html">1.6. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/echo.html">1.7. <code class="docutils literal notranslate"><span class="pre">echo</span></code> - Print Argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/grep.html">1.8. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/head.html">1.9. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/help.html">1.10. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/less.html">1.11. <code class="docutils literal notranslate"><span class="pre">less</span></code> - view files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/ls.html">1.12. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/man.html">1.13. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/mkdir.html">1.14. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/module.html">1.15. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/mv.html">1.16. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/pwd.html">1.17. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print working directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/rm.html">1.18. <code class="docutils literal notranslate"><span class="pre">rm</span></code> - delete files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/rsync.html">1.19. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/sbatch.html">1.20. <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> - Submit job to Slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/scancel.html">1.21. <code class="docutils literal notranslate"><span class="pre">scancel</span></code> - Cancel Slurm Jobs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/scp.html">1.22. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/sed.html">1.23. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/seq.html">1.24. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/setfacl.html">1.25. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/sinfo.html">1.26. <code class="docutils literal notranslate"><span class="pre">sinfo</span></code> - View information about Slurm nodes and partitions.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/sort.html">1.27. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/ssh.html">1.28. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> - secure shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/ssh-keygen.html">1.29. <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> - Make SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/tail.html">1.30. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/tar.html">1.31. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/touch.html">1.32. <code class="docutils literal notranslate"><span class="pre">touch</span></code> - Make File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/commands/trap.html">1.33. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
 </ul>
 </li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ssh</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-autologin.html">1. Automate Login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-config.html">2. Configuring ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-extra.html">3. Upload, Download, &amp; Extras</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chimera/ChimeraX</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chimera.html">1. ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/cli.html">1.1. ChimeraX Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">1.2. Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">1.3. Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">1.4. Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">1.5. Rocking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">1.6. Spin</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chimera.html">2.5. Chimera/ChimeraX Overview</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/cli.html">1. ChimeraX Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/fade.html">2. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/images.html">3. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/morph.html">4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/rock.html">5. Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimera/spin.html">6. Spin</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">git</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../git.html">1. git</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../git.html">1. git Overview</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../git/branch.html">1.3. Branching</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">python / Conda</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../python.html">1. Python</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../python.html">1. Python Overview</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../python/conda.html">1.13. Conda</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/condaenv.html">1.14. Conda Environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../python/condaintel.html">1.15. Intel Environments on M1/M2</a></li>
@@ -512,19 +547,19 @@ document.write(`
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../theory.html">1. Theory &amp; Methods</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="basics-classical.html">1.4.1. Classical Molecular Dynamics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.4.2. QM/MM Simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="binding.html">1.4.3. Binding Affinity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fe-alchemical.html">1.4.4. FE Alchem</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../theory.html">1. Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics-classical.html">1. Classical Molecular Dynamics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2. QM/MM Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binding.html">3. Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe-alchemical.html">4. FE Alchem</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="fe-estimators.html">1.4.6. Free Energy Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fe-estimators.html">6. Free Energy Estimators</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../vmd.html">1. VMD</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../vmd.html">1. VMD Overview</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../vmd/ffmpeg.html">1.1. ffmpeg</a></li>
 </ul>
 </li>
@@ -566,10 +601,10 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link">More Notes</a></li>
+    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">2. </span>More Notes</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../theory.html" class="nav-link"><span class="section-number">1. </span>Theory &amp; Methods</a></li>
+    <li class="breadcrumb-item"><a href="../theory.html" class="nav-link"><span class="section-number">1. </span>Theory / Methods Overview</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -589,9 +624,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="qm-mm-simulations">
-<h1><span class="section-number">1.4.2. </span>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2. </span>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Permalink to this heading">#</a></h1>
 <section id="overview">
-<h2><span class="section-number">1.4.2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <p>Reference: <a class="reference external" href="https://www.youtube.com/watch?v=VK0e6-ndodM">https://www.youtube.com/watch?v=VK0e6-ndodM</a></p>
 <p>In general, a hybrid quantum mechanics/molecular mechanics (QM/MM) scheme requires:</p>
 <ul class="simple">
@@ -629,7 +664,7 @@ E_\mathrm{QM-MM} = E_\mathrm{bonded}^\mathrm{QM-MM} + _\mathrm{nonbonded}^\mathr
 <p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and nonbonded terms</p>
 </section>
 <section id="bonded-interactions">
-<h2><span class="section-number">1.4.2.2. </span>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.2. </span>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
 E_\mathrm{bonded}^\mathrm{QM-MM}
@@ -644,7 +679,7 @@ E_\mathrm{bonded}^\mathrm{QM-MM}
 </ol>
 </section>
 <section id="nonbonded-interactions">
-<h2><span class="section-number">1.4.2.3. </span>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.3. </span>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this heading">#</a></h2>
 <p>Non bonded term is:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -670,7 +705,7 @@ E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm
 </ol>
 </section>
 <section id="electrostatic-embedding">
-<h2><span class="section-number">1.4.2.4. </span>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.4. </span>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this heading">#</a></h2>
 <p>Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -682,7 +717,7 @@ E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \f
 <li><p>Long-Range - Huge computational cost to evaluate the integral</p></li>
 </ol>
 <section id="short-range">
-<h3><span class="section-number">1.4.2.4.1. </span>Short-Range<a class="headerlink" href="#short-range" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">2.4.1. </span>Short-Range<a class="headerlink" href="#short-range" title="Permalink to this heading">#</a></h3>
 <p>In electron spill-out, a problem may arise when using standard MM atomic charges to describe the charge distribution of the MM system, which results in over-polarization near the boundary.</p>
 <ul class="simple">
 <li><p>The point charges on the MM side of the interface may attract (or repel) the electrons too strongly.</p></li>
@@ -740,7 +775,7 @@ v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.4.1. </span>Classical Molecular Dynamics</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Classical Molecular Dynamics</p>
       </div>
     </a>
     <a class="right-next"
@@ -748,7 +783,7 @@ v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.4.3. </span>Binding Affinity</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Binding Affinity</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -768,11 +803,11 @@ v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">1.4.2.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">1.4.2.2. Bonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">1.4.2.3. Nonbonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">1.4.2.4. Electrostatic Embedding</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">1.4.2.4.1. Short-Range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">2.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">2.2. Bonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">2.3. Nonbonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">2.4. Electrostatic Embedding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">2.4.1. Short-Range</a></li>
 </ul>
 </li>
 </ul>

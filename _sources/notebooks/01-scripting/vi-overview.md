@@ -2,7 +2,7 @@
 
 Vi/Vim is a text editor you can use in your terminal. Unfortunately, this program isn't like the ones you may be familiar with like Notepad, TextEdit, etc... There are a lot of key bindings you will need to remember, but once you're use to it, you'll realize this text editor designed for speed and increased productivity. The numerous keybindings will be your best friend for speedy navigation to specific points in the file, and for fast editing.
 
-# Overview of Some Commands
+## Overview of Some Commands
 
 ```bash
     vi <filename>     # Open <filename> in vim
