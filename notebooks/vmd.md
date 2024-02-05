@@ -1,4 +1,4 @@
-# VMD Overview 
+# Introduction to VMD  
 
 ```{tableofcontents}
 ```

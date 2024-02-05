@@ -1,7 +1,3 @@
----
-orphan: true
----
-
 # List of Commands
 
 :::{Glossary}

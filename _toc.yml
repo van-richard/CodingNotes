@@ -30,7 +30,8 @@ subtrees:
       entries:
       - file: notebooks/amber
         subtrees:
-        - caption: Usage
+        - maxdepth: 2
+          caption: Usage
           entries:
           - glob: notebooks/amber/usage-*
         - caption: Installing / Compiling
@@ -46,19 +47,28 @@ subtrees:
         - caption: bash Configuration / Settings 
           entries:
           - glob: notebooks/commandline/bash-*
-        - caption: bash Commands & Examples
+      - file: notebooks/linux
+        subtrees:
+        - caption: Ubuntu / Linux
           entries:
-          - glob: notebooks/commandline/commands/*
-    - caption: ssh
+          - glob: notebooks/commandline/ubuntu-*
+          - glob: notebooks/commandline/linux-*
+    - caption: ssh / SLURM
       entries:
       - glob: notebooks/commandline/ssh-*
-    - caption: Chimera/ChimeraX
+    - caption: Chimera / ChimeraX
       entries:
       - file: notebooks/chimera
         subtrees:
-        - caption:
+        - caption: Command Line
           entries:
-          - glob: notebooks/chimera/*
+          - glob: notebooks/chimera/cli-*
+        - caption: Images
+          entries:
+          - glob: notebooks/chimera/img-*
+        - caption: Movies
+          entries:
+          - glob: notebooks/chimera/mov-*
     - caption: git
       entries:
       - file: notebooks/git

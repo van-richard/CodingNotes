@@ -1,4 +1,4 @@
-# bash Overview 
+# Introduction to `bash`
 
 ```{tableofcontents}
 ```

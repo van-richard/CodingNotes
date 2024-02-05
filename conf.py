@@ -22,7 +22,8 @@ html_static_path = ['_static/']
 html_css_path = '_static/custom.css'
 html_theme = 'pydata_sphinx_theme'
 html_sidebar: {
-        "*": ['sidebar-nav-bs']
+        "notebooks/**": ['sidebar-nav-bs'],
+        "index": ['sidebar-nav-bs'],
     }
 html_theme_options = {
     "logo": {
@@ -33,7 +34,11 @@ html_theme_options = {
     "pygment_light_style": "tango",
     "pygment_dark_style": "monokai",
     'article_header_start': ['breadcrumbs'],
-    'secondary_sidebar_items': ['page-toc', "sourcelink"],
+    "secondary_sidebar_items": {
+        "**": ["page-toc", "sourcelink"],
+        "index": ["page-toc"],
+        },
+    # 'secondary_sidebar_items': ['page-toc', "sourcelink"],
     "navbar_align": "content",
     'navbar_start': 'navbar-logo',
     'navbar_center': 'navbar-nav',

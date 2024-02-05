@@ -1,4 +1,3 @@
-# Amber Overview
-
+# Introduction to AmberMD
 ```{tableofcontents}
 ```
