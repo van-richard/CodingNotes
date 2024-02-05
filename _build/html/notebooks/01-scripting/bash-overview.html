@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. General bash Scripting &#8212; CodingNotes</title>
+    <title>3.1. General bash Scripting &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. Text Editing with Vi/Vim" href="vi-overview.html" />
-    <link rel="prev" title="Scripting &amp; More" href="introduction.html" />
+    <link rel="next" title="3.3. Text Editing with Vi/Vim" href="vi-overview.html" />
+    <link rel="prev" title="3. Scripting &amp; More" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -454,10 +454,10 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. General bash Scripting</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.1. General bash Scripting</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="vi-overview.html">3. Text Editing with Vi/Vim</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-overview.html">4. General Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vi-overview.html">3.3. Text Editing with Vi/Vim</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-overview.html">3.4. General Python</a></li>
 </ul>
 </div>
 </nav></div>
@@ -496,7 +496,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="introduction.html" class="nav-link">Scripting &amp; More</a></li>
+    <li class="breadcrumb-item"><a href="introduction.html" class="nav-link"><span class="section-number">3. </span>Scripting &amp; More</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -516,12 +516,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="general-bash-scripting">
-<h1><span class="section-number">1. </span>General bash Scripting<a class="headerlink" href="#general-bash-scripting" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.1. </span>General bash Scripting<a class="headerlink" href="#general-bash-scripting" title="Permalink to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="scripting">
-<h1><span class="section-number">2. </span>Scripting<a class="headerlink" href="#scripting" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.2. </span>Scripting<a class="headerlink" href="#scripting" title="Permalink to this heading">#</a></h1>
 <section id="redirect-commands">
-<h2><span class="section-number">2.1. </span>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.1. </span>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h2>
 <p>You can redirect command input and output (stdin, stdout, and stderr) using “redirection operators”. Unlike a pipe, which passes output to a command, a redirection operator has a command’s input come from a file or stream, or sends its output to a file or stream.</p>
 <p>Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite <a class="reference external" href="http://hello.py">hello.py</a> with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>hello.py<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
@@ -583,7 +583,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 </div>
 </section>
 <section id="looping">
-<h2><span class="section-number">2.2. </span>Looping<a class="headerlink" href="#looping" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.2. </span>Looping<a class="headerlink" href="#looping" title="Permalink to this heading">#</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops iterate for as many arguments given:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#The contents of $Variable is printed three times.</span>
 <span class="k">for</span><span class="w"> </span>Variable<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..3<span class="o">}</span>
@@ -637,7 +637,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 </div>
 </section>
 <section id="functions">
-<h2><span class="section-number">2.3. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2.3. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
 <p>You can also define functions</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Definition:
 function foo ()
@@ -709,7 +709,7 @@ foo arg1 arg2
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Scripting &amp; More</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Scripting &amp; More</p>
       </div>
     </a>
     <a class="right-next"
@@ -717,7 +717,7 @@ foo arg1 arg2
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Text Editing with Vi/Vim</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Text Editing with Vi/Vim</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -737,11 +737,11 @@ foo arg1 arg2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1. General bash Scripting</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting">2. Scripting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">2.1. Redirect Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">2.2. Looping</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">2.3. Functions</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.1. General bash Scripting</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting">3.2. Scripting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">3.2.1. Redirect Commands</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">3.2.2. Looping</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">3.2.3. Functions</a></li>
 </ul>
 </li>
 </ul>

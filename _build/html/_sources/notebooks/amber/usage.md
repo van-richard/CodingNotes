@@ -1,4 +1,4 @@
-# Install / Compile
+# Usage
 
 ```{tableofcontents}
 ```
