@@ -1,57 +1,94 @@
 root: index
-subtrees:
-- caption: CodingNotes
+defaults:
   numbered: True
-  maxdepth: 3
+  maxdepth: 2
+subtrees:
+- caption: Pregame
   entries:
   - file: notebooks/Pregame
-  - file: notebooks/00-quickstart/index
+- caption: Quick Start Guide
+  entries:
+  - file: notebooks/00-quickstart/introduction
+  - file: notebooks/00-quickstart/01terminal
+  - file: notebooks/00-quickstart/02vim
+  - file: notebooks/00-quickstart/03Supercomputer
+  - file: notebooks/00-quickstart/04PythonConda
+  - file: notebooks/00-quickstart/05StructureFiles
     entries:
-    - file: notebooks/00-quickstart/01terminal
-    - file: notebooks/00-quickstart/02vim
-    - file: notebooks/00-quickstart/03Supercomputer
-    - file: notebooks/00-quickstart/04PythonConda
-    - file: notebooks/00-quickstart/05StructureFiles
-      entries:
-      - file: notebooks/00-quickstart/06PDBFiles
-      - file: notebooks/00-quickstart/07XYZFiles
-    - file: notebooks/00-quickstart/08BasicMD
-  - file: notebooks/01-scripting/index
-    title: Scripting 
-    entries:
-    - file: notebooks/01-scripting/bash-overview
-    - file: notebooks/01-scripting/vi-overview
-    - file: notebooks/01-scripting/python-overview
-  - file: notebooks/02-simulation/index
-    entries:
-    - file: notebooks/02-simulation/simple
-    - file: notebooks/02-simulation/distance
-    - file: notebooks/02-simulation/claisen
-  - file: notebooks/morenotes
-    title: Notes
-    subtrees:
-    - caption: All Notes
-      maxdepth: 2
-      hidden: False
-      entries:
-      - file: notebooks/amber
-        entries:
-        - glob: notebooks/amber/*
-      - file: notebooks/bash
-        entries:
-        - glob: notebooks/bash/*
-      - file: notebooks/chimera
-        entries:
-        - glob: notebooks/chimera/*
-      - file: notebooks/git
-        entries:
-        - glob: notebooks/git/*
-      - file: notebooks/python
-        entries: 
-        - glob: noteboks/python/*
-      - file: notebooks/theory
-        entries:
-        - glob: notebooks/theory/*
-      - file: notebooks/vmd
-        entries:
-        - glob: notebooks/vmd/*
+    - file: notebooks/00-quickstart/06PDBFiles
+    - file: notebooks/00-quickstart/07XYZFiles
+  - file: notebooks/00-quickstart/08BasicMD
+- caption: Scripting & More
+  entries:
+  - file: notebooks/01-scripting/introduction
+  - file: notebooks/01-scripting/bash-overview
+  - file: notebooks/01-scripting/vi-overview
+  - file: notebooks/01-scripting/python-overview
+- caption: Tutorials
+  entries:
+  - file: notebooks/02-simulation/introduction
+  - file: notebooks/02-simulation/simple
+  - file: notebooks/02-simulation/distance
+  - file: notebooks/02-simulation/claisen
+# - caption: More Notes
+#   entries:
+#   - file: notebooks/morenotes
+#     subtrees:
+#     - caption: Amber Simulations
+#       entries:
+#       - file: notebooks/amber
+#         subtrees:
+#         - caption: Usage
+#           entries:
+#           - glob: notebooks/amber/usage-*
+#         - caption: Installing / Compiling
+#           entries:
+#           - glob: notebooks/amber/install-*
+#         - caption: MD Analysis
+#           entries:
+#           - glob: notebooks/amber/*traj*
+#     - caption: Command Line Stuff
+#       entries:
+#       - file: notebooks/bash
+#         subtrees:
+#         - caption: bash Configuration / Settings 
+#           entries:
+#           - glob: notebooks/commandline/bash-*
+#         - caption: ssh
+#           entries:
+#           - glob: notebooks/commandline/ssh-*
+#     - caption: Chimera/ChimeraX
+#       entries:
+#       - file: notebooks/chimera
+#         subtrees:
+#         - caption:
+#           entries:
+#           - glob: notebooks/chimera/*
+#     - caption: git
+#       entries:
+#       - file: notebooks/git
+#         subtrees:
+#         - caption:        
+#           entries:
+#           - glob: notebooks/git/*
+#     - caption: python / Conda
+#       entries:
+#       - file: notebooks/python
+#         subtrees:
+#         - caption:
+#           entries: 
+#           - glob: notebooks/python/*
+#     - caption: Equations
+#       entries:
+#       - file: notebooks/theory
+#         subtrees:
+#         - caption:
+#           entries:
+#           - glob: notebooks/theory/*
+#     - caption: VMD
+#       entries:
+#       - file: notebooks/vmd
+#         subtrees:
+#         - caption: Movies
+#           entries:
+#           - glob: notebooks/vmd/*

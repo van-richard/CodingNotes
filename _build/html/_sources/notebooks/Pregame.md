@@ -1,8 +1,5 @@
 # Pregame
 
-```{tableofcontents}
-```
-
 ## Common Software
 
 At some point, you may find it necessary to install certain programs for your projects. These include:

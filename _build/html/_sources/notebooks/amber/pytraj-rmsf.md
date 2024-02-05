@@ -1,6 +1,8 @@
-# RMSF
+---
+keywords: root, mean, square, fluctuation, rmsf, pytraj
+---
 
-Root Mean Square Fluctuation
+# Root Mean Square Fluctuation (RMSF)
 
 *Example*
 

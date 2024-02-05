@@ -34,7 +34,7 @@ figwidth: 75%
 
 ## Open the `ala.xyz` File
 
-First, open your terminal, and then change directories to where you saved the `ala.xyz`. Since I saved them to my `~/Desktop/`, I will {term}`cd` there, and use {term}`less` to view `ala.xyz`:
+First, open your terminal, and then change directories to where you saved the `ala.xyz`. Since I saved them to my `~/Desktop/`, I will `cd` there, and use `less` to view `ala.xyz`:
 
 ```bash
 cd ~/Desktop/

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; CodingNotes</title>
+    <title>4. Text Editing with Vi/Vim &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.1. General Python" href="python-overview.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="bash-overview.html" />
+    <link rel="next" title="6. General Python" href="python-overview.html" />
+    <link rel="prev" title="2. General bash Scripting" href="bash-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -173,32 +173,117 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/index.html">
-                        Quick Start Guide
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Scripting
+                      <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
+                        Introduction
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-simulation/index.html">
+                      <a class="nav-link nav-internal" href="../00-quickstart/01terminal.html">
+                        Terminal, Shell, & Bash
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/02vim.html">
+                        Text Editors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/03Supercomputer.html">
+                        Supercomputers
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../00-quickstart/04PythonConda.html">
+                        Python & Conda
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../00-quickstart/05StructureFiles.html">
+                        Molecular Structure Files
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../00-quickstart/08BasicMD.html">
+                        Briefly, Molecular Dynamics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="introduction.html">
+                        Scripting & More
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="bash-overview.html">
+                        General bash Scripting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="#">
+                        Text Editing with Vi/Vim
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="python-overview.html">
+                        General Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../02-simulation/introduction.html">
                         Tutorials
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        Notes
+                      <a class="nav-link dropdown-item nav-internal" href="../02-simulation/simple.html">
+                        Simple MD Tutorial of Alanine Dipeptide
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../02-simulation/distance.html">
+                        Applying Distance Restraints in Classical MD Simulations
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../02-simulation/claisen.html">
+                        QM/MM Simulation of the Claisen Rearrangment Reaction
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
       
@@ -336,7 +421,9 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -357,32 +444,117 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/index.html">
-                        Quick Start Guide
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="index.html">
-                        Scripting
+                      <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
+                        Introduction
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-simulation/index.html">
+                      <a class="nav-link nav-internal" href="../00-quickstart/01terminal.html">
+                        Terminal, Shell, & Bash
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/02vim.html">
+                        Text Editors
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/03Supercomputer.html">
+                        Supercomputers
+                      </a>
+                    </li>
+                
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../00-quickstart/04PythonConda.html">
+                        Python & Conda
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../00-quickstart/05StructureFiles.html">
+                        Molecular Structure Files
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../00-quickstart/08BasicMD.html">
+                        Briefly, Molecular Dynamics
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="introduction.html">
+                        Scripting & More
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="bash-overview.html">
+                        General bash Scripting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="#">
+                        Text Editing with Vi/Vim
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="python-overview.html">
+                        General Python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../02-simulation/introduction.html">
                         Tutorials
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        Notes
+                      <a class="nav-link dropdown-item nav-internal" href="../02-simulation/simple.html">
+                        Simple MD Tutorial of Alanine Dipeptide
                       </a>
                     </li>
                 
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../02-simulation/distance.html">
+                        Applying Distance Restraints in Classical MD Simulations
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../02-simulation/claisen.html">
+                        QM/MM Simulation of the Claisen Rearrangment Reaction
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
         
@@ -448,18 +620,6 @@ document.write(`
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="python-overview.html">3.1. General Python</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -475,7 +635,33 @@ document.write(`
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article"></div>
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
               
               
               
@@ -483,7 +669,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  
+  <section class="tex2jax_ignore mathjax_ignore" id="text-editing-with-vi-vim">
+<h1><span class="section-number">4. </span>Text Editing with Vi/Vim<a class="headerlink" href="#text-editing-with-vi-vim" title="Permalink to this heading">#</a></h1>
+<p>Vi/Vim is a text editor you can use in your terminal. Unfortunately, this program isn’t like the ones you may be familiar with like Notepad, TextEdit, etc… There are a lot of key bindings you will need to remember, but once you’re use to it, you’ll realize this text editor designed for speed and increased productivity. The numerous keybindings will be your best friend for speedy navigation to specific points in the file, and for fast editing.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="overview-of-some-commands">
+<h1><span class="section-number">5. </span>Overview of Some Commands<a class="headerlink" href="#overview-of-some-commands" title="Permalink to this heading">#</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>vi<span class="w"> </span>&lt;filename&gt;<span class="w">     </span><span class="c1"># Open &lt;filename&gt; in vim</span>
+<span class="w">    </span>:help<span class="w"> </span>&lt;topic&gt;<span class="w">     </span><span class="c1"># Open up built-in help docs about &lt;topic&gt; if any exists</span>
+<span class="w">    </span>:q<span class="w">                </span><span class="c1"># Quit vim</span>
+<span class="w">    </span>:w<span class="w">                </span><span class="c1"># Save current file</span>
+<span class="w">    </span>:wq<span class="w">               </span><span class="c1"># Save file and quit vim</span>
+<span class="w">    </span>ZZ<span class="w">                </span><span class="c1"># Save file and quit vim</span>
+<span class="w">    </span>:q!<span class="w">               </span><span class="c1"># Quit vim without saving file</span>
+<span class="w">                      </span><span class="c1"># ! *forces* :q to execute, hence quitting vim without saving</span>
+
+<span class="w">    </span>ZQ<span class="w">                </span><span class="c1"># Quit vim without saving file</span>
+<span class="w">    </span>:x<span class="w">                </span><span class="c1"># Save file(only when the file is modified) and quit vim</span>
+
+<span class="w">    </span>u<span class="w">                 </span><span class="c1"># Undo</span>
+<span class="w">    </span>CTRL+R<span class="w">            </span><span class="c1"># Redo</span>
+
+<span class="w">    </span>h<span class="w">                 </span><span class="c1"># Move left one character</span>
+<span class="w">    </span>j<span class="w">                 </span><span class="c1"># Move down one line</span>
+<span class="w">    </span>k<span class="w">                 </span><span class="c1"># Move up one line</span>
+<span class="w">    </span>l<span class="w">                 </span><span class="c1"># Move right one character</span>
+
+<span class="c1"># Searching in the text</span>
+<span class="w">    </span>/word<span class="w">             </span><span class="c1"># Highlights all occurrences of word after cursor</span>
+<span class="w">    </span>?word<span class="w">             </span><span class="c1"># Highlights all occurrences of word before cursor</span>
+<span class="w">    </span>n<span class="w">                 </span><span class="c1"># Moves cursor to next occurrence of word after search</span>
+<span class="w">    </span>N<span class="w">                 </span><span class="c1"># Moves cursor to previous occurrence of word</span>
+
+<span class="w">    </span>:%s/foo/bar/g<span class="w">     </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on every line in the file</span>
+<span class="w">    </span>:s/foo/bar/g<span class="w">      </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on the current line</span>
+<span class="w">    </span>:%s/<span class="se">\n</span>/<span class="se">\r</span>/g<span class="w">       </span><span class="c1"># Replace new line characters with new line characters</span>
+<span class="w">    </span>:<span class="s1">&#39;&lt;,&#39;</span>&gt;s/foo/bar/g<span class="w"> </span><span class="c1"># Change &#39;foo&#39; to &#39;bar on every line in the current visual</span>
+
+<span class="w">    </span><span class="c1"># Other characters for moving around</span>
+
+<span class="w">    </span>gg<span class="w">                </span><span class="c1"># Go to the top of the file</span>
+<span class="w">    </span>G<span class="w">                 </span><span class="c1"># Go to the bottom of the file</span>
+<span class="w">    </span>:NUM<span class="w">              </span><span class="c1"># Go to line number NUM (NUM is any number)</span>
+<span class="w">    </span>H<span class="w">                 </span><span class="c1"># Move to the top of the screen</span>
+<span class="w">    </span>M<span class="w">                 </span><span class="c1"># Move to the middle of the screen</span>
+<span class="w">    </span>L<span class="w">                 </span><span class="c1"># Move to the bottom of the screen</span>
+</pre></div>
+</div>
+</section>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -519,7 +753,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>General bash Scripting</p>
       </div>
     </a>
     <a class="right-next"
@@ -527,7 +761,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.1. </span>General Python</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>General Python</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -546,7 +780,9 @@ document.write(`
     <i class="fa-solid fa-list"></i> 
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. Text Editing with Vi/Vim</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-some-commands">5. Overview of Some Commands</a></li>
 </ul>
 
   </nav></div>

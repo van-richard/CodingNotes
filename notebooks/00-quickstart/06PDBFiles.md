@@ -21,7 +21,7 @@ figwidth: 75%
 
 ## Viewing the Contents of `1AKI.pdb`
 
-This should be in your `~/Downloads/` directory. Using your terminal, change directories into this directory with {term}`cd`, and then use {term}`less` to view the file. Example on MacOS:
+This should be in your `~/Downloads/` directory. Using your terminal, change directories into this directory with `cd`, and then use `less` to view the file. Example on MacOS:
 
 :::bash
 pwd             # Print the current working directory to see where you are
@@ -30,7 +30,7 @@ cd Downloads/   # Change directories to Downloads
 less 1aki.pdb   # View the contents using the command "less"
 :::
 
-The {term}`less` command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn't access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).
+The `less` command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn't access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).
 
 When you get PDB files the from RCSB, they will start with some information pertaining to RCSB data, biological system, experiments performed, and journal/author details. Here is the first 20 lines of the files: 
 
@@ -181,7 +181,7 @@ less 7z4j.pdb   # View file
 ```
 
 ```{note}
-In {term}`less`, you can skip to the bottom of the file by pressing `shift`+`g`. To go back to the top, just press `g`.
+In `less`, you can skip to the bottom of the file by pressing `shift`+`g`. To go back to the top, just press `g`.
 ```
 
 The last ~20 lines containing 'ATOM', 'HETATM', 'TER' should look like this:
