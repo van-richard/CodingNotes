@@ -5,7 +5,7 @@ kernelspec:
 jupytext:
   text_representation:
     extension: .md
-    format_name: myst
+    # format_name: myst
     format_version: '0.13'
     jupytext_version: 1.13.8
 ---
@@ -30,7 +30,7 @@ We will study the reaction under implicit solvent, where all ligand atoms includ
 **This tutorial requires a supercomputing account!**
 
 - This example uses Pete
-- Download my files for reference: [claisen.tar.bz2](../../assets/claisen.tar.bz2 "download")
+- Download my files for reference: [claisen.tar.bz2](https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/claisen.tar.xz "download")
 ````
 
 ```{figure} ../../_static/videos/claisen.mp4
@@ -732,7 +732,7 @@ I do not know if this works on Windows, so try this on pete first!
 
 To do this part, you need to:
 
-* Install the `mbar` environment to Conda on Pete ([Tutorial](../python/myenv)). Copy the two scripts in mentioned here to a `Scripts/` folder.
+* Install the `mbar` environment to Conda on Pete. Copy the two scripts in mentioned here to a `Scripts/` folder.
 
 For this analysis, I copy the `mbar.ipynb` to the project's `mbar/` folder
 

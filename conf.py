@@ -22,7 +22,7 @@ html_static_path = ['_static/']
 html_css_path = '_static/custom.css'
 html_theme = 'pydata_sphinx_theme'
 html_sidebar: {
-        "**": ['sidebar-nav-bs']
+        "*": ['sidebar-nav-bs']
     }
 html_theme_options = {
     "logo": {

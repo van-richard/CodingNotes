@@ -8,6 +8,7 @@ html {
   --pst-header-height: 2rem;
   --pst-header-article-height: calc(var(--pst-header-height) * 2 / 3);
   --pst-sidebar-secondary: 17rem;
+  
 
   /*****************************************************************************
   * Font features used in this theme
@@ -81,6 +82,18 @@ html {
   --pst-breadcrumb-divider: "\f105";
 }
 
+
+/*******************************************************************************
+* Breakpoints that trigger UI changes
+*
+* Note that media-breakpoint-down begins at the next highest level!
+* So we should choose a media-breakpoint-down one *lower* than when we want to start
+* example: media-breakpoint-up(md) and media-breakpoint-down(sm) trigger at the same time
+* ref: https://github.com/twbs/bootstrap/issues/31214
+*/
+$breakpoint-sidebar-primary: lg; 
+$breakpoint-sidebar-secondary: xl; 
+$breakpoint-page-width: 88rem;
 /*******************************************************************************
 * Breakpoints that trigger UI changes
 *

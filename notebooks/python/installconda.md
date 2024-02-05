@@ -18,8 +18,3 @@ By default, conda will starts in your `base` environment. Generally I don't inst
 (base) username@computer:~ username$
 ```
 
-```{tip}
-If you would like to follow my set up for conda, including environments, follow this tutorial:
-
-[](./myenv)
-```
