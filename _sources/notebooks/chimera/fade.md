@@ -1,15 +1,4 @@
----
-orphan: true
----
-
 # Fading
-
-
-
-
-
-
-
 
 <center><video src="../../_static/chimerax_fade_cas9.mp4" width="50%" height="50%" center controls>
 </video></center>

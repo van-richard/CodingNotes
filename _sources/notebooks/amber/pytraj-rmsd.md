@@ -1,4 +1,8 @@
-# RMSD 
+---
+keywords: root, mean, square, deviation, rmsd, pytraj
+---
+
+# Root Mean Square Deviation (RMSD) 
 
 The Root Mean Square Deviation (RMSD) is a measure of the average distance between atoms in a superimposed structure. You will see this analysis used to judge convergence of an MD simulation in just about every MD paper. The equation is
 

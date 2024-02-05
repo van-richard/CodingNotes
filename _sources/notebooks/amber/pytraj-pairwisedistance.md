@@ -1,4 +1,7 @@
-# Pairwise Distance
+---
+keywords: pytraj, pairwise, distance, matrix.dist, heatmap, matrix, interaction
+---
+# Pairwise Distance Matrix
 
 *Example*
 

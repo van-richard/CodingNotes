@@ -1,4 +1,0 @@
-# More Notes
-
-```{tableofcontents}
-```
