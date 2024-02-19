@@ -1275,7 +1275,3 @@ print(say(say_please=True))  # Can you buy me a beer? Please! I am poor :(
 
 ```
 
-
-```python
-
-```

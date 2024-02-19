@@ -1,6 +1,6 @@
-# Tutorials
+# Amber Tutorials
 
-How to run MD simulations with Amber
+Macromolecular modelling with Amber
 
 ```{tableofcontents}
 ```

@@ -1,6 +1,6 @@
-# Scripting & More
+# Scripting
 
-Some more information and sample code
+Some more information and examples
 
 ```{tableofcontents}
 ```

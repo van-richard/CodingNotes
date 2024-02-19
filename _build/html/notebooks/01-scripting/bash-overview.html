@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.1. General bash Scripting &#8212; CodingNotes</title>
+    <title>2.1. Scripting with bash &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.3. Text Editing with Vi/Vim" href="vi-overview.html" />
-    <link rel="prev" title="3. Scripting &amp; More" href="introduction.html" />
+    <link rel="next" title="2.2. Text Editing with vi/vim" href="vi-overview.html" />
+    <link rel="prev" title="2. Scripting" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,14 +181,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="introduction.html">
-                        Scripting & More
+                        Scripting
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../02-simulation/introduction.html">
-                        Tutorials
+                        Amber Tutorials
                       </a>
                     </li>
                 
@@ -365,14 +365,14 @@ document.write(`
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="introduction.html">
-                        Scripting & More
+                        Scripting
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../02-simulation/introduction.html">
-                        Tutorials
+                        Amber Tutorials
                       </a>
                     </li>
                 
@@ -454,10 +454,9 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.1. General bash Scripting</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="vi-overview.html">3.3. Text Editing with Vi/Vim</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-overview.html">3.4. General Python</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.1. Scripting with <code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vi-overview.html">2.2. Text Editing with <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-overview.html">2.3. Introduction to <code class="docutils literal notranslate"><span class="pre">python</span></code></a></li>
 </ul>
 </div>
 </nav></div>
@@ -496,7 +495,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="introduction.html" class="nav-link"><span class="section-number">3. </span>Scripting &amp; More</a></li>
+    <li class="breadcrumb-item"><a href="introduction.html" class="nav-link"><span class="section-number">2. </span>Scripting</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -515,27 +514,37 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="general-bash-scripting">
-<h1><span class="section-number">3.1. </span>General bash Scripting<a class="headerlink" href="#general-bash-scripting" title="Permalink to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="scripting">
-<h1><span class="section-number">3.2. </span>Scripting<a class="headerlink" href="#scripting" title="Permalink to this heading">#</a></h1>
-<section id="redirect-commands">
-<h2><span class="section-number">3.2.1. </span>Redirect Commands<a class="headerlink" href="#redirect-commands" title="Permalink to this heading">#</a></h2>
-<p>You can redirect command input and output (stdin, stdout, and stderr) using “redirection operators”. Unlike a pipe, which passes output to a command, a redirection operator has a command’s input come from a file or stream, or sends its output to a file or stream.</p>
-<p>Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite <a class="reference external" href="http://hello.py">hello.py</a> with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="scripting-with-bash">
+<h1><span class="section-number">2.1. </span>Scripting with <code class="docutils literal notranslate"><span class="pre">bash</span></code><a class="headerlink" href="#scripting-with-bash" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>So far, we have used <code class="docutils literal notranslate"><span class="pre">bash</span></code> to interact with the CLI by typing single line commands</p></li>
+<li><p>To automate repetitive tasks, we can combine those single lines commands to a file called a <code class="docutils literal notranslate"><span class="pre">bash</span></code> script</p></li>
+<li><p>Typically, I name these scripts using the file format, <code class="docutils literal notranslate"><span class="pre">.sh</span></code> (shell) or <code class="docutils literal notranslate"><span class="pre">.in</span></code> (input)</p></li>
+</ul>
+<section id="redirect-commands-to-a-file-with-eof">
+<h2><span class="section-number">2.1.1. </span>Redirect Commands to a File with <code class="docutils literal notranslate"><span class="pre">EOF</span></code><a class="headerlink" href="#redirect-commands-to-a-file-with-eof" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>You can redirect command input and output (i.e., stdin, stdout, and stderr) with “redirection operators”</p></li>
+<li><p>Unlike <code class="docutils literal notranslate"><span class="pre">|</span></code>, which passes the standard output (stdout) to the next command, a redirection operator has a command’s input come from a file or stream, or sends its output to a file or stream</p></li>
+</ul>
+<p>Example: Read from stdin until <code class="docutils literal notranslate"><span class="pre">^EOF$</span></code> and overwrite <code class="docutils literal notranslate"><span class="pre">hello.py</span></code> with the lines between <code class="docutils literal notranslate"><span class="pre">EOF</span></code> (which are called a “here document”):</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>&gt;<span class="w"> </span>hello.py<span class="w"> </span><span class="s">&lt;&lt; EOF</span>
 <span class="s">#!/usr/bin/env python</span>
 <span class="s">from __future__ import print_function</span>
 <span class="s">import sys</span>
+
 <span class="s">print(&quot;#stdout&quot;, file=sys.stdout)</span>
 <span class="s">print(&quot;#stderr&quot;, file=sys.stderr)</span>
+
 <span class="s">for line in sys.stdin:</span>
 <span class="s">    print(line, file=sys.stdout)</span>
 <span class="s">EOF</span>
 </pre></div>
 </div>
-<p>Variables will be expanded if the first “EOF” is not quoted. Run the <a class="reference external" href="http://hello.py">hello.py</a> Python script with various stdin, stdout, and stderr redirections:</p>
+<ul class="simple">
+<li><p>Variables will be expanded if the first “EOF” is not quoted</p></li>
+</ul>
+<p>Example: Run the <code class="docutils literal notranslate"><span class="pre">hello.py</span></code>  script with various stdin, stdout, and stderr redirections:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>hello.py<span class="w"> </span>&lt;<span class="w"> </span><span class="s2">&quot;input.in&quot;</span><span class="w"> </span><span class="c1"># pass input.in as input to the script</span>
 
 python<span class="w"> </span>hello.py<span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;output.out&quot;</span><span class="w"> </span><span class="c1"># redirect output from the script to output.out</span>
@@ -568,34 +577,75 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;#helloworld&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>output.out<span class="w"> </span>&gt;/dev/null
 </pre></div>
 </div>
-<p>Commands can be substituted within other commands using <code class="docutils literal notranslate"><span class="pre">$(</span> <span class="pre">):</span></code> The following command displays the number of files and directories in the current directory.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;There are </span><span class="k">$(</span>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span><span class="s2"> items here.&quot;</span>
+</section>
+<section id="use-standard-output-of-command-in-a-variable">
+<h2><span class="section-number">2.1.2. </span>Use Standard Output of Command in a Variable<a class="headerlink" href="#use-standard-output-of-command-in-a-variable" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Commands can be substituted within other commands or used in variables</p>
+<ul>
+<li><p>2 notations can be used:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">VAR=`COMMAND`</span> </code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">VAR=$(COMMAND)</span></code></p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Both notations declares the variable, <code class="docutils literal notranslate"><span class="pre">VAR</span></code>, to be the output of some, <code class="docutils literal notranslate"><span class="pre">COMMAND</span></code> (standard output of whatever command needed)</p></li>
+</ul>
+<div class="admonition-personally-i-prefer-the-second-notation-2 admonition">
+<p class="admonition-title">Personally, I prefer the second notation (2)</p>
+<p>It is much easier to read, <code class="docutils literal notranslate"><span class="pre">VAR=$(COMMAND)</span></code>, than closing with the “`”</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declare variable, VAR, to be the stdout of the command, echo, which prints &quot;Hello World!&quot;</span>
+<span class="nv">VAR</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$VAR</span><span class="w"> </span><span class="c1"># &gt; Hello World</span>
+
+<span class="c1"># Use $VAR from previous, in new variable, N. Pipe stdout to command, tr, which transform spaces &quot; &quot; to new lines &quot;\n&quot;</span>
+<span class="nv">N</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">VAR</span><span class="si">}</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $2}&#39;</span><span class="k">)</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$N</span><span class="w"> </span><span class="c1"># &gt; World</span>
 </pre></div>
 </div>
-<p>Bash uses a <code class="docutils literal notranslate"><span class="pre">case</span></code> statement that works similarly to switch in Java and C++:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$Variable</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
-<span class="w">    </span><span class="c1"># List patterns for the conditions you want to meet</span>
-<span class="w">    </span><span class="m">0</span><span class="o">)</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;There is a zero.&quot;</span><span class="p">;;</span>
-<span class="w">    </span><span class="m">1</span><span class="o">)</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;There is a one.&quot;</span><span class="p">;;</span>
-<span class="w">    </span>*<span class="o">)</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;It is not null.&quot;</span><span class="p">;;</span><span class="w">  </span><span class="c1"># match everything</span>
-<span class="k">esac</span>
+<p><em>Example: Displays the number of files and directories in the current directory.</em></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># ls, list items in directory and pipe the output as input, wc -l, to count total number of lines</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;There are </span><span class="k">$(</span>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="k">)</span><span class="s2"> items here.&quot;</span><span class="w"> </span>
 </pre></div>
 </div>
 </section>
-<section id="looping">
-<h2><span class="section-number">3.2.2. </span>Looping<a class="headerlink" href="#looping" title="Permalink to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">for</span></code> loops iterate for as many arguments given:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#The contents of $Variable is printed three times.</span>
-<span class="k">for</span><span class="w"> </span>Variable<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..3<span class="o">}</span>
-<span class="k">do</span>
-<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$Variable</span><span class="s2">&quot;</span>
-<span class="k">done</span>
-<span class="c1"># =&gt; 1</span>
-<span class="c1"># =&gt; 2</span>
-<span class="c1"># =&gt; 3</span>
+<section id="automating-repetitive-tasks-with-bash-loops">
+<h2><span class="section-number">2.1.3. </span>Automating Repetitive Tasks with <code class="docutils literal notranslate"><span class="pre">bash</span></code> Loops<a class="headerlink" href="#automating-repetitive-tasks-with-bash-loops" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Suppose you have been doing a repetitive task running the same set of commands for a project</p></li>
+<li><p>For example, you need to create 100 new directories numbered from 0 to 99</p>
+<ul>
+<li><p>You would need to run, <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">1</span></code>,…, all the way to <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">99</span></code></p></li>
+</ul>
+</li>
+<li><p>In this case, you can use something called <code class="docutils literal notranslate"><span class="pre">bash</span></code> loops</p>
+<ul>
+<li><p>Loops iterate a set of commands for as many arguments given</p>
+<ul>
+<li><p>The command in the previous scenario would be <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">NUMBER</span></code>, and arguments would be <code class="docutils literal notranslate"><span class="pre">NUMBER</span></code> (1 through 99)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<section id="example-for-loops">
+<h3><span class="section-number">2.1.3.1. </span>Example: <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#example-for-loops" title="Permalink to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># On command line, type each line below and hit enter</span>
+mkdir<span class="w"> </span><span class="nb">test</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nb">test</span>
+<span class="k">for</span><span class="w"> </span>NUMBER<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..99<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="c1"># hit enter, NUMBER is the list 1 to 99 </span>
+<span class="w">    </span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$NUMBER</span><span class="w"> </span><span class="c1"># yours might not be tabbed, hit enter, to repeat make directory command</span>
+<span class="k">done</span><span class="w"> </span><span class="c1"># end for loop, hit enter</span>
 </pre></div>
 </div>
-<p>Or write it the “traditional for loop” way:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span></code> and you should see 100 folders made</p></li>
+<li><p>Cleanup by <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../;</span> <span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">test</span></code></p></li>
+</ul>
+<p><em>Example: “traditional for loop” way</em></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">a</span><span class="o">=</span><span class="m">1</span><span class="p">;</span><span class="w"> </span>a<span class="w"> </span>&lt;<span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span>a++<span class="o">))</span>
 <span class="k">do</span>
 <span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$a</span>
@@ -605,28 +655,36 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 <span class="c1"># =&gt; 3</span>
 </pre></div>
 </div>
-<p>They can also be used to act on files. This will run the command <code class="docutils literal notranslate"><span class="pre">cat</span></code> on file1 and file2.</p>
+<ul class="simple">
+<li><p>They can also be used to act on files. This will run the command <code class="docutils literal notranslate"><span class="pre">cat</span></code> on file1 and file2.</p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>Variable<span class="w"> </span><span class="k">in</span><span class="w"> </span>file1<span class="w"> </span>file2
 <span class="k">do</span>
 <span class="w">    </span>cat<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$Variable</span><span class="s2">&quot;</span>
 <span class="k">done</span>
 </pre></div>
 </div>
-<p>… or the output from a command, this will <code class="docutils literal notranslate"><span class="pre">cat</span></code> the output from <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+<ul class="simple">
+<li><p>or the output from a command, this will <code class="docutils literal notranslate"><span class="pre">cat</span></code> the output from <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>Output<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>ls<span class="k">)</span>
 <span class="k">do</span>
 <span class="w">    </span>cat<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$Output</span><span class="s2">&quot;</span>
 <span class="k">done</span>
 </pre></div>
 </div>
-<p>Bash can also accept patterns, like this to <code class="docutils literal notranslate"><span class="pre">cat</span></code> all the Markdown files in current directory</p>
+<ul class="simple">
+<li><p>can also accept patterns, like this to <code class="docutils literal notranslate"><span class="pre">cat</span></code> all the Markdown files in current directory</p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span>Output<span class="w"> </span><span class="k">in</span><span class="w"> </span>./*.markdown
 <span class="k">do</span>
 <span class="w">    </span>cat<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$Output</span><span class="s2">&quot;</span>
 <span class="k">done</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop:</p>
+</section>
+<section id="example-while-loops">
+<h3><span class="section-number">2.1.3.2. </span>Example: <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops<a class="headerlink" href="#example-while-loops" title="Permalink to this heading">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="o">]</span>
 <span class="k">do</span>
 <span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;loop body here...&quot;</span>
@@ -636,26 +694,31 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>output.out<span class="w"
 </pre></div>
 </div>
 </section>
+</section>
 <section id="functions">
-<h2><span class="section-number">3.2.3. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
-<p>You can also define functions</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Definition:
-function foo ()
-{
-    echo &quot;Arguments work just like script arguments: $@&quot;
-    echo &quot;And: $1 $2...&quot;
-    echo &quot;This is a function&quot;
-    returnValue=0    # Variable values can be returned
-    return $returnValue
-}
-# Call the function `foo` with two arguments, arg1 and arg2:
-foo arg1 arg2
-# =&gt; Arguments work just like script arguments: arg1 arg2
-# =&gt; And: arg1 arg2...
-# =&gt; This is a function
+<h2><span class="section-number">2.1.4. </span>Functions<a class="headerlink" href="#functions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>You can also define functions</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Definition:</span>
+<span class="k">function</span><span class="w"> </span>foo<span class="w"> </span><span class="o">()</span>
+<span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Arguments work just like script arguments: </span><span class="nv">$@</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;And: </span><span class="nv">$1</span><span class="s2"> </span><span class="nv">$2</span><span class="s2">...&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is a function&quot;</span>
+<span class="w">    </span><span class="nv">returnValue</span><span class="o">=</span><span class="m">0</span><span class="w">    </span><span class="c1"># Variable values can be returned</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nv">$returnValue</span>
+<span class="o">}</span>
+<span class="c1"># Call the function `foo` with two arguments, arg1 and arg2:</span>
+foo<span class="w"> </span>arg1<span class="w"> </span>arg2
+<span class="c1"># =&gt; Arguments work just like script arguments: arg1 arg2</span>
+<span class="c1"># =&gt; And: arg1 arg2...</span>
+<span class="c1"># =&gt; This is a function</span>
 </pre></div>
 </div>
-<p>More than 9 arguments are also possible by using braces, e.g. <code class="docutils literal notranslate"><span class="pre">${10},</span> <span class="pre">${11},</span> <span class="pre">...</span></code> or simply</p>
+<ul class="simple">
+<li><p>More than 9 arguments are also possible by using braces, e.g. <code class="docutils literal notranslate"><span class="pre">${10},</span> <span class="pre">${11},</span> <span class="pre">...</span></code> or simply</p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bar<span class="w"> </span><span class="o">()</span>
 <span class="o">{</span>
 <span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Another way to declare functions!&quot;</span>
@@ -663,12 +726,85 @@ foo arg1 arg2
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Call the function <code class="docutils literal notranslate"><span class="pre">bar</span></code> with no arguments:</p>
+<ul class="simple">
+<li><p>Call the function <code class="docutils literal notranslate"><span class="pre">bar</span></code> with no arguments:</p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bar<span class="w"> </span><span class="c1"># =&gt; Another way to declare functions!</span>
 </pre></div>
 </div>
-<p>Calling your function</p>
+<ul class="simple">
+<li><p>Calling your function</p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>foo<span class="w"> </span><span class="s2">&quot;My name is&quot;</span><span class="w"> </span><span class="nv">$Name</span>
+</pre></div>
+</div>
+</section>
+<section id="adding-choices-options-to-script-with-case-statements">
+<h2><span class="section-number">2.1.5. </span>Adding Choices (Options) to Script with <code class="docutils literal notranslate"><span class="pre">case</span></code> Statements<a class="headerlink" href="#adding-choices-options-to-script-with-case-statements" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Simplify complex conditionals options for multiple different choices</p></li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">case</span></code> statement instead of nested <code class="docutils literal notranslate"><span class="pre">if</span></code> statements will help your scripts to be readable and easier to maintain</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># General format starts with keyword, case, followed by some, EXPRESSION, i.e. string/variable</span>
+<span class="k">case</span><span class="w"> </span>EXPRESSION<span class="w"> </span><span class="k">in</span>
+
+<span class="w">    </span>PATTERN_1<span class="o">)</span><span class="w">  </span><span class="c1"># some pattern terminated by, &#39;)&#39;</span>
+<span class="w">        </span>STATEMENTS<span class="w"> </span><span class="c1"># if EXPRESSION == PATTERN_1 do this</span>
+<span class="w">    </span><span class="p">;;</span><span class="w"> </span><span class="c1"># end </span>
+
+<span class="w">     </span>PATTERN_2<span class="o">)</span><span class="w"> </span><span class="c1"># different pattern terminated by, &#39;)&#39;</span>
+<span class="w">        </span>STATEMENTS<span class="w"> </span><span class="c1"># if EXPRESSION == PATTERN_2 do this</span>
+<span class="w">    </span><span class="p">;;</span><span class="w"> </span><span class="c1">#end</span>
+
+<span class="w">    </span>PATTERN_N<span class="o">)</span><span class="w"> </span><span class="c1"># another pattern</span>
+<span class="w">        </span>STATEMENTS<span class="w"> </span>
+<span class="w">    </span><span class="p">;;</span><span class="w"> </span><span class="c1">#end</span>
+
+<span class="w">    </span>*<span class="o">)</span><span class="w"> </span><span class="c1"># default patter</span>
+<span class="w">        </span>STATEMENTS<span class="w"> </span><span class="c1"># usually &quot;Usage:&quot;</span>
+<span class="w">    </span><span class="p">;;</span><span class="w"> </span><span class="c1"># end</span>
+<span class="k">esac</span><span class="w"> </span><span class="c1"># Ends with esac keyword (case backwards)</span>
+</pre></div>
+</div>
+<p><em>Example: Script Checking File Formats in Current Directory</em></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">vi</span></code> to make a new script called, <code class="docutils literal notranslate"><span class="pre">fileformat.sh</span></code></p></li>
+<li><p>Copy the following lines to the new script using Insert Mode</p></li>
+<li><p>Save the file with <code class="docutils literal notranslate"><span class="pre">:wq</span></code></p></li>
+<li><p>Run script by typing <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">fileformat.sh</span></code> in the terminal</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># For each item in stdout of, ls, command</span>
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">$(</span>ls<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nv">Extension</span><span class="o">=</span><span class="si">${</span><span class="nv">file</span><span class="p">##*.</span><span class="si">}</span><span class="w"> </span><span class="c1"># Assign to variable, Extension</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$Extension</span><span class="s2">&quot;</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span>sh<span class="o">)</span><span class="w"> </span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Shell script: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span>md<span class="o">)</span><span class="w"> </span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;A markdown file: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span>png<span class="o">)</span><span class="w"> </span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;PNG image file: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span>txt<span class="o">)</span><span class="w"> </span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;A text file: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span>zip<span class="o">)</span><span class="w"> </span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;An archive: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span>conf<span class="o">)</span><span class="w"> </span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;A configuration file: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span>py<span class="o">)</span><span class="w"> </span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;A Python script: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span>*<span class="o">)</span><span class="w"> </span>
+<span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Unknown file type: </span><span class="nv">$file</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="p">;;</span>
+<span class="w">    </span><span class="k">esac</span>
+<span class="k">done</span>
 </pre></div>
 </div>
 </section>
@@ -709,7 +845,7 @@ foo arg1 arg2
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Scripting &amp; More</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Scripting</p>
       </div>
     </a>
     <a class="right-next"
@@ -717,7 +853,7 @@ foo arg1 arg2
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>Text Editing with Vi/Vim</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Text Editing with <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -737,15 +873,16 @@ foo arg1 arg2
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.1. General bash Scripting</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#scripting">3.2. Scripting</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands">3.2.1. Redirect Commands</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping">3.2.2. Looping</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">3.2.3. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#redirect-commands-to-a-file-with-eof">2.1.1. Redirect Commands to a File with <code class="docutils literal notranslate"><span class="pre">EOF</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-standard-output-of-command-in-a-variable">2.1.2. Use Standard Output of Command in a Variable</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automating-repetitive-tasks-with-bash-loops">2.1.3. Automating Repetitive Tasks with <code class="docutils literal notranslate"><span class="pre">bash</span></code> Loops</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-for-loops">2.1.3.1. Example: <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-while-loops">2.1.3.2. Example: <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">2.1.4. Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-choices-options-to-script-with-case-statements">2.1.5. Adding Choices (Options) to Script with <code class="docutils literal notranslate"><span class="pre">case</span></code> Statements</a></li>
 </ul>
-
   </nav></div>
 
   <div class="sidebar-secondary-item">

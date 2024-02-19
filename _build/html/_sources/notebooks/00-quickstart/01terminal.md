@@ -191,80 +191,108 @@ File or directory references use one of these paths.
 
 ---
 
-# File Management
+## File Management
 
-## Copy, Move, Rename, & Delete Files
+- How to copy, move, rename, and/or delete files?
+- Tasks like copying, moving, renaming, and deleting files/folders (`cp`, `mv`, `rm`) need to be typed!
 
-Your mouse doesn't work the same way in the CLI. Using the terminal means communicating with the computer through commands.
+### Copy using `cp` 
 
-Tasks like copying, moving, renaming, and deleting files/folders (`cp`, `mv`, `rm`) need to be typed!
-
-## Copying
-
-Use `cp` (Copy) to copy files or folders.
+- Use `cp` to copy files or folders 
+  - The `[source]` is the original file/folder or `/path/to/OriginalFile` or `/path/to/OriginalFolder`
+  - The `[destination]` is where you want the *new copy* to go, this can be in the same folder, or to another path (`/different/path/to/NewFile`)
 
 ```bash
 cp [source] [destination]
 ```
 
-Both `[source]` and `[destination]` can use absolute or relative paths.
+- Again, both `[source]` and `[destination]` can use absolute or relative paths
 
-### Copy Files
 
 ```bash
-cp file.txt /path/to/destination/file-copy.txt
+# Copy file in current working directory, OriginalFile.txt, to another directory in /path/to/destination and name it NewFile.txt
+cp OriginalFile.txt /path/to/destination/NewFile.txt 
+
+# Copy file from another directory here (.)
+cp /path/to/OriginalFile.txt . 
 ```
 
-Copying a file is straightforward; you can even give it a new name at the destination.
+- The `.` means `./` or the current directory you're in
+  - Remember to go back a folder, we run `cd ../` ? 
+  - `../` points back on directory while `./` means the current one
 
-### Copy Folders
+### Copy Folders with `cp -r`
+
+- Copying a directory requires the option `-r`.
 
 ```bash
-cp -r directory/ path/to/destination
+# Option, -r, tells cp to copy the entire folder to a new path
+cp -r directory /path/to/destination
+
+# Can also copy things "here" (.)
+cp /path/to/directory .
+
+# Copy directory in the current working directory using the name, directory2
+cp -r directory directory2
 ```
 
-Copying a directory requires the option `-r`.
+## Moving & Renaming with `mv`
 
-## Moving & Renaming
-
-Both are done with `mv` (Move). The notation is similar to `cp`.
-
-### Move/Rename Files
+- Both are performed with `mv`
+- Follows the same notation as `cp`
+- **Does not require the option, `-r` !!**
 
 ```bash
+mv [source] [destination]
+```
+- `[source]` can be a file, folder, `/path/to/file`, or `/path/to/folder`
+- `[destination]` can be `/path/to/file`, or `/path/to/folder` with `NewFileName` or `NewFolderName`
+
+### Move/Rename Files and Folders
+
+- Moving a file is straightforward; you can even rename it at the destination
+
+```bash
+# Move file.txt to the folder, destination, in /path/to, and rename it to newname.txt
 mv file.txt /path/to/destination/newname.txt
 ```
 
-Moving a file is straightforward; you can even rename it at the destination.
-
-### Move/Rename Folders
+- Same for folders
 
 ```bash
-mv directory/ path/to/destination/newname
+mv directory path/to/destination/newname
 ```
 
-Moving a directory is similar to previous examples.
-
-## Deleting
+## Deleting Files and/or Folders with `rm`
 
 ```{caution}
-This command is permanent. There's no trash can to recover your files.
+This command is permanently delete your files / folders
+No trash can to recover "accidental" events
 ```
 
-Use `rm` (Remove) to delete files/folders.
-
-### Delete Files
+- Use `rm` (Remove) to delete files/folders.
 
 ```bash
+# Delete file1.txt
+rm file1.txt
+```
+
+### Deleting Multiple Files
+
+```bash
+# Deleting 2 files named, file1.txt and file2.txt
 rm file1.txt file2.txt
 ```
 
-Delete multiple files at once.
+### Deleting Folders
 
-### Delete Folders
-
-Include the option, `-r`, to delete a folder.
+- Like `cp`, you need the option `-r` to delete a folder
+- `-f` can force delete
 
 ```bash
+# Delete entire folder called directory/
 rm -r directory/
+
+# Force delete all contents with `-f`
+rm -rf directory/
 ```
