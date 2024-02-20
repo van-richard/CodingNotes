@@ -4,7 +4,7 @@ Requires a GitHub account.
 
 ## Jupyter Book
 
-Design a website using jupyter notebooks
+Design a website using Jupyter notebooks
 
 [Jupyter-Book](https://jupyterbook.org/en/stable/intro.html)
 

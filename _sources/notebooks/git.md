@@ -1,20 +1,18 @@
 # Introduction to `git` 
 
-`git` is a version control system. 
-`git` helps you keep track of code changes. 
-`git` is used to collaborate on code. 
+`git` is a version control system
+- helps you keep track of code changes
+- is used to collaborate on code
 
 [GitHub](https://github.com) is a cloud-based hosting service that lets you manage `git` repositories. If you have open-source projects that use `git`, then GitHub is designed to help you better manage them.
 
-## Basics
-
-### Copy repository from GitHub
+## Copy repository from GitHub
 
 ```bash
 git clone <githublink>
 ```
 
-### Push your changes
+## Push your changes
 
 Make sure you update your copy first with:
 
