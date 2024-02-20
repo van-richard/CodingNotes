@@ -2,7 +2,7 @@
 keywords: compile, amber, qmhub, qchem, torchmd-net, install, software
 ---
 
-# Compiling Amber
+# Compiling Amber on Pete
 
 Amber + QMhub + Torchmd-net 
 
