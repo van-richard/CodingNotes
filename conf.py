@@ -21,10 +21,10 @@ html_sourcelink_suffix = ''
 html_static_path = ['_static/']
 html_css_path = '_static/custom.css'
 html_theme = 'pydata_sphinx_theme'
-html_sidebar: {
-        "notebooks/**": ['sidebar-nav-bs'],
-        "index": ['sidebar-nav-bs'],
-    }
+# html_sidebar: {
+#     "**": ['sidebar-nav-bs'],
+#     "index": ['sidebar-nav-bs'],
+#     }
 html_theme_options = {
     "logo": {
         'text': 'CodingNotes',
@@ -36,9 +36,7 @@ html_theme_options = {
     'article_header_start': ['breadcrumbs'],
     "secondary_sidebar_items": {
         "**": ["page-toc", "sourcelink"],
-        "index": ["page-toc"],
         },
-    # 'secondary_sidebar_items': ['page-toc', "sourcelink"],
     "navbar_align": "content",
     'navbar_start': 'navbar-logo',
     'navbar_center': 'navbar-nav',
@@ -88,4 +86,4 @@ numfig = True
 # pygments_style = 'sphinx'
 suppress_warnings = ['myst.domains']
 use_jupyterbook_latex = True
-use_multitoc_numbering = True
+# use_multitoc_numbering = True
