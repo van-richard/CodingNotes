@@ -1,7 +1,7 @@
 # Plot PMF with PyMBAR
 
 ```{note}
-This requires you to download 
+This requires you to download [mbar_pmf.py](https://github.com/van-richard/CodingNotes/blob/d66c052e8c932342b08ced4500fe397d19260334/_static/scripts/mbar_pmf.py)
 ```
 
 ```python
