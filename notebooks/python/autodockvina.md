@@ -1,6 +1,6 @@
 # Create AutoDock Vina Conda Environment on HPC
 
-This example will help you create an AutoDock Vina Conda enviroment on Pete.
+This example will help you create an AutoDock Vina Conda environment on Pete.
 
     - Follows [AutoDock Vina ReadTheDocs](https://autodock-vina.readthedocs.io/en/latest/index.html)
     - Also helpful is the [ADFR Suite](https://autodock-vina.readthedocs.io/en/latest/index.html)

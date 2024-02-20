@@ -4,10 +4,7 @@ keywords: root, mean, square, fluctuation, rmsf, pytraj
 
 # Root Mean Square Fluctuation (RMSF)
 
-*Example*
-
 Plot for C$_{\alpha}$ of protein in Amber MD simulation, with domains labeled by color.
-
 
 ```python
 import pytraj as pt

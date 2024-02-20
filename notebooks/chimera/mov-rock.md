@@ -1,15 +1,7 @@
----
-orphan: true
----
-
 # Rocking
 
-
-<center><video src="../../_static/chimerax_rock_cas9.mp4"width="50%" height="50%" controls>
+<center><video src="https://github.com/van-richard/CodingNotes/blob/531e36ca915575b44ae17e409cd825be4780842e/_static/videos/chimerax_rock_cas9.mp4"width="50%" height="50%" controls>
 </video></center>
-
-
-
 
 The code looks like 
 

@@ -68,7 +68,7 @@ html_theme_options = {
     ],
     'navbar_persistent': ['theme-switcher', 'search-button-field'],
     "show_nav_level": 3,
-    "show_toc_level": 2,
+    "show_toc_level": 1,
     "header_links_before_dropdown": 5,
     'search_bar_text': 'Search meeeeee', 
     'check_switcher': True,
@@ -85,7 +85,7 @@ nb_execution_mode = 'auto'
 nb_execution_timeout = 30
 nb_output_stderr = 'show'
 numfig = True
-pygments_style = 'sphinx'
+# pygments_style = 'sphinx'
 suppress_warnings = ['myst.domains']
 use_jupyterbook_latex = True
 use_multitoc_numbering = True

@@ -1,4 +1,4 @@
-# ffmpeg
+# Editing with `ffmpeg`
 
 [ffmpeg Download](https://ffmpeg.org)
 
@@ -17,4 +17,8 @@ After creating image files from VMD, use `ffmpeg` to make the video by:
 `output.mp4` - Video name and filetype
 
 
+## Convert `ppm` to `png`
 
+```bash
+~/Programs/ffmpeg -i file.%05d.ppm file.%05d.png
+```

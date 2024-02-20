@@ -17,7 +17,7 @@ The ChimeraX command line is independent of model panel!
 
 ## Summary of Command Line Options
 
-Rather than searching through the GUI (graphic user interface) for the function you need (i.e., Show/Hide atoms/ribbon/surface), you can use the commmand line interface to control the display.
+Rather than searching through the GUI (graphic user interface) for the function you need (i.e., Show/Hide atoms/ribbon/surface), you can use the command line interface to control the display.
 
 **Command Line Options:**
 

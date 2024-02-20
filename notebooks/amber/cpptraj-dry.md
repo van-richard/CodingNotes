@@ -11,7 +11,7 @@ CPPTRAJ can be used to remove explicit water from the simulation. To do this, ma
 1) Strip water from trajectory (`traj1.in`)
    - Load topology/trajectory files
    - `autoimage` re-orients the solute in the water box
-   - `strip` removes the residues `WAT`. and counterions
+   - `strip` removes the residues `WAT` and counterions
    - Fit new trajectory to alpha carbons
    - Save as `dry-prod.nc`
   

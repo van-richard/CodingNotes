@@ -4,7 +4,7 @@ keywords: principal, component, analysis, pca, dimension, reduction, dimensional
 
 # Principal Component Analysis
 
-*Example*
+*Pytraj Example*
 
 ```python
 import pytraj as pt

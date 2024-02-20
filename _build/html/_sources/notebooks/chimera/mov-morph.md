@@ -1,14 +1,8 @@
----
-orphan: true
----
-
 # Morphing
 
 
-<center><video src="../../_static/chimerax_morph_fncas12a.mp4" width="50%" height="50%" controls>
+<center><video src="https://github.com/van-richard/CodingNotes/blob/531e36ca915575b44ae17e409cd825be4780842e/_static/videos/chimerax_morph_fncas12a.mp4" width="50%" height="50%" controls>
 </video></center>
-
-
 
 
 ## Morphing transition between 2 PDB structures
@@ -41,9 +35,4 @@ Morph transition is done by:
 
 ```
 morph #1,2,3,4,5 frames 100
-```
-
-
-```python
-
 ```

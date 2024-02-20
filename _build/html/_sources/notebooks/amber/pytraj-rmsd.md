@@ -17,7 +17,7 @@ $$
       ((v_{ix} - w_{ix})^2 + (v_{iy} - w_{iy})^2 + (v_{iz} - w_{iz})^2})
 $$
 
-Here is an example using `pytraj`
+
 
 ```python
 import pytraj as pt
@@ -36,11 +36,7 @@ plt.savefig('rmsf.png', dpi=300)
 
 ```
 
-## Pairwise Root Mean Square Deviation
-
-2D-RMSD 
-
-*Example*
+## Pairwise Root Mean Square Deviation (2D RMSD)
 
 ```python
 import pytraj as pt

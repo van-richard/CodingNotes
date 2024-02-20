@@ -1,5 +1,3 @@
-
-
 # `awk` - manipulate text
 
 Treating a text file, were each space is a column, you can print the columns with:
@@ -12,7 +10,7 @@ Where `$1` is the first column. Index starts at 1.
 
 ## Separator
 
-You can chose the field separator with, `-F`. This example choses the comma as the separator, and print the 5th column:
+You can chose the field separator with, `-F`. Here, the comma is a separator to print the 5th column:
 
 ```bash
 awk -F ',' '{print $5} file'
