@@ -68,7 +68,7 @@ html_theme_options = {
     "show_nav_level": 3,
     "show_toc_level": 1,
     "header_links_before_dropdown": 5,
-    'search_bar_text': 'Search meeeeee', 
+    'search_bar_text': 'Search mee!!', 
     'check_switcher': True,
     }
 html_title = 'CodingNotes'

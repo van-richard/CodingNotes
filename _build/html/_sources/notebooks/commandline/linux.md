@@ -1,7 +1,6 @@
 # List of notebooks/commandline/commands
 
-:::{Glossary}
-
+```{tableofcontents}
 [awk](./notebooks/commandline/commands/awk)
      manipulate text
 
@@ -107,7 +106,7 @@
 
 
 [ssh-keygen](./notebooks/commandline/commands/ssh-keygen)
-    keygen` 
+    keygen 
 
 
 [ssh](./notebooks/commandline/commands/ssh)
@@ -119,7 +118,7 @@
 
 
 [tar](./notebooks/commandline/commands/tar)
-     compress/uncompress files
+     compress/decompress files
 
 
 [touch](./notebooks/commandline/commands/touch)
@@ -129,5 +128,4 @@
 [trap](./notebooks/commandline/commands/trap)
      signalled execution
 
-
-:::
+```
