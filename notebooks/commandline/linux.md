@@ -1,132 +1,132 @@
-# List of Commands
+# List of notebooks/commandline/commands
 
 :::{Glossary}
 
-[awk](./commands/awk)
+[awk](./notebooks/commandline/commands/awk)
      manipulate text
 
 
-[cat](./commands/cat)
+[cat](./notebooks/commandline/commands/cat)
      print input to standard output
 
 
-[cd](./commands/cd)
+[cd](./notebooks/commandline/commands/cd)
      change directories
 
 
-[chsh](./commands/chsh)
+[chsh](./notebooks/commandline/commands/chsh)
      change shell
 
 
-[cp](./commands/cp)
+[cp](./notebooks/commandline/commands/cp)
      copy files or folders
 
 
-[echo](./commands/echo)
+[echo](./notebooks/commandline/commands/echo)
      Print Argument
 
 
-[grep](./commands/grep)
+[grep](./notebooks/commandline/commands/grep)
      search for pattern in file or folders
 
 
-[head](./commands/head)
+[head](./notebooks/commandline/commands/head)
      read from top of file to standard output
 
 
-[help](./commands/help)
+[help](./notebooks/commandline/commands/help)
      read documentation
 
 
-[less](./commands/less)
+[less](./notebooks/commandline/commands/less)
      view files
 
 
-[ls](./commands/ls)
+[ls](./notebooks/commandline/commands/ls)
      list information about files/folders 
 
 
-[man](./commands/man)
+[man](./notebooks/commandline/commands/man)
      documentation for various functions 
 
 
-[mkdir](./commands/mkdir)
+[mkdir](./notebooks/commandline/commands/mkdir)
      make new directories.
 
 
-[module](./commands/module)
+[module](./notebooks/commandline/commands/module)
      load software on slurm
 
 
-[mv](./commands/mv)
+[mv](./notebooks/commandline/commands/mv)
      move files/folders from one place to another.
 
 
-[pwd](./commands/pwd)
+[pwd](./notebooks/commandline/commands/pwd)
      print working directory
 
 
-[rm](./commands/rm)
+[rm](./notebooks/commandline/commands/rm)
      delete files
 
 
-[rsync](./commands/rsync)
+[rsync](./notebooks/commandline/commands/rsync)
      sync files/folders 
 
 
-[sbatch](./commands/sbatch)
+[sbatch](./notebooks/commandline/commands/sbatch)
      Submit job to Slurm
 
 
-[scancel](./commands/scancel)
+[scancel](./notebooks/commandline/commands/scancel)
      Cancel Slurm Jobs
 
 
-[scp](./commands/scp)
+[scp](./notebooks/commandline/commands/scp)
      copy files/folders over ssh
 
 
-[sed](./commands/sed)
+[sed](./notebooks/commandline/commands/sed)
      tranform/replace text!
 
 
-[seq](./commands/seq)
+[seq](./notebooks/commandline/commands/seq)
      sequence of numbers
 
 
-[setfacl](./commands/setfacl)
+[setfacl](./notebooks/commandline/commands/setfacl)
      change file/folder permissions 
 
 
-[sinfo](./commands/sinfo)
+[sinfo](./notebooks/commandline/commands/sinfo)
      View information about Slurm nodes and partitions.
 
 
-[sort](./commands/sort)
+[sort](./notebooks/commandline/commands/sort)
      sorts lines
 
 
-[ssh-keygen](./commands/ssh-keygen)
+[ssh-keygen](./notebooks/commandline/commands/ssh-keygen)
     keygen` 
 
 
-[ssh](./commands/ssh)
+[ssh](./notebooks/commandline/commands/ssh)
      secure shell protocol
 
 
-[tail](./commands/tail)
+[tail](./notebooks/commandline/commands/tail)
      read from bottom of file
 
 
-[tar](./commands/tar)
+[tar](./notebooks/commandline/commands/tar)
      compress/uncompress files
 
 
-[touch](./commands/touch)
+[touch](./notebooks/commandline/commands/touch)
      Make File
 
 
-[trap](./commands/trap)
+[trap](./notebooks/commandline/commands/trap)
      signalled execution
 
 
