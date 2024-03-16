@@ -1,4 +1,4 @@
-# Introduction to Chimera/ChimeraX
+# Overview
 
 ```{tableofcontents}
 ```

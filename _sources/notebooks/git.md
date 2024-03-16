@@ -1,4 +1,4 @@
-# Introduction to `git` 
+# Overview
 
 `git` is a version control system
 - helps you keep track of code changes
