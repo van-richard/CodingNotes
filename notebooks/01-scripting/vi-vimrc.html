@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.35. FE Alchem &#8212; CodingNotes</title>
+    <title>1. .vimrc &#8212; CodingNotes</title>
   
   
   
@@ -61,15 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/theory/fe-alchemical';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/theory/fe-alchemical.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/01-scripting/vi-vimrc';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/01-scripting/vi-vimrc.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.37. Free Energy Estimators" href="fe-estimators.html" />
-    <link rel="prev" title="3.34. Binding Affinity" href="binding.html" />
+    <link rel="next" title="python" href="python.html" />
+    <link rel="prev" title="vi/vim" href="vi.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,8 +179,8 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-scripting/introduction.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="introduction.html">
                         Scripting
                       </a>
                     </li>
@@ -195,7 +193,7 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
                       </a>
@@ -365,8 +363,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-scripting/introduction.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="introduction.html">
                         Scripting
                       </a>
                     </li>
@@ -379,7 +377,7 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
                       </a>
@@ -455,71 +453,20 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../amber/usage-sourceamber.html">3.1. Load Amber Software</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../amber/install.html">Install / Compile</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../amber/install-amber.html">1. Compiling Amber on Pete</a></li>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="bash.html"><code class="docutils literal notranslate"><span class="pre">bash</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commandline/bash-startup.html">1. Start-Up Files</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/cpptraj-dry.html">3.2. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj-pairwisedistance.html">3.3. Pairwise Distance Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj-pca.html">3.4. Principal Component Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj-rmsd.html">3.5. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj-rmsf.html">3.6. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pymbar-mbar.html">3.7. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="vi.html"><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">1. <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code></a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linux / Ubuntu</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ubuntu-multiversion.html">3.8. Manging Multiple Compiler Versions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/parallel.html">3.9. GNU Parallel</a></li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="python.html"><code class="docutils literal notranslate"><span class="pre">python</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../python/script/conda-arm-intel.html">1. Intel Environments on M1/M2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python/script/pandas-latextable.html">2. Convert Pandas DataFrame to LaTeX</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">ssh / SLURM</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-autologin.html">3.10. Automate Login (Password-less)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-config.html">3.11. Configuring ssh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-extra.html">3.12. Upload, Download, &amp; Extras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/module.html">3.13. <code class="docutils literal notranslate"><span class="pre">module</span></code> on Clusters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/module-modulefiles.html">3.14. Write Custom Modulefiles</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chimera / ChimeraX</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../chimera.html">3.15. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">3.16. ChimeraX Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">3.17. Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">3.18. Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">3.19. Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">3.20. Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">3.21. Spin</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">git</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../git.html">3.22. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../git/branch.html">3.23. Branching</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Conda</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../python/conda.html">3.24. Conda</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../python/conda-env.html">3.26. Conda Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/conda-rc.html">3.27. Conda Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/jupyter.html">3.28. Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/jupyterbook.html">3.29. DIY GitHub Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/python-helplist.html">3.30. Helpful stuff</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory.html">3.31. Theory / Methods Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics-classical.html">3.32. Classical Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics-qmmm.html">3.33. QM/MM Simulations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="binding.html">3.34. Binding Affinity</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.35. FE Alchem</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="fe-estimators.html">3.37. Free Energy Estimators</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">3.38. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -558,7 +505,10 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">3. </span>More Notes !!</a></li>
+    <li class="breadcrumb-item"><a href="introduction.html" class="nav-link"><span class="section-number">2. </span>Scripting</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="vi.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -577,71 +527,24 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="fe-alchem">
-<h1><span class="section-number">3.35. </span>FE Alchem<a class="headerlink" href="#fe-alchem" title="Permalink to this heading">#</a></h1>
-<div class="dropdown admonition important">
-<p class="admonition-title">Important</p>
-<p>For more information, refer to the
-<a class="reference external" href="https://livecomsjournal.org/index.php/livecoms/article/view/v2i1e18378">Best Practices for Alchemical Free Energy Calculations</a> paper by Xu et. al.</p>
-<blockquote>
-<div><p>Alchemical calculations can be used in a variety of scenarios, such as:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="vimrc">
+<h1><span class="section-number">1. </span><code class="docutils literal notranslate"><span class="pre">.vimrc</span></code><a class="headerlink" href="#vimrc" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p>computing the free energy of a conformational change for a molecule with a high barrier to interconversion (Fig. 1A);</p></li>
-<li><p>computing partition (log P) or distribution (log D) coeffi- cients between environments (Fig. 1B) [3, 4]</p></li>
-<li><p>determining partitioning between compartments into membranes (Fig. 1C) [5].</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> file by <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">~/.vimrc</span></code></p></li>
+<li></li>
 </ul>
-<p>Furthermore, alchemical calculations are frequently used to estimate changes in free energies upon modifying a ligand or protein:</p>
-<ul class="simple">
-<li><p>a protein residue can be alchemically mutated to probe the impact on binding affinity (Fig. 1D)[6, 7] or changes in protein thermostability [8–11];</p></li>
-<li><p>the entire ligand can be alchemically transferred from protein to solvent in an absolute binding free energy calculation (Fig. 1E) [12–14];</p></li>
-<li><p>small alchemical modifications can be made between chemically related ligands to estimate relative differ- ences in binding free energies (Fig. 1F) [15–19].
-– Xu et. al, Best Practices for Alchemical Free Energy Calculations.</p></li>
-</ul>
-</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="w"> </span>number
+syntax<span class="w"> </span>on
+
+<span class="nb">set</span><span class="w"> </span><span class="nv">tabstop</span><span class="o">=</span><span class="m">4</span>
+<span class="nb">set</span><span class="w"> </span><span class="nv">shiftwidth</span><span class="o">=</span><span class="m">4</span>
+<span class="nb">set</span><span class="w"> </span><span class="nv">softtabstop</span><span class="o">=</span><span class="m">4</span>
+<span class="nb">set</span><span class="w"> </span>expandtab
+filetype<span class="w"> </span>plugin<span class="w"> </span>indent<span class="w"> </span>on
+
+<span class="nb">set</span><span class="w"> </span>noswapfile
+</pre></div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="alchemical-free-energy">
-<h1><span class="section-number">3.36. </span>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
-<p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
-<p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-afa9d9cc-b2b1-4074-b93b-cfa0e4864e0e">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-afa9d9cc-b2b1-4074-b93b-cfa0e4864e0e" title="Permalink to this equation">#</a></span>\[\begin{align}
-\Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
-                         &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
-\end{align}\]</div>
-<p>Alchemical relative free energy calculations avoids the need to simulate binding and unbinding events by making use of the fact that the free energy is a state function and exploiting the thermodynamic cycle.</p>
-<aside class="sidebar">
-<figure class="align-center" id="id1" style="width: 100%">
-<img alt="../../_images/fe-alchem-thermo-cycle.png" src="../../_images/fe-alchem-thermo-cycle.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Example of thermodynamic cycle from the paper.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</aside>
-<div class="amsmath math notranslate nohighlight" id="equation-74dd0b12-5aab-411e-9fd3-eab3576c81c8">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-74dd0b12-5aab-411e-9fd3-eab3576c81c8" title="Permalink to this equation">#</a></span>\[\begin{align}
-\Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
-                         &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
-                         &amp; = \Delta G_{bound} - \Delta_{unbound}
-\end{align}\]</div>
-<p>Where <span class="math notranslate nohighlight">\(\Delta G_{bound/unbound}\)</span> is the free energy of mutating <span class="math notranslate nohighlight">\(A\)</span> to <span class="math notranslate nohighlight">\(B\)</span> Eq. 9 and Fig. 2 tell us that the difference in free energy of binding can be computed by running two independent calculations estimating the free energy cost of mutating A into B in the binding pocket (<span class="math notranslate nohighlight">\(\Delta G_{bound}\)</span>) and in solvent (<span class="math notranslate nohighlight">\(\Delta G_{unbound}\)</span>), saving us the need to simulate the physical binding process of the two.</p>
-<div class="dropdown admonition note">
-<p class="admonition-title">Note</p>
-<p>Note that, when A and B have a different number of atoms, the factors <span class="math notranslate nohighlight">\(\ln \frac{Z(RB)}{Z(B)} \mathrm{and} \ln \frac{Z(RA)}{Z(A)}\)</span>, appear with units of volume in logarithms, but these factors exactly cancel between the terms.</p>
-</div>
-<p>In practice, the mutation of A to B is carried out by introducing one or more parameters <span class="math notranslate nohighlight">\(\vec \lambda\)</span> controlling the potential energy function <span class="math notranslate nohighlight">\(U(\vec q; \vec \lambda)\)</span> such that the potential of compounds A and B is recovered at two particular values <span class="math notranslate nohighlight">\(\vec \lambda_A\)</span> and  <span class="math notranslate nohighlight">\(\vec \lambda_B\)</span>.</p>
-<p>Briefly, this is achieved by simulating a “chimeric” molecule composed of enough atoms to represent both A and B. A subset of the energetic terms in <span class="math notranslate nohighlight">\(U(\vec q; \vec \lambda)\)</span> is then modulated by <span class="math notranslate nohighlight">\(\vec \lambda\)</span> so that at <span class="math notranslate nohighlight">\(\vec \lambda_A\)</span>, the atoms that form molecule A are activated and those belonging exclusively to B are non-interacting “dummy atoms”, while the opposite occurs at  <span class="math notranslate nohighlight">\(\vec \lambda_B\)</span>.</p>
-<p>We can rigorously account for fluctuations in other thermodynamic parameters such as, changes in volume <span class="math notranslate nohighlight">\(V\)</span> when simulating at constant pressure <span class="math notranslate nohighlight">\(P\)</span>, or changes in number of molecules, <span class="math notranslate nohighlight">\(n_i\)</span> of species <span class="math notranslate nohighlight">\(i\)</span> at constant chemical potential <span class="math notranslate nohighlight">\(\mu_i\)</span> (e.g., number of waters or ions) by introducing the reduced potential.</p>
-<div class="math notranslate nohighlight">
-\[
-u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q) + \sum_{i} \mu_i n_i(\vec q) + ... \right]
-\]</div>
-<p>Where, the thermodynamic and alchemical parameters <span class="math notranslate nohighlight">\({\beta , \vec \lambda, P, \mu, ...}\)</span> gives us the thermodynamic state. In an alchemical calculation, which the thermodynamic state only vary in <span class="math notranslate nohighlight">\(\vec \lambda\)</span>, are referred to as alchemical states. The free energy of mutating A to B in any environment (binding pocket, solvent…) can then be computed as (free energy difference equation?)</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta G_{env} = -k_B T \ln \frac{Z(\vec \lambda_B)}{Z(\vec \lambda_A)} = -k_B T \ln \frac{\int_{\Gamma_j} \mathrm{exp} (u( \vec{q}; \vec \lambda_B)) d\vec{q}}{\int_{\Gamma_i} \mathrm{exp} (u(\vec q; \vec \lambda_A))d\vec{q}} 
-\]</div>
-<p>over the configurational space of the enviornment (<span class="math notranslate nohighlight">\(\Gamma_{env}\)</span>). While it is generally not feasible to compute the two partition functions <span class="math notranslate nohighlight">\(Z(\vec \lambda_\)</span>, several free energy estimators have been devised to robustly estimate the ratio of partition functions.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -657,7 +560,7 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/theory"
+            path: "./notebooks/01-scripting"
         },
         predefinedOutput: true
     }
@@ -674,20 +577,20 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="binding.html"
+       href="vi.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.34. </span>Binding Affinity</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></p>
       </div>
     </a>
     <a class="right-next"
-       href="fe-estimators.html"
+       href="python.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.37. </span>Free Energy Estimators</p>
+        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">python</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -702,21 +605,9 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
 
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3.35. FE Alchem</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alchemical-free-energy">3.36. Alchemical Free Energy</a></li>
-</ul>
-
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/theory/fe-alchemical.md">
+    <a href="../../_sources/notebooks/01-scripting/vi-vimrc.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

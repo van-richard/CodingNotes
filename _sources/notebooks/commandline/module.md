@@ -22,7 +22,7 @@ module list
 
 ## All available software
 
-```{bash}
+```bash
 module av 
 # or 
 module available
@@ -30,7 +30,7 @@ module available
 
 ## Search for specific module 
 
-```{bash}
+```bash
 module spider STRING
 # or
 module -r spider STRING # regular expression

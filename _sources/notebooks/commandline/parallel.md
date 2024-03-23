@@ -1,4 +1,4 @@
-# GNU Parallel Examples
+# GNU Parallel 
 
 ```{margin}
 If you write loops in shell, GNU parallel can replace them (while being faster)!
