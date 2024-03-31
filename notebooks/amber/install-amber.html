@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Compiling Amber on Pete &#8212; CodingNotes</title>
+    <title>2.2.1. Compiling Amber on Pete &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Export Dry Trajectory (no water)" href="cpptraj-dry.html" />
-    <link rel="prev" title="Install / Compile" href="install.html" />
+    <link rel="next" title="2.3. Export Dry Trajectory (no water)" href="cpptraj-dry.html" />
+    <link rel="prev" title="2.2. Install / Compile" href="install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -455,70 +455,69 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="usage-sourceamber.html">1. Load Amber Software</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="install.html">Install / Compile</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1. Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage-sourceamber.html">2.1. Load Amber Software</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="install.html">2.2. Install / Compile</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2.1. Compiling Amber on Pete</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cpptraj-dry.html">2. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pairwisedistance.html">3. Pairwise Distance Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">4. Principal Component Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsd.html">5. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">6. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">7. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpptraj-dry.html">2.3. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pairwisedistance.html">2.4. Pairwise Distance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">2.5. Principal Component Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsd.html">2.6. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">2.7. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">2.8. Plot PMF with PyMBAR</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">ubuntu</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linux / Ubuntu</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ubuntu-multiversion.html">1. Manging Multiple Compiler Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/ubuntu-multiversion.html">2.9. Manging Multiple Compiler Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/parallel.html">2.10. GNU Parallel</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">ssh / SLURM</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/bash-startup.html">1. Start-Up Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/module.html">1. <code class="docutils literal notranslate"><span class="pre">module</span></code> on Clusters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/module-modulefiles.html">2. Write Custom Modulefiles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/parallel.html">3. GNU Parallel Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-autologin.html">4. Automate Login (Password-less)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-config.html">5. Configuring ssh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-extra.html">6. Upload, Download, &amp; Extras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-autologin.html">2.11. Automate Login (Password-less)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-config.html">2.12. Configuring ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-extra.html">2.13. Upload, Download, &amp; Extras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/module.html">2.14. <code class="docutils literal notranslate"><span class="pre">module</span></code> on Clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../commandline/module-modulefiles.html">2.15. Write Custom Modulefiles</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Chimera / ChimeraX</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../chimera.html">1. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">2. ChimeraX Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">3. Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">4. Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">5. Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">6. Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">7. Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera.html">2.16. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">2.17. ChimeraX Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">2.18. Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">2.19. Fading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">2.20. Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">2.21. Rocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">2.22. Spin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">git</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../git.html">1. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../git/branch.html">2. Branching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git.html">2.23. Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../git/branch.html">2.24. Branching</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Conda</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../python/conda.html">1. Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/conda.html">2.25. Conda</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../python/conda-env.html">3. Conda Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/conda-rc.html">4. Conda Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/jupyter.html">5. Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/jupyterbook.html">6. DIY GitHub Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/python-helplist.html">7. Helpful stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/conda-env.html">2.27. Conda Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/conda-rc.html">2.28. Conda Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/jupyter.html">2.29. Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/jupyterbook.html">2.30. DIY GitHub Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python/python-helplist.html">2.31. Helpful stuff</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory.html">1. Theory / Methods Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/basics-classical.html">2. Classical Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/basics-qmmm.html">3. QM/MM Simulations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/binding.html">4. Binding Affinity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/fe-alchemical.html">5. FE Alchem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">2.32. Theory / Methods Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/basics-classical.html">2.33. Classical Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/basics-qmmm.html">2.34. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/binding.html">2.35. Binding Affinity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/fe-alchemical.html">2.36. FE Alchem</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../theory/fe-estimators.html">7. Free Energy Estimators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/fe-estimators.html">2.38. Free Energy Estimators</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">1. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">2.39. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
 </ul>
 </div>
 </nav></div>
@@ -557,10 +556,10 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link">More Notes !!</a></li>
+    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">2. </span>More Notes !!</a></li>
     
     
-    <li class="breadcrumb-item"><a href="install.html" class="nav-link">Install / Compile</a></li>
+    <li class="breadcrumb-item"><a href="install.html" class="nav-link"><span class="section-number">2.2. </span>Install / Compile</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -580,7 +579,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="compiling-amber-on-pete">
-<h1><span class="section-number">1. </span>Compiling Amber on Pete<a class="headerlink" href="#compiling-amber-on-pete" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.2.1. </span>Compiling Amber on Pete<a class="headerlink" href="#compiling-amber-on-pete" title="Permalink to this heading">#</a></h1>
 <p>Amber + QMhub + Torchmd-net</p>
 <p>Compile Amber for QM/MM simulations with QMhub and Torchmd-net.</p>
 <p>Using Amber22 and AmberTools23 on Pete.</p>
@@ -593,7 +592,7 @@ document.write(`
 </ul>
 </div>
 <section id="create-conda-environment">
-<h2><span class="section-number">1.1. </span>Create Conda Environment<a class="headerlink" href="#create-conda-environment" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.2.1.1. </span>Create Conda Environment<a class="headerlink" href="#create-conda-environment" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Create a <code class="docutils literal notranslate"><span class="pre">torchmd-net</span></code> conda environment, and load modules.</p></li>
 </ol>
@@ -633,7 +632,7 @@ make<span class="w"> </span>helpmelib
 </ol>
 </section>
 <section id="amber">
-<h2><span class="section-number">1.2. </span>Amber<a class="headerlink" href="#amber" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.2.1.2. </span>Amber<a class="headerlink" href="#amber" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>In <code class="docutils literal notranslate"><span class="pre">Programs/sources</span></code>, decompress AmberTools <em>then</em> Amber</p></li>
 </ol>
@@ -657,7 +656,7 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>Amber
 <li><p>Change the <code class="docutils literal notranslate"><span class="pre">run_cmake</span></code> and run it <code class="docutils literal notranslate"><span class="pre">./run_cmake</span></code>:</p></li>
 </ol>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Listing 1.4 </span><span class="caption-text">run_cmake</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 2.1 </span><span class="caption-text">run_cmake</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>cmake<span class="w"> </span><span class="nv">$AMBER_PREFIX</span>/amber22_src<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>/scratch/van/.Programs/amber22<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-DCOMPILER<span class="o">=</span>INTEL<span class="w"> </span><span class="se">\</span>
@@ -718,7 +717,7 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>Amber
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Install / Compile</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Install / Compile</p>
       </div>
     </a>
     <a class="right-next"
@@ -726,7 +725,7 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>Amber
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Export Dry Trajectory (no water)</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Export Dry Trajectory (no water)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -746,8 +745,8 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>Amber
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-conda-environment">1.1. Create Conda Environment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amber">1.2. Amber</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-conda-environment">2.2.1.1. Create Conda Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amber">2.2.1.2. Amber</a></li>
 </ul>
   </nav></div>
 
