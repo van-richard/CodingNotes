@@ -3,17 +3,39 @@ defaults:
   numbered: True
 subtrees:
 - entries:
-  - file: notebooks/Pregame
   - file: notebooks/00-quickstart/introduction
-    subtrees:
-    - entries:
-      - glob: notebooks/00-quickstart/0*
+    entries:
+    - glob: notebooks/00-quickstart/0*
   - file: notebooks/01-scripting/introduction
     subtrees:
     - entries:
-      - file: notebooks/01-scripting/bash-overview
-      - file: notebooks/01-scripting/vi-overview
-      - file: notebooks/01-scripting/python-overview
+      - file: notebooks/01-scripting/bash
+        subtrees:
+        - entries:
+          - glob: notebooks/01-scripting/bash*
+      - file: notebooks/01-scripting/vi
+        subtrees:
+        - entries:
+          - glob: notebooks/01-scripting/vi-*
+      - file: notebooks/01-scripting/ssh
+        subtrees:
+        - entries:
+          - glob: notebooks/01-scripting/ssh-*
+          - glob: notebooks/01-scripting/module*
+          - glob: notebooks/01-scripting/ubuntu-*
+          - file: notebooks/01-scripting/gnu-parallel
+      - file: notebooks/01-scripting/python
+        subtrees:
+        - entries:
+          - glob: notebooks/python/script/*
+          - glob: notebooks/01-scripting/jupyter*
+          - glob: notebooks/01-scripting/c*
+          - glob: notebooks/01-scripting/j*
+          - glob: notebooks/01-scripting/p*
+      - file: notebooks/01-scripting/git
+        subtrees:
+        - entries:
+          - glob: notebooks/01-scripting/git-*
   - file: notebooks/02-simulation/introduction
     subtrees:
     - caption: MD Simulation Tutorials
@@ -23,80 +45,26 @@ subtrees:
     - caption: QM/MM Simulation Tutorials
       entries:
       - file: notebooks/02-simulation/claisen
+    - caption: Analysis Scripts
+      entries:
+      - glob: notebooks/amber/*traj*
+      - glob: notebooks/amber/*mbar*
+  - file: notebooks/chimera
+    entries:
+    - glob: notebooks/chimera/*
   - file: notebooks/morenotes
     subtrees:
-    - caption: Amber Simulations
+    - caption: Amber 
       entries:
-      - file: notebooks/amber/usage
-        subtrees:
-        - entries:
-          - glob: notebooks/amber/usage-*
+      - glob: notebooks/amber/usage-*
       - file: notebooks/amber/install
-        subtrees:
-        - entries:
-          - glob: notebooks/amber/install-*
-      - file: notebooks/amber/analysis
-        subtrees:
-        - entries:
-          - glob: notebooks/amber/*traj*
-          - glob: notebooks/amber/*mbar*
-    - caption: Command Line Stuff
-      entries:
-      - file: notebooks/bash
-        subtrees:
-        - caption: bash Configuration / Settings 
-          entries:
-          - glob: notebooks/commandline/bash-*
-      - file: notebooks/linux
-        subtrees:
-        - caption: Ubuntu / Linux
-          entries:
-          - glob: notebooks/commandline/ubuntu-*
-        subtrees:
-        - caption: Linux Commands
-          entries: 
-          - glob: notebooks/commandline/commands/*
-    - caption: ssh / SLURM
-      entries:
-      - glob: notebooks/commandline/ssh-*
-    - caption: Chimera / ChimeraX
-      entries:
-      - file: notebooks/chimera
-        subtrees:
-        - caption: Command Line
-          entries:
-          - glob: notebooks/chimera/cli-*
-        - caption: Images
-          entries:
-          - glob: notebooks/chimera/img-*
-        - caption: Movies
-          entries:
-          - glob: notebooks/chimera/mov-*
-    - caption: git
-      entries:
-      - file: notebooks/git
-        subtrees:
-        - caption:        
-          entries:
-          - glob: notebooks/git/*
-    - caption: python / Conda
-      entries:
-      - file: notebooks/python
-        subtrees:
-        - caption:
-          entries: 
-          - glob: notebooks/python/*
+        entries:
+        - glob: notebooks/amber/install-*
     - caption: Equations
       entries:
       - file: notebooks/theory
-        subtrees:
-        - caption:
-          entries:
-          - glob: notebooks/theory/*
+      - glob: notebooks/theory/*
     - caption: VMD
       entries:
-      - file: notebooks/vmd
-        subtrees:
-        - caption: Movies
-          entries:
-          - glob: notebooks/vmd/*
+      - glob: notebooks/vmd/*
+    

@@ -19,7 +19,7 @@ html_baseurl = 'https://van-richard.github.io/CodingNotes/'
 html_favicon = '_static/images/van-codingnotes.png'
 html_sourcelink_suffix = ''
 html_static_path = ['_static/']
-html_css_path = '_static/custom.css'
+html_css_path = 'assets/custom.css'
 html_theme = 'pydata_sphinx_theme'
 # html_sidebar: {
 #     "**": ['sidebar-nav-bs'],
@@ -31,8 +31,8 @@ html_theme_options = {
         "image_light": "_static/images/van-abstract-y-light.svg",
         "image_dark": "_static/images/van-abstract-y-dark.svg",
         },
-    "pygment_light_style": "tango",
-    # "pygment_dark_style": "monokai",
+    "pygment_light_style": "lovelace",
+    "pygment_dark_style": "coffee",
     'article_header_start': ['breadcrumbs'],
     "secondary_sidebar_items": {
         "**": ["page-toc", "sourcelink"],
@@ -65,8 +65,8 @@ html_theme_options = {
         },
     ],
     'navbar_persistent': ['theme-switcher', 'search-button-field'],
-    "show_nav_level": 3,
-    "show_toc_level": 1,
+    "show_nav_level": 1,
+    "show_toc_level": 5,
     "header_links_before_dropdown": 5,
     'search_bar_text': 'Search mee!!', 
     'check_switcher': True,
