@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.4. Pairwise Distance Matrix &#8212; CodingNotes</title>
+    <title>2. Pairwise Distance Matrix &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.5. Principal Component Analysis" href="pytraj-pca.html" />
-    <link rel="prev" title="2.3. Export Dry Trajectory (no water)" href="cpptraj-dry.html" />
+    <link rel="next" title="3. Principal Component Analysis" href="pytraj-pca.html" />
+    <link rel="prev" title="1. Export Dry Trajectory (no water)" href="cpptraj-dry.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,13 +166,6 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
                         Quick Start Guide
                       </a>
@@ -186,14 +179,21 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item">
+                    <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../02-simulation/introduction.html">
                         Amber Tutorials
                       </a>
                     </li>
                 
 
-                    <li class="nav-item current active">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../chimera.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
                       </a>
@@ -350,13 +350,6 @@ document.write(`
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
                         Quick Start Guide
                       </a>
@@ -370,14 +363,21 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
+                    <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../02-simulation/introduction.html">
                         Amber Tutorials
                       </a>
                     </li>
                 
 
-                    <li class="nav-item current active">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../chimera.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
                       </a>
@@ -453,71 +453,23 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber</span></p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">MD Simulation Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02-simulation/simple.html">1. Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02-simulation/distance.html">2. Applying Distance Restraints in Classical MD Simulations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">QM/MM Simulation Tutorials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../02-simulation/claisen.html">1. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Analysis Scripts</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="usage-sourceamber.html">2.1. Load Amber Software</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="install.html">2.2. Install / Compile</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="install-amber.html">2.2.1. Compiling Amber on Pete</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cpptraj-dry.html">2.3. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.4. Pairwise Distance Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">2.5. Principal Component Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsd.html">2.6. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">2.7. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">2.8. Plot PMF with PyMBAR</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linux / Ubuntu</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ubuntu-multiversion.html">2.9. Manging Multiple Compiler Versions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/parallel.html">2.10. GNU Parallel</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">ssh / SLURM</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-autologin.html">2.11. Automate Login (Password-less)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-config.html">2.12. Configuring ssh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-extra.html">2.13. Upload, Download, &amp; Extras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/module.html">2.14. <code class="docutils literal notranslate"><span class="pre">module</span></code> on Clusters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/module-modulefiles.html">2.15. Write Custom Modulefiles</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chimera / ChimeraX</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../chimera.html">2.16. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">2.17. ChimeraX Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">2.18. Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">2.19. Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">2.20. Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">2.21. Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">2.22. Spin</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">git</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../git.html">2.23. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../git/branch.html">2.24. Branching</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Conda</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../python/conda.html">2.25. Conda</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../python/conda-env.html">2.27. Conda Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/conda-rc.html">2.28. Conda Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/jupyter.html">2.29. Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/jupyterbook.html">2.30. DIY GitHub Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/python-helplist.html">2.31. Helpful stuff</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory.html">2.32. Theory / Methods Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/basics-classical.html">2.33. Classical Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/basics-qmmm.html">2.34. QM/MM Simulations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/binding.html">2.35. Binding Affinity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../theory/fe-alchemical.html">2.36. FE Alchem</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../theory/fe-estimators.html">2.38. Free Energy Estimators</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">2.39. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpptraj-dry.html">1. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Pairwise Distance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">3. Principal Component Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsd.html">4. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">5. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">6. Plot PMF with PyMBAR</a></li>
 </ul>
 </div>
 </nav></div>
@@ -556,7 +508,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">2. </span>More Notes !!</a></li>
+    <li class="breadcrumb-item"><a href="../02-simulation/introduction.html" class="nav-link"><span class="section-number">3. </span>Amber Tutorials</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -576,7 +528,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pairwise-distance-matrix">
-<h1><span class="section-number">2.4. </span>Pairwise Distance Matrix<a class="headerlink" href="#pairwise-distance-matrix" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2. </span>Pairwise Distance Matrix<a class="headerlink" href="#pairwise-distance-matrix" title="Permalink to this heading">#</a></h1>
 <p><em>Example</em></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
 <span class="kn">from</span> <span class="nn">pytraj</span> <span class="kn">import</span> <span class="n">matrix</span>
@@ -631,7 +583,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.3. </span>Export Dry Trajectory (no water)</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Export Dry Trajectory (no water)</p>
       </div>
     </a>
     <a class="right-next"
@@ -639,7 +591,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.5. </span>Principal Component Analysis</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Principal Component Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
