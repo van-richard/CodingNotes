@@ -1,6 +1,4 @@
-# Conda Environments
-
-## Creating New Environments
+# Creating New Environments
 
 A new conda environment can be created with `create`, and you can specifiy the version of python!
 

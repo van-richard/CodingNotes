@@ -1,6 +1,19 @@
-# Conda
+# `Conda` / `miniconda` / `anaconda`
 
-# Installing [Miniforge3](https://github.com/conda-forge/miniforge)
+- Programs that manages other programs, specificaly for python
+
+- A forver power struggle between slight changes in package/library versions
+
+- Without `conda`, you will definitely bloat your computer with 3 different versions of python 
+
+- Very important to have:
+    
+    1. Virtiual envionrments  - virtual partition which isolates different paackages that might otherwise confict
+    2. `jupyter lab` / `jupyter notebook` - interactive interface for python. very helpful for beginnners
+
+
+
+## Installing [Miniforge3](https://github.com/conda-forge/miniforge)
 
 
 In the repository:
