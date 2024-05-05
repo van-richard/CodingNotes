@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.38. Free Energy Estimators &#8212; CodingNotes</title>
+    <title>7. Free Energy Estimators &#8212; CodingNotes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.39. Editing with ffmpeg" href="../vmd/ffmpeg.html" />
-    <link rel="prev" title="2.36. FE Alchem" href="fe-alchemical.html" />
+    <link rel="next" title="1. Editing with ffmpeg" href="../vmd/ffmpeg.html" />
+    <link rel="prev" title="5. FE Alchem" href="fe-alchemical.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -168,13 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
                         Quick Start Guide
                       </a>
@@ -191,6 +184,13 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../02-simulation/introduction.html">
                         Amber Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../chimera.html">
+                        Overview
                       </a>
                     </li>
                 
@@ -352,13 +352,6 @@ document.write(`
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../Pregame.html">
-                        Pregame
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
                         Quick Start Guide
                       </a>
@@ -375,6 +368,13 @@ document.write(`
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../02-simulation/introduction.html">
                         Amber Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../chimera.html">
+                        Overview
                       </a>
                     </li>
                 
@@ -457,69 +457,25 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../amber/usage-sourceamber.html">2.1. Load Amber Software</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../amber/install.html">2.2. Install / Compile</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../amber/install-amber.html">2.2.1. Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/usage-sourceamber.html">1. Load Amber Software</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../amber/install.html">2. Install / Compile</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../amber/install-amber.html">2.1. Compiling Amber on Pete</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/cpptraj-dry.html">2.3. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj-pairwisedistance.html">2.4. Pairwise Distance Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj-pca.html">2.5. Principal Component Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj-rmsd.html">2.6. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pytraj-rmsf.html">2.7. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../amber/pymbar-mbar.html">2.8. Plot PMF with PyMBAR</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Linux / Ubuntu</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ubuntu-multiversion.html">2.9. Manging Multiple Compiler Versions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/parallel.html">2.10. GNU Parallel</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">ssh / SLURM</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-autologin.html">2.11. Automate Login (Password-less)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-config.html">2.12. Configuring ssh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/ssh-extra.html">2.13. Upload, Download, &amp; Extras</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/module.html">2.14. <code class="docutils literal notranslate"><span class="pre">module</span></code> on Clusters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../commandline/module-modulefiles.html">2.15. Write Custom Modulefiles</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chimera / ChimeraX</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../chimera.html">2.16. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">2.17. ChimeraX Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">2.18. Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">2.19. Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">2.20. Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">2.21. Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">2.22. Spin</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">git</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../git.html">2.23. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../git/branch.html">2.24. Branching</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Conda</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../python/conda.html">2.25. Conda</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="../python/conda-env.html">2.27. Conda Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/conda-rc.html">2.28. Conda Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/jupyter.html">2.29. Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/jupyterbook.html">2.30. DIY GitHub Website</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python/python-helplist.html">2.31. Helpful stuff</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory.html">2.32. Theory / Methods Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics-classical.html">2.33. Classical Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics-qmmm.html">2.34. QM/MM Simulations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="binding.html">2.35. Binding Affinity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe-alchemical.html">2.36. FE Alchem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">1. Theory / Methods Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics-classical.html">2. Classical Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics-qmmm.html">3. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binding.html">4. Binding Affinity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fe-alchemical.html">5. FE Alchem</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.38. Free Energy Estimators</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Free Energy Estimators</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">2.39. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">1. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
 </ul>
 </div>
 </nav></div>
@@ -558,7 +514,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">2. </span>More Notes !!</a></li>
+    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link">More Notes !!</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -578,7 +534,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="free-energy-estimators">
-<h1><span class="section-number">2.38. </span>Free Energy Estimators<a class="headerlink" href="#free-energy-estimators" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">7. </span>Free Energy Estimators<a class="headerlink" href="#free-energy-estimators" title="Permalink to this heading">#</a></h1>
 <p>A free energy estimator, in the context of statistical mechanics and thermodynamics, is a theoretical or computational tool used to calculate or estimate the free energy of a system. Free energy is a fundamental concept in thermodynamics and is related to the ability of a system to do work. It is often denoted by the letter F or A (Helmholtz free energy), depending on the context.</p>
 <dl class="simple glossary">
 <dt id="term-Free-Energy-Perturbation-FEP">Free Energy Perturbation (FEP)<a class="headerlink" href="#term-Free-Energy-Perturbation-FEP" title="Permalink to this term">#</a></dt><dd><p>A method based on statistical mechanics for computing free energy differences from MD or MC simulations.</p>
@@ -638,7 +594,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.36. </span>FE Alchem</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>FE Alchem</p>
       </div>
     </a>
     <a class="right-next"
@@ -646,7 +602,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.39. </span>Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

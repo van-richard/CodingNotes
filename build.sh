@@ -3,7 +3,7 @@
 shopt -s expand_aliases
 source ~/.bash_aliases
 
-myconda; conda activate webdev
+mfa webdev
 
 #jb build ./ --all
 sphinx-build ./ _build/html
