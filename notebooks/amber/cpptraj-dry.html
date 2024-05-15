@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Export Dry Trajectory (no water) &#8212; CodingNotes</title>
+    <title>2.4. Export Dry Trajectory (no water) &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Pairwise Distance Matrix" href="pytraj-pairwisedistance.html" />
-    <link rel="prev" title="1. QM/MM Simulation of the Claisen Rearrangment Reaction" href="../02-simulation/claisen.html" />
+    <link rel="next" title="2.5. Pairwise Distance Matrix" href="pytraj-pairwisedistance.html" />
+    <link rel="prev" title="2.3. QM/MM Simulation of the Claisen Rearrangment Reaction" href="../02-simulation/claisen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -455,21 +455,21 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">MD Simulation Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../02-simulation/simple.html">1. Simple MD Tutorial of Alanine Dipeptide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02-simulation/distance.html">2. Applying Distance Restraints in Classical MD Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02-simulation/simple.html">2.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02-simulation/distance.html">2.2. Applying Distance Restraints in Classical MD Simulations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">QM/MM Simulation Tutorials</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../02-simulation/claisen.html">1. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02-simulation/claisen.html">2.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Analysis Scripts</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pairwisedistance.html">2. Pairwise Distance Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">3. Principal Component Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsd.html">4. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">5. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">6. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.4. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pairwisedistance.html">2.5. Pairwise Distance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">2.6. Principal Component Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsd.html">2.7. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">2.8. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">2.9. Plot PMF with PyMBAR</a></li>
 </ul>
 </div>
 </nav></div>
@@ -508,7 +508,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../02-simulation/introduction.html" class="nav-link">Amber Tutorials</a></li>
+    <li class="breadcrumb-item"><a href="../02-simulation/introduction.html" class="nav-link"><span class="section-number">2. </span>Amber Tutorials</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -528,7 +528,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="export-dry-trajectory-no-water">
-<h1><span class="section-number">1. </span>Export Dry Trajectory (no water)<a class="headerlink" href="#export-dry-trajectory-no-water" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2.4. </span>Export Dry Trajectory (no water)<a class="headerlink" href="#export-dry-trajectory-no-water" title="Permalink to this heading">#</a></h1>
 <p><a class="reference external" href="https://amberhub.chpc.utah.edu/combining-multiple-trajectory-files-into-a-single-trajectory-and-remove-water-molecules-to-save-space/">Original Example</a></p>
 <p>CPPTRAJ can be used to remove explicit water from the simulation. To do this, make 2 files: 1) Strip water from trajectory, and 2) save new topology file.</p>
 <ol class="arabic simple">
@@ -602,7 +602,7 @@ cpptraj<span class="w"> </span>traj2.in
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>QM/MM Simulation of the Claisen Rearrangment Reaction</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>QM/MM Simulation of the Claisen Rearrangment Reaction</p>
       </div>
     </a>
     <a class="right-next"
@@ -610,7 +610,7 @@ cpptraj<span class="w"> </span>traj2.in
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Pairwise Distance Matrix</p>
+        <p class="prev-next-title"><span class="section-number">2.5. </span>Pairwise Distance Matrix</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
