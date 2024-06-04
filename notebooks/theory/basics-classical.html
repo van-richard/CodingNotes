@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4.4. Classical Molecular Dynamics &#8212; CodingNotes</title>
+    <title>5.4. Classical Molecular Dynamics &#8212; CodingNotes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.5. QM/MM Simulations" href="basics-qmmm.html" />
-    <link rel="prev" title="4.3. Theory / Methods Overview" href="../theory.html" />
+    <link rel="next" title="5.5. QM/MM Simulations" href="basics-qmmm.html" />
+    <link rel="prev" title="5.3. Theory / Methods Overview" href="../theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -457,25 +457,25 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../amber/usage-sourceamber.html">4.1. Load Amber Software</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../amber/install.html">4.2. Install / Compile</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../amber/install-amber.html">4.2.1. Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/usage-sourceamber.html">5.1. Load Amber Software</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../amber/install.html">5.2. Install / Compile</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../amber/install-amber.html">5.2.1. Compiling Amber on Pete</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory.html">4.3. Theory / Methods Overview</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.4. Classical Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics-qmmm.html">4.5. QM/MM Simulations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="binding.html">4.6. Binding Affinity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fe-alchemical.html">4.7. FE Alchem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../theory.html">5.3. Theory / Methods Overview</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5.4. Classical Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics-qmmm.html">5.5. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binding.html">5.6. Binding Affinity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fe-alchemical.html">5.7. FE Alchem</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="fe-estimators.html">4.9. Free Energy Estimators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fe-estimators.html">5.9. Free Energy Estimators</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">4.10. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">5.10. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
 </ul>
 </div>
 </nav></div>
@@ -514,7 +514,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">4. </span>More Notes !!</a></li>
+    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">5. </span>More Notes !!</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -534,9 +534,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="classical-molecular-dynamics">
-<h1><span class="section-number">4.4. </span>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.4. </span>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this heading">#</a></h1>
 <section id="potential-energy">
-<h2><span class="section-number">4.4.1. </span>Potential Energy<a class="headerlink" href="#potential-energy" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.4.1. </span>Potential Energy<a class="headerlink" href="#potential-energy" title="Permalink to this heading">#</a></h2>
 <p>Energy of a system is composed of bonded and nonbonded interactions:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -561,7 +561,7 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
 <span class="math notranslate nohighlight">\(E_{elec} = \sum_{nonbonded_{ij}} \frac{q_i q_j}{r_{ij}}\)</span></p>
 </section>
 <section id="force-fields">
-<h2><span class="section-number">4.4.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.4.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -606,7 +606,7 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.3. </span>Theory / Methods Overview</p>
+        <p class="prev-next-title"><span class="section-number">5.3. </span>Theory / Methods Overview</p>
       </div>
     </a>
     <a class="right-next"
@@ -614,7 +614,7 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.5. </span>QM/MM Simulations</p>
+        <p class="prev-next-title"><span class="section-number">5.5. </span>QM/MM Simulations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -634,8 +634,8 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-energy">4.4.1. Potential Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">4.4.2. Force Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-energy">5.4.1. Potential Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">5.4.2. Force Fields</a></li>
 </ul>
   </nav></div>
 
