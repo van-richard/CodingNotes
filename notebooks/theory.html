@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5.14. Theory / Methods Overview &#8212; CodingNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/theory';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/theory.html" />
+    <link rel="shortcut icon" href="../_static/van-codingnotes.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.14.4.1. Classical Molecular Dynamics" href="theory/basics-classical.html" />
+    <link rel="prev" title="5.13. TorchMDnet-ext Environment (CPU)" href="amber/amber-torchmdnet.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search mee!!"
+         aria-label="Search mee!!"
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/van-abstract-y-dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">CodingNotes</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="00-quickstart/introduction.html">
+                        Quick Start Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="01-scripting/introduction.html">
+                        Scripting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="02-simulation/introduction.html">
+                        Amber Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chimera.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="morenotes.html">
+                        More Notes !!
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="00-quickstart/introduction.html">
+                        Quick Start Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="01-scripting/introduction.html">
+                        Scripting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="02-simulation/introduction.html">
+                        Amber Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="chimera.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="morenotes.html">
+                        More Notes !!
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="amber/usage.html">5.1. Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/usage-sourceamber.html">5.2. Load Amber Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/loading-amber.html">5.3. Loading Amber</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/loading-amber-contents.html">5.4. Softwares, Examples, and Conda Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/loading-amber-modules.html">5.5. Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/loading-amberold.html">5.6. Source Amber (OLD APPROACH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/install-amber.html">5.7. Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/amber-compile.html">5.8. Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/amber-helpmelib.html">5.9. Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/amber-overview.html">5.10. Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/amber-patch.html">5.11. Patch / Compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/amber-qmhub.html">5.12. Install QMHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber/amber-torchmdnet.html">5.13. TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">5.14. Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-classical.html">5.14.4.1. Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html">5.14.4.2. QM/MM Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/binding.html">5.14.4.3. Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/fe-alchemical.html">5.14.4.4. FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="theory/fe-estimators.html">5.14.4.6. Free Energy Estimators</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="morenotes.html" class="nav-link"><span class="section-number">5. </span>More Notes !!</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="theory-methods-overview">
+<h1><span class="section-number">5.14. </span>Theory / Methods Overview<a class="headerlink" href="#theory-methods-overview" title="Permalink to this heading">#</a></h1>
+<p>Before running a simulation, ask yourself:</p>
+<ul class="simple">
+<li><p>What is the scientific question?</p></li>
+<li><p>Can the hypothesis be tested with MD?</p></li>
+<li><p>What experimental evidence is the for the property of interest?</p></li>
+<li><p>Is the timescale of the property in attosecond? picosecond? millisecond?</p></li>
+</ul>
+<p>Molecular simulations methods uses a particle-based description of the system, and is propagated by deterministic or probabilistic rules to generate a trajectory describing its evolution over course of the simulation.</p>
+<p>Properties can be calculated from <em>snapshots</em> (<em>i.e.</em> a configuration of the system, or <em>frame</em>), and then averaged over the trajectory to calculate estimates of said property.</p>
+<p>General methods fit into 2 categories (<em>depending on how the system is propagated</em>):</p>
+<ol class="arabic simple">
+<li><p>Molecular Dynamics (MD) Simulations</p></li>
+<li><p>Monte Carlo (MC) Simulations</p></li>
+</ol>
+<p><span style="font-size:1.5em;"><strong>Molecular Dynamics (MD) Simulations</strong></span></p>
+<p>In this approach, Newton’s equations of motion are numerically integrated to generate the dynamic trajectory of the system. These simulations can be used to investigate structural, dynamic, and thermodynamic properties.</p>
+<p><span style="font-size:1.5em;"><strong>Monte Carlo (MC) Simulations</strong></span></p>
+<p>In this approach, probabilistic rules are used to generate new configuration from the present configuration. This is repeated to generate sequences of states that be used to calculate structural and thermodynamic properties. The trajectory produced by MC simulations are an ensemble of configurations that reflect those that <em>could be</em> dynamically sampled.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This approach does not calculate dynamical properties. MC simulations lack any concept of time.</p>
+</div>
+<section id="molecular-descriptors">
+<h2><span class="section-number">5.14.1. </span>Molecular Descriptors<a class="headerlink" href="#molecular-descriptors" title="Permalink to this heading">#</a></h2>
+<p>MD or MC simulations can be carried out with different underlying physical theories to describe the particle-base model of the system. For example:</p>
+<ol class="arabic simple">
+<li><p><strong>Molecular Mechanics (MM) Descriptors</strong></p>
+<ul class="simple">
+<li><p>Also called <em>Classical Mechanics</em> or <em>Classical Descriptors</em></p></li>
+<li><p>Molecules represented by groups of atoms</p></li>
+<li><p>Each atom is assigned an electric charge and potential energy function</p></li>
+<li><p>Large number of empirical parameters fitted from experiment, QM, or other data used to calculate bonded and nonbonded interactions.</p></li>
+</ul>
+</li>
+<li><p><strong>Quantum Mechanics (QM) Descriptors</strong></p>
+<ul class="simple">
+<li><p>Electrons are explicitly represented by solving the electronic structure of the molecules</p></li>
+<li><p>No (or few) empirical parameters are used</p></li>
+<li><p>Various approximations to the physics</p></li>
+</ul>
+</li>
+</ol>
+<p>Unless otherwise specified, MD simulations employ MM force fields, which calculate the forces that determine the system dynamics.</p>
+<p>MM simulations are faster than quantum simulations, making this a popular appraoch to study condensed phase biomolecular systems. However, they are of lower accuracy than QM simulations, and generally cannot simulate bond rearrangements…</p>
+<p>QM simjulations are too computationally expensive to allow for simulations of the time and length scales to describe most systems of interest. The size of the system also depends on the method chosen:</p>
+<ul class="simple">
+<li><p>High-level <em>ab inito</em> Methods (<em>i.e.</em> DFT)</p></li>
+<li><p>Semi-Empirical Methods (NDDO, PM3, AM1)</p></li>
+</ul>
+<p>For context, a typical QM simulation could be performed with a hundred atoms or fewer. Whereas MM simulations routinely have tens to hundreds or thousands of atoms in the system.</p>
+</section>
+<section id="properties-of-interest">
+<h2><span class="section-number">5.14.2. </span>Properties of Interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this heading">#</a></h2>
+<p>The size of the system alone does not dictate the use of classical descriptors. MM simulations are often used to calculate:</p>
+<ol class="arabic simple">
+<li><p>Free Energies</p></li>
+<li><p>Transport Properties at Lab Temperatures</p></li>
+</ol>
+<p>These properties include entropic contributions. In other words, the fluctuations and correlations of motions within a system can affect the calculated property.</p>
+<p><strong>Simluations not only samples single optimal states but must sample the correct distribution of states.</strong> This requires simulations of <em>some length.</em> In protein simulations, relevant timescale of biological processes are often nanoseconds to microseconds in length. For example, rearrangements of buried amino acid sidechains or conformation changes to a protein domain.</p>
+</section>
+<section id="other-methods">
+<h2><span class="section-number">5.14.3. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">#</a></h2>
+<p><span style="font-size:1.5em;">Quantum Mechanics/Molecular Mechanics (QM/MM) Simulations</span></p>
+<p>In classical simulations, bond breaking/forming are generally not allowed. The topology, or chemistry, of the system is constant as a function of time. In other words, the chemical identity of a molecular remains constant (except constant pH simulations).</p>
+<p>The hybrid QM/MM scheme or use of reactive force fields are generally used.</p>
+<p><span style="font-size:1.5em;">Course-Graining Method</span>s</p>
+<p>Above the level of MM are course-graining methods. This method will reduce the resolution and computational cost.</p>
+<p><span style="font-size:1.5em;">Constant pH Simulation</span>s</p>
+<p>Sample the titratable residues</p>
+</section>
+<section id="literature">
+<h2><span class="section-number">5.14.4. </span>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://doi.org/10.33011/livecoms.1.1.5957">Best Practices for Foundations in Molecular Simulations</a></p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="theory/basics-classical.html">5.14.4.1. Classical Molecular Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-classical.html#potential-energy">5.14.4.1.1. Potential Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-classical.html#force-fields">5.14.4.1.2. Force Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory/basics-qmmm.html">5.14.4.2. QM/MM Simulations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html#overview">5.14.4.2.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html#bonded-interactions">5.14.4.2.2. Bonded Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html#nonbonded-interactions">5.14.4.2.3. Nonbonded Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html#electrostatic-embedding">5.14.4.2.4. Electrostatic Embedding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory/basics-qmmm.html#short-range">5.14.4.2.4.1. Short-Range</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory/binding.html">5.14.4.3. Binding Affinity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory/binding.html#simulating-binding-affinity">5.14.4.3.1. Simulating Binding Affinity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory/fe-alchemical.html">5.14.4.4. FE Alchem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/fe-alchemical.html#alchemical-free-energy">5.14.4.5. Alchemical Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/fe-estimators.html">5.14.4.6. Free Energy Estimators</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="amber/amber-torchmdnet.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.13. </span>TorchMDnet-ext Environment (CPU)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="theory/basics-classical.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5.14.4.1. </span>Classical Molecular Dynamics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">5.14.1. Molecular Descriptors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">5.14.2. Properties of Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">5.14.3. Other Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">5.14.4. Literature</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/notebooks/theory.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

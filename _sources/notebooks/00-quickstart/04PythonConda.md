@@ -17,4 +17,4 @@ The perks of using Conda to manage python is the ability to create *virtual envi
 
 With `conda` commands, you can create an environment (i.e. a small storage space in your laptop) to install some specific versions of packages. **And this will not interfere or conflict with anything else on your computer!**
 
-I mainly use `miniforge` on laptop and supercomputer accounts, but be sure to explore what works best for you!
+I mainly use `Miniforge` on laptop and supercomputer accounts, but be sure to explore what works best for you!
