@@ -4,70 +4,65 @@ defaults:
 subtrees:
 - entries:
   - file: notebooks/00-quickstart/introduction
-    entries:
-    - glob: notebooks/00-quickstart/0*
+    subtrees:
+    - entries:
+      - glob: "notebooks/00-quickstart/0*"
   - file: notebooks/01-scripting/introduction
     subtrees:
     - entries:
       - file: notebooks/01-scripting/bash
         subtrees:
         - entries:
-          - glob: notebooks/01-scripting/bash*
+          - glob: "notebooks/01-scripting/bash-*"
       - file: notebooks/01-scripting/vi
         subtrees:
         - entries:
-          - glob: notebooks/01-scripting/vi-*
+          - glob: "notebooks/01-scripting/vi-*"
       - file: notebooks/01-scripting/ssh
         subtrees:
         - entries:
-          - glob: notebooks/01-scripting/ssh-*
-          - glob: notebooks/01-scripting/module*
-          - glob: notebooks/01-scripting/ubuntu-*
+          - glob: "notebooks/01-scripting/ssh-*"
+          - glob: "notebooks/01-scripting/module-*"
+          - glob: "notebooks/01-scripting/ubuntu-*"
           - file: notebooks/01-scripting/gnu-parallel
       - file: notebooks/01-scripting/python
         subtrees:
         - entries:
-          - glob: notebooks/python/script/*
-          - glob: notebooks/01-scripting/jupyter*
-          - glob: notebooks/01-scripting/p*
-      - file: notebooks/01-scripting/conda.md
-        subtrees:
-          - glob: notebooks/01-scripting/conda*
-          - glob: notebooks/01-scripting/j*
-          - glob: notebooks/01-scripting/p*
+          - glob: "notebooks/01-scripting/python-*"
+          - glob: "notebooks/python/script/*"
+          - glob: "notebooks/01-scripting/conda*"
+          - glob: "notebooks/01-scripting/j*"
       - file: notebooks/01-scripting/git
         subtrees:
         - entries:
-          - glob: notebooks/01-scripting/git-*
+          - glob: "notebooks/01-scripting/git-*"
   - file: notebooks/02-simulation/introduction
     subtrees:
-    - caption: MD Simulation Tutorials
+    - caption: "MD Simulation Tutorials"
       entries:
       - file: notebooks/02-simulation/simple
       - file: notebooks/02-simulation/distance
-    - caption: QM/MM Simulation Tutorials
+    - caption: "QM/MM Simulation Tutorials"
       entries:
       - file: notebooks/02-simulation/claisen
-    - caption: Analysis Scripts
+    - caption: "Analysis Scripts"
       entries:
-      - glob: notebooks/amber/*traj*
-      - glob: notebooks/amber/*mbar*
+      - glob: "notebooks/amber/pytraj-*"
+      - glob: "notebooks/amber/pymbar-*"
   - file: notebooks/chimera
     entries:
-    - glob: notebooks/chimera/*
+    - glob: "notebooks/chimera/*"
   - file: notebooks/morenotes
     subtrees:
-    - caption: Amber 
+    - caption: "Amber"
       entries:
-      - glob: notebooks/amber/usage-*
-      - file: notebooks/amber/install
-        entries:
-        - glob: notebooks/amber/install-*
-    - caption: Equations
+      - glob: "notebooks/amber/usage*"
+      - glob: "notebooks/amber/loading-*"
+      - glob: "notebooks/amber/install-*"
+      - glob: "notebooks/amber/amber-*"
+    - caption: "Theory"
       entries:
       - file: notebooks/theory
-      - glob: notebooks/theory/*
-    - caption: VMD
-      entries:
-      - glob: notebooks/vmd/*
+        entries:
+        - glob: "notebooks/theory/*"
     

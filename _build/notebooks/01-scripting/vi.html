@@ -1,0 +1,811 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2. vi/vim &#8212; CodingNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/01-scripting/vi';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/01-scripting/vi.html" />
+    <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.6. My .vimrc config" href="vi-vimrc.html" />
+    <link rel="prev" title="1.7. Manging Multiple Compiler Versions" href="bash-ubuntu-multi-gcc.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search mee!!"
+         aria-label="Search mee!!"
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">CodingNotes</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
+                        Quick Start Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="introduction.html">
+                        Scripting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02-simulation/introduction.html">
+                        Amber Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../chimera.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/introduction.html">
+                        Quick Start Guide
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="introduction.html">
+                        Scripting
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02-simulation/introduction.html">
+                        Amber Tutorials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../chimera.html">
+                        Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="bash.html">1. <code class="docutils literal notranslate"><span class="pre">bash</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="bash-startup.html">1.6. Start-Up Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bash-ubuntu-multi-gcc.html">1.7. Manging Multiple Compiler Versions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="vi-vimrc.html">2.6. My <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> config</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="python.html">3. <code class="docutils literal notranslate"><span class="pre">python</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-helplist.html">3.8.1.1. Helpful stuff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda.html">3.8.1.2. <code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda-autodockvina.html">3.8.1.3. Create AutoDock Vina Conda Environment on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda-env.html">3.8.1.4. Creating New Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda-rc.html">3.8.1.5. Conda Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter.html">3.8.1.6. Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter-mbar.html">3.8.1.7. MBAR Uncertainty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyterbook.html">3.8.1.8. DIY GitHub Website</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="git.html">4. <code class="docutils literal notranslate"><span class="pre">git</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="git-branch.html">4.1. Branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-ccats.html">4.2. Clone the CC-ATS Group Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-pullpush.html">4.3. General Use Cases</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="introduction.html" class="nav-link">Scripting</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="vi-vim">
+<h1><span class="section-number">2. </span><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code><a class="headerlink" href="#vi-vim" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">vi/vim</span> </code>are both text editors for the CLI</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vi</span></code> is older but found on most systems</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vim</span></code> is <code class="docutils literal notranslate"><span class="pre">vi</span></code> improved with added functionalities</p>
+<ul>
+<li><p>Both are similar to GUIs like Notepad, TextEdit, etc…</p></li>
+</ul>
+</li>
+</ul>
+<section id="overview">
+<h2><span class="section-number">2.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Run by typing <code class="docutils literal notranslate"><span class="pre">vi</span></code> or <code class="docutils literal notranslate"><span class="pre">vim</span></code> followed by a filename</p></li>
+<li><p>To exit, press <code class="docutils literal notranslate"><span class="pre">esc</span></code> then <code class="docutils literal notranslate"><span class="pre">:q</span></code> or <code class="docutils literal notranslate"><span class="pre">:q!</span></code></p></li>
+<li><p>Additional commands are shown below:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Commands to manage files</span>
+<span class="w">    </span>vi<span class="w"> </span>&lt;filename&gt;<span class="w">     </span><span class="c1"># Open &lt;filename&gt; in vim</span>
+<span class="w">    </span>:help<span class="w"> </span>&lt;topic&gt;<span class="w">     </span><span class="c1"># Open up built-in help docs about &lt;topic&gt; if any exists</span>
+<span class="w">    </span>:q<span class="w">                </span><span class="c1"># Quit vim</span>
+<span class="w">    </span>:q!<span class="w">               </span><span class="c1"># Quit vim without saving file</span>
+<span class="w">                      </span><span class="c1">#     ! *forces* :q to execute, hence quitting vim without saving</span>
+<span class="w">    </span>:w<span class="w">                </span><span class="c1"># Save current file</span>
+<span class="w">    </span>:wq<span class="w">               </span><span class="c1"># Save file and quit vim</span>
+<span class="w">    </span>:x<span class="w">                </span><span class="c1"># Save file(only when the file is modified) and quit vim</span>
+</pre></div>
+</div>
+</section>
+<section id="optional-text-editing-modes">
+<h2><span class="section-number">2.2. </span>Optional Text Editing Modes<a class="headerlink" href="#optional-text-editing-modes" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>There are several “mode” options when using <code class="docutils literal notranslate"><span class="pre">vi</span></code> or <code class="docutils literal notranslate"><span class="pre">vim</span></code></p>
+<ol class="arabic simple">
+<li><p>Normal Mode - used for editor commands</p>
+<ul>
+<li><p>This is generally the default mode and by default hitting <code class="docutils literal notranslate"><span class="pre">esc</span></code> returns the editor to this mode</p></li>
+</ul>
+</li>
+<li><p>Insert Mode - used for typing text</p>
+<ul>
+<li><p>Opened text in buffers can be modified with the text entered from the keyboard by hitting <code class="docutils literal notranslate"><span class="pre">i</span></code> key</p></li>
+</ul>
+</li>
+<li><p>Visual Mode - used to select areas of text</p>
+<ul>
+<li><p>Commands can be run on the selected area – moving, editing, filtering</p>
+<ul>
+<li><p>Visual linewise - selects one or more whole lines by hitting <code class="docutils literal notranslate"><span class="pre">crtl</span> <span class="pre">(^)</span></code> + <code class="docutils literal notranslate"><span class="pre">c</span></code></p></li>
+<li><p>Visual blockwise - selects a rectangular block of text across one or more lines by hitting <code class="docutils literal notranslate"><span class="pre">crtl</span> <span class="pre">(^)</span></code> + <code class="docutils literal notranslate"><span class="pre">v</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Command-Line Mode</p>
+<ul>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code> commands by hitting <code class="docutils literal notranslate"><span class="pre">esc</span></code> then <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<div class="admonition-when-switching-between-modes admonition">
+<p class="admonition-title">When switching between modes:</p>
+<p>Make sure you are in Normal Mode by pressing <code class="docutils literal notranslate"><span class="pre">esc</span></code>. You should no longer see <code class="docutils literal notranslate"><span class="pre">insert</span></code> on the bottom left of the terminal!</p>
+</div>
+</section>
+<section id="key-bindings-commands-normal-mode">
+<h2><span class="section-number">2.3. </span>Key Bindings Commands (Normal Mode)<a class="headerlink" href="#key-bindings-commands-normal-mode" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Key or combination of keys on your keyboard can be assigned (bound) with a command</p></li>
+<li><p>Several default key bindings are:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># File Parsing</span>
+<span class="w">    </span>gg<span class="w">                </span><span class="c1"># Go to the top of the file</span>
+<span class="w">    </span>G<span class="w"> </span><span class="o">(</span><span class="nb">shift</span><span class="w"> </span>+<span class="w"> </span>g<span class="o">)</span><span class="w">     </span><span class="c1"># Go to the bottom of the file</span>
+<span class="w">    </span>H<span class="w">                 </span><span class="c1"># Move to the top of the screen</span>
+<span class="w">    </span>M<span class="w">                 </span><span class="c1"># Move to the middle of the screen</span>
+<span class="w">    </span>L<span class="w">                 </span><span class="c1"># Move to the bottom of the screen</span>
+<span class="w">    </span>h<span class="w">                 </span><span class="c1"># Move left one character</span>
+<span class="w">    </span>j<span class="w">                 </span><span class="c1"># Move down one line</span>
+<span class="w">    </span>k<span class="w">                 </span><span class="c1"># Move up one line</span>
+<span class="w">    </span>l<span class="w">                 </span><span class="c1"># Move right one character</span>
+<span class="w">    </span>o<span class="w">                 </span><span class="c1"># Make new line below cursor</span>
+<span class="w">    </span>O<span class="w">                 </span><span class="c1"># Make new line above cursor</span>
+
+<span class="c1"># Undo/Redo</span>
+<span class="w">    </span>u<span class="w">                 </span><span class="c1"># Undo</span>
+<span class="w">    </span>crtl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>R<span class="w">      </span><span class="c1"># Redo</span>
+
+<span class="c1"># Search for PATTERN - can be any string</span>
+<span class="w">    </span>/PATTERN<span class="w">          </span><span class="c1"># Highlights all occurrences of PATTERN after cursor</span>
+<span class="w">    </span>?PATTERN<span class="w">          </span><span class="c1"># Highlights all occurrences of PATTERN before cursor</span>
+<span class="w">    </span>n<span class="w">                 </span><span class="c1"># Moves cursor to next occurrence of PATTERN after search</span>
+<span class="w">    </span>N<span class="w">                 </span><span class="c1"># Moves cursor to previous occurrence PATTERN </span>
+
+<span class="c1"># Scrolling</span>
+<span class="w">    </span>ctrl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>d<span class="w">      </span><span class="c1"># Scroll half page down</span>
+<span class="w">    </span>ctrl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>u<span class="w">      </span><span class="c1"># Scroll half page up</span>
+<span class="w">    </span>ctrl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>f<span class="w">      </span><span class="c1"># Scroll one page forward</span>
+<span class="w">    </span>ctrl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>b<span class="w">      </span><span class="c1"># Scroll one page backwardc</span>
+</pre></div>
+</div>
+</section>
+<section id="command-line-mode">
+<h2><span class="section-number">2.4. </span>Command Line Mode<a class="headerlink" href="#command-line-mode" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>To enter this mode, press <code class="docutils literal notranslate"><span class="pre">esc</span></code> and then <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+<li><p>The cursor to move at the bottom of the window in the command box</p></li>
+<li><p>You can then write any command you like and press enter to execute it</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># File Parsing</span>
+<span class="w">    </span>:NUMBER<span class="w">           </span><span class="c1"># Go to line number, NUMBER (i.e. line 10 = :10)</span>
+
+<span class="c1"># Replace PATTERN - like sed command</span>
+<span class="w">    </span>:%s/foo/bar/g<span class="w">     </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on every line in the file</span>
+<span class="w">    </span>:s/foo/bar/g<span class="w">      </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on the current line</span>
+<span class="w">    </span>:%s/<span class="se">\n</span>/<span class="se">\r</span>/g<span class="w">       </span><span class="c1"># Replace new line characters with new line characters</span>
+<span class="w">    </span>:<span class="s1">&#39;&lt;,&#39;</span>&gt;s/foo/bar/g<span class="w"> </span><span class="c1"># Change &#39;foo&#39; to &#39;bar on every line in the current visual</span>
+</pre></div>
+</div>
+</section>
+<section id="visual-configuration">
+<h2><span class="section-number">2.5. </span>Visual Configuration<a class="headerlink" href="#visual-configuration" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:set<span class="w"> </span>number<span class="w">           </span><span class="c1"># prefix line numbers (it is a visual guideline, won&#39;t modify text)</span>
+:set<span class="w"> </span>nonumber<span class="w">         </span><span class="c1"># remove line number prefix</span>
+:set<span class="w"> </span>number!<span class="w">          </span><span class="c1"># toggle number setting</span>
+</pre></div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/01-scripting"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bash-ubuntu-multi-gcc.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.7. </span>Manging Multiple Compiler Versions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="vi-vimrc.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.6. </span>My <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> config</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">2.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-text-editing-modes">2.2. Optional Text Editing Modes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-bindings-commands-normal-mode">2.3. Key Bindings Commands (Normal Mode)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-mode">2.4. Command Line Mode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-configuration">2.5. Visual Configuration</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/notebooks/01-scripting/vi.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

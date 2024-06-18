@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5.7. FE Alchem &#8212; CodingNotes</title>
+    <title>5.14.4.4. FE Alchem &#8212; CodingNotes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5.9. Free Energy Estimators" href="fe-estimators.html" />
-    <link rel="prev" title="5.6. Binding Affinity" href="binding.html" />
+    <link rel="next" title="5.14.4.6. Free Energy Estimators" href="fe-estimators.html" />
+    <link rel="prev" title="5.14.4.3. Binding Affinity" href="binding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -457,25 +457,31 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Amber</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../amber/usage-sourceamber.html">5.1. Load Amber Software</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../amber/install.html">5.2. Install / Compile</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../amber/install-amber.html">5.2.1. Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/usage.html">5.1. Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/usage-sourceamber.html">5.2. Load Amber Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/loading-amber.html">5.3. Loading Amber</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/loading-amber-contents.html">5.4. Softwares, Examples, and Conda Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/loading-amber-modules.html">5.5. Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/loading-amberold.html">5.6. Source Amber (OLD APPROACH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/install-amber.html">5.7. Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/amber-compile.html">5.8. Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/amber-helpmelib.html">5.9. Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/amber-overview.html">5.10. Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/amber-patch.html">5.11. Patch / Compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/amber-qmhub.html">5.12. Install QMHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../amber/amber-torchmdnet.html">5.13. TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Theory</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../theory.html">5.14. Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basics-classical.html">5.14.4.1. Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics-qmmm.html">5.14.4.2. QM/MM Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binding.html">5.14.4.3. Binding Affinity</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.14.4.4. FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="fe-estimators.html">5.14.4.6. Free Energy Estimators</a></li>
 </ul>
 </li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../theory.html">5.3. Theory / Methods Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics-classical.html">5.4. Classical Molecular Dynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics-qmmm.html">5.5. QM/MM Simulations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="binding.html">5.6. Binding Affinity</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5.7. FE Alchem</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="fe-estimators.html">5.9. Free Energy Estimators</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">5.10. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
 </ul>
 </div>
 </nav></div>
@@ -516,6 +522,9 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">5. </span>More Notes !!</a></li>
     
+    
+    <li class="breadcrumb-item"><a href="../theory.html" class="nav-link"><span class="section-number">5.14. </span>Theory / Methods Overview</a></li>
+    
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
 </nav>
@@ -534,7 +543,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fe-alchem">
-<h1><span class="section-number">5.7. </span>FE Alchem<a class="headerlink" href="#fe-alchem" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.14.4.4. </span>FE Alchem<a class="headerlink" href="#fe-alchem" title="Permalink to this heading">#</a></h1>
 <div class="dropdown admonition important">
 <p class="admonition-title">Important</p>
 <p>For more information, refer to the
@@ -557,11 +566,11 @@ document.write(`
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="alchemical-free-energy">
-<h1><span class="section-number">5.8. </span>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.14.4.5. </span>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a033dfca-f34a-4872-8f17-12bae938d79b">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-a033dfca-f34a-4872-8f17-12bae938d79b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fc9b0613-0578-413e-8fca-5c27ec4d0063">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-fc9b0613-0578-413e-8fca-5c27ec4d0063" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -574,8 +583,8 @@ document.write(`
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-557b7ae4-c5c8-4613-8549-692403ed3ce9">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-557b7ae4-c5c8-4613-8549-692403ed3ce9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ab7849c6-f5bc-4a39-98a3-1d416fb9ccd6">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-ab7849c6-f5bc-4a39-98a3-1d416fb9ccd6" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}
@@ -635,7 +644,7 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.6. </span>Binding Affinity</p>
+        <p class="prev-next-title"><span class="section-number">5.14.4.3. </span>Binding Affinity</p>
       </div>
     </a>
     <a class="right-next"
@@ -643,7 +652,7 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.9. </span>Free Energy Estimators</p>
+        <p class="prev-next-title"><span class="section-number">5.14.4.6. </span>Free Energy Estimators</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -663,8 +672,8 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.7. FE Alchem</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alchemical-free-energy">5.8. Alchemical Free Energy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.14.4.4. FE Alchem</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alchemical-free-energy">5.14.4.5. Alchemical Free Energy</a></li>
 </ul>
 
   </nav></div>
