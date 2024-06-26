@@ -52,17 +52,35 @@ subtrees:
   - file: notebooks/chimera
     entries:
     - glob: "notebooks/chimera/*"
+    - glob: notebooks/02-simulation/*traj*
+    - glob: notebooks/02-simulation/*mbar*
+  - file:  notebooks/visualization
+    subtrees:
+    - caption: ChimeraX
+      entries:
+      - glob: notebooks/chimera/*
+    - caption: VMD
+      entries:
+      - glob: notebooks/vmd/*
   - file: notebooks/morenotes
     subtrees:
     - caption: "Amber"
       entries:
-      - glob: "notebooks/amber/usage*"
-      - glob: "notebooks/amber/loading-*"
-      - glob: "notebooks/amber/install-*"
-      - glob: "notebooks/amber/amber-*"
-    - caption: "Theory"
+      - file: notebooks/amber/amber-overview
+        subtrees:
+        - entries:
+          - file: notebooks/amber/amber-compile
+          - file: notebooks/amber/amber-patch
+          - file: notebooks/amber/amber-qmhub
+          - file: notebooks/amber/amber-helpmelib
+          - file: notebooks/amber/amber-torchmdnet
+      - file: notebooks/amber/loading-amber
+        subtrees:
+        - entries:
+          - file: notebooks/amber/loading-amber-modules
+          - file: notebooks/amber/loading-amber-contents
+          - file: notebooks/amber/loading-amberold
+    - caption: Equations
       entries:
       - file: notebooks/theory
-        entries:
-        - glob: "notebooks/theory/*"
-    
+      - glob: notebooks/theory/*
