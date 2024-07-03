@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1.6. FE Alchem &#8212; CodingNotes</title>
+    <title>5.4.4. FE Alchem &#8212; CodingNotes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.8. Free Energy Estimators" href="fe-estimators.html" />
-    <link rel="prev" title="1.5. Binding Affinity" href="binding.html" />
+    <link rel="next" title="5.4.6. Free Energy Estimators" href="fe-estimators.html" />
+    <link rel="prev" title="5.4.3. Binding Affinity" href="binding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -195,12 +195,34 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../amber/amber-overview.html">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="../theory.html">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
       
@@ -338,9 +360,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -381,12 +401,34 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../amber/amber-overview.html">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="../theory.html">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
         
@@ -452,6 +494,24 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="basics-classical.html">5.4.1. Classical Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics-qmmm.html">5.4.2. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binding.html">5.4.3. Binding Affinity</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5.4.4. FE Alchem</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="fe-estimators.html">5.4.6. Free Energy Estimators</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -485,7 +545,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">1. </span>More Notes !!</a></li>
+    <li class="breadcrumb-item"><a href="../theory.html" class="nav-link"><span class="section-number">5. </span>Theory / Methods Overview</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -505,7 +565,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fe-alchem">
-<h1><span class="section-number">1.6. </span>FE Alchem<a class="headerlink" href="#fe-alchem" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.4.4. </span>FE Alchem<a class="headerlink" href="#fe-alchem" title="Permalink to this heading">#</a></h1>
 <div class="dropdown admonition important">
 <p class="admonition-title">Important</p>
 <p>For more information, refer to the
@@ -528,11 +588,11 @@ document.write(`
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="alchemical-free-energy">
-<h1><span class="section-number">1.7. </span>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.4.5. </span>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-41d24b3f-8a5c-4e23-9b6d-faf859f08583">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-41d24b3f-8a5c-4e23-9b6d-faf859f08583" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fd0488a7-2bcc-48ef-b9b0-39d109cc7a08">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-fd0488a7-2bcc-48ef-b9b0-39d109cc7a08" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -541,12 +601,12 @@ document.write(`
 <figure class="align-center" id="id1" style="width: 100%">
 <img alt="../../_images/fe-alchem-thermo-cycle.png" src="../../_images/fe-alchem-thermo-cycle.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1.6 </span><span class="caption-text">Example of thermodynamic cycle from the paper.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Example of thermodynamic cycle from the paper.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-1a239d4e-48ad-423d-9ba2-7bdeade901c2">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-1a239d4e-48ad-423d-9ba2-7bdeade901c2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e0b01c60-061a-48d0-9fa9-6b823ce46965">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-e0b01c60-061a-48d0-9fa9-6b823ce46965" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}
@@ -606,7 +666,7 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.5. </span>Binding Affinity</p>
+        <p class="prev-next-title"><span class="section-number">5.4.3. </span>Binding Affinity</p>
       </div>
     </a>
     <a class="right-next"
@@ -614,7 +674,7 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.8. </span>Free Energy Estimators</p>
+        <p class="prev-next-title"><span class="section-number">5.4.6. </span>Free Energy Estimators</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -634,8 +694,8 @@ u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.6. FE Alchem</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alchemical-free-energy">1.7. Alchemical Free Energy</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.4.4. FE Alchem</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alchemical-free-energy">5.4.5. Alchemical Free Energy</a></li>
 </ul>
 
   </nav></div>

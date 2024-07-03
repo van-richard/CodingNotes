@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Editing with ffmpeg &#8212; CodingNotes</title>
+    <title>3.7. Editing with ffmpeg &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1. More Notes !!" href="../morenotes.html" />
-    <link rel="prev" title="6. Spin" href="../chimera/mov-spin.html" />
+    <link rel="next" title="4. Amber" href="../amber/amber-overview.html" />
+    <link rel="prev" title="3.6. Spin" href="../chimera/mov-spin.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -194,11 +194,33 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
+                      <a class="nav-link nav-internal" href="../amber/amber-overview.html">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../theory.html">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
       
@@ -336,9 +358,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -380,11 +400,33 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
+                      <a class="nav-link nav-internal" href="../amber/amber-overview.html">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../theory.html">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
         
@@ -450,6 +492,28 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">ChimeraX</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">3.1. ChimeraX Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">3.2. Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">3.3. Fading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">3.4. Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">3.5. Rocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">3.6. Spin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.7. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -483,7 +547,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../visualization.html" class="nav-link">Visualization</a></li>
+    <li class="breadcrumb-item"><a href="../visualization.html" class="nav-link"><span class="section-number">3. </span>Visualization</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -503,7 +567,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="editing-with-ffmpeg">
-<h1><span class="section-number">1. </span>Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code><a class="headerlink" href="#editing-with-ffmpeg" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">3.7. </span>Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code><a class="headerlink" href="#editing-with-ffmpeg" title="Permalink to this heading">#</a></h1>
 <p><a class="reference external" href="https://ffmpeg.org">ffmpeg Download</a></p>
 <p><code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code> can convert image files to a video. Download the program, and add this to your <code class="docutils literal notranslate"><span class="pre">~/Programs</span></code> folder.</p>
 <p>After creating image files from VMD, use <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code> to make the video by:</p>
@@ -514,7 +578,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">-b:v</span> <span class="pre">500M</span></code> - Set bitrate to 500 M for better quality</p>
 <p><code class="docutils literal notranslate"><span class="pre">output.mp4</span></code> - Video name and filetype</p>
 <section id="convert-ppm-to-png">
-<h2><span class="section-number">1.1. </span>Convert <code class="docutils literal notranslate"><span class="pre">ppm</span></code> to <code class="docutils literal notranslate"><span class="pre">png</span></code><a class="headerlink" href="#convert-ppm-to-png" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.7.1. </span>Convert <code class="docutils literal notranslate"><span class="pre">ppm</span></code> to <code class="docutils literal notranslate"><span class="pre">png</span></code><a class="headerlink" href="#convert-ppm-to-png" title="Permalink to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/Programs/ffmpeg<span class="w"> </span>-i<span class="w"> </span>file.%05d.ppm<span class="w"> </span>file.%05d.png
 </pre></div>
 </div>
@@ -556,15 +620,15 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Spin</p>
+        <p class="prev-next-title"><span class="section-number">3.6. </span>Spin</p>
       </div>
     </a>
     <a class="right-next"
-       href="../morenotes.html"
+       href="../amber/amber-overview.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>More Notes !!</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Amber</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -584,7 +648,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-ppm-to-png">1.1. Convert <code class="docutils literal notranslate"><span class="pre">ppm</span></code> to <code class="docutils literal notranslate"><span class="pre">png</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convert-ppm-to-png">3.7.1. Convert <code class="docutils literal notranslate"><span class="pre">ppm</span></code> to <code class="docutils literal notranslate"><span class="pre">png</span></code></a></li>
 </ul>
   </nav></div>
 
