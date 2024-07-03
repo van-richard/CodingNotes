@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4.10. Root Mean Square Deviation (RMSD) &#8212; CodingNotes</title>
+    <title>4. Root Mean Square Deviation (RMSD) &#8212; CodingNotes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.11. Root Mean Square Fluctuation (RMSF)" href="pytraj-rmsf.html" />
-    <link rel="prev" title="4.9. Principal Component Analysis" href="pytraj-pca.html" />
+    <link rel="next" title="5. Root Mean Square Fluctuation (RMSF)" href="pytraj-rmsf.html" />
+    <link rel="prev" title="3. Principal Component Analysis" href="pytraj-pca.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -486,18 +486,18 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">4.1. ChimeraX Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">4.2. Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">4.3. Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">4.4. Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">4.5. Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">4.6. Spin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cpptraj-dry.html">4.7. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pairwisedistance.html">4.8. Pairwise Distance Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">4.9. Principal Component Analysis</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.10. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">4.11. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">4.12. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">1. ChimeraX Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">2. Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">3. Fading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">4. Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">5. Rocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">6. Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cpptraj-dry.html">1. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pairwisedistance.html">2. Pairwise Distance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">3. Principal Component Analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">5. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">6. Plot PMF with PyMBAR</a></li>
 </ul>
 </div>
 </nav></div>
@@ -556,7 +556,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="root-mean-square-deviation-rmsd">
-<h1><span class="section-number">4.10. </span>Root Mean Square Deviation (RMSD)<a class="headerlink" href="#root-mean-square-deviation-rmsd" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>Root Mean Square Deviation (RMSD)<a class="headerlink" href="#root-mean-square-deviation-rmsd" title="Permalink to this heading">#</a></h1>
 <p>The Root Mean Square Deviation (RMSD) is a measure of the average distance between atoms in a superimposed structure. You will see this analysis used to judge convergence of an MD simulation in just about every MD paper. The equation is</p>
 <div class="math notranslate nohighlight">
 \[
@@ -585,7 +585,7 @@ document.write(`
 </pre></div>
 </div>
 <section id="pairwise-root-mean-square-deviation-2d-rmsd">
-<h2><span class="section-number">4.10.1. </span>Pairwise Root Mean Square Deviation (2D RMSD)<a class="headerlink" href="#pairwise-root-mean-square-deviation-2d-rmsd" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span>Pairwise Root Mean Square Deviation (2D RMSD)<a class="headerlink" href="#pairwise-root-mean-square-deviation-2d-rmsd" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -639,7 +639,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.9. </span>Principal Component Analysis</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Principal Component Analysis</p>
       </div>
     </a>
     <a class="right-next"
@@ -647,7 +647,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.11. </span>Root Mean Square Fluctuation (RMSF)</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Root Mean Square Fluctuation (RMSF)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -667,7 +667,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pairwise-root-mean-square-deviation-2d-rmsd">4.10.1. Pairwise Root Mean Square Deviation (2D RMSD)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pairwise-root-mean-square-deviation-2d-rmsd">4.1. Pairwise Root Mean Square Deviation (2D RMSD)</a></li>
 </ul>
   </nav></div>
 
