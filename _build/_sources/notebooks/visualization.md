@@ -1,5 +1,8 @@
 # Visualization
 
+```{tableofcontents}
+```
+
 Chimera and [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) are both great molecular visualization tools developed by UCSF.
 
 ChimeraX is the newest program, and it can efficiently handle large data (i.e. PDBs with thousands of atoms). It is my prefered GUI when exploring new structures and making videos/figures.

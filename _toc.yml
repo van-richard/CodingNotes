@@ -59,25 +59,28 @@ subtrees:
       - glob: "notebooks/amber/pymbar-*"
   - file:  notebooks/visualization
     subtrees:
-    - caption: ChimeraX
+    - caption: "ChimeraX"
       entries:
       - glob: notebooks/chimera/*
     - caption: VMD
       entries:
       - glob: notebooks/vmd/*
-  - file: notebooks/morenotes
+  - file: notebooks/amber/amber-overview
     subtrees:
     - caption: "Amber"
       entries:
-      - file: notebooks/amber/amber-overview
-        subtrees:
-        - entries:
-          - file: notebooks/amber/amber-compile
-          - file: notebooks/amber/amber-patch
-          - file: notebooks/amber/amber-qmhub
-          - file: notebooks/amber/amber-helpmelib
-          - file: notebooks/amber/amber-torchmdnet
+      - file: notebooks/amber/amber-compile
+      - file: notebooks/amber/amber-patch
+      - file: notebooks/amber/amber-qmhub
+      - file: notebooks/amber/amber-helpmelib
+      - file: notebooks/amber/amber-torchmdnet
+  - file: notebooks/theory
+    subtrees:
     - caption: "Equations"
       entries:
-      - file: notebooks/theory
       - glob: notebooks/theory/*
+  - file: notebooks/linux
+    subtrees:
+    - caption: "Linux/Unit Commands"
+      entries:
+      - glob: notebooks/commands/*

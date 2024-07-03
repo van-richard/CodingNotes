@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Theory / Methods Overview &#8212; CodingNotes</title>
+    <title>6. Theory / Methods Overview &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Classical Molecular Dynamics" href="theory/basics-classical.html" />
-    <link rel="prev" title="1.8. TorchMDnet-ext Environment (CPU)" href="amber/amber-torchmdnet.html" />
+    <link rel="next" title="6.4.1. Classical Molecular Dynamics" href="theory/basics-classical.html" />
+    <link rel="prev" title="5.8. TorchMDnet-ext Environment (CPU)" href="amber/amber-torchmdnet.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -193,12 +193,34 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="morenotes.html">
-                        More Notes !!
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="amber/amber-overview.html">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="#">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
       
@@ -336,9 +358,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -379,12 +399,34 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="morenotes.html">
-                        More Notes !!
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="amber/amber-overview.html">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="#">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
         
@@ -450,6 +492,24 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="theory/basics-classical.html">6.4.1. Classical Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/basics-qmmm.html">6.4.2. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/binding.html">6.4.3. Binding Affinity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/fe-alchemical.html">6.4.4. FE Alchem</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="theory/fe-estimators.html">6.4.6. Free Energy Estimators</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -482,9 +542,6 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="morenotes.html" class="nav-link"><span class="section-number">4. </span>More Notes !!</a></li>
-    
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
 </nav>
@@ -503,7 +560,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="theory-methods-overview">
-<h1><span class="section-number">1. </span>Theory / Methods Overview<a class="headerlink" href="#theory-methods-overview" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">6. </span>Theory / Methods Overview<a class="headerlink" href="#theory-methods-overview" title="Permalink to this heading">#</a></h1>
 <p>Before running a simulation, ask yourself:</p>
 <ul class="simple">
 <li><p>What is the scientific question?</p></li>
@@ -527,7 +584,7 @@ document.write(`
 <p>This approach does not calculate dynamical properties. MC simulations lack any concept of time.</p>
 </div>
 <section id="molecular-descriptors">
-<h2><span class="section-number">1.1. </span>Molecular Descriptors<a class="headerlink" href="#molecular-descriptors" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.1. </span>Molecular Descriptors<a class="headerlink" href="#molecular-descriptors" title="Permalink to this heading">#</a></h2>
 <p>MD or MC simulations can be carried out with different underlying physical theories to describe the particle-base model of the system. For example:</p>
 <ol class="arabic simple">
 <li><p><strong>Molecular Mechanics (MM) Descriptors</strong></p>
@@ -556,7 +613,7 @@ document.write(`
 <p>For context, a typical QM simulation could be performed with a hundred atoms or fewer. Whereas MM simulations routinely have tens to hundreds or thousands of atoms in the system.</p>
 </section>
 <section id="properties-of-interest">
-<h2><span class="section-number">1.2. </span>Properties of Interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Properties of Interest<a class="headerlink" href="#properties-of-interest" title="Permalink to this heading">#</a></h2>
 <p>The size of the system alone does not dictate the use of classical descriptors. MM simulations are often used to calculate:</p>
 <ol class="arabic simple">
 <li><p>Free Energies</p></li>
@@ -566,7 +623,7 @@ document.write(`
 <p><strong>Simluations not only samples single optimal states but must sample the correct distribution of states.</strong> This requires simulations of <em>some length.</em> In protein simulations, relevant timescale of biological processes are often nanoseconds to microseconds in length. For example, rearrangements of buried amino acid sidechains or conformation changes to a protein domain.</p>
 </section>
 <section id="other-methods">
-<h2><span class="section-number">1.3. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.3. </span>Other Methods<a class="headerlink" href="#other-methods" title="Permalink to this heading">#</a></h2>
 <p><span style="font-size:1.5em;">Quantum Mechanics/Molecular Mechanics (QM/MM) Simulations</span></p>
 <p>In classical simulations, bond breaking/forming are generally not allowed. The topology, or chemistry, of the system is constant as a function of time. In other words, the chemical identity of a molecular remains constant (except constant pH simulations).</p>
 <p>The hybrid QM/MM scheme or use of reactive force fields are generally used.</p>
@@ -576,8 +633,35 @@ document.write(`
 <p>Sample the titratable residues</p>
 </section>
 <section id="literature">
-<h2><span class="section-number">1.4. </span>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4. </span>Literature<a class="headerlink" href="#literature" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://doi.org/10.33011/livecoms.1.1.5957">Best Practices for Foundations in Molecular Simulations</a></p>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="theory/basics-classical.html">6.4.1. Classical Molecular Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-classical.html#potential-energy">6.4.1.1. Potential Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-classical.html#force-fields">6.4.1.2. Force Fields</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory/basics-qmmm.html">6.4.2. QM/MM Simulations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html#overview">6.4.2.1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html#bonded-interactions">6.4.2.2. Bonded Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html#nonbonded-interactions">6.4.2.3. Nonbonded Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory/basics-qmmm.html#electrostatic-embedding">6.4.2.4. Electrostatic Embedding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="theory/basics-qmmm.html#short-range">6.4.2.4.1. Short-Range</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory/binding.html">6.4.3. Binding Affinity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory/binding.html#simulating-binding-affinity">6.4.3.1. Simulating Binding Affinity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory/fe-alchemical.html">6.4.4. FE Alchem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/fe-alchemical.html#alchemical-free-energy">6.4.5. Alchemical Free Energy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory/fe-estimators.html">6.4.6. Free Energy Estimators</a></li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -616,7 +700,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.8. </span>TorchMDnet-ext Environment (CPU)</p>
+        <p class="prev-next-title"><span class="section-number">5.8. </span>TorchMDnet-ext Environment (CPU)</p>
       </div>
     </a>
     <a class="right-next"
@@ -624,7 +708,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Classical Molecular Dynamics</p>
+        <p class="prev-next-title"><span class="section-number">6.4.1. </span>Classical Molecular Dynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -644,10 +728,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">1.1. Molecular Descriptors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">1.2. Properties of Interest</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">1.3. Other Methods</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">1.4. Literature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-descriptors">6.1. Molecular Descriptors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-interest">6.2. Properties of Interest</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-methods">6.3. Other Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#literature">6.4. Literature</a></li>
 </ul>
   </nav></div>
 

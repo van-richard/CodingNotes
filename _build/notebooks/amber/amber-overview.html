@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Installing &#8212; CodingNotes</title>
+    <title>5. Amber &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.4. Compiling Amber on Pete" href="amber-compile.html" />
-    <link rel="prev" title="4. More Notes !!" href="../morenotes.html" />
+    <link rel="next" title="5.4. Compiling Amber on Pete" href="amber-compile.html" />
+    <link rel="prev" title="4.7. Editing with ffmpeg" href="../vmd/ffmpeg.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -194,11 +194,33 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
+                      <a class="nav-link nav-internal" href="#">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../theory.html">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
       
@@ -380,11 +402,33 @@ document.write(`
                 
 
                     <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
+                      <a class="nav-link nav-internal" href="#">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../theory.html">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
         
@@ -482,9 +526,6 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">4. </span>More Notes !!</a></li>
-    
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
 </nav>
@@ -502,8 +543,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="installing">
-<h1><span class="section-number">1. </span>Installing<a class="headerlink" href="#installing" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="amber">
+<h1><span class="section-number">5. </span>Amber<a class="headerlink" href="#amber" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Amber suite contains:</p>
 <ul>
@@ -519,7 +560,7 @@ document.write(`
 <p>For more information, please read the bible (Amber reference manual) !!!</p>
 </div>
 <section id="download-source-files">
-<h2><span class="section-number">1.1. </span>Download source files<a class="headerlink" href="#download-source-files" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1. </span>Download source files<a class="headerlink" href="#download-source-files" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Visit (<a class="reference external" href="https://ambermd.org/">https://ambermd.org/</a>)[] and head to the <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Amber</span></code> section</p></li>
 <li><p>For AmberTools</p>
@@ -539,7 +580,7 @@ document.write(`
 </ul>
 </section>
 <section id="copy-files-to-cluster">
-<h2><span class="section-number">1.2. </span>Copy files to cluster<a class="headerlink" href="#copy-files-to-cluster" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.2. </span>Copy files to cluster<a class="headerlink" href="#copy-files-to-cluster" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Names will depend on version (year)</p>
 <ul>
@@ -555,7 +596,7 @@ scp<span class="w"> </span>/path/to/download/ambertools<span class="o">[</span>V
 </div>
 </section>
 <section id="directory-layout-source-build">
-<h2><span class="section-number">1.3. </span>Directory layout - <code class="docutils literal notranslate"><span class="pre">source</span></code> - <code class="docutils literal notranslate"><span class="pre">build</span></code><a class="headerlink" href="#directory-layout-source-build" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.3. </span>Directory layout - <code class="docutils literal notranslate"><span class="pre">source</span></code> - <code class="docutils literal notranslate"><span class="pre">build</span></code><a class="headerlink" href="#directory-layout-source-build" title="Permalink to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -594,12 +635,12 @@ scp<span class="w"> </span>/path/to/download/ambertools<span class="o">[</span>V
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../morenotes.html"
+       href="../vmd/ffmpeg.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>More Notes !!</p>
+        <p class="prev-next-title"><span class="section-number">4.7. </span>Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></p>
       </div>
     </a>
     <a class="right-next"
@@ -607,7 +648,7 @@ scp<span class="w"> </span>/path/to/download/ambertools<span class="o">[</span>V
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.4. </span>Compiling Amber on Pete</p>
+        <p class="prev-next-title"><span class="section-number">5.4. </span>Compiling Amber on Pete</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -627,9 +668,9 @@ scp<span class="w"> </span>/path/to/download/ambertools<span class="o">[</span>V
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-source-files">1.1. Download source files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-files-to-cluster">1.2. Copy files to cluster</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-layout-source-build">1.3. Directory layout - <code class="docutils literal notranslate"><span class="pre">source</span></code> - <code class="docutils literal notranslate"><span class="pre">build</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-source-files">5.1. Download source files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-files-to-cluster">5.2. Copy files to cluster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-layout-source-build">5.3. Directory layout - <code class="docutils literal notranslate"><span class="pre">source</span></code> - <code class="docutils literal notranslate"><span class="pre">build</span></code></a></li>
 </ul>
   </nav></div>
 

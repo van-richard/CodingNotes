@@ -6,37 +6,56 @@
 author = 'Richard Van'
 comments_config = {'hypothesis': False, 'utterances': False}
 copyright = '2024'
-exclude_patterns = ['**.ipynb_checkpoints', '.DS_Store', '.git', '.gitignore', '.vscode', 'Thumbs.db', '_build', '_static', 'build.sh', 'drafts/', 'requirements.txt', 'bak']
-extensions = ['sphinx_togglebutton', 'sphinx_copybutton', 'jupyter_book', 'sphinx_thebe', 'sphinx_comments', 'sphinx_external_toc', 'sphinx.ext.intersphinx', 'sphinx_design', 'sphinx_book_theme', 'pydata_sphinx_theme', 'sphinx_jupyterbook_latex', 'myst_nb']
+
+
+extensions = [
+        'sphinx_togglebutton', 
+        'sphinx_copybutton', 
+        'jupyter_book', 
+        'sphinx_thebe', 
+        'sphinx_comments', 
+        'sphinx_external_toc', 
+        'sphinx.ext.intersphinx', 
+        'sphinx_design', 
+        'sphinx_book_theme', 
+        'pydata_sphinx_theme', 
+        'sphinx_jupyterbook_latex', 
+        'myst_nb'
+]
+
 source_suffix = {
     '.rst': 'restructuredtext',
     '.txt': 'markdown',
     # '.md': 'markdown',
 }
-external_toc_exclude_missing = True
-external_toc_path = '_toc.yml'
-html_baseurl = 'https://van-richard.github.io/CodingNotes/'
-html_favicon = '_static/images/van-codingnotes.png'
-html_sourcelink_suffix = ''
-html_static_path = ['_static/']
-html_css_path = 'assets/custom.css'
+
 html_theme = 'pydata_sphinx_theme'
+html_baseurl = 'https://van-richard.github.io/CodingNotes/'
+html_title = 'CodingNotes'
+html_static_path = ['_static/']
+html_favicon = '_static/images/van-codingnotes.png'
+html_css_path = ['assets/custom.css']
+
+
+# html_sourcelink_suffix = ''
 # html_sidebar: {
 #     "**": ['sidebar-nav-bs'],
 #     "index": ['sidebar-nav-bs'],
 #     }
+
 html_theme_options = {
     "logo": {
         'text': 'CodingNotes',
         "image_light": "_static/images/van-abstract-y-light.svg",
         "image_dark": "_static/images/van-abstract-y-dark.svg",
-        },
+    },
+    
     "pygment_light_style": "lovelace",
     "pygment_dark_style": "coffee",
     'article_header_start': ['breadcrumbs'],
     "secondary_sidebar_items": {
         "**": ["page-toc", "sourcelink"],
-        },
+    },
     "navbar_align": "content",
     'navbar_start': 'navbar-logo',
     'navbar_center': 'navbar-nav',
@@ -64,26 +83,52 @@ html_theme_options = {
             "icon": "fa-brands fa-linkedin",
         },
     ],
+
     'navbar_persistent': ['theme-switcher', 'search-button-field'],
-    "show_nav_level": 1,
-    "show_toc_level": 5,
-    "header_links_before_dropdown": 5,
+    "show_nav_level": 2,
+    "show_toc_level": 7,
+    #"header_links_before_dropdown": 7,
     'search_bar_text': 'Search mee!!', 
     'check_switcher': True,
     }
-html_title = 'CodingNotes'
 latex_engine = 'pdflatex'
-myst_enable_extensions = ['amsmath', 'colon_fence', 'deflist', 'dollarmath', 'html_admonition', 'html_image', 'linkify', 'replacements', 'smartquotes', 'substitution', 'tasklist']
-myst_url_schemes = ['mailto', 'http', 'https']
+
+myst_enable_extensions = [
+        'amsmath', 'colon_fence', 
+        'deflist', 'dollarmath', 
+        'html_admonition', 
+        'html_image', 'linkify', 
+        'replacements', 'smartquotes', 
+        'substitution', 'tasklist'
+]
+
+myst_url_schemes = [
+        'mailto', 
+        'http', 
+        'https'
+]
+
 nb_execution_allow_errors = False
 nb_execution_cache_path = ''
 nb_execution_excludepatterns = []
-nb_execution_in_temp = False
-nb_execution_mode = 'auto'
-nb_execution_timeout = 30
-nb_output_stderr = 'show'
+#nb_execution_in_temp = False
+#nb_execution_mode = 'auto'
+#nb_execution_timeout = 30
+#nb_output_stderr = 'show'
+
 numfig = True
 # pygments_style = 'sphinx'
 suppress_warnings = ['myst.domains']
 use_jupyterbook_latex = True
 # use_multitoc_numbering = True
+
+external_toc_exclude_missing = True
+external_toc_path = '_toc.yml'
+
+exclude_patterns = [
+        '**.ipynb_checkpoints', 
+        '.DS_Store', '.git', '.gitignore',
+        '.vscode', 'Thumbs.db', 
+        '_build', '_static', 'build.sh', 
+        'drafts/', 'requirements.txt', 'bak'
+]

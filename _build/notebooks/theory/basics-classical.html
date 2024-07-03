@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Classical Molecular Dynamics &#8212; CodingNotes</title>
+    <title>6.4.1. Classical Molecular Dynamics &#8212; CodingNotes</title>
   
   
   
@@ -68,8 +68,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. QM/MM Simulations" href="basics-qmmm.html" />
-    <link rel="prev" title="1. Theory / Methods Overview" href="../theory.html" />
+    <link rel="next" title="6.4.2. QM/MM Simulations" href="basics-qmmm.html" />
+    <link rel="prev" title="6. Theory / Methods Overview" href="../theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -195,12 +195,34 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../amber/amber-overview.html">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="../theory.html">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
       
@@ -338,9 +360,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -381,12 +401,34 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../amber/amber-overview.html">
+                        Amber
                       </a>
                     </li>
                 
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links-2">
+                    More
+                </button>
+                <ul id="pst-nav-more-links-2" class="dropdown-menu">
+                    
+                    <li class="nav-item current active">
+                      <a class="nav-link dropdown-item nav-internal" href="../theory.html">
+                        Theory / Methods Overview
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link dropdown-item nav-internal" href="../linux.html">
+                        Ubuntu and Linux
+                      </a>
+                    </li>
+                
+                </ul>
+            </li>
+            
   </ul>
 </nav></div>
         
@@ -452,6 +494,24 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Equations</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6.4.1. Classical Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics-qmmm.html">6.4.2. QM/MM Simulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binding.html">6.4.3. Binding Affinity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fe-alchemical.html">6.4.4. FE Alchem</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="fe-estimators.html">6.4.6. Free Energy Estimators</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -485,7 +545,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">4. </span>More Notes !!</a></li>
+    <li class="breadcrumb-item"><a href="../theory.html" class="nav-link"><span class="section-number">6. </span>Theory / Methods Overview</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -505,9 +565,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="classical-molecular-dynamics">
-<h1><span class="section-number">2. </span>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">6.4.1. </span>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this heading">#</a></h1>
 <section id="potential-energy">
-<h2><span class="section-number">2.1. </span>Potential Energy<a class="headerlink" href="#potential-energy" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.1.1. </span>Potential Energy<a class="headerlink" href="#potential-energy" title="Permalink to this heading">#</a></h2>
 <p>Energy of a system is composed of bonded and nonbonded interactions:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -532,7 +592,7 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
 <span class="math notranslate nohighlight">\(E_{elec} = \sum_{nonbonded_{ij}} \frac{q_i q_j}{r_{ij}}\)</span></p>
 </section>
 <section id="force-fields">
-<h2><span class="section-number">2.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.4.1.2. </span>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -577,7 +637,7 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Theory / Methods Overview</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Theory / Methods Overview</p>
       </div>
     </a>
     <a class="right-next"
@@ -585,7 +645,7 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>QM/MM Simulations</p>
+        <p class="prev-next-title"><span class="section-number">6.4.2. </span>QM/MM Simulations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -605,8 +665,8 @@ E_{nonbonded} = E_{vdw} + E_{elec.}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-energy">2.1. Potential Energy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">2.2. Force Fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-energy">6.4.1.1. Potential Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">6.4.1.2. Force Fields</a></li>
 </ul>
   </nav></div>
 
