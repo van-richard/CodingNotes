@@ -23,24 +23,37 @@ export LD_PRELOAD=$MKLROOT/lib/intel64/libmkl_core.so:$MKLROOT/lib/intel64/libmk
 2. Clone repository to `Programs/` and change branch to torchnet-ext
 
 ```bash
-git clone 
+git clone https://github.com/panxl/torchmd-net.git
 cd torchmd-net
 pip install .
 ```
+
 3. Clone [](https://github.com/panxl/qmhub) and [](https://github.com/andysim/helpme) to `Programs/`. We'll compile qmhub first.
 
 ```bash
-git clone
-git clone
-
+git clone https://github.com/panxl/qmhub.git
 cd qmhub
 pip install .
+cd ..
+```
 
-cd ../helpme
-CXX=icpc PKG_CONFIG_PATH=~/miniforge3/lib/pkgconfig cmake .. -DFFTW_INCLUDES=$MKLROOT/include/fftw -DFFTW_LIBRARIES=$MKLROOT/lib/intel64
+```bash
+git clone https://github.com/andysim/helpme.git
+cd helpme 
+mkdir -p build && cd build
+```
+
+```bash
+CXX=icpc PKG_CONFIG_PATH=~/miniforge3/lib/pkgconfig \
+    cmake .. \
+    -DFFTW_INCLUDES=$MKLROOT/include/fftw \
+    -DFFTW_LIBRARIES=$MKLROOT/lib/intel64
+```
+
+```bash
 make helpmelib
 ```
 
 4. Copy the `python/helpme***` file to `minforge3/envs/torchmd-net/lib/python3.10/site-packages/qmhub/`
 
-5. Finally, compile Amber like [normal](01amber)
+5. Then compile Amber

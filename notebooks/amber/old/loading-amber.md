@@ -1,8 +1,3 @@
-
-```{warning}
-I have updated to using module files. Please see the new directions in [Loading Amber](loading-amber-pete.md)
-```
-
 # Source Amber (OLD APPROACH)
 
 To-Do:

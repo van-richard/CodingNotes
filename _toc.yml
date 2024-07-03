@@ -9,35 +9,43 @@ subtrees:
       - glob: "notebooks/00-quickstart/0*"
   - file: notebooks/01-scripting/introduction
     subtrees:
-    - entries:
+    - caption: "bash"
+      entries:
       - file: notebooks/01-scripting/bash
-        subtrees:
-        - entries:
-          - glob: "notebooks/01-scripting/bash-*"
+      - glob: "notebooks/01-scripting/bash-*"
+    - caption: "vim"
+      entries:
       - file: notebooks/01-scripting/vi
-        subtrees:
-        - entries:
-          - glob: "notebooks/01-scripting/vi-*"
+      - glob: "notebooks/01-scripting/vi-*"
+    - caption: "ssh"
+      entries:
       - file: notebooks/01-scripting/ssh
-        subtrees:
-        - entries:
-          - glob: "notebooks/01-scripting/ssh-*"
-          - glob: "notebooks/01-scripting/module-*"
-          - glob: "notebooks/01-scripting/ubuntu-*"
-          - file: notebooks/01-scripting/gnu-parallel
+      - glob: "notebooks/01-scripting/ssh-*"
+    - caption: "modules"
+      entries:
+      - glob: "notebooks/01-scripting/module-*"
+      - glob: "notebooks/01-scripting/ubuntu-*"
+      - file: "notebooks/01-scripting/gnu-parallel"
+    - caption: "Python"  
+      entries:
       - file: notebooks/01-scripting/python
-        subtrees:
-        - entries:
-          - glob: "notebooks/01-scripting/python-*"
-          - glob: "notebooks/python/script/*"
-          - glob: "notebooks/01-scripting/conda*"
-          - glob: "notebooks/01-scripting/j*"
+      - glob: "notebooks/01-scripting/python-*"
+      - glob: "notebooks/python/script/*"
+    - caption: 'Conda'
+      entries:
+      - glob: "notebooks/01-scripting/conda*"
+      - glob: "notebooks/01-scripting/j*"
+    - caption: 'git'
+      entries:
       - file: notebooks/01-scripting/git
-        subtrees:
-        - entries:
-          - glob: "notebooks/01-scripting/git-*"
+      - glob: "notebooks/01-scripting/git-*"
   - file: notebooks/02-simulation/introduction
     subtrees:
+    - caption: "Loading Amber"
+      entries:
+      - file: notebooks/amber/loading-amber
+      - file: notebooks/amber/loading-amber-modules
+      - file: notebooks/amber/loading-amber-contents
     - caption: "MD Simulation Tutorials"
       entries:
       - file: notebooks/02-simulation/simple
@@ -49,11 +57,6 @@ subtrees:
       entries:
       - glob: "notebooks/amber/pytraj-*"
       - glob: "notebooks/amber/pymbar-*"
-  - file: notebooks/chimera
-    entries:
-    - glob: "notebooks/chimera/*"
-    - glob: notebooks/02-simulation/*traj*
-    - glob: notebooks/02-simulation/*mbar*
   - file:  notebooks/visualization
     subtrees:
     - caption: ChimeraX
@@ -74,13 +77,7 @@ subtrees:
           - file: notebooks/amber/amber-qmhub
           - file: notebooks/amber/amber-helpmelib
           - file: notebooks/amber/amber-torchmdnet
-      - file: notebooks/amber/loading-amber
-        subtrees:
-        - entries:
-          - file: notebooks/amber/loading-amber-modules
-          - file: notebooks/amber/loading-amber-contents
-          - file: notebooks/amber/loading-amberold
-    - caption: Equations
+    - caption: "Equations"
       entries:
       - file: notebooks/theory
       - glob: notebooks/theory/*

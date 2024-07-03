@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4.7. Export Dry Trajectory (no water) &#8212; CodingNotes</title>
+    <title>1. Export Dry Trajectory (no water) &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.8. Pairwise Distance Matrix" href="pytraj-pairwisedistance.html" />
-    <link rel="prev" title="4.6. Spin" href="../chimera/mov-spin.html" />
+    <link rel="next" title="2. Pairwise Distance Matrix" href="pytraj-pairwisedistance.html" />
+    <link rel="prev" title="6. Spin" href="../chimera/mov-spin.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -484,18 +484,18 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">4.1. ChimeraX Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">4.2. Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">4.3. Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">4.4. Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">4.5. Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">4.6. Spin</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.7. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pairwisedistance.html">4.8. Pairwise Distance Matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">4.9. Principal Component Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsd.html">4.10. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">4.11. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">4.12. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/cli-overview.html">1. ChimeraX Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/img-save.html">2. Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-fade.html">3. Fading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-morph.html">4. Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-rock.html">5. Rocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chimera/mov-spin.html">6. Spin</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pairwisedistance.html">2. Pairwise Distance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-pca.html">3. Principal Component Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsd.html">4. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pytraj-rmsf.html">5. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pymbar-mbar.html">6. Plot PMF with PyMBAR</a></li>
 </ul>
 </div>
 </nav></div>
@@ -554,7 +554,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="export-dry-trajectory-no-water">
-<h1><span class="section-number">4.7. </span>Export Dry Trajectory (no water)<a class="headerlink" href="#export-dry-trajectory-no-water" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1. </span>Export Dry Trajectory (no water)<a class="headerlink" href="#export-dry-trajectory-no-water" title="Permalink to this heading">#</a></h1>
 <p><a class="reference external" href="https://amberhub.chpc.utah.edu/combining-multiple-trajectory-files-into-a-single-trajectory-and-remove-water-molecules-to-save-space/">Original Example</a></p>
 <p>CPPTRAJ can be used to remove explicit water from the simulation. To do this, make 2 files: 1) Strip water from trajectory, and 2) save new topology file.</p>
 <ol class="arabic simple">
@@ -628,7 +628,7 @@ cpptraj<span class="w"> </span>traj2.in
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.6. </span>Spin</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Spin</p>
       </div>
     </a>
     <a class="right-next"
@@ -636,7 +636,7 @@ cpptraj<span class="w"> </span>traj2.in
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.8. </span>Pairwise Distance Matrix</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Pairwise Distance Matrix</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
