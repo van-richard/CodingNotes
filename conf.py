@@ -37,11 +37,11 @@ html_favicon = '_static/images/van-codingnotes.png'
 html_css_path = ['assets/custom.css']
 
 
-# html_sourcelink_suffix = ''
-# html_sidebar: {
-#     "**": ['sidebar-nav-bs'],
-#     "index": ['sidebar-nav-bs'],
-#     }
+html_sourcelink_suffix = ''
+html_sidebar: {
+    "**": ['sidebar-nav-bs'],
+    "index": ['sidebar-nav-bs'],
+    }
 
 html_theme_options = {
     "logo": {
@@ -51,12 +51,12 @@ html_theme_options = {
     },
     
     "pygment_light_style": "lovelace",
-    "pygment_dark_style": "coffee",
+    "pygment_dark_style": "inkpot",
     'article_header_start': ['breadcrumbs'],
     "secondary_sidebar_items": {
         "**": ["page-toc", "sourcelink"],
     },
-    "navbar_align": "content",
+    "navbar_align": "left",
     'navbar_start': 'navbar-logo',
     'navbar_center': 'navbar-nav',
     'navbar_end': 'navbar-icon-links',
@@ -85,11 +85,11 @@ html_theme_options = {
     ],
 
     'navbar_persistent': ['theme-switcher', 'search-button-field'],
-    "show_nav_level": 2,
-    "show_toc_level": 7,
-    #"header_links_before_dropdown": 7,
+    "show_nav_level": 1,
+    "show_toc_level": 1,
+    "header_links_before_dropdown": 7,
     'search_bar_text': 'Search mee!!', 
-    'check_switcher': True,
+    # 'check_switcher': True,
     }
 latex_engine = 'pdflatex'
 
