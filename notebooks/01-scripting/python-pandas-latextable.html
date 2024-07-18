@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Rocking &#8212; CodingNotes</title>
+    <title>2.16. Convert Pandas DataFrame to LaTeX &#8212; CodingNotes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/chimera/mov-rock';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/chimera/mov-rock.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/01-scripting/python-pandas-latextable';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/01-scripting/python-pandas-latextable.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6. Spin" href="mov-spin.html" />
-    <link rel="prev" title="4. Morphing" href="mov-morph.html" />
+    <link rel="next" title="2.17. Conda / miniconda / anaconda" href="conda.html" />
+    <link rel="prev" title="2.15. Helpful stuff" href="python-helplist.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -172,8 +172,8 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-scripting/introduction.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="introduction.html">
                         Scripting
                       </a>
                     </li>
@@ -186,7 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../visualization.html">
                         Visualization
                       </a>
@@ -370,8 +370,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-scripting/introduction.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="introduction.html">
                         Scripting
                       </a>
                     </li>
@@ -384,7 +384,7 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
+                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../visualization.html">
                         Visualization
                       </a>
@@ -481,18 +481,54 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">ChimeraX</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="cli-overview.html">1. ChimeraX Command Line</a></li>
-<li class="toctree-l1"><a class="reference internal" href="img-save.html">2. Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mov-fade.html">3. Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mov-morph.html">4. Morphing</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mov-spin.html">6. Spin</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">bash</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">1. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="bash.html">2.1. <code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="bash-startup.html">2.2. Start-Up Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bash-ubuntu-multi-gcc.html">2.3. Manging Multiple Compiler Versions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">vim</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="vi.html">2.4. <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="vi-vimrc.html">2.5. My <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> config</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ssh</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">2.6. <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="ssh-autologin.html">2.9. Automate Login (Password-less)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh-config.html">2.10. Configuring ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh-extra.html">2.11. Upload, Download, &amp; Extras</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">modules</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="module-modulefiles.html">2.12. Personal User Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gnu-parallel.html">2.13. GNU Parallel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python.html">2.14. <code class="docutils literal notranslate"><span class="pre">python</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-helplist.html">2.15. Helpful stuff</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2.16. Convert Pandas DataFrame to LaTeX</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Conda</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="conda.html">2.17. <code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda-arm-intel.html">2.18. Intel Environments on M1/M2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda-autodockvina.html">2.19. Create AutoDock Vina Conda Environment on HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda-env.html">2.20. Creating New Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conda-rc.html">2.21. Conda Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter.html">2.22. Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter-mbar.html">2.23. MBAR Uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyterbook.html">2.24. DIY GitHub Website</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">git</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="git.html">2.25. <code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-branch.html">2.26. Branching</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-ccats.html">2.27. Clone the CC-ATS Group Repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-pullpush.html">2.28. General Use Cases</a></li>
 </ul>
 </div>
 </nav></div>
@@ -531,7 +567,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../visualization.html" class="nav-link">Visualization</a></li>
+    <li class="breadcrumb-item"><a href="introduction.html" class="nav-link"><span class="section-number">2. </span>Scripting</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -550,48 +586,28 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="rocking">
-<h1><span class="section-number">5. </span>Rocking<a class="headerlink" href="#rocking" title="Permalink to this heading">#</a></h1>
-<center><video src="https://github.com/van-richard/CodingNotes/blob/531e36ca915575b44ae17e409cd825be4780842e/_static/videos/chimerax_rock_cas9.mp4"width="50%" height="50%" controls>
-</video></center>
-<p>The code looks like</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">movie</span> <span class="n">record</span> <span class="n">supersample</span> <span class="mi">3</span>
-<span class="n">rock</span> <span class="n">y</span> <span class="mi">25</span> <span class="mi">360</span>
-<span class="n">wait</span> <span class="mi">360</span>
-<span class="n">movie</span> <span class="n">encode</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">movie</span><span class="o">.</span><span class="n">mp4</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="convert-pandas-dataframe-to-latex">
+<h1><span class="section-number">2.16. </span>Convert Pandas DataFrame to LaTeX<a class="headerlink" href="#convert-pandas-dataframe-to-latex" title="Permalink to this heading">#</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+
+<span class="n">fnames</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;reweighting_entropy*&#39;</span><span class="p">))</span> <span class="c1"># Returns a list of files (I have 4)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">fnames</span><span class="p">]</span> <span class="c1"># Generator object</span>
+    
+    
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;Reaction Coordinate&#39;</span><span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],</span>
+     <span class="s1">&#39;Reweighting Entropy (B3LYP/6-31G*)&#39;</span> <span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span><span class="mi">1</span><span class="p">],</span>
+     <span class="s1">&#39;Reweighting Entropy (B3LYP/6-31+G*)&#39;</span> <span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">1</span><span class="p">],</span>
+     <span class="s1">&#39;Reweighting Entropy (ωB97X-D/6-31G)&#39;</span> <span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span><span class="mi">1</span><span class="p">],</span>
+     <span class="s1">&#39;Reweighting Entropy (ωB97X-D/6-31+G)&#39;</span> <span class="p">:</span> <span class="n">f</span><span class="p">[</span><span class="mi">3</span><span class="p">][:,</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">to_latex</span><span class="p">(</span><span class="n">column_format</span><span class="o">=</span><span class="s1">&#39;ccccc&#39;</span><span class="p">,</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span> <span class="c1"># Print out and copy!</span>
 </pre></div>
 </div>
-<p>One liner:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">movie</span> <span class="n">record</span> <span class="n">supersample</span> <span class="mi">3</span><span class="p">;</span> <span class="n">rock</span> <span class="n">y</span> <span class="mi">25</span> <span class="mi">360</span><span class="p">;</span> <span class="n">wait</span> <span class="mi">360</span><span class="p">;</span> <span class="n">movie</span> <span class="n">encode</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">movie</span><span class="o">.</span><span class="n">mp4</span>
-</pre></div>
-</div>
-<p>Where:</p>
-<p>movie record [options] - begins the screen recording, addition option <code class="docutils literal notranslate"><span class="pre">supersample</span> <span class="pre">3</span></code>
-rock [axix] [degree] [frame #] - rock along the <code class="docutils literal notranslate"><span class="pre">y</span></code>-axis, moving <code class="docutils literal notranslate"><span class="pre">25</span></code> degree along the axis for <code class="docutils literal notranslate"><span class="pre">360</span></code> frames
-wait [frame] - number of wait-frames before running the next line
-movie encode [location] - save the video at specified location</p>
-<section id="spinning-the-pdb-in-a-movie">
-<h2><span class="section-number">5.1. </span>Spinning the PDB in a Movie<a class="headerlink" href="#spinning-the-pdb-in-a-movie" title="Permalink to this heading">#</a></h2>
-<p>The code looks like</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">movie</span> <span class="n">record</span> <span class="n">supersample</span> <span class="mi">3</span>
-<span class="n">turn</span> <span class="n">y</span> <span class="mi">1</span> <span class="mi">360</span>
-<span class="n">wait</span> <span class="mi">360</span>
-<span class="n">movie</span> <span class="n">encode</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">movie</span><span class="o">.</span><span class="n">mp4</span>
-</pre></div>
-</div>
-<p>One liner:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">movie</span> <span class="n">record</span> <span class="n">supersample</span> <span class="mi">3</span><span class="p">;</span> <span class="n">turn</span> <span class="n">y</span> <span class="mi">1</span> <span class="mi">360</span><span class="p">;</span> <span class="n">wait</span> <span class="mi">360</span><span class="p">;</span> <span class="n">movie</span> <span class="n">encode</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">movie</span><span class="o">.</span><span class="n">mp4</span>
-</pre></div>
-</div>
-<p>Where:</p>
-<p>movie record [options] - begins the screen recording, addition option <code class="docutils literal notranslate"><span class="pre">supersample</span> <span class="pre">3</span></code>
-turn [axis] [degree] [frame #] - spin on the <code class="docutils literal notranslate"><span class="pre">y</span></code>-axis at <code class="docutils literal notranslate"><span class="pre">1</span></code> degree every <code class="docutils literal notranslate"><span class="pre">360</span></code> frames
-wait [frame] - number of wait-frames before running the next line
-movie encode [location] - save the video at specified location</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -607,7 +623,7 @@ movie encode [location] - save the video at specified location</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/chimera"
+            path: "./notebooks/01-scripting"
         },
         predefinedOutput: true
     }
@@ -624,20 +640,20 @@ movie encode [location] - save the video at specified location</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="mov-morph.html"
+       href="python-helplist.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Morphing</p>
+        <p class="prev-next-title"><span class="section-number">2.15. </span>Helpful stuff</p>
       </div>
     </a>
     <a class="right-next"
-       href="mov-spin.html"
+       href="conda.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Spin</p>
+        <p class="prev-next-title"><span class="section-number">2.17. </span><code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -652,19 +668,9 @@ movie encode [location] - save the video at specified location</p>
 
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spinning-the-pdb-in-a-movie">5.1. Spinning the PDB in a Movie</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/chimera/mov-rock.md">
+    <a href="../../_sources/notebooks/01-scripting/python-pandas-latextable.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
