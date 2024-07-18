@@ -1,4 +1,4 @@
-# Scripting
+# coding
 
 - `bash` - shell language (you will spend considerable time here)
 
