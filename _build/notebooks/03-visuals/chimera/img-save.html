@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.3. Saving Images &#8212; CodingNotes</title>
+    <title>Saving Images &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="3.4. Fading" href="mov-fade.html" />
-    <link rel="prev" title="3.2. ChimeraX Command Line" href="cli-overview.html" />
+    <link rel="next" title="Fading" href="mov-fade.html" />
+    <link rel="prev" title="ChimeraX Command Line" href="cli-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -195,7 +195,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -365,7 +372,7 @@ document.write(`
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -379,7 +386,14 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -455,17 +469,17 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">ChimeraX</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="chimera.html">3.1. Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli-overview.html">3.2. ChimeraX Command Line</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3.3. Saving Images</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mov-fade.html">3.4. Fading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mov-morph.html">3.5. Morphing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mov-rock.html">3.6. Rocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mov-spin.html">3.7. Spin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chimera.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli-overview.html">ChimeraX Command Line</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Saving Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mov-fade.html">Fading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mov-morph.html">Morphing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mov-rock.html">Rocking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mov-spin.html">Spin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">VMD</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">3.8. Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vmd/ffmpeg.html">Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></a></li>
 </ul>
 </div>
 </nav></div>
@@ -504,9 +518,9 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../visualization.html" class="nav-link"><span class="section-number">3. </span>Visualization</a></li>
+    <li class="breadcrumb-item"><a href="../visualization.html" class="nav-link">visualization</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page">Saving Images</li>
   </ul>
 </nav>
 </div>
@@ -524,7 +538,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="saving-images">
-<h1><span class="section-number">3.3. </span>Saving Images<a class="headerlink" href="#saving-images" title="Permalink to this heading">#</a></h1>
+<h1>Saving Images<a class="headerlink" href="#saving-images" title="Permalink to this heading">#</a></h1>
 <p>You can save figures using the command line interface. The following example saves the display as a <code class="docutils literal notranslate"><span class="pre">.png</span></code> file. <code class="docutils literal notranslate"><span class="pre">Supersample</span> <span class="pre">3</span></code> helps the quality, and <code class="docutils literal notranslate"><span class="pre">transparentBackground</span></code> removes the white background.</p>
 <p>One liner:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">save</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">picture</span><span class="o">.</span><span class="n">png</span> <span class="n">supersample</span> <span class="mi">3</span> <span class="n">transparentBackground</span> <span class="kc">True</span>
@@ -567,7 +581,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.2. </span>ChimeraX Command Line</p>
+        <p class="prev-next-title">ChimeraX Command Line</p>
       </div>
     </a>
     <a class="right-next"
@@ -575,7 +589,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.4. </span>Fading</p>
+        <p class="prev-next-title">Fading</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

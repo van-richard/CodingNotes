@@ -1,4 +1,4 @@
-# Ubuntu and Linux
+# linux
 
 ```{tableofcontents}
 ```

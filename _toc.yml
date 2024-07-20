@@ -1,6 +1,6 @@
 root: index
 defaults:
-  numbered: True
+  numbered: False
 subtrees:
 - entries:
   - file: notebooks/00-quickstart/introduction
@@ -39,8 +39,6 @@ subtrees:
     - caption: "modules"
       entries:
       - glob: "notebooks/01-scripting/module-*"
-      - glob: "notebooks/01-scripting/ubuntu-*"
-      - file: "notebooks/01-scripting/gnu-parallel"
     - caption: "Python"  
       entries:
       - file: notebooks/01-scripting/python
@@ -56,7 +54,7 @@ subtrees:
       - glob: "notebooks/01-scripting/git-*"
   - file: notebooks/02-simulation/introduction
     subtrees:
-    - caption: "Loading Amber"
+    - caption: "Running Amber"
       entries:
       - file: notebooks/amber/loading-amber
       - file: notebooks/amber/loading-amber-modules
@@ -77,12 +75,12 @@ subtrees:
     - caption: "ChimeraX"
       entries:
       - glob: notebooks/03-visuals/chimera/*
-    - caption: VMD
+    - caption: "VMD"
       entries:
       - glob: notebooks/03-visuals/vmd/*
   - file: notebooks/amber/amber-overview
     subtrees:
-    - caption: "Amber"
+    - caption: "amber"
       entries:
       - file: notebooks/amber/amber-compile
       - file: notebooks/amber/amber-patch
@@ -96,6 +94,18 @@ subtrees:
       - glob: notebooks/theory/*
   - file: notebooks/linux
     subtrees:
-    - caption: "Linux/Unit Commands"
+    - caption: "GNU parallel"
+      entries:
+      - file: "notebooks/01-scripting/gnu-parallel"
+    - caption: "Commands & Examples"
       entries:
       - glob: notebooks/commands/*
+  - file: notebooks/containers/apptainer
+    subtrees:
+    - caption: "containers"
+      entries:
+      - file: notebooks/containers/app-build
+      - file: notebooks/containers/app-run
+      - file: notebooks/containers/app-shell
+      - file: notebooks/containers/app-instance
+

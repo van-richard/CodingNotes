@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4.7. Compile helpmelib executable &#8212; CodingNotes</title>
+    <title>Compile helpmelib executable &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.8. TorchMDnet-ext Environment (CPU)" href="amber-torchmdnet.html" />
-    <link rel="prev" title="4.6. Install QMHub" href="amber-qmhub.html" />
+    <link rel="next" title="TorchMDnet-ext Environment (CPU)" href="amber-torchmdnet.html" />
+    <link rel="prev" title="Install QMHub" href="amber-qmhub.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -195,7 +195,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -336,9 +343,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -367,7 +372,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -381,7 +386,14 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -450,6 +462,23 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">amber</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="amber-compile.html">Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-patch.html">Patch / Compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -483,9 +512,9 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="amber-overview.html" class="nav-link"><span class="section-number">4. </span>compiling</a></li>
+    <li class="breadcrumb-item"><a href="amber-overview.html" class="nav-link">compiling</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page">Compile...</li>
   </ul>
 </nav>
 </div>
@@ -503,7 +532,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section id="compile-helpmelib-executable">
-<h1><span class="section-number">4.7. </span>Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable<a class="headerlink" href="#compile-helpmelib-executable" title="Permalink to this heading">#</a></h1>
+<h1>Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable<a class="headerlink" href="#compile-helpmelib-executable" title="Permalink to this heading">#</a></h1>
 <ol class="arabic simple" start="3">
 <li><p>Clone <a class="reference external" href="https://github.com/andysim/helpme"></a> to <code class="docutils literal notranslate"><span class="pre">Programs/sources/</span></code></p></li>
 </ol>
@@ -567,7 +596,7 @@ cp<span class="w"> </span>python/<span class="w"> </span>..
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.6. </span>Install QMHub</p>
+        <p class="prev-next-title">Install QMHub</p>
       </div>
     </a>
     <a class="right-next"
@@ -575,7 +604,7 @@ cp<span class="w"> </span>python/<span class="w"> </span>..
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.8. </span>TorchMDnet-ext Environment (CPU)</p>
+        <p class="prev-next-title">TorchMDnet-ext Environment (CPU)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

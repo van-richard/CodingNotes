@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>4. compiling &#8212; CodingNotes</title>
+    <title>compiling &#8212; CodingNotes</title>
   
   
   
@@ -66,8 +66,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.4. Compiling Amber on Pete" href="amber-compile.html" />
-    <link rel="prev" title="3.8. Editing with ffmpeg" href="../03-visuals/vmd/ffmpeg.html" />
+    <link rel="next" title="Compiling Amber on Pete" href="amber-compile.html" />
+    <link rel="prev" title="Editing with ffmpeg" href="../03-visuals/vmd/ffmpeg.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -195,7 +195,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -336,9 +343,7 @@ document.write(`
       
       
       
-        
-      
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -367,7 +372,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -381,7 +386,14 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -450,6 +462,23 @@ document.write(`
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">amber</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="amber-compile.html">Compiling Amber on Pete</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-patch.html">Patch / Compile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-helpmelib.html">Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -482,7 +511,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page">compiling</li>
   </ul>
 </nav>
 </div>
@@ -500,7 +529,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="compiling">
-<h1><span class="section-number">4. </span>compiling<a class="headerlink" href="#compiling" title="Permalink to this heading">#</a></h1>
+<h1>compiling<a class="headerlink" href="#compiling" title="Permalink to this heading">#</a></h1>
 <p>oh dear lord</p>
 <hr class="docutils" />
 <ul class="simple">
@@ -518,7 +547,7 @@ document.write(`
 <p>For more information, please read the bible (Amber reference manual) !!!</p>
 </div>
 <section id="download-source-files">
-<h2><span class="section-number">4.1. </span>Download source files<a class="headerlink" href="#download-source-files" title="Permalink to this heading">#</a></h2>
+<h2>Download source files<a class="headerlink" href="#download-source-files" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Visit (<a class="reference external" href="https://ambermd.org/">https://ambermd.org/</a>)[] and head to the <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Amber</span></code> section</p></li>
 <li><p>For AmberTools</p>
@@ -538,7 +567,7 @@ document.write(`
 </ul>
 </section>
 <section id="copy-files-to-cluster">
-<h2><span class="section-number">4.2. </span>Copy files to cluster<a class="headerlink" href="#copy-files-to-cluster" title="Permalink to this heading">#</a></h2>
+<h2>Copy files to cluster<a class="headerlink" href="#copy-files-to-cluster" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Names will depend on version (year)</p>
 <ul>
@@ -552,15 +581,23 @@ scp<span class="w"> </span>/path/to/download/amber<span class="o">[</span>VERSIO
 scp<span class="w"> </span>/path/to/download/ambertools<span class="o">[</span>VERSION<span class="o">]</span>.tar.bz2<span class="w"> </span>van@hostname:/home/van/
 </pre></div>
 </div>
-</section>
-<section id="directory-layout-source-build">
-<h2><span class="section-number">4.3. </span>Directory layout - <code class="docutils literal notranslate"><span class="pre">source</span></code> - <code class="docutils literal notranslate"><span class="pre">build</span></code><a class="headerlink" href="#directory-layout-source-build" title="Permalink to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-</section>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">amber</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="amber-compile.html">Compiling Amber on Pete</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-compile.html#amber">Amber</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="amber-patch.html">Patch / Compile</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-patch.html#create-conda-environment">Create Conda Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="amber-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-helpmelib.html">Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -598,7 +635,7 @@ scp<span class="w"> </span>/path/to/download/ambertools<span class="o">[</span>V
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.8. </span>Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></p>
+        <p class="prev-next-title">Editing with <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code></p>
       </div>
     </a>
     <a class="right-next"
@@ -606,7 +643,7 @@ scp<span class="w"> </span>/path/to/download/ambertools<span class="o">[</span>V
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.4. </span>Compiling Amber on Pete</p>
+        <p class="prev-next-title">Compiling Amber on Pete</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -626,9 +663,8 @@ scp<span class="w"> </span>/path/to/download/ambertools<span class="o">[</span>V
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-source-files">4.1. Download source files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-files-to-cluster">4.2. Copy files to cluster</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-layout-source-build">4.3. Directory layout - <code class="docutils literal notranslate"><span class="pre">source</span></code> - <code class="docutils literal notranslate"><span class="pre">build</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-source-files">Download source files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-files-to-cluster">Copy files to cluster</a></li>
 </ul>
   </nav></div>
 
