@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -195,7 +195,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -365,7 +372,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -379,7 +386,14 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -476,7 +490,6 @@ document.write(`
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">modules</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="module-modulefiles.html">1. Personal User Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gnu-parallel.html">2. GNU Parallel</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
 <ul class="nav bd-sidenav">
@@ -559,14 +572,14 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="start-up-files">
-<h1><span class="section-number">2. </span>Start-Up Files<a class="headerlink" href="#start-up-files" title="Permalink to this heading">#</a></h1>
+<h1>Start-Up Files<a class="headerlink" href="#start-up-files" title="Permalink to this heading">#</a></h1>
 <p>When <code class="docutils literal notranslate"><span class="pre">bash</span></code> is invoked as an interactive login shell, or as a non-interactive shell with the –login option, it first reads and executes commands from the file <code class="docutils literal notranslate"><span class="pre">/etc/profile</span></code>, if that file exists. After reading that file, it looks for <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>, <code class="docutils literal notranslate"><span class="pre">~/.bash_login</span></code>, and <code class="docutils literal notranslate"><span class="pre">~/.profile</span></code>, in that order, and reads and executes commands from the first one that exists and is readable. The –noprofile option may be used when the shell is started to inhibit this behavior.</p>
 <p>When an interactive shell that is not a login shell is started, <code class="docutils literal notranslate"><span class="pre">bash</span></code> reads and executes commands from <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>, if that file exists. This may be inhibited by using the –norc option. The –rcfile file option will force <code class="docutils literal notranslate"><span class="pre">bash</span></code> to read and execute commands from file instead of <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>.</p>
 <section id="bash-profile">
-<h2><span class="section-number">2.1. </span>~/.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this heading">#</a></h2>
+<h2>~/.bash_profile<a class="headerlink" href="#bash-profile" title="Permalink to this heading">#</a></h2>
 <p>Example of my <code class="docutils literal notranslate"><span class="pre">~/.bash_profile</span></code>:</p>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Listing 2.1 </span><span class="caption-text">~/.bash_profile</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 1 </span><span class="caption-text">~/.bash_profile</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="nb">export</span><span class="w"> </span><span class="nv">BASH_SILENCE_DEPRECATION_WARNING</span><span class="o">=</span><span class="m">1</span>
 <span class="linenos">2</span><span class="nb">export</span><span class="w"> </span><span class="nv">CLICOLOR</span><span class="o">=</span><span class="m">1</span>
 <span class="linenos">3</span><span class="nb">export</span><span class="w"> </span><span class="nv">LSCOLORS</span><span class="o">=</span>ExGxCxDxCxegedabagaced<span class="w"> </span>
@@ -586,12 +599,12 @@ document.write(`
 <p>When an interactive shell that is not a login shell is started, bash reads and executes commands from <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code>, if that file exists. This can be inhibited by using the <code class="docutils literal notranslate"><span class="pre">--norc</span></code> option. The <code class="docutils literal notranslate"><span class="pre">--rcfile</span></code> file option will force bash to read and execute commands from file instead of <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code></p>
 </section>
 <section id="bashrc">
-<h2><span class="section-number">2.2. </span>~/.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this heading">#</a></h2>
+<h2>~/.bashrc<a class="headerlink" href="#bashrc" title="Permalink to this heading">#</a></h2>
 <p>Every new terminal window/tab that you open will load <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code></p>
 <p>On a brand-new user account, none of these files will exist, they can be created with any suitable text editor that is capable of creating plain text files with Unix style (<code class="docutils literal notranslate"><span class="pre">LF</span></code>) line endings. Save them into your home folder (<code class="docutils literal notranslate"><span class="pre">~/</span></code>)</p>
 <p>Example of my <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file contains:</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-number">Listing 2.2 </span><span class="caption-text">~/.bashrc</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 2 </span><span class="caption-text">~/.bashrc</span><a class="headerlink" href="#id2" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-e<span class="w"> </span>~/.bash_aliases<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
 <span class="linenos">2</span><span class="w">    </span><span class="nb">source</span><span class="w"> </span>~/.bash_aliases<span class="w"> </span>
 <span class="linenos">3</span><span class="k">fi</span><span class="w"> </span>
@@ -603,10 +616,10 @@ document.write(`
 <p>Aliases are shortcuts that can save you from having to remember long commands and eliminate a great deal of typing when you are working on the command line</p>
 </section>
 <section id="bash-aliases">
-<h2><span class="section-number">2.3. </span>~/.bash_aliases<a class="headerlink" href="#bash-aliases" title="Permalink to this heading">#</a></h2>
+<h2>~/.bash_aliases<a class="headerlink" href="#bash-aliases" title="Permalink to this heading">#</a></h2>
 <p>Example of my <code class="docutils literal notranslate"><span class="pre">~/.bash_aliases</span></code> file:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
-<div class="code-block-caption"><span class="caption-number">Listing 2.3 </span><span class="caption-text">~/.bash_aliases</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 3 </span><span class="caption-text">~/.bash_aliases</span><a class="headerlink" href="#id3" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># aliases</span>
 <span class="linenos"> 2</span><span class="nb">alias</span><span class="w"> </span><span class="nv">myconda</span><span class="o">=</span><span class="s1">&#39;eval &quot;$(/Users/van/Programs/miniforge3/bin/conda shell.bash hook)&quot;; conda activate&#39;</span>
 <span class="linenos"> 3</span>
