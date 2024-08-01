@@ -1,30 +1,46 @@
-# Clone the CC-ATS Group Repository
+# `git` Examples (CC-ATS)
 
-[https://github.com/cc-ats](https://github.com/cc-ats)
+## Clone Github repository 
 
-- Navigate to the `literature` repository
+- Make a copy of the CC-ATS 'literature' Repository [https://github.com/cc-ats](https://github.com/cc-ats)
+    
 - Click the green button labeled `code`
 - Copy the `ssh` or `html` link
-
-- On the local computer, I usually our group repository in a `ccats` folder
+- Run the following on your local machine
+    - I keep this in a directory called `ccats`
 
 ```bash
-cd ~/                                       # Make sure you're home
-mkdir -p ccats                              # Make ccats directory
-cd ccats                                    # Go inside new dir
-git clone git@github.com:cc-ats/~~~~ .      # Clone the repo.. it'll take ~30 min lol
+cd ~
+mkdir -p ccats 
+cd ccats
+git clone git@github.com:cc-ats/literature.git 
+```
+
+## Clone in sparse mode
+
+- For new clones
+- Only copy the group meeting directory
+
+```bash
+git clone --no-checkout git@github.com:cc-ats/literature.git
+cd literature
+git spare-checkout init --cone
+git spare-checkout set group_meetings
+git checkout master
 ```
 
 
-- Make a research_update directory and push changes to GitHub
+## Updating the reposiory
+
+- For research udpates
+- `git pull` / `git push`
 
 ```bash
-cd ccats/literature/group_meetings/research_updates         # Path to research update directory
-mkdir [FIRST_LAST_NAME]                                     # Make your new folder 
-cd [FIRST_LAST_NAME]                                        # Go in
-cp /path/to/research/update.pptx .                          # Copy a file or past preseentation to the new directory
-git add .                                                   # Add changes
-git commit -m "researach update"                            # Commit message
-git push                                                    # upload
+# go to the ~your~ research updates
+cd ccats /literature/group_meetings/research_updates/$USER 
+git add .                                                   
+git commit -m "researach update"
+git push
 ```
-dklf
+
+
