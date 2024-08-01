@@ -1,4 +1,4 @@
-# Prefac
+# Preface
 
 These notes are dedicated to my one and only brain cell. Kudos.
 
@@ -40,6 +40,3 @@ To answer your questions:
 * [Google Colaboratory](https://colab.research.google.com)
 * [Overleaf](https://overleaf.com)
 
-```{toctree}
-:hidden:
-```

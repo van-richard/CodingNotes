@@ -1,4 +1,4 @@
-# `module load`
+# Using the Lmod `module` Command
 
 ```{margin}
 More information:

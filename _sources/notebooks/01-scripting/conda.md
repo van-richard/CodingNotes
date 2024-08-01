@@ -1,4 +1,4 @@
-# `Conda`
+# `Conda` / `miniconda` / `anaconda`
 
 - Programs that manages other programs, specificaly for python
 
