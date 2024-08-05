@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -195,7 +195,14 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -367,7 +374,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        Visualization
+                        visualization
                       </a>
                     </li>
                 
@@ -381,7 +388,14 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        Ubuntu and Linux
+                        linux
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
+                        apptainer
                       </a>
                     </li>
                 
@@ -526,8 +540,8 @@ document.write(`
 <h1>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-afc57443-a58b-4cdf-ab61-7f81e5a9cc44">
-<span class="eqno">()<a class="headerlink" href="#equation-afc57443-a58b-4cdf-ab61-7f81e5a9cc44" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-57e75254-edb0-4895-966a-c2578d3379f2">
+<span class="eqno">()<a class="headerlink" href="#equation-57e75254-edb0-4895-966a-c2578d3379f2" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -540,8 +554,8 @@ document.write(`
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-62185b42-364b-4cc0-924e-558277ca77c9">
-<span class="eqno">()<a class="headerlink" href="#equation-62185b42-364b-4cc0-924e-558277ca77c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-21173277-8aa4-43e4-91bd-1f26dd7675bb">
+<span class="eqno">()<a class="headerlink" href="#equation-21173277-8aa4-43e4-91bd-1f26dd7675bb" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}
