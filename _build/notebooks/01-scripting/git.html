@@ -482,7 +482,6 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ssh.html"><code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
 
-
 <li class="toctree-l1"><a class="reference internal" href="ssh-autologin.html">Automate Login (Password-less)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ssh-config.html">Configuring ssh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ssh-extra.html">Upload, Download, &amp; Extras</a></li>
@@ -512,7 +511,9 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="git-branch.html">Branching</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-ccats.html">Clone the CC-ATS Group Repository</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git-ccats.html">Clone Github repository</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="git-pullpush.html">General Use Cases</a></li>
 </ul>
 </div>
@@ -574,14 +575,54 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="git">
 <h1><code class="docutils literal notranslate"><span class="pre">git</span></code><a class="headerlink" href="#git" title="Permalink to this heading">#</a></h1>
 <aside class="sidebar">
-<p>no one really knows this…</p>
+<p>is it possible for anyone to really knows this…</p>
 </aside>
 <ul class="simple">
-<li><p>version control</p></li>
-<li><p>help keep track of code changes</p></li>
-<li><p>is used to collaborate on code</p></li>
+<li><p>version control, i.e., helps manage code development</p></li>
+<li><p>collaborate with others on code</p></li>
 </ul>
-<p><a class="reference external" href="https://github.com">GitHub</a> is a cloud-based hosting service that lets you manage <code class="docutils literal notranslate"><span class="pre">git</span></code> repositories. If you have open-source projects that use <code class="docutils literal notranslate"><span class="pre">git</span></code>, then GitHub is designed to help you better manage them.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://github.com">GitHub</a> is a cloud-based hosting service that lets you manage <code class="docutils literal notranslate"><span class="pre">git</span></code> repositories. If you have open-source projects that use <code class="docutils literal notranslate"><span class="pre">git</span></code>, then GitHub is designed to help you better manage them.</p>
+</div></blockquote>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">git</span> <span class="c1"># linux</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">git</span> <span class="c1"># mac</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">git</span>
+</pre></div>
+</div>
+</section>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Add github username</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;van-richard&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Add github email</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;richard.scott.van@email.com&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Set your preferred text editor, I chose <code class="docutils literal notranslate"><span class="pre">vim</span></code></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">core</span><span class="o">.</span><span class="n">editor</span> <span class="n">vim</span>
+</pre></div>
+</div>
+</section>
+<section id="ssh-connection-to-github">
+<h2>SSH Connection to GitHub<a class="headerlink" href="#ssh-connection-to-github" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="ssh-autologin.html"><span class="doc std std-doc">Make an SSH key, if you haven’t done so</span></a></p></li>
+<li><p>Check if SSH key is working</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -640,6 +681,18 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-connection-to-github">SSH Connection to GitHub</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 

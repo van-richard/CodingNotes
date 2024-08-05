@@ -602,7 +602,10 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="commands/sed.html"><code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands/seq.html"><code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands/setfacl.html"><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands/sinfo.html"><code class="docutils literal notranslate"><span class="pre">sinfo</span></code> - View information about Slurm nodes and partitions.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="commands/sinfo.html"><code class="docutils literal notranslate"><span class="pre">sinfo</span></code> - View information about Slurm nodes and partitions.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/sinfo.html#find-idle-partitions">Find idle partitions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="commands/sort.html"><code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands/ssh.html"><code class="docutils literal notranslate"><span class="pre">ssh</span></code> - secure shell protocol</a></li>
 <li class="toctree-l1"><a class="reference internal" href="commands/ssh-keygen.html"><code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> - Make SSH key</a></li>
@@ -612,6 +615,55 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="commands/trap.html"><code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
 </ul>
 </div>
+<section id="reset-gnome-terminal-hotkeys">
+<h2>Reset GNOME Terminal Hotkeys<a class="headerlink" href="#reset-gnome-terminal-hotkeys" title="Permalink to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dconf</span> <span class="n">reset</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">org</span><span class="o">/</span><span class="n">gnome</span><span class="o">/</span><span class="n">terminal</span><span class="o">/</span><span class="n">legacy</span><span class="o">/</span><span class="n">keybindings</span><span class="o">/</span>
+</pre></div>
+</div>
+</section>
+<section id="manging-multiple-compiler-versions">
+<h2>Manging Multiple Compiler Versions<a class="headerlink" href="#manging-multiple-compiler-versions" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>for personal machines</p></li>
+</ul>
+<p>For example, if you need multiple versions of gcc/g++ on a single machine running Ubuntu 22.04</p>
+<ul class="simple">
+<li><p>First install with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt-get</span></code></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>gcc-11<span class="w"> </span>gcc-10<span class="w"> </span>gcc-9<span class="w"> </span>g++-11<span class="w"> </span>g++-10<span class="w"> </span>g++-9<span class="w"> </span>-y
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Use the <code class="docutils literal notranslate"><span class="pre">updalternativesate</span></code>  to create list of multiple gcc and g++ compiler alternatives</p></li>
+<li><p>Larger number = higher priority</p>
+<ul>
+<li><p>here, gcc and g++ 11 is default</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--install<span class="w"> </span>/usr/bin/gcc<span class="w"> </span>gcc<span class="w"> </span>/usr/bin/gcc-9<span class="w"> </span><span class="m">0</span>
+sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--install<span class="w"> </span>/usr/bin/g++<span class="w"> </span>g++<span class="w"> </span>/usr/bin/g++-9<span class="w"> </span><span class="m">0</span>
+sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--install<span class="w"> </span>/usr/bin/gcc<span class="w"> </span>gcc<span class="w"> </span>/usr/bin/gcc-10<span class="w"> </span><span class="m">1</span>
+sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--install<span class="w"> </span>/usr/bin/g++<span class="w"> </span>g++<span class="w"> </span>/usr/bin/g++-10<span class="w"> </span><span class="m">1</span>
+sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--install<span class="w"> </span>/usr/bin/gcc<span class="w"> </span>gcc<span class="w"> </span>/usr/bin/gcc-11<span class="w"> </span><span class="m">2</span>
+sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--install<span class="w"> </span>/usr/bin/g++<span class="w"> </span>g++<span class="w"> </span>/usr/bin/g++-11<span class="w"> </span><span class="m">2</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Check the available c and c++ compilers list on your system and select desired version by entering relevant selection number:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--config<span class="w"> </span>gcc
+sudo<span class="w"> </span>update-alternatives<span class="w"> </span>--config<span class="w"> </span>g++
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Sanity check</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcc<span class="w"> </span>--version
+g++<span class="w"> </span>--version
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -670,6 +722,17 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reset-gnome-terminal-hotkeys">Reset GNOME Terminal Hotkeys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manging-multiple-compiler-versions">Manging Multiple Compiler Versions</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 

@@ -1,0 +1,1 @@
+pip install jupyter-book==0.15.1 sphinx==5.0.2 pydata-sphinx-theme==0.15.1 sphinx-book-theme==1.0.1 sphinxcontrib-bibtex==2.5.0 sphinx-autobuild==2021.3.14 sphinx-copybutton sphinx-design sphinx-external-toc sphinx-tabs sphinx-togglebutton

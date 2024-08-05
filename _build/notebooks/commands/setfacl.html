@@ -564,8 +564,11 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="setfacl-change-file-folder-permissions">
 <h1><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions<a class="headerlink" href="#setfacl-change-file-folder-permissions" title="Permalink to this heading">#</a></h1>
-<p>Give specific user permission to read/write/execute a folder.</p>
-<p><code class="docutils literal notranslate"><span class="pre">setfacl</span></code> is short for set File ACL (Access Control List). This sets permissions for specific users, without changing the owndership of the directory.</p>
+<p>Give specific user permission to read/write/execute a folder</p>
+<ul class="simple">
+<li><p>modifies ACL</p></li>
+<li><p>alternative to <code class="docutils literal notranslate"><span class="pre">chmod</span></code></p></li>
+</ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setfacl<span class="w"> </span>-m<span class="w"> </span>u:username:rwx<span class="w"> </span>myfolder
 </pre></div>
 </div>

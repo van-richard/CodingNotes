@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Clone the CC-ATS Group Repository &#8212; CodingNotes</title>
+    <title>Clone Github repository &#8212; CodingNotes</title>
   
   
   
@@ -482,7 +482,6 @@ document.write(`
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ssh.html"><code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
 
-
 <li class="toctree-l1"><a class="reference internal" href="ssh-autologin.html">Automate Login (Password-less)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ssh-config.html">Configuring ssh</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ssh-extra.html">Upload, Download, &amp; Extras</a></li>
@@ -512,7 +511,9 @@ document.write(`
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="git.html"><code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="git-branch.html">Branching</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clone the CC-ATS Group Repository</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Clone Github repository</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="git-pullpush.html">General Use Cases</a></li>
 </ul>
 </div>
@@ -554,7 +555,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="introduction.html" class="nav-link">coding</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Clone the...</li>
+    <li class="breadcrumb-item active" aria-current="page">Clone...</li>
   </ul>
 </nav>
 </div>
@@ -571,34 +572,53 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="clone-the-cc-ats-group-repository">
-<h1>Clone the CC-ATS Group Repository<a class="headerlink" href="#clone-the-cc-ats-group-repository" title="Permalink to this heading">#</a></h1>
-<p><a class="github reference external" href="https://github.com/cc-ats">cc-ats</a></p>
+  <p>#<code class="docutils literal notranslate"><span class="pre">git</span></code> Examples (CC-ATS)</p>
+<section id="clone-github-repository">
+<h1>Clone Github repository<a class="headerlink" href="#clone-github-repository" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">literature</span></code> repository</p></li>
+<li><p>Make a copy of the CC-ATS ‘literature’ Repository <a class="github reference external" href="https://github.com/cc-ats">cc-ats</a></p></li>
 <li><p>Click the green button labeled <code class="docutils literal notranslate"><span class="pre">code</span></code></p></li>
 <li><p>Copy the <code class="docutils literal notranslate"><span class="pre">ssh</span></code> or <code class="docutils literal notranslate"><span class="pre">html</span></code> link</p></li>
-<li><p>On the local computer, I usually our group repository in a <code class="docutils literal notranslate"><span class="pre">ccats</span></code> folder</p></li>
+<li><p>Run the following on your local machine</p>
+<ul>
+<li><p>I keep this in a directory called <code class="docutils literal notranslate"><span class="pre">ccats</span></code></p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/<span class="w">                                       </span><span class="c1"># Make sure you&#39;re home</span>
-mkdir<span class="w"> </span>-p<span class="w"> </span>ccats<span class="w">                              </span><span class="c1"># Make ccats directory</span>
-<span class="nb">cd</span><span class="w"> </span>ccats<span class="w">                                    </span><span class="c1"># Go inside new dir</span>
-git<span class="w"> </span>clone<span class="w"> </span>git@github.com:cc-ats/~~~~<span class="w"> </span>.<span class="w">      </span><span class="c1"># Clone the repo.. it&#39;ll take ~30 min lol</span>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~
+mkdir<span class="w"> </span>-p<span class="w"> </span>ccats<span class="w"> </span>
+<span class="nb">cd</span><span class="w"> </span>ccats
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:cc-ats/literature.git<span class="w"> </span>
 </pre></div>
 </div>
+</section>
+<section id="clone-in-sparse-mode">
+<h1>Clone in sparse mode<a class="headerlink" href="#clone-in-sparse-mode" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
-<li><p>Make a research_update directory and push changes to GitHub</p></li>
+<li><p>For new clones</p></li>
+<li><p>Only copy the group meeting directory</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ccats/literature/group_meetings/research_updates<span class="w">         </span><span class="c1"># Path to research update directory</span>
-mkdir<span class="w"> </span><span class="o">[</span>FIRST_LAST_NAME<span class="o">]</span><span class="w">                                     </span><span class="c1"># Make your new folder </span>
-<span class="nb">cd</span><span class="w"> </span><span class="o">[</span>FIRST_LAST_NAME<span class="o">]</span><span class="w">                                        </span><span class="c1"># Go in</span>
-cp<span class="w"> </span>/path/to/research/update.pptx<span class="w"> </span>.<span class="w">                          </span><span class="c1"># Copy a file or past preseentation to the new directory</span>
-git<span class="w"> </span>add<span class="w"> </span>.<span class="w">                                                   </span><span class="c1"># Add changes</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;researach update&quot;</span><span class="w">                            </span><span class="c1"># Commit message</span>
-git<span class="w"> </span>push<span class="w">                                                    </span><span class="c1"># upload</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--no-checkout<span class="w"> </span>git@github.com:cc-ats/literature.git
+<span class="nb">cd</span><span class="w"> </span>literature
+git<span class="w"> </span>spare-checkout<span class="w"> </span>init<span class="w"> </span>--cone
+git<span class="w"> </span>spare-checkout<span class="w"> </span><span class="nb">set</span><span class="w"> </span>group_meetings
+git<span class="w"> </span>checkout<span class="w"> </span>master
 </pre></div>
 </div>
-<p>dklf</p>
+</section>
+<section id="updating-the-reposiory">
+<h1>Updating the reposiory<a class="headerlink" href="#updating-the-reposiory" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>For research udpates</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code> / <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># go to the ~your~ research updates</span>
+<span class="nb">cd</span><span class="w"> </span>ccats<span class="w"> </span>/literature/group_meetings/research_updates/<span class="nv">$USER</span><span class="w"> </span>
+git<span class="w"> </span>add<span class="w"> </span>.<span class="w">                                                   </span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;researach update&quot;</span>
+git<span class="w"> </span>push
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -657,6 +677,19 @@ git<span class="w"> </span>push<span class="w">                                 
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Clone Github repository</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#clone-in-sparse-mode">Clone in sparse mode</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#updating-the-reposiory">Updating the reposiory</a></li>
+</ul>
+
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 

@@ -91,7 +91,7 @@ html_theme_options = {
     'search_bar_text': 'Search mee!!', 
     # 'check_switcher': True,
     }
-latex_engine = 'pdflatex'
+#latex_engine = 'pdflatex'
 
 myst_enable_extensions = [
         'amsmath', 'colon_fence', 
