@@ -1,46 +1,30 @@
-# `git` Examples (CC-ATS)
+# Clone the CC-ATS Group Repository
 
-## Clone Github repository 
+[https://github.com/cc-ats](https://github.com/cc-ats)
 
-- Make a copy of the CC-ATS 'literature' Repository [https://github.com/cc-ats](https://github.com/cc-ats)
-    
+- Navigate to the `literature` repository
 - Click the green button labeled `code`
 - Copy the `ssh` or `html` link
-- Run the following on your local machine
-    - I keep this in a directory called `ccats`
+
+- On the local computer, I usually our group repository in a `ccats` folder
 
 ```bash
-cd ~
-mkdir -p ccats 
-cd ccats
-git clone git@github.com:cc-ats/literature.git 
-```
-
-## Clone in sparse mode
-
-- For new clones
-- Only copy the group meeting directory
-
-```bash
-git clone --no-checkout git@github.com:cc-ats/literature.git
-cd literature
-git spare-checkout init --cone
-git spare-checkout set group_meetings
-git checkout master
+cd ~/                                       # Make sure you're home
+mkdir -p ccats                              # Make ccats directory
+cd ccats                                    # Go inside new dir
+git clone git@github.com:cc-ats/~~~~ .      # Clone the repo.. it'll take ~30 min lol
 ```
 
 
-## Updating the reposiory
-
-- For research udpates
-- `git pull` / `git push`
+- Make a research_update directory and push changes to GitHub
 
 ```bash
-# go to the ~your~ research updates
-cd ccats /literature/group_meetings/research_updates/$USER 
-git add .                                                   
-git commit -m "researach update"
-git push
+cd ccats/literature/group_meetings/research_updates         # Path to research update directory
+mkdir [FIRST_LAST_NAME]                                     # Make your new folder 
+cd [FIRST_LAST_NAME]                                        # Go in
+cp /path/to/research/update.pptx .                          # Copy a file or past preseentation to the new directory
+git add .                                                   # Add changes
+git commit -m "researach update"                            # Commit message
+git push                                                    # upload
 ```
-
-
+dklf

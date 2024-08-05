@@ -1,4 +1,4 @@
-# visualization
+# Visualization
 
 ```{tableofcontents}
 ```

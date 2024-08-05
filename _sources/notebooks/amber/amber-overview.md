@@ -39,5 +39,9 @@ scp /path/to/download/amber[VERSION].tar.bz2 van@hostname:/home/van/
 scp /path/to/download/ambertools[VERSION].tar.bz2 van@hostname:/home/van/
 ```
 
-```{tableofcontents}
+## Directory layout - `source` - `build`
+
+
+```bash
+
 ```

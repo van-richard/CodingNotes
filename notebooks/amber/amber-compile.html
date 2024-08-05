@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Compiling Amber on Pete &#8212; CodingNotes</title>
+    <title>1. Compiling Amber on Pete &#8212; CodingNotes</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Patch / Compile" href="amber-patch.html" />
+    <link rel="next" title="2. Patch / Compile" href="amber-patch.html" />
     <link rel="prev" title="compiling" href="amber-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        visualization
+                        Visualization
                       </a>
                     </li>
                 
@@ -195,14 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                        Ubuntu and Linux
                       </a>
                     </li>
                 
@@ -343,7 +336,9 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -372,7 +367,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../03-visuals/visualization.html">
-                        visualization
+                        Visualization
                       </a>
                     </li>
                 
@@ -386,14 +381,7 @@ document.write(`
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                        Ubuntu and Linux
                       </a>
                     </li>
                 
@@ -462,23 +450,6 @@ document.write(`
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">amber</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Compiling Amber on Pete</a></li>
-<li class="toctree-l1"><a class="reference internal" href="amber-patch.html">Patch / Compile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="amber-qmhub.html">Install QMHub</a></li>
-<li class="toctree-l1"><a class="reference internal" href="amber-helpmelib.html">Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
-<li class="toctree-l1"><a class="reference internal" href="amber-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
@@ -514,7 +485,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="amber-overview.html" class="nav-link">compiling</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Compiling...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
 </nav>
 </div>
@@ -532,12 +503,12 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="compiling-amber-on-pete">
-<h1>Compiling Amber on Pete<a class="headerlink" href="#compiling-amber-on-pete" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1. </span>Compiling Amber on Pete<a class="headerlink" href="#compiling-amber-on-pete" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>This follows the bible (reference manual) !!!</p></li>
 </ul>
 <section id="amber">
-<h2>Amber<a class="headerlink" href="#amber" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1. </span>Amber<a class="headerlink" href="#amber" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>In <code class="docutils literal notranslate"><span class="pre">Programs/sources</span></code>, extract AmberTools <em>then</em> Amber</p></li>
 </ol>
@@ -555,7 +526,7 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>Amber<span class="o">[</s
 <li><p>Run the script, <code class="docutils literal notranslate"><span class="pre">./run_cmake</span></code>, compiling CPU, MPI, then CUDA.</p></li>
 </ol>
 <div class="literal-block-wrapper docutils container" id="id1">
-<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">run_cmake</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="code-block-caption"><span class="caption-number">Listing 1.1 </span><span class="caption-text">run_cmake</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>cmake<span class="w"> </span><span class="nv">$AMBER_PREFIX</span>/amber22_src<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>/scratch/van/.Programs/amber22<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>-DCOMPILER<span class="o">=</span>INTEL<span class="w"> </span><span class="se">\</span>
@@ -624,7 +595,7 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>Amber<span class="o">[</s
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Patch / Compile</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Patch / Compile</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -644,7 +615,7 @@ tar<span class="w"> </span>xvjf<span class="w"> </span>Amber<span class="o">[</s
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amber">Amber</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amber">1.1. Amber</a></li>
 </ul>
   </nav></div>
 
