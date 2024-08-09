@@ -3,110 +3,62 @@ defaults:
   numbered: False
 subtrees:
 - entries:
-  - file: notebooks/00-quickstart/introduction
+  - file: notebooks/00-quickstart/00_overview
     subtrees:
-    - caption: "Terminals"
-      entries:
+    - entries:
       - file: "notebooks/00-quickstart/01terminal"
-    - caption: "Text Editing"
-      entries:
       - file: "notebooks/00-quickstart/02vim"
-    - caption: "Computers"
-      entries:
-      - file: "notebooks/00-quickstart/03Supercomputers"
-    - caption: "Snakes"
-      entries:
-      - file: "notebooks/00-quickstart/04pythonconda"
-    - caption: "File Formats"
-      entries:
+      - file: "notebooks/00-quickstart/03Supercomputer"
+      - file: "notebooks/00-quickstart/04PythonConda"
       - file: "notebooks/00-quickstart/05StructureFiles"
       - file: "notebooks/00-quickstart/06PDBFiles"
-      - file: "notebooks/00-quickstart/XYZFiles"
-  - file: notebooks/01-scripting/introduction
+      - file: "notebooks/00-quickstart/07XYZFiles"
+  - file: notebooks/01-scripting/00_overview
     subtrees:
-    - caption: "bash"
-      entries:
+    - entries:
       - file: notebooks/01-scripting/bash
       - glob: "notebooks/01-scripting/bash-*"
-    - caption: "vim"
-      entries:
+    - entries:
       - file: notebooks/01-scripting/vi
       - glob: "notebooks/01-scripting/vi-*"
-    - caption: "ssh"
-      entries:
+    - entries:
       - file: notebooks/01-scripting/ssh
       - glob: "notebooks/01-scripting/ssh-*"
-    - caption: "modules"
-      entries:
+    - entries:
       - glob: "notebooks/01-scripting/module-*"
-    - caption: "ssh"
-      entries:
-      - glob: "notebooks/01-scripting/slurm*"
-    - caption: "Python"  
-      entries:
+    - entries:
+      - glob: "notebooks/01-scripting/slurm"
+    - entries:
       - file: notebooks/01-scripting/python
       - glob: "notebooks/01-scripting/python-*"
-      - glob: "notebooks/python/script/*"
-    - caption: 'Conda'
-      entries:
-      - glob: "notebooks/01-scripting/conda*"
-      - glob: "notebooks/01-scripting/j*"
-    - caption: 'git'
-      entries:
+    - entries:
       - file: notebooks/01-scripting/git
       - glob: "notebooks/01-scripting/git-*"
-  - file: notebooks/02-simulation/introduction
+  - file: notebooks/02-simulation/00_overview
     subtrees:
-    - caption: "Running Amber"
-      entries:
-      - file: notebooks/amber/loading-amber
-      - file: notebooks/amber/loading-amber-modules
-      - file: notebooks/amber/loading-amber-contents
-    - caption: "MD Simulation Tutorials"
-      entries:
-      - file: notebooks/02-simulation/simple
-      - file: notebooks/02-simulation/distance
-    - caption: "QM/MM Simulation Tutorials"
-      entries:
-      - file: notebooks/02-simulation/claisen
-    - caption: "Analysis Scripts"
-      entries:
-      - glob: "notebooks/amber/pytraj-*"
-      - glob: "notebooks/amber/pymbar-*"
-  - file:  notebooks/03-visuals/visualization
+    - entries:
+      - file: notebooks/02-simulation/theory
+        subtrees:
+        - entries:
+          - file: notebooks/02-simulation/amber
+          - file: "notebooks/02-simulation/amber-install-*"
+          - file: notebooks/02-simulation/simple
+          - file: notebooks/02-simulation/distance
+          - file: notebooks/02-simulation/claisen
+          - glob: "notebooks/02-simulation/analysis-*"
+  - file: notebooks/03-visuals/00_overview
     subtrees:
-    - caption: "ChimeraX"
-      entries:
-      - glob: notebooks/03-visuals/chimera/*
-    - caption: "VMD"
-      entries:
-      - glob: notebooks/03-visuals/vmd/*
-  - file: notebooks/amber/amber-overview
-    subtrees:
-    - caption: "amber"
-      entries:
-      - file: notebooks/amber/amber-compile
-      - file: notebooks/amber/amber-patch
-      - file: notebooks/amber/amber-qmhub
-      - file: notebooks/amber/amber-helpmelib
-      - file: notebooks/amber/amber-torchmdnet
-  - file: notebooks/theory
-    subtrees:
-    - caption: "Equations"
-      entries:
-      - glob: notebooks/theory/*
+    - entries:
+      - glob: "notebooks/03-visuals/chimera*"
+      - glob: "notebooks/03-visuals/ffmpeg"
   - file: notebooks/linux
     subtrees:
-    - caption: "GNU parallel"
-      entries:
+    - entries:
       - file: "notebooks/01-scripting/gnu-parallel"
-    - caption: "Commands & Examples"
-      entries:
       - glob: notebooks/commands/*
   - file: notebooks/containers/apptainer
     subtrees:
-    - caption: "containers"
-      entries:
+    - entries:
       - file: notebooks/containers/app-build
       - file: notebooks/containers/app-run
       - file: notebooks/containers/app-shell

@@ -1,4 +1,4 @@
-#`git` Examples (CC-ATS)
+# `git` Examples (CC-ATS)
 
 ## Clone Github repository 
 

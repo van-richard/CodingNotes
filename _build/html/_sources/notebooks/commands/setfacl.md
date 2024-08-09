@@ -1,8 +1,9 @@
 # `setfacl` - change file/folder permissions 
 
-Give specific user permission to read/write/execute a folder.
+Give specific user permission to read/write/execute a folder
 
-`setfacl` is short for set File ACL (Access Control List). This sets permissions for specific users, without changing the owndership of the directory.
+- modifies ACL
+- alternative to `chmod` 
 
 ```bash
 setfacl -m u:username:rwx myfolder

@@ -1,11 +1,13 @@
 # `head` - read from top of file to standard output
 
+- output the first 10 lines of a file
+
 ```bash
 head file.txt
 ```
 
-Print X-number of lines of `file.txt`.
+- output the last X lines of a file
 
 ```bash
-head -n X file.txt # Where x is a number 
+head -n X file.txt 
 ```
