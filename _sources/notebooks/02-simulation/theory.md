@@ -1,4 +1,4 @@
-# Theory / Methods Overview 
+# Tutorials
 
 Before running a simulation, ask yourself:
 

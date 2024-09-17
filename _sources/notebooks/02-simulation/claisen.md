@@ -33,7 +33,7 @@ We will study the reaction under implicit solvent, where all ligand atoms includ
 - Download my files for reference: [claisen.tar.bz2](https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/claisen.tar.xz "download")
 ````
 
-```{figure} ../../_static/videos/claisen.mp4
+```{figure} https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/claisen.mp4
 ---
 width: 50%
 align: center
@@ -59,7 +59,7 @@ Use IQmol to make a model of allyl vinyl ether, and save the file as `allyl_viny
 
 I saved the filed onto my Desktop. Remember where you saved it! We will copy it later!!!
 
-```{figure} ../../_static/videos/iqmol_claisen.mov
+```{figure} https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/iqmol_claisen.mov
 ---
 width: 50%
 align: center

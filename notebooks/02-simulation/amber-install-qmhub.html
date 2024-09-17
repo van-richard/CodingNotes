@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Automate Login (Password-less) &#8212; CodingNotes</title>
+    <title>Install QMHub &#8212; CodingNotes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/01-scripting/ssh-autologin';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/01-scripting/ssh-autologin.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/amber-install-qmhub';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/amber-install-qmhub.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Configuring ssh" href="ssh-config.html" />
-    <link rel="prev" title="ssh" href="ssh.html" />
+    <link rel="next" title="TorchMDnet-ext Environment (CPU)" href="amber-install-torchmdnet.html" />
+    <link rel="prev" title="Patch / Compile" href="amber-install-patch.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -172,15 +172,15 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="00_overview.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
                         coding
                       </a>
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="00_overview.html">
                         simulations
                       </a>
                     </li>
@@ -363,15 +363,15 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="00_overview.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
                         coding
                       </a>
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="00_overview.html">
                         simulations
                       </a>
                     </li>
@@ -467,49 +467,26 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="bash.html"><code class="docutils literal notranslate"><span class="pre">bash</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="bash-startup.html">Start-Up Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bash-ubuntu-multi-gcc.html">Manging Multiple Compiler Versions</a></li>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
 </ul>
 </li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="vi.html"><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="vi-vimrc.html">My <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> config</a></li>
-</ul>
-</li>
-</ul>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="ssh.html"><code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
-
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="module-modulefiles.html">Personal User Modules</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="slurm.html">SLURM</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="python.html"><code class="docutils literal notranslate"><span class="pre">python</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-conda.html"><code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-arm-intel.html">Intel Environments on M1/M2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-autodockvina.html">Create AutoDock Vina Conda Environment on HPC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html">Creating New Environments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-jupyter.html">Jupyter Notebooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-jupyterbook.html">DIY GitHub Website</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="python-conda-rc.html">Conda Config</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html">Helpful stuff</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-pandas-latextable.html">Convert Pandas DataFrame to LaTeX</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="git.html"><code class="docutils literal notranslate"><span class="pre">git</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="git-branch.html">Branching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-ccats.html"><code class="docutils literal notranslate"><span class="pre">git</span></code> Examples (CC-ATS)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-pullpush.html">General Use Cases</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-2drmsd.html"><strong>Pytraj</strong> 2D-RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -550,12 +527,12 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">coding</a></li>
+    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
     
-    <li class="breadcrumb-item"><a href="ssh.html" class="nav-link"><code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
+    <li class="breadcrumb-item"><a href="amber-install.html" class="nav-link">Compiling Amber on Pete</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Automate...</li>
+    <li class="breadcrumb-item active" aria-current="page">Install QMHub</li>
   </ul>
 </nav>
 </div>
@@ -572,44 +549,23 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="automate-login-password-less">
-<h1>Automate Login (Password-less)<a class="headerlink" href="#automate-login-password-less" title="Permalink to this heading">#</a></h1>
-<p>Having to enter your password every time you log into a supercomputer and transfer files can become tedious. However, we can log into a supercomputer without the need to enter your password (<em>safely and securely</em>)!</p>
-<p>To do this, we will make a <code class="docutils literal notranslate"><span class="pre">ssh</span></code> key. This key is an access credential for the <code class="docutils literal notranslate"><span class="pre">ssh</span></code> network protocol. This authenticated and encrypted secure network protocol is used for remote communication between machines on an unsecured open network. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> uses a pair of keys to initiate a secure handshake between the remote parties.</p>
-<p>You can think of <code class="docutils literal notranslate"><span class="pre">ssh</span></code> keys like a pair of magic keys that help keep your computer and other computers secure and let you connect to them easily.</p>
-<p>There are 3 components:</p>
-<ol class="arabic simple">
-<li><p><strong>Public Key:</strong> This key is like a special lock that you give to others. It’s safe to share with anyone. When someone wants to send you a secret message, they can use this lock to lock the message box.</p></li>
-<li><p><strong>Private Key:</strong> This key is super secret and should never be shared. It’s a unique key only you have. When you receive a message that’s been locked with your public key, you use your private key to unlock it. Nobody else should have this key because it’s the one that keeps your stuff safe.</p></li>
-<li><p><strong>Authentication:</strong> Imagine you’re trying to enter a secret club. Instead of saying a password, you show the bouncer your magic key (public key). The bouncer checks if it’s the right one. If it is, you’re in! But remember, your real key (private key) is safely in your pocket, so no one else can copy it.</p></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="install-qmhub">
+<h1>Install QMHub<a class="headerlink" href="#install-qmhub" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple" start="3">
+<li><p>Clone <a class="reference external" href="https://github.com/panxl/qmhub.git"></a> to <code class="docutils literal notranslate"><span class="pre">Programs/sources/</span></code></p></li>
 </ol>
-<p>So, SSH keys are like having a pair of magic keys. You give one out to others (public key) so they can send you secret stuff, and you keep the other one secret (private key) so only you can unlock your secrets. It makes connecting to other computers safer and more convenient.</p>
-<section id="generate-keys">
-<h2>Generate Keys<a class="headerlink" href="#generate-keys" title="Permalink to this heading">#</a></h2>
-<p>Start on your local computer in your home directory.</p>
-<p>Use the command, <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code>, for authentication key generation, management and conversion:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/panxl/qmhub.git
+<span class="nb">cd</span><span class="w"> </span>qmhub
+
+module<span class="w"> </span>load<span class="w"> </span>intel/2021.2.0
+module<span class="w"> </span>load<span class="w"> </span>impi/2021.2.0
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">MKLROOT</span><span class="o">=</span>/opt/intel/oneapi/mkl/2021.2.0
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_PRELOAD</span><span class="o">=</span><span class="nv">$MKLROOT</span>/lib/intel64/libmkl_core.so:<span class="nv">$MKLROOT</span>/lib/intel64/libmkl_sequential.so
+
+pip<span class="w"> </span>install<span class="w"> </span>.
 </pre></div>
 </div>
-<p>We include the options <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">rsa</span></code> to generate the key in RSA format. The RSA is compatible with most SSH clients and servers. The option, <code class="docutils literal notranslate"><span class="pre">-b</span> <span class="pre">4096</span></code>, specifies the number of bits in the key to create.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Do not set a passphrase when creating the key (Press enter 3 times).</strong></p>
-</div>
-<p>Create a <code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code> directory on the supercomputer from <strong>your local machine</strong>, without logging in.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>.ssh
-</pre></div>
-</div>
-<p>Now you can add your <strong>public key</strong>, <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>, to the server (This will be the last time you enter your password.) with the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>van@pete.hpc.okstate.edu<span class="w"> </span><span class="s1">&#39;cat &gt;&gt; ~/.ssh/authorized_keys&#39;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">~/.ssh/id_rsa.pub</span></code> reads the file and writes to your standard output</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">|</span></code> takes the standard output from the previous command and uses this as the input for the next command</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">van&#64;pete.hpc.okstate.edu</span> <span class="pre">'cat</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.ssh/authorized_keys'</span></code> executes the command in single quote over <code class="docutils literal notranslate"><span class="pre">ssh</span></code>, the command <code class="docutils literal notranslate"><span class="pre">cat</span> <span class="pre">&gt;&gt;</span> <span class="pre">~/.ssh/authorized_keys</span></code> appends the contents of <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code> to a list of authorized keys</p></li>
-</ul>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -625,7 +581,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/01-scripting"
+            path: "./notebooks/02-simulation"
         },
         predefinedOutput: true
     }
@@ -642,20 +598,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ssh.html"
+       href="amber-install-patch.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><code class="docutils literal notranslate"><span class="pre">ssh</span></code></p>
+        <p class="prev-next-title">Patch / Compile</p>
       </div>
     </a>
     <a class="right-next"
-       href="ssh-config.html"
+       href="amber-install-torchmdnet.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Configuring ssh</p>
+        <p class="prev-next-title">TorchMDnet-ext Environment (CPU)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -670,19 +626,9 @@ document.write(`
 
 
   <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> 
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-keys">Generate Keys</a></li>
-</ul>
-  </nav></div>
-
-  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/01-scripting/ssh-autologin.md">
+    <a href="../../_sources/notebooks/02-simulation/amber-install-qmhub.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Root Mean Square Deviation (RMSD) &#8212; CodingNotes</title>
+    <title>Compiling Amber on Pete &#8212; CodingNotes</title>
   
   
   
@@ -61,15 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/analysis-pytraj-rmsd';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/analysis-pytraj-rmsd.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/amber-install';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/amber-install.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Root Mean Square Fluctuation (RMSF)" href="analysis-pytraj-rmsf.html" />
-    <link rel="prev" title="Principal Component Analysis" href="analysis-pytraj-pca.html" />
+    <link rel="next" title="Patch / Compile" href="amber-install-patch.html" />
+    <link rel="prev" title="Setup" href="amber.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -470,17 +468,25 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="amber.html">Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Compiling Amber on Pete</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-2drmsd.html"><strong>Pytraj</strong> 2D-RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -523,10 +529,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
-    
-    <li class="breadcrumb-item"><a href="theory.html" class="nav-link">Theory / Methods Overview</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">Root Mean...</li>
+    <li class="breadcrumb-item active" aria-current="page">Compiling...</li>
   </ul>
 </nav>
 </div>
@@ -543,53 +546,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="root-mean-square-deviation-rmsd">
-<h1>Root Mean Square Deviation (RMSD)<a class="headerlink" href="#root-mean-square-deviation-rmsd" title="Permalink to this heading">#</a></h1>
-<p>The Root Mean Square Deviation (RMSD) is a measure of the average distance between atoms in a superimposed structure. You will see this analysis used to judge convergence of an MD simulation in just about every MD paper. The equation is</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{RMSD} = \sqrt{\frac{1}{N} \sum_{i = 1}^{N} \|v_i - w_i\|^2}
-\]</div>
-<p>Where, <span class="math notranslate nohighlight">\(N\)</span> is the number of points for the structures <span class="math notranslate nohighlight">\(v_i\)</span> and <span class="math notranslate nohighlight">\(w_i\)</span>. With xyz-coordinates, we have</p>
-<div class="math notranslate nohighlight">
-\[
-\mathrm{RMSD}(\mathbf{v}, \mathbf{w}) = \sqrt{\frac{1}{n} \sum_{i=1}^n 
-      ((v_{ix} - w_{ix})^2 + (v_{iy} - w_{iy})^2 + (v_{iz} - w_{iz})^2})
-\]</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># Load trajectory</span>
-<span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">iterload</span><span class="p">(</span><span class="s1">&#39;prod.nc&#39;</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="s1">&#39;step3_pbcsetup_1264.parm7&#39;</span><span class="p">)</span>
-
-<span class="n">rmsd</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">rmsd</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="s2">&quot;@CA&quot;</span><span class="p">)</span>
-
-<span class="c1"># Plot Simulation Time vs RMSD</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rmsd</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time &#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;RMSF (Å)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;rmsf.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
-
+  <section class="tex2jax_ignore mathjax_ignore" id="compiling-amber-on-pete">
+<h1>Compiling Amber on Pete<a class="headerlink" href="#compiling-amber-on-pete" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>This follows the bible (reference manual) !!!</p></li>
+</ul>
+<section id="amber">
+<h2>Amber<a class="headerlink" href="#amber" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>In <code class="docutils literal notranslate"><span class="pre">Programs/sources</span></code>, extract AmberTools <em>then</em> Amber</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>xvjf<span class="w"> </span>AmberTools<span class="o">[</span>VERSION<span class="o">]</span>.tar.bz2
+tar<span class="w"> </span>xvjf<span class="w"> </span>Amber<span class="o">[</span>VERSION<span class="o">]</span>.tar.bz2
 </pre></div>
 </div>
-<section id="pairwise-root-mean-square-deviation-2d-rmsd">
-<h2>Pairwise Root Mean Square Deviation (2D RMSD)<a class="headerlink" href="#pairwise-root-mean-square-deviation-2d-rmsd" title="Permalink to this heading">#</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># Load trajectory</span>
-<span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">iterload</span><span class="p">(</span><span class="s1">&#39;prod.nc&#39;</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="s1">&#39;step3_pbcsetup_1264.parm7&#39;</span><span class="p">)</span>
-
-<span class="n">rmsd</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">pairwise_rmsd</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="s2">&quot;@CA&quot;</span><span class="p">)</span>
-
-<span class="c1"># Plot Simulation Time vs RMSD</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rmsd</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time &#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;RMSF (Å)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;rmsf.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<ol class="arabic simple" start="2">
+<li><p>Go to the <code class="docutils literal notranslate"><span class="pre">build/</span></code> directory</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>build/
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Run the script, <code class="docutils literal notranslate"><span class="pre">./run_cmake</span></code>, compiling CPU, MPI, then CUDA.</p></li>
+</ol>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Listing 4 </span><span class="caption-text">run_cmake</span><a class="headerlink" href="#id1" title="Permalink to this code">#</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>cmake<span class="w"> </span><span class="nv">$AMBER_PREFIX</span>/amber22_src<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>/scratch/van/.Programs/amber22<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCOMPILER<span class="o">=</span>INTEL<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DMPI<span class="o">=</span>FALSE<span class="w"> </span>-DCUDA<span class="o">=</span>FALSE<span class="w"> </span>-DINSTALL_TESTS<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DFORCE_EXTERNAL_LIB<span class="o">=</span>mkl<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DDOWNLOAD_MINICONDA<span class="o">=</span>FALSE<span class="w"> </span>-DBUILD_PYTHON<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w">  </span>cmake.log
+</pre></div>
+</div>
+</div>
+<p><em>Check if everything is properly linked.</em></p>
+<ol class="arabic simple" start="5">
+<li><p>Before we run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span> <span class="pre">-j</span> <span class="pre">8</span></code>, we’ll build sander first, and test it.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>sander<span class="w"> </span>-j<span class="w"> </span><span class="m">8</span>
+</pre></div>
+</div>
+<p>Test sander using the source in the AmberTools directory.</p>
+<p>If the test went well, go back to the <code class="docutils literal notranslate"><span class="pre">build/</span></code> and compile the MPI version.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>sander.MPI<span class="w"> </span>-j<span class="w"> </span><span class="m">8</span>
 </pre></div>
 </div>
 </section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -622,20 +628,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="analysis-pytraj-pca.html"
+       href="amber.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Principal Component Analysis</p>
+        <p class="prev-next-title">Setup</p>
       </div>
     </a>
     <a class="right-next"
-       href="analysis-pytraj-rmsf.html"
+       href="amber-install-patch.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Root Mean Square Fluctuation (RMSF)</p>
+        <p class="prev-next-title">Patch / Compile</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -655,14 +661,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pairwise-root-mean-square-deviation-2d-rmsd">Pairwise Root Mean Square Deviation (2D RMSD)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amber">Amber</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/02-simulation/analysis-pytraj-rmsd.md">
+    <a href="../../_sources/notebooks/02-simulation/amber-install.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

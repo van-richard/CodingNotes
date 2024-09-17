@@ -2,7 +2,7 @@
 keywords: cpptraj, autoimage, strip, :WAT, rms, parmstrip, parmwrite, traj.in, trajin, trajout
 ---
 
-# Export Dry Trajectory (no water)
+# __CPPTRAJ__ Remove water
 
 [Original Example](https://amberhub.chpc.utah.edu/combining-multiple-trajectory-files-into-a-single-trajectory-and-remove-water-molecules-to-save-space/)
 

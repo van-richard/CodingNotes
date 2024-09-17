@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Export Dry Trajectory (no water) &#8212; CodingNotes</title>
+    <title>Analysis &#8212; CodingNotes</title>
   
   
   
@@ -61,12 +61,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/analysis-cpptraj-dry';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/analysis-cpptraj-dry.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/analysis';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/analysis.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Plot PMF with PyMBAR" href="analysis-pymbar.html" />
+    <link rel="next" title="CPPTRAJ Remove water" href="cpptraj-dry.html" />
     <link rel="prev" title="QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -468,17 +468,25 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="amber.html">Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-2drmsd.html"><strong>Pytraj</strong> 2D-RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -521,10 +529,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
-    
-    <li class="breadcrumb-item"><a href="theory.html" class="nav-link">Theory / Methods Overview</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">Export Dry...</li>
+    <li class="breadcrumb-item active" aria-current="page">Analysis</li>
   </ul>
 </nav>
 </div>
@@ -541,43 +546,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="export-dry-trajectory-no-water">
-<h1>Export Dry Trajectory (no water)<a class="headerlink" href="#export-dry-trajectory-no-water" title="Permalink to this heading">#</a></h1>
-<p><a class="reference external" href="https://amberhub.chpc.utah.edu/combining-multiple-trajectory-files-into-a-single-trajectory-and-remove-water-molecules-to-save-space/">Original Example</a></p>
-<p>CPPTRAJ can be used to remove explicit water from the simulation. To do this, make 2 files: 1) Strip water from trajectory, and 2) save new topology file.</p>
-<ol class="arabic simple">
-<li><p>Strip water from trajectory (<code class="docutils literal notranslate"><span class="pre">traj1.in</span></code>)</p>
-<ul class="simple">
-<li><p>Load topology/trajectory files</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">autoimage</span></code> re-orients the solute in the water box</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">strip</span></code> removes the residues <code class="docutils literal notranslate"><span class="pre">WAT</span></code> and counterions</p></li>
-<li><p>Fit new trajectory to alpha carbons</p></li>
-<li><p>Save as <code class="docutils literal notranslate"><span class="pre">dry-prod.nc</span></code></p></li>
-</ul>
-</li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>parm<span class="w"> </span>step3_pbcsetup.parm7
-trajin<span class="w"> </span>prod.nc
-autoimage
-strip<span class="w"> </span>:WAT,Na,Cl
-rms<span class="w"> </span>@CA
-trajout<span class="w"> </span>dry-prod.nc<span class="w"> </span>
-go
-</pre></div>
-</div>
-<ol class="arabic simple" start="2">
-<li><p>Make a new topology file (<code class="docutils literal notranslate"><span class="pre">traj2.in</span></code>)</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>parm<span class="w"> </span>step3_pbcsetup.parmm7
-parmstrip<span class="w"> </span>:WAT,Na,Cl<span class="w"> </span>
-parmwrite<span class="w"> </span>out<span class="w"> </span>dry-step3.parm7<span class="w"> </span>
-go
-</pre></div>
-</div>
-<p>Run these commands with CPPTRAJ</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cpptraj<span class="w"> </span>traj1.in
-cpptraj<span class="w"> </span>traj2.in
-</pre></div>
+  <section class="tex2jax_ignore mathjax_ignore" id="analysis">
+<h1>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -620,11 +591,11 @@ cpptraj<span class="w"> </span>traj2.in
       </div>
     </a>
     <a class="right-next"
-       href="analysis-pymbar.html"
+       href="cpptraj-dry.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Plot PMF with PyMBAR</p>
+        <p class="prev-next-title"><strong>CPPTRAJ</strong> Remove water</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -641,7 +612,7 @@ cpptraj<span class="w"> </span>traj2.in
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/02-simulation/analysis-cpptraj-dry.md">
+    <a href="../../_sources/notebooks/02-simulation/analysis.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

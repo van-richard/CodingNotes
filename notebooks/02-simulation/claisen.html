@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Export Dry Trajectory (no water)" href="analysis-cpptraj-dry.html" />
+    <link rel="next" title="Analysis" href="analysis.html" />
     <link rel="prev" title="Applying Distance Restraints in Classical MD Simulations" href="distance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -470,17 +470,25 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="amber.html">Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-2drmsd.html"><strong>Pytraj</strong> 2D-RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -524,7 +532,7 @@ document.write(`
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
     
-    <li class="breadcrumb-item"><a href="theory.html" class="nav-link">Theory / Methods Overview</a></li>
+    <li class="breadcrumb-item"><a href="theory.html" class="nav-link">Tutorials</a></li>
     
     <li class="breadcrumb-item active" aria-current="page">QM/MM...</li>
   </ul>
@@ -565,7 +573,7 @@ document.write(`
 </ul>
 </div>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../../_images/claisen.mp4"><video src="../../_images/claisen.mp4" title="../../_images/claisen.mp4" width="50%"><a href="../../_images/claisen.mp4">../../_images/claisen.mp4</a></video></a>
+<a class="reference internal image-reference" href="https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/claisen.mp4"><video src="https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/claisen.mp4" title="https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/claisen.mp4" width="50%"><a href="https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/claisen.mp4">https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/claisen.mp4</a></video></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">Trajectory of the claisen rearrangement reaction, allyl vinyl ether is shown in ball-and-stick, and the trajectory was viewed on VMD.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -586,7 +594,7 @@ document.write(`
 </ol>
 <p>I saved the filed onto my Desktop. Remember where you saved it! We will copy it later!!!</p>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/iqmol_claisen.mov"><img alt="../../_images/iqmol_claisen.mov" src="../../_images/iqmol_claisen.mov" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/iqmol_claisen.mov"><img alt="https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/iqmol_claisen.mov" src="https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/iqmol_claisen.mov" style="width: 50%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">Using IQmol to make the allyl vinyl ester PDB file.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1269,11 +1277,11 @@ date
       </div>
     </a>
     <a class="right-next"
-       href="analysis-cpptraj-dry.html"
+       href="analysis.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Export Dry Trajectory (no water)</p>
+        <p class="prev-next-title">Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

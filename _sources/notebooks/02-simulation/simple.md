@@ -2,10 +2,11 @@
 
 A simple example of how to run MD simulations is with the molecule, Alanine Dipeptide. We will model the residue, solvate it in a water box, equilibrate the system, and run MD production simulations with AmberTools. This should take roughly an hour.
 
-```{figure} ../../_static/videos/simple.mov
+```{figure} https://github.com/van-richard/CodingNotes/blob/2d70d86fc555d6dfc7dedc47d996929f56fd6e04/_static/videos/simple.mov
 ---
 width: 50%
 ---
+
 MD trajectory of Alanine Dipeptide (*shown as ball-and-stick*) solvated in water (*shown as line*) viewed on VMD.
 ```
 
@@ -103,7 +104,7 @@ To give `tleap` instructions, make a file called, "tleap.in" using `vi`, and cop
 :linenos:
 
 source leaprc.protein.ff19SB
-source leaprc.water.TIP3P
+source leaprc.water.tip3p
 
 system = sequence { ACE ALA NME }
 
@@ -118,7 +119,7 @@ Briefly, the:
 
 * `source` line tell Amber which force field parameters we want for our molecules, this is always at the top of the file
     * `leaprc.protein.ff19SB` contains protein parameters
-    * `leaprc.water.TIP3P` has the water parameters
+    * `leaprc.water.tip3p` has the water parameters
 * `system = sequence { ACE ALA NME }` line makes use of the `sequence` command which combines amino acid residues together to build a molecule, and this is stored as "system" variable
 * `solvatebox system TIP3PBOX 12.0 iso 0.8` line create a a water box around the `system`, such that the minimum distance between any atom in `system` and the edge of the periodic box `12.0` Å. 
     * `iso` rotates the `system` to orient the principal axes

@@ -1,8 +1,10 @@
-# Custom `modules` Files
+# Setup
+
+- `modules` Files
 
 - I prepared several configuration files so Amber, Qchem, and several conda environments can be loaded 
 
-- To include my files in your shell environment, add the following to `~/.bashrc`
+- To include them in your shell environment, add the following to `~/.bashrc`
 
 ```bash
 # Prepends directory path of module files to MODULEPATH environment
@@ -24,10 +26,4 @@ source /home/van/env.sh
 
 - Run `module av` to see the new modules 
 
-
-## Softwares, Examples, and Conda Environments
-
-- Modules in `/home/van/ccats/softwares` contain independent packages
-
-- 
 

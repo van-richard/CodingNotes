@@ -2,42 +2,61 @@
 keywords: principal, component, analysis, pca, dimension, reduction, dimensional, variance, pc1, pc2
 ---
 
-# Principal Component Analysis
+# __Pytraj__ PCA
 
-*Pytraj Example*
+- Principal Component Analysis
+
+*__Pytraj__Example*
 
 ```python
+#!/usr/bin/env python
+import os
+from glob import glob
 import pytraj as pt
-import matplotlib.pyplot as plt
 import numpy as np
-import sys
+import matplotlib.pyplot as plt
 
+analysis="combine-all"
+prm="../input/step3_pbcsetup.parm7"
+crd="combine-nc/all.nc"
+# Atom mask selection
+ambermask='@CA'
 
-topology = "/directory/topology.parm7"
-trajectory = "/directory/file.nc"
+os.makedirs('img', exist_ok=True)
+os.makedirs('raw_data', exist_ok=True)
 
-traj = pt.load(trajectory, top="topology")
+"""
+__Pytraj__template for MD trajectory analysis
+"""
 
-data = pt.pca(traj, mask='@CA', n_vecs=10)
+traj = pt.iterload([crd], top=prm)
+# RMSF Analysis (_trajectory is(are) trajectory file(s), _mask is the Amber format selection mask)
+data = pt.pca(traj, mask=ambermask, n_vecs=10)
 
-projection_data = data[0]
+# Projection Data
+_data = data[0]
+pc1_data = data[1][0]                                       # Eiganvalues for first mode (percent)
+pc2_data = data[1][0]                                       # Eiganvalues for second mode (percent)
 
-x = projection_data[0] * num1
-y = projection_data[1] * num2
+# Percent Variance
+x_label = (pc1_data[0] / np.sum(pc1_data[:])) * 100
+y_label = (pc2_data[1] / np.sum(pc2_data[:])) * 100
 
-plt.scatter(x, y, marker='o', c=range(traj.n_frames), alpha=0.5)        
+flip1 = 1                                                   # Flip the sign of the eigenvector if necessary (1 or -1)
+flip2 = 1                                                   # Flip the sign of the eigenvector if necessary (1 or -1)
+x_data = _data[0] * flip1
+y_data = _data[1] * flip2
 
-# Percent Variance 
-pc1 = (data[1][0][0] / np.sum(data[1][0])) * 100
-pc2 = (data[1][0][1] / np.sum(data[1][0])) * 100
+plt.scatter(x_data, y_data, marker='o', c=range(traj.n_frames), alpha=0.5)
 
-plt.xlabel('PC1 (' + str(np.round(pc1, 1)) + ' %)')
-plt.ylabel('PC2 (' + str(np.round(pc2, 1)) + ' %)')
+plt.xlabel(f"PC1 ({ str(np.round(x_label, 1)) } %)")        # Label x-axis
+plt.ylabel(f"PC2 ({ str(np.round(y_label, 1)) } %)")        # Label y-axis
 
-plt.xlim(-60,60)
-plt.ylim(-60,60)
-cbar = plt.colorbar()
-cbar.set_label('Frame #')
-plt.title(folder+ ' ' + rep)
-plt.savefig('img/' + folder+'_' + rep + 'pca.png', dpi=300)
+axis_lim = 10                                               # Set axis limit
+plt.xlim(-axis_lim, axis_lim)                               # Set x-axis limit
+plt.ylim(-axis_lim, axis_lim)                               # Set y-axis limit
+cbar = plt.colorbar()                                       # Show colorbar
+cbar.set_label('Frame Number')                              # Label colorbar
+plt.grid(linestyle='--', alpha=0.2)
+plt.savefig(f"img/pca-{ analysis }.png")                        # Save plot
 ```

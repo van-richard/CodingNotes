@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Theory / Methods Overview" href="theory.html" />
+    <link rel="next" title="Setup" href="amber.html" />
     <link rel="prev" title="General Use Cases" href="../01-scripting/git-pullpush.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -468,17 +468,25 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="amber.html">Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-2drmsd.html"><strong>Pytraj</strong> 2D-RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -540,15 +548,16 @@ document.write(`
 <p>maybe someday… but not today.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-install.html#amber">Amber</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="theory.html#molecular-descriptors">Molecular Descriptors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="theory.html#properties-of-interest">Properties of Interest</a></li>
 <li class="toctree-l2"><a class="reference internal" href="theory.html#other-methods">Other Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="theory.html#literature">Literature</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="amber.html">Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="amber.html#softwares-examples-and-conda-environments">Softwares, Examples, and Conda Environments</a></li>
-</ul>
-</li>
 <li class="toctree-l3"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="simple.html#prepare-files-folders">Prepare Files &amp; Folders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="simple.html#prepare-topology-and-coordinate-files-inputs">Prepare Topology and Coordinate Files Inputs</a></li>
@@ -585,19 +594,11 @@ document.write(`
 <li class="toctree-l4"><a class="reference internal" href="claisen.html#free-energy-profile-with-mbar">Free Energy Profile with MBAR</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="analysis-pytraj-rmsd.html#pairwise-root-mean-square-deviation-2d-rmsd">Pairwise Root Mean Square Deviation (2D RMSD)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis</a></li>
 </ul>
 </div>
 </section>
@@ -641,11 +642,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="theory.html"
+       href="amber.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Theory / Methods Overview</p>
+        <p class="prev-next-title">Setup</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -468,20 +468,21 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="bash.html"><code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="bash-startup.html">Start-Up Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bash-ubuntu-multi-gcc.html">Manging Multiple Compiler Versions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="bash.html"><code class="docutils literal notranslate"><span class="pre">bash</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="bash-startup.html">Start-Up Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bash-ubuntu-multi-gcc.html">Manging Multiple Compiler Versions</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="vi.html"><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="vi-vimrc.html">My <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> config</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="vi.html"><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="vi-vimrc.html">My <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> config</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ssh.html"><code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="ssh-autologin.html">Automate Login (Password-less)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ssh-config.html">Configuring ssh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ssh-copy.html">Upload, Download, &amp; Extras</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="module-modulefiles.html">Personal User Modules</a></li>
@@ -490,23 +491,27 @@ document.write(`
 <li class="toctree-l1"><a class="reference internal" href="slurm.html">SLURM</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="python.html"><code class="docutils literal notranslate"><span class="pre">python</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda.html"><code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-arm-intel.html">Intel Environments on M1/M2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-autodockvina.html">Create AutoDock Vina Conda Environment on HPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-env.html">Creating New Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyter.html">Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyterbook.html">DIY GitHub Website</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="python.html"><code class="docutils literal notranslate"><span class="pre">python</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="python-conda.html"><code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-conda-arm-intel.html">Intel Environments on M1/M2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-conda-autodockvina.html">Create AutoDock Vina Conda Environment on HPC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html">Creating New Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-conda-jupyter.html">Jupyter Notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-conda-jupyterbook.html">DIY GitHub Website</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="python-conda-rc.html">Conda Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-helplist.html">Helpful stuff</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-pandas-latextable.html">Convert Pandas DataFrame to LaTeX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-conda-rc.html">Conda Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-helplist.html">Helpful stuff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python-pandas-latextable.html">Convert Pandas DataFrame to LaTeX</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="git.html"><code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-branch.html">Branching</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-ccats.html"><code class="docutils literal notranslate"><span class="pre">git</span></code> Examples (CC-ATS)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-pullpush.html">General Use Cases</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="git.html"><code class="docutils literal notranslate"><span class="pre">git</span></code></a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="git-branch.html">Branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-ccats.html"><code class="docutils literal notranslate"><span class="pre">git</span></code> Examples (CC-ATS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="git-pullpush.html">General Use Cases</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav></div>
@@ -585,13 +590,6 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="bash.html#adding-choices-options-to-script-with-case-statements">Adding Choices (Options) to Script with <code class="docutils literal notranslate"><span class="pre">case</span></code> Statements</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="bash-startup.html">Start-Up Files</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bash-startup.html#bash-profile">~/.bash_profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bash-startup.html#bashrc">~/.bashrc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bash-startup.html#bash-aliases">~/.bash_aliases</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="bash-ubuntu-multi-gcc.html">Manging Multiple Compiler Versions</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -604,7 +602,6 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="vi.html#visual-configuration">Visual Configuration</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="vi-vimrc.html">My <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> config</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -618,16 +615,6 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="ssh.html#remote-login">Remote Login</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html#what-is-the-hostname">What is the <em>hostname</em>?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ssh.html#task-accessing-the-hpc">Task: Accessing the HPC</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ssh-autologin.html">Automate Login (Password-less)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ssh-autologin.html#generate-keys">Generate Keys</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ssh-config.html">Configuring ssh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ssh-copy.html">Upload, Download, &amp; Extras</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ssh-copy.html#transferring-files-folders-remotely">Transferring Files/Folders Remotely</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh-copy.html#command-execution-with-ssh">Command Execution with <code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -662,55 +649,6 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda.html"><code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-conda.html#installing-miniforge3">Installing Miniforge3</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-arm-intel.html">Intel Environments on M1/M2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-autodockvina.html">Create AutoDock Vina Conda Environment on HPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-env.html">Creating New Environments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html#running-the-new-environment">Running the new environment.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html#leaving-environment">Leaving Environment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html#deleting-conda-environments-and-related-packages">Deleting conda environments and related packages.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html#list-available-environments">List available environments.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html#list-packages-within-an-environment">List packages within an environment.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html#exporting-environments-to-a-yml-file">Exporting environments to a YML file.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-env.html#installing-a-conda-environment-from-a-yml-file">Installing a Conda environment from a YML file.</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyter.html">Jupyter Notebooks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-jupyter.html#what-are-kernels">What are Kernels?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-jupyter.html#switch-conda-environments">Switch Conda Environments</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyterbook.html">DIY GitHub Website</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-jupyterbook.html#jupyter-book">Jupyter Book</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-jupyterbook.html#tutorial">Tutorial</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyterbook.html#conda-environment">conda environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-rc.html">Conda Config</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-rc.html#add-channels">Add Channels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-conda-rc.html#multi-threading">Multi-Threading</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python-helplist.html">Helpful stuff</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#data-analysis-cleaning">Data Analysis / Cleaning</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#databases">Databases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#data-visualization">Data Visualization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#documentation">Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#gui-development">GUI Development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#interactive-interpreters">Interactive Interpreters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#logging-tools">Logging Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#machine-learning-neural-networks-ai">Machine Learning / Neural Networks / AI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#package-library-manager">Package / Library Manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#science-chemistry-tools">Science / Chemistry Tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#templating">Templating</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#testing-application-package-library">Testing Application / Package / Library</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-helplist.html#website-template">Website Template</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python-pandas-latextable.html">Convert Pandas DataFrame to LaTeX</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -721,18 +659,6 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="git.html#ssh-connection-to-github">SSH Connection to GitHub</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="git-branch.html">Branching</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="git-branch.html#switch">Switch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-branch.html#checkout">Checkout</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="git-ccats.html"><code class="docutils literal notranslate"><span class="pre">git</span></code> Examples (CC-ATS)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="git-ccats.html#clone-github-repository">Clone Github repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-ccats.html#clone-in-sparse-mode">Clone in sparse mode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git-ccats.html#updating-the-reposiory">Updating the reposiory</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="git-pullpush.html">General Use Cases</a></li>
 </ul>
 </div>
 </section>

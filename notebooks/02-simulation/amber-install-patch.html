@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Principal Component Analysis &#8212; CodingNotes</title>
+    <title>Patch / Compile &#8212; CodingNotes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/analysis-pytraj-pca';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/analysis-pytraj-pca.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/amber-install-patch';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/amber-install-patch.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Root Mean Square Deviation (RMSD)" href="analysis-pytraj-rmsd.html" />
-    <link rel="prev" title="Pairwise Distance Matrix" href="analysis-pytraj-2drmsd.html" />
+    <link rel="next" title="Install QMHub" href="amber-install-qmhub.html" />
+    <link rel="prev" title="Compiling Amber on Pete" href="amber-install.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -468,17 +468,25 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="amber.html">Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Patch / Compile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-2drmsd.html"><strong>Pytraj</strong> 2D-RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -522,9 +530,9 @@ document.write(`
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
     
-    <li class="breadcrumb-item"><a href="theory.html" class="nav-link">Theory / Methods Overview</a></li>
+    <li class="breadcrumb-item"><a href="amber-install.html" class="nav-link">Compiling Amber on Pete</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Principal...</li>
+    <li class="breadcrumb-item active" aria-current="page">Patch / Compile</li>
   </ul>
 </nav>
 </div>
@@ -541,44 +549,59 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="principal-component-analysis">
-<h1>Principal Component Analysis<a class="headerlink" href="#principal-component-analysis" title="Permalink to this heading">#</a></h1>
-<p><em>Pytraj Example</em></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">sys</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="patch-compile">
+<h1>Patch / Compile<a class="headerlink" href="#patch-compile" title="Permalink to this heading">#</a></h1>
+<p>Amber + QMhub + Torchmd-net</p>
+<section id="create-conda-environment">
+<h2>Create Conda Environment<a class="headerlink" href="#create-conda-environment" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">torchmd-net</span></code> conda environment, and load modules.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>torchmd-net.yml
+conda<span class="w"> </span>activate<span class="w"> </span>torchmd-net
 
-
-<span class="n">topology</span> <span class="o">=</span> <span class="s2">&quot;/directory/topology.parm7&quot;</span>
-<span class="n">trajectory</span> <span class="o">=</span> <span class="s2">&quot;/directory/file.nc&quot;</span>
-
-<span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">trajectory</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="s2">&quot;topology&quot;</span><span class="p">)</span>
-
-<span class="n">data</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">pca</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="s1">&#39;@CA&#39;</span><span class="p">,</span> <span class="n">n_vecs</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-
-<span class="n">projection_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">projection_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">num1</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">projection_data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">num2</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">traj</span><span class="o">.</span><span class="n">n_frames</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>        
-
-<span class="c1"># Percent Variance </span>
-<span class="n">pc1</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span> <span class="o">*</span> <span class="mi">100</span>
-<span class="n">pc2</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span> <span class="o">*</span> <span class="mi">100</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;PC1 (&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pc1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;PC2 (&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">pc2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39; %)&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">60</span><span class="p">,</span><span class="mi">60</span><span class="p">)</span>
-<span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-<span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Frame #&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">folder</span><span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">rep</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;img/&#39;</span> <span class="o">+</span> <span class="n">folder</span><span class="o">+</span><span class="s1">&#39;_&#39;</span> <span class="o">+</span> <span class="n">rep</span> <span class="o">+</span> <span class="s1">&#39;pca.png&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+module<span class="w"> </span>load<span class="w"> </span>intel/2021.2.0
+module<span class="w"> </span>load<span class="w"> </span>impi/2021.2.0
+<span class="nb">export</span><span class="w"> </span><span class="nv">MKLROOT</span><span class="o">=</span>/opt/intel/oneapi/mkl/2021.2.0
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_PRELOAD</span><span class="o">=</span><span class="nv">$MKLROOT</span>/lib/intel64/libmkl_core.so:<span class="nv">$MKLROOT</span>/lib/intel64/libmkl_sequential.so
 </pre></div>
 </div>
+<ol class="arabic simple" start="2">
+<li><p>Clone repository to <code class="docutils literal notranslate"><span class="pre">Programs/</span></code> and change branch to torchnet-ext</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/panxl/torchmd-net.git
+<span class="nb">cd</span><span class="w"> </span>torchmd-net
+pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Clone <a class="reference external" href="https://github.com/panxl/qmhub"></a> and <a class="reference external" href="https://github.com/andysim/helpme"></a> to <code class="docutils literal notranslate"><span class="pre">Programs/</span></code>. We’ll compile qmhub first.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/panxl/qmhub.git
+<span class="nb">cd</span><span class="w"> </span>qmhub
+pip<span class="w"> </span>install<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/andysim/helpme.git
+<span class="nb">cd</span><span class="w"> </span>helpme<span class="w"> </span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CXX</span><span class="o">=</span>icpc<span class="w"> </span><span class="nv">PKG_CONFIG_PATH</span><span class="o">=</span>~/miniforge3/lib/pkgconfig<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>cmake<span class="w"> </span>..<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DFFTW_INCLUDES<span class="o">=</span><span class="nv">$MKLROOT</span>/include/fftw<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DFFTW_LIBRARIES<span class="o">=</span><span class="nv">$MKLROOT</span>/lib/intel64
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>helpmelib
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">python/helpme***</span></code> file to <code class="docutils literal notranslate"><span class="pre">minforge3/envs/torchmd-net/lib/python3.10/site-packages/qmhub/</span></code></p></li>
+<li><p>Then compile Amber</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -611,20 +634,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="analysis-pytraj-2drmsd.html"
+       href="amber-install.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Pairwise Distance Matrix</p>
+        <p class="prev-next-title">Compiling Amber on Pete</p>
       </div>
     </a>
     <a class="right-next"
-       href="analysis-pytraj-rmsd.html"
+       href="amber-install-qmhub.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Root Mean Square Deviation (RMSD)</p>
+        <p class="prev-next-title">Install QMHub</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -639,9 +662,19 @@ document.write(`
 
 
   <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-conda-environment">Create Conda Environment</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/02-simulation/analysis-pytraj-pca.md">
+    <a href="../../_sources/notebooks/02-simulation/amber-install-patch.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

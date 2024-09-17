@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Pairwise Distance Matrix &#8212; CodingNotes</title>
+    <title>Pytraj 2D-RMSD &#8212; CodingNotes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/analysis-pytraj-2drmsd';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/analysis-pytraj-2drmsd.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/pytraj-2drmsd';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/pytraj-2drmsd.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Principal Component Analysis" href="analysis-pytraj-pca.html" />
-    <link rel="prev" title="Plot PMF with PyMBAR" href="analysis-pymbar.html" />
+    <link rel="next" title="Pytraj PCA" href="pytraj-pca.html" />
+    <link rel="prev" title="CPPTRAJ Remove water" href="cpptraj-dry.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -468,17 +468,25 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="amber.html">Custom <code class="docutils literal notranslate"><span class="pre">modules</span></code> Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Pairwise Distance Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="analysis.html">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Pytraj</strong> 2D-RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
 </ul>
 </li>
 </ul>
@@ -522,9 +530,9 @@ document.write(`
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
     
-    <li class="breadcrumb-item"><a href="theory.html" class="nav-link">Theory / Methods Overview</a></li>
+    <li class="breadcrumb-item"><a href="analysis.html" class="nav-link">Analysis</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Pairwise...</li>
+    <li class="breadcrumb-item active" aria-current="page"><strong>Pytr...</li>
   </ul>
 </nav>
 </div>
@@ -541,23 +549,23 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pairwise-distance-matrix">
-<h1>Pairwise Distance Matrix<a class="headerlink" href="#pairwise-distance-matrix" title="Permalink to this heading">#</a></h1>
-<p><em>Example</em></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="pytraj-2d-rmsd">
+<h1><strong>Pytraj</strong> 2D-RMSD<a class="headerlink" href="#pytraj-2d-rmsd" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Pairwise Distance Matrix</p></li>
+</ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
 <span class="kn">from</span> <span class="nn">pytraj</span> <span class="kn">import</span> <span class="n">matrix</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sb</span>
 
-<span class="n">parm</span> <span class="o">=</span> <span class="s1">&#39;free_126/step3_pbcsetup_1264.parm7&#39;</span>
-<span class="n">nc</span> <span class="o">=</span> <span class="s1">&#39;free_126/prod*nc&#39;</span>
+<span class="n">parm</span> <span class="o">=</span> <span class="s1">&#39;step3_pbcsetup_1264.parm7&#39;</span>
+<span class="n">nc</span> <span class="o">=</span> <span class="s1">&#39;prod*nc&#39;</span>
 
 <span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">iterload</span><span class="p">(</span><span class="n">nc</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="n">parm</span><span class="p">)</span>
 
 <span class="n">mat</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="s1">&#39;@CA&#39;</span><span class="p">)</span>
-<span class="n">np</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;npy/free_126_ca_matrix_dist.npy&#39;</span><span class="p">,</span> <span class="n">mat</span><span class="p">)</span> <span class="c1"># Save data to npy file</span>
 
-<span class="c1"># Plot results</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -592,20 +600,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="analysis-pymbar.html"
+       href="cpptraj-dry.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Plot PMF with PyMBAR</p>
+        <p class="prev-next-title"><strong>CPPTRAJ</strong> Remove water</p>
       </div>
     </a>
     <a class="right-next"
-       href="analysis-pytraj-pca.html"
+       href="pytraj-pca.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Principal Component Analysis</p>
+        <p class="prev-next-title"><strong>Pytraj</strong> PCA</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -622,7 +630,7 @@ document.write(`
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/02-simulation/analysis-pytraj-2drmsd.md">
+    <a href="../../_sources/notebooks/02-simulation/pytraj-2drmsd.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
