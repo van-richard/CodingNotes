@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Install QMHub &#8212; CodingNotes</title>
+    <title>Classical Molecular Dynamics &#8212; CodingNotes</title>
   
   
   
@@ -61,13 +61,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/amber-install-qmhub';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/amber-install-qmhub.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/theory-classical';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/theory-classical.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="TorchMDnet-ext Environment (CPU)" href="amber-install-torchmdnet.html" />
-    <link rel="prev" title="Patch / Compile" href="amber-install-patch.html" />
+    <link rel="next" title="FE Alchem" href="theory-fe-alchemical.html" />
+    <link rel="prev" title="Binding Affinity" href="theory-binding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,14 +169,14 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -194,15 +196,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
@@ -358,14 +353,14 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -385,15 +380,8 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
@@ -468,25 +456,31 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Install QMHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="theory-binding.html">Binding Affinity</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-alchemical.html">FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">Free Energy Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">Amber</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-2drmsd.html"><strong>Pytraj</strong> 2D-RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
 </ul>
 </li>
 </ul>
@@ -530,9 +524,9 @@ document.write(`
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
     
-    <li class="breadcrumb-item"><a href="amber-install.html" class="nav-link">Compiling Amber on Pete</a></li>
+    <li class="breadcrumb-item"><a href="theory.html" class="nav-link">Theory / Methods Overview</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Install QMHub</li>
+    <li class="breadcrumb-item active" aria-current="page">Classical...</li>
   </ul>
 </nav>
 </div>
@@ -549,23 +543,42 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="install-qmhub">
-<h1>Install QMHub<a class="headerlink" href="#install-qmhub" title="Permalink to this heading">#</a></h1>
-<ol class="arabic simple" start="3">
-<li><p>Clone <a class="reference external" href="https://github.com/panxl/qmhub.git"></a> to <code class="docutils literal notranslate"><span class="pre">Programs/sources/</span></code></p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/panxl/qmhub.git
-<span class="nb">cd</span><span class="w"> </span>qmhub
-
-module<span class="w"> </span>load<span class="w"> </span>intel/2021.2.0
-module<span class="w"> </span>load<span class="w"> </span>impi/2021.2.0
-
-<span class="nb">export</span><span class="w"> </span><span class="nv">MKLROOT</span><span class="o">=</span>/opt/intel/oneapi/mkl/2021.2.0
-<span class="nb">export</span><span class="w"> </span><span class="nv">LD_PRELOAD</span><span class="o">=</span><span class="nv">$MKLROOT</span>/lib/intel64/libmkl_core.so:<span class="nv">$MKLROOT</span>/lib/intel64/libmkl_sequential.so
-
-pip<span class="w"> </span>install<span class="w"> </span>.
+  <section class="tex2jax_ignore mathjax_ignore" id="classical-molecular-dynamics">
+<h1>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this heading">#</a></h1>
+<section id="potential-energy">
+<h2>Potential Energy<a class="headerlink" href="#potential-energy" title="Permalink to this heading">#</a></h2>
+<p>Energy of a system is composed of bonded and nonbonded interactions:</p>
+<div class="math notranslate nohighlight">
+\[
+E _{total} = E_{bonded} + E_{nonbonded} 
+\]</div>
+<p>The bonded interactions (<span class="math notranslate nohighlight">\(E_{bonded}\)</span>) are:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{bonded} = E_{bonds} + E_{angles} + E_{torsion}
+\]</div>
+<p>Nonbonded interactions (<span class="math notranslate nohighlight">\(E_{nonbonded}\)</span>) are:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{nonbonded} = E_{vdw} + E_{elec.}
+\]</div>
+<p>How these functions are written will depend on the simulation package (i.e. Amber, NAMD, OpenMM, Gromacs, etc.).</p>
+<p>Amber uses the following definitions:</p>
+<p><span class="math notranslate nohighlight">\(E_{bonds} = \sum_{bonds} k_b (r - r_{eq})^2\)</span>
+<span class="math notranslate nohighlight">\(E_{angles} = \sum_{angles} k_{a} (\theta - \theta_{eq})^2\)</span>
+<span class="math notranslate nohighlight">\(E_{torsion} = \sum_{torsion} \frac{V_n}{2} (1 + cos(n\phi - \delta) \)</span>
+<span class="math notranslate nohighlight">\(E_{vdw} = \sum_{nonbonded_{ij}} \frac{A_{ij}}{r_{ij}^12} - \frac{B_{ij}}{r_{ij}^6} \)</span>
+<span class="math notranslate nohighlight">\(E_{elec} = \sum_{nonbonded_{ij}} \frac{q_i q_j}{r_{ij}}\)</span></p>
+</section>
+<section id="force-fields">
+<h2>Force Fields<a class="headerlink" href="#force-fields" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -598,20 +611,20 @@ pip<span class="w"> </span>install<span class="w"> </span>.
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="amber-install-patch.html"
+       href="theory-binding.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Patch / Compile</p>
+        <p class="prev-next-title">Binding Affinity</p>
       </div>
     </a>
     <a class="right-next"
-       href="amber-install-torchmdnet.html"
+       href="theory-fe-alchemical.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">TorchMDnet-ext Environment (CPU)</p>
+        <p class="prev-next-title">FE Alchem</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -626,9 +639,20 @@ pip<span class="w"> </span>install<span class="w"> </span>.
 
 
   <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#potential-energy">Potential Energy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-fields">Force Fields</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/02-simulation/amber-install-qmhub.md">
+    <a href="../../_sources/notebooks/02-simulation/theory-classical.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

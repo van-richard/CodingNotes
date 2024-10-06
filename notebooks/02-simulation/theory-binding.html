@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Pytraj 2D-RMSD &#8212; CodingNotes</title>
+    <title>Binding Affinity &#8212; CodingNotes</title>
   
   
   
@@ -61,13 +61,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/pytraj-2drmsd';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/pytraj-2drmsd.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/theory-binding';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/theory-binding.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Pytraj PCA" href="pytraj-pca.html" />
-    <link rel="prev" title="CPPTRAJ Remove water" href="cpptraj-dry.html" />
+    <link rel="next" title="Classical Molecular Dynamics" href="theory-classical.html" />
+    <link rel="prev" title="Theory / Methods Overview" href="theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,14 +169,14 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -194,15 +196,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
@@ -358,14 +353,14 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -385,15 +380,8 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
@@ -468,25 +456,31 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-alchemical.html">FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">Free Energy Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">Amber</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="analysis.html">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Pytraj</strong> 2D-RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
 </ul>
 </li>
 </ul>
@@ -530,9 +524,9 @@ document.write(`
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
     
-    <li class="breadcrumb-item"><a href="analysis.html" class="nav-link">Analysis</a></li>
+    <li class="breadcrumb-item"><a href="theory.html" class="nav-link">Theory / Methods Overview</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><strong>Pytr...</li>
+    <li class="breadcrumb-item active" aria-current="page">Binding Affinity</li>
   </ul>
 </nav>
 </div>
@@ -549,25 +543,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pytraj-2d-rmsd">
-<h1><strong>Pytraj</strong> 2D-RMSD<a class="headerlink" href="#pytraj-2d-rmsd" title="Permalink to this heading">#</a></h1>
-<ul class="simple">
-<li><p>Pairwise Distance Matrix</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
-<span class="kn">from</span> <span class="nn">pytraj</span> <span class="kn">import</span> <span class="n">matrix</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sb</span>
-
-<span class="n">parm</span> <span class="o">=</span> <span class="s1">&#39;step3_pbcsetup_1264.parm7&#39;</span>
-<span class="n">nc</span> <span class="o">=</span> <span class="s1">&#39;prod*nc&#39;</span>
-
-<span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">iterload</span><span class="p">(</span><span class="n">nc</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="n">parm</span><span class="p">)</span>
-
-<span class="n">mat</span> <span class="o">=</span> <span class="n">matrix</span><span class="o">.</span><span class="n">dist</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="s1">&#39;@CA&#39;</span><span class="p">)</span>
-
-<span class="n">sb</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span>
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="binding-affinity">
+<h1>Binding Affinity<a class="headerlink" href="#binding-affinity" title="Permalink to this heading">#</a></h1>
+<p>The binding affinity (energy of binding) between a ligand, <span class="math notranslate nohighlight">\(L\)</span>, to a receptor.</p>
+<div class="math notranslate nohighlight">
+\[
+R + L \rightleftarrows RL
+\]</div>
+<p>The binding constant (<span class="math notranslate nohighlight">\(K_b\)</span>) is the ratio of concentrations of the product (<span class="math notranslate nohighlight">\([RL]\)</span>), and the reactants (<span class="math notranslate nohighlight">\([R], [L]\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[
+K_b = \frac{[RL]}{[R][L]}
+\]</div>
+<p>Thermodynamics activity can be approximated by concentrations. The standard Gibbs free energy of binding (<span class="math notranslate nohighlight">\(\Delta G_{bind}\)</span>) is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta G_{bind} = -k_bT \ln K_{b}
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(k_b\)</span> is the Boltzmann constand, and <span class="math notranslate nohighlight">\(T\)</span> is the temerature of the system. However, this equation is not directly applicable for typical molecular simulations where, there is only a single receptor/ligand in a small box (i.e., using large concentrations).</p>
+<p>One way to estimate the equilibrium constant is by directly simulating several binding and unbinding events and computing the probability of finding the receptor-ligand system in the bound state (<span class="math notranslate nohighlight">\(P(RL)\)</span>), or unbound state (<span class="math notranslate nohighlight">\(P(R+L)\)</span>).</p>
+<p>Assuming, the volume change during binding is negligible, then the Gibbs free energy is approximately equal to the Helmholtz free energy. In an NVT simulation, we get:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta G_{bind} \approx \Delta A_{bind} = -k_bT \left( \ln \frac{P(RL)}{P(R+L)} + \ln \left( cNV \right) \right)
+\]</div>
+<section id="simulating-binding-affinity">
+<h2>Simulating Binding Affinity<a class="headerlink" href="#simulating-binding-affinity" title="Permalink to this heading">#</a></h2>
+<p>Using atomistic molecular modelling to predict protein-ligand binding is a growing area in many fields (drug discovery). When calculations are sufficiently fast and accurate, we can anticipate significant reduction in time and cost for the early stages of drug discovery and/or trial-and-error experimentation.</p>
+<p>We have several methods to predict protein-ligand binding affinity, such as:</p>
+<ol class="arabic simple">
+<li><p>Docking</p>
+<ol class="arabic simple">
+<li><p>Uses a simple scoring function to estimate binding affinity</p></li>
+</ol>
+</li>
+<li><p>MMGBSA/MMPBSA</p>
+<ol class="arabic simple">
+<li><p>A MD post-processing technique, where the free energy of a state is calculated from the internal energy (MM) of the molecule and its interaction with an implicit representation of solvent (GBSA/PBSA)</p></li>
+</ol>
+</li>
+<li><p>Free Energy Perturbation (FEP)</p>
+<ol class="arabic simple">
+<li><p>Evaluates free energy differences of a given configuration under a different Hamiltonian</p></li>
+</ol>
+</li>
+</ol>
+<p>Docking is relatively quick and easy calculation to do, but is often inaccurate, and limited to a small molecules. The error in docking scores for programs such AutoDock Vina is ~2 kcal/mol.</p>
+<p>In, MMPBSA/MMGBSA calculations, you run a short MD trajectory and then use those configurations for analysis.  They have been used successfully to reproduce and rationalize experimental findings and to improve the results of virtual screening and docking. However, they contain several crude and questionable approximations, for example, the lack of conformational entropy and information about the number and free energy of water molecules in the binding site. However, this approach represent a middle-ground between fast but very inaccurate docking and free-energy perturbation (FEP), which gives the best results at the expense of a tremendous computation time.</p>
+<p>Free energy perurbation estimates the difference in free energy between two states by slowly changing one state to another through a number of nonphysical intermediate states, performing extended sampling at each intermediate state. Unfortunately, this method is extremely time con- suming and therefore more approximate methods have been developed.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -600,20 +624,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="cpptraj-dry.html"
+       href="theory.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><strong>CPPTRAJ</strong> Remove water</p>
+        <p class="prev-next-title">Theory / Methods Overview</p>
       </div>
     </a>
     <a class="right-next"
-       href="pytraj-pca.html"
+       href="theory-classical.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Pytraj</strong> PCA</p>
+        <p class="prev-next-title">Classical Molecular Dynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -628,9 +652,19 @@ document.write(`
 
 
   <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulating-binding-affinity">Simulating Binding Affinity</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/02-simulation/pytraj-2drmsd.md">
+    <a href="../../_sources/notebooks/02-simulation/theory-binding.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

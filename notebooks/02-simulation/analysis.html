@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="CPPTRAJ Remove water" href="cpptraj-dry.html" />
+    <link rel="next" title="Export Dry Trajectory (no water)" href="analysis-cpptraj-dry.html" />
     <link rel="prev" title="QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -167,14 +167,14 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -194,15 +194,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
@@ -358,14 +351,14 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -385,15 +378,8 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
@@ -468,25 +454,31 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="amber.html">Setup</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="amber-install.html">Compiling Amber on Pete</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Theory / Methods Overview</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory-binding.html">Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-classical.html">Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-alchemical.html">FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">Free Energy Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">Amber</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="simple.html">Simple MD Tutorial of Alanine Dipeptide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="distance.html">Applying Distance Restraints in Classical MD Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html"><strong>CPPTRAJ</strong> Remove water</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-2drmsd.html"><strong>Pytraj</strong> 2D-RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-pca.html"><strong>Pytraj</strong> PCA</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsd.html"><strong>Pytraj</strong> RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pytraj-rmsf.html"><strong>Pytraj</strong> RMSF</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
 </ul>
 </li>
 </ul>
@@ -546,7 +538,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="analysis">
+  <section id="analysis">
 <h1>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
 </div>
@@ -591,11 +583,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="cpptraj-dry.html"
+       href="analysis-cpptraj-dry.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>CPPTRAJ</strong> Remove water</p>
+        <p class="prev-next-title">Export Dry Trajectory (no water)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

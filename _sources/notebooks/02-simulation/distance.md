@@ -61,7 +61,7 @@ Give `tleap` instructions by making a file called "tleap.in" containing:
 
 ```shell
 source leaprc.protein.ff19SB
-source leaprc.water.tip3p
+source leaprc.water.TIP3P
 
 sys1 = sequence { ACE ALA NME }
 sys2 = sequence { ACE ALA NME }
@@ -80,7 +80,7 @@ This is almost the same as the `tleap` file we made in the `simple` tutorial. He
 
 * `source` line tell Amber which force field parameters we want for our molecules, this is always at the top of the file
     * `leaprc.protein.ff19SB` contains protein parameters
-    * `leaprc.water.tip3p` has the water parameters
+    * `leaprc.water.TIP3P` has the water parameters
 * `sys1` is one molecular unit of Alanine Dipeptide 
 * `sys2` is another molecular unit of Alanine Dipeptide
 * `translate sys2 { 5 0 0 }` shifts the second molecular unit by 5 Å in the x-direction
