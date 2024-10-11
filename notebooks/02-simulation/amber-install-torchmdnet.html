@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Analysis &#8212; CodingNotes</title>
+    <title>TorchMDnet-ext Environment (CPU) &#8212; CodingNotes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/analysis';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/analysis.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/amber-install-torchmdnet';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/amber-install-torchmdnet.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Export Dry Trajectory (no water)" href="analysis-cpptraj-dry.html" />
-    <link rel="prev" title="QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="Install QMHub" href="amber-install-qmhub.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -463,11 +463,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">Amber</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="amber.html">Amber</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="amber-install-helpmelib.html">Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">TorchMDnet-ext Environment (CPU)</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">Tutorial</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -476,7 +476,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
@@ -525,7 +525,10 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Analysis</li>
+    
+    <li class="breadcrumb-item"><a href="amber.html" class="nav-link">Amber</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">TorchMDnet-e...</li>
   </ul>
 </nav>
 </div>
@@ -542,9 +545,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="analysis">
-<h1>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section id="torchmdnet-ext-environment-cpu">
+<h1>TorchMDnet-ext Environment (CPU)<a class="headerlink" href="#torchmdnet-ext-environment-cpu" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Environment</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bullet</span> <span class="c1"># interactive gpu </span>
+<span class="n">module</span> <span class="n">load</span> <span class="n">gcc</span><span class="o">/</span><span class="mf">11.2.0</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Create environment</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">torchmdnet</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.10</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">torchmdnet</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">pytorch</span> <span class="o">-</span><span class="n">c</span> <span class="n">nvidia</span> <span class="n">pytorch</span> <span class="n">pytorch</span><span class="o">-</span><span class="n">cuda</span><span class="o">=</span><span class="mf">12.1</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">pyg</span> <span class="n">pyg</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">pip</span> <span class="n">h5py</span> <span class="n">tqdm</span> <span class="n">lightning</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">conda</span> <span class="n">clean</span> <span class="o">--</span><span class="nb">all</span> <span class="o">--</span><span class="n">yes</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Make sure you have a clean environment (no intel/impi)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">panxl</span><span class="o">/</span><span class="n">torchmd</span><span class="o">-</span><span class="n">net</span><span class="o">.</span><span class="n">git</span><span class="nd">@tensornet</span><span class="o">-</span><span class="n">ext</span>
+</pre></div>
 </div>
 </section>
 
@@ -578,20 +603,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="claisen.html"
+       href="amber-install-qmhub.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">QM/MM Simulation of the Claisen Rearrangment Reaction</p>
+        <p class="prev-next-title">Install QMHub</p>
       </div>
     </a>
     <a class="right-next"
-       href="analysis-cpptraj-dry.html"
+       href="tutorial.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Export Dry Trajectory (no water)</p>
+        <p class="prev-next-title">Tutorial</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -608,7 +633,7 @@ document.write(`
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/02-simulation/analysis.md">
+    <a href="../../_sources/notebooks/02-simulation/amber-install-torchmdnet.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

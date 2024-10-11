@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Analysis &#8212; CodingNotes</title>
+    <title>Patch / Compile &#8212; CodingNotes</title>
   
   
   
@@ -61,13 +61,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/analysis';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/analysis.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/amber-install-patch';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/amber-install-patch.html" />
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Export Dry Trajectory (no water)" href="analysis-cpptraj-dry.html" />
-    <link rel="prev" title="QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
+    <link rel="next" title="Install QMHub" href="amber-install-qmhub.html" />
+    <link rel="prev" title="Compile helpmelib executable" href="amber-install-helpmelib.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -463,9 +463,9 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">Amber</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="amber.html">Amber</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="amber-install-helpmelib.html">Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Patch / Compile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">TorchMDnet-ext Environment (CPU)</a></li>
 </ul>
@@ -476,7 +476,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
@@ -525,7 +525,10 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">simulations</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Analysis</li>
+    
+    <li class="breadcrumb-item"><a href="amber.html" class="nav-link">Amber</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Patch / Compile</li>
   </ul>
 </nav>
 </div>
@@ -542,10 +545,59 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="analysis">
-<h1>Analysis<a class="headerlink" href="#analysis" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="patch-compile">
+<h1>Patch / Compile<a class="headerlink" href="#patch-compile" title="Permalink to this heading">#</a></h1>
+<p>Amber + QMhub + Torchmd-net</p>
+<section id="create-conda-environment">
+<h2>Create Conda Environment<a class="headerlink" href="#create-conda-environment" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">torchmd-net</span></code> conda environment, and load modules.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>torchmd-net.yml
+conda<span class="w"> </span>activate<span class="w"> </span>torchmd-net
+
+module<span class="w"> </span>load<span class="w"> </span>intel/2021.2.0
+module<span class="w"> </span>load<span class="w"> </span>impi/2021.2.0
+<span class="nb">export</span><span class="w"> </span><span class="nv">MKLROOT</span><span class="o">=</span>/opt/intel/oneapi/mkl/2021.2.0
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_PRELOAD</span><span class="o">=</span><span class="nv">$MKLROOT</span>/lib/intel64/libmkl_core.so:<span class="nv">$MKLROOT</span>/lib/intel64/libmkl_sequential.so
+</pre></div>
 </div>
+<ol class="arabic simple" start="2">
+<li><p>Clone repository to <code class="docutils literal notranslate"><span class="pre">Programs/</span></code> and change branch to torchnet-ext</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/panxl/torchmd-net.git
+<span class="nb">cd</span><span class="w"> </span>torchmd-net
+pip<span class="w"> </span>install<span class="w"> </span>.
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Clone <a class="reference external" href="https://github.com/panxl/qmhub"></a> and <a class="reference external" href="https://github.com/andysim/helpme"></a> to <code class="docutils literal notranslate"><span class="pre">Programs/</span></code>. We’ll compile qmhub first.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/panxl/qmhub.git
+<span class="nb">cd</span><span class="w"> </span>qmhub
+pip<span class="w"> </span>install<span class="w"> </span>.
+<span class="nb">cd</span><span class="w"> </span>..
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/andysim/helpme.git
+<span class="nb">cd</span><span class="w"> </span>helpme<span class="w"> </span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>build<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>build
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">CXX</span><span class="o">=</span>icpc<span class="w"> </span><span class="nv">PKG_CONFIG_PATH</span><span class="o">=</span>~/miniforge3/lib/pkgconfig<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>cmake<span class="w"> </span>..<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DFFTW_INCLUDES<span class="o">=</span><span class="nv">$MKLROOT</span>/include/fftw<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DFFTW_LIBRARIES<span class="o">=</span><span class="nv">$MKLROOT</span>/lib/intel64
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>helpmelib
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Copy the <code class="docutils literal notranslate"><span class="pre">python/helpme***</span></code> file to <code class="docutils literal notranslate"><span class="pre">minforge3/envs/torchmd-net/lib/python3.10/site-packages/qmhub/</span></code></p></li>
+<li><p>Then compile Amber</p></li>
+</ol>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -578,20 +630,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="claisen.html"
+       href="amber-install-helpmelib.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">QM/MM Simulation of the Claisen Rearrangment Reaction</p>
+        <p class="prev-next-title">Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</p>
       </div>
     </a>
     <a class="right-next"
-       href="analysis-cpptraj-dry.html"
+       href="amber-install-qmhub.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Export Dry Trajectory (no water)</p>
+        <p class="prev-next-title">Install QMHub</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -606,9 +658,19 @@ document.write(`
 
 
   <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-conda-environment">Create Conda Environment</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/02-simulation/analysis.md">
+    <a href="../../_sources/notebooks/02-simulation/amber-install-patch.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
