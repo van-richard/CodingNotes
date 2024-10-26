@@ -1,4 +1,4 @@
-# What are XYZ Files?
+## What are XYZ Files?
 
 The XYZ file format is a text-file format. Unlike PDB files, there is no formal standard and several variations exist. However, a typical XYZ format specifies the molecule geometry by giving the number of atoms with Cartesian coordinates that will be read on the first line, a comment on the second, and the lines of atomic coordinates in the following lines. 
 

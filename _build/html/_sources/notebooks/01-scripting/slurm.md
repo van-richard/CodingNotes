@@ -1,4 +1,4 @@
-# SLURM
+## SLURM
 
 - Job schedule management on most clusters
 - See more: [slurm.schemd.com](https://slurm.schedmd.com/overview.html)

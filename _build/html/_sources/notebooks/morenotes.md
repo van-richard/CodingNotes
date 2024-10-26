@@ -6,3 +6,5 @@ This collection was an attempt to consolidated my experiences in computational c
 
 I hope many of you will find this information useful in your future endeavors.
 
+```{tableofcontents}
+```

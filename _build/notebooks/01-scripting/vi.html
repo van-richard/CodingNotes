@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="My .vimrc config" href="vi-vimrc.html" />
-    <link rel="prev" title="Manging Multiple Compiler Versions" href="bash-ubuntu-multi-gcc.html" />
+    <link rel="prev" title="DotFiles" href="bash/bash-startup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,14 +167,14 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -194,15 +194,15 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../cuda.html">
+                        <no title>
                       </a>
                     </li>
                 
@@ -358,14 +358,14 @@ document.write(`
     
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -385,15 +385,15 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../cuda.html">
+                        <no title>
                       </a>
                     </li>
                 
@@ -467,48 +467,51 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="bash.html"><code class="docutils literal notranslate"><span class="pre">bash</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="bash-startup.html">Start-Up Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bash-ubuntu-multi-gcc.html">Manging Multiple Compiler Versions</a></li>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="bash/bash.html">BASH SHELL</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="bash/bash-functions.html">BASH SHELL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bash/bash-loops.html">Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bash/bash-startup.html">DotFiles</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
+</li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="vi-vimrc.html">My <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> config</a></li>
+
+
+
+
+
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ssh.html"><code class="docutils literal notranslate"><span class="pre">ssh</span></code></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="ssh-autologin.html">Automate Login (Password-less)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ssh-config.html">Configuring ssh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ssh-copy.html">Upload, Download, &amp; Extras</a></li>
+
+
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="module-modulefiles.html">Personal User Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module.html">Lmod <code class="docutils literal notranslate"><span class="pre">module</span></code></a></li>
+
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="slurm.html">SLURM</a></li>
+
+
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="python.html"><code class="docutils literal notranslate"><span class="pre">python</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda.html"><code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-arm-intel.html">Intel Environments on M1/M2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-autodockvina.html">Create AutoDock Vina Conda Environment on HPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-env.html">Creating New Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyter.html">Jupyter Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyterbook.html">DIY GitHub Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html"><code class="docutils literal notranslate"><span class="pre">Python</span></code></a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="python-conda-rc.html">Conda Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-helplist.html">Helpful stuff</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-pandas-latextable.html">Convert Pandas DataFrame to LaTeX</a></li>
+
+
+
+
+
+
+
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="git.html"><code class="docutils literal notranslate"><span class="pre">git</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-branch.html">Branching</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git-ccats.html">Clone Github repository</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="git-pullpush.html">General Use Cases</a></li>
+
 </ul>
 </div>
 </nav></div>
@@ -547,7 +550,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">coding</a></li>
+    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">scripting</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><code...</li>
   </ul>
@@ -566,7 +569,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="vi-vim">
+  <section id="vi-vim">
 <h1><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code><a class="headerlink" href="#vi-vim" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">vi/vim</span> </code>are both text editors for the CLI</p></li>
@@ -577,8 +580,9 @@ document.write(`
 </ul>
 </li>
 </ul>
+</section>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Run by typing <code class="docutils literal notranslate"><span class="pre">vi</span></code> or <code class="docutils literal notranslate"><span class="pre">vim</span></code> followed by a filename</p></li>
 <li><p>To exit, press <code class="docutils literal notranslate"><span class="pre">esc</span></code> then <code class="docutils literal notranslate"><span class="pre">:q</span></code> or <code class="docutils literal notranslate"><span class="pre">:q!</span></code></p></li>
@@ -597,7 +601,7 @@ document.write(`
 </div>
 </section>
 <section id="optional-text-editing-modes">
-<h2>Optional Text Editing Modes<a class="headerlink" href="#optional-text-editing-modes" title="Permalink to this heading">#</a></h2>
+<h1>Optional Text Editing Modes<a class="headerlink" href="#optional-text-editing-modes" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>There are several “mode” options when using <code class="docutils literal notranslate"><span class="pre">vi</span></code> or <code class="docutils literal notranslate"><span class="pre">vim</span></code></p>
 <ol class="arabic simple">
@@ -635,7 +639,7 @@ document.write(`
 </div>
 </section>
 <section id="key-bindings-commands-normal-mode">
-<h2>Key Bindings Commands (Normal Mode)<a class="headerlink" href="#key-bindings-commands-normal-mode" title="Permalink to this heading">#</a></h2>
+<h1>Key Bindings Commands (Normal Mode)<a class="headerlink" href="#key-bindings-commands-normal-mode" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Key or combination of keys on your keyboard can be assigned (bound) with a command</p></li>
 <li><p>Several default key bindings are:</p></li>
@@ -672,7 +676,7 @@ document.write(`
 </div>
 </section>
 <section id="command-line-mode">
-<h2>Command Line Mode<a class="headerlink" href="#command-line-mode" title="Permalink to this heading">#</a></h2>
+<h1>Command Line Mode<a class="headerlink" href="#command-line-mode" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>To enter this mode, press <code class="docutils literal notranslate"><span class="pre">esc</span></code> and then <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
 <li><p>The cursor to move at the bottom of the window in the command box</p></li>
@@ -690,13 +694,14 @@ document.write(`
 </div>
 </section>
 <section id="visual-configuration">
-<h2>Visual Configuration<a class="headerlink" href="#visual-configuration" title="Permalink to this heading">#</a></h2>
+<h1>Visual Configuration<a class="headerlink" href="#visual-configuration" title="Permalink to this heading">#</a></h1>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>:set<span class="w"> </span>number<span class="w">           </span><span class="c1"># prefix line numbers (it is a visual guideline, won&#39;t modify text)</span>
 :set<span class="w"> </span>nonumber<span class="w">         </span><span class="c1"># remove line number prefix</span>
 :set<span class="w"> </span>number!<span class="w">          </span><span class="c1"># toggle number setting</span>
 </pre></div>
 </div>
-</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -729,12 +734,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="bash-ubuntu-multi-gcc.html"
+       href="bash/bash-startup.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Manging Multiple Compiler Versions</p>
+        <p class="prev-next-title">DotFiles</p>
       </div>
     </a>
     <a class="right-next"
@@ -762,12 +767,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-text-editing-modes">Optional Text Editing Modes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-bindings-commands-normal-mode">Key Bindings Commands (Normal Mode)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-mode">Command Line Mode</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-configuration">Visual Configuration</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-text-editing-modes">Optional Text Editing Modes</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#key-bindings-commands-normal-mode">Key Bindings Commands (Normal Mode)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-mode">Command Line Mode</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-configuration">Visual Configuration</a></li>
 </ul>
+
   </nav></div>
 
   <div class="sidebar-secondary-item">

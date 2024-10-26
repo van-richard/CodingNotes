@@ -1,4 +1,4 @@
-# `python` 
+## `Python` 
 
 ```python
 # Single line comments start with a number symbol.
@@ -1275,5 +1275,3 @@ print(say(say_please=True))  # Can you buy me a beer? Please! I am poor :(
 
 ```
 
-```{tableofcontents}
-```

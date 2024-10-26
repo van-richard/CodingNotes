@@ -1,5 +1,10 @@
 # Preface
 
+
+```{margin}
+[My scripts / dotfiles / templates can be found here](https://github.com/van-richard/PL888)
+```
+
 These notes are dedicated to my one and only brain cell. Kudos.
 
 To answer your questions:

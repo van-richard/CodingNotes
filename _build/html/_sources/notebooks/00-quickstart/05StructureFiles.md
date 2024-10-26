@@ -1,4 +1,4 @@
-# Molecular Structure Files
+## Molecular Structure Files
 
 The structures of proteins and small-molecules can be solved via experimental methods, NMR, some examples include NMR, X-ray crystallography, and Cryo-EM. There are many databases for different approaches to solving molecular structures, but I will limit this discussion to `.pdb` and `.xyz` files.
 

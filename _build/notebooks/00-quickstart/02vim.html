@@ -167,14 +167,14 @@ const thebe_selector_output = ".output, .cell_output"
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -187,22 +187,8 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-visuals/00_overview.html">
-                        visualization
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
@@ -358,14 +344,14 @@ document.write(`
     
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="00_overview.html">
-                        qsa
+                        quickstart
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        coding
+                        scripting
                       </a>
                     </li>
                 
@@ -378,22 +364,8 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-visuals/00_overview.html">
-                        visualization
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../linux.html">
-                        linux
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../containers/apptainer.html">
-                        apptainer
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
                       </a>
                     </li>
                 
@@ -469,14 +441,32 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01terminal.html">Terminal, Shell, &amp; Bash</a></li>
+
+
+
+
+
+
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Text Editors</a></li>
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">Supercomputers</a></li>
 
 
+
+
 <li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">Python &amp; Conda</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">Molecular Structure Files</a></li>
+
+
 <li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">Exploring PDB Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07XYZFiles.html">What are XYZ Files?</a></li>
+
+
+
 </ul>
 </div>
 </nav></div>
@@ -515,7 +505,7 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">qsa</a></li>
+    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">quickstart</a></li>
     
     <li class="breadcrumb-item active" aria-current="page">Text Editors</li>
   </ul>
@@ -534,13 +524,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="text-editors">
+  <section id="text-editors">
 <h1>Text Editors<a class="headerlink" href="#text-editors" title="Permalink to this heading">#</a></h1>
 <p>So how do we make, edit, or even begin to visualize files?</p>
 <p>We need a CLI text editor. Something similar on your computer might be <code class="docutils literal notranslate"><span class="pre">Notepad</span></code>, or <code class="docutils literal notranslate"><span class="pre">TextEdit</span></code>, which really is just a simplified Word program.</p>
 <p>You have several text-editor options, like <code class="docutils literal notranslate"><span class="pre">nano</span></code>, <code class="docutils literal notranslate"><span class="pre">emacs</span></code>, and <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code>. Personally, I prefer using <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code>, since I learned this first, but feel free to explore what works best for you!</p>
+</section>
 <section id="vi-vim">
-<h2>vi/vim<a class="headerlink" href="#vi-vim" title="Permalink to this heading">#</a></h2>
+<h1>vi/vim<a class="headerlink" href="#vi-vim" title="Permalink to this heading">#</a></h1>
 <p>There are several levels to using <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code>, but don’t get lost! For now, we only need to know:</p>
 <p><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code> has 2 modes:</p>
 <ol class="arabic simple">
@@ -557,7 +548,7 @@ document.write(`
 </ol>
 </section>
 <section id="how-to-use-vi-vim">
-<h2>How to Use vi/vim?<a class="headerlink" href="#how-to-use-vi-vim" title="Permalink to this heading">#</a></h2>
+<h1>How to Use vi/vim?<a class="headerlink" href="#how-to-use-vi-vim" title="Permalink to this heading">#</a></h1>
 <p>To make a new file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vi<span class="w"> </span>filename
 </pre></div>
@@ -565,7 +556,7 @@ document.write(`
 <p>If <code class="docutils literal notranslate"><span class="pre">filename</span></code> exists, <code class="docutils literal notranslate"><span class="pre">vi/vim</span></code> will open it, and you start in Command Mode.</p>
 </section>
 <section id="save-quit">
-<h2>Save &amp; Quit<a class="headerlink" href="#save-quit" title="Permalink to this heading">#</a></h2>
+<h1>Save &amp; Quit<a class="headerlink" href="#save-quit" title="Permalink to this heading">#</a></h1>
 <p>To do this, you need to be in Command Mode. There are 4 options:</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">:w</span></code></p>
@@ -590,7 +581,6 @@ document.write(`
 </ul>
 </li>
 </ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -656,10 +646,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vi-vim">vi/vim</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-vi-vim">How to Use vi/vim?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#save-quit">Save &amp; Quit</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Text Editors</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#vi-vim">vi/vim</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-vi-vim">How to Use vi/vim?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#save-quit">Save &amp; Quit</a></li>
 </ul>
+
   </nav></div>
 
   <div class="sidebar-secondary-item">

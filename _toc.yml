@@ -16,51 +16,62 @@ subtrees:
   - file: notebooks/01-scripting/00_overview
     subtrees:
     - entries:
-      - file: notebooks/01-scripting/bash
-      - glob: "notebooks/01-scripting/bash-*"
+      - file: notebooks/01-scripting/bash/bash
+        entries:
+        - glob: "notebooks/01-scripting/bash/bash-*"
+      - file: notebooks/01-scripting/vim/vi
+        entries:
+        - glob: "notebooks/01-scripting/vim/vi-*"
     - entries:
-      - file: notebooks/01-scripting/vi
-      - glob: "notebooks/01-scripting/vi-*"
+      - file: notebooks/01-scripting/hpc/ssh
+        entries:
+        - glob: "notebooks/01-scripting/hpc/ssh-*"
+      - file: notebooks/01-scripting/hpc/module
+        entries:
+        - glob: "notebooks/01-scripting/hpc/module-*"
+      - file: notebooks/01-scripting/hpc/slurm
+        entries:
+        - glob: "notebooks/01-scripting/hpc/slurm-*"
     - entries:
-      - file: notebooks/01-scripting/ssh
-      - glob: "notebooks/01-scripting/ssh-*"
+      - file: notebooks/01-scripting/python/python
+        entries:
+        - glob: "notebooks/01-scripting/python/python-*"
     - entries:
-      - glob: "notebooks/01-scripting/module-*"
-    - entries:
-      - glob: "notebooks/01-scripting/slurm"
-    - entries:
-      - file: notebooks/01-scripting/python
-      - glob: "notebooks/01-scripting/python-*"
-    - entries:
-      - file: notebooks/01-scripting/git
-      - glob: "notebooks/01-scripting/git-*"
+      - file: notebooks/01-scripting/git/git
+        entries:
+        - glob: "notebooks/01-scripting/git/git-*"
   - file: notebooks/02-simulation/00_overview
     subtrees:
     - entries:
       - file: notebooks/02-simulation/theory
-        subtrees:
-        - entries:
-          - file: notebooks/02-simulation/amber
-          - file: "notebooks/02-simulation/amber-install-*"
-          - file: notebooks/02-simulation/simple
-          - file: notebooks/02-simulation/distance
-          - file: notebooks/02-simulation/claisen
-          - glob: "notebooks/02-simulation/analysis-*"
-  - file: notebooks/03-visuals/00_overview
+        entries:
+        - glob: "notebooks/02-simulation/theory-*"
+      - file: notebooks/02-simulation/amber
+        entries:
+        - glob: "notebooks/02-simulation/amber-install-*"
+      - file: notebooks/02-simulation/tutorial.md
+        entries:
+        - file: notebooks/02-simulation/simple
+        - file: notebooks/02-simulation/distance
+        - file: notebooks/02-simulation/claisen
+      - file: notebooks/02-simulation/analysis
+        entries:
+        - glob: "notebooks/02-simulation/analysis-*"
+  - file: notebooks/morenotes
     subtrees:
     - entries:
-      - glob: "notebooks/03-visuals/chimera*"
-      - glob: "notebooks/03-visuals/ffmpeg"
-  - file: notebooks/linux
-    subtrees:
-    - entries:
-      - file: "notebooks/01-scripting/gnu-parallel"
-      - glob: notebooks/commands/*
-  - file: notebooks/containers/apptainer
-    subtrees:
-    - entries:
-      - file: notebooks/containers/app-build
-      - file: notebooks/containers/app-run
-      - file: notebooks/containers/app-shell
-      - file: notebooks/containers/app-instance
+      - file: notebooks/linux
+        entries:
+        - glob: notebooks/commands/*
+      - file: notebooks/softwares/apptainer/apptainer
+        entries:
+        - file: notebooks/softwares/apptainer/app-build
+        - file: notebooks/softwares/apptainer/app-run
+        - file: notebooks/softwares/apptainer/app-shell
+        - file: notebooks/softwares/apptainer/app-instance
+      - file: notebooks/softwares/chimerax/chimera
+        entries:
+        - glob: "notebooks/softwares/chimerax/chimera*"
+      - file: "notebooks/softwares/ffmpeg"
+      - file: "notebooks/softwares/gnu-parallel"
 

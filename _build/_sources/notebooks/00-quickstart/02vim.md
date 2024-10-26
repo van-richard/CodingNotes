@@ -1,4 +1,4 @@
-# Text Editors
+## Text Editors
 
 So how do we make, edit, or even begin to visualize files? 
 

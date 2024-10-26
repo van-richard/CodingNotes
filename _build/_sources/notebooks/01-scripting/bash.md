@@ -1,4 +1,4 @@
-# `bash`
+## `bash`
  
 
 - So far, we have used `bash` to interact with the CLI by typing single line commands
