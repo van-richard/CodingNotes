@@ -451,7 +451,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">QM/MM Simulations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">Amber</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">Compile Notes</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="amber-install-helpmelib.html">Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">Patch / Compile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">Install QMHub</a></li>
@@ -465,12 +465,8 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis/rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis/mbar.html">MBAR</a></li>
 </ul>
 </li>
 </ul>
@@ -560,8 +556,8 @@ document.write(`
 <h1>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0b9fc5e0-0d8a-496b-9f3c-198b58da2d4f">
-<span class="eqno">(1)<a class="headerlink" href="#equation-0b9fc5e0-0d8a-496b-9f3c-198b58da2d4f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2ff1954e-19ae-4636-bc91-5a3087024644">
+<span class="eqno">(1)<a class="headerlink" href="#equation-2ff1954e-19ae-4636-bc91-5a3087024644" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -574,8 +570,8 @@ document.write(`
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-c8ea003e-64a2-4280-905c-ee491b9d7a3b">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c8ea003e-64a2-4280-905c-ee491b9d7a3b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-64f69eb1-d8f0-4ea6-91e2-15a88dd41057">
+<span class="eqno">(2)<a class="headerlink" href="#equation-64f69eb1-d8f0-4ea6-91e2-15a88dd41057" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}

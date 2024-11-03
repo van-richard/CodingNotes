@@ -1,4 +1,4 @@
-## Terminal, Shell, & Bash
+# Terminal, Shell, & Bash
 
 :::{figure} https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif
 ---

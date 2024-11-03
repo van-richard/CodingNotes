@@ -441,32 +441,15 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01terminal.html">Terminal, Shell, &amp; Bash</a></li>
-
-
-
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="02vim.html">Text Editors</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">Supercomputers</a></li>
 
 
-
-
 <li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">Python &amp; Conda</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">Molecular Structure Files</a></li>
-
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Exploring PDB Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07XYZFiles.html">What are XYZ Files?</a></li>
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </div>
 </nav></div>
@@ -527,12 +510,11 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="exploring-pdb-files">
 <h1>Exploring PDB Files<a class="headerlink" href="#exploring-pdb-files" title="Permalink to this heading">#</a></h1>
 <p>Get the hen egg-white lysozyme structure, PDB code “1AKI”, from the Protein Data Bank. Visit the <a class="reference external" href="https://www.rcsb.org">RCSB website</a>, and in the search bar type, “1AKI”.</p>
-<figure class="align-center" style="width: 75%">
-<img alt="_static/videos/rcsb_1aki0.mov" src="_static/videos/rcsb_1aki0.mov" />
-</figure>
 <p>Now, download this file as PDB format.</p>
 <figure class="align-center" style="width: 75%">
-<img alt="../../_images/rcsb_1aki1.mov" src="../../_images/rcsb_1aki1.mov" />
+<video src="../../_images/rcsb_1aki1.mp4" title="../../_images/rcsb_1aki1.mp4">
+<a href="../../_images/rcsb_1aki1.mp4">../../_images/rcsb_1aki1.mp4</a>
+</video>
 </figure>
 <section id="viewing-the-contents-of-1aki-pdb">
 <h2>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code><a class="headerlink" href="#viewing-the-contents-of-1aki-pdb" title="Permalink to this heading">#</a></h2>
@@ -665,8 +647,10 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 <li><p>Open the file using ChimeraX</p></li>
 <li><p>Change the molecule style to ribbon</p></li>
 </ol>
-<figure class="align-center" style="width: 75%">
-<img alt="../../_images/rcsb_7z4j0.mov" src="../../_images/rcsb_7z4j0.mov" />
+<figure class="align-center" style="width: 25%">
+<video src="../../_images/rcsb_7z4j0.mp4" title="../../_images/rcsb_7z4j0.mp4">
+<a href="../../_images/rcsb_7z4j0.mp4">../../_images/rcsb_7z4j0.mp4</a>
+</video>
 </figure>
 <p>In Step 4. (or roughly 28 seconds into the video), once we opened PDB <strong>7Z4J</strong>, ChimeraX gives us some chain information in the “Log” panel. For this PDB, we have 5 chains corresponding to:</p>
 <table class="table">
@@ -695,7 +679,9 @@ less<span class="w"> </span>1aki.pdb<span class="w">   </span><span class="c1">#
 </table>
 <p>In this example, we are looking at the DNA cleavage product from SpyCas9. Chains C and c both correspond to the target-strand DNA, but they are labeled as separate chains because they are not connected! They are treated as separate molecules in the PDB file.</p>
 <figure class="align-center" style="width: 75%">
-<img alt="../../_images/rcsb_7z4j1.mov" src="../../_images/rcsb_7z4j1.mov" />
+<video src="../../_images/rcsb_7z4j1.mp4" title="../../_images/rcsb_7z4j1.mp4">
+<a href="../../_images/rcsb_7z4j1.mp4">../../_images/rcsb_7z4j1.mp4</a>
+</video>
 </figure>
 <p>In this video, I zoom into the the HNH domain where target-strand DNA gets cleaved, and show all residues within 5 Å of the magnesium ion. Chain C is on the right, while Chain c is on the left.</p>
 </section>

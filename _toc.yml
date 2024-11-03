@@ -6,13 +6,7 @@ subtrees:
   - file: notebooks/00-quickstart/00_overview
     subtrees:
     - entries:
-      - file: "notebooks/00-quickstart/01terminal"
-      - file: "notebooks/00-quickstart/02vim"
-      - file: "notebooks/00-quickstart/03Supercomputer"
-      - file: "notebooks/00-quickstart/04PythonConda"
-      - file: "notebooks/00-quickstart/05StructureFiles"
-      - file: "notebooks/00-quickstart/06PDBFiles"
-      - file: "notebooks/00-quickstart/07XYZFiles"
+      - glob: "notebooks/00-quickstart/0*"
   - file: notebooks/01-scripting/00_overview
     subtrees:
     - entries:
@@ -56,7 +50,8 @@ subtrees:
         - file: notebooks/02-simulation/claisen
       - file: notebooks/02-simulation/analysis
         entries:
-        - glob: "notebooks/02-simulation/analysis-*"
+        - file: notebooks/02-simulation/analysis/rmsf.ipynb
+        - file: notebooks/02-simulation/analysis/mbar.ipynb
   - file: notebooks/morenotes
     subtrees:
     - entries:

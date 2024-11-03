@@ -1,4 +1,4 @@
-## Exploring PDB Files
+# Exploring PDB Files
 
 Get the hen egg-white lysozyme structure, PDB code "1AKI", from the Protein Data Bank. Visit the [RCSB website](https://www.rcsb.org), and in the search bar type, "1AKI".
 
