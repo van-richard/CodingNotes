@@ -186,13 +186,6 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-visuals/00_overview.html">
-                        visualization
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
@@ -370,13 +363,6 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-visuals/00_overview.html">
-                        visualization
-                      </a>
-                    </li>
-                
-
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
@@ -466,9 +452,11 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="help.html"><code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="less.html"><code class="docutils literal notranslate"><span class="pre">less</span></code> - view files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ls.html"><code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lsblk.html"><code class="docutils literal notranslate"><span class="pre">lsblk</span></code> - list filesystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man.html"><code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="module.html"><code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mount.html"><code class="docutils literal notranslate"><span class="pre">mount</span></code> - mount filesystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mv.html"><code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pwd.html"><code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print working directory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rm.html"><code class="docutils literal notranslate"><span class="pre">rm</span></code> - delete files</a></li>
@@ -489,14 +477,25 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="trap.html"><code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../01-scripting/gnu-parallel.html">GNU Parallel</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../containers/apptainer.html">apptainer</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../containers/app-build.html"><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../containers/app-run.html"><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../containers/app-shell.html"><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../containers/app-instance.html"><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/apptainer/apptainer.html">apptainer</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-build.html"><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-run.html"><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-shell.html"><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-instance.html"><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
 </ul>
 </li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/chimerax/chimera.html">ChimeraX</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-cli-overview.html">ChimeraX Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-img-save.html">Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-fade.html">Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-morph.html">Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-rock.html">Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-spin.html">Spin</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/ffmpeg.html"><code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/gnu-parallel.html">GNU Parallel</a></li>
 </ul>
 </div>
 </nav></div>

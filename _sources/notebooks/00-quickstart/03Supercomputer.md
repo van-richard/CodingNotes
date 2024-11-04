@@ -1,4 +1,4 @@
-## Supercomputers
+# Supercomputers
 
 
 In simple terms, they are like giant, powerful versions of regular computers, much larger and involve many more parts. They can take up entire rooms or even buildings. Inside these machines, you'll find thousands or even millions of smaller computer processors (like the brain of the computer) and a lot of memory (like the computer's short-term memory). Think of these processors as workers and the memory as their workspace.

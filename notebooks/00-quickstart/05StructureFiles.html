@@ -187,13 +187,6 @@ const thebe_selector_output = ".output, .cell_output"
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-visuals/00_overview.html">
-                        visualization
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
                       </a>
@@ -371,13 +364,6 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-visuals/00_overview.html">
-                        visualization
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
                       </a>
@@ -455,41 +441,15 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01terminal.html">Terminal, Shell, &amp; Bash</a></li>
-
-
-
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="02vim.html">Text Editors</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">Supercomputers</a></li>
 
 
-
-
 <li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">Python &amp; Conda</a></li>
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Molecular Structure Files</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">Exploring PDB Files</a></li>
-
-
-
-
-
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="07XYZFiles.html">What are XYZ Files?</a></li>
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </div>
 </nav></div>
@@ -547,7 +507,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="molecular-structure-files">
+  <section class="tex2jax_ignore mathjax_ignore" id="molecular-structure-files">
 <h1>Molecular Structure Files<a class="headerlink" href="#molecular-structure-files" title="Permalink to this heading">#</a></h1>
 <p>The structures of proteins and small-molecules can be solved via experimental methods, NMR, some examples include NMR, X-ray crystallography, and Cryo-EM. There are many databases for different approaches to solving molecular structures, but I will limit this discussion to <code class="docutils literal notranslate"><span class="pre">.pdb</span></code> and <code class="docutils literal notranslate"><span class="pre">.xyz</span></code> files.</p>
 <dl class="simple glossary">
@@ -556,16 +516,16 @@ document.write(`
 <dt id="term-XYZ-Files">XYZ Files<a class="headerlink" href="#term-XYZ-Files" title="Permalink to this term">#</a></dt><dd><p>A simple and widely used file format in computational chemistry and molecular modeling. Often used to represent the three-dimensional coordinates of atoms or small molecules. The <code class="docutils literal notranslate"><span class="pre">.xyz</span></code> files are plain text files that contain atomic coordinates, atom types, and sometimes additional information about the system. These files are often used in Quantum Mechanics (QM) calculations!</p>
 </dd>
 </dl>
-</section>
 <section id="what-are-pdb-files">
-<h1>What are PDB files?<a class="headerlink" href="#what-are-pdb-files" title="Permalink to this heading">#</a></h1>
+<h2>What are PDB files?<a class="headerlink" href="#what-are-pdb-files" title="Permalink to this heading">#</a></h2>
 <p>These are files which contain atomic coordinates and other information which describes biological molecules. Structural biologist use experimental methods such as X-ray crystallography, Nuclear Magnetic Resonance spectroscopy, and Cryo-electron microscopy to determine the location of atoms in the structure. The information is then deposited to a <a class="reference external" href="https://www.org">RCSB</a>.</p>
 <p>Each structure will have a unique 4-letter/number code. Inside each file, the Protein Data Bank format consists of lines of information in a text file. Each line of information in the file is called a record. A file generally contains several types of records, which are arranged in a specific order to describe a structure.</p>
 </section>
 <section id="what-are-xyz-files">
-<h1>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Permalink to this heading">#</a></h1>
+<h2>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Permalink to this heading">#</a></h2>
 <p>The XYZ file format is a text-file format. Unlike PDB files, there is no formal standard and several variations exist. However, a typical XYZ format specifies the molecule geometry by giving the number of atoms with Cartesian coordinates that will be read on the first line, a comment on the second, and the lines of atomic coordinates in the following lines.</p>
 <p>Typically, we use these files to store molecular geometries in Quantum Mechanical (QM) calculations. These files generally contain up to a few hundred atoms. For example, let’s build the small molecule alanine dipeptide, and store this data in <code class="docutils literal notranslate"><span class="pre">.xyz</span></code>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -631,11 +591,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Molecular Structure Files</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">What are PDB files?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">What are XYZ Files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-pdb-files">What are PDB files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-xyz-files">What are XYZ Files?</a></li>
 </ul>
-
   </nav></div>
 
   <div class="sidebar-secondary-item">

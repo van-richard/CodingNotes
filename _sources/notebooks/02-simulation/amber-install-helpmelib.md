@@ -2,7 +2,7 @@
 keywords: helpme, helPME, helpmelib, qmhub
 ---
 
-## Compile `helpmelib` executable
+# Compile `helpmelib` executable
 
 3. Clone [](https://github.com/andysim/helpme) to `Programs/sources/`
 

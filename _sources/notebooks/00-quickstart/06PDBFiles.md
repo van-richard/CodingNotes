@@ -1,17 +1,10 @@
-## Exploring PDB Files
+# Exploring PDB Files
 
 Get the hen egg-white lysozyme structure, PDB code "1AKI", from the Protein Data Bank. Visit the [RCSB website](https://www.rcsb.org), and in the search bar type, "1AKI".
 
-:::{figure} ../../_static/videos/rcsb_1aki0.mov
----
-align: center
-figwidth: 75%
----
-:::
-
 Now, download this file as PDB format. 
 
-:::{figure} ../../_static/videos/rcsb_1aki1.mov
+:::{figure} ../../_static/videos/rcsb_1aki1.mp4
 ---
 align: center
 figwidth: 75%
@@ -136,10 +129,10 @@ We will visualize the PDB file of the ternary structure of SpyCas9 (SpyCas9 boun
 4. Open the file using ChimeraX
 5. Change the molecule style to ribbon
 
-:::{figure} ../../_static/videos/rcsb_7z4j0.mov
+:::{figure} ../../_static/videos/rcsb_7z4j0.mp4
 ---
 align: center
-figwidth: 75%
+figwidth: 25%
 ---
 :::
 
@@ -156,7 +149,7 @@ In Step 4. (or roughly 28 seconds into the video), once we opened PDB **7Z4J**, 
 
 In this example, we are looking at the DNA cleavage product from SpyCas9. Chains C and c both correspond to the target-strand DNA, but they are labeled as separate chains because they are not connected! They are treated as separate molecules in the PDB file.
 
-:::{figure} ../../_static/videos/rcsb_7z4j1.mov
+:::{figure} ../../_static/videos/rcsb_7z4j1.mp4
 ---
 align: center
 figwidth: 75%

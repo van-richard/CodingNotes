@@ -2,7 +2,7 @@
 keywords: qmhub
 ---
 
-## Install QMHub 
+# Install QMHub 
 
 3. Clone [](https://github.com/panxl/qmhub.git) to `Programs/sources/`
 

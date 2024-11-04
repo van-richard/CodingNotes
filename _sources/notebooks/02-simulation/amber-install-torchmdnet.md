@@ -2,7 +2,7 @@
 keywords: torchmdnet
 ---
 
-## TorchMDnet-ext Environment (CPU)
+# TorchMDnet-ext Environment (CPU)
 
 - Environment
 

@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="scripting" href="../01-scripting/00_overview.html" />
+    <link rel="next" title="Briefly, Molecular Dynamics" href="08BasicMD.html" />
     <link rel="prev" title="Exploring PDB Files" href="06PDBFiles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -182,13 +182,6 @@ const thebe_selector_output = ".output, .cell_output"
                     <li class="nav-item">
                       <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
                         simulations
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-visuals/00_overview.html">
-                        visualization
                       </a>
                     </li>
                 
@@ -371,13 +364,6 @@ document.write(`
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-visuals/00_overview.html">
-                        visualization
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
                       <a class="nav-link nav-internal" href="../morenotes.html">
                         More Notes !!
                       </a>
@@ -455,41 +441,15 @@ document.write(`
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01terminal.html">Terminal, Shell, &amp; Bash</a></li>
-
-
-
-
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="02vim.html">Text Editors</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">Supercomputers</a></li>
 
 
-
-
 <li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">Python &amp; Conda</a></li>
-
 <li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">Molecular Structure Files</a></li>
-
-
 <li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">Exploring PDB Files</a></li>
-
-
-
-
-
-
-
-
-
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">What are XYZ Files?</a></li>
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">Briefly, Molecular Dynamics</a></li>
 </ul>
 </div>
 </nav></div>
@@ -547,13 +507,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="what-are-xyz-files">
+  <section class="tex2jax_ignore mathjax_ignore" id="what-are-xyz-files">
 <h1>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Permalink to this heading">#</a></h1>
 <p>The XYZ file format is a text-file format. Unlike PDB files, there is no formal standard and several variations exist. However, a typical XYZ format specifies the molecule geometry by giving the number of atoms with Cartesian coordinates that will be read on the first line, a comment on the second, and the lines of atomic coordinates in the following lines.</p>
 <p>Typically, we use these files to store molecular geometries in Quantum Mechanical (QM) calculations. These files generally contain up to a few hundred atoms. For example, let’s build the small molecule alanine dipeptide, and store this data in <code class="docutils literal notranslate"><span class="pre">.xyz</span></code>.</p>
-</section>
 <section id="example-with-alanine-dipeptide">
-<h1>Example with Alanine Dipeptide<a class="headerlink" href="#example-with-alanine-dipeptide" title="Permalink to this heading">#</a></h1>
+<h2>Example with Alanine Dipeptide<a class="headerlink" href="#example-with-alanine-dipeptide" title="Permalink to this heading">#</a></h2>
 <figure class="align-center" style="width: 75%">
 <img alt="../../_images/ala.png" src="../../_images/ala.png" />
 </figure>
@@ -574,7 +533,7 @@ document.write(`
 </figure>
 </section>
 <section id="open-the-ala-xyz-file">
-<h1>Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File<a class="headerlink" href="#open-the-ala-xyz-file" title="Permalink to this heading">#</a></h1>
+<h2>Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File<a class="headerlink" href="#open-the-ala-xyz-file" title="Permalink to this heading">#</a></h2>
 <p>First, open your terminal, and then change directories to where you saved the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>. Since I saved them to my <code class="docutils literal notranslate"><span class="pre">~/Desktop/</span></code>, I will <code class="docutils literal notranslate"><span class="pre">cd</span></code> there, and use <code class="docutils literal notranslate"><span class="pre">less</span></code> to view <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Desktop/
 less<span class="w"> </span>ala.xyz
@@ -616,13 +575,14 @@ less<span class="w"> </span>ala.xyz
 <p>Simple yeah?</p>
 </section>
 <section id="additional-resources">
-<h1>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h1>
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading">#</a></h2>
 <p>For more information, please refer to the following resource:</p>
 <p><a class="reference external" href="https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/introduction#:~:text=A%20typical%20PDB%20formatted%20file,the%20atoms%20and%20their%20coordinates.">RCSB: Guide to Understanding PDB data</a></p>
 <blockquote>
 <div><p>“The primary information stored in the PDB archive consists of coordinate files for biological molecules. These files list the atoms in each protein, and their 3D location in space. These files are available in several formats (PDB, mmCIF, XML). A typical PDB formatted file includes a large “header” section of text that summarizes the protein, citation information, and the details of the structure solution, followed by the sequence and a long list of the atoms and their coordinates. The archive also contains the experimental observations that are used to determine these atomic coordinates.”</p>
 </div></blockquote>
 <p><a class="reference external" href="https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/tutorials/pdbintro.html">UCSF: Introduction to PDB Format</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -664,11 +624,11 @@ less<span class="w"> </span>ala.xyz
       </div>
     </a>
     <a class="right-next"
-       href="../01-scripting/00_overview.html"
+       href="08BasicMD.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">scripting</p>
+        <p class="prev-next-title">Briefly, Molecular Dynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -688,12 +648,10 @@ less<span class="w"> </span>ala.xyz
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">What are XYZ Files?</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-alanine-dipeptide">Example with Alanine Dipeptide</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-ala-xyz-file">Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-alanine-dipeptide">Example with Alanine Dipeptide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-ala-xyz-file">Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
 </ul>
-
   </nav></div>
 
   <div class="sidebar-secondary-item">
