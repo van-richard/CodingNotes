@@ -11,16 +11,14 @@ copyright = '2024'
 extensions = [
         'sphinx_togglebutton', 
         'sphinx_copybutton', 
-        'jupyter_book', 
         'sphinx_thebe', 
-        'sphinx_comments', 
         'sphinx_external_toc', 
         'sphinx.ext.intersphinx', 
+        'myst_parser',
         'sphinx_design', 
         'sphinx_book_theme', 
         'pydata_sphinx_theme', 
         'sphinx_jupyterbook_latex', 
-        'myst_nb'
 ]
 
 source_suffix = {
