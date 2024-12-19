@@ -47,13 +47,13 @@
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
@@ -65,7 +65,7 @@
     <link rel="icon" href="../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Terminal, Shell, &amp; Bash" href="01terminal.html" />
+    <link rel="next" title="1. Terminal, Shell, &amp; Bash" href="01terminal.html" />
     <link rel="prev" title="Preface" href="../../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -415,16 +415,16 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01terminal.html">Terminal, Shell, &amp; Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02vim.html">Text Editors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01terminal.html">1. Terminal, Shell, &amp; Bash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02vim.html">2. Text Editors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">3. Supercomputers</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">Python &amp; Conda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">Molecular Structure Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">Exploring PDB Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07XYZFiles.html">What are XYZ Files?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">6. Python &amp; Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">7. Molecular Structure Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">8. Exploring PDB Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07XYZFiles.html">9. What are XYZ Files?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">10. Briefly, Molecular Dynamics</a></li>
 </ul>
 </div>
 </nav></div>
@@ -484,103 +484,84 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="quickstart">
 <h1>quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+<ul class="simple">
+<li><p>depending on your projects, you will need to install a few apps</p></li>
+<li><p>for example, if you mainly work on small molecules:</p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="01terminal.html">Terminal, Shell, &amp; Bash</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="01terminal.html#wtf-is-a-terminal">Wtf is a Terminal?</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#example-opening-the-terminal-app">Example: Opening the Terminal App</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="01terminal.html#shell">$SHELL</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#example-bash-shell-commands">Example: Bash Shell Commands</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="01terminal.html#navigating">Navigating</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#starting-location">Starting Location!</a></li>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#where-are-we">Where Are We?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#what-files-folders-are-here">What Files/Folders are Here?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#how-to-make-a-new-folder-directory">How to Make a New Folder/Directory?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#enter-exit-folders">Enter/Exit Folders</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="01terminal.html#what-are-paths">What are Paths?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01terminal.html#file-management">File Management</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#copy-using-cp">Copy using <code class="docutils literal notranslate"><span class="pre">cp</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#copy-folders-with-cp-r">Copy Folders with <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span></code></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="01terminal.html#moving-renaming-with-mv">Moving &amp; Renaming with <code class="docutils literal notranslate"><span class="pre">mv</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#move-rename-files-and-folders">Move/Rename Files and Folders</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="01terminal.html#deleting-files-and-or-folders-with-rm">Deleting Files and/or Folders with <code class="docutils literal notranslate"><span class="pre">rm</span></code></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#deleting-multiple-files">Deleting Multiple Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="01terminal.html#deleting-folders">Deleting Folders</a></li>
+<li><p><em>these are links to the apps homepage</em></p></li>
 </ul>
 </li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="02vim.html">Text Editors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="02vim.html#vi-vim">vi/vim</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02vim.html#how-to-use-vi-vim">How to Use vi/vim?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02vim.html#save-quit">Save &amp; Quit</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">Supercomputers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#what-is-ssh">What is <code class="docutils literal notranslate"><span class="pre">ssh</span></code>?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#what-is-slurm">What is <code class="docutils literal notranslate"><span class="pre">Slurm</span></code>?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html#accessing-the-hpc">Accessing the HPC</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#remote-login">Remote Login</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#what-is-the-hostname">What is the <em>hostname</em>?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#task-accessing-the-hpc">Task: Accessing the HPC</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html#hpc-job-managmer">HPC Job Managmer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#slurm-language">SLURM Language</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#hpc-resources">HPC Resources</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="03Supercomputer.html#pre-installed-softwares">Pre-Installed Softwares</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="03Supercomputer.html#slurm-scripts">Slurm Scripts</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="03Supercomputer.html#directives-sbatch">Directives (<code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">Python &amp; Conda</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="04PythonConda.html#conda">Conda</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">Molecular Structure Files</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="05StructureFiles.html#what-are-pdb-files">What are PDB files?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05StructureFiles.html#what-are-xyz-files">What are XYZ Files?</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">Exploring PDB Files</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#viewing-the-contents-of-1aki-pdb">Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#what-are-atom-lines-in-pdb-files">What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#atom-lines-pdb-1aki"><code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#chain-identifiers-column-5-of-atom">Chain Identifiers (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#example-with-spycas9-ternary-complex">Example with SpyCas9 Ternary Complex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#chains-are-separated-by-ter-lines">Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#what-is-occupancy">What is Occupancy?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#what-is-b-factor">What is B-factor?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06PDBFiles.html#summary-records-in-pdb-files">Summary Records in PDB Files</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="07XYZFiles.html">What are XYZ Files?</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="07XYZFiles.html#example-with-alanine-dipeptide">Example with Alanine Dipeptide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07XYZFiles.html#open-the-ala-xyz-file">Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07XYZFiles.html#additional-resources">Additional Resources</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">Briefly, Molecular Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="08BasicMD.html#classical-mechanics">Classical Mechanics</a></li>
-</ul>
-</li>
-</ul>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Drug Discovery/Small Molecule</div>
+<p class="sd-card-text"><a class="reference external" href="https://ccsb.scripps.edu/mgltools/">AutoDock Tools</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://vina.scripps.edu/downloads/">AutoDock Vina</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://iqmol.org">IQmol</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/">Schrodinger Maestro</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Protein/PDB/Simulation</div>
+<p class="sd-card-text"><a class="reference external" href="https://connect.revvitysignals.com/sitesubscription/">ChemDraw</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://iqmol.org">IQmol</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="suggested-softwares">
+<h2>Suggested Softwares<a class="headerlink" href="#suggested-softwares" title="Link to this heading">#</a></h2>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-row-cols-3 sd-row-cols-xs-3 sd-row-cols-sm-3 sd-row-cols-md-3 sd-row-cols-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+setup/visualization</div>
+<p class="sd-card-text"><a class="reference external" href="https://www.cgl.ucsf.edu/chimera/">Chimera</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://iqmol.org">IQmol</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://pymol.org/edu/">PyMol</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+Coding in <code class="docutils literal notranslate"><span class="pre">Python</span></code></div>
+<p class="sd-card-text"><a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge3</a></p>
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+helpful websites</div>
+<p class="sd-card-text"><a class="reference external" href="https://rcsb.org">RCSB Protein Data Bank</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://github.com">GitHub</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://colab.research.google.com">Google Colaboratory</a></p>
+<p class="sd-card-text"><a class="reference external" href="https://overleaf.com">Overleaf</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
 </div>
 </section>
 
@@ -627,7 +608,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Terminal, Shell, &amp; Bash</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Terminal, Shell, &amp; Bash</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -641,6 +622,16 @@
                 <dialog id="pst-secondary-sidebar-modal"></dialog>
                 <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suggested-softwares">Suggested Softwares</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div role="note" aria-label="source link">
