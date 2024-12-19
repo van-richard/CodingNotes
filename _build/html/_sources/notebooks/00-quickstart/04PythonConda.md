@@ -1,4 +1,4 @@
-## Python & Conda
+# Python & Conda
 
 python
 

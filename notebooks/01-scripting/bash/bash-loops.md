@@ -7,7 +7,7 @@
   - Loops iterate a set of commands for as many arguments given
     - The command in the previous scenario would be `mkdir NUMBER`, and arguments would be `NUMBER` (1 through 99)
 
-### Example: `for` Loops
+## Example: `for` Loops
 
 ```bash
 # On command line, type each line below and hit enter
@@ -60,7 +60,7 @@ do
 done
 ```
 
-### Example: `while` Loops
+## Example: `while` Loops
 
 ```bash
 while [ true ]

@@ -437,7 +437,13 @@
 <li class="toctree-l2"><a class="reference internal" href="claisen.html">QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="analysis-cpptraj-dry.html">Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pymbar.html">Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-2drmsd.html">Pairwise Distance Matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-pca.html">Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsd.html">Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-pytraj-rmsf.html">Root Mean Square Fluctuation (RMSF)</a></li>
 </ul>
 </details></li>
 </ul>
@@ -530,8 +536,8 @@
 <h1>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Link to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d53eeabb-6731-4c6b-a4ff-a55c1f83f692">
-<span class="eqno">(1)<a class="headerlink" href="#equation-d53eeabb-6731-4c6b-a4ff-a55c1f83f692" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-468a3e7b-3851-4953-9aec-fa588f66025a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-468a3e7b-3851-4953-9aec-fa588f66025a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
@@ -544,8 +550,8 @@
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-c032e808-0ea8-4e37-b4f4-9e34a01b68be">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c032e808-0ea8-4e37-b4f4-9e34a01b68be" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-108a00a0-1193-4065-b259-aafdb725680a">
+<span class="eqno">(2)<a class="headerlink" href="#equation-108a00a0-1193-4065-b259-aafdb725680a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}
