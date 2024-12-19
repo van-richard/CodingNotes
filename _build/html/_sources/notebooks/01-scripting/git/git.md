@@ -39,7 +39,7 @@ git config --global core.editor vim
 
 ## SSH Connection to GitHub
 
-- [Make an SSH key, if you haven't done so](ssh-autologin.md)
+- [Make an SSH key, if you haven't done so](../hpc/ssh-autologin.md)
 - Check if SSH key is working
 
 ```

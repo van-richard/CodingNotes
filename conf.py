@@ -14,6 +14,7 @@ extensions = [
         'sphinx_thebe', 
         'sphinx_external_toc', 
         'sphinx.ext.intersphinx', 
+        'sphinx.ext.autosectionlabel',
         'myst_parser',
         'sphinx_design', 
         'sphinx_book_theme', 
@@ -22,9 +23,9 @@ extensions = [
 ]
 
 source_suffix = {
-    '.rst': 'restructuredtext',
+    #'.rst': 'restructuredtext',
     '.txt': 'markdown',
-    # '.md': 'markdown',
+     '.md': 'markdown',
 }
 
 html_theme = 'pydata_sphinx_theme'
@@ -37,7 +38,7 @@ html_css_path = ['assets/custom.css']
 
 html_sourcelink_suffix = ''
 html_sidebar: {
-    "**": ['sidebar-nav-bs'],
+    "**": ['assets/html/sidebar-nav-bs'],
     "index": ['sidebar-nav-bs'],
     }
 
@@ -83,23 +84,30 @@ html_theme_options = {
     ],
 
     'navbar_persistent': ['theme-switcher', 'search-button-field'],
-    "show_nav_level": 1,
-    "show_toc_level": 1,
-    "header_links_before_dropdown": 7,
+    "show_nav_level": 5,
+    "show_toc_level": 5,
+    "header_links_before_dropdown": 6,
     'search_bar_text': 'Search mee!!', 
     # 'check_switcher': True,
     }
 #latex_engine = 'pdflatex'
 
 myst_enable_extensions = [
-        'amsmath', 'colon_fence', 
-        'deflist', 'dollarmath', 
-        'html_admonition', 
-        'html_image', 'linkify', 
-        'replacements', 'smartquotes', 
-        'substitution', 'tasklist'
-]
-
+        "amsmath",
+        "attrs_inline",
+        "colon_fence",
+        "deflist",
+        "dollarmath",
+        "fieldlist",
+        "html_admonition",
+        "html_image",
+        "linkify",
+        "replacements",
+        "smartquotes",
+        "strikethrough",
+        "substitution",
+        "tasklist",
+        ]
 myst_url_schemes = [
         'mailto', 
         'http', 

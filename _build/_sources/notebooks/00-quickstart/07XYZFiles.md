@@ -6,7 +6,7 @@ Typically, we use these files to store molecular geometries in Quantum Mechanica
 
 ## Example with Alanine Dipeptide
 
-:::{figure} ../../_static/images/ala.png
+:::{figure} ../../static/images/ala.png
 ---
 align: center
 figwidth: 75%
@@ -25,7 +25,7 @@ Alanine dipeptide is the amino acid, Alanine, with the N-/C-terminal capped by a
 8. Click on the `minimize energy` button
 9. Save the structure as `ala.xyz` to your desired location (I saved them to my `~/Desktop/`)
 
-:::{figure} ../../_static/videos/iqmol_ala.mov
+:::{figure} ../../static/videos/iqmol_ala.mov
 ---
 align: center
 figwidth: 75%

@@ -13,7 +13,7 @@ XYZ Files
 
 ## What are PDB files?
 
-These are files which contain atomic coordinates and other information which describes biological molecules. Structural biologist use experimental methods such as X-ray crystallography, Nuclear Magnetic Resonance spectroscopy, and Cryo-electron microscopy to determine the location of atoms in the structure. The information is then deposited to a [RCSB](https://www.org). 
+These are files which contain atomic coordinates and other information which describes biological molecules. Structural biologist use experimental methods such as X-ray crystallography, Nuclear Magnetic Resonance spectroscopy, and Cryo-electron microscopy to determine the location of atoms in the structure. The information is then deposited to a [RCSB](https://rcsb.org)
 
 Each structure will have a unique 4-letter/number code. Inside each file, the Protein Data Bank format consists of lines of information in a text file. Each line of information in the file is called a record. A file generally contains several types of records, which are arranged in a specific order to describe a structure.
 

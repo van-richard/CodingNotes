@@ -1,6 +1,6 @@
 # Terminal, Shell, & Bash
 
-:::{figure} https://raw.githubusercontent.com/van-richard/CodingNotes/main/_static/gif/terminal-header.gif
+:::{figure} https://raw.githubusercontent.com/van-richard/CodingNotes/main/static/gif/terminal-header.gif
 ---
 figwidth: 75%
 align: center
@@ -10,27 +10,27 @@ name: terminal-header
 Example of command line in the `terminal` application of MacOS. The line you are working on is noted with the `$`. The format of this line is: computer name, `;` , username, and then `$`. `Bash` commands are typed by line, and ran by hitting the `[enter]` key.where, (1) :term:`echo` will return `"[`some text`]"` as an output, (2) :term:`echo` to output "2 + 2", the `|` (pipe) takes this as input for the next command, `bc -l` (calculator), (3) `echo` prints the variable, `$SHELL`, which points to the program `/bin/bash`, and (4) cowboy.
 :::
 
-In this section, we'll delve into the basics of the terminal, its role, and why it's crucial in computational research.
+- In this section, we'll delve into the basics of the terminal, its role, and why it's crucial in computational research.
 
-Approaches to "using" computer programs:
-  1) A common way makes use of a Graphical User Interface (GUI)
-    - Programs that use a mouse and keyboard with on-screen menus, buttons, sliders, etc.
-    - Relies on the user to click on-screen options for specific instructions
-  2) Alternatively, computer programs can be operated via the Command Line Interface (CLI)
-    - Uses text-based instructions, only requiring input from the keyboard
-    - Often used for computing many files or automating repetitive tasks.
+- Approaches to "using" computer programs:
+    - A common way makes use of a Graphical User Interface (GUI)
+        - Programs that use a mouse and keyboard with on-screen menus, buttons, sliders, etc.
+        - Relies on the user to click on-screen options for specific instructions
+    - Alternatively, computer programs can be operated via the Command Line Interface (CLI)
+        - Uses text-based instructions, only requiring input from the keyboard
+        - Often used for computing many files or automating repetitive tasks.
 
 
-## Wtf is a Terminal?
+## wtf is terminal?
 
-Terminal is a graphical-based application, providing access to the CLI
-  - This is preinstalled on MacOS as the `terminal` app
-  - Windows has variations called `Command Prompt` and `PowerShell`  
+- Terminal is a graphical-based application, providing access to the CLI
+    - This is preinstalled on MacOS as the `terminal` app
+    - Windows has variations called `Command Prompt` and `PowerShell`  
 
-Using command line is a fundamental tool in computational research, offering advantages like:
-  - More control in running applications
-  - Faster management across operating systems (OS)
-  - Ability to automate repetitive tasks (scripting)
+- Using command line is a fundamental tool in computational research, offering advantages like:
+    - More control in running applications
+    - Faster management across operating systems (OS)
+    - Ability to automate repetitive tasks (scripting)
 
 ### Example: Opening the Terminal App
 
