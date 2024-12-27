@@ -1,3 +1,4 @@
+(hpc-slurm)=
 # `SLURM`: HPC Job Manager
 
 - Job schedule management on most clusters

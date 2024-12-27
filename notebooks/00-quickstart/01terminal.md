@@ -91,7 +91,7 @@ An `interactive prompt` is when users run each "command" line by line.
 Later, we will see that combining multiple command lines into one file is called a "shell `script`."
 :::
 
-### Example: Bash Shell Commands
+```{admonition} Example: Bash Shell Commands
 
 In a `shell`, predefined `commands` are computer processes. 
   - `Commands` are typed and interpreted by the computer to run processes
@@ -100,12 +100,13 @@ In a `shell`, predefined `commands` are computer processes.
 
 Some `commands` can be modified by `options` following the command with a hyphen `-`. Others take `arguments` as input. Look at the following examples:
 
-1. `pwd`
-2. `echo`
-3. `touch`
-3. `cat`
-4. `tail`
-5. `head`
+1. [`pwd`](../commands/pwd.md)
+2. [`echo`](../commands/echo.md)
+3. [`touch`](../commands/touch.md)
+3. [`cat`](../commands/cat.md)
+4. [`tail`](../commands/tail.md)
+5. [`head`](../commands/head.md)
+```
 
 ---
 
@@ -117,68 +118,27 @@ Some `commands` can be modified by `options` following the command with a hyphen
 - View files/folders.
 - Differentiate between absolute and relative paths.
 
-### Starting Location! 
-
-The default location when you first login is called your "home" directory
-
+_The default location when you first login is called your "home" directory_
 
 ### Where Are We?
 
-Use `pwd` (Print Working Directory) to find your current working directory (folder).
-
-```bash
-pwd
+```{literalinclude} ../commands/pwd.md
 ```
 
-Navigate in the terminal, relying on being in the right location. As you move around directories, use `pwd` often to remind yourself where you are.
 
 ### What Files/Folders are Here?
 
-Use `ls` (List) to see what files/folders are in the current location.
-
-```bash
-ls
+```{literalinclude} ../commands/ls.md
 ```
 
 ### How to Make a New Folder/Directory?
 
-Use `mkdir` (Make Directory) to create a new folder.
-
-```bash
-mkdir [new folder name]
-```
-
-For example, create a folder called `test`.
-
-```bash
-mkdir test
+```{literalinclude} ../commands/mkdir.md
 ```
 
 ### Enter/Exit Folders
 
-Use `cd` (Change Directory) to enter a folder.
-
-```bash
-cd [folder name]
-```
-
-Check your current location with `pwd`.
-
-```bash
-pwd
-```
-
-To go back one directory, use `cd ../`. To return to your "home" directory:
-
-```bash
-cd    # Option 1
-cd ~  # Option 2
-```
-
-Check your current location again to ensure you're back home.
-
-```bash
-pwd
+```{literalinclude} ../commands/cd.md
 ```
 
 ## What are Paths?
@@ -198,101 +158,16 @@ File or directory references use one of these paths.
 
 ### Copy using `cp` 
 
-- Use `cp` to copy files or folders 
-  - The `[source]` is the original file/folder or `/path/to/OriginalFile` or `/path/to/OriginalFolder`
-  - The `[destination]` is where you want the *new copy* to go, this can be in the same folder, or to another path (`/different/path/to/NewFile`)
-
-```bash
-cp [source] [destination]
-```
-
-- Again, both `[source]` and `[destination]` can use absolute or relative paths
-
-
-```bash
-# Copy file in current working directory, OriginalFile.txt, to another directory in /path/to/destination and name it NewFile.txt
-cp OriginalFile.txt /path/to/destination/NewFile.txt 
-
-# Copy file from another directory here (.)
-cp /path/to/OriginalFile.txt . 
-```
-
-- The `.` means `./` or the current directory you're in
-  - Remember to go back a folder, we run `cd ../` ? 
-  - `../` points back on directory while `./` means the current one
-
-### Copy Folders with `cp -r`
-
-- Copying a directory requires the option `-r`.
-
-```bash
-# Option, -r, tells cp to copy the entire folder to a new path
-cp -r directory /path/to/destination
-
-# Can also copy things "here" (.)
-cp /path/to/directory .
-
-# Copy directory in the current working directory using the name, directory2
-cp -r directory directory2
+```{literalinclude} ../commands/cp.md
 ```
 
 ## Moving & Renaming with `mv`
 
-- Both are performed with `mv`
-- Follows the same notation as `cp`
-- **Does not require the option, `-r` !!**
-
-```bash
-mv [source] [destination]
-```
-- `[source]` can be a file, folder, `/path/to/file`, or `/path/to/folder`
-- `[destination]` can be `/path/to/file`, or `/path/to/folder` with `NewFileName` or `NewFolderName`
-
-### Move/Rename Files and Folders
-
-- Moving a file is straightforward; you can even rename it at the destination
-
-```bash
-# Move file.txt to the folder, destination, in /path/to, and rename it to newname.txt
-mv file.txt /path/to/destination/newname.txt
-```
-
-- Same for folders
-
-```bash
-mv directory path/to/destination/newname
+```{literalinclude} ../commands/mv.md
 ```
 
 ## Deleting Files and/or Folders with `rm`
 
-```{caution}
-This command is permanently delete your files / folders
-No trash can to recover "accidental" events
+```{literalinclude} ../commands/rm.md
 ```
 
-- Use `rm` (Remove) to delete files/folders.
-
-```bash
-# Delete file1.txt
-rm file1.txt
-```
-
-### Deleting Multiple Files
-
-```bash
-# Deleting 2 files named, file1.txt and file2.txt
-rm file1.txt file2.txt
-```
-
-### Deleting Folders
-
-- Like `cp`, you need the option `-r` to delete a folder
-- `-f` can force delete
-
-```bash
-# Delete entire folder called directory/
-rm -r directory/
-
-# Force delete all contents with `-f`
-rm -rf directory/
-```

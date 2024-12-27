@@ -84,9 +84,9 @@ html_theme_options = {
     ],
 
     'navbar_persistent': ['theme-switcher', 'search-button-field'],
-    "show_nav_level": 5,
-    "show_toc_level": 5,
-    "header_links_before_dropdown": 6,
+    "show_nav_level": 3,
+    "show_toc_level": 3,
+    "header_links_before_dropdown": 4,
     'search_bar_text': 'Search mee!!', 
     # 'check_switcher': True,
     }

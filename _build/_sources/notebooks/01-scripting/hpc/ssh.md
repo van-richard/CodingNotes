@@ -1,3 +1,4 @@
+(hpc-ssh)=
 # `ssh`: HPC Remote Access
 
 Two key points when using the supercomputer:
