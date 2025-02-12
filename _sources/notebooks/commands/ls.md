@@ -1,6 +1,8 @@
 # `ls` - list information about files/folders 
 
-The default is to list the files in the current directory. Adding options can change how the list is organized.
+- Use `ls` (List) to see what files/folders are in the current location.
+
+- The default is to list the files in the current directory. Adding options can change how the list is organized.
 
 ```bash
 ls [option] [directory]
@@ -35,3 +37,4 @@ Sort alphabetically
 ```bash
 ls -X
 ```
+

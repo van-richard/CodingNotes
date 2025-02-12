@@ -1,3 +1,4 @@
+(hpc-module)=
 # `module`: Compilers & Softwares
 
 ```{margin}

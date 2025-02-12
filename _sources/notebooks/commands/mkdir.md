@@ -1,6 +1,16 @@
-
-
 # `mkdir` - make new directories.
+
+- Use `mkdir` (Make Directory) to create a new folder.
+
+```bash
+mkdir [new folder name]
+```
+
+- For example, create a folder called `test`.
+
+```bash
+mkdir test
+```
 
 ```bash
 mkdir myNewDir

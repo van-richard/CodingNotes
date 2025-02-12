@@ -1,3 +1,4 @@
+(shell-bash)=
 # `BASH`: Command Line
 
 - So far, we have used `bash` to interact with the CLI by typing single line commands
