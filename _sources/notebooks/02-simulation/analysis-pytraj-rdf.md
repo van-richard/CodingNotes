@@ -25,8 +25,8 @@ fig, axs = plt.subplots(2)
 for i,ax in enumerate(axs.flat):
 
     data = pt.rdf(traj,
-                  solvent_mask=f':{mgs[i]}',
-                  solute_mask=':Na+',
+                  solute_mask=f':{mgs[i]}',
+                  solvent_mask=':Na+',
                   bin_spacing=0.2, maximum=12.)
     ax.plot(data[0], data[1], label=f':{mgs[i]}')
 
