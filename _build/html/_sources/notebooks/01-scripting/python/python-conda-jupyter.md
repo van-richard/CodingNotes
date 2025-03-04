@@ -1,4 +1,4 @@
-# Jupyter Notebooks
+# Jupyter Lab / Notebook
 
 The Jupyter Notebook App is a server-client application that allows editing and running notebook documents via a web browser. The Jupyter Notebook App can be executed on a local desktop requiring no internet access (as described in this document) or can be installed on a remote server and accessed through the internet.
 
@@ -12,19 +12,19 @@ When you open a Notebook document, the associated kernel is automatically launch
 
 ## Switch Conda Environments
 
-You can switch conda environments within `jupyterlab` if you install `nb_conda_kernels` into your `base` Conda environment.
-
-- `jupyterlab` package is for running notebooks.
-- `nb_conda_kernels` package allows you to switch Conda environments directly in the web browser.
+- You can switch conda environments within `jupyterlab` if you install `nb_conda_kernels` into your `base` Conda environment.
+    - `jupyterlab` package is for running notebooks.
+    - `nb_conda_kernels` package allows you to switch Conda environments directly in the web browser.
 
 ```bash
 conda install -c conda-forge jupyterlab nb_conda_kernels
 ```
 
-To run jupyter, type:
+- To run jupyter, type:
 
 ```bash
 jupyter lab
 ```
 
-This should open your brower automatically. If not, copy the first or second link.
+- This should open a brower automatically
+    - If not, copy the second link

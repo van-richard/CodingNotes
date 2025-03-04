@@ -590,8 +590,8 @@ Windows</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Note</p>
 <p>Later, we will see that combining multiple command lines into one file is called a “shell <code class="docutils literal notranslate"><span class="pre">script</span></code>.”</p>
 </div>
-<section id="example-bash-shell-commands">
-<h3><span class="section-number">1.2.2.1. </span>Example: Bash Shell Commands<a class="headerlink" href="#example-bash-shell-commands" title="Link to this heading">#</a></h3>
+<div class="admonition-example-bash-shell-commands admonition">
+<p class="admonition-title">Example: Bash Shell Commands</p>
 <p>In a <code class="docutils literal notranslate"><span class="pre">shell</span></code>, predefined <code class="docutils literal notranslate"><span class="pre">commands</span></code> are computer processes.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Commands</span></code> are typed and interpreted by the computer to run processes</p></li>
@@ -600,14 +600,14 @@ Windows</label><div class="sd-tab-content docutils">
 </ul>
 <p>Some <code class="docutils literal notranslate"><span class="pre">commands</span></code> can be modified by <code class="docutils literal notranslate"><span class="pre">options</span></code> following the command with a hyphen <code class="docutils literal notranslate"><span class="pre">-</span></code>. Others take <code class="docutils literal notranslate"><span class="pre">arguments</span></code> as input. Look at the following examples:</p>
 <ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">echo</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">touch</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cat</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tail</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">head</span></code></p></li>
+<li><p><a class="reference internal" href="../commands/pwd.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">pwd</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/echo.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">echo</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/touch.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">touch</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/cat.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">cat</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/tail.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">tail</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/head.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">head</span></code></span></a></p></li>
 </ol>
-</section>
+</div>
 </section>
 <hr class="docutils" />
 <section id="navigating">
@@ -619,53 +619,156 @@ Windows</label><div class="sd-tab-content docutils">
 <li><p>View files/folders.</p></li>
 <li><p>Differentiate between absolute and relative paths.</p></li>
 </ul>
-<section id="starting-location">
-<h3><span class="section-number">1.2.3.1. </span>Starting Location!<a class="headerlink" href="#starting-location" title="Link to this heading">#</a></h3>
-<p>The default location when you first login is called your “home” directory</p>
-</section>
+<p><em>The default location when you first login is called your “home” directory</em></p>
 <section id="where-are-we">
-<h3><span class="section-number">1.2.3.2. </span>Where Are We?<a class="headerlink" href="#where-are-we" title="Link to this heading">#</a></h3>
-<p>Use <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (Print Working Directory) to find your current working directory (folder).</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+<h3><span class="section-number">1.2.3.1. </span>Where Are We?<a class="headerlink" href="#where-are-we" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `pwd` - print working directory
+
+- Use `pwd` (Print Working Directory) to find your current working directory (folder).
+
+```bash
+pwd
+```
+
+- Navigate in the terminal, relying on being in the right location. As you move around directories, use `pwd` often to remind yourself where you are.
 </pre></div>
 </div>
-<p>Navigate in the terminal, relying on being in the right location. As you move around directories, use <code class="docutils literal notranslate"><span class="pre">pwd</span></code> often to remind yourself where you are.</p>
 </section>
 <section id="what-files-folders-are-here">
-<h3><span class="section-number">1.2.3.3. </span>What Files/Folders are Here?<a class="headerlink" href="#what-files-folders-are-here" title="Link to this heading">#</a></h3>
-<p>Use <code class="docutils literal notranslate"><span class="pre">ls</span></code> (List) to see what files/folders are in the current location.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls
+<h3><span class="section-number">1.2.3.2. </span>What Files/Folders are Here?<a class="headerlink" href="#what-files-folders-are-here" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `ls` - list information about files/folders 
+
+- Use `ls` (List) to see what files/folders are in the current location.
+
+- The default is to list the files in the current directory. Adding options can change how the list is organized.
+
+```bash
+ls [option] [directory]
+```
+
+List directories
+
+```bash
+ls -d
+```
+
+Long list format 
+
+```bash
+ls -l
+```
+
+Sort by time (newest first)
+
+```bash
+ls -t
+```
+
+List files with file size in kilobytes/megabytes/gigabytes
+
+```bash
+ls -h
+```
+
+Sort alphabetically
+
+```bash
+ls -X
+```
+
 </pre></div>
 </div>
 </section>
 <section id="how-to-make-a-new-folder-directory">
-<h3><span class="section-number">1.2.3.4. </span>How to Make a New Folder/Directory?<a class="headerlink" href="#how-to-make-a-new-folder-directory" title="Link to this heading">#</a></h3>
-<p>Use <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> (Make Directory) to create a new folder.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>folder<span class="w"> </span>name<span class="o">]</span>
-</pre></div>
-</div>
-<p>For example, create a folder called <code class="docutils literal notranslate"><span class="pre">test</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span><span class="nb">test</span>
+<h3><span class="section-number">1.2.3.3. </span>How to Make a New Folder/Directory?<a class="headerlink" href="#how-to-make-a-new-folder-directory" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `mkdir` - make new directories.
+
+- Use `mkdir` (Make Directory) to create a new folder.
+
+```bash
+mkdir [new folder name]
+```
+
+- For example, create a folder called `test`.
+
+```bash
+mkdir test
+```
+
+```bash
+mkdir myNewDir
+```
+
+The `-p` flag causes new intermediate directories to be created as necessary.
+
+```bash
+mkdir -p myNewDir/with/intermediate/directories
+```
+
+If the intermediate directories didn&#39;t already exist, running the above command without the `-p` flag would return an error
 </pre></div>
 </div>
 </section>
 <section id="enter-exit-folders">
-<h3><span class="section-number">1.2.3.5. </span>Enter/Exit Folders<a class="headerlink" href="#enter-exit-folders" title="Link to this heading">#</a></h3>
-<p>Use <code class="docutils literal notranslate"><span class="pre">cd</span></code> (Change Directory) to enter a folder.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="o">[</span>folder<span class="w"> </span>name<span class="o">]</span>
-</pre></div>
-</div>
-<p>Check your current location with <code class="docutils literal notranslate"><span class="pre">pwd</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
-</pre></div>
-</div>
-<p>To go back one directory, use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>. To return to your “home” directory:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w">    </span><span class="c1"># Option 1</span>
-<span class="nb">cd</span><span class="w"> </span>~<span class="w">  </span><span class="c1"># Option 2</span>
-</pre></div>
-</div>
-<p>Check your current location again to ensure you’re back home.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">pwd</span>
+<h3><span class="section-number">1.2.3.4. </span>Enter/Exit Folders<a class="headerlink" href="#enter-exit-folders" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `cd` - change directories
+
+- Use `cd` (Change Directory) to enter a folder.
+
+```bash
+cd [folder name]
+```
+
+- Check your current location with `pwd`.
+
+```bash
+pwd
+```
+
+- To go back one directory, use `cd ../`. To return to your &quot;home&quot; directory:
+
+```bash
+cd    # Option 1
+cd ~  # Option 2
+```
+
+- Check your current location again to ensure you&#39;re back home.
+
+```bash
+pwd
+```
+
+Since bash works in the context of a current directory, you might want to run your command in some other directory. We have cd for changing location:
+
+Change to home directory
+
+```bash
+cd ~ 
+```
+
+or
+
+```bash
+cd     
+```
+
+Go back one directory
+
+```bash
+cd ../
+```
+
+Go to specific directory
+
+```bash
+cd /home/username/Documents  
+```
+
+Go the the previous directory you were in
+
+```bash
+cd -   
+```
 </pre></div>
 </div>
 </section>
@@ -688,119 +791,168 @@ Windows</label><div class="sd-tab-content docutils">
 </ul>
 <section id="copy-using-cp">
 <h3><span class="section-number">1.2.5.1. </span>Copy using <code class="docutils literal notranslate"><span class="pre">cp</span></code><a class="headerlink" href="#copy-using-cp" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">cp</span></code> to copy files or folders</p>
-<ul>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">[source]</span></code> is the original file/folder or <code class="docutils literal notranslate"><span class="pre">/path/to/OriginalFile</span></code> or <code class="docutils literal notranslate"><span class="pre">/path/to/OriginalFolder</span></code></p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">[destination]</span></code> is where you want the <em>new copy</em> to go, this can be in the same folder, or to another path (<code class="docutils literal notranslate"><span class="pre">/different/path/to/NewFile</span></code>)</p></li>
-</ul>
-</li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Again, both <code class="docutils literal notranslate"><span class="pre">[source]</span></code> and <code class="docutils literal notranslate"><span class="pre">[destination]</span></code> can use absolute or relative paths</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copy file in current working directory, OriginalFile.txt, to another directory in /path/to/destination and name it NewFile.txt</span>
-cp<span class="w"> </span>OriginalFile.txt<span class="w"> </span>/path/to/destination/NewFile.txt<span class="w"> </span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `cp` - copy files or folders
 
-<span class="c1"># Copy file from another directory here (.)</span>
-cp<span class="w"> </span>/path/to/OriginalFile.txt<span class="w"> </span>.<span class="w"> </span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">.</span></code> means <code class="docutils literal notranslate"><span class="pre">./</span></code> or the current directory you’re in</p>
-<ul>
-<li><p>Remember to go back a folder, we run <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code> ?</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">../</span></code> points back on directory while <code class="docutils literal notranslate"><span class="pre">./</span></code> means the current one</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="copy-folders-with-cp-r">
-<h3><span class="section-number">1.2.5.2. </span>Copy Folders with <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span></code><a class="headerlink" href="#copy-folders-with-cp-r" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Copying a directory requires the option <code class="docutils literal notranslate"><span class="pre">-r</span></code>.</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Option, -r, tells cp to copy the entire folder to a new path</span>
-cp<span class="w"> </span>-r<span class="w"> </span>directory<span class="w"> </span>/path/to/destination
+- Use `cp` to copy files or folders 
+  - The `[source]` is the original file/folder or `/path/to/OriginalFile` or `/path/to/OriginalFolder`
+  - The `[destination]` is where you want the *new copy* to go, this can be in the same folder, or to another path (`/different/path/to/NewFile`)
 
-<span class="c1"># Can also copy things &quot;here&quot; (.)</span>
-cp<span class="w"> </span>/path/to/directory<span class="w"> </span>.
+```bash
+cp [source] [destination]
+```
 
-<span class="c1"># Copy directory in the current working directory using the name, directory2</span>
-cp<span class="w"> </span>-r<span class="w"> </span>directory<span class="w"> </span>directory2
+- Again, both `[source]` and `[destination]` can use absolute or relative paths
+
+
+```bash
+# Copy file in current working directory, OriginalFile.txt, to another directory in /path/to/destination and name it NewFile.txt
+cp OriginalFile.txt /path/to/destination/NewFile.txt 
+
+# Copy file from another directory here (.)
+cp /path/to/OriginalFile.txt . 
+```
+
+- The `.` means `./` or the current directory you&#39;re in
+  - Remember to go back a folder, we run `cd ../` ? 
+  - `../` points back on directory while `./` means the current one
+
+### Copy Folders with `cp -r`
+
+- Copying a directory requires the option `-r`.
+
+```bash
+# Option, -r, tells cp to copy the entire folder to a new path
+cp -r directory /path/to/destination
+
+# Can also copy things &quot;here&quot; (.)
+cp /path/to/directory .
+
+# Copy directory in the current working directory using the name, directory2
+cp -r directory directory2
+```
+
+To copy file1 to file2 (new name):
+
+```bash
+cp [FILE_1] [FILE_2]
+```
+
+Copy folders:
+
+```bash
+cp -r [FOLDER_1] [FOLDER_2]
+```
+
+Use `cp` to copy files or directories from one place to another.
+
+- `cp` creates NEW versions of the sources, so editing the copy won&#39;t affect the original (and vice versa).
+
+**Note that it will overwrite the destination if it already exists.**
+
+```bash
+cp srcFile.txt clone.txt
+```
+
+or
+
+```bash
+cp -r srcDirectory/ dst/ # recursively copy
+```
+
+Copying can be down with paths
+
+```bash
+cp -r /path/to/dir_1 /path/to/dir_2
+```
 </pre></div>
 </div>
 </section>
 </section>
 <section id="moving-renaming-with-mv">
 <h2><span class="section-number">1.2.6. </span>Moving &amp; Renaming with <code class="docutils literal notranslate"><span class="pre">mv</span></code><a class="headerlink" href="#moving-renaming-with-mv" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Both are performed with <code class="docutils literal notranslate"><span class="pre">mv</span></code></p></li>
-<li><p>Follows the same notation as <code class="docutils literal notranslate"><span class="pre">cp</span></code></p></li>
-<li><p><strong>Does not require the option, <code class="docutils literal notranslate"><span class="pre">-r</span></code> !!</strong></p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span><span class="o">[</span>source<span class="o">]</span><span class="w"> </span><span class="o">[</span>destination<span class="o">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `mv` - move files/folders from one place to another.
+
+- Both are performed with `mv`
+- Follows the same notation as `cp`
+- **Does not require the option, `-r` !!**
+
+```bash
+mv [source] [destination]
+```
+- `[source]` can be a file, folder, `/path/to/file`, or `/path/to/folder`
+- `[destination]` can be `/path/to/file`, or `/path/to/folder` with `NewFileName` or `NewFolderName`
+
+### Move/Rename Files and Folders
+
+- Moving a file is straightforward; you can even rename it at the destination
+
+```bash
+# Move file.txt to the folder, destination, in /path/to, and rename it to newname.txt
+mv file.txt /path/to/destination/newname.txt
+```
+
+- Same for folders
+
+```bash
+mv directory path/to/destination/newname
+```
+
+`mv` is similar to `cp`, but it deletes the source.
+`mv` is also useful for renaming files!
+
+```bash
+mv source.txt new.txt
+```
 </pre></div>
 </div>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">[source]</span></code> can be a file, folder, <code class="docutils literal notranslate"><span class="pre">/path/to/file</span></code>, or <code class="docutils literal notranslate"><span class="pre">/path/to/folder</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">[destination]</span></code> can be <code class="docutils literal notranslate"><span class="pre">/path/to/file</span></code>, or <code class="docutils literal notranslate"><span class="pre">/path/to/folder</span></code> with <code class="docutils literal notranslate"><span class="pre">NewFileName</span></code> or <code class="docutils literal notranslate"><span class="pre">NewFolderName</span></code></p></li>
-</ul>
-<section id="move-rename-files-and-folders">
-<h3><span class="section-number">1.2.6.1. </span>Move/Rename Files and Folders<a class="headerlink" href="#move-rename-files-and-folders" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Moving a file is straightforward; you can even rename it at the destination</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Move file.txt to the folder, destination, in /path/to, and rename it to newname.txt</span>
-mv<span class="w"> </span>file.txt<span class="w"> </span>/path/to/destination/newname.txt
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Same for folders</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span>directory<span class="w"> </span>path/to/destination/newname
-</pre></div>
-</div>
-</section>
 </section>
 <section id="deleting-files-and-or-folders-with-rm">
 <h2><span class="section-number">1.2.7. </span>Deleting Files and/or Folders with <code class="docutils literal notranslate"><span class="pre">rm</span></code><a class="headerlink" href="#deleting-files-and-or-folders-with-rm" title="Link to this heading">#</a></h2>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>This command is permanently delete your files / folders
-No trash can to recover “accidental” events</p>
-</div>
-<ul class="simple">
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">rm</span></code> (Remove) to delete files/folders.</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete file1.txt</span>
-rm<span class="w"> </span>file1.txt
-</pre></div>
-</div>
-<section id="deleting-multiple-files">
-<h3><span class="section-number">1.2.7.1. </span>Deleting Multiple Files<a class="headerlink" href="#deleting-multiple-files" title="Link to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Deleting 2 files named, file1.txt and file2.txt</span>
-rm<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
-</pre></div>
-</div>
-</section>
-<section id="deleting-folders">
-<h3><span class="section-number">1.2.7.2. </span>Deleting Folders<a class="headerlink" href="#deleting-folders" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Like <code class="docutils literal notranslate"><span class="pre">cp</span></code>, you need the option <code class="docutils literal notranslate"><span class="pre">-r</span></code> to delete a folder</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code> can force delete</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete entire folder called directory/</span>
-rm<span class="w"> </span>-r<span class="w"> </span>directory/
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `rm` - delete files
 
-<span class="c1"># Force delete all contents with `-f`</span>
-rm<span class="w"> </span>-rf<span class="w"> </span>directory/
+
+```{caution}
+This command is permanently delete your files / folders
+No trash can to recover &quot;accidental&quot; events
+```
+
+- Use `rm` (Remove) to delete files/folders.
+
+```bash
+# Delete file1.txt
+rm file1.txt
+```
+
+### Deleting Multiple Files
+
+```bash
+# Deleting 2 files named, file1.txt and file2.txt
+rm file1.txt file2.txt
+```
+
+### Deleting Folders
+
+- Like `cp`, you need the option `-r` to delete a folder
+- `-f` can force delete
+
+```bash
+# Delete entire folder called directory/
+rm -r directory/
+
+# Force delete all contents with `-f`
+rm -rf directory/
+```
+
+:::{code} bash
+rm file.txt
+:::
+
+:::{code} bash
+rm -r directory/
+:::
+
 </pre></div>
 </div>
-</section>
 </section>
 </section>
 
@@ -872,33 +1024,21 @@ rm<span class="w"> </span>-rf<span class="w"> </span>directory/
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-opening-the-terminal-app">1.2.1.1. Example: Opening the Terminal App</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell">1.2.2. $SHELL</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-bash-shell-commands">1.2.2.1. Example: Bash Shell Commands</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell">1.2.2. $SHELL</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating">1.2.3. Navigating</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#starting-location">1.2.3.1. Starting Location!</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">1.2.3.2. Where Are We?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-files-folders-are-here">1.2.3.3. What Files/Folders are Here?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">1.2.3.4. How to Make a New Folder/Directory?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-exit-folders">1.2.3.5. Enter/Exit Folders</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">1.2.3.1. Where Are We?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-files-folders-are-here">1.2.3.2. What Files/Folders are Here?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">1.2.3.3. How to Make a New Folder/Directory?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-exit-folders">1.2.3.4. Enter/Exit Folders</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">1.2.4. What are Paths?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management">1.2.5. File Management</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-using-cp">1.2.5.1. Copy using <code class="docutils literal notranslate"><span class="pre">cp</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-folders-with-cp-r">1.2.5.2. Copy Folders with <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span></code></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-renaming-with-mv">1.2.6. Moving &amp; Renaming with <code class="docutils literal notranslate"><span class="pre">mv</span></code></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#move-rename-files-and-folders">1.2.6.1. Move/Rename Files and Folders</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-and-or-folders-with-rm">1.2.7. Deleting Files and/or Folders with <code class="docutils literal notranslate"><span class="pre">rm</span></code></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-multiple-files">1.2.7.1. Deleting Multiple Files</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-folders">1.2.7.2. Deleting Folders</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-renaming-with-mv">1.2.6. Moving &amp; Renaming with <code class="docutils literal notranslate"><span class="pre">mv</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-and-or-folders-with-rm">1.2.7. Deleting Files and/or Folders with <code class="docutils literal notranslate"><span class="pre">rm</span></code></a></li>
 </ul>
   </nav></div>
 
