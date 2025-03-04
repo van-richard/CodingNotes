@@ -45,12 +45,14 @@ import matplotlib.pyplot as plt
 # Load trajectory
 traj = pt.iterload('prod.nc', top='step3_pbcsetup_1264.parm7')
 
-rmsd = pt.pairwise_rmsd(traj, mask="@CA")
+data = pt.pairwise_rmsd(traj, mask="@CA")
 
-# Plot Simulation Time vs RMSD
-plt.plot(rmsd)
-plt.xlabel('Time ')
-plt.ylabel('RMSF (Å)')
+im = plt.imshow(data
+plt.colorbar(im, label='2D-RMSD (Å)')
+plt.gca().invert_yaxis()
+plt.xlabel('Frame Number')
+plt.ylabel('Frame Number')
+
 plt.savefig('rmsf.png', dpi=300)
 ```
 
