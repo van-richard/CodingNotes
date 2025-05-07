@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. Terminal, Shell, &amp; Bash &#8212; CodingNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/00-quickstart/01terminal';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/00-quickstart/01terminal.html" />
+    <link rel="icon" href="../../_static/van-codingnotes.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. Text Editors" href="02vim.html" />
+    <link rel="prev" title="1. quickstart" href="00_overview.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search mee!!"
+         aria-label="Search mee!!"
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
+    <img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">CodingNotes</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="00_overview.html">
+    quickstart
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
+    scripting
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
+    simulations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="00_overview.html">
+    quickstart
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
+    scripting
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
+    simulations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Terminal, Shell, &amp; Bash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02vim.html">2. Text Editors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">3. Supercomputers</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">6. Python &amp; Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">7. Molecular Structure Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">8. Exploring PDB Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07XYZFiles.html">9. What are XYZ Files?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">10. Briefly, Molecular Dynamics</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link"><span class="section-number">1. </span>quickstart</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">1. </span>Terminal, Shell, &amp; Bash</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="terminal-shell-bash">
+<h1><span class="section-number">1. </span>Terminal, Shell, &amp; Bash<a class="headerlink" href="#terminal-shell-bash" title="Link to this heading">#</a></h1>
+<figure class="align-center" id="terminal-header" style="width: 75%">
+<img alt="https://raw.githubusercontent.com/van-richard/CodingNotes/main/static/gif/terminal-header.gif" src="https://raw.githubusercontent.com/van-richard/CodingNotes/main/static/gif/terminal-header.gif" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Example of command line in the <code class="docutils literal notranslate"><span class="pre">terminal</span></code> application of MacOS. The line you are working on is noted with the <code class="docutils literal notranslate"><span class="pre">$</span></code>. The format of this line is: computer name, <code class="docutils literal notranslate"><span class="pre">;</span></code> , username, and then <code class="docutils literal notranslate"><span class="pre">$</span></code>. <code class="docutils literal notranslate"><span class="pre">Bash</span></code> commands are typed by line, and ran by hitting the <code class="docutils literal notranslate"><span class="pre">[enter]</span></code> key.where, (1) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> will return <code class="docutils literal notranslate"><span class="pre">&quot;[</span></code>some text<code class="docutils literal notranslate"><span class="pre">]&quot;</span></code> as an output, (2) :term:<code class="docutils literal notranslate"><span class="pre">echo</span></code> to output “2 + 2”, the <code class="docutils literal notranslate"><span class="pre">|</span></code> (pipe) takes this as input for the next command, <code class="docutils literal notranslate"><span class="pre">bc</span> <span class="pre">-l</span></code> (calculator), (3) <code class="docutils literal notranslate"><span class="pre">echo</span></code> prints the variable, <code class="docutils literal notranslate"><span class="pre">$SHELL</span></code>, which points to the program <code class="docutils literal notranslate"><span class="pre">/bin/bash</span></code>, and (4) cowboy.</span><a class="headerlink" href="#terminal-header" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>In this section, we’ll delve into the basics of the terminal, its role, and why it’s crucial in computational research.</p></li>
+<li><p>Approaches to “using” computer programs:</p>
+<ul>
+<li><p>A common way makes use of a Graphical User Interface (GUI)</p>
+<ul>
+<li><p>Programs that use a mouse and keyboard with on-screen menus, buttons, sliders, etc.</p></li>
+<li><p>Relies on the user to click on-screen options for specific instructions</p></li>
+</ul>
+</li>
+<li><p>Alternatively, computer programs can be operated via the Command Line Interface (CLI)</p>
+<ul>
+<li><p>Uses text-based instructions, only requiring input from the keyboard</p></li>
+<li><p>Often used for computing many files or automating repetitive tasks.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<section id="wtf-is-terminal">
+<h2><span class="section-number">1.1. </span>wtf is terminal?<a class="headerlink" href="#wtf-is-terminal" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Terminal is a graphical-based application, providing access to the CLI</p>
+<ul>
+<li><p>This is preinstalled on MacOS as the <code class="docutils literal notranslate"><span class="pre">terminal</span></code> app</p></li>
+<li><p>Windows has variations called <code class="docutils literal notranslate"><span class="pre">Command</span> <span class="pre">Prompt</span></code> and <code class="docutils literal notranslate"><span class="pre">PowerShell</span></code></p></li>
+</ul>
+</li>
+<li><p>Using command line is a fundamental tool in computational research, offering advantages like:</p>
+<ul>
+<li><p>More control in running applications</p></li>
+<li><p>Faster management across operating systems (OS)</p></li>
+<li><p>Ability to automate repetitive tasks (scripting)</p></li>
+</ul>
+</li>
+</ul>
+<section id="example-opening-the-terminal-app">
+<h3><span class="section-number">1.1.1. </span>Example: Opening the Terminal App<a class="headerlink" href="#example-opening-the-terminal-app" title="Link to this heading">#</a></h3>
+<p>You can find the terminal by:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+MacOS</label><div class="sd-tab-content docutils">
+<p>Manually looking through your files for it</p>
+<ul class="simple">
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">launchpad</span></code> -&gt; Look for <code class="docutils literal notranslate"><span class="pre">terminal</span></code>.</p></li>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">Finder</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Applications/</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">terminal</span></code></p></li>
+<li><p>Search</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">cmd</span></code>+<code class="docutils literal notranslate"><span class="pre">[space]</span></code>. Then type <code class="docutils literal notranslate"><span class="pre">terminal</span></code>.</p></li>
+</ul>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Windows</label><div class="sd-tab-content docutils">
+<p>To use a Linux terminal on a Windows machine, you will need to install the Ubuntu application. This will differ if you’re using Windows 10 or Windows 11.</p>
+<p>I will write this up, but here is my reference.</p>
+<p><a class="reference external" href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview">Install Ubuntu on WSL</a></p>
+</div>
+</div>
+<p>Several data analysis tools and computing servers require proficiency with the command line. It may have a steep learning curve and be a bit confusing initially, but once you get the hang of it. Automation will be E Z!</p>
+<ul class="simple">
+<li><p>Notation and pre-defined commands will depend on your shell!</p></li>
+</ul>
+<p>Users can send instructions to the computer by running <code class="docutils literal notranslate"><span class="pre">commands</span></code></p>
+<ul class="simple">
+<li><p>Like GUIs, these instructions can be for manipulating files or running software</p></li>
+<li><p>Often, a <code class="docutils literal notranslate"><span class="pre">command</span></code> is an abbreviation of common words (copy = <code class="docutils literal notranslate"><span class="pre">cp</span></code>, move = <code class="docutils literal notranslate"><span class="pre">mv</span></code>)</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="shell">
+<h2><span class="section-number">1.2. </span>$SHELL<a class="headerlink" href="#shell" title="Link to this heading">#</a></h2>
+<aside class="sidebar">
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Essentially, a type of CLI, the choice in <code class="docutils literal notranslate"><span class="pre">shell</span></code> programs dictates how you:</p>
+<ul class="simple">
+<li><p>Interact with the operating system</p></li>
+<li><p>Manage workflow and program control</p></li>
+<li><p>Combine command line instructions</p></li>
+</ul>
+</div>
+</aside>
+<p>When you open <code class="docutils literal notranslate"><span class="pre">terminal</span></code>, a <code class="docutils literal notranslate"><span class="pre">shell</span></code> session starts immediately, containing the current state or <code class="docutils literal notranslate"><span class="pre">environment</span></code></p>
+<ul class="simple">
+<li><p>Only one session per shell exists</p></li>
+</ul>
+<p>Shells are programs that understand and execute user commands:</p>
+<ul class="simple">
+<li><p>interpreting human language (text input) into computer language (output)</p></li>
+<li><p>Various <code class="docutils literal notranslate"><span class="pre">shells</span></code> are available, such as <code class="docutils literal notranslate"><span class="pre">csh</span></code>, <code class="docutils literal notranslate"><span class="pre">zsh</span></code></p></li>
+</ul>
+<p><strong>I use <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell, so my notes will only cover <code class="docutils literal notranslate"><span class="pre">bash</span></code>!</strong></p>
+<p>An <code class="docutils literal notranslate"><span class="pre">interactive</span> <span class="pre">prompt</span></code> is when users run each “command” line by line.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Later, we will see that combining multiple command lines into one file is called a “shell <code class="docutils literal notranslate"><span class="pre">script</span></code>.”</p>
+</div>
+<div class="admonition-example-bash-shell-commands admonition">
+<p class="admonition-title">Example: Bash Shell Commands</p>
+<p>In a <code class="docutils literal notranslate"><span class="pre">shell</span></code>, predefined <code class="docutils literal notranslate"><span class="pre">commands</span></code> are computer processes.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Commands</span></code> are typed and interpreted by the computer to run processes</p></li>
+<li><p>Users provide <code class="docutils literal notranslate"><span class="pre">input</span></code> in the form of commands, and the computer <code class="docutils literal notranslate"><span class="pre">outputs</span></code> the result</p></li>
+<li><p>To update the <code class="docutils literal notranslate"><span class="pre">output</span></code>, run the command again.</p></li>
+</ul>
+<p>Some <code class="docutils literal notranslate"><span class="pre">commands</span></code> can be modified by <code class="docutils literal notranslate"><span class="pre">options</span></code> following the command with a hyphen <code class="docutils literal notranslate"><span class="pre">-</span></code>. Others take <code class="docutils literal notranslate"><span class="pre">arguments</span></code> as input. Look at the following examples:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="../commands/pwd.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">pwd</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/echo.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">echo</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/touch.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">touch</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/cat.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">cat</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/tail.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">tail</span></code></span></a></p></li>
+<li><p><a class="reference internal" href="../commands/head.html"><span class="std std-doc"><code class="docutils literal notranslate"><span class="pre">head</span></code></span></a></p></li>
+</ol>
+</div>
+</section>
+<hr class="docutils" />
+<section id="navigating">
+<h2><span class="section-number">1.3. </span>Navigating<a class="headerlink" href="#navigating" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Understand the general layout of the <code class="docutils literal notranslate"><span class="pre">terminal</span></code></p></li>
+<li><p>Compare differences from GUIs like <code class="docutils literal notranslate"><span class="pre">Finder</span></code> or <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Explorer</span></code></p></li>
+<li><p>Find your start, current position, and navigate in <code class="docutils literal notranslate"><span class="pre">terminal</span></code>.</p></li>
+<li><p>View files/folders.</p></li>
+<li><p>Differentiate between absolute and relative paths.</p></li>
+</ul>
+<p><em>The default location when you first login is called your “home” directory</em></p>
+<section id="where-are-we">
+<h3><span class="section-number">1.3.1. </span>Where Are We?<a class="headerlink" href="#where-are-we" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `pwd` - print working directory
+
+- Use `pwd` (Print Working Directory) to find your current working directory (folder).
+
+```bash
+pwd
+```
+
+- Navigate in the terminal, relying on being in the right location. As you move around directories, use `pwd` often to remind yourself where you are.
+</pre></div>
+</div>
+</section>
+<section id="what-files-folders-are-here">
+<h3><span class="section-number">1.3.2. </span>What Files/Folders are Here?<a class="headerlink" href="#what-files-folders-are-here" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `ls` - list information about files/folders 
+
+- Use `ls` (List) to see what files/folders are in the current location.
+
+- The default is to list the files in the current directory. Adding options can change how the list is organized.
+
+```bash
+ls [option] [directory]
+```
+
+List directories
+
+```bash
+ls -d
+```
+
+Long list format 
+
+```bash
+ls -l
+```
+
+Sort by time (newest first)
+
+```bash
+ls -t
+```
+
+List files with file size in kilobytes/megabytes/gigabytes
+
+```bash
+ls -h
+```
+
+Sort alphabetically
+
+```bash
+ls -X
+```
+
+</pre></div>
+</div>
+</section>
+<section id="how-to-make-a-new-folder-directory">
+<h3><span class="section-number">1.3.3. </span>How to Make a New Folder/Directory?<a class="headerlink" href="#how-to-make-a-new-folder-directory" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `mkdir` - make new directories.
+
+- Use `mkdir` (Make Directory) to create a new folder.
+
+```bash
+mkdir [new folder name]
+```
+
+- For example, create a folder called `test`.
+
+```bash
+mkdir test
+```
+
+```bash
+mkdir myNewDir
+```
+
+The `-p` flag causes new intermediate directories to be created as necessary.
+
+```bash
+mkdir -p myNewDir/with/intermediate/directories
+```
+
+If the intermediate directories didn&#39;t already exist, running the above command without the `-p` flag would return an error
+</pre></div>
+</div>
+</section>
+<section id="enter-exit-folders">
+<h3><span class="section-number">1.3.4. </span>Enter/Exit Folders<a class="headerlink" href="#enter-exit-folders" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `cd` - change directories
+
+- Use `cd` (Change Directory) to enter a folder.
+
+```bash
+cd [folder name]
+```
+
+- Check your current location with `pwd`.
+
+```bash
+pwd
+```
+
+- To go back one directory, use `cd ../`. To return to your &quot;home&quot; directory:
+
+```bash
+cd    # Option 1
+cd ~  # Option 2
+```
+
+- Check your current location again to ensure you&#39;re back home.
+
+```bash
+pwd
+```
+
+Since bash works in the context of a current directory, you might want to run your command in some other directory. We have cd for changing location:
+
+Change to home directory
+
+```bash
+cd ~ 
+```
+
+or
+
+```bash
+cd     
+```
+
+Go back one directory
+
+```bash
+cd ../
+```
+
+Go to specific directory
+
+```bash
+cd /home/username/Documents  
+```
+
+Go the the previous directory you were in
+
+```bash
+cd -   
+```
+</pre></div>
+</div>
+</section>
+</section>
+<section id="what-are-paths">
+<h2><span class="section-number">1.4. </span>What are Paths?<a class="headerlink" href="#what-are-paths" title="Link to this heading">#</a></h2>
+<p>Two types of paths:</p>
+<ol class="arabic simple">
+<li><p>Absolute - relative to the root directory (e.g., <code class="docutils literal notranslate"><span class="pre">/home</span></code>, <code class="docutils literal notranslate"><span class="pre">/Users</span></code>).</p></li>
+<li><p>Relative - relative to your current working directory.</p></li>
+</ol>
+<p>File or directory references use one of these paths.</p>
+</section>
+<hr class="docutils" />
+<section id="file-management">
+<h2><span class="section-number">1.5. </span>File Management<a class="headerlink" href="#file-management" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>How to copy, move, rename, and/or delete files?</p></li>
+<li><p>Tasks like copying, moving, renaming, and deleting files/folders (<code class="docutils literal notranslate"><span class="pre">cp</span></code>, <code class="docutils literal notranslate"><span class="pre">mv</span></code>, <code class="docutils literal notranslate"><span class="pre">rm</span></code>) need to be typed!</p></li>
+</ul>
+<section id="copy-using-cp">
+<h3><span class="section-number">1.5.1. </span>Copy using <code class="docutils literal notranslate"><span class="pre">cp</span></code><a class="headerlink" href="#copy-using-cp" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `cp` - copy files or folders
+
+- Use `cp` to copy files or folders 
+  - The `[source]` is the original file/folder or `/path/to/OriginalFile` or `/path/to/OriginalFolder`
+  - The `[destination]` is where you want the *new copy* to go, this can be in the same folder, or to another path (`/different/path/to/NewFile`)
+
+```bash
+cp [source] [destination]
+```
+
+- Again, both `[source]` and `[destination]` can use absolute or relative paths
+
+
+```bash
+# Copy file in current working directory, OriginalFile.txt, to another directory in /path/to/destination and name it NewFile.txt
+cp OriginalFile.txt /path/to/destination/NewFile.txt 
+
+# Copy file from another directory here (.)
+cp /path/to/OriginalFile.txt . 
+```
+
+- The `.` means `./` or the current directory you&#39;re in
+  - Remember to go back a folder, we run `cd ../` ? 
+  - `../` points back on directory while `./` means the current one
+
+### Copy Folders with `cp -r`
+
+- Copying a directory requires the option `-r`.
+
+```bash
+# Option, -r, tells cp to copy the entire folder to a new path
+cp -r directory /path/to/destination
+
+# Can also copy things &quot;here&quot; (.)
+cp /path/to/directory .
+
+# Copy directory in the current working directory using the name, directory2
+cp -r directory directory2
+```
+
+To copy file1 to file2 (new name):
+
+```bash
+cp [FILE_1] [FILE_2]
+```
+
+Copy folders:
+
+```bash
+cp -r [FOLDER_1] [FOLDER_2]
+```
+
+Use `cp` to copy files or directories from one place to another.
+
+- `cp` creates NEW versions of the sources, so editing the copy won&#39;t affect the original (and vice versa).
+
+**Note that it will overwrite the destination if it already exists.**
+
+```bash
+cp srcFile.txt clone.txt
+```
+
+or
+
+```bash
+cp -r srcDirectory/ dst/ # recursively copy
+```
+
+Copying can be down with paths
+
+```bash
+cp -r /path/to/dir_1 /path/to/dir_2
+```
+</pre></div>
+</div>
+</section>
+</section>
+<section id="moving-renaming-with-mv">
+<h2><span class="section-number">1.6. </span>Moving &amp; Renaming with <code class="docutils literal notranslate"><span class="pre">mv</span></code><a class="headerlink" href="#moving-renaming-with-mv" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `mv` - move files/folders from one place to another.
+
+- Both are performed with `mv`
+- Follows the same notation as `cp`
+- **Does not require the option, `-r` !!**
+
+```bash
+mv [source] [destination]
+```
+- `[source]` can be a file, folder, `/path/to/file`, or `/path/to/folder`
+- `[destination]` can be `/path/to/file`, or `/path/to/folder` with `NewFileName` or `NewFolderName`
+
+### Move/Rename Files and Folders
+
+- Moving a file is straightforward; you can even rename it at the destination
+
+```bash
+# Move file.txt to the folder, destination, in /path/to, and rename it to newname.txt
+mv file.txt /path/to/destination/newname.txt
+```
+
+- Same for folders
+
+```bash
+mv directory path/to/destination/newname
+```
+
+`mv` is similar to `cp`, but it deletes the source.
+`mv` is also useful for renaming files!
+
+```bash
+mv source.txt new.txt
+```
+</pre></div>
+</div>
+</section>
+<section id="deleting-files-and-or-folders-with-rm">
+<h2><span class="section-number">1.7. </span>Deleting Files and/or Folders with <code class="docutils literal notranslate"><span class="pre">rm</span></code><a class="headerlink" href="#deleting-files-and-or-folders-with-rm" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># `rm` - delete files
+
+
+```{caution}
+This command is permanently delete your files / folders
+No trash can to recover &quot;accidental&quot; events
+```
+
+- Use `rm` (Remove) to delete files/folders.
+
+```bash
+# Delete file1.txt
+rm file1.txt
+```
+
+### Deleting Multiple Files
+
+```bash
+# Deleting 2 files named, file1.txt and file2.txt
+rm file1.txt file2.txt
+```
+
+### Deleting Folders
+
+- Like `cp`, you need the option `-r` to delete a folder
+- `-f` can force delete
+
+```bash
+# Delete entire folder called directory/
+rm -r directory/
+
+# Force delete all contents with `-f`
+rm -rf directory/
+```
+
+:::{code} bash
+rm file.txt
+:::
+
+:::{code} bash
+rm -r directory/
+:::
+
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/00-quickstart"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="00_overview.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>quickstart</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02vim.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Text Editors</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wtf-is-terminal">1.1. wtf is terminal?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-opening-the-terminal-app">1.1.1. Example: Opening the Terminal App</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shell">1.2. $SHELL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#navigating">1.3. Navigating</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-are-we">1.3.1. Where Are We?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-files-folders-are-here">1.3.2. What Files/Folders are Here?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-new-folder-directory">1.3.3. How to Make a New Folder/Directory?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enter-exit-folders">1.3.4. Enter/Exit Folders</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-paths">1.4. What are Paths?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-management">1.5. File Management</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-using-cp">1.5.1. Copy using <code class="docutils literal notranslate"><span class="pre">cp</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#moving-renaming-with-mv">1.6. Moving &amp; Renaming with <code class="docutils literal notranslate"><span class="pre">mv</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-files-and-or-folders-with-rm">1.7. Deleting Files and/or Folders with <code class="docutils literal notranslate"><span class="pre">rm</span></code></a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/notebooks/00-quickstart/01terminal.md"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
