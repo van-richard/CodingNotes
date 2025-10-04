@@ -132,6 +132,7 @@ external_toc_exclude_missing = True
 external_toc_path = '_toc.yml'
 
 exclude_patterns = [
+        '_external',
         '**.ipynb_checkpoints', 
         '.DS_Store', '.git', '.gitignore',
         '.vscode', 'Thumbs.db', 
