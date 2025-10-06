@@ -1,3 +1,7 @@
+---
+keywords: download, upload, file, folder, file management, sync, rsync
+---
+
 # `rsync` - sync files/folders 
 
 Since I typically use `rsync` to transfer folders, I will not cover using this command for tranfering files. You can use `scp` for that. T
@@ -36,3 +40,4 @@ I included the options, `-avuim`, where:
 ```{note}
 In the example where I sync from "Local to Server", the `[source]` (from general notation) is `directory/`, you might have noticed it includes a `/`, whereas the `[destination]` does not. This trailing `/` means all contents (files and folders) from  the `[source]` (i.e. `directory/`). Without the trailing `/`, the `[source]` would be placed within `[destination]`. In other words, you made another copy of the `[source]` folder inside the destination folder rather than syncing the 2 (i.e. making `/path/to/directory/directory`)
 ```
+
