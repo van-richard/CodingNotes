@@ -1,5 +1,10 @@
-# `scancel` - Cancel Slurm Jobs
+---
+keywords: SLURM, hpc
+---
 
-```bash
+# `scancel` 
+
+
+```bash Cancel Slurm Jobs
 scancel JOBID
 ```

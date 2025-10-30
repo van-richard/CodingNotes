@@ -1,71 +1,64 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4.1.19. rm - delete files &#8212; CodingNotes</title>
+    <title>20. rm - delete files &#8212; CodingNotes</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/commands/rm';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/commands/rm.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4.1.20. rsync - sync files/folders" href="rsync.html" />
-    <link rel="prev" title="4.1.18. pwd - print working directory" href="pwd.html" />
+    <link rel="next" title="21. rsync - sync files/folders" href="rsync.html" />
+    <link rel="prev" title="19. pwd - print working directory" href="pwd.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -75,28 +68,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -119,19 +107,24 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
 
-  <header>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -160,36 +153,36 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        quickstart
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        scripting
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
-                        simulations
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
+    scripting
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
+    simulations
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -203,10 +196,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -217,7 +210,7 @@ document.write(`
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -227,7 +220,7 @@ document.write(`
         </div>
       
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -238,7 +231,7 @@ document.write(`
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -250,7 +243,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -262,7 +255,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -274,7 +267,7 @@ document.write(`
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -288,10 +281,10 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -301,7 +294,7 @@ document.write(`
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -312,15 +305,14 @@ document.write(`
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </div>
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -336,39 +328,42 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
-<nav class="navbar-nav">
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        quickstart
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        scripting
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
-                        simulations
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
+    scripting
+  </a>
+</li>
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
+    simulations
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -376,7 +371,7 @@ document.write(`
     
       <div class="sidebar-header-items__end">
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -387,7 +382,7 @@ document.write(`
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -399,7 +394,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -411,7 +406,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -423,7 +418,7 @@ document.write(`
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -438,62 +433,63 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../linux.html">4.1. linux</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="awk.html">4.1.1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cat.html">4.1.2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cd.html">4.1.3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chsh.html">4.1.4. chsh - change shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cp.html">4.1.5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="echo.html">4.1.6. <code class="docutils literal notranslate"><span class="pre">echo</span></code> - Print Argument</a></li>
-<li class="toctree-l2"><a class="reference internal" href="grep.html">4.1.7. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="head.html">4.1.8. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="help.html">4.1.9. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="less.html">4.1.10. <code class="docutils literal notranslate"><span class="pre">less</span></code> - view files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ls.html">4.1.11. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lsblk.html">4.1.12. <code class="docutils literal notranslate"><span class="pre">lsblk</span></code> - list filesystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="man.html">4.1.13. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mkdir.html">4.1.14. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="module.html">4.1.15. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mount.html">4.1.16. <code class="docutils literal notranslate"><span class="pre">mount</span></code> - mount filesystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mv.html">4.1.17. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pwd.html">4.1.18. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print working directory</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1.19. <code class="docutils literal notranslate"><span class="pre">rm</span></code> - delete files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rsync.html">4.1.20. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sbatch.html">4.1.21. <code class="docutils literal notranslate"><span class="pre">sbatch</span></code> - Submit job to Slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scancel.html">4.1.22. <code class="docutils literal notranslate"><span class="pre">scancel</span></code> - Cancel Slurm Jobs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scp.html">4.1.23. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sed.html">4.1.24. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seq.html">4.1.25. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="setfacl.html">4.1.26. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sinfo.html">4.1.27. <code class="docutils literal notranslate"><span class="pre">sinfo</span></code> - View information about Slurm nodes and partitions.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sort.html">4.1.28. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh.html">4.1.29. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> - secure shell protocol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ssh-keygen.html">4.1.30. <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> - Make SSH key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tail.html">4.1.31. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tar.html">4.1.32. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="touch.html">4.1.33. <code class="docutils literal notranslate"><span class="pre">touch</span></code> - Make File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="trap.html">4.1.34. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../linux.html">linux</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="awk.html">1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cat.html">2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cd.html">3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chsh.html">4. chsh - change shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cp.html">5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="echo.html">6. <code class="docutils literal notranslate"><span class="pre">echo</span></code> - Print Argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grep.html">7. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="head.html">8. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help.html">9. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="less.html">10. <code class="docutils literal notranslate"><span class="pre">less</span></code> - view files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ls.html">11. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lsblk.html">12. <code class="docutils literal notranslate"><span class="pre">lsblk</span></code> - list filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lscpu.html">13. lscpu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="man.html">14. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mkdir.html">15. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="module.html">16. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mount.html">17. <code class="docutils literal notranslate"><span class="pre">mount</span></code> - mount filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mv.html">18. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pwd.html">19. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print working directory</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">20. <code class="docutils literal notranslate"><span class="pre">rm</span></code> - delete files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rsync.html">21. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sbatch.html">22. <code class="docutils literal notranslate"><span class="pre">sbatch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scancel.html">23. <code class="docutils literal notranslate"><span class="pre">scancel</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scp.html">24. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sed.html">25. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seq.html">26. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="setfacl.html">27. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sinfo.html">28. <code class="docutils literal notranslate"><span class="pre">sinfo</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sort.html">29. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh.html">30. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> - secure shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ssh-keygen.html">31. <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> - Make SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tail.html">32. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tar.html">33. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="touch.html">34. <code class="docutils literal notranslate"><span class="pre">touch</span></code> - Make File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trap.html">35. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/apptainer/apptainer.html">4.2. apptainer</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-build.html">4.2.1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-run.html">4.2.2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-shell.html">4.2.3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-instance.html">4.2.4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/apptainer/apptainer.html">3.1. apptainer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-build.html">3.1.1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-run.html">3.1.2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-shell.html">3.1.3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-instance.html">3.1.4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
 </ul>
-</li>
+</details></li>
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/chimerax/chimera.html">ChimeraX</a><input checked class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-cli-overview.html">1. ChimeraX Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-img-save.html">2. Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-fade.html">3. Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-morph.html">4. Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-rock.html">5. Rocking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-spin.html">6. Spin</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/chimerax/chimera.html">3.3. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-cli-overview.html">3.3.1. ChimeraX Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-img-save.html">3.3.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-fade.html">3.3.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-morph.html">3.3.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-rock.html">3.3.5. Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-spin.html">3.3.6. Spin</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../softwares/ffmpeg.html">4.4. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../softwares/gnu-parallel.html">4.5. GNU Parallel</a></li>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/ffmpeg.html">3.4. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/gnu-parallel.html">3.5. GNU Parallel</a></li>
 </ul>
 </div>
 </nav></div>
@@ -508,13 +504,13 @@ document.write(`
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -523,7 +519,7 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -532,10 +528,10 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">4. </span>More Notes !!</a></li>
+    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">3. </span>More Notes !!</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../linux.html" class="nav-link"><span class="section-number">4.1. </span>linux</a></li>
+    <li class="breadcrumb-item"><a href="../linux.html" class="nav-link">linux</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -554,8 +550,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="rm-delete-files">
-<h1><span class="section-number">4.1.19. </span><code class="docutils literal notranslate"><span class="pre">rm</span></code> - delete files<a class="headerlink" href="#rm-delete-files" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="rm-delete-files">
+<h1><span class="section-number">20. </span><code class="docutils literal notranslate"><span class="pre">rm</span></code> - delete files<a class="headerlink" href="#rm-delete-files" title="Link to this heading">#</a></h1>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>This command is permanently delete your files / folders
@@ -569,14 +565,14 @@ rm<span class="w"> </span>file1.txt
 </pre></div>
 </div>
 <section id="deleting-multiple-files">
-<h2><span class="section-number">4.1.19.1. </span>Deleting Multiple Files<a class="headerlink" href="#deleting-multiple-files" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">20.1. </span>Deleting Multiple Files<a class="headerlink" href="#deleting-multiple-files" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Deleting 2 files named, file1.txt and file2.txt</span>
 rm<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt
 </pre></div>
 </div>
 </section>
 <section id="deleting-folders">
-<h2><span class="section-number">4.1.19.2. </span>Deleting Folders<a class="headerlink" href="#deleting-folders" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">20.2. </span>Deleting Folders<a class="headerlink" href="#deleting-folders" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Like <code class="docutils literal notranslate"><span class="pre">cp</span></code>, you need the option <code class="docutils literal notranslate"><span class="pre">-r</span></code> to delete a folder</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">-f</span></code> can force delete</p></li>
@@ -588,12 +584,12 @@ rm<span class="w"> </span>-r<span class="w"> </span>directory/
 rm<span class="w"> </span>-rf<span class="w"> </span>directory/
 </pre></div>
 </div>
-<p>:::{code} bash
-rm file.txt
-:::</p>
-<p>:::{code} bash
-rm -r directory/
-:::</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>file.txt
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-r<span class="w"> </span>directory/
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -623,7 +619,7 @@ rm -r directory/
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -632,7 +628,7 @@ rm -r directory/
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.1.18. </span><code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print working directory</p>
+        <p class="prev-next-title"><span class="section-number">19. </span><code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print working directory</p>
       </div>
     </a>
     <a class="right-next"
@@ -640,7 +636,7 @@ rm -r directory/
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.1.20. </span><code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</p>
+        <p class="prev-next-title"><span class="section-number">21. </span><code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -660,8 +656,8 @@ rm -r directory/
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-multiple-files">4.1.19.1. Deleting Multiple Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-folders">4.1.19.2. Deleting Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-multiple-files">20.1. Deleting Multiple Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deleting-folders">20.2. Deleting Folders</a></li>
 </ul>
   </nav></div>
 
@@ -687,8 +683,8 @@ rm -r directory/
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -708,7 +704,7 @@ rm -r directory/
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -721,7 +717,7 @@ rm -r directory/
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
 </p></div>
       
     </div>
