@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3.4.4. PCA with CPPTRAJ &#8212; CodingNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/tools/cpptraj-pca';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/tools/cpptraj-pca.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="3.4.5. parmchk2.sh" href="parmchk2.html" />
+    <link rel="prev" title="3.4.3. Export Dry Trajectory (no water)" href="cpptraj-dry.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search mee!!"
+         aria-label="Search mee!!"
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../../_static/van-abstract-y-dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">CodingNotes</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../01-scripting/00_overview.html">
+    scripting
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../00_overview.html">
+    simulations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../01-scripting/00_overview.html">
+    scripting
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../00_overview.html">
+    simulations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../theory.html">3.1. Theory / Methods Overview</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory-binding.html">3.1.4.1. Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory-classical.html">3.1.4.2. Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory-fe-alchemical.html">3.1.4.3. FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../theory-fe-estimators.html">3.1.4.5. Free Energy Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory-qmmm.html">3.1.4.6. QM/MM Simulations</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../amber.html">3.2. Compile Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../amber-install-helpmelib.html">3.2.1. Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../amber-install-patch.html">3.2.2. Compiling Amber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../amber-install-qmhub.html">3.2.3. Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../amber-install-torchmdnet.html">3.2.4. TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tutorial.html">3.3. Tutorial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../simple.html">3.3.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../distance.html">3.3.2. Applying Distance Restraints in Classical MD Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../claisen.html">3.3.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../analysis.html">3.4. Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2drmsd.html">3.4.1. Pairwise RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="antechamber.html">3.4.2. Antechamber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpptraj-dry.html">3.4.3. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.4.4. PCA with CPPTRAJ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parmchk2.html">3.4.5. parmchk2.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parmed.html">3.4.6. parmed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pca.html">3.4.7. Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pymbar.html">3.4.8. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rdf.html">3.4.9. RDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rmsd.html">3.4.10. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rmsf.html">3.4.11. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tleap.html">3.4.12. tleap</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../00_overview.html" class="nav-link"><span class="section-number">3. </span>simulations</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../analysis.html" class="nav-link"><span class="section-number">3.4. </span>Analysis</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="pca-with-cpptraj">
+<h1><span class="section-number">3.4.4. </span>PCA with CPPTRAJ<a class="headerlink" href="#pca-with-cpptraj" title="Link to this heading">#</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>module<span class="w"> </span>load<span class="w"> </span>ambertools23
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">#sys=&quot;4ntds&quot;</span>
+<span class="linenos"> 6</span><span class="nv">sys</span><span class="o">=</span><span class="nv">$1</span>
+<span class="linenos"> 7</span><span class="nv">base</span><span class="o">=</span><span class="s2">&quot;../1leader/</span><span class="si">${</span><span class="nv">sys</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="linenos"> 8</span><span class="nv">init</span><span class="o">=</span><span class="s2">&quot;step3_pbcsetup_1264&quot;</span>
+<span class="linenos"> 9</span><span class="nv">atommask</span><span class="o">=</span><span class="s2">&quot;@CA&quot;</span>
+<span class="linenos">10</span><span class="nv">n_vecs</span><span class="o">=</span><span class="s2">&quot;10&quot;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="nv">results</span><span class="o">=</span><span class="s2">&quot;pca1/</span><span class="si">${</span><span class="nv">sys</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="linenos">13</span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">results</span><span class="si">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>cpptraj<span class="w"> </span><span class="s">&lt;&lt;_EOF</span>
+<span class="linenos">16</span><span class="s">parm ${base}/${init}.parm7</span>
+<span class="linenos">17</span><span class="s">trajin ${base}/prod??.nc</span>
+<span class="linenos">18</span><span class="s">rms first ${atommask}</span>
+<span class="linenos">19</span><span class="s">average crdset step3-average</span>
+<span class="linenos">20</span><span class="s">createcrd step3-trajectories</span>
+<span class="linenos">21</span><span class="s">run</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="s">crdaction step3-trajectories rms ref step3-average ${atommask}</span>
+<span class="linenos">24</span><span class="s">crdaction step3-trajectories matrix covar name step3-covar ${atommask}</span>
+<span class="linenos">25</span>
+<span class="linenos">26</span><span class="s">runanalysis diagmatrix step3-covar out ${results}/step3-evecs.dat \</span>
+<span class="linenos">27</span><span class="s">vecs ${n_vecs} name myEvecs \</span>
+<span class="linenos">28</span><span class="s">nmwiz nmwizvecs ${n_vecs} nmwizfile ${results}/step3.nmd nmwizmask ${atommask} </span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="s">run</span>
+<span class="linenos">31</span><span class="s">clear all</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="s">readdata ${results}/step3-evecs.dat name Evecs</span>
+<span class="linenos">34</span>
+<span class="linenos">35</span><span class="s">parm ${base}/${init}.parm7</span>
+<span class="linenos">36</span><span class="s">parmstrip !(${atommask})</span>
+<span class="linenos">37</span><span class="s">parmwrite out ${results}/step3-mode.parm7</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="s">runanalysis modes name Evecs trajout ${results}/step3-mode1.nc \</span>
+<span class="linenos">40</span><span class="s">pcmin -100 pcmax 100 tmode 1 trajoutmask ${atommask} trajoutfmt netcdf</span>
+<span class="linenos">41</span>
+<span class="linenos">42</span><span class="s">runanalysis modes name Evecs trajout ${results}/step3-mode2.nc \</span>
+<span class="linenos">43</span><span class="s">pcmin -100 pcmax 100 tmode 2 trajoutmask ${atommask} trajoutfmt netcdf</span>
+<span class="linenos">44</span>
+<span class="linenos">45</span><span class="s">_EOF</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span>module<span class="w"> </span>load<span class="w"> </span>ambertools23
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1">#sys=&quot;4nt&quot;</span>
+<span class="linenos"> 6</span><span class="nv">sys</span><span class="o">=</span><span class="nv">$1</span>
+<span class="linenos"> 7</span><span class="nv">base</span><span class="o">=</span><span class="s2">&quot;../1leader/</span><span class="si">${</span><span class="nv">sys</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="linenos"> 8</span><span class="nv">init</span><span class="o">=</span><span class="s2">&quot;step3_pbcsetup_1264&quot;</span>
+<span class="linenos"> 9</span><span class="nv">atommask</span><span class="o">=</span><span class="s2">&quot;@CA&quot;</span>
+<span class="linenos">10</span><span class="nv">n_vecs</span><span class="o">=</span><span class="s2">&quot;10&quot;</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="nv">results</span><span class="o">=</span><span class="s2">&quot;pca2/</span><span class="si">${</span><span class="nv">sys</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="linenos">13</span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">results</span><span class="si">}</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span>cpptraj<span class="w"> </span><span class="s">&lt;&lt;_EOF</span>
+<span class="linenos">16</span><span class="s">parm ${base}ds/${init}.parm7 [ds]</span>
+<span class="linenos">17</span><span class="s">parm ${base}ov/${init}.parm7 [ov]</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="s">trajin ${base}ds/prod??.nc parm [ds]</span>
+<span class="linenos">20</span><span class="s">trajin ${base}ov/prod??.nc parm [ov]</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="s">rms first ${atommask}</span>
+<span class="linenos">23</span><span class="s">strip :WAT,Na+,Cl-,MG,DA5,DA,DA3,DT5,DT,DT3,DG5,DG,DG3,DC5,DC,DC3,</span>
+<span class="linenos">24</span><span class="s">average crdset step3-average</span>
+<span class="linenos">25</span><span class="s">createcrd step3-trajectories</span>
+<span class="linenos">26</span><span class="s">run</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="s">crdaction step3-trajectories rms ref step3-average ${atommask}</span>
+<span class="linenos">29</span><span class="s">crdaction step3-trajectories matrix covar name step3-covar ${atommask}</span>
+<span class="linenos">30</span>
+<span class="linenos">31</span><span class="s">runanalysis diagmatrix step3-covar out ${results}/step3-evecs.dat \</span>
+<span class="linenos">32</span><span class="s">vecs ${n_vecs} name myEvecs \</span>
+<span class="linenos">33</span><span class="s">nmwiz nmwizvecs ${n_vecs} nmwizfile ${results}/step3.nmd nmwizmask ${atommask}</span>
+<span class="linenos">34</span><span class="s">run</span>
+<span class="linenos">35</span><span class="s">clear all</span>
+<span class="linenos">36</span>
+<span class="linenos">37</span><span class="s">readdata ${results}/step3-evecs.dat name Evecs</span>
+<span class="linenos">38</span>
+<span class="linenos">39</span><span class="s">parm ${base}ds/${init}.parm7</span>
+<span class="linenos">40</span><span class="s">parmstrip !(${atommask})</span>
+<span class="linenos">41</span><span class="s">parmwrite out ${results}/step3-mode.parm7</span>
+<span class="linenos">42</span>
+<span class="linenos">43</span><span class="s">runanalysis modes name Evecs trajout ${results}/step3-mode1.nc \</span>
+<span class="linenos">44</span><span class="s">pcmin -100 pcmax 100 tmode 1 trajoutmask ${atommask} trajoutfmt netcdf</span>
+<span class="linenos">45</span><span class="s">_EOF</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/02-simulation/tools"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cpptraj-dry.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3.4.3. </span>Export Dry Trajectory (no water)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="parmchk2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3.4.5. </span>parmchk2.sh</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../../_sources/notebooks/02-simulation/tools/cpptraj-pca.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

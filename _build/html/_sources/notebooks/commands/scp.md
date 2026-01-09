@@ -1,3 +1,7 @@
+---
+keywords: download, upload, file, folder, file management, sync
+---
+
 # `scp` - copy files/folders over ssh
 
 Using the command, `scp`, is helpful for copying single files or folders that aren't too large in size. The general notation is similar to `rsync`:

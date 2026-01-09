@@ -1,10 +1,12 @@
 ---
-keywords: principal, component, analysis, pca, dimension, reduction, dimensional, variance, pc1, pc2
+keywords: parmed, bash, ambertools
 ---
 
 # parmed
 
 
-```{literalinclude}  ../../_external/amberassist/ambertools/parmed.sh
+```{literalinclude} ../../../_external/amberassist/ambertools/parmed.sh 
+:language: bash
+:linenos:
 ```
 

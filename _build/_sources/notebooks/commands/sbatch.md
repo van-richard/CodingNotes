@@ -1,5 +1,9 @@
-# `sbatch` - Submit job to Slurm
+---
+keywords: SLURM, hpc
+---
 
-```bash
+# `sbatch` 
+
+```bash Submit job to Slurm
 sbatch JOB.slurm
 ```

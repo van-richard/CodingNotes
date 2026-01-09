@@ -1,8 +1,14 @@
-# `sinfo` - View information about Slurm nodes and partitions.
+---
+keyword: SLURM, hpc, cluster
+---
 
-## Find idle partitions
 
-```bash
+# `sinfo` 
+
+View information about Slurm nodes and partitions
+
+
+```bash Find idle partitions
 sinfo | grep idle
 ```
 

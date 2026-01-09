@@ -1,71 +1,66 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1.1.3. QM/MM Simulation of the Claisen Rearrangment Reaction &#8212; CodingNotes</title>
+    <title>3.3.3. QM/MM Simulation of the Claisen Rearrangment Reaction &#8212; CodingNotes</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/02-simulation/claisen';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-simulation/claisen.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.2. Analysis" href="analysis.html" />
-    <link rel="prev" title="1.1.2. Applying Distance Restraints in Classical MD Simulations" href="distance.html" />
+    <link rel="next" title="3.4. Analysis" href="analysis.html" />
+    <link rel="prev" title="3.3.2. Applying Distance Restraints in Classical MD Simulations" href="distance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -75,28 +70,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -119,19 +109,24 @@ const thebe_selector_output = ".output, .cell_output"
 </form></div>
   </div>
 
-  <header>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -160,36 +155,36 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        quickstart
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        scripting
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="00_overview.html">
-                        simulations
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
+    scripting
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
-                      </a>
-                    </li>
-                
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="00_overview.html">
+    simulations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -203,10 +198,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -217,7 +212,7 @@ document.write(`
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -227,7 +222,7 @@ document.write(`
         </div>
       
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -238,7 +233,7 @@ document.write(`
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -250,7 +245,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -262,7 +257,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -274,7 +269,7 @@ document.write(`
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -288,10 +283,10 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -301,7 +296,7 @@ document.write(`
 
  <script>
  document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass"></i>
     <span class="search-button__default-text">Search</span>
     <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -312,15 +307,14 @@ document.write(`
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </div>
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
@@ -336,39 +330,42 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
-<nav class="navbar-nav">
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        quickstart
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-                        scripting
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="00_overview.html">
-                        simulations
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
+    scripting
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
-                      </a>
-                    </li>
-                
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="00_overview.html">
+    simulations
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -376,7 +373,7 @@ document.write(`
     
       <div class="sidebar-header-items__end">
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -387,7 +384,7 @@ document.write(`
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -399,7 +396,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -411,7 +408,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -423,7 +420,7 @@ document.write(`
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -438,40 +435,43 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">1. Theory / Methods Overview</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory-binding.html">1. Binding Affinity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory-classical.html">2. Classical Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory-fe-alchemical.html">3. FE Alchem</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">3.1. Theory / Methods Overview</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory-binding.html">3.1.4.1. Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-classical.html">3.1.4.2. Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-alchemical.html">3.1.4.3. FE Alchem</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">5. Free Energy Estimators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">6. QM/MM Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">3.1.4.5. Free Energy Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">3.1.4.6. QM/MM Simulations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">2. Compile Notes</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-helpmelib.html">1. Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">2. Compiling Amber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">3. Install QMHub</a></li>
-<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">4. TorchMDnet-ext Environment (CPU)</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="amber.html">3.2. Compile Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-helpmelib.html">3.2.1. Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">3.2.2. Compiling Amber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">3.2.3. Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">3.2.4. TorchMDnet-ext Environment (CPU)</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tutorial.html">1.1. Tutorial</a><input checked class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="simple.html">1.1.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="distance.html">1.1.2. Applying Distance Restraints in Classical MD Simulations</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tutorial.html">3.3. Tutorial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simple.html">3.3.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distance.html">3.3.2. Applying Distance Restraints in Classical MD Simulations</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.3.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">1.2. Analysis</a><input checked class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tools/2drmsd.html">1.2.1. Pairwise RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/antechamber.html">1.2.2. Antechamber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-dry.html">1.2.3. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">1.2.4. parmchk2.sh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">1.2.5. parmed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">1.2.6. Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">1.2.7. Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">1.2.8. RDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">1.2.9. Root Mean Square Deviation (RMSD)</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">3.4. Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/2drmsd.html">3.4.1. Pairwise RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/antechamber.html">3.4.2. Antechamber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-dry.html">3.4.3. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-pca.html">3.4.4. PCA with CPPTRAJ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">3.4.5. parmchk2.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">3.4.6. parmed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">3.4.7. Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">3.4.8. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">3.4.9. RDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsd.html">3.4.10. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">3.4.11. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/tleap.html">3.4.12. tleap</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -486,13 +486,13 @@ document.write(`
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -501,7 +501,7 @@ document.write(`
 
 
 
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -510,10 +510,10 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link"><span class="section-number">1. </span>simulations</a></li>
+    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link"><span class="section-number">3. </span>simulations</a></li>
     
     
-    <li class="breadcrumb-item"><a href="tutorial.html" class="nav-link"><span class="section-number">1.1. </span>Tutorial</a></li>
+    <li class="breadcrumb-item"><a href="tutorial.html" class="nav-link"><span class="section-number">3.3. </span>Tutorial</a></li>
     
     <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
@@ -532,8 +532,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="qm-mm-simulation-of-the-claisen-rearrangment-reaction">
-<h1><span class="section-number">1.1.3. </span>QM/MM Simulation of the Claisen Rearrangment Reaction<a class="headerlink" href="#qm-mm-simulation-of-the-claisen-rearrangment-reaction" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="qm-mm-simulation-of-the-claisen-rearrangment-reaction">
+<h1><span class="section-number">3.3.3. </span>QM/MM Simulation of the Claisen Rearrangment Reaction<a class="headerlink" href="#qm-mm-simulation-of-the-claisen-rearrangment-reaction" title="Link to this heading">#</a></h1>
 <p>In this tutorial, we will perform a QM/MM simulation of the claisen rearrangement reaction in Amber.</p>
 <p>We will study the reaction under implicit solvent, where all ligand atoms included into the QM region, defined by the PM3 semi-empirical method. Umbrella Sampling will be used to explore the reaction coordinate and MBAR to obtain the free energy profile.</p>
 <p><strong>Objectives:</strong></p>
@@ -550,18 +550,21 @@ document.write(`
 <p><strong>This tutorial requires a supercomputing account!</strong></p>
 <ul class="simple">
 <li><p>This example uses Pete</p></li>
-<li><p>Download my files for reference: <a class="reference external" href="https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/claisen.tar.xz">claisen.tar.bz2</a></p></li>
+<li><p>Download my files for reference: <a class="reference external" href="https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/claisen.tar.xz" title="download">claisen.tar.bz2</a></p></li>
 </ul>
 </div>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="_static/videos/claisen.mp4"><video src="_static/videos/claisen.mp4" title="_static/videos/claisen.mp4" width="50%"><a href="_static/videos/claisen.mp4">_static/videos/claisen.mp4</a></video></a>
+<a class="reference internal image-reference" href="_static/videos/claisen.mp4"><video src="_static/videos/claisen.mp4" style="width: 50%;" title="_static/videos/claisen.mp4">
+<a href="_static/videos/claisen.mp4">_static/videos/claisen.mp4</a>
+</video>
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Trajectory of the claisen rearrangement reaction, allyl vinyl ether is shown in ball-and-stick, and the trajectory was viewed on VMD.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Trajectory of the claisen rearrangement reaction, allyl vinyl ether is shown in ball-and-stick, and the trajectory was viewed on VMD.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <hr class="docutils" />
 <section id="use-iqmol-to-make-an-allyl-vinyl-ether-pdb">
-<h2><span class="section-number">1.1.3.1. </span>Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code><a class="headerlink" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3.3.1. </span>Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code><a class="headerlink" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb" title="Link to this heading">#</a></h2>
 <p>Use IQmol to make a model of allyl vinyl ether, and save the file as <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code>, remember to:</p>
 <ol class="arabic simple">
 <li><p>Add hydrogens</p></li>
@@ -575,15 +578,16 @@ document.write(`
 </ol>
 <p>I saved the filed onto my Desktop. Remember where you saved it! We will copy it later!!!</p>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="_static/videos/iqmol_claisen.mov"><img alt="_static/videos/iqmol_claisen.mov" src="_static/videos/iqmol_claisen.mov" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="_static/videos/iqmol_claisen.mov"><img alt="_static/videos/iqmol_claisen.mov" src="_static/videos/iqmol_claisen.mov" style="width: 50%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Using IQmol to make the allyl vinyl ester PDB file.</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Using IQmol to make the allyl vinyl ester PDB file.</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <hr class="docutils" />
 <section id="prepare-project-folder-on-the-cluster">
-<h2><span class="section-number">1.1.3.2. </span>Prepare Project Folder on the Cluster<a class="headerlink" href="#prepare-project-folder-on-the-cluster" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3.3.2. </span>Prepare Project Folder on the Cluster<a class="headerlink" href="#prepare-project-folder-on-the-cluster" title="Link to this heading">#</a></h2>
 <p>Login to Pete with <code class="docutils literal notranslate"><span class="pre">ssh</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>USERNAME@pete.hpc.okstate.edu<span class="w">  </span><span class="c1"># Change `USERNAME` to your username</span>
 </pre></div>
@@ -597,7 +601,7 @@ mkdir<span class="w"> </span>-p<span class="w"> </span>claisen/pm3<span class="w
 <p><em>Before moving on, we should talk about file management.</em></p>
 </section>
 <section id="directories-flow-structure-organization">
-<h2><span class="section-number">1.1.3.3. </span>Directories: Flow, Structure, &amp; Organization<a class="headerlink" href="#directories-flow-structure-organization" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3.3.3. </span>Directories: Flow, Structure, &amp; Organization<a class="headerlink" href="#directories-flow-structure-organization" title="Link to this heading">#</a></h2>
 <p>Strongly recommend for a project folder to be organized like this schematic.</p>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">SYSTEM_DIR</span></code> could be whatever biological system you’re working on (i.e., cas9, cas12a, etc.). In this folder, we most investigate the same system using differnt methods, hence <code class="docutils literal notranslate"><span class="pre">METHOD1_DIR</span></code> and <code class="docutils literal notranslate"><span class="pre">METHOD2_DIR</span></code>.</p></li>
@@ -612,7 +616,7 @@ hematic of Directory Levels:</p>
 ─ METHOD2_DIR/                   # Like NETHOD1_DIR but use QM method 2 (or other mutant+METHOD)
 ├── 00/                        # First umbrella window
 ├── 01/                        # Second umbrella window
-├── …                        # …..
+├── …                        # …
 ├── NN/                        # Up to however many windows needed
 │    ├── Trajectories Files    # Each window is an independent simulation
 ├── input/                     # Contains input files:
@@ -632,7 +636,7 @@ Adopted from Dr. Xiaoliang Pan (hehe)</p>
 </div>
 </section>
 <section id="reference-files-to-input-directory">
-<h2><span class="section-number">1.1.3.4. </span>Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory<a class="headerlink" href="#reference-files-to-input-directory" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3.3.4. </span>Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory<a class="headerlink" href="#reference-files-to-input-directory" title="Link to this heading">#</a></h2>
 <p>Make the <code class="docutils literal notranslate"><span class="pre">input</span></code> directory. This is where we will store the PDB files and generate Amber inputs. Go into the folder, and use <code class="docutils literal notranslate"><span class="pre">pwd</span></code> to print the current working directory. We will copthe the output from <code class="docutils literal notranslate"><span class="pre">pwd</span></code> for our <code class="docutils literal notranslate"><span class="pre">scp</span></code> command later.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>input<span class="w"> </span><span class="c1"># Make folder</span>
 <span class="nb">cd</span><span class="w"> </span>input<span class="w">    </span><span class="c1"># Go into folder</span>
@@ -645,7 +649,7 @@ Adopted from Dr. Xiaoliang Pan (hehe)</p>
 </div>
 <p>Before moving on, check if the file transferred correctly. In the Pete terminal window, check if the PDB file is in the <code class="docutils literal notranslate"><span class="pre">input/</span></code> folder.</p>
 <section id="generate-parameters-for-allyl-vinyl-ether">
-<h3><span class="section-number">1.1.3.4.1. </span>Generate Parameters for Allyl Vinyl Ether<a class="headerlink" href="#generate-parameters-for-allyl-vinyl-ether" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.3.4.1. </span>Generate Parameters for Allyl Vinyl Ether<a class="headerlink" href="#generate-parameters-for-allyl-vinyl-ether" title="Link to this heading">#</a></h3>
 <p>Since this is a simulation of a small molecule, we do not have Amber force field parameters for it.</p>
 <p>To make a Amber topology and coordinate file for a small molecule, we need to:</p>
 <ol class="arabic simple">
@@ -710,14 +714,15 @@ date
 </section>
 <hr class="docutils" />
 <section id="restraint-files-cv-rst">
-<h3><span class="section-number">1.1.3.4.2. </span>Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#restraint-files-cv-rst" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.3.4.2. </span>Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#restraint-files-cv-rst" title="Link to this heading">#</a></h3>
 <p>A restraint file (<code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>) contains information about the parameters for each umbrella window.</p>
 <p>The Amber protein has a lot of different restraints you can try, but for this reaction, we want to keep the bias on the bond breaking and bonding forming.</p>
 <p>We need to find the <strong>Amber atom numbers</strong> involved in the reaction. Load <code class="docutils literal notranslate"><span class="pre">step3_pbcsetup.pdb</span></code> into IQmol or VMD.</p>
 <figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="_static/images/iqmol_claisen_num.png"><img alt="_static/images/iqmol_claisen_num.png" src="_static/images/iqmol_claisen_num.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="_static/images/iqmol_claisen_num.png"><img alt="_static/images/iqmol_claisen_num.png" src="_static/images/iqmol_claisen_num.png" style="width: 50%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Open  the file, step3_pbcsetup.pdb, you made with tleap. This PDB file is made by amber so the atom numbers also correspond to the topology and cooridnate files.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Open  the file, step3_pbcsetup.pdb, you made with tleap. This PDB file is made by amber so the atom numbers also correspond to the topology and cooridnate files.</span><a class="headerlink" href="#id3" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="admonition tip">
@@ -728,16 +733,17 @@ date
 <p>To model this reaction in the simplest way possible, we would like to make the <strong>reaction coordinate 1-Dimentional!</strong></p>
 <p><em>but we have two bond distances change</em></p>
 <p>A common approch to this is make the reaction coorindinate equal to the difference in distance between the two bonds of interest</p>
-<p>$$
-\mathrm{r} = \mathrm{r}<em>{\mathrm{bond break}} - \mathrm{r}</em>{\mathrm{bond form}}
-$$</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{r} = \mathrm{r}_{\mathrm{bond break}} - \mathrm{r}_{\mathrm{bond form}}
+\]</div>
 <p>where,</p>
-<p>$\mathrm{r}<em>{\mathrm{bond break}}$ is $\mathrm{r}</em>{\mathrm{C - C}}$ which is the bond distancbetween atoms 3 and 4</p>
-<p>$\mathrm{r}<em>{\mathrm{bond form}}$ is $\mathrm{r}</em>{\mathrm{O - C}} $ which is the bond distance between atoms 1 and 6</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{r}_{\mathrm{bond break}}\)</span> is <span class="math notranslate nohighlight">\(\mathrm{r}_{\mathrm{C - C}}\)</span> which is the bond distancbetween atoms 3 and 4</p>
+<p><span class="math notranslate nohighlight">\(\mathrm{r}_{\mathrm{bond form}}\)</span> is <span class="math notranslate nohighlight">\(\mathrm{r}_{\mathrm{O - C}} \)</span> which is the bond distance between atoms 1 and 6</p>
 <p>We know which atoms to to use for our reaction coordinate now. We will take the bond breaking distance - the bond forming distance giving us a distance of about 2 Angstrom.</p>
 </section>
 <section id="notation-of-cv-rst">
-<h3><span class="section-number">1.1.3.4.3. </span>Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#notation-of-cv-rst" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.3.4.3. </span>Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code><a class="headerlink" href="#notation-of-cv-rst" title="Link to this heading">#</a></h3>
 <p>Using all of that information, we can make the refernce file for <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>. The file looks like this:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># r1 - r2 (CC - CO bond)</span>
 <span class="w"> </span><span class="p">&amp;</span>rst
@@ -764,11 +770,13 @@ $$</p>
 </div>
 </section>
 <section id="qm-mm-md-input-files">
-<h3><span class="section-number">1.1.3.4.4. </span>QM/MM MD Input files<a class="headerlink" href="#qm-mm-md-input-files" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.3.4.4. </span>QM/MM MD Input files<a class="headerlink" href="#qm-mm-md-input-files" title="Link to this heading">#</a></h3>
 <p>We need at leat 2 MD input files. The first file (<code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.mdin</span></code>) is for simulating the initial pathway, and only runs for a few picoseconds. The second file (<code class="docutils literal notranslate"><span class="pre">step6.00_equilibration.mdin</span></code>) is will restart from the previous <code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.ncrst</span></code> for additional 10 ps.</p>
 <p>The general format of a QM/MM MD input file differs from classical MD with the <code class="docutils literal notranslate"><span class="pre">&amp;qmmm</span></code> section.</p>
-<p>::::{tab-set}
-:::{tab-item} step5.00_equilibration.mdin</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+step5.00_equilibration.mdin</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
@@ -834,8 +842,10 @@ $$</p>
 <span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>step5.00_equilibration.cv
 </pre></div>
 </div>
-<p>:::
-::::{tab-item} step6.00_equilibration.mdin</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+step6.00_equilibration.mdin</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
@@ -905,8 +915,10 @@ $$</p>
 <span class="w"> </span><span class="nv">DUMPAVE</span><span class="o">=</span>step6.00_equilibration.cv
 </pre></div>
 </div>
-<p>:::
-::::</p>
+<div class="docutils">
+</div>
+</div>
+</div>
 <p><span style="align:center; font-size:2em;"><strong>Now we are done with preparing our reference files!</strong></span></p>
 <br>
 <p><span style="align:center; font-size:2em;"><strong>We can start with preparing the umbrella windows!</strong></span></p>
@@ -914,7 +926,7 @@ $$</p>
 </section>
 <hr class="docutils" />
 <section id="automate-the-umbrella-windows">
-<h2><span class="section-number">1.1.3.5. </span>Automate the Umbrella Windows<a class="headerlink" href="#automate-the-umbrella-windows" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3.3.5. </span>Automate the Umbrella Windows<a class="headerlink" href="#automate-the-umbrella-windows" title="Link to this heading">#</a></h2>
 <p>Go back one directory to the <code class="docutils literal notranslate"><span class="pre">pm3/</span></code> folder</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>../<span class="w"> </span><span class="c1"># Return back one directory</span>
 <span class="nb">pwd</span><span class="w">    </span><span class="c1"># Check where y</span>
@@ -922,8 +934,10 @@ $$</p>
 </div>
 <p>The script <code class="docutils literal notranslate"><span class="pre">gen_inputs.in</span></code> will help you prepare windows for umbrella sampling. This includes the modification in  <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code> file so that each window has a different restraint value.</p>
 <p>We will have 21 windows corresponding to restraint values -2.00 to 2.00 Å.</p>
-<p>::::{tab-set}
-:::{tab-item} gen_inputs.in</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+gen_inputs.in</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Section 1</span>
@@ -956,8 +970,10 @@ cp<span class="w"> </span>input/step3_pbcsetup.rst7<span class="w"> </span><span
 <span class="k">done</span>
 </pre></div>
 </div>
-<p>:::
-:::{tab-item} Section 1 - DEET</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+Section 1 - DEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Section 1</span>
@@ -971,10 +987,12 @@ sed<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;s/ire
 </div>
 <p>First, we make the window <code class="docutils literal notranslate"><span class="pre">00/</span></code>. I did this outside of section 2, so it is easier to read than adding an <code class="docutils literal notranslate"><span class="pre">if...else</span></code> statement.
 Essentially, since we just made our <code class="docutils literal notranslate"><span class="pre">.parm7</span></code> and <code class="docutils literal notranslate"><span class="pre">.rst7</span></code> file from tleap, our initial structure does not contain any velocities. So we need to change the options “irest” and “ntx”</p>
-<p><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-sf</span></code> make a symbolic link pointing to the original file! Do this becuause you do not want too many copies of the same file..</p>
+<p><code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-sf</span></code> make a symbolic link pointing to the original file! Do this becuause you do not want too many copies of the same file…</p>
 <p><code class="docutils literal notranslate"><span class="pre">sed</span></code> does the test transformation for our initial <code class="docutils literal notranslate"><span class="pre">.mdin</span></code> file.</p>
-<p>:::
-:::{tab-item} Section 2 - WEET</p>
+</div>
+<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Section 2 - WEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Section 2</span>
 <span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="sb">`</span>seq<span class="w"> </span>-w<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">20</span><span class="sb">`</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
 mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$i</span>
@@ -988,17 +1006,19 @@ ln<span class="w"> </span>-sf<span class="w"> </span>../input/step6.00_equilibra
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">seq</span> <span class="pre">-w</span> <span class="pre">1</span> <span class="pre">20</span></code> - is just a sequence of number from 1 to 20. The <code class="docutils literal notranslate"><span class="pre">-w</span></code> flag  pads the number with a <code class="docutils literal notranslate"><span class="pre">0</span></code> so all numbers are equal width.</p>
 <p>In <code class="docutils literal notranslate"><span class="pre">bash</span></code> when you wrap a command in backtick (`), you can use the standard output of this command as the input, so this line is saying:</p>
-<p>for every NUMBER in NUMBERS (NUMBERS = list from 00, 01,02,03…. all the way to 20); do <strong>THIS</strong></p>
+<p>for every NUMBER in NUMBERS (NUMBERS = list from 00, 01,02,03… all the way to 20); do <strong>THIS</strong></p>
 <p><strong>THIS</strong> meaning:</p>
 <ol class="arabic simple">
 <li><p>Make a directory for “NUMBER”</p></li>
 <li><p>Go into the directory, - &gt; “NUMBER”</p></li>
-<li><p>Make a symbolic link to these files…..</p></li>
+<li><p>Make a symbolic link to these files…</p></li>
 <li><p>leave directory,</p></li>
 <li><p>done, GO BACK TO BEGINNING OF LOOP AND GET NEXT NUMBER. THEN REPEAT CYCLE UNTIL LIST IS DONE</p></li>
 </ol>
-<p>:::
-:::{tab-item} Section 3 - YEET</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+Section 3 - YEET</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># Section 3</span>
 cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><span class="m">00</span>/step5.00_equilibration_inp.rst7
 
@@ -1019,8 +1039,8 @@ cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><s
 <p><code class="docutils literal notranslate"><span class="pre">do</span></code> is on a new line, but recall that the <code class="docutils literal notranslate"><span class="pre">;</span></code> also means new line!</p>
 <p><code class="docutils literal notranslate"><span class="pre">nn=$(printf</span> <span class="pre">&quot;%.2f&quot;</span> <span class="pre">&quot;$n&quot;)</span></code> says nn is the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> to two decimal places.</p>
 <p>In <code class="docutils literal notranslate"><span class="pre">bash</span></code> when you want to use the standard output as a variable you can wrap the command in backticks (`) or us the “<code class="docutils literal notranslate"><span class="pre">$(....)</span></code>” notation. They both do the same thing. *we saw the backticks ealier for the <code class="docutils literal notranslate"><span class="pre">seq</span></code> command. The command that is being wrapped is just <code class="docutils literal notranslate"><span class="pre">printf</span></code>, or print format, where the format of <code class="docutils literal notranslate"><span class="pre">$n</span></code> is a <strong>f</strong>loating point type, and the “.2” says only show the first 2 digits after the point. Example: <code class="docutils literal notranslate"><span class="pre">n=-2.0</span></code> then <code class="docutils literal notranslate"><span class="pre">printf</span></code> make <code class="docutils literal notranslate"><span class="pre">nn=-2.00</span></code>. Then you use <code class="docutils literal notranslate"><span class="pre">sed</span></code> to transform <code class="docutils literal notranslate"><span class="pre">__REST__</span></code> to <code class="docutils literal notranslate"><span class="pre">nn=-2.00</span></code> and output <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> this file to <code class="docutils literal notranslate"><span class="pre">${i}</span></code> which is the <strong>UMBRELLA WINDOW</strong>. Finally, last line of the loop will add <code class="docutils literal notranslate"><span class="pre">n=-2.00</span></code> + <code class="docutils literal notranslate"><span class="pre">0.20</span></code>, changing the value of <code class="docutils literal notranslate"><span class="pre">n</span></code> to <code class="docutils literal notranslate"><span class="pre">n=-1.80</span></code> for window <code class="docutils literal notranslate"><span class="pre">01/</span></code>.</p>
-<p>:::
-::::</p>
+</div>
+</div>
 <p>I hope that wasn’t too bad, you can run the script by typing:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>gen_inputs.in
 </pre></div>
@@ -1033,15 +1053,17 @@ cp<span class="w"> </span>../input/step3_pbcsetup.rst7<span class="w"> </span><s
 </section>
 <hr class="docutils" />
 <section id="running-the-qm-mm-simulations">
-<h2><span class="section-number">1.1.3.6. </span>Running the QM/MM Simulations<a class="headerlink" href="#running-the-qm-mm-simulations" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3.3.6. </span>Running the QM/MM Simulations<a class="headerlink" href="#running-the-qm-mm-simulations" title="Link to this heading">#</a></h2>
 <p>We have 2 files to make.</p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code> - for <code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.mdin</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">runqmmm2.slurm</span></code> - for <code class="docutils literal notranslate"><span class="pre">step6.00_equilibration.mdin</span></code></p></li>
 </ol>
 <p>Submit <code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code> to Slurm.</p>
-<p>::::{tab-set}
-:::{tab-item} runqmmm1.slurm</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-6">
+runqmmm1.slurm</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=express</span>
 <span class="c1">#SBATCH --nodes=1</span>
@@ -1084,8 +1106,10 @@ date
 <li><p><strong>STEP 2.</strong> <code class="docutils literal notranslate"><span class="pre">printf</span> <span class="pre">-v</span> <span class="pre">j</span> <span class="pre">&quot;%02d&quot;</span> </code><strong>STEP 1.</strong> is print formt to a padded zero <em>if single digit</em> and make this variable “<code class="docutils literal notranslate"><span class="pre">$j</span></code>”</p></li>
 </ul>
 <p>The last thing we do is use then coordintates from this run as the initial coorindates for the next window! Leave go to the next window, and REPEATTTTTTTT</p>
-<p>:::
-::::{tab-item} runqmmm2.slurm</p>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-7">
+runqmmm2.slurm</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --partition=express</span>
 <span class="c1">#SBATCH --nodes=1</span>
@@ -1116,23 +1140,25 @@ date
 </pre></div>
 </div>
 <p><span style="align:center; font-size:2em;"><strong>READ ME</strong></span></p>
-<p>A lot more simple that <code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code>. Normally, I <strong>DO NOT</strong> use a loop to cover every window. I would use Slurm arrays and have each window be submitted as its own job. But since this is a really small system. it will finish in the express node.
-:::
-::::</p>
+<p>A lot more simple that <code class="docutils literal notranslate"><span class="pre">runqmmm1.slurm</span></code>. Normally, I <strong>DO NOT</strong> use a loop to cover every window. I would use Slurm arrays and have each window be submitted as its own job. But since this is a really small system. it will finish in the express node.</p>
+<div class="docutils">
+</div>
+</div>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><code class="docutils literal notranslate"><span class="pre">step5.00_equilibration.mdin</span></code></p>
-<p>The first step where we need generate the intial pathway will take a lot of time…..</p>
+<p>The first step where we need generate the intial pathway will take a lot of time…</p>
 </div>
 </section>
 <hr class="docutils" />
 <section id="visualize-the-trajectories">
-<h2><span class="section-number">1.1.3.7. </span>Visualize the Trajectories<a class="headerlink" href="#visualize-the-trajectories" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3.3.7. </span>Visualize the Trajectories<a class="headerlink" href="#visualize-the-trajectories" title="Link to this heading">#</a></h2>
 <p>Prep some stuff from vmd here or converting</p>
 </section>
 <hr class="docutils" />
 <section id="free-energy-profile-with-mbar">
-<h2><span class="section-number">1.1.3.8. </span>Free Energy Profile with MBAR<a class="headerlink" href="#free-energy-profile-with-mbar" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3.3.8. </span>Free Energy Profile with MBAR<a class="headerlink" href="#free-energy-profile-with-mbar" title="Link to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>I do not know if this works on Windows, so try this on pete first!</p>
@@ -1143,17 +1169,17 @@ date
 </ul>
 <p>For this analysis, I copy the <code class="docutils literal notranslate"><span class="pre">mbar.ipynb</span></code> to the project’s <code class="docutils literal notranslate"><span class="pre">mbar/</span></code> folder</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">mbar.ipynb</span></code> noteboook looks like this, in the refernce file, you can see a pdf file containing th the output from my analysis</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">AutoMinorLocator</span><span class="p">,</span> <span class="n">LogLocator</span><span class="p">,</span> <span class="n">NullFormatter</span>
-<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
-<span class="kn">from</span> <span class="nn">sklearn.utils</span> <span class="kn">import</span> <span class="n">resample</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">AutoMinorLocator</span><span class="p">,</span> <span class="n">LogLocator</span><span class="p">,</span> <span class="n">NullFormatter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">glob</span><span class="w"> </span><span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">resample</span>
 
-<span class="kn">import</span> <span class="nn">pymbar</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pymbar</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;/Users/van/Scripts/&quot;</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">mbar_pmf</span> <span class="kn">import</span> <span class="n">mbar_pmf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mbar_pmf</span><span class="w"> </span><span class="kn">import</span> <span class="n">mbar_pmf</span>
 
 <span class="n">n_windows</span> <span class="o">=</span> <span class="mi">21</span> 
 <span class="n">val_kn</span> <span class="o">=</span> <span class="p">[]</span>
@@ -1222,7 +1248,7 @@ date
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1231,7 +1257,7 @@ date
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.1.2. </span>Applying Distance Restraints in Classical MD Simulations</p>
+        <p class="prev-next-title"><span class="section-number">3.3.2. </span>Applying Distance Restraints in Classical MD Simulations</p>
       </div>
     </a>
     <a class="right-next"
@@ -1239,7 +1265,7 @@ date
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.2. </span>Analysis</p>
+        <p class="prev-next-title"><span class="section-number">3.4. </span>Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1259,20 +1285,20 @@ date
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">1.1.3.1. Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">1.1.3.2. Prepare Project Folder on the Cluster</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directories-flow-structure-organization">1.1.3.3. Directories: Flow, Structure, &amp; Organization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-files-to-input-directory">1.1.3.4. Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">1.1.3.4.1. Generate Parameters for Allyl Vinyl Ether</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files-cv-rst">1.1.3.4.2. Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-of-cv-rst">1.1.3.4.3. Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">1.1.3.4.4. QM/MM MD Input files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-iqmol-to-make-an-allyl-vinyl-ether-pdb">3.3.3.1. Use IQmol to Make an <code class="docutils literal notranslate"><span class="pre">allyl_vinyl_ether.pdb</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-project-folder-on-the-cluster">3.3.3.2. Prepare Project Folder on the Cluster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directories-flow-structure-organization">3.3.3.3. Directories: Flow, Structure, &amp; Organization</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-files-to-input-directory">3.3.3.4. Reference Files to <code class="docutils literal notranslate"><span class="pre">input/</span></code> Directory</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-parameters-for-allyl-vinyl-ether">3.3.3.4.1. Generate Parameters for Allyl Vinyl Ether</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files-cv-rst">3.3.3.4.2. Restraint Files <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notation-of-cv-rst">3.3.3.4.3. Notation of <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qm-mm-md-input-files">3.3.3.4.4. QM/MM MD Input files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">1.1.3.5. Automate the Umbrella Windows</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">1.1.3.6. Running the QM/MM Simulations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">1.1.3.7. Visualize the Trajectories</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">1.1.3.8. Free Energy Profile with MBAR</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automate-the-umbrella-windows">3.3.3.5. Automate the Umbrella Windows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-qm-mm-simulations">3.3.3.6. Running the QM/MM Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-the-trajectories">3.3.3.7. Visualize the Trajectories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#free-energy-profile-with-mbar">3.3.3.8. Free Energy Profile with MBAR</a></li>
 </ul>
   </nav></div>
 
@@ -1298,8 +1324,8 @@ date
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1319,7 +1345,7 @@ date
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
@@ -1332,7 +1358,7 @@ date
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
 </p></div>
       
     </div>
