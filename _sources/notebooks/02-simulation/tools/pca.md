@@ -7,7 +7,8 @@ keywords: principal, component, analysis, pca, dimension, reduction, dimensional
 - example with PyTraj
 
 
-```{literalinclude} ../../
- ../../_external/amberassist/ambertools/pytraj/pca.py
+```{literalinclude} ../../../_external/amberassist/ambertools/pytraj/pca.py 
+:language: python
+:linenos:
 ```
 
