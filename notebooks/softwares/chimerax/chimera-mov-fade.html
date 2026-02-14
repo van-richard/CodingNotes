@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Fading &#8212; CodingNotes</title>
+    <title>4.3. Fading &#8212; CodingNotes</title>
   
   
   
@@ -16,28 +16,31 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
@@ -53,14 +56,17 @@
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/softwares/chimerax/chimera-mov-fade';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/softwares/chimerax/chimera-mov-fade.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4. Morphing" href="chimera-mov-morph.html" />
-    <link rel="prev" title="2. Saving Images" href="chimera-img-save.html" />
+    <link rel="next" title="4.4. Morphing" href="chimera-mov-morph.html" />
+    <link rel="prev" title="4.2. Saving Images" href="chimera-img-save.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -76,19 +82,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -96,7 +91,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search mee!!"
          aria-label="Search mee!!"
          autocomplete="off"
@@ -104,8 +98,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -139,7 +133,7 @@
     
     
     <img src="../../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../../_static/van-abstract-y-dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../../_static/van-abstract-y-dark.svg" class="logo__image only-dark pst-js-only" alt=""/>
   
   
     <p class="title logo__title">CodingNotes</p>
@@ -194,29 +188,21 @@
         <div class="navbar-item navbar-persistent--container">
           
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
         </div>
       
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
@@ -279,28 +265,20 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
     </div>
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -319,7 +297,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -433,63 +412,63 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../linux.html">linux</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/awk.html">1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/cat.html">2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/cd.html">3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/chsh.html">4. chsh - change shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/cp.html">5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/echo.html">6. <code class="docutils literal notranslate"><span class="pre">echo</span></code> - Print Argument</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/grep.html">7. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/head.html">8. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/help.html">9. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/less.html">10. <code class="docutils literal notranslate"><span class="pre">less</span></code> - view files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/ls.html">11. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/lsblk.html">12. <code class="docutils literal notranslate"><span class="pre">lsblk</span></code> - list filesystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/lscpu.html">13. lscpu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/man.html">14. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/mkdir.html">15. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/module.html">16. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/mount.html">17. <code class="docutils literal notranslate"><span class="pre">mount</span></code> - mount filesystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/mv.html">18. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/pwd.html">19. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print working directory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/rm.html">20. <code class="docutils literal notranslate"><span class="pre">rm</span></code> - delete files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/rsync.html">21. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/sbatch.html">22. <code class="docutils literal notranslate"><span class="pre">sbatch</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/scancel.html">23. <code class="docutils literal notranslate"><span class="pre">scancel</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/scp.html">24. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/sed.html">25. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/seq.html">26. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/setfacl.html">27. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/sinfo.html">28. <code class="docutils literal notranslate"><span class="pre">sinfo</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/sort.html">29. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/ssh.html">30. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> - secure shell protocol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/ssh-keygen.html">31. <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> - Make SSH key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/tail.html">32. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/tar.html">33. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/touch.html">34. <code class="docutils literal notranslate"><span class="pre">touch</span></code> - Make File</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../commands/trap.html">35. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../linux.html">1. linux</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/awk.html">1.1. <code class="docutils literal notranslate"><span class="pre">awk</span></code> - manipulate text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/cat.html">1.2. <code class="docutils literal notranslate"><span class="pre">cat</span></code> - print input to standard output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/cd.html">1.3. <code class="docutils literal notranslate"><span class="pre">cd</span></code> - change directories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/chsh.html">1.4. chsh - change shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/cp.html">1.5. <code class="docutils literal notranslate"><span class="pre">cp</span></code> - copy files or folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/echo.html">1.6. <code class="docutils literal notranslate"><span class="pre">echo</span></code> - Print Argument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/grep.html">1.7. <code class="docutils literal notranslate"><span class="pre">grep</span></code> - search for pattern in file or folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/head.html">1.8. <code class="docutils literal notranslate"><span class="pre">head</span></code> - read from top of file to standard output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/help.html">1.9. <code class="docutils literal notranslate"><span class="pre">help</span></code> - read documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/less.html">1.10. <code class="docutils literal notranslate"><span class="pre">less</span></code> - view files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/ls.html">1.11. <code class="docutils literal notranslate"><span class="pre">ls</span></code> - list information about files/folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/lsblk.html">1.12. <code class="docutils literal notranslate"><span class="pre">lsblk</span></code> - list filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/lscpu.html">1.13. lscpu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/man.html">1.14. <code class="docutils literal notranslate"><span class="pre">man</span></code> - documentation for various functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/mkdir.html">1.15. <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> - make new directories.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/module.html">1.16. <code class="docutils literal notranslate"><span class="pre">module</span></code> - load software on slurm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/mount.html">1.17. <code class="docutils literal notranslate"><span class="pre">mount</span></code> - mount filesystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/mv.html">1.18. <code class="docutils literal notranslate"><span class="pre">mv</span></code> - move files/folders from one place to another.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/pwd.html">1.19. <code class="docutils literal notranslate"><span class="pre">pwd</span></code> - print working directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/rm.html">1.20. <code class="docutils literal notranslate"><span class="pre">rm</span></code> - delete files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/rsync.html">1.21. <code class="docutils literal notranslate"><span class="pre">rsync</span></code> - sync files/folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/sbatch.html">1.22. <code class="docutils literal notranslate"><span class="pre">sbatch</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/scancel.html">1.23. <code class="docutils literal notranslate"><span class="pre">scancel</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/scp.html">1.24. <code class="docutils literal notranslate"><span class="pre">scp</span></code> - copy files/folders over ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/sed.html">1.25. <code class="docutils literal notranslate"><span class="pre">sed</span></code> - tranform/replace text!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/seq.html">1.26. <code class="docutils literal notranslate"><span class="pre">seq</span></code> - sequence of numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/setfacl.html">1.27. <code class="docutils literal notranslate"><span class="pre">setfacl</span></code> - change file/folder permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/sinfo.html">1.28. <code class="docutils literal notranslate"><span class="pre">sinfo</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/sort.html">1.29. <code class="docutils literal notranslate"><span class="pre">sort</span></code> - sorts lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/ssh.html">1.30. <code class="docutils literal notranslate"><span class="pre">ssh</span></code> - secure shell protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/ssh-keygen.html">1.31. <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> - Make SSH key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/tail.html">1.32. <code class="docutils literal notranslate"><span class="pre">tail</span></code> - read from bottom of file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/tar.html">1.33. <code class="docutils literal notranslate"><span class="pre">tar</span></code> - compress/uncompress files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/touch.html">1.34. <code class="docutils literal notranslate"><span class="pre">touch</span></code> - Make File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../commands/trap.html">1.35. <code class="docutils literal notranslate"><span class="pre">trap</span></code> - signalled execution</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../apptainer/apptainer.html">1. apptainer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../apptainer/app-build.html">1.1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../apptainer/app-run.html">1.2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../apptainer/app-shell.html">1.3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../apptainer/app-instance.html">1.4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../apptainer/apptainer.html">2. apptainer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../apptainer/app-build.html">2.1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apptainer/app-run.html">2.2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apptainer/app-shell.html">2.3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../apptainer/app-instance.html">2.4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
 </ul>
 </details></li>
 
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="chimera.html">ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chimera-cli-overview.html">1. ChimeraX Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-img-save.html">2. Saving Images</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3. Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-morph.html">4. Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-rock.html">5. Rocking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-spin.html">6. Spin</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="chimera.html">4. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chimera-cli-overview.html">4.1. ChimeraX Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera-img-save.html">4.2. Saving Images</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera-mov-morph.html">4.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera-mov-rock.html">4.5. Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera-mov-spin.html">4.6. Spin</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../ffmpeg.html">3. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gnu-parallel.html">4. GNU Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ffmpeg.html">5. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gnu-parallel.html">6. GNU Parallel</a></li>
 </ul>
 </div>
 </nav></div>
@@ -497,9 +476,14 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -517,8 +501,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -531,9 +513,9 @@ document.write(`
     <li class="breadcrumb-item"><a href="../../morenotes.html" class="nav-link">More Notes !!</a></li>
     
     
-    <li class="breadcrumb-item"><a href="chimera.html" class="nav-link">ChimeraX</a></li>
+    <li class="breadcrumb-item"><a href="chimera.html" class="nav-link"><span class="section-number">4. </span>ChimeraX</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">4.3. </span>Fading</span></li>
   </ul>
 </nav>
 </div>
@@ -551,7 +533,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fading">
-<h1><span class="section-number">3. </span>Fading<a class="headerlink" href="#fading" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4.3. </span>Fading<a class="headerlink" href="#fading" title="Link to this heading">#</a></h1>
 <center><video src="https://github.com/van-richard/CodingNotes/blob/531e36ca915575b44ae17e409cd825be4780842e/_static/videos/chimerax_fade_cas9.mp4" width="50%" height="50%" center controls>
 </video></center>
 <p>The code looks like:</p>
@@ -605,7 +587,7 @@ wait [frames] - wait this number of frames before executing next line</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Saving Images</p>
+        <p class="prev-next-title"><span class="section-number">4.2. </span>Saving Images</p>
       </div>
     </a>
     <a class="right-next"
@@ -613,7 +595,7 @@ wait [frames] - wait this number of frames before executing next line</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Morphing</p>
+        <p class="prev-next-title"><span class="section-number">4.4. </span>Morphing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -624,17 +606,18 @@ wait [frames] - wait this number of frames before executing next line</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../../_sources/notebooks/softwares/chimerax/chimera-mov-fade.md">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/notebooks/softwares/chimerax/chimera-mov-fade.md"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -649,8 +632,8 @@ wait [frames] - wait this number of frames before executing next line</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -670,7 +653,7 @@ wait [frames] - wait this number of frames before executing next line</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -683,7 +666,8 @@ wait [frames] - wait this number of frames before executing next line</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>
