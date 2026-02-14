@@ -1,4 +1,6 @@
-
+---
+keywords: cat, bash
+---
 
 # `cat` - print input to standard output
 

@@ -1,5 +1,5 @@
 ---
-keywords: print, column, text, tabulate, table, txt, specific, column
+keywords: print, column, text, tabulate, table, txt, specific, column, awk
 ---
 
 # `awk` - manipulate text

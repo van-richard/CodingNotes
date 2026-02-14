@@ -84,3 +84,4 @@ plt.savefig("img/pmf-mbar-k866a-convergence.png", dpi=300, bbox_inches='tight')
 print(round(initial[:,1].max() - initial[:10,1].min(),1), round(initial[initial[:,1].argmax()][2],1))
 
 ```
+

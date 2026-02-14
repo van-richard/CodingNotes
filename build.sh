@@ -1,9 +1,12 @@
 #!/bin/bash
 
-shopt -s expand_aliases
-source ~/.bash_aliases
 
+mf
 conda activate webdev
+
+cd _external/amberassist
+git pull
+cd -
 
 #jb build ./ --all
 sphinx-build ./ _build/html
