@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5. GNU Parallel &#8212; CodingNotes</title>
+    <title>6. GNU Parallel &#8212; CodingNotes</title>
   
   
   
@@ -62,7 +62,7 @@
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/softwares/gnu-parallel.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="4. ffmpeg: Movies" href="ffmpeg.html" />
+    <link rel="prev" title="5. ffmpeg: Movies" href="ffmpeg.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -454,17 +454,17 @@
 </ul>
 </details></li>
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="chimerax/chimera.html">ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-cli-overview.html">1. ChimeraX Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-img-save.html">2. Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-mov-fade.html">3. Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-mov-morph.html">4. Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-mov-rock.html">5. Rocking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-mov-spin.html">6. Spin</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="chimerax/chimera.html">4. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-cli-overview.html">4.1. ChimeraX Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-img-save.html">4.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-mov-fade.html">4.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-mov-morph.html">4.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-mov-rock.html">4.5. Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimerax/chimera-mov-spin.html">4.6. Spin</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="ffmpeg.html">4. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. GNU Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ffmpeg.html">5. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. GNU Parallel</a></li>
 </ul>
 </div>
 </nav></div>
@@ -508,7 +508,7 @@
     
     <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link">More Notes !!</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">5. </span>GNU Parallel</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">6. </span>GNU Parallel</span></li>
   </ul>
 </nav>
 </div>
@@ -526,7 +526,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="gnu-parallel">
-<h1><span class="section-number">5. </span>GNU Parallel<a class="headerlink" href="#gnu-parallel" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">6. </span>GNU Parallel<a class="headerlink" href="#gnu-parallel" title="Link to this heading">#</a></h1>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>If you write loops in shell, GNU parallel can replace them (while being faster)!</p>
@@ -537,7 +537,7 @@
 <li><p>Helpful for running repetitive tasks or utilizing computing resources better</p></li>
 </ul>
 <section id="running-parallel-on-hpcs">
-<h2><span class="section-number">5.1. </span>Running Parallel on HPCs<a class="headerlink" href="#running-parallel-on-hpcs" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.1. </span>Running Parallel on HPCs<a class="headerlink" href="#running-parallel-on-hpcs" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Most clusters should have one installed, check with <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">av</span></code> or <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">spider</span> <span class="pre">parallel</span></code>, if available then <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code></p></li>
 <li><p>You can also install your own. Here is an example, installed into <code class="docutils literal notranslate"><span class="pre">~/Programs</span></code></p>
@@ -554,7 +554,7 @@
 </ul>
 </section>
 <section id="parallel-umbrella-sampling-windows-for-md-simulations">
-<h2><span class="section-number">5.2. </span>Parallel Umbrella Sampling Windows for MD Simulations<a class="headerlink" href="#parallel-umbrella-sampling-windows-for-md-simulations" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.2. </span>Parallel Umbrella Sampling Windows for MD Simulations<a class="headerlink" href="#parallel-umbrella-sampling-windows-for-md-simulations" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH -p long</span>
 <span class="c1">#SBATCH -t 5-00:00:00</span>
@@ -614,7 +614,7 @@ date
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span><code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</p>
+        <p class="prev-next-title"><span class="section-number">5. </span><code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</p>
       </div>
     </a>
 </div>
@@ -634,8 +634,8 @@ date
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-parallel-on-hpcs">5.1. Running Parallel on HPCs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-umbrella-sampling-windows-for-md-simulations">5.2. Parallel Umbrella Sampling Windows for MD Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-parallel-on-hpcs">6.1. Running Parallel on HPCs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-umbrella-sampling-windows-for-md-simulations">6.2. Parallel Umbrella Sampling Windows for MD Simulations</a></li>
 </ul>
   </nav></div>
 
