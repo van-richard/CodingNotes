@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Applying Distance Restraints in Classical MD Simulations &#8212; CodingNotes</title>
+    <title>6.2. Applying Distance Restraints in Classical MD Simulations &#8212; CodingNotes</title>
   
   
   
@@ -62,8 +62,8 @@
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/04-simulation/distance.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3. QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
-    <link rel="prev" title="1. Simple MD Tutorial of Alanine Dipeptide" href="simple.html" />
+    <link rel="next" title="6.3. QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
+    <link rel="prev" title="6.1. Simple MD Tutorial of Alanine Dipeptide" href="simple.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -440,29 +440,29 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="theory.html">Theory / Methods Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">1. Theory / Methods Overview</a></li>
 
 
 
 
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tutorial.html">3.6. Tutorial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="simple.html">1. Simple MD Tutorial of Alanine Dipeptide</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2. Applying Distance Restraints in Classical MD Simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="claisen.html">3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tutorial.html">6. Tutorial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simple.html">6.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.2. Applying Distance Restraints in Classical MD Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="claisen.html">6.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="tools/2drmsd.html">1. Pairwise RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/antechamber.html">2. Antechamber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-dry.html">3. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">4. parmchk2.sh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">5. parmed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">6. Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">7. Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">8. RDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rmsd.html">9. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">10. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/tleap.html">11. tleap</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">7. Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/2drmsd.html">7.1. Pairwise RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/antechamber.html">7.2. Antechamber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-dry.html">7.3. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">7.4. parmchk2.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">7.5. parmed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">7.6. Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">7.7. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">7.8. RDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsd.html">7.9. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">7.10. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/tleap.html">7.11. tleap</a></li>
 </ul>
 </details></li>
 </ul>
@@ -506,12 +506,12 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="toc.html" class="nav-link"><span class="section-number">3. </span>simulation</a></li>
+    <li class="breadcrumb-item"><a href="toc.html" class="nav-link">simulation</a></li>
     
     
-    <li class="breadcrumb-item"><a href="tutorial.html" class="nav-link"><span class="section-number">3.6. </span>Tutorial</a></li>
+    <li class="breadcrumb-item"><a href="tutorial.html" class="nav-link"><span class="section-number">6. </span>Tutorial</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">2. </span>Applying Distance Restraints in Classical MD Simulations</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">6.2. </span>Applying Distance Restraints in Classical MD Simulations</span></li>
   </ul>
 </nav>
 </div>
@@ -529,14 +529,14 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="applying-distance-restraints-in-classical-md-simulations">
-<h1><span class="section-number">2. </span>Applying Distance Restraints in Classical MD Simulations<a class="headerlink" href="#applying-distance-restraints-in-classical-md-simulations" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">6.2. </span>Applying Distance Restraints in Classical MD Simulations<a class="headerlink" href="#applying-distance-restraints-in-classical-md-simulations" title="Link to this heading">#</a></h1>
 <p>We can apply restraints to atoms or residues if we are interested in modelling a specific process such as diffusion or binding.</p>
 <p>Building on from the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial, the goal here is to simulate the process of 2 Alanine Dipeptide molecules slowly diffusing away from each other using <code class="docutils literal notranslate"><span class="pre">sander</span></code> in the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="_static/videos/distance.mov"><img alt="_static/videos/distance.mov" src="_static/videos/distance.mov" style="width: 50%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In this tutorial, we will:</p>
@@ -557,7 +557,7 @@
 </ul>
 </div>
 <section id="prepare-files-folders">
-<h2><span class="section-number">2.1. </span>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.2.1. </span>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Link to this heading">#</a></h2>
 <p>Make a project folder, called “distance” in the <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code> directory, and change to that directory. <em>Optionally, if you downloaded the reference file, we will move <code class="docutils literal notranslate"><span class="pre">distance.tar.bz2</span></code> into the reference folder.</em></p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
@@ -585,7 +585,7 @@ mkdir<span class="w"> </span>distance<span class="w">            </span><span cl
 </div>
 </section>
 <section id="make-topology-and-coordinate-files">
-<h2><span class="section-number">2.2. </span>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.2.2. </span>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Link to this heading">#</a></h2>
 <p>Similar to the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial. We use <code class="docutils literal notranslate"><span class="pre">leap</span></code> to prepare our Amber topology and coordinate file. Since Alanine Dipeptide is still an amino acid, we can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate the topology (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code>) and coordinate files(<code class="docutils literal notranslate"><span class="pre">.rst7</span></code>). The <code class="docutils literal notranslate"><span class="pre">tleap</span></code> program contains reference coordinates for standard residues to generate  missing atoms, this function is base on the residue name.</p>
 <p>Give <code class="docutils literal notranslate"><span class="pre">tleap</span></code> instructions by making a file called “<a class="reference external" href="http://tleap.in">tleap.in</a>” containing:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
@@ -642,7 +642,7 @@ quit
 </div>
 </section>
 <section id="prepare-md-inputs-simulation-settings">
-<h2><span class="section-number">2.3. </span>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.2.3. </span>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Link to this heading">#</a></h2>
 <p>Prepare 2 MD input files, <code class="docutils literal notranslate"><span class="pre">min.mdin</span></code>, and <code class="docutils literal notranslate"><span class="pre">heat.mdin</span></code>. These files contain the settings for the first stage of the simulations.</p>
 <ol class="arabic simple">
 <li><p>Minimization</p></li>
@@ -714,7 +714,7 @@ heat.mdin</label><div class="sd-tab-content docutils">
 </div>
 </div>
 <section id="restraint-files">
-<h3><span class="section-number">2.3.1. </span>Restraint Files<a class="headerlink" href="#restraint-files" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.2.3.1. </span>Restraint Files<a class="headerlink" href="#restraint-files" title="Link to this heading">#</a></h3>
 <p>To apply a distance restraint, I typically use the Umbrella Sampling approach. If I avoid all the gritty details, the setup only requires 1 additional restraint file (<code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>) for each restraint value.</p>
 <p>If our initial distance between the 2 molecules is 5 Å, and the goal is to observe some property of the system when the distance is 15 Å. Then I want to sample some distances &lt; 5 Å and increment that distance at some value until I reach 15 Å. The increment between distance will depend on the system and property you’re studying.</p>
 <p>Since this is a simple example, we will start with a restraint value of 4 Å and increment this by 4, until we reach 16 Å (i.e.,** our restraint values are 4, 8, 12,and 16 Å**)</p>
@@ -826,7 +826,7 @@ Template for “cv.rst”</label><div class="sd-tab-content docutils">
 </section>
 </section>
 <section id="run-md-with-bash-script">
-<h2><span class="section-number">2.4. </span>Run MD with Bash Script<a class="headerlink" href="#run-md-with-bash-script" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.2.4. </span>Run MD with Bash Script<a class="headerlink" href="#run-md-with-bash-script" title="Link to this heading">#</a></h2>
 <p>Instead of running each simulation one command at a time (like we did in the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial), we can write a script to run it for us! Make a file called, <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">runmd.sh</span></code> with:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
@@ -879,7 +879,7 @@ date
 <p><strong>PHEWWWW</strong>*, that was kind of confusing, huh?</p>
 </section>
 <section id="visualize-and-analysis">
-<h2><span class="section-number">2.5. </span>Visualize and Analysis<a class="headerlink" href="#visualize-and-analysis" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.2.5. </span>Visualize and Analysis<a class="headerlink" href="#visualize-and-analysis" title="Link to this heading">#</a></h2>
 <p>Now you can visual the results with VMD or Chimera, and perform some analysis.</p>
 </section>
 </section>
@@ -919,7 +919,7 @@ date
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Simple MD Tutorial of Alanine Dipeptide</p>
+        <p class="prev-next-title"><span class="section-number">6.1. </span>Simple MD Tutorial of Alanine Dipeptide</p>
       </div>
     </a>
     <a class="right-next"
@@ -927,7 +927,7 @@ date
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>QM/MM Simulation of the Claisen Rearrangment Reaction</p>
+        <p class="prev-next-title"><span class="section-number">6.3. </span>QM/MM Simulation of the Claisen Rearrangment Reaction</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -948,14 +948,14 @@ date
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">2.1. Prepare Files &amp; Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">2.2. Make Topology and Coordinate Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">2.3. Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">2.3.1. Restraint Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">6.2.1. Prepare Files &amp; Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">6.2.2. Make Topology and Coordinate Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">6.2.3. Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">6.2.3.1. Restraint Files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">2.4. Run MD with Bash Script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">2.5. Visualize and Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">6.2.4. Run MD with Bash Script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">6.2.5. Visualize and Analysis</a></li>
 </ul>
   </nav></div>
 

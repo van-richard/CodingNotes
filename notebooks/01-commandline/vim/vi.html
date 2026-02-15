@@ -453,10 +453,10 @@
 <li class="toctree-l2"><a class="reference internal" href="vi-vimrc.html">2.7. My dotfile</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../git/git.html"><code class="docutils literal notranslate"><span class="pre">git</span></code>: Version Control</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../git/git-branch.html">1. Branching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../git/git-ccats.html">2. <code class="docutils literal notranslate"><span class="pre">git</span></code> Examples (CC-ATS)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../git/git-pullpush.html">3. General Use Cases</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../git/git.html">3. <code class="docutils literal notranslate"><span class="pre">git</span></code>: Version Control</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../git/git-branch.html">3.4. Branching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/git-ccats.html">3.5. <code class="docutils literal notranslate"><span class="pre">git</span></code> Examples (CC-ATS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../git/git-pullpush.html">3.6. General Use Cases</a></li>
 </ul>
 </details></li>
 </ul>
@@ -519,7 +519,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="vi-vim-text-editing">
+  <section id="vi-vim-text-editing">
 <h1><span class="section-number">2. </span><code class="docutils literal notranslate"><span class="pre">vi/vim</span></code>: Text Editing<a class="headerlink" href="#vi-vim-text-editing" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">vi/vim</span> </code>are both text editors for the CLI</p></li>
@@ -537,7 +537,7 @@
 <li><p>To exit, press <code class="docutils literal notranslate"><span class="pre">esc</span></code> then <code class="docutils literal notranslate"><span class="pre">:q</span></code> or <code class="docutils literal notranslate"><span class="pre">:q!</span></code></p></li>
 <li><p>Additional commands are shown below:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Commands to manage files</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">## Commands to manage files</span>
 <span class="w">    </span>vi<span class="w"> </span>&lt;filename&gt;<span class="w">     </span><span class="c1"># Open &lt;filename&gt; in vim</span>
 <span class="w">    </span>:help<span class="w"> </span>&lt;topic&gt;<span class="w">     </span><span class="c1"># Open up built-in help docs about &lt;topic&gt; if any exists</span>
 <span class="w">    </span>:q<span class="w">                </span><span class="c1"># Quit vim</span>
@@ -593,7 +593,7 @@
 <li><p>Key or combination of keys on your keyboard can be assigned (bound) with a command</p></li>
 <li><p>Several default key bindings are:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># File Parsing</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">## File Parsing</span>
 <span class="w">    </span>gg<span class="w">                </span><span class="c1"># Go to the top of the file</span>
 <span class="w">    </span>G<span class="w"> </span><span class="o">(</span><span class="nb">shift</span><span class="w"> </span>+<span class="w"> </span>g<span class="o">)</span><span class="w">     </span><span class="c1"># Go to the bottom of the file</span>
 <span class="w">    </span>H<span class="w">                 </span><span class="c1"># Move to the top of the screen</span>
@@ -606,17 +606,17 @@
 <span class="w">    </span>o<span class="w">                 </span><span class="c1"># Make new line below cursor</span>
 <span class="w">    </span>O<span class="w">                 </span><span class="c1"># Make new line above cursor</span>
 
-<span class="c1"># Undo/Redo</span>
+<span class="c1">## Undo/Redo</span>
 <span class="w">    </span>u<span class="w">                 </span><span class="c1"># Undo</span>
 <span class="w">    </span>crtl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>R<span class="w">      </span><span class="c1"># Redo</span>
 
-<span class="c1"># Search for PATTERN - can be any string</span>
+<span class="c1">## Search for PATTERN - can be any string</span>
 <span class="w">    </span>/PATTERN<span class="w">          </span><span class="c1"># Highlights all occurrences of PATTERN after cursor</span>
 <span class="w">    </span>?PATTERN<span class="w">          </span><span class="c1"># Highlights all occurrences of PATTERN before cursor</span>
 <span class="w">    </span>n<span class="w">                 </span><span class="c1"># Moves cursor to next occurrence of PATTERN after search</span>
 <span class="w">    </span>N<span class="w">                 </span><span class="c1"># Moves cursor to previous occurrence PATTERN </span>
 
-<span class="c1"># Scrolling</span>
+<span class="c1">## Scrolling</span>
 <span class="w">    </span>ctrl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>d<span class="w">      </span><span class="c1"># Scroll half page down</span>
 <span class="w">    </span>ctrl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>u<span class="w">      </span><span class="c1"># Scroll half page up</span>
 <span class="w">    </span>ctrl<span class="w"> </span><span class="o">(</span>^<span class="o">)</span><span class="w"> </span>+<span class="w"> </span>f<span class="w">      </span><span class="c1"># Scroll one page forward</span>
@@ -631,10 +631,10 @@
 <li><p>The cursor to move at the bottom of the window in the command box</p></li>
 <li><p>You can then write any command you like and press enter to execute it</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># File Parsing</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">## File Parsing</span>
 <span class="w">    </span>:NUMBER<span class="w">           </span><span class="c1"># Go to line number, NUMBER (i.e. line 10 = :10)</span>
 
-<span class="c1"># Replace PATTERN - like sed command</span>
+<span class="c1">## Replace PATTERN - like sed command</span>
 <span class="w">    </span>:%s/foo/bar/g<span class="w">     </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on every line in the file</span>
 <span class="w">    </span>:s/foo/bar/g<span class="w">      </span><span class="c1"># Change &#39;foo&#39; to &#39;bar&#39; on the current line</span>
 <span class="w">    </span>:%s/<span class="se">\n</span>/<span class="se">\r</span>/g<span class="w">       </span><span class="c1"># Replace new line characters with new line characters</span>

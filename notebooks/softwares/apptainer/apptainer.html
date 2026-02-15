@@ -62,7 +62,7 @@
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/softwares/apptainer/apptainer.html" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="2.1. apptainer build" href="app-build.html" />
+    <link rel="next" title="1. apptainer build" href="app-build.html" />
     <link rel="prev" title="1.4. TorchMDnet-ext Environment (CPU)" href="../../04-simulation/amber-install-torchmdnet.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -448,24 +448,24 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. apptainer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="app-build.html">2.1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="app-run.html">2.2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="app-shell.html">2.3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="app-instance.html">2.4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="app-build.html">1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="app-run.html">2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="app-shell.html">3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="app-instance.html">4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
 </ul>
 </details></li>
 
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chimerax/chimera.html">ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-cli-overview.html">1. ChimeraX Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-img-save.html">2. Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-fade.html">3. Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-morph.html">4. Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-rock.html">5. Rocking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-spin.html">6. Spin</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chimerax/chimera.html">2. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-cli-overview.html">2.1. ChimeraX Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-img-save.html">2.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-fade.html">2.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-morph.html">2.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-rock.html">2.5. Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-spin.html">2.6. Spin</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../ffmpeg.html">4. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gnu-parallel.html">5. GNU Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ffmpeg.html">3. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gnu-parallel.html">4. GNU Parallel</a></li>
 </ul>
 </div>
 </nav></div>
@@ -527,7 +527,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="apptainer">
-<h1><span class="section-number">2. </span>apptainer<a class="headerlink" href="#apptainer" title="Link to this heading">#</a></h1>
+<h1>apptainer<a class="headerlink" href="#apptainer" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>An open-source program enabling operating system virualization (i.e. containerization)</p></li>
 <li><p>Creates a flexible OS environment resulting in portability and reproducibility of softwares</p></li>
@@ -536,30 +536,30 @@
 </ul>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="app-build.html">2.1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="app-run.html">2.2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="app-shell.html">2.3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="app-instance.html">2.4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="app-instance.html#instances">2.4.1. Instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app-build.html">1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="app-run.html">2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="app-shell.html">3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="app-instance.html">4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="app-instance.html#instances">4.1. Instances</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1><span class="section-number">3. </span>Apptainer<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>Apptainer<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>containers for softwares</p></li>
 </ul>
 <section id="build">
-<h2><span class="section-number">3.1. </span>Build<a class="headerlink" href="#build" title="Link to this heading">#</a></h2>
+<h2>Build<a class="headerlink" href="#build" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apptainer<span class="w"> </span>build<span class="w"> </span>ubuntu.sif<span class="w"> </span>ubuntu.def
 sudo<span class="w"> </span>apptainer<span class="w"> </span>build<span class="w"> </span>--sandbox<span class="w"> </span>/tmp/ubuntu<span class="w"> </span>docker://ubuntu:22.04
 </pre></div>
 </div>
 </section>
 <section id="run">
-<h2><span class="section-number">3.2. </span>Run<a class="headerlink" href="#run" title="Link to this heading">#</a></h2>
+<h2>Run<a class="headerlink" href="#run" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apptainer<span class="w"> </span>shell<span class="w"> </span>ubuntu.sif
 apptainer<span class="w"> </span>shell<span class="w"> </span>--contain<span class="w"> </span>--cleanenv<span class="w"> </span>ubuntu.sif<span class="w"> </span>
 </pre></div>
@@ -616,7 +616,7 @@ apptainer<span class="w"> </span>shell<span class="w"> </span>--contain<span cla
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></p>
+        <p class="prev-next-title"><span class="section-number">1. </span><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

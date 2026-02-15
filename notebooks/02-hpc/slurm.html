@@ -62,7 +62,7 @@
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/02-hpc/slurm.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="python" href="../03-python/toc.html" />
+    <link rel="next" title="1. Run Jupyter remotely" href="slurm-jupyter.html" />
     <link rel="prev" title="1. module: Compilers &amp; Softwares" href="module-overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -452,7 +452,8 @@
 <li class="toctree-l2"><a class="reference internal" href="module-overview.html">1. <code class="docutils literal notranslate"><span class="pre">module</span></code>: Compilers &amp; Softwares</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">SLURM</span></code>: HPC Job Manager</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">SLURM</span></code>: HPC Job Manager</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="slurm-jupyter.html">1. Run Jupyter remotely</a></li>
 </ul>
 </details></li>
 </ul>
@@ -515,7 +516,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="slurm-hpc-job-manager">
+  <section id="slurm-hpc-job-manager">
 <h1><code class="docutils literal notranslate"><span class="pre">SLURM</span></code>: HPC Job Manager<a class="headerlink" href="#slurm-hpc-job-manager" title="Link to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Job schedule management on most clusters</p></li>
@@ -570,23 +571,6 @@ CPU Jobs</label><div class="sd-tab-content docutils">
 <input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
 <label class="sd-tab-label" for="sd-tab-item-1">
 GPU Jobs</label><div class="sd-tab-content docutils">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --partition=GPU_PARTITION</span>
-<span class="c1">#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
-<span class="c1">#SBATCH --nodes=NODES</span>
-<span class="c1">#SBATCH --ntasks=NTASKS</span>
-<span class="c1">#SBATCH --output=%j.out </span>
-<span class="c1">#SBATCH --error=%j.err</span>
-<span class="c1">#SBATCH --name=JOBNAME</span>
-<span class="c1">#SBATCH --gres=gpu:1</span>
-
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World!&quot;</span>
-</pre></div>
-</div>
-</div>
-<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">##!/bin/bash</span>
 <span class="c1">##SBATCH --partition=GPU_PARTITION</span>
 <span class="c1">##SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
@@ -595,8 +579,25 @@ Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
 <span class="c1">##SBATCH --output=%j.out </span>
 <span class="c1">##SBATCH --error=%j.err</span>
 <span class="c1">##SBATCH --name=JOBNAME</span>
-<span class="c1">##SBATCH --mem=0</span>
-<span class="c1">##SBATCH --exclusive</span>
+<span class="c1">##SBATCH --gres=gpu:1</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello World!&quot;</span>
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+Exclusive CPU Jobs</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">###!/bin/bash</span>
+<span class="c1">###SBATCH --partition=GPU_PARTITION</span>
+<span class="c1">###SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)</span>
+<span class="c1">###SBATCH --nodes=NODES</span>
+<span class="c1">###SBATCH --ntasks=NTASKS</span>
+<span class="c1">###SBATCH --output=%j.out </span>
+<span class="c1">###SBATCH --error=%j.err</span>
+<span class="c1">###SBATCH --name=JOBNAME</span>
+<span class="c1">###SBATCH --mem=0</span>
+<span class="c1">###SBATCH --exclusive</span>
 
 <span class="nb">echo</span><span class="w"> </span><span class="s2">&quot; Wow you dick.&quot;</span>
 </pre></div>
@@ -673,11 +674,11 @@ squeue<span class="w"> </span>-u<span class="w"> </span>username<span class="w">
       </div>
     </a>
     <a class="right-next"
-       href="../03-python/toc.html"
+       href="slurm-jupyter.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">python</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Run Jupyter remotely</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
