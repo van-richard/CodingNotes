@@ -1,13 +1,22 @@
 # Run Jupyter remotely
 
-```{bash}
-
+```{bash} jupyter.slurm
 #!/bin/bash
+#SBATCH --partition=batch
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --mem=30G
+#SBATCH --output=%j.out
+#SBATCH --error=%j.err
+#SBATCH --time=12:00:00
+#SBATCH --job-name=j
+
+# get tunneling info
 XDG_RUNTIME_DIR=""
 node=$(hostname -s)
 user=$(whoami)
-cluster="localhost"
-port=6969
+cluster="pete.hpc.okstate.edu"
+port=8969
 TOKE="f9a3bd4e9f2c3be01cd629154cfb224c2703181e050254b5"
 
 
@@ -27,7 +36,7 @@ jupyter tunneling instructions
     #### Copy this line into a new terminal on our _local_ computer ####
     ####################################################################
     
-sh -N -L ${port}:${node}:${port} ${user}@${cluster}
+ssh -N -L ${port}:${node}:${port} ${user}@${cluster}
 
 
 2. Use a Browser on your local machine to go to:
@@ -46,13 +55,13 @@ http://127.0.0.1:${port}/lab?token=${TOKE}
 
 echo -e "${instructions}"
 
-#   Start jupyterlab in $HOME
+# Start jupyterlab in $HOME
 cd $HOME
 
 # load modules  here
-eval "$(/home/van/Programs/miniforge3/bin/conda shell.bash hook)"
+eval "$(/home/van/miniforge3/bin/conda shell.bash hook)"
 conda activate 
 
 # Run Jupyter
 jupyter lab --no-browser --port=${port} --ip=${node} --ServerApp.token=${TOKE}
-
+```

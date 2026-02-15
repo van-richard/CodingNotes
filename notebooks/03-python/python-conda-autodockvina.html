@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Create AutoDock Vina Conda Environment on HPC &#8212; CodingNotes</title>
+    <title>4.4. Create AutoDock Vina Conda Environment on HPC &#8212; CodingNotes</title>
   
   
   
@@ -62,8 +62,8 @@
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/03-python/python-conda-autodockvina.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5. Creating New Environments" href="python-conda-env.html" />
-    <link rel="prev" title="3. Intel Environments on M1/M2" href="python-conda-arm-intel.html" />
+    <link rel="next" title="4.5. Creating New Environments" href="python-conda-env.html" />
+    <link rel="prev" title="4.3. Intel Environments on M1/M2" href="python-conda-arm-intel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -440,17 +440,17 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="python-.html">1. overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda.html">2. <code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-arm-intel.html">3. Intel Environments on M1/M2</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Create AutoDock Vina Conda Environment on HPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-env.html">5. Creating New Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyter.html">6. Jupyter Lab / Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyterbook.html">7. DIY GitHub Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-.html">4.1. overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda.html">4.2. <code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-arm-intel.html">4.3. Intel Environments on M1/M2</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.4. Create AutoDock Vina Conda Environment on HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-env.html">4.5. Creating New Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyter.html">4.6. Jupyter Lab / Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyterbook.html">4.7. DIY GitHub Website</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="python-conda-rc.html">9. Conda Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-helplist.html">10. Helpful stuff</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-pandas-latextable.html">11. Convert Pandas DataFrame to LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-rc.html">4.9. Conda Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-helplist.html">4.10. Helpful stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-pandas-latextable.html">4.11. Convert Pandas DataFrame to LaTeX</a></li>
 </ul>
 </div>
 </nav></div>
@@ -492,9 +492,9 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="toc.html" class="nav-link">python</a></li>
+    <li class="breadcrumb-item"><a href="toc.html" class="nav-link"><span class="section-number">4. </span>python</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">4. </span>Create AutoDock Vina Conda Environment on HPC</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">4.4. </span>Create AutoDock Vina Conda Environment on HPC</span></li>
   </ul>
 </nav>
 </div>
@@ -512,7 +512,7 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="create-autodock-vina-conda-environment-on-hpc">
-<h1><span class="section-number">4. </span>Create AutoDock Vina Conda Environment on HPC<a class="headerlink" href="#create-autodock-vina-conda-environment-on-hpc" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4.4. </span>Create AutoDock Vina Conda Environment on HPC<a class="headerlink" href="#create-autodock-vina-conda-environment-on-hpc" title="Link to this heading">#</a></h1>
 <p>This example will help you create an AutoDock Vina Conda environment on Pete.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Follows [AutoDock Vina ReadTheDocs](https://autodock-vina.readthedocs.io/en/latest/index.html)
 - Also helpful is the [ADFR Suite](https://autodock-vina.readthedocs.io/en/latest/index.html)
@@ -585,7 +585,7 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Intel Environments on M1/M2</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Intel Environments on M1/M2</p>
       </div>
     </a>
     <a class="right-next"
@@ -593,7 +593,7 @@
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Creating New Environments</p>
+        <p class="prev-next-title"><span class="section-number">4.5. </span>Creating New Environments</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>9. Conda Config &#8212; CodingNotes</title>
+    <title>4.9. Conda Config &#8212; CodingNotes</title>
   
   
   
@@ -62,8 +62,8 @@
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/03-python/python-conda-rc.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10. Helpful stuff" href="python-helplist.html" />
-    <link rel="prev" title="7. DIY GitHub Website" href="python-conda-jupyterbook.html" />
+    <link rel="next" title="4.10. Helpful stuff" href="python-helplist.html" />
+    <link rel="prev" title="4.7. DIY GitHub Website" href="python-conda-jupyterbook.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -440,17 +440,17 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="python-.html">1. overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda.html">2. <code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-arm-intel.html">3. Intel Environments on M1/M2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-autodockvina.html">4. Create AutoDock Vina Conda Environment on HPC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-env.html">5. Creating New Environments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyter.html">6. Jupyter Lab / Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyterbook.html">7. DIY GitHub Website</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-.html">4.1. overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda.html">4.2. <code class="docutils literal notranslate"><span class="pre">Conda</span></code> / <code class="docutils literal notranslate"><span class="pre">miniconda</span></code> / <code class="docutils literal notranslate"><span class="pre">anaconda</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-arm-intel.html">4.3. Intel Environments on M1/M2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-autodockvina.html">4.4. Create AutoDock Vina Conda Environment on HPC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-env.html">4.5. Creating New Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyter.html">4.6. Jupyter Lab / Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-conda-jupyterbook.html">4.7. DIY GitHub Website</a></li>
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Conda Config</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-helplist.html">10. Helpful stuff</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python-pandas-latextable.html">11. Convert Pandas DataFrame to LaTeX</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4.9. Conda Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-helplist.html">4.10. Helpful stuff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-pandas-latextable.html">4.11. Convert Pandas DataFrame to LaTeX</a></li>
 </ul>
 </div>
 </nav></div>
@@ -492,9 +492,9 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="toc.html" class="nav-link">python</a></li>
+    <li class="breadcrumb-item"><a href="toc.html" class="nav-link"><span class="section-number">4. </span>python</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">9. </span>Conda Config</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">4.9. </span>Conda Config</span></li>
   </ul>
 </nav>
 </div>
@@ -512,16 +512,16 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="conda-config">
-<h1><span class="section-number">9. </span>Conda Config<a class="headerlink" href="#conda-config" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4.9. </span>Conda Config<a class="headerlink" href="#conda-config" title="Link to this heading">#</a></h1>
 <p>Conda configuration file, <code class="docutils literal notranslate"><span class="pre">.condarc</span></code> for custom settings</p>
 <section id="add-channels">
-<h2><span class="section-number">9.1. </span>Add Channels<a class="headerlink" href="#add-channels" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.9.1. </span>Add Channels<a class="headerlink" href="#add-channels" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
 </pre></div>
 </div>
 </section>
 <section id="multi-threading">
-<h2><span class="section-number">9.2. </span>Multi-Threading<a class="headerlink" href="#multi-threading" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.9.2. </span>Multi-Threading<a class="headerlink" href="#multi-threading" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>repodata_threads<span class="w"> </span><span class="m">2</span>
 </pre></div>
 </div>
@@ -533,7 +533,7 @@
 </div>
 </section>
 <section id="configuration-file">
-<h2><span class="section-number">9.3. </span>Configuration File<a class="headerlink" href="#configuration-file" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.9.3. </span>Configuration File<a class="headerlink" href="#configuration-file" title="Link to this heading">#</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>channels:
 <span class="w">    </span>-<span class="w"> </span>conda-forge
 
@@ -583,7 +583,7 @@ change_ps1:<span class="w"> </span><span class="nb">true</span>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>DIY GitHub Website</p>
+        <p class="prev-next-title"><span class="section-number">4.7. </span>DIY GitHub Website</p>
       </div>
     </a>
     <a class="right-next"
@@ -591,7 +591,7 @@ change_ps1:<span class="w"> </span><span class="nb">true</span>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Helpful stuff</p>
+        <p class="prev-next-title"><span class="section-number">4.10. </span>Helpful stuff</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -612,9 +612,9 @@ change_ps1:<span class="w"> </span><span class="nb">true</span>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-channels">9.1. Add Channels</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-threading">9.2. Multi-Threading</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-file">9.3. Configuration File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-channels">4.9.1. Add Channels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multi-threading">4.9.2. Multi-Threading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuration-file">4.9.3. Configuration File</a></li>
 </ul>
   </nav></div>
 
