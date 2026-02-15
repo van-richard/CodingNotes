@@ -1,73 +1,74 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. QM/MM Simulations &#8212; CodingNotes</title>
+    <title>4.1.10. QM/MM Simulations &#8212; CodingNotes</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/04-simulation/theory-qmmm';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/04-simulation/theory-qmmm.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.1. Tutorial" href="tutorial.html" />
-    <link rel="prev" title="5. Free Energy Estimators" href="theory-fe-estimators.html" />
+    <link rel="next" title="Tutorial" href="tutorial.html" />
+    <link rel="prev" title="4.1.9. Free Energy Estimators" href="theory-fe-estimators.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -75,32 +76,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -108,7 +93,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search mee!!"
          aria-label="Search mee!!"
          autocomplete="off"
@@ -116,22 +100,27 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
-  <header>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -146,7 +135,7 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark pst-js-only" alt=""/>
   
   
     <p class="title logo__title">CodingNotes</p>
@@ -160,50 +149,50 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        quickstart
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-commandline/toc.html">
-                        command line
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-hpc/toc.html">
-                        HPC
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+    command line
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-python/toc.html">
-                        python
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="toc.html">
-                        simulation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+    HPC
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../03-python/toc.html">
+    python
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="toc.html">
+    simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -215,33 +204,25 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-item navbar-persistent--container">
           
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
         </div>
       
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -252,7 +233,7 @@ document.write(`
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -264,7 +245,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -276,7 +257,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -288,7 +269,7 @@ document.write(`
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -300,48 +281,40 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
     </div>
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </div>
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -350,53 +323,56 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
-<nav class="navbar-nav">
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        quickstart
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-commandline/toc.html">
-                        command line
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-hpc/toc.html">
-                        HPC
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+    command line
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-python/toc.html">
-                        python
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="toc.html">
-                        simulation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+    HPC
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../03-python/toc.html">
+    python
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="toc.html">
+    simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -404,7 +380,7 @@ document.write(`
     
       <div class="sidebar-header-items__end">
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -415,7 +391,7 @@ document.write(`
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -427,7 +403,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -439,7 +415,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -451,7 +427,7 @@ document.write(`
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -466,36 +442,36 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">3.1. Theory / Methods Overview</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="theory-binding.html">1. Binding Affinity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory-classical.html">2. Classical Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory-fe-alchemical.html">3. FE Alchem</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">4.1. Theory / Methods Overview</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="theory-binding.html">4.1.5. Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-classical.html">4.1.6. Classical Molecular Dynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-alchemical.html">4.1.7. FE Alchem</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">5. Free Energy Estimators</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6. QM/MM Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">4.1.9. Free Energy Estimators</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.1.10. QM/MM Simulations</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">2.1. Tutorial</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="simple.html">2.1.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
-<li class="toctree-l2"><a class="reference internal" href="distance.html">2.1.2. Applying Distance Restraints in Classical MD Simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="claisen.html">2.1.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">Tutorial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="simple.html">1. Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distance.html">2. Applying Distance Restraints in Classical MD Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="claisen.html">3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">4.1. Analysis</a><input checked class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="tools/2drmsd.html">1. Pairwise RMSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/antechamber.html">2. Antechamber</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-dry.html">3. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-pca.html">4. PCA with CPPTRAJ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">5. parmchk2.sh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">6. parmed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">7. Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">8. Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">9. RDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rmsd.html">10. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">11. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/tleap.html">12. tleap</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">4.2. Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/2drmsd.html">4.2.1. Pairwise RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/antechamber.html">4.2.2. Antechamber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-dry.html">4.2.3. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-pca.html">4.2.4. PCA with CPPTRAJ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">4.2.5. parmchk2.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">4.2.6. parmed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">4.2.7. Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">4.2.8. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">4.2.9. RDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsd.html">4.2.10. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">4.2.11. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/tleap.html">4.2.12. tleap</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -503,29 +479,32 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -534,12 +513,12 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="toc.html" class="nav-link"><span class="section-number">2. </span>simulation</a></li>
+    <li class="breadcrumb-item"><a href="toc.html" class="nav-link"><span class="section-number">4. </span>simulation</a></li>
     
     
-    <li class="breadcrumb-item"><a href="theory.html" class="nav-link"><span class="section-number">3.1. </span>Theory / Methods Overview</a></li>
+    <li class="breadcrumb-item"><a href="theory.html" class="nav-link"><span class="section-number">4.1. </span>Theory / Methods Overview</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">4.1.10. </span>QM/MM Simulations</span></li>
   </ul>
 </nav>
 </div>
@@ -556,11 +535,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="qm-mm-simulations">
-<h1><span class="section-number">6. </span>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="qm-mm-simulations">
+<h1><span class="section-number">4.1.10. </span>QM/MM Simulations<a class="headerlink" href="#qm-mm-simulations" title="Link to this heading">#</a></h1>
 <section id="overview">
-<h2><span class="section-number">6.1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
-<p>Reference: https://www.youtube.com/watch?v=VK0e6-ndodM</p>
+<h2><span class="section-number">4.1.10.1. </span>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Reference: <a class="reference external" href="https://www.youtube.com/watch?v=VK0e6-ndodM">https://www.youtube.com/watch?v=VK0e6-ndodM</a></p>
 <p>In general, a hybrid quantum mechanics/molecular mechanics (QM/MM) scheme requires:</p>
 <ul class="simple">
 <li><p>Small part of system is defined at quantum level (QM)</p></li>
@@ -576,28 +555,32 @@ document.write(`
 <ol class="arabic simple">
 <li><p>Subtractive scheme</p></li>
 </ol>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 E = E_\mathrm{QM}  + E_\mathrm{MM} - E_\mathrm{QM-MM}
-$$</p>
+\]</div>
 <p>Pros: No communication between QM and MM routines.
 Cons: Force field needed for QM. FF needs to be ‘flexible’ to describe change when reaction occurs. No QM polarization</p>
 <ol class="arabic simple" start="2">
 <li><p>Additive scheme</p></li>
 </ol>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 E = E_\mathrm{QM} + E_\mathrm{QM-MM} + E_\mathrm{MM}
-$$</p>
-<p>QM energy ($E_\mathrm{QM}$) is from DFT Kohn-Sham Hamiltonian. MM energy ($E_\mathrm{MM}$) is from force field. QM-MM interaction energy ($E_\mathrm{QM-MM}$) is:</p>
-<p>$$
+\]</div>
+<p>QM energy (<span class="math notranslate nohighlight">\(E_\mathrm{QM}\)</span>) is from DFT Kohn-Sham Hamiltonian. MM energy (<span class="math notranslate nohighlight">\(E_\mathrm{MM}\)</span>) is from force field. QM-MM interaction energy (<span class="math notranslate nohighlight">\(E_\mathrm{QM-MM}\)</span>) is:</p>
+<div class="math notranslate nohighlight">
+\[
 E_\mathrm{QM-MM} = E_\mathrm{bonded}^\mathrm{QM-MM} + _\mathrm{nonbonded}^\mathrm{QM-MM}
-$$</p>
+\]</div>
 <p><strong>The additive scheme is the most common approach</strong>, and we will talk about the QM/MM bonded and nonbonded terms</p>
 </section>
 <section id="bonded-interactions">
-<h2><span class="section-number">6.2. </span>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Permalink to this heading">#</a></h2>
-<p>$$
+<h2><span class="section-number">4.1.10.2. </span>Bonded Interactions<a class="headerlink" href="#bonded-interactions" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[
 E_\mathrm{bonded}^\mathrm{QM-MM}
-$$</p>
+\]</div>
 <p>Bonded interactions are introduced when covalent bonds connecting QM and MM regions are cut.</p>
 <p>This term is chosen at classical FF level.</p>
 <p>Care has to be taken when evaluating the QM wave function, to address this, several approaches have been developed:</p>
@@ -608,12 +591,13 @@ $$</p>
 </ol>
 </section>
 <section id="nonbonded-interactions">
-<h2><span class="section-number">6.3. </span>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.1.10.3. </span>Nonbonded Interactions<a class="headerlink" href="#nonbonded-interactions" title="Link to this heading">#</a></h2>
 <p>Non bonded term is:</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 E_\mathrm{nonbonded}^\mathrm{QM-MM} = E_\mathrm{perm.}^\mathrm{QM-MM} +E_\mathrm{pol.}^\mathrm{QM-MM}
-$$</p>
-<p>QM Polarization energy ($E_\mathrm{pol.}^\mathrm{QM-MM}$) describes the <em>electrostatic</em> interaction between MM charges and QM charge density. This can be calculated in one of three ways:</p>
+\]</div>
+<p>QM Polarization energy (<span class="math notranslate nohighlight">\(E_\mathrm{pol.}^\mathrm{QM-MM}\)</span>) describes the <em>electrostatic</em> interaction between MM charges and QM charge density. This can be calculated in one of three ways:</p>
 <ol class="arabic simple">
 <li><p><strong>Mechanical embedding:</strong> No influence of MM charge on QM part, i.e.  QM calculation is gas-phase -like without additional potential due to MM atoms</p>
 <ul class="simple">
@@ -633,33 +617,36 @@ $$</p>
 </ol>
 </section>
 <section id="electrostatic-embedding">
-<h2><span class="section-number">6.4. </span>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">4.1.10.4. </span>Electrostatic Embedding<a class="headerlink" href="#electrostatic-embedding" title="Link to this heading">#</a></h2>
 <p>Electrostatic interactions between QM and MM subsystems are handled during computation of electronic wave function. Charged MM atoms near QM Hamiltonian are treated as one-electron operators.</p>
-<p>$$
-E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}<em>i} - {\textbf{R}</em>{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
-$$</p>
-<p>Two problems arise due to the short-range and long-range behavior of this term..</p>
+<div class="math notranslate nohighlight">
+\[
+E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in QM}{} \sum_{i \in MM}{} \frac{q^{e}}{|{{\textbf{r}_i} - {\textbf{R}_{i}}}|} \longrightarrow \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
+\]</div>
+<p>Two problems arise due to the short-range and long-range behavior of this term…</p>
 <ol class="arabic simple">
 <li><p>Short-Range - Electron spill-out; problems at the boundary</p></li>
 <li><p>Long-Range - Huge computational cost to evaluate the integral</p></li>
 </ol>
 <section id="short-range">
-<h3><span class="section-number">6.4.1. </span>Short-Range<a class="headerlink" href="#short-range" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">4.1.10.4.1. </span>Short-Range<a class="headerlink" href="#short-range" title="Link to this heading">#</a></h3>
 <p>In electron spill-out, a problem may arise when using standard MM atomic charges to describe the charge distribution of the MM system, which results in over-polarization near the boundary.</p>
 <ul class="simple">
 <li><p>The point charges on the MM side of the interface may attract (or repel) the electrons too strongly.</p></li>
 </ul>
-<p>These artifacts can become serious if a large basis set (e.g. with polarization and diffuse functions), or plane waves are used in the QM calculation..</p>
+<p>These artifacts can become serious if a large basis set (e.g. with polarization and diffuse functions), or plane waves are used in the QM calculation…</p>
 <p>This can be avoided by <strong>smeared-out charges</strong> instead of traditional point charges</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 E_\mathrm{electrostatic}^\mathrm{QM-MM} = \sum_{i \in MM}{q \int{\frac{\rho(\textbf{r})v^{smear}(|\textbf{r}_i - \textbf{R}_i|)}{|\textbf{r}_i - \textbf{R}_i|}}d\textbf{r}}
-$$</p>
+\]</div>
 <p>Where, the <em>smearing function</em> can be a Gaussian distribution or another suitable function centered at the MM atom.</p>
-<p>$$
+<div class="math notranslate nohighlight">
+\[
 v^{smear}(r) = \frac{Erf(\frac{r}{r_{c,I}})}{r}
-$$</p>
+\]</div>
 <ul class="simple">
-<li><p>Smearing function in CP2P, where $r_{c,I}$ is the covalent radius of atom $I$</p></li>
+<li><p>Smearing function in CP2P, where <span class="math notranslate nohighlight">\(r_{c,I}\)</span> is the covalent radius of atom <span class="math notranslate nohighlight">\(I\)</span></p></li>
 </ul>
 </section>
 </section>
@@ -691,7 +678,7 @@ $$</p>
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -700,7 +687,7 @@ $$</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Free Energy Estimators</p>
+        <p class="prev-next-title"><span class="section-number">4.1.9. </span>Free Energy Estimators</p>
       </div>
     </a>
     <a class="right-next"
@@ -708,7 +695,7 @@ $$</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Tutorial</p>
+        <p class="prev-next-title">Tutorial</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -719,7 +706,8 @@ $$</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -728,24 +716,24 @@ $$</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">6.1. Overview</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">6.2. Bonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">6.3. Nonbonded Interactions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">6.4. Electrostatic Embedding</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">6.4.1. Short-Range</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">4.1.10.1. Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonded-interactions">4.1.10.2. Bonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nonbonded-interactions">4.1.10.3. Nonbonded Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatic-embedding">4.1.10.4. Electrostatic Embedding</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#short-range">4.1.10.4.1. Short-Range</a></li>
 </ul>
 </li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/04-simulation/theory-qmmm.md">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/notebooks/04-simulation/theory-qmmm.md"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -760,8 +748,8 @@ $$</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -781,7 +769,7 @@ $$</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -794,7 +782,8 @@ $$</p>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>
