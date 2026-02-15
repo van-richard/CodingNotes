@@ -5,7 +5,7 @@
 ###############################################################################
 author = 'Richard Van'
 comments_config = {'hypothesis': False, 'utterances': False}
-copyright = '2024'
+copyright = '2026'
 
 
 extensions = [
@@ -50,7 +50,7 @@ html_theme_options = {
     },
     
     "pygment_light_style": "lovelace",
-    "pygment_dark_style": "inkpot",
+    "pygment_dark_style": "vim",
     'article_header_start': ['breadcrumbs'],
     "secondary_sidebar_items": {
         "**": ["page-toc", "sourcelink"],
@@ -84,9 +84,9 @@ html_theme_options = {
     ],
 
     'navbar_persistent': ['theme-switcher', 'search-button-field'],
-    "show_nav_level": 3,
-    "show_toc_level": 3,
-    "header_links_before_dropdown": 4,
+    "show_nav_level": 2,
+    "show_toc_level": 1,
+    "header_links_before_dropdown": 6,
     'search_bar_text': 'Search mee!!', 
     # 'check_switcher': True,
     }

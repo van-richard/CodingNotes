@@ -100,12 +100,12 @@ In a `shell`, predefined `commands` are computer processes.
 
 Some `commands` can be modified by `options` following the command with a hyphen `-`. Others take `arguments` as input. Look at the following examples:
 
-1. [`pwd`](../commands/pwd.md)
-2. [`echo`](../commands/echo.md)
-3. [`touch`](../commands/touch.md)
-3. [`cat`](../commands/cat.md)
-4. [`tail`](../commands/tail.md)
-5. [`head`](../commands/head.md)
+1. [`pwd`](../01-commandline/commands/pwd.md)
+2. [`echo`](../01-commandline/commands/echo.md)
+3. [`touch`](../01-commandline/commands/touch.md)
+3. [`cat`](../01-commandline/commands/cat.md)
+4. [`tail`](../01-commandline/commands/tail.md)
+5. [`head`](../01-commandline/commands/head.md)
 ```
 
 ---
@@ -122,23 +122,23 @@ _The default location when you first login is called your "home" directory_
 
 ### Where Are We?
 
-```{literalinclude} ../commands/pwd.md
+```{literalinclude} ../01-commandline/commands/pwd.md
 ```
 
 
 ### What Files/Folders are Here?
 
-```{literalinclude} ../commands/ls.md
+```{literalinclude} ../01-commandline/commands/ls.md
 ```
 
 ### How to Make a New Folder/Directory?
 
-```{literalinclude} ../commands/mkdir.md
+```{literalinclude} ../01-commandline/commands/mkdir.md
 ```
 
 ### Enter/Exit Folders
 
-```{literalinclude} ../commands/cd.md
+```{literalinclude} ../01-commandline/commands/cd.md
 ```
 
 ## What are Paths?
@@ -158,16 +158,16 @@ File or directory references use one of these paths.
 
 ### Copy using `cp` 
 
-```{literalinclude} ../commands/cp.md
+```{literalinclude} ../01-commandline/commands/cp.md
 ```
 
 ## Moving & Renaming with `mv`
 
-```{literalinclude} ../commands/mv.md
+```{literalinclude} ../01-commandline/commands/mv.md
 ```
 
 ## Deleting Files and/or Folders with `rm`
 
-```{literalinclude} ../commands/rm.md
+```{literalinclude} ../01-commandline/commands/rm.md
 ```
 

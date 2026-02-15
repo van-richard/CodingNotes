@@ -7,57 +7,58 @@ subtrees:
     subtrees:
     - entries:
       - glob: "notebooks/00-quickstart/0*"
-  - file: notebooks/01-scripting/00_overview
+  - file: notebooks/01-commandline/toc
     subtrees:
     - entries:
-      - file: notebooks/01-scripting/bash/bash
+      - file: notebooks/01-commandline/bash/bash.md
         entries:
-        - glob: "notebooks/01-scripting/bash/bash-*"
-      - file: notebooks/01-scripting/vim/vi
+        - glob: "notebooks/01-commandline/bash/bash-*"
+      - file: notebooks/01-commandline/vim/vi
         entries:
-        - glob: "notebooks/01-scripting/vim/vi-*"
-    - entries:
-      - file: notebooks/01-scripting/hpc/ssh
+        - glob: "notebooks/01-commandline/vim/vi-*"
+      - file: notebooks/01-commandline/git/git
         entries:
-        - glob: "notebooks/01-scripting/hpc/ssh-*"
-      - file: notebooks/01-scripting/hpc/module
+        - glob: "notebooks/01-commandline/git/git-*"
+      - file: notebooks/commands/toc
         entries:
-        - glob: "notebooks/01-scripting/hpc/module-*"
-      - file: notebooks/01-scripting/hpc/slurm
-        entries:
-        - glob: "notebooks/01-scripting/hpc/slurm-*"
-    - entries:
-      - file: notebooks/01-scripting/python/python
-        entries:
-        - glob: "notebooks/01-scripting/python/python-*"
-    - entries:
-      - file: notebooks/01-scripting/git/git
-        entries:
-        - glob: "notebooks/01-scripting/git/git-*"
-  - file: notebooks/02-simulation/00_overview
+        - glob: "notebooks/01-commandline/linux-*"
+  - file: notebooks/02-hpc/toc
     subtrees:
     - entries:
-      - file: notebooks/02-simulation/theory
+      - file: notebooks/02-hpc/ssh
         entries:
-        - glob: "notebooks/02-simulation/theory-*"
-      - file: notebooks/02-simulation/amber
+        - glob: "notebooks/02-hpc/ssh-*"
+      - file: notebooks/02-hpc/module
         entries:
-        - glob: "notebooks/02-simulation/amber-install-*"
-      - file: notebooks/02-simulation/tutorial.md
+        - glob: "notebooks/02-hpc/module-*"
+      - file: notebooks/02-hpc/slurm
         entries:
-        - file: notebooks/02-simulation/simple
-        - file: notebooks/02-simulation/distance
-        - file: notebooks/02-simulation/claisen
-      - file: notebooks/02-simulation/analysis
+        - glob: "notebooks/02-hpc/slurm-*"
+  - file: notebooks/03-python/toc
+    subtrees:
+    - entries:
+      - glob: "notebooks/03-python/python-*"
+  - file: notebooks/04-simulation/toc
+    subtrees:
+    - entries:
+      - file: notebooks/04-simulation/theory
         entries:
-        - glob: "notebooks/02-simulation/tools/*"
+        - glob: "notebooks/04-simulation/theory-*"
+      - file: notebooks/04-simulation/tutorial.md
+        entries:
+        - file: notebooks/04-simulation/simple
+        - file: notebooks/04-simulation/distance
+        - file: notebooks/04-simulation/claisen
+      - file: notebooks/04-simulation/analysis
+        entries:
+        - glob: "notebooks/04-simulation/tools/*"
   - file: notebooks/morenotes
     subtrees:
     - entries:
-      - file: notebooks/cuda
-      - file: notebooks/linux
+      - file: notebooks/04-simulation/amber
         entries:
-        - glob: notebooks/commands/*
+        - glob: "notebooks/04-simulation/amber-install-*"
+      - file: notebooks/cuda
       - file: notebooks/softwares/apptainer/apptainer
         entries:
         - file: notebooks/softwares/apptainer/app-build

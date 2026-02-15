@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>8. Exploring PDB Files &#8212; CodingNotes</title>
   
@@ -14,50 +15,51 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/00-quickstart/06PDBFiles';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/00-quickstart/06PDBFiles.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -66,7 +68,6 @@
     <link rel="prev" title="7. Molecular Structure Files" href="05StructureFiles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -74,16 +75,32 @@
 
   
   
-  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -91,6 +108,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search mee!!"
          aria-label="Search mee!!"
          autocomplete="off"
@@ -98,27 +116,22 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
-  <div class="pst-async-banner-revealer d-none">
-  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
-</div>
-
+  <header>
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
     <span class="fa-solid fa-bars"></span>
-  </button>
+  </label>
   
   
   <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
 
-  
-    
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -133,7 +146,7 @@
     
     
     <img src="../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
-    <img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark pst-js-only" alt=""/>
+    <script>document.write(`<img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark" alt=""/>`);</script>
   
   
     <p class="title logo__title">CodingNotes</p>
@@ -147,36 +160,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav>
+<nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="00_overview.html">
-    quickstart
-  </a>
-</li>
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="00_overview.html">
+                        quickstart
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+                        command line
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-    scripting
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+                        HPC
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../03-python/toc.html">
+                        python
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
-    simulations
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../04-simulation/toc.html">
+                        simulation
+                      </a>
+                    </li>
+                
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../morenotes.html">
-    More Notes !!
-  </a>
-</li>
-
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
       
@@ -188,25 +215,33 @@
         <div class="navbar-item navbar-persistent--container">
           
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
         </div>
       
         <div class="navbar-item navbar-persistent--container">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
         </div>
       
       
-        <div class="navbar-item"><ul class="navbar-icon-links"
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -217,7 +252,7 @@
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -229,7 +264,7 @@
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -241,7 +276,7 @@
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -253,7 +288,7 @@
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -265,40 +300,50 @@
   
     <div class="navbar-persistent--mobile">
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
     </div>
   
     <div class="navbar-persistent--mobile">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button>
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
     </div>
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
       <span class="fa-solid fa-outdent"></span>
-    </button>
+    </label>
   
 </div>
 
-    </header>
+    </div>
   
+  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -307,42 +352,53 @@
     
       <div class="sidebar-header-items__center">
         
-          
-          
-            <div class="navbar-item">
-<nav>
+          <div class="navbar-item">
+<nav class="navbar-nav">
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="00_overview.html">
-    quickstart
-  </a>
-</li>
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="00_overview.html">
+                        quickstart
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+                        command line
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../01-scripting/00_overview.html">
-    scripting
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+                        HPC
+                      </a>
+                    </li>
+                
 
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../03-python/toc.html">
+                        python
+                      </a>
+                    </li>
+                
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../02-simulation/00_overview.html">
-    simulations
-  </a>
-</li>
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../04-simulation/toc.html">
+                        simulation
+                      </a>
+                    </li>
+                
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../morenotes.html">
-    More Notes !!
-  </a>
-</li>
-
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
+                      </a>
+                    </li>
+                
   </ul>
 </nav></div>
-          
         
       </div>
     
@@ -350,7 +406,7 @@
     
       <div class="sidebar-header-items__end">
         
-          <div class="navbar-item"><ul class="navbar-icon-links"
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -361,7 +417,7 @@
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -373,7 +429,7 @@
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -385,7 +441,7 @@
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -397,7 +453,7 @@
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -406,55 +462,31 @@
     
   </div>
   
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01terminal.html">1. Terminal, Shell, &amp; Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02vim.html">2. Text Editors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">3. Supercomputers</a></li>
-
-
-<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">6. Python &amp; Conda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">7. Molecular Structure Files</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Exploring PDB Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="07XYZFiles.html">9. What are XYZ Files?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">10. Briefly, Molecular Dynamics</a></li>
-</ul>
-</div>
-</nav></div>
-    </div>
-  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main" role="main">
+      <main id="main-content" class="bd-main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article d-print-none">
+              <div class="bd-header-article">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-<nav aria-label="Breadcrumb" class="d-print-none">
+
+
+<nav aria-label="Breadcrumb">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -463,9 +495,9 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">quickstart</a></li>
+    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link"><span class="section-number">1. </span>quickstart</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">8. </span>Exploring PDB Files</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
   </ul>
 </nav>
 </div>
@@ -482,60 +514,63 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="exploring-pdb-files">
-<h1><span class="section-number">8. </span>Exploring PDB Files<a class="headerlink" href="#exploring-pdb-files" title="Link to this heading">#</a></h1>
+  <section id="exploring-pdb-files">
+<h1><span class="section-number">8. </span>Exploring PDB Files<a class="headerlink" href="#exploring-pdb-files" title="Permalink to this heading">#</a></h1>
 <p>Get the hen egg-white lysozyme structure, PDB code “1AKI”, from the Protein Data Bank. Visit the <a class="reference external" href="https://www.rcsb.org">RCSB website</a>, and in the search bar type, “1AKI”.</p>
 <p>Now, download this file as PDB format.</p>
-<figure class="align-center" style="width: 25%">
-<video src="../../_images/rcsb_1aki1.mp4" title="../../_images/rcsb_1aki1.mp4">
-<a href="../../_images/rcsb_1aki1.mp4">../../_images/rcsb_1aki1.mp4</a>
-</video>
-</figure>
+<section id="figure-static-videos-rcsb-1aki1-mp4">
+<h2><span class="section-number">8.1. </span>:::{figure} ../../static/videos/rcsb_1aki1.mp4<a class="headerlink" href="#figure-static-videos-rcsb-1aki1-mp4" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="figwidth-25-align-center">
+<h2><span class="section-number">8.2. </span>figwidth: 25%
+align: center<a class="headerlink" href="#figwidth-25-align-center" title="Permalink to this heading">#</a></h2>
+<p>:::</p>
+</section>
 <section id="viewing-the-contents-of-1aki-pdb">
-<h2><span class="section-number">8.1. </span>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code><a class="headerlink" href="#viewing-the-contents-of-1aki-pdb" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.3. </span>Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code><a class="headerlink" href="#viewing-the-contents-of-1aki-pdb" title="Permalink to this heading">#</a></h2>
 <p>This should be in your <code class="docutils literal notranslate"><span class="pre">~/Downloads/</span></code> directory. Using your terminal, change directories into this directory with <code class="docutils literal notranslate"><span class="pre">cd</span></code>, and then use <code class="docutils literal notranslate"><span class="pre">less</span></code> to view the file. Example on MacOS:</p>
-<div class="bash docutils">
-<p>pwd             # Print the current working directory to see where you are
+<p>:::bash
+pwd             # Print the current working directory to see where you are
 cd              # Change directories to /Users/[username]
 cd Downloads/   # Change directories to Downloads
-less 1aki.pdb   # View the contents using the command “less”</p>
-</div>
+less 1aki.pdb   # View the contents using the command “less”
+:::</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">less</span></code> command is a Linux utility that can be used to read the contents of a text file one page (one screen) at a time. It has faster access because if a file is large, it doesn’t access the complete file, but accesses it page by page. To navigate, just use your d-pad (directional pad; up, down, left, and right keys).</p>
 <p>When you get PDB files the from RCSB, they will start with some information pertaining to RCSB data, biological system, experiments performed, and journal/author details. Here is the first 20 lines of the files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>HEADER<span class="w">    </span>HYDROLASE<span class="w">                               </span><span class="m">19</span>-MAY-97<span class="w">   </span>1AKI<span class="w">     </span>
-<span class="linenos"> 2</span>TITLE<span class="w">     </span>THE<span class="w"> </span>STRUCTURE<span class="w"> </span>OF<span class="w"> </span>THE<span class="w"> </span>ORTHORHOMBIC<span class="w"> </span>FORM<span class="w"> </span>OF<span class="w"> </span>HEN<span class="w"> </span>EGG-WHITE<span class="w"> </span>LYSOZYME<span class="w"> </span>AT<span class="w">   </span>
-<span class="linenos"> 3</span>TITLE<span class="w">    </span><span class="m">2</span><span class="w"> </span><span class="m">1</span>.5<span class="w"> </span>ANGSTROMS<span class="w"> </span>RESOLUTION<span class="w">     </span>
-<span class="linenos"> 4</span>COMPND<span class="w">    </span>MOL_ID:<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w">     </span>
-<span class="linenos"> 5</span>COMPND<span class="w">   </span><span class="m">2</span><span class="w"> </span>MOLECULE:<span class="w"> </span>LYSOZYME<span class="p">;</span><span class="w">     </span>
-<span class="linenos"> 6</span>COMPND<span class="w">   </span><span class="m">3</span><span class="w"> </span>CHAIN:<span class="w"> </span>A<span class="p">;</span><span class="w">     </span>
-<span class="linenos"> 7</span>COMPND<span class="w">   </span><span class="m">4</span><span class="w"> </span>EC:<span class="w"> </span><span class="m">3</span>.2.1.17<span class="w">     </span>
-<span class="linenos"> 8</span>SOURCE<span class="w">    </span>MOL_ID:<span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w">     </span>
-<span class="linenos"> 9</span>SOURCE<span class="w">   </span><span class="m">2</span><span class="w"> </span>ORGANISM_SCIENTIFIC:<span class="w"> </span>GALLUS<span class="w"> </span>GALLUS<span class="p">;</span><span class="w">     </span>
-<span class="linenos">10</span>SOURCE<span class="w">   </span><span class="m">3</span><span class="w"> </span>ORGANISM_COMMON:<span class="w"> </span>CHICKEN<span class="p">;</span><span class="w">     </span>
-<span class="linenos">11</span>SOURCE<span class="w">   </span><span class="m">4</span><span class="w"> </span>ORGANISM_TAXID:<span class="w"> </span><span class="m">9031</span><span class="p">;</span><span class="w">     </span>
-<span class="linenos">12</span>SOURCE<span class="w">   </span><span class="m">5</span><span class="w"> </span>CELL:<span class="w"> </span>EGG<span class="w">     </span>
-<span class="linenos">13</span>KEYWDS<span class="w">    </span>HYDROLASE,<span class="w"> </span>GLYCOSIDASE<span class="w">     </span>
-<span class="linenos">14</span>EXPDTA<span class="w">    </span>X-RAY<span class="w"> </span>DIFFRACTION<span class="w">     </span>
-<span class="linenos">15</span>AUTHOR<span class="w">    </span>D.CARTER,J.HE,J.R.RUBLE,B.WRIGHT<span class="w">     </span>
-<span class="linenos">16</span>REVDAT<span class="w">   </span><span class="m">3</span><span class="w">   </span><span class="m">02</span>-AUG-23<span class="w"> </span>1AKI<span class="w">    </span><span class="m">1</span><span class="w">       </span>REMARK<span class="w">     </span>
-<span class="linenos">17</span>REVDAT<span class="w">   </span><span class="m">2</span><span class="w">   </span><span class="m">24</span>-FEB-09<span class="w"> </span>1AKI<span class="w">    </span><span class="m">1</span><span class="w">       </span>VERSN<span class="w">     </span>
-<span class="linenos">18</span>REVDAT<span class="w">   </span><span class="m">1</span><span class="w">   </span><span class="m">19</span>-NOV-97<span class="w"> </span>1AKI<span class="w">    </span><span class="m">0</span><span class="w">     </span>
-<span class="linenos">19</span>JRNL<span class="w">        </span>AUTH<span class="w">   </span>P.J.ARTYMIUK,C.C.F.BLAKE,D.W.RICE,K.S.WILSON<span class="w">     </span>
-<span class="linenos">20</span>JRNL<span class="w">        </span>TITL<span class="w">   </span>THE<span class="w"> </span>STRUCTURES<span class="w"> </span>OF<span class="w"> </span>THE<span class="w"> </span>MONOCLINIC<span class="w"> </span>AND<span class="w"> </span>ORTHORHOMBIC<span class="w"> </span>FORMS<span class="w"> </span>OF<span class="w">    </span>
-</pre></div>
-</div>
+<p>:::{code-block} bash
+:lineno-start: 1</p>
+<p>HEADER    HYDROLASE                               19-MAY-97   1AKI<br />
+TITLE     THE STRUCTURE OF THE ORTHORHOMBIC FORM OF HEN EGG-WHITE LYSOZYME AT<br />
+TITLE    2 1.5 ANGSTROMS RESOLUTION<br />
+COMPND    MOL_ID: 1;<br />
+COMPND   2 MOLECULE: LYSOZYME;<br />
+COMPND   3 CHAIN: A;<br />
+COMPND   4 EC: 3.2.1.17<br />
+SOURCE    MOL_ID: 1;<br />
+SOURCE   2 ORGANISM_SCIENTIFIC: GALLUS GALLUS;<br />
+SOURCE   3 ORGANISM_COMMON: CHICKEN;<br />
+SOURCE   4 ORGANISM_TAXID: 9031;<br />
+SOURCE   5 CELL: EGG<br />
+KEYWDS    HYDROLASE, GLYCOSIDASE<br />
+EXPDTA    X-RAY DIFFRACTION<br />
+AUTHOR    D.CARTER,J.HE,J.R.RUBLE,B.WRIGHT<br />
+REVDAT   3   02-AUG-23 1AKI    1       REMARK<br />
+REVDAT   2   24-FEB-09 1AKI    1       VERSN<br />
+REVDAT   1   19-NOV-97 1AKI    0<br />
+JRNL        AUTH   P.J.ARTYMIUK,C.C.F.BLAKE,D.W.RICE,K.S.WILSON<br />
+JRNL        TITL   THE STRUCTURES OF THE MONOCLINIC AND ORTHORHOMBIC FORMS OF<br />
+:::</p>
 <p>Other lines that start with <code class="docutils literal notranslate"><span class="pre">REMARK</span></code>, <code class="docutils literal notranslate"><span class="pre">HELIX</span></code>, <code class="docutils literal notranslate"><span class="pre">SHEET</span></code>, <code class="docutils literal notranslate"><span class="pre">SSBOND</span></code>, etc. (lines up to <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>) contain experimental details and structural/sequence information.</p>
 <p>Although this information is helpful, one of the most important parts (<em>for us anyways…</em>) are lines beginning with <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> and <code class="docutils literal notranslate"><span class="pre">HETATM</span></code>. These lines contain the x-, y-, z- coordinates required to visualize the structure on Chimera, ChimeraX, or VMD.</p>
 </section>
 <section id="what-are-atom-lines-in-pdb-files">
-<h2><span class="section-number">8.2. </span>What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?<a class="headerlink" href="#what-are-atom-lines-in-pdb-files" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.4. </span>What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?<a class="headerlink" href="#what-are-atom-lines-in-pdb-files" title="Permalink to this heading">#</a></h2>
 <p>Lines beginning with <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> are reserved for atoms in standard residues of protein, DNA or RNA.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>There might be lines that start with <code class="docutils literal notranslate"><span class="pre">HETATM</span></code>. These lines are for non-standard residues such as, substrates, ligands, solvent, and metal ions. **They also follow the same format of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines</p>
-</div>
+<p>:::{note}
+There might be lines that start with <code class="docutils literal notranslate"><span class="pre">HETATM</span></code>. These lines are for non-standard residues such as, substrates, ligands, solvent, and metal ions. **They also follow the same format of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines
+:::</p>
 <p>The general format the <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB file is organized into ~12 or more columns, where each column is:</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Column #</p></th>
 <th class="head"><p>1</p></th>
@@ -569,34 +604,34 @@ less 1aki.pdb   # View the contents using the command “less”</p>
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 <section id="atom-lines-pdb-1aki">
-<h2><span class="section-number">8.3. </span><code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)<a class="headerlink" href="#atom-lines-pdb-1aki" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.5. </span><code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)<a class="headerlink" href="#atom-lines-pdb-1aki" title="Permalink to this heading">#</a></h2>
 <p>Use your d-pad to get to first <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> line (this is line number, 347).</p>
 <p>The first 20 ‘ATOM` lines in PDB 1AKI file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos">347</span>ATOM<span class="w">      </span><span class="m">1</span><span class="w">  </span>N<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">35</span>.365<span class="w">  </span><span class="m">22</span>.342<span class="w"> </span>-11.980<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">22</span>.28<span class="w">           </span>N<span class="w">  </span>
-<span class="linenos">348</span>ATOM<span class="w">      </span><span class="m">2</span><span class="w">  </span>CA<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">35</span>.892<span class="w">  </span><span class="m">21</span>.073<span class="w"> </span>-11.427<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">21</span>.12<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">349</span>ATOM<span class="w">      </span><span class="m">3</span><span class="w">  </span>C<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">34</span>.741<span class="w">  </span><span class="m">20</span>.264<span class="w"> </span>-10.844<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">16</span>.85<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">350</span>ATOM<span class="w">      </span><span class="m">4</span><span class="w">  </span>O<span class="w">   </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">33</span>.945<span class="w">  </span><span class="m">20</span>.813<span class="w"> </span>-10.081<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.94<span class="w">           </span>O<span class="w">  </span>
-<span class="linenos">351</span>ATOM<span class="w">      </span><span class="m">5</span><span class="w">  </span>CB<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">36</span>.872<span class="w">  </span><span class="m">21</span>.435<span class="w"> </span>-10.306<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">20</span>.78<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">352</span>ATOM<span class="w">      </span><span class="m">6</span><span class="w">  </span>CG<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">37</span>.453<span class="w">  </span><span class="m">20</span>.248<span class="w">  </span>-9.565<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.47<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">353</span>ATOM<span class="w">      </span><span class="m">7</span><span class="w">  </span>CD<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">38</span>.688<span class="w">  </span><span class="m">20</span>.649<span class="w">  </span>-8.775<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">20</span>.32<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">354</span>ATOM<span class="w">      </span><span class="m">8</span><span class="w">  </span>CE<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">39</span>.057<span class="w">  </span><span class="m">19</span>.508<span class="w">  </span>-7.837<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">24</span>.76<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">355</span>ATOM<span class="w">      </span><span class="m">9</span><span class="w">  </span>NZ<span class="w">  </span>LYS<span class="w"> </span>A<span class="w">   </span><span class="m">1</span><span class="w">      </span><span class="m">40</span>.423<span class="w">  </span><span class="m">19</span>.771<span class="w">  </span>-7.299<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">28</span>.27<span class="w">           </span>N<span class="w">  </span>
-<span class="linenos">356</span>ATOM<span class="w">     </span><span class="m">10</span><span class="w">  </span>N<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">34</span>.739<span class="w">  </span><span class="m">18</span>.961<span class="w"> </span>-11.042<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.96<span class="w">           </span>N<span class="w">  </span>
-<span class="linenos">357</span>ATOM<span class="w">     </span><span class="m">11</span><span class="w">  </span>CA<span class="w">  </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">33</span>.903<span class="w">  </span><span class="m">17</span>.998<span class="w"> </span>-10.333<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.10<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">358</span>ATOM<span class="w">     </span><span class="m">12</span><span class="w">  </span>C<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">34</span>.800<span class="w">  </span><span class="m">17</span>.312<span class="w">  </span>-9.294<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.39<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">359</span>ATOM<span class="w">     </span><span class="m">13</span><span class="w">  </span>O<span class="w">   </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">35</span>.759<span class="w">  </span><span class="m">16</span>.605<span class="w">  </span>-9.665<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">22</span>.14<span class="w">           </span>O<span class="w">  </span>
-<span class="linenos">360</span>ATOM<span class="w">     </span><span class="m">14</span><span class="w">  </span>CB<span class="w">  </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">33</span>.140<span class="w">  </span><span class="m">17</span>.034<span class="w"> </span>-11.232<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">16</span>.81<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">361</span>ATOM<span class="w">     </span><span class="m">15</span><span class="w">  </span>CG1<span class="w"> </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">32</span>.251<span class="w">  </span><span class="m">16</span>.084<span class="w"> </span>-10.434<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">21</span>.92<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">362</span>ATOM<span class="w">     </span><span class="m">16</span><span class="w">  </span>CG2<span class="w"> </span>VAL<span class="w"> </span>A<span class="w">   </span><span class="m">2</span><span class="w">      </span><span class="m">32</span>.294<span class="w">  </span><span class="m">17</span>.714<span class="w"> </span>-12.290<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.46<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">363</span>ATOM<span class="w">     </span><span class="m">17</span><span class="w">  </span>N<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">34</span>.491<span class="w">  </span><span class="m">17</span>.546<span class="w">  </span>-8.038<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">19</span>.89<span class="w">           </span>N<span class="w">  </span>
-<span class="linenos">364</span>ATOM<span class="w">     </span><span class="m">18</span><span class="w">  </span>CA<span class="w">  </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">35</span>.185<span class="w">  </span><span class="m">16</span>.903<span class="w">  </span>-6.918<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">17</span>.43<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">365</span>ATOM<span class="w">     </span><span class="m">19</span><span class="w">  </span>C<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">34</span>.742<span class="w">  </span><span class="m">15</span>.441<span class="w">  </span>-6.771<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">15</span>.70<span class="w">           </span>C<span class="w">  </span>
-<span class="linenos">366</span>ATOM<span class="w">     </span><span class="m">20</span><span class="w">  </span>O<span class="w">   </span>PHE<span class="w"> </span>A<span class="w">   </span><span class="m">3</span><span class="w">      </span><span class="m">33</span>.525<span class="w">  </span><span class="m">15</span>.162<span class="w">  </span>-6.862<span class="w">  </span><span class="m">1</span>.00<span class="w"> </span><span class="m">18</span>.52<span class="w">           </span>O<span class="w"> </span>
-</pre></div>
-</div>
+<p>:::{code-block} bash
+:lineno-start: 347</p>
+<p>ATOM      1  N   LYS A   1      35.365  22.342 -11.980  1.00 22.28           N<br />
+ATOM      2  CA  LYS A   1      35.892  21.073 -11.427  1.00 21.12           C<br />
+ATOM      3  C   LYS A   1      34.741  20.264 -10.844  1.00 16.85           C<br />
+ATOM      4  O   LYS A   1      33.945  20.813 -10.081  1.00 18.94           O<br />
+ATOM      5  CB  LYS A   1      36.872  21.435 -10.306  1.00 20.78           C<br />
+ATOM      6  CG  LYS A   1      37.453  20.248  -9.565  1.00 18.47           C<br />
+ATOM      7  CD  LYS A   1      38.688  20.649  -8.775  1.00 20.32           C<br />
+ATOM      8  CE  LYS A   1      39.057  19.508  -7.837  1.00 24.76           C<br />
+ATOM      9  NZ  LYS A   1      40.423  19.771  -7.299  1.00 28.27           N<br />
+ATOM     10  N   VAL A   2      34.739  18.961 -11.042  1.00 19.96           N<br />
+ATOM     11  CA  VAL A   2      33.903  17.998 -10.333  1.00 18.10           C<br />
+ATOM     12  C   VAL A   2      34.800  17.312  -9.294  1.00 19.39           C<br />
+ATOM     13  O   VAL A   2      35.759  16.605  -9.665  1.00 22.14           O<br />
+ATOM     14  CB  VAL A   2      33.140  17.034 -11.232  1.00 16.81           C<br />
+ATOM     15  CG1 VAL A   2      32.251  16.084 -10.434  1.00 21.92           C<br />
+ATOM     16  CG2 VAL A   2      32.294  17.714 -12.290  1.00 19.46           C<br />
+ATOM     17  N   PHE A   3      34.491  17.546  -8.038  1.00 19.89           N<br />
+ATOM     18  CA  PHE A   3      35.185  16.903  -6.918  1.00 17.43           C<br />
+ATOM     19  C   PHE A   3      34.742  15.441  -6.771  1.00 15.70           C<br />
+ATOM     20  O   PHE A   3      33.525  15.162  -6.862  1.00 18.52           O
+:::</p>
 <p>Explanation of each column:</p>
 <ul class="simple">
 <li><p><strong>Columns 1 and 2:</strong> The first 20 lines correspond to the first 20 atoms of PDB 1AKI.</p></li>
@@ -609,12 +644,12 @@ less 1aki.pdb   # View the contents using the command “less”</p>
 </ul>
 </section>
 <section id="chain-identifiers-column-5-of-atom">
-<h2><span class="section-number">8.4. </span>Chain Identifiers (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?<a class="headerlink" href="#chain-identifiers-column-5-of-atom" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.6. </span>Chain Identifiers (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?<a class="headerlink" href="#chain-identifiers-column-5-of-atom" title="Permalink to this heading">#</a></h2>
 <p>A chain identifier is a single-character label used to distinguish and identify different polypeptide chains or structural components within a macromolecular structure. Each chain in a PDB file is assigned a unique chain identifier, allowing for the unambiguous identification of individual protein or nucleic acid chains within the structure.</p>
 <p>It is commonly represented as a single uppercase letter, such as ‘A,’ ‘B,’ ‘C,’ and so on. It’s important to note that the chain identifier is case-sensitive, and it must be unique within the PDB file for each distinct chain.</p>
 </section>
 <section id="example-with-spycas9-ternary-complex">
-<h2><span class="section-number">8.5. </span>Example with SpyCas9 Ternary Complex<a class="headerlink" href="#example-with-spycas9-ternary-complex" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.7. </span>Example with SpyCas9 Ternary Complex<a class="headerlink" href="#example-with-spycas9-ternary-complex" title="Permalink to this heading">#</a></h2>
 <p>We will visualize the PDB file of the ternary structure of SpyCas9 (SpyCas9 bound to RNA, DNA, and metal ions) using ChimeraX:</p>
 <ol class="arabic simple">
 <li><p>Visit the Protein Data Bank</p></li>
@@ -623,13 +658,16 @@ less 1aki.pdb   # View the contents using the command “less”</p>
 <li><p>Open the file using ChimeraX</p></li>
 <li><p>Change the molecule style to ribbon</p></li>
 </ol>
-<figure class="align-center" style="width: 25%">
-<video src="../../_images/rcsb_7z4j0.mp4" title="../../_images/rcsb_7z4j0.mp4">
-<a href="../../_images/rcsb_7z4j0.mp4">../../_images/rcsb_7z4j0.mp4</a>
-</video>
-</figure>
+</section>
+<section id="figure-static-videos-rcsb-7z4j0-mp4">
+<h2><span class="section-number">8.8. </span>:::{figure} ../../static/videos/rcsb_7z4j0.mp4<a class="headerlink" href="#figure-static-videos-rcsb-7z4j0-mp4" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="align-center-figwidth-25">
+<h2><span class="section-number">8.9. </span>align: center
+figwidth: 25%<a class="headerlink" href="#align-center-figwidth-25" title="Permalink to this heading">#</a></h2>
+<p>:::</p>
 <p>In Step 4. (or roughly 28 seconds into the video), once we opened PDB <strong>7Z4J</strong>, ChimeraX gives us some chain information in the “Log” panel. For this PDB, we have 5 chains corresponding to:</p>
-<div class="pst-scrollable-table-container"><table class="table">
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Chain</p></th>
 <th class="head"><p>Molecule</p></th>
@@ -653,17 +691,19 @@ less 1aki.pdb   # View the contents using the command “less”</p>
 </tr>
 </tbody>
 </table>
-</div>
 <p>In this example, we are looking at the DNA cleavage product from SpyCas9. Chains C and c both correspond to the target-strand DNA, but they are labeled as separate chains because they are not connected! They are treated as separate molecules in the PDB file.</p>
-<figure class="align-center" style="width: 75%">
-<video src="../../_images/rcsb_7z4j1.mp4" title="../../_images/rcsb_7z4j1.mp4">
-<a href="../../_images/rcsb_7z4j1.mp4">../../_images/rcsb_7z4j1.mp4</a>
-</video>
-</figure>
+</section>
+<section id="figure-static-videos-rcsb-7z4j1-mp4">
+<h2><span class="section-number">8.10. </span>:::{figure} ../../static/videos/rcsb_7z4j1.mp4<a class="headerlink" href="#figure-static-videos-rcsb-7z4j1-mp4" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="align-center-figwidth-75">
+<h2><span class="section-number">8.11. </span>align: center
+figwidth: 75%<a class="headerlink" href="#align-center-figwidth-75" title="Permalink to this heading">#</a></h2>
+<p>:::</p>
 <p>In this video, I zoom into the the HNH domain where target-strand DNA gets cleaved, and show all residues within 5 Å of the magnesium ion. Chain C is on the right, while Chain c is on the left.</p>
 </section>
 <section id="chains-are-separated-by-ter-lines">
-<h2><span class="section-number">8.6. </span>Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines<a class="headerlink" href="#chains-are-separated-by-ter-lines" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">8.12. </span>Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines<a class="headerlink" href="#chains-are-separated-by-ter-lines" title="Permalink to this heading">#</a></h2>
 <p>Each Chain is identified by an alphabetical letter, and an additional <code class="docutils literal notranslate"><span class="pre">TER</span></code> line. The <code class="docutils literal notranslate"><span class="pre">TER</span></code> line occurs at the end of the chain. If we’re looking at proteins, then usually the C-terminal Oxygen will have the atom type ,<code class="docutils literal notranslate"><span class="pre">OXT</span></code>, followed by a <code class="docutils literal notranslate"><span class="pre">TER</span></code>!</p>
 <p>View the contents of PDB <strong>7Z4J</strong> using less, and you can see for yourself:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Downloads/<span class="w"> </span><span class="c1"># Change directories to /Users/[username] on MacOS</span>
@@ -702,15 +742,15 @@ END<span class="w">                                                             
 <p>We see here that following Chain B, we have a <code class="docutils literal notranslate"><span class="pre">TER</span></code> line, indicating the end of the protein. Following our SpyCas9 enzyme, we have some <code class="docutils literal notranslate"><span class="pre">HETATM</span></code> or non-standard residues such as, magnesium ions and waters, solved with the Cryo-EM structure.</p>
 </section>
 <section id="what-is-occupancy">
-<h2><span class="section-number">8.7. </span>What is Occupancy?<a class="headerlink" href="#what-is-occupancy" title="Link to this heading">#</a></h2>
-<dl class="simple glossary">
-<dt id="term-Occupancy">Occupancy<a class="headerlink" href="#term-Occupancy" title="Link to this term">#</a></dt><dd><p>A parameter that represents the fractional occupancy of a particular atom or group of atoms in a crystal structure. The occupancy value typically ranges from 0.00 to 1.00, where:</p>
-<ul class="simple">
-<li><p><strong>1.00:</strong> That atom is fully occupied,</p></li>
-<li><p><strong>0.00:</strong> That atom is completely unoccupied or not present.</p></li>
-</ul>
-</dd>
-</dl>
+<h2><span class="section-number">8.13. </span>What is Occupancy?<a class="headerlink" href="#what-is-occupancy" title="Permalink to this heading">#</a></h2>
+<p>:::{Glossary}
+Occupancy
+A parameter that represents the fractional occupancy of a particular atom or group of atoms in a crystal structure. The occupancy value typically ranges from 0.00 to 1.00, where:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  - **1.00:** That atom is fully occupied, 
+  - **0.00:** That atom is completely unoccupied or not present.
+</pre></div>
+</div>
+<p>:::</p>
 <p>The occupancy value is used to account for situations where multiple different types of atoms or ions may occupy the same position in the crystal lattice. For example, in a crystal structure of a protein, there may be several alternate conformations of a side chain or different ligands bound to the same site. In such cases, each atom or group of atoms may be assigned an occupancy value that reflects the probability of finding that atom or group in its specific conformation.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -718,17 +758,17 @@ END<span class="w">                                                             
 </div>
 </section>
 <section id="what-is-b-factor">
-<h2><span class="section-number">8.8. </span>What is B-factor?<a class="headerlink" href="#what-is-b-factor" title="Link to this heading">#</a></h2>
-<dl class="simple glossary">
-<dt id="term-B-factor">B-factor <a class="headerlink" href="#term-B-factor" title="Link to this term">#</a></dt><dd><p>(aka the temperature factor or Debye-Waller factor) is a parameter that represents the thermal vibrations or disorder of atoms in a crystal structure. It is used to describe the uncertainty in the precise position of each atom due to thermal motion.</p>
-</dd>
-</dl>
+<h2><span class="section-number">8.14. </span>What is B-factor?<a class="headerlink" href="#what-is-b-factor" title="Permalink to this heading">#</a></h2>
+<p>:::{Glossary}
+B-factor
+(aka the temperature factor or Debye-Waller factor) is a parameter that represents the thermal vibrations or disorder of atoms in a crystal structure. It is used to describe the uncertainty in the precise position of each atom due to thermal motion.
+:::</p>
 <p>The B-factor is a real number associated with each atom or group of atoms in the PDB file. It quantifies how much an atom fluctuates or vibrates around its average position in the crystal lattice. A higher B-factor indicates greater thermal motion or disorder, while a lower B-factor indicates less thermal motion and greater positional certainty.</p>
 <p>This value can be used to gain insights into the flexibility of a molecule or a particular region within a crystal structure. For example, in a protein crystallography study, regions of a protein that are more flexible or less well-ordered may have higher B-factors, whereas well-ordered regions with less thermal motion will have lower B-factors.</p>
 </section>
 <section id="summary-records-in-pdb-files">
-<h2><span class="section-number">8.9. </span>Summary Records in PDB Files<a class="headerlink" href="#summary-records-in-pdb-files" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="table">
+<h2><span class="section-number">8.15. </span>Summary Records in PDB Files<a class="headerlink" href="#summary-records-in-pdb-files" title="Permalink to this heading">#</a></h2>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Record</p></th>
 <th class="head text-left"><p>Explanation</p></th>
@@ -785,7 +825,6 @@ END<span class="w">                                                             
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 </section>
 
@@ -815,7 +854,7 @@ END<span class="w">                                                             
               
               
               
-                <footer class="prev-next-footer d-print-none">
+                <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -843,8 +882,7 @@ END<span class="w">                                                             
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -853,26 +891,35 @@ END<span class="w">                                                             
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-contents-of-1aki-pdb">8.1. Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-atom-lines-in-pdb-files">8.2. What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atom-lines-pdb-1aki">8.3. <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-identifiers-column-5-of-atom">8.4. Chain Identifiers (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-spycas9-ternary-complex">8.5. Example with SpyCas9 Ternary Complex</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chains-are-separated-by-ter-lines">8.6. Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-occupancy">8.7. What is Occupancy?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-factor">8.8. What is B-factor?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-records-in-pdb-files">8.9. Summary Records in PDB Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-static-videos-rcsb-1aki1-mp4">8.1. :::{figure} ../../static/videos/rcsb_1aki1.mp4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figwidth-25-align-center">8.2. figwidth: 25%
+align: center</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viewing-the-contents-of-1aki-pdb">8.3. Viewing the Contents of <code class="docutils literal notranslate"><span class="pre">1AKI.pdb</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-atom-lines-in-pdb-files">8.4. What are <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> lines in PDB files?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atom-lines-pdb-1aki">8.5. <code class="docutils literal notranslate"><span class="pre">ATOM</span></code> Lines (PDB 1AKI)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-identifiers-column-5-of-atom">8.6. Chain Identifiers (Column 5 of <code class="docutils literal notranslate"><span class="pre">ATOM</span></code>)?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-spycas9-ternary-complex">8.7. Example with SpyCas9 Ternary Complex</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-static-videos-rcsb-7z4j0-mp4">8.8. :::{figure} ../../static/videos/rcsb_7z4j0.mp4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#align-center-figwidth-25">8.9. align: center
+figwidth: 25%</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-static-videos-rcsb-7z4j1-mp4">8.10. :::{figure} ../../static/videos/rcsb_7z4j1.mp4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#align-center-figwidth-75">8.11. align: center
+figwidth: 75%</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chains-are-separated-by-ter-lines">8.12. Chains are Separated by <code class="docutils literal notranslate"><span class="pre">TER</span></code> Lines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-occupancy">8.13. What is Occupancy?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-b-factor">8.14. What is B-factor?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-records-in-pdb-files">8.15. Summary Records in PDB Files</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../_sources/notebooks/00-quickstart/06PDBFiles.md"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div></div>
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/notebooks/00-quickstart/06PDBFiles.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
 
 </div></div>
               
@@ -887,8 +934,8 @@ END<span class="w">                                                             
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -899,7 +946,7 @@ END<span class="w">                                                             
 
   <p class="copyright">
     
-      © Copyright 2024.
+      © Copyright 2026.
       <br/>
     
   </p>
@@ -908,7 +955,7 @@ END<span class="w">                                                             
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
     <br/>
   </p>
 </div>
@@ -921,8 +968,7 @@ END<span class="w">                                                             
       
         <div class="footer-item">
 <p class="theme-version">
-  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
 </p></div>
       
     </div>
