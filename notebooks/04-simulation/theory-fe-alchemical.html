@@ -1,0 +1,765 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3. FE Alchem &#8212; CodingNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/04-simulation/theory-fe-alchemical';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/04-simulation/theory-fe-alchemical.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5. Free Energy Estimators" href="theory-fe-estimators.html" />
+    <link rel="prev" title="2. Classical Molecular Dynamics" href="theory-classical.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search mee!!"
+         aria-label="Search mee!!"
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">CodingNotes</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+                        quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+                        command line
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+                        HPC
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../03-python/toc.html">
+                        python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="toc.html">
+                        simulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+                        quickstart
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+                        command line
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+                        HPC
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../03-python/toc.html">
+                        python
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="toc.html">
+                        simulation
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../morenotes.html">
+                        More Notes !!
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="theory.html">3.1. Theory / Methods Overview</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="theory-binding.html">1. Binding Affinity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-classical.html">2. Classical Molecular Dynamics</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3. FE Alchem</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">5. Free Energy Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">6. QM/MM Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="tutorial.html">2.1. Tutorial</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="simple.html">2.1.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="distance.html">2.1.2. Applying Distance Restraints in Classical MD Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="claisen.html">2.1.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">4.1. Analysis</a><input checked class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/2drmsd.html">1. Pairwise RMSD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/antechamber.html">2. Antechamber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-dry.html">3. Export Dry Trajectory (no water)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-pca.html">4. PCA with CPPTRAJ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">5. parmchk2.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">6. parmed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">7. Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">8. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">9. RDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsd.html">10. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">11. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/tleap.html">12. tleap</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="toc.html" class="nav-link"><span class="section-number">2. </span>simulation</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="theory.html" class="nav-link"><span class="section-number">3.1. </span>Theory / Methods Overview</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="fe-alchem">
+<h1><span class="section-number">3. </span>FE Alchem<a class="headerlink" href="#fe-alchem" title="Permalink to this heading">#</a></h1>
+<p>:::{important}
+:class: dropdown</p>
+<p>For more information, refer to the
+<a class="reference external" href="https://livecomsjournal.org/index.php/livecoms/article/view/v2i1e18378">Best Practices for Alchemical Free Energy Calculations</a> paper by Xu et. al.</p>
+<blockquote>
+<div><p>Alchemical calculations can be used in a variety of scenarios, such as:</p>
+<ul class="simple">
+<li><p>computing the free energy of a conformational change for a molecule with a high barrier to interconversion (Fig. 1A);</p></li>
+<li><p>computing partition (log P) or distribution (log D) coeffi- cients between environments (Fig. 1B) [3, 4]</p></li>
+<li><p>determining partitioning between compartments into membranes (Fig. 1C) [5].</p></li>
+</ul>
+<p>Furthermore, alchemical calculations are frequently used to estimate changes in free energies upon modifying a ligand or protein:</p>
+<ul class="simple">
+<li><p>a protein residue can be alchemically mutated to probe the impact on binding affinity (Fig. 1D)[6, 7] or changes in protein thermostability [8–11];</p></li>
+<li><p>the entire ligand can be alchemically transferred from protein to solvent in an absolute binding free energy calculation (Fig. 1E) [12–14];</p></li>
+<li><p>small alchemical modifications can be made between chemically related ligands to estimate relative differ- ences in binding free energies (Fig. 1F) [15–19].
+– Xu et. al, Best Practices for Alchemical Free Energy Calculations.
+:::</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="alchemical-free-energy">
+<h1><span class="section-number">4. </span>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Permalink to this heading">#</a></h1>
+<p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
+<p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
+<p>\begin{align}
+\Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \
+&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
+\end{align}</p>
+<p>Alchemical relative free energy calculations avoids the need to simulate binding and unbinding events by making use of the fact that the free energy is a state function and exploiting the thermodynamic cycle.</p>
+<section id="sidebar-figure-static-images-fe-alchem-thermo-cycle-png">
+<h2><span class="section-number">4.1. </span>::::{sidebar}
+:::{figure} ../../_static/images/fe-alchem-thermo-cycle.png<a class="headerlink" href="#sidebar-figure-static-images-fe-alchem-thermo-cycle-png" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="align-center-figwidth-100">
+<h2><span class="section-number">4.2. </span>align: center
+figwidth: 100%<a class="headerlink" href="#align-center-figwidth-100" title="Permalink to this heading">#</a></h2>
+<p>Example of thermodynamic cycle from the paper.
+:::
+::::</p>
+<p>\begin{align}
+\Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \
+&amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \
+&amp; = \Delta G_{bound} - \Delta_{unbound}
+\end{align}</p>
+<p>Where $\Delta G_{bound/unbound}$ is the free energy of mutating $A$ to $B$ Eq. 9 and Fig. 2 tell us that the difference in free energy of binding can be computed by running two independent calculations estimating the free energy cost of mutating A into B in the binding pocket ($\Delta G_{bound}$) and in solvent ($\Delta G_{unbound}$), saving us the need to simulate the physical binding process of the two.</p>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that, when A and B have a different number of atoms, the factors $\ln \frac{Z(RB)}{Z(B)} \mathrm{and} \ln \frac{Z(RA)}{Z(A)}$, appear with units of volume in logarithms, but these factors exactly cancel between the terms.</p>
+</div>
+<p>In practice, the mutation of A to B is carried out by introducing one or more parameters $\vec \lambda$ controlling the potential energy function $U(\vec q; \vec \lambda)$ such that the potential of compounds A and B is recovered at two particular values $\vec \lambda_A$ and  $\vec \lambda_B$.</p>
+<p>Briefly, this is achieved by simulating a “chimeric” molecule composed of enough atoms to represent both A and B. A subset of the energetic terms in $U(\vec q; \vec \lambda)$ is then modulated by $\vec \lambda$ so that at $\vec \lambda_A$, the atoms that form molecule A are activated and those belonging exclusively to B are non-interacting “dummy atoms”, while the opposite occurs at  $\vec \lambda_B$.</p>
+<p>We can rigorously account for fluctuations in other thermodynamic parameters such as, changes in volume $V$ when simulating at constant pressure $P$, or changes in number of molecules, $n_i$ of species $i$ at constant chemical potential $\mu_i$ (e.g., number of waters or ions) by introducing the reduced potential.</p>
+<p>$$
+u(\vec q; \vec \lambda) \equiv \beta \left[ U(\vec q; \vec \lambda) + PR(\vec q) + \sum_{i} \mu_i n_i(\vec q) + … \right]
+$$</p>
+<p>Where, the thermodynamic and alchemical parameters ${\beta , \vec \lambda, P, \mu, …}$ gives us the thermodynamic state. In an alchemical calculation, which the thermodynamic state only vary in $\vec \lambda$, are referred to as alchemical states. The free energy of mutating A to B in any environment (binding pocket, solvent..) can then be computed as (free energy difference equation?)</p>
+<p>$$
+\Delta G_{env} = -k_B T \ln \frac{Z(\vec \lambda_B)}{Z(\vec \lambda_A)} = -k_B T \ln \frac{\int_{\Gamma_j} \mathrm{exp} (u( \vec{q}; \vec \lambda_B)) d\vec{q}}{\int_{\Gamma_i} \mathrm{exp} (u(\vec q; \vec \lambda_A))d\vec{q}}
+$$</p>
+<p>over the configurational space of the enviornment ($\Gamma_{env}$). While it is generally not feasible to compute the two partition functions $Z(\vec \lambda_$, several free energy estimators have been devised to robustly estimate the ratio of partition functions.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/04-simulation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="theory-classical.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Classical Molecular Dynamics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="theory-fe-estimators.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Free Energy Estimators</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. FE Alchem</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#alchemical-free-energy">4. Alchemical Free Energy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sidebar-figure-static-images-fe-alchem-thermo-cycle-png">4.1. ::::{sidebar}
+:::{figure} ../../_static/images/fe-alchem-thermo-cycle.png</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#align-center-figwidth-100">4.2. align: center
+figwidth: 100%</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/notebooks/04-simulation/theory-fe-alchemical.md">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
