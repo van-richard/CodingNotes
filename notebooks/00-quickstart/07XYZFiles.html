@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1.10. What are XYZ Files? &#8212; CodingNotes</title>
+    <title>9. What are XYZ Files? &#8212; CodingNotes</title>
   
   
   
@@ -62,8 +62,8 @@
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/00-quickstart/07XYZFiles.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="1.11. Briefly, Molecular Dynamics" href="08BasicMD.html" />
-    <link rel="prev" title="1.9. Exploring PDB Files" href="06PDBFiles.html" />
+    <link rel="next" title="10. Briefly, Molecular Dynamics" href="08BasicMD.html" />
+    <link rel="prev" title="8. Exploring PDB Files" href="06PDBFiles.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -440,16 +440,16 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01terminal.html">1.2. Terminal, Shell, &amp; Bash</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02vim.html">1.3. Text Editors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">1.4. Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="01terminal.html">1. Terminal, Shell, &amp; Bash</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02vim.html">2. Text Editors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03Supercomputer.html">3. Supercomputers</a></li>
 
 
-<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">1.7. Python &amp; Conda</a></li>
-<li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">1.8. Molecular Structure Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">1.9. Exploring PDB Files</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.10. What are XYZ Files?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">1.11. Briefly, Molecular Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04PythonConda.html">6. Python &amp; Conda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05StructureFiles.html">7. Molecular Structure Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06PDBFiles.html">8. Exploring PDB Files</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. What are XYZ Files?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08BasicMD.html">10. Briefly, Molecular Dynamics</a></li>
 </ul>
 </div>
 </nav></div>
@@ -491,9 +491,9 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link"><span class="section-number">1. </span>quickstart</a></li>
+    <li class="breadcrumb-item"><a href="00_overview.html" class="nav-link">quickstart</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">1.10. </span>What are XYZ Files?</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">9. </span>What are XYZ Files?</span></li>
   </ul>
 </nav>
 </div>
@@ -511,11 +511,11 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="what-are-xyz-files">
-<h1><span class="section-number">1.10. </span>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">9. </span>What are XYZ Files?<a class="headerlink" href="#what-are-xyz-files" title="Link to this heading">#</a></h1>
 <p>The XYZ file format is a text-file format. Unlike PDB files, there is no formal standard and several variations exist. However, a typical XYZ format specifies the molecule geometry by giving the number of atoms with Cartesian coordinates that will be read on the first line, a comment on the second, and the lines of atomic coordinates in the following lines.</p>
 <p>Typically, we use these files to store molecular geometries in Quantum Mechanical (QM) calculations. These files generally contain up to a few hundred atoms. For example, let’s build the small molecule alanine dipeptide, and store this data in <code class="docutils literal notranslate"><span class="pre">.xyz</span></code>.</p>
 <section id="example-with-alanine-dipeptide">
-<h2><span class="section-number">1.10.1. </span>Example with Alanine Dipeptide<a class="headerlink" href="#example-with-alanine-dipeptide" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.1. </span>Example with Alanine Dipeptide<a class="headerlink" href="#example-with-alanine-dipeptide" title="Link to this heading">#</a></h2>
 <figure class="align-center" style="width: 75%">
 <img alt="../../_images/ala.png" src="../../_images/ala.png" />
 </figure>
@@ -536,7 +536,7 @@
 </figure>
 </section>
 <section id="open-the-ala-xyz-file">
-<h2><span class="section-number">1.10.2. </span>Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File<a class="headerlink" href="#open-the-ala-xyz-file" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.2. </span>Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File<a class="headerlink" href="#open-the-ala-xyz-file" title="Link to this heading">#</a></h2>
 <p>First, open your terminal, and then change directories to where you saved the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>. Since I saved them to my <code class="docutils literal notranslate"><span class="pre">~/Desktop/</span></code>, I will <code class="docutils literal notranslate"><span class="pre">cd</span></code> there, and use <code class="docutils literal notranslate"><span class="pre">less</span></code> to view <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Desktop/
 less<span class="w"> </span>ala.xyz
@@ -578,7 +578,7 @@ less<span class="w"> </span>ala.xyz
 <p>Simple yeah?</p>
 </section>
 <section id="additional-resources">
-<h2><span class="section-number">1.10.3. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">9.3. </span>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">#</a></h2>
 <p>For more information, please refer to the following resource:</p>
 <p><a class="reference external" href="https://pdb101.rcsb.org/learn/guide-to-understanding-pdb-data/introduction#:~:text=A%20typical%20PDB%20formatted%20file,the%20atoms%20and%20their%20coordinates.">RCSB: Guide to Understanding PDB data</a></p>
 <blockquote>
@@ -623,7 +623,7 @@ less<span class="w"> </span>ala.xyz
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.9. </span>Exploring PDB Files</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Exploring PDB Files</p>
       </div>
     </a>
     <a class="right-next"
@@ -631,7 +631,7 @@ less<span class="w"> </span>ala.xyz
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.11. </span>Briefly, Molecular Dynamics</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Briefly, Molecular Dynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -652,9 +652,9 @@ less<span class="w"> </span>ala.xyz
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-alanine-dipeptide">1.10.1. Example with Alanine Dipeptide</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-ala-xyz-file">1.10.2. Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">1.10.3. Additional Resources</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-with-alanine-dipeptide">9.1. Example with Alanine Dipeptide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-ala-xyz-file">9.2. Open the <code class="docutils literal notranslate"><span class="pre">ala.xyz</span></code> File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">9.3. Additional Resources</a></li>
 </ul>
   </nav></div>
 
