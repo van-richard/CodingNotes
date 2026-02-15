@@ -1,17 +1,17 @@
-# `ssh`: HPC Remote Access
+## `ssh`: HPC Remote Access
 
 Two key points when using the supercomputer:
 
 1. We access the computers remotely with our terminal
 2. Slurm is used to manage jobs on the cluster
 
-## What is `ssh`?
+### What is `ssh`?
 
 To login remotely to a supercomputer, we use the command `ssh` on the terminal. This is short for secure shell protocol and can take a few arguments. The syntax is `ssh [username]@ssh.server.example.edu`.
 
 First, open your terminal, and follow the directions for Oscer or Pete SSH. Change the `[username]` part, to the username you created!!
 
-## What is `Slurm`?
+### What is `Slurm`?
 
 Since high-performace computing centers are composed of many parts (CPU, GPU, RAM, SSD, HDD, etc.), involving many different users (biological science, machine learning, etc.) with different needs. They require a job scheduling and resource management system. One system is Slurm.
 

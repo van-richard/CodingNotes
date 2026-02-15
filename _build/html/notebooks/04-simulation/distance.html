@@ -1,73 +1,72 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2.1.2. Applying Distance Restraints in Classical MD Simulations &#8212; CodingNotes</title>
+    <title>5.6.2. Applying Distance Restraints in Classical MD Simulations &#8212; CodingNotes</title>
   
   
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
-
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/04-simulation/distance';</script>
     <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/04-simulation/distance.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.1.3. QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
-    <link rel="prev" title="2.1.1. Simple MD Tutorial of Alanine Dipeptide" href="simple.html" />
+    <link rel="next" title="5.6.3. QM/MM Simulation of the Claisen Rearrangment Reaction" href="claisen.html" />
+    <link rel="prev" title="5.6.1. Simple MD Tutorial of Alanine Dipeptide" href="simple.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -75,32 +74,16 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -108,7 +91,6 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search mee!!"
          aria-label="Search mee!!"
          autocomplete="off"
@@ -116,22 +98,27 @@ const thebe_selector_output = ".output, .cell_output"
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
-  <header>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class=" navbar-header-items__start">
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -146,7 +133,7 @@ const thebe_selector_output = ".output, .cell_output"
     
     
     <img src="../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark pst-js-only" alt=""/>
   
   
     <p class="title logo__title">CodingNotes</p>
@@ -160,50 +147,50 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        quickstart
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-commandline/toc.html">
-                        command line
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-hpc/toc.html">
-                        HPC
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+    command line
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-python/toc.html">
-                        python
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="toc.html">
-                        simulation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+    HPC
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../03-python/toc.html">
+    python
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="toc.html">
+    simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
   </ul>
 </nav></div>
       
@@ -215,33 +202,25 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-item navbar-persistent--container">
           
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
         </div>
       
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -252,7 +231,7 @@ document.write(`
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -264,7 +243,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -276,7 +255,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -288,7 +267,7 @@ document.write(`
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -300,48 +279,40 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
     </div>
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
-    </div>
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -350,53 +321,56 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item">
-<nav class="navbar-nav">
+          
+          
+            <div class="navbar-item">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
-                        quickstart
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../01-commandline/toc.html">
-                        command line
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../02-hpc/toc.html">
-                        HPC
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+    command line
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../03-python/toc.html">
-                        python
-                      </a>
-                    </li>
-                
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="toc.html">
-                        simulation
-                      </a>
-                    </li>
-                
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+    HPC
+  </a>
+</li>
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../morenotes.html">
-                        More Notes !!
-                      </a>
-                    </li>
-                
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../03-python/toc.html">
+    python
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="toc.html">
+    simulation
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
   </ul>
 </nav></div>
+          
         
       </div>
     
@@ -404,7 +378,7 @@ document.write(`
     
       <div class="sidebar-header-items__end">
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Quick Links">
         <li class="nav-item">
           
@@ -415,7 +389,7 @@ document.write(`
           
           
           
-          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-google fa-lg" aria-hidden="true"></i></span>
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Google Scholar</span></a>
         </li>
         <li class="nav-item">
@@ -427,7 +401,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/van-richard" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
             <span class="sr-only">GitHub</span></a>
         </li>
         <li class="nav-item">
@@ -439,7 +413,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -451,7 +425,7 @@ document.write(`
           
           
           
-          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Linkedin</span></a>
         </li>
 </ul></div>
@@ -466,36 +440,31 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="theory.html">3.1. Theory / Methods Overview</a><input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory-binding.html">1. Binding Affinity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory-classical.html">2. Classical Molecular Dynamics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory-fe-alchemical.html">3. FE Alchem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="theory.html">5.1. Theory / Methods Overview</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="theory-fe-estimators.html">5. Free Energy Estimators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="theory-qmmm.html">6. QM/MM Simulations</a></li>
+
+
+
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tutorial.html">5.6. Tutorial</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="simple.html">5.6.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.6.2. Applying Distance Restraints in Classical MD Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="claisen.html">5.6.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
 </ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="tutorial.html">2.1. Tutorial</a><input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="simple.html">2.1.1. Simple MD Tutorial of Alanine Dipeptide</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1.2. Applying Distance Restraints in Classical MD Simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="claisen.html">2.1.3. QM/MM Simulation of the Claisen Rearrangment Reaction</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">4.1. Analysis</a><input checked class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="analysis.html">7. Analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="tools/2drmsd.html">1. Pairwise RMSD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tools/antechamber.html">2. Antechamber</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-dry.html">3. Export Dry Trajectory (no water)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/cpptraj-pca.html">4. PCA with CPPTRAJ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">5. parmchk2.sh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">6. parmed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">7. Principal Component Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">8. Plot PMF with PyMBAR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">9. RDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rmsd.html">10. Root Mean Square Deviation (RMSD)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">11. Root Mean Square Fluctuation (RMSF)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tools/tleap.html">12. tleap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmchk2.html">4. parmchk2.sh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/parmed.html">5. parmed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pca.html">6. Principal Component Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/pymbar.html">7. Plot PMF with PyMBAR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rdf.html">8. RDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsd.html">9. Root Mean Square Deviation (RMSD)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/rmsf.html">10. Root Mean Square Fluctuation (RMSF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools/tleap.html">11. tleap</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -503,29 +472,32 @@ document.write(`
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
         <div class="header-article-item">
 
-
-
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
     <li class="breadcrumb-item breadcrumb-home">
@@ -534,12 +506,12 @@ document.write(`
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="toc.html" class="nav-link"><span class="section-number">2. </span>simulation</a></li>
+    <li class="breadcrumb-item"><a href="toc.html" class="nav-link"><span class="section-number">5. </span>simulation</a></li>
     
     
-    <li class="breadcrumb-item"><a href="tutorial.html" class="nav-link"><span class="section-number">2.1. </span>Tutorial</a></li>
+    <li class="breadcrumb-item"><a href="tutorial.html" class="nav-link"><span class="section-number">5.6. </span>Tutorial</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">5.6.2. </span>Applying Distance Restraints in Classical MD Simulations</span></li>
   </ul>
 </nav>
 </div>
@@ -556,14 +528,15 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="applying-distance-restraints-in-classical-md-simulations">
-<h1><span class="section-number">2.1.2. </span>Applying Distance Restraints in Classical MD Simulations<a class="headerlink" href="#applying-distance-restraints-in-classical-md-simulations" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="applying-distance-restraints-in-classical-md-simulations">
+<h1><span class="section-number">5.6.2. </span>Applying Distance Restraints in Classical MD Simulations<a class="headerlink" href="#applying-distance-restraints-in-classical-md-simulations" title="Link to this heading">#</a></h1>
 <p>We can apply restraints to atoms or residues if we are interested in modelling a specific process such as diffusion or binding.</p>
 <p>Building on from the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial, the goal here is to simulate the process of 2 Alanine Dipeptide molecules slowly diffusing away from each other using <code class="docutils literal notranslate"><span class="pre">sander</span></code> in the <code class="docutils literal notranslate"><span class="pre">ambertools</span></code> conda environment.</p>
 <figure class="align-default" id="id1">
-<a class="reference internal image-reference" href="_static/videos/distance.mov"><img alt="_static/videos/distance.mov" src="_static/videos/distance.mov" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="_static/videos/distance.mov"><img alt="_static/videos/distance.mov" src="_static/videos/distance.mov" style="width: 50%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In this tutorial, we will:</p>
@@ -580,21 +553,25 @@ document.write(`
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>This tutorial can be perform on your local computer</p></li>
-<li><p>Download my files for reference: <a class="reference external" href="https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/distance.tar.xz">distance.tar.bz2</a></p></li>
+<li><p>Download my files for reference: <a class="reference external" href="https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/distance.tar.xz" title="download">distance.tar.bz2</a></p></li>
 </ul>
 </div>
 <section id="prepare-files-folders">
-<h2><span class="section-number">2.1.2.1. </span>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.6.2.1. </span>Prepare Files &amp; Folders<a class="headerlink" href="#prepare-files-folders" title="Link to this heading">#</a></h2>
 <p>Make a project folder, called “distance” in the <code class="docutils literal notranslate"><span class="pre">~/Tutorials</span></code> directory, and change to that directory. <em>Optionally, if you downloaded the reference file, we will move <code class="docutils literal notranslate"><span class="pre">distance.tar.bz2</span></code> into the reference folder.</em></p>
-<p>::::{tab-set}
-:::{tab-item} Skip Reference File</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Skip Reference File</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Tutorials<span class="w"> </span><span class="c1"># Go to $HOME/Tutorials</span>
 mkdir<span class="w"> </span>distance<span class="w"> </span><span class="c1"># Make &quot;distance&quot; folder</span>
 <span class="nb">cd</span><span class="w"> </span>distance<span class="w">    </span><span class="c1"># Go to &quot;distance&quot; folder</span>
 </pre></div>
 </div>
-<p>:::
-:::{tab-item} Download Reference File</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Download Reference File</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/Tutorials/references<span class="w"> </span><span class="c1"># Go to $HOME/reference (Made in simple tutorial)</span>
 <span class="c1"># I use curl on my Macbook</span>
 curl<span class="w"> </span>-O<span class="w"> </span>
@@ -604,13 +581,13 @@ mkdir<span class="w"> </span>distance<span class="w">            </span><span cl
 <span class="nb">cd</span><span class="w"> </span>distance<span class="w">               </span><span class="c1"># Go to &quot;distance&quot; folder</span>
 </pre></div>
 </div>
-<p>:::
-::::</p>
+</div>
+</div>
 </section>
 <section id="make-topology-and-coordinate-files">
-<h2><span class="section-number">2.1.2.2. </span>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.6.2.2. </span>Make Topology and Coordinate Files<a class="headerlink" href="#make-topology-and-coordinate-files" title="Link to this heading">#</a></h2>
 <p>Similar to the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial. We use <code class="docutils literal notranslate"><span class="pre">leap</span></code> to prepare our Amber topology and coordinate file. Since Alanine Dipeptide is still an amino acid, we can use <code class="docutils literal notranslate"><span class="pre">tleap</span></code> to generate the topology (<code class="docutils literal notranslate"><span class="pre">.parm7</span></code>) and coordinate files(<code class="docutils literal notranslate"><span class="pre">.rst7</span></code>). The <code class="docutils literal notranslate"><span class="pre">tleap</span></code> program contains reference coordinates for standard residues to generate  missing atoms, this function is base on the residue name.</p>
-<p>Give <code class="docutils literal notranslate"><span class="pre">tleap</span></code> instructions by making a file called “tleap.in” containing:</p>
+<p>Give <code class="docutils literal notranslate"><span class="pre">tleap</span></code> instructions by making a file called “<a class="reference external" href="http://tleap.in">tleap.in</a>” containing:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>leaprc.protein.ff19SB
 <span class="nb">source</span><span class="w"> </span>leaprc.water.TIP3P
 
@@ -665,14 +642,16 @@ quit
 </div>
 </section>
 <section id="prepare-md-inputs-simulation-settings">
-<h2><span class="section-number">2.1.2.3. </span>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.6.2.3. </span>Prepare MD Inputs - Simulation Settings<a class="headerlink" href="#prepare-md-inputs-simulation-settings" title="Link to this heading">#</a></h2>
 <p>Prepare 2 MD input files, <code class="docutils literal notranslate"><span class="pre">min.mdin</span></code>, and <code class="docutils literal notranslate"><span class="pre">heat.mdin</span></code>. These files contain the settings for the first stage of the simulations.</p>
 <ol class="arabic simple">
 <li><p>Minimization</p></li>
 <li><p>Heating (for 10 ps at 300 K)</p></li>
 </ol>
-<p>::::{tab-set}
-::: {tab-item} min.mdin</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+min.mdin</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Minimization<span class="w"> </span>input<span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>explicit<span class="w"> </span>solvent
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">  </span>!<span class="w"> </span>Minimization<span class="w"> </span>options
@@ -689,8 +668,10 @@ quit
 <span class="w"> </span>
 </pre></div>
 </div>
-<p>:::
-:::{tab-item} heat.mdin</p>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+heat.mdin</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
@@ -730,15 +711,15 @@ quit
 <span class="w"> </span>/
 </pre></div>
 </div>
-<p>:::
-::::</p>
+</div>
+</div>
 <section id="restraint-files">
-<h3><span class="section-number">2.1.2.3.1. </span>Restraint Files<a class="headerlink" href="#restraint-files" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.6.2.3.1. </span>Restraint Files<a class="headerlink" href="#restraint-files" title="Link to this heading">#</a></h3>
 <p>To apply a distance restraint, I typically use the Umbrella Sampling approach. If I avoid all the gritty details, the setup only requires 1 additional restraint file (<code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>) for each restraint value.</p>
 <p>If our initial distance between the 2 molecules is 5 Å, and the goal is to observe some property of the system when the distance is 15 Å. Then I want to sample some distances &lt; 5 Å and increment that distance at some value until I reach 15 Å. The increment between distance will depend on the system and property you’re studying.</p>
 <p>Since this is a simple example, we will start with a restraint value of 4 Å and increment this by 4, until we reach 16 Å (i.e.,** our restraint values are 4, 8, 12,and 16 Å**)</p>
 <p>The files we need to make are, <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code> and  <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>, but each file must have a restraint value of 4, 8, 12, or 16. To keep files organized, I recommend sequentially ordering the files like:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Produdction MD File</p></th>
 <th class="head"><p>Restraint File</p></th>
@@ -764,9 +745,12 @@ quit
 </tr>
 </tbody>
 </table>
+</div>
 <p>The following is a template for preparing the 4 copies of <code class="docutils literal notranslate"><span class="pre">prod.mdin</span></code> and <code class="docutils literal notranslate"><span class="pre">cv.rst</span></code>:</p>
-<p>::::{tab-set}
-:::{tab-item} Template for “prod.mdin”</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-4">
+Template for “prod.mdin”</label><div class="sd-tab-content docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>A<span class="w"> </span>NVT<span class="w"> </span>simulation<span class="w"> </span><span class="k">for</span><span class="w"> </span>common<span class="w"> </span>production-level<span class="w"> </span>simulations
 <span class="w"> </span><span class="p">&amp;</span>cntrl
 <span class="w">    </span><span class="nv">imin</span><span class="o">=</span><span class="m">0</span>,<span class="w">        </span>!<span class="w"> </span>No<span class="w"> </span>minimization
@@ -812,9 +796,11 @@ quit
 <span class="w"> </span>/
 </pre></div>
 </div>
-<p>:::
-::::{tab-item} Template for “cv.rst”
-:::</p>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-5">
+Template for “cv.rst”</label><div class="sd-tab-content docutils">
+<div class="docutils">
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">&amp;</span>rst
 <span class="w">  </span><span class="nv">iat</span><span class="o">=</span>-1,-1,
 <span class="w">  </span><span class="nv">iresid</span><span class="o">=</span><span class="m">0</span>,
@@ -825,8 +811,9 @@ quit
 <span class="w"> </span><span class="p">&amp;</span>end
 </pre></div>
 </div>
-<p>:::
-::::</p>
+</div>
+</div>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p><strong>CHANGE THE FOLLOWING PATTERNS:</strong></p>
@@ -839,7 +826,7 @@ quit
 </section>
 </section>
 <section id="run-md-with-bash-script">
-<h2><span class="section-number">2.1.2.4. </span>Run MD with Bash Script<a class="headerlink" href="#run-md-with-bash-script" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.6.2.4. </span>Run MD with Bash Script<a class="headerlink" href="#run-md-with-bash-script" title="Link to this heading">#</a></h2>
 <p>Instead of running each simulation one command at a time (like we did in the <code class="docutils literal notranslate"><span class="pre">simple</span></code> tutorial), we can write a script to run it for us! Make a file called, <code class="docutils literal notranslate"><span class="pre">vi</span> <span class="pre">runmd.sh</span></code> with:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
@@ -892,7 +879,7 @@ date
 <p><strong>PHEWWWW</strong>*, that was kind of confusing, huh?</p>
 </section>
 <section id="visualize-and-analysis">
-<h2><span class="section-number">2.1.2.5. </span>Visualize and Analysis<a class="headerlink" href="#visualize-and-analysis" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.6.2.5. </span>Visualize and Analysis<a class="headerlink" href="#visualize-and-analysis" title="Link to this heading">#</a></h2>
 <p>Now you can visual the results with VMD or Chimera, and perform some analysis.</p>
 </section>
 </section>
@@ -923,7 +910,7 @@ date
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -932,7 +919,7 @@ date
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.1.1. </span>Simple MD Tutorial of Alanine Dipeptide</p>
+        <p class="prev-next-title"><span class="section-number">5.6.1. </span>Simple MD Tutorial of Alanine Dipeptide</p>
       </div>
     </a>
     <a class="right-next"
@@ -940,7 +927,7 @@ date
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1.3. </span>QM/MM Simulation of the Claisen Rearrangment Reaction</p>
+        <p class="prev-next-title"><span class="section-number">5.6.3. </span>QM/MM Simulation of the Claisen Rearrangment Reaction</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -951,7 +938,8 @@ date
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -960,25 +948,25 @@ date
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">2.1.2.1. Prepare Files &amp; Folders</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">2.1.2.2. Make Topology and Coordinate Files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">2.1.2.3. Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">2.1.2.3.1. Restraint Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-files-folders">5.6.2.1. Prepare Files &amp; Folders</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-topology-and-coordinate-files">5.6.2.2. Make Topology and Coordinate Files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-md-inputs-simulation-settings">5.6.2.3. Prepare MD Inputs - Simulation Settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restraint-files">5.6.2.3.1. Restraint Files</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">2.1.2.4. Run MD with Bash Script</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">2.1.2.5. Visualize and Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-md-with-bash-script">5.6.2.4. Run MD with Bash Script</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-and-analysis">5.6.2.5. Visualize and Analysis</a></li>
 </ul>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/notebooks/04-simulation/distance.md">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/notebooks/04-simulation/distance.md"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -993,8 +981,8 @@ date
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1014,7 +1002,7 @@ date
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
     <br/>
   </p>
 </div>
@@ -1027,7 +1015,8 @@ date
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.1.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

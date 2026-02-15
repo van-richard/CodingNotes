@@ -1,7 +1,5 @@
 #!/bin/bash
-
-mf
-conda activate webdev
+# Activate webdev environment first 
 
 cd _external/amberassist
 git pull

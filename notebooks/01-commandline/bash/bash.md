@@ -1,12 +1,11 @@
-(shell-bash)=
-# `BASH`: Command Line
+## bash
 
 - So far, we have used `bash` to interact with the CLI by typing single line commands
 - To automate repetitive tasks, we can combine those single lines commands to a file called a `bash` script
 - Typically, I name these scripts using the file format, `.sh` (shell) or `.in` (input)
 
 
-## Redirect Commands to a File with `EOF`
+### Redirect Commands to a File with `EOF`
 
 - You can redirect command input and output (i.e., stdin, stdout, and stderr) with "redirection operators"
 - Unlike `|`, which passes the standard output (stdout) to the next command, a redirection operator has a command's input come from a file or stream, or sends its output to a file or stream
@@ -64,7 +63,7 @@ echo "#helloworld" | cat > output.out
 echo "#helloworld" | tee output.out >/dev/null
 ```
 
-## Use Standard Output of Command in a Variable
+### Use Standard Output of Command in a Variable
 
 - Commands can be substituted within other commands or used in variables
   - 2 notations can be used:
@@ -93,7 +92,7 @@ echo $N # > World
 echo "There are $(ls | wc -l) items here." 
 ```
 
-## Automating Repetitive Tasks with `bash` Loops
+### Automating Repetitive Tasks with `bash` Loops
 
 - Suppose you have been doing a repetitive task running the same set of commands for a project
 - For example, you need to create 100 new directories numbered from 0 to 99
@@ -155,7 +154,7 @@ do
 done
 ```
 
-### Example: `while` Loops
+#### Example: `while` Loops
 
 ```bash
 while [ true ]
@@ -166,7 +165,7 @@ done
 # => loop body here...
 ```
 
-## Functions
+### Functions
 
 - You can also define functions
 
@@ -209,7 +208,7 @@ bar # => Another way to declare functions!
 foo "My name is" $Name
 ```
 
-## Adding Choices (Options) to Script with `case` Statements
+### Adding Choices (Options) to Script with `case` Statements
 
 - Simplify complex conditionals options for multiple different choices
 - Using the `case` statement instead of nested `if` statements will help your scripts to be readable and easier to maintain

@@ -1,9 +1,9 @@
-# `SLURM`: HPC Job Manager
+## `SLURM`: HPC Job Manager
 
 - Job schedule management on most clusters
 - See more: [slurm.schemd.com](https://slurm.schedmd.com/overview.html)
 
-## Pre-Installed Softwares
+### Pre-Installed Softwares
 
 - there are sevearl preinstalled software you can use
 - They can be started with the command, `module`
@@ -11,7 +11,7 @@
 - This allows Research Computing to provide multiple versions of the software concurrently and enables users to easily switch between different versions.
 
 
-## SLURM Commands
+### SLURM Commands
 
 ```
 sinfo
@@ -29,11 +29,11 @@ SLURM commands will have the letter 's' before it. This seems to confuse a lot o
 
 
 
-## Slurm Scripts
+### Slurm Scripts
 
 It will be important for you to differentiat between a shell script and a Slurm script. When I make files, I typically use the file extention `.slurm` for jobs I plan to submit to the cluster. The slurm scripts have a specific notation you must follow.
 
-### Directives (`#SBATCH`)
+#### Directives (`#SBATCH`)
 
 The way that Slurm determines how to allocate your jobs to the cluster (*i.e. across how many compute nodes, with how many CPUs, for how long etc*) is via Slurm directives that are included at the top of your job script. These directives are indicated by lines starting with `#SBATCH`. Common types of jobs are:
 
@@ -55,22 +55,6 @@ echo "Hello World!"
 :::
 :::{tab-item} GPU Jobs
 ```bash
-#!/bin/bash
-#SBATCH --partition=GPU_PARTITION
-#SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)
-#SBATCH --nodes=NODES
-#SBATCH --ntasks=NTASKS
-#SBATCH --output=%j.out 
-#SBATCH --error=%j.err
-#SBATCH --name=JOBNAME
-#SBATCH --gres=gpu:1
-
-echo "Hello World!"
-
-```
-:::
-:::{tab-item} Exclusive CPU Jobs
-```bash
 ##!/bin/bash
 ##SBATCH --partition=GPU_PARTITION
 ##SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)
@@ -79,8 +63,24 @@ echo "Hello World!"
 ##SBATCH --output=%j.out 
 ##SBATCH --error=%j.err
 ##SBATCH --name=JOBNAME
-##SBATCH --mem=0
-##SBATCH --exclusive
+##SBATCH --gres=gpu:1
+
+echo "Hello World!"
+
+```
+:::
+:::{tab-item} Exclusive CPU Jobs
+```bash
+###!/bin/bash
+###SBATCH --partition=GPU_PARTITION
+###SBATCH --time=TIME (DAYS-HOURS:MINUTES:SECONDS)
+###SBATCH --nodes=NODES
+###SBATCH --ntasks=NTASKS
+###SBATCH --output=%j.out 
+###SBATCH --error=%j.err
+###SBATCH --name=JOBNAME
+###SBATCH --mem=0
+###SBATCH --exclusive
 
 echo " Wow you dick."
 
