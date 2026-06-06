@@ -31,8 +31,8 @@ source_suffix = {
 html_theme = 'pydata_sphinx_theme'
 html_baseurl = 'https://van-richard.github.io/CodingNotes/'
 html_title = 'CodingNotes'
-html_static_path = ['_static/']
-html_favicon = '_static/images/van-codingnotes.png'
+html_static_path = ['static/']
+html_favicon = 'static/images/van-codingnotes.png'
 html_css_path = ['assets/custom.css']
 
 
@@ -45,8 +45,8 @@ html_sidebar: {
 html_theme_options = {
     "logo": {
         'text': 'CodingNotes',
-        "image_light": "_static/images/van-abstract-y-light.svg",
-        "image_dark": "_static/images/van-abstract-y-dark.svg",
+        "image_light": "static/images/van-abstract-y-light.svg",
+        "image_dark": "static/images/van-abstract-y-dark.svg",
     },
     
     "pygment_light_style": "lovelace",

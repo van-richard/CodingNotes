@@ -4,12 +4,13 @@ We can apply restraints to atoms or residues if we are interested in modelling a
 
 Building on from the `simple` tutorial, the goal here is to simulate the process of 2 Alanine Dipeptide molecules slowly diffusing away from each other using `sander` in the `ambertools` conda environment. 
 
-```{figure} ../../_static/videos/distance.mov
----
-width: 50%
----
-MD trajectories of 2 Alanine Dipeptide molecules (*shown as ball-and-stick*), solvated in water (*shown as line*) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.
-```
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="../../_static/videos/distance.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>MD trajectories of 2 Alanine Dipeptide molecules (<em>shown as ball-and-stick</em>), solvated in water (<em>shown as line</em>) as viewed on VMD. Resrtrains were placed on the center-of-mass between both molecules starting from a distance of 4 Å and gradually increased to 15 Å.</figcaption>
+</figure>
 
 In this tutorial, we will:
 
@@ -338,4 +339,3 @@ This file follows:
 ## Visualize and Analysis
 
 Now you can visual the results with VMD or Chimera, and perform some analysis.
-

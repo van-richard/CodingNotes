@@ -1,7 +1,11 @@
 # Fading
 
-<center><video src="https://github.com/van-richard/CodingNotes/blob/531e36ca915575b44ae17e409cd825be4780842e/_static/videos/chimerax_fade_cas9.mp4" width="50%" height="50%" center controls>
-</video></center>
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="../../../_static/videos/chimerax_fade_cas9.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
 
 
 The code looks like:

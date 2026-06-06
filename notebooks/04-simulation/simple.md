@@ -2,12 +2,13 @@
 
 A simple example of how to run MD simulations is with the molecule, Alanine Dipeptide. We will model the residue, solvate it in a water box, equilibrate the system, and run MD production simulations with AmberTools. This should take roughly an hour.
 
-```{figure} ../../_static/videos/simple.mov
----
-width: 50%
----
-MD trajectory of Alanine Dipeptide (*shown as ball-and-stick*) solvated in water (*shown as line*) viewed on VMD.
-```
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="../../_static/videos/simple.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>MD trajectory of Alanine Dipeptide (<em>shown as ball-and-stick</em>) solvated in water (<em>shown as line</em>) viewed on VMD.</figcaption>
+</figure>
 
 The system, Alanine Dipeptide, is the amino acid, Alanine, with the charged ends neutralized. This is done by "capping" the N-terminal with an acetyl group, and C-terminal with N-methylamide.
 

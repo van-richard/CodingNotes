@@ -33,14 +33,13 @@ We will study the reaction under implicit solvent, where all ligand atoms includ
 - Download my files for reference: [claisen.tar.bz2](https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/claisen.tar.xz "download")
 ````
 
-```{figure} ../../_static/videos/claisen.mp4
----
-width: 50%
-align: center
----
-
-Trajectory of the claisen rearrangement reaction, allyl vinyl ether is shown in ball-and-stick, and the trajectory was viewed on VMD.
-```
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="../../_static/videos/claisen.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>Trajectory of the claisen rearrangement reaction, allyl vinyl ether is shown in ball-and-stick, and the trajectory was viewed on VMD.</figcaption>
+</figure>
 
 
 
@@ -59,13 +58,13 @@ Use IQmol to make a model of allyl vinyl ether, and save the file as `allyl_viny
 
 I saved the filed onto my Desktop. Remember where you saved it! We will copy it later!!!
 
-```{figure} ../../_static/videos/iqmol_claisen.mov
----
-width: 50%
-align: center
----
-Using IQmol to make the allyl vinyl ester PDB file.
-```
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="../../_static/videos/iqmol_claisen.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <figcaption>Using IQmol to make the allyl vinyl ester PDB file.</figcaption>
+</figure>
 
 ---
 
@@ -223,7 +222,7 @@ The Amber protein has a lot of different restraints you can try, but for this re
 
 We need to find the __Amber atom numbers__ involved in the reaction. Load `step3_pbcsetup.pdb` into IQmol or VMD.
 
-```{figure} ../../_static/images/iqmol_claisen_num.png
+```{figure} ../../static/images/iqmol_claisen_num.png
 ---
 width: 50%
 align: center
@@ -788,6 +787,4 @@ plt.savefig("claisen_pmf.png", dpi=300)
 plt.show()
 ```
 
-![](../../_static/images/claisen_pmf.png)
-
-
+![](../../static/images/claisen_pmf.png)
