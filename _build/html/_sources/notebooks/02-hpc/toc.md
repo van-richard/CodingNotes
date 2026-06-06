@@ -1,5 +1,0 @@
-# HPC
-
-```{tableofcontents}
-```
-

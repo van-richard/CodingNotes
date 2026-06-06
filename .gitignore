@@ -1,4 +1,4 @@
- # VS Code
+# VS Code
 .vscode
 
 # Byte-compiled / optimized / DLL files
@@ -29,15 +29,17 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Sphinx documentation
-docs/_build/
+# Sphinx / Jupyter Book documentation
+_build/
+.doctrees/
+jupyter_execute/
 
 # PyBuilder
 .pybuilder/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
 # IPython
 profile_default/
@@ -45,12 +47,15 @@ ipython_config.py
 
 # Environments
 .env
-.venv
+.venv/
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# macOS
+.DS_Store
 
 _external/
 _external/amberassist/
