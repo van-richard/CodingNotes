@@ -4,7 +4,7 @@ We can apply restraints to atoms or residues if we are interested in modelling a
 
 Building on from the `simple` tutorial, the goal here is to simulate the process of 2 Alanine Dipeptide molecules slowly diffusing away from each other using `sander` in the `ambertools` conda environment. 
 
-```{figure} ../../static/videos/distance.mov
+```{figure} https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/videos/distance.mov
 ---
 width: 50%
 ---

@@ -33,7 +33,7 @@ We will study the reaction under implicit solvent, where all ligand atoms includ
 - Download my files for reference: [claisen.tar.bz2](https://github.com/van-richard/CodingNotes/blob/79059b233ce24e12ba779f981d50726ea5ec528c/assets/tar/claisen.tar.xz "download")
 ````
 
-```{figure} ../../static/videos/claisen.mp4
+```{figure} https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/videos/claisen.mp4
 ---
 width: 50%
 align: center
@@ -59,7 +59,7 @@ Use IQmol to make a model of allyl vinyl ether, and save the file as `allyl_viny
 
 I saved the filed onto my Desktop. Remember where you saved it! We will copy it later!!!
 
-```{figure} ../../static/videos/iqmol_claisen.mov
+```{figure} https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/videos/iqmol_claisen.mov
 ---
 width: 50%
 align: center
@@ -223,7 +223,7 @@ The Amber protein has a lot of different restraints you can try, but for this re
 
 We need to find the __Amber atom numbers__ involved in the reaction. Load `step3_pbcsetup.pdb` into IQmol or VMD.
 
-```{figure} ../../static/images/iqmol_claisen_num.png
+```{figure} https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/images/iqmol_claisen_num.png
 ---
 width: 50%
 align: center
@@ -788,6 +788,6 @@ plt.savefig("claisen_pmf.png", dpi=300)
 plt.show()
 ```
 
-![](../../static/images/claisen_pmf.png)
+![](https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/images/claisen_pmf.png)
 
 
