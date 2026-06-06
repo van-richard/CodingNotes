@@ -53,13 +53,17 @@ Open `_build/html/index.html` in a browser to inspect the result.
 
 ## Deploy
 
-The deployment script builds the site and publishes `_build/html` to GitHub Pages with `ghp-import`:
+GitHub Actions builds the documentation for pull requests and automatically deploys `_build/html` to GitHub Pages after changes are pushed to `main`. The workflow is defined in `.github/workflows/pages.yml`.
+
+In the repository settings, configure GitHub Pages to use **GitHub Actions** as its source.
+
+For a manual deployment, `build.sh` remains available. It builds the site and publishes `_build/html` with `ghp-import`:
 
 ```bash
 ./build.sh
 ```
 
-Before running it, activate the project environment and ensure the working tree is ready to publish. The script also updates `_external/amberassist` with `git pull` and pushes the generated site, so it should be treated as a deployment command rather than a local build command.
+Before running it, activate the project environment, install `ghp-import`, and ensure the working tree is ready to publish. The script also updates `_external/amberassist` when that optional repository is available and pushes the generated site, so it should be treated as a deployment command rather than a local build command.
 
 ## Repository Layout
 
@@ -71,6 +75,7 @@ Before running it, activate the project environment and ensure the working tree 
 - `conf.py`: Sphinx configuration
 - `requirements.txt`: Python documentation dependencies
 - `build.sh`: build and GitHub Pages deployment script
+- `.github/workflows/pages.yml`: automated documentation build and Pages deployment
 - `_build/`: generated documentation output
 - `jupyter_execute/`: generated notebook execution artifacts
 
