@@ -2,16 +2,16 @@
 keywords: principal, component, analysis, pca, dimension, reduction, dimensional, variance, pc1, pc2
 ---
 
-## Principal Component Analysis
+# Principal Component Analysis
 
-### Example with PyTraj
+## Example with PyTraj
 
 ```{literalinclude} ../../../_external/amberassist/ambertools/pytraj/pca.py 
 :language: python
 :linenos:
 ```
 
-### PCA with histograms
+## PCA with histograms
 
 ```{literalinclude} ../../../_external/amberassist/ambertools/pytraj/pca-hist.py
 :language: python
@@ -20,7 +20,7 @@ keywords: principal, component, analysis, pca, dimension, reduction, dimensional
 
 ---
 
-### Example with cpptraj
+## Example with cpptraj
 
 ```{literalinclude} ../../../_external/amberassist/ambertools/cpptraj/cpptraj.pca1.sh
 :language: bash
