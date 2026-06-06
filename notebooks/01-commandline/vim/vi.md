@@ -1,11 +1,11 @@
-##  `vi/vim`: Text Editing 
+# `vi/vim`: Text Editing
 
 - `vi/vim `are both text editors for the CLI
 - `vi` is older but found on most systems
 - `vim` is `vi` improved with added functionalities 
   - Both are similar to GUIs like Notepad, TextEdit, etc... 
 
-### Overview
+## Overview
 
 - Run by typing `vi` or `vim` followed by a filename
 - To exit, press `esc` then `:q` or `:q!`
@@ -77,7 +77,7 @@ Make sure you are in Normal Mode by pressing `esc`. You should no longer see `in
     ctrl (^) + b      # Scroll one page backwardc
 ```
 
-### Command Line Mode
+## Command Line Mode
 
 - To enter this mode, press `esc` and then `:`
 - The cursor to move at the bottom of the window in the command box
@@ -94,7 +94,7 @@ Make sure you are in Normal Mode by pressing `esc`. You should no longer see `in
     :'<,'>s/foo/bar/g # Change 'foo' to 'bar on every line in the current visual
 ```
 
-### Visual Configuration
+## Visual Configuration
 
 ```bash
 :set number           # prefix line numbers (it is a visual guideline, won't modify text)

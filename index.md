@@ -10,7 +10,7 @@ _dedicated to my one and only brain cell. Kudos._
     - yeah, I ~~cried too~~ cry all the time
     - no, it doesn't get better. You just get stronger :-)
 
-### the objective here .... and stuff
+## the objective here .... and stuff
 
 :::{admonition} If you're new here
 :class: sidebar note
