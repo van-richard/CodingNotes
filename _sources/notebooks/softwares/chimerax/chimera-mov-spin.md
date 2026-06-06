@@ -1,7 +1,11 @@
 # Spin
 
-<center><video src="https://github.com/van-richard/CodingNotes/blob/531e36ca915575b44ae17e409cd825be4780842e/_static/videos/chimerax_spin_cas9_surface.mp4"width="50%" height="50%" controls>
-</video></center>
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 50%; height: auto;">
+    <source src="../../../_static/videos/chimerax_spin_cas9_surface.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
 
 The code looks like 
 
