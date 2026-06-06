@@ -1,6 +1,8 @@
-# `grep` - search for pattern in file or folders
+# `grep`
 
-Example
+`grep` searches files or input for lines matching a pattern.
+
+## Common `grep` usage
 
 ```bash
 grep [OPTIONS] 'PATTERN' FILE

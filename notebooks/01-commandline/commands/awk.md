@@ -2,9 +2,13 @@
 keywords: print, column, text, tabulate, table, txt, specific, column, awk
 ---
 
-# `awk` - manipulate text
+# `awk`
 
-Treating a text file, were each space is a column, you can print the columns with:
+`awk` selects, transforms, and calculates with fields in structured text.
+
+## Common `awk` usage
+
+Treating a text file, where each space separates a column, you can print a column with:
 
 ```bash
 awk '{print $1}' file
@@ -33,4 +37,3 @@ Add to value in column
 ```bash
 awk '{print $1 + 1}' file
 ```
-

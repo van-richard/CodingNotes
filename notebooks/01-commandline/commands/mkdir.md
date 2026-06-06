@@ -1,6 +1,10 @@
-# `mkdir` - make new directories.
+# `mkdir`
 
-- Use `mkdir` (Make Directory) to create a new folder.
+`mkdir` creates new directories.
+
+## Common `mkdir` usage
+
+- Use `mkdir` to create a new folder.
 
 ```bash
 mkdir [new folder name]

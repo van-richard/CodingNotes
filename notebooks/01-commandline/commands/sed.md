@@ -1,4 +1,8 @@
-# `sed` - tranform/replace text!
+# `sed`
+
+`sed` transforms text using editing expressions.
+
+## Common `sed` usage
 
 We can replace some text, INPUT, with another text, OUTPUT, in a file with `sed`. The notation is:
 

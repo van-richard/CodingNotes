@@ -1,6 +1,8 @@
-# `ssh` - secure shell protocol
+# `ssh`
 
-Remotely access a computer
+`ssh` securely connects to a remote computer.
+
+## Common `ssh` usage
 
 ```bash
 ssh username@servername

@@ -1,6 +1,10 @@
-# `mv` - move files/folders from one place to another.
+# `mv`
 
-- Both are performed with `mv`
+`mv` moves or renames files and directories.
+
+## Common `mv` usage
+
+- Both moving and renaming are performed with `mv`.
 - Follows the same notation as `cp`
 - **Does not require the option, `-r` !!**
 

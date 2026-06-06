@@ -1,6 +1,10 @@
-# `cd` - change directories
+# `cd`
 
-- Use `cd` (Change Directory) to enter a folder.
+`cd` changes the current working directory.
+
+## Common `cd` usage
+
+- Use `cd` to enter a folder.
 
 ```bash
 cd [folder name]

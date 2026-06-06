@@ -1,8 +1,10 @@
-# `ssh-keygen` - Make SSH key
+# `ssh-keygen`
 
-`ssh-keygen` creates an RSA key pair and stores the public key in a public key file named `.ssh/id_rsa.pub` and a private key file named `.ssh/id_rsa`.
+`ssh-keygen` creates SSH public and private key pairs.
 
-To make a key, you can type:
+## Common `ssh-keygen` usage
+
+The following command creates an RSA key pair:
 
 ```bash
 ssh-keygen -t rsa

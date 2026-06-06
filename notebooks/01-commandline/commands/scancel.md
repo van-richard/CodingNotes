@@ -2,9 +2,12 @@
 keywords: SLURM, hpc
 ---
 
-# `scancel` 
+# `scancel`
 
+`scancel` cancels queued or running Slurm jobs.
 
-```bash Cancel Slurm Jobs
+## Common `scancel` usage
+
+```bash
 scancel JOBID
 ```

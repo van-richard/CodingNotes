@@ -2,9 +2,13 @@
 keywords: download, upload, file, folder, file management, sync
 ---
 
-# `scp` - copy files/folders over ssh
+# `scp`
 
-Using the command, `scp`, is helpful for copying single files or folders that aren't too large in size. The general notation is similar to `rsync`:
+`scp` copies files and directories between computers over SSH.
+
+## Common `scp` usage
+
+Using `scp` is helpful for copying single files or folders that aren't too large. The general notation is similar to `rsync`:
 
 ```bash
 scp -r [source] [destination]

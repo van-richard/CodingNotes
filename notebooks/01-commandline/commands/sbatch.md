@@ -2,8 +2,12 @@
 keywords: SLURM, hpc
 ---
 
-# `sbatch` 
+# `sbatch`
 
-```bash Submit job to Slurm
+`sbatch` submits a batch script to the Slurm scheduler.
+
+## Common `sbatch` usage
+
+```bash
 sbatch JOB.slurm
 ```

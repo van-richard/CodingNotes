@@ -20,8 +20,15 @@ subtrees:
         entries:
         - glob: "notebooks/01-commandline/git/git-*"
       - file: notebooks/01-commandline/commands/toc.md
-        entries:
-        - glob: "notebooks/01-commandline/linux-*"
+        subtrees:
+        - hidden: true
+          numbered: false
+          entries:
+          - glob: "notebooks/01-commandline/commands/[a-s]*"
+          - file: notebooks/01-commandline/commands/tail.md
+          - file: notebooks/01-commandline/commands/tar.md
+          - file: notebooks/01-commandline/commands/touch.md
+          - file: notebooks/01-commandline/commands/trap.md
   - file: notebooks/02-hpc/toc
     subtrees:
     - entries:

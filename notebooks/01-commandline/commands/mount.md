@@ -1,6 +1,10 @@
-# `mount` - mount filesystem
+# `mount`
 
-- need `sudo`
+`mount` attaches a filesystem to a directory.
+
+## Common `mount` usage
+
+- Usually requires `sudo`.
 
 ```bash
 sudo mount /path/to/filesystem /path/to/mount
@@ -11,4 +15,3 @@ sudo mount /dev/sdb1 /opt/data
 ```
 
 - use [`lsblk`](lsblk.md) to find filesystem
-

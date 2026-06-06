@@ -1,9 +1,11 @@
-# `rm` - delete files
+# `rm`
 
+`rm` permanently removes files or directories.
+
+## Common `rm` usage
 
 ```{caution}
-This command is permanently delete your files / folders
-No trash can to recover "accidental" events
+This command permanently deletes files and folders. There is no trash can to recover accidental deletions.
 ```
 
 - Use `rm` (Remove) to delete files/folders.
@@ -40,4 +42,3 @@ rm file.txt
 :::{code} bash
 rm -r directory/
 :::
-

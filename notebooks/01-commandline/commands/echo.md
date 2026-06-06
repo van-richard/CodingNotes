@@ -1,6 +1,8 @@
-# `echo` - Print Argument
+# `echo`
 
-Print text passed as argument
+`echo` prints text or variable values to standard output.
+
+## Common `echo` usage
 
 ```bash
 echo "Hello"

@@ -1,6 +1,10 @@
-# `cp` - copy files or folders
+# `cp`
 
-- Use `cp` to copy files or folders 
+`cp` copies files or directories while leaving the source in place.
+
+## Common `cp` usage
+
+- Use `cp` to copy files or folders
   - The `[source]` is the original file/folder or `/path/to/OriginalFile` or `/path/to/OriginalFolder`
   - The `[destination]` is where you want the *new copy* to go, this can be in the same folder, or to another path (`/different/path/to/NewFile`)
 

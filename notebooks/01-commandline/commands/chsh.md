@@ -2,7 +2,11 @@
 keyword: SHELL, $SHELL, shell, Shell, bash, zsh, csh
 ---
 
-# chsh - change shell
+# `chsh`
+
+`chsh` changes your login shell.
+
+## Common `chsh` usage
 
 If you don't know which shell you're using, type the following command in your terminal:
 
@@ -19,4 +23,3 @@ chsh -s /bin/bash
 ```
 
 You should now be in a `bash` shell
-

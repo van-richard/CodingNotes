@@ -1,10 +1,10 @@
-# `tar` - compress/uncompress files
+# `tar`
 
-`tar` stands for tape archive.
+`tar` creates and extracts archive files.
 
-We can use the `tar` command to create, compressed, or uncompressed Archive files, and also maintain/modify them.
+## Common `tar` usage
 
-Archive files are used to collect multiple data files together into a single file for easier portability and storage, or simply to compress files to use less storage space. 
+`tar` stands for tape archive. Archive files collect multiple files into one file for easier portability and storage.
 
 Example of opening `tar` files:
 

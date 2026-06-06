@@ -1,6 +1,10 @@
-# `pwd` - print working directory
+# `pwd`
 
-- Use `pwd` (Print Working Directory) to find your current working directory (folder).
+`pwd` prints the path of the current working directory.
+
+## Common `pwd` usage
+
+- Use `pwd` to find your current working directory.
 
 ```bash
 pwd

@@ -1,49 +1,39 @@
-# linux
+# Commands
 
-```{tableofcontents}
-```
+A quick glossary of command-line tools used throughout these notes. Select a command for examples and additional details.
 
-## Reset GNOME Terminal Hotkeys
-
-```
-dconf reset -f /org/gnome/terminal/legacy/keybindings/
-```
-
-## Manging Multiple Compiler Versions
-
-- for personal machines
-
-For example, if you need multiple versions of gcc/g++ on a single machine running Ubuntu 22.04
-
-- First install with `sudo apt-get`
-
-```bash
-sudo apt-get install gcc-11 gcc-10 gcc-9 g++-11 g++-10 g++-9 -y
- ```
-
-- Use the `updalternativesate`  to create list of multiple gcc and g++ compiler alternatives
-- Larger number = higher priority 
-    - here, gcc and g++ 11 is default
-
- ```bash
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 0
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 0
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 1
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 1
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 2
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 2
-```
-
-- Check the available c and c++ compilers list on your system and select desired version by entering relevant selection number:
-
-```bash
-sudo update-alternatives --config gcc
-sudo update-alternatives --config g++
-```
-
-- Sanity check
-
-```bash
-gcc --version
-g++ --version
-```
+- [`awk`](awk.md) - Select, transform, and calculate with columns of text.
+- [`cat`](cat.md) - Print or combine file contents.
+- [`cd`](cd.md) - Change the current working directory.
+- [`chsh`](chsh.md) - Change your login shell.
+- [`cp`](cp.md) - Copy files and directories.
+- [`echo`](echo.md) - Print text or variable values.
+- [`grep`](grep.md) - Search text for matching patterns.
+- [`head`](head.md) - Print the first lines of a file.
+- [`help`](help.md) - Read help for Bash built-in commands.
+- [`less`](less.md) - View and navigate text one screen at a time.
+- [`ls`](ls.md) - List files and directories.
+- [`lsblk`](lsblk.md) - List block devices and mount points.
+- [`lscpu`](lscpu.md) - Display CPU architecture information.
+- [`man`](man.md) - Read a command's manual page.
+- [`mkdir`](mkdir.md) - Create directories.
+- [`module`](module.md) - Load and manage software modules.
+- [`mount`](mount.md) - Attach a filesystem to a directory.
+- [`mv`](mv.md) - Move or rename files and directories.
+- [`pwd`](pwd.md) - Print the current working directory.
+- [`rm`](rm.md) - Permanently remove files or directories.
+- [`rsync`](rsync.md) - Synchronize files and directories.
+- [`sbatch`](sbatch.md) - Submit a batch job to Slurm.
+- [`scancel`](scancel.md) - Cancel a Slurm job.
+- [`scp`](scp.md) - Copy files over SSH.
+- [`sed`](sed.md) - Transform text using editing expressions.
+- [`seq`](seq.md) - Print a sequence of numbers.
+- [`setfacl`](setfacl.md) - Modify filesystem access control lists.
+- [`sinfo`](sinfo.md) - Display Slurm node and partition information.
+- [`sort`](sort.md) - Sort lines of text.
+- [`ssh-keygen`](ssh-keygen.md) - Create SSH key pairs.
+- [`ssh`](ssh.md) - Connect to a remote computer securely.
+- [`tail`](tail.md) - Print the last lines of a file.
+- [`tar`](tar.md) - Create or extract archive files.
+- [`touch`](touch.md) - Create empty files or update timestamps.
+- [`trap`](trap.md) - Run commands when a shell receives a signal.

@@ -2,7 +2,7 @@
 
 A simple example of how to run MD simulations is with the molecule, Alanine Dipeptide. We will model the residue, solvate it in a water box, equilibrate the system, and run MD production simulations with AmberTools. This should take roughly an hour.
 
-```{figure} ../../_static/videos/simple.mov
+```{figure} https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/videos/simple.mov
 ---
 width: 50%
 ---

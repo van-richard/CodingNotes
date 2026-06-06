@@ -1,8 +1,8 @@
--
+# `help`
 
-# `help` - read documentation
+`help` displays documentation for Bash built-in commands.
 
-Read Bash shell built-ins documentation with the bash `help` built-in:
+## Common `help` usage
 
 ```bash
 help

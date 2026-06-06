@@ -136,6 +136,6 @@ exclude_patterns = [
         '**.ipynb_checkpoints', 
         '.DS_Store', '.git', '.gitignore',
         '.vscode', 'Thumbs.db', 
-        '_build', 'static', 'build.sh', 
+        '_build', 'build.sh', 
         'drafts/', 'requirements.txt', 'bak'
 ]

@@ -1,4 +1,8 @@
-# `lsblk` - list filesystem
+# `lsblk`
+
+`lsblk` lists block devices, partitions, and mount points.
+
+## Common `lsblk` usage
 
 ```bash
 lsblk
@@ -17,4 +21,3 @@ nvme0n1     259:4    0 465.8G  0 disk
 ├─nvme0n1p1 259:5    0   512M  0 part /boot/efi
 └─nvme0n1p2 259:6    0 465.3G  0 part /
 ```
-

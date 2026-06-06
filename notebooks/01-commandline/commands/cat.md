@@ -2,7 +2,11 @@
 keywords: cat, bash
 ---
 
-# `cat` - print input to standard output
+# `cat`
+
+`cat` prints or combines file contents.
+
+## Common `cat` usage
 
 ```bash
 cat file.txt

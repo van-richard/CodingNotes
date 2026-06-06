@@ -3,12 +3,12 @@ keyword: SLURM, hpc, cluster
 ---
 
 
-# `sinfo` 
+# `sinfo`
 
-View information about Slurm nodes and partitions
+`sinfo` displays information about Slurm nodes and partitions.
 
+## Common `sinfo` usage
 
-```bash Find idle partitions
+```bash
 sinfo | grep idle
 ```
-

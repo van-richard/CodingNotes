@@ -1,6 +1,10 @@
-# `tail` - read from bottom of file
+# `tail`
 
-- output the last 10 lines of a file
+`tail` prints the last lines of a file.
+
+## Common `tail` usage
+
+- Output the last 10 lines of a file:
 
 ```bash
 tail file.txt

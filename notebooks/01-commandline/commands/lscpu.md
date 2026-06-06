@@ -2,16 +2,19 @@
 keywords: core, thread, cpu, count
 ---
 
-# lscpu 
+# `lscpu`
 
-core: physical processing unit
-thread: logical execution path 
-    - can use simultaneous multithreading (SMT)
-    - Intel calls SMT "hyper-threading," allowing each core to run 2 threads concurrently
+`lscpu` displays CPU architecture, core, and thread information.
 
-find threads/core count on machine, with:
+## Common `lscpu` usage
 
-```bash On linux/mac, run:
+On Linux, show the number of cores and threads:
+
+```bash
 lscpu | grep -E 'Core|Thread'
 ```
 
+- core: physical processing unit
+- thread: logical execution path
+    - can use simultaneous multithreading (SMT)
+    - Intel calls SMT "hyper-threading," allowing each core to run 2 threads concurrently

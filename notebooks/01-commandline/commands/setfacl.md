@@ -1,6 +1,10 @@
-# `setfacl` - change file/folder permissions 
+# `setfacl`
 
-Give specific user permission to read/write/execute a folder
+`setfacl` modifies filesystem access control lists for files and directories.
+
+## Common `setfacl` usage
+
+Give a specific user permission to read, write, and execute within a folder:
 
 - modifies ACL
 - alternative to `chmod` 

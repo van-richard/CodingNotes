@@ -1,8 +1,12 @@
 
 
-# `seq` - sequence of numbers
+# `seq`
 
-Default increment of 1.
+`seq` prints a sequence of numbers.
+
+## Common `seq` usage
+
+The default increment is 1.
 
 ```bash
 seq FIRST INCREMENT LAST

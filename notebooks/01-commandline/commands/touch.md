@@ -1,6 +1,10 @@
-# `touch` - Make File
+# `touch`
 
-Make new file without editor
+`touch` creates empty files or updates file timestamps.
+
+## Common `touch` usage
+
+Make a new file without opening an editor:
 
 ```bash
 touch filename

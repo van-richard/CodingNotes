@@ -1,9 +1,13 @@
 
-# `module` - load software on slurm
+# `module`
 
-List available programs
+`module` loads and manages software environments on HPC systems.
 
-``bash
+## Common `module` usage
+
+List available programs:
+
+```bash
 module av
 ```
 
