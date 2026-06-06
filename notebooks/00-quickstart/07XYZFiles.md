@@ -25,12 +25,12 @@ Alanine dipeptide is the amino acid, Alanine, with the N-/C-terminal capped by a
 8. Click on the `minimize energy` button
 9. Save the structure as `ala.xyz` to your desired location (I saved them to my `~/Desktop/`)
 
-:::{figure} ../../static/videos/iqmol_ala.mov
----
-align: center
-figwidth: 75%
-----
-:::
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 75%; height: auto;">
+    <source src="../../_static/videos/iqmol_ala.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
 
 ## Open the `ala.xyz` File
 

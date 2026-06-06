@@ -4,12 +4,12 @@ Get the hen egg-white lysozyme structure, PDB code "1AKI", from the Protein Data
 
 Now, download this file as PDB format. 
 
-:::{figure} ../../static/videos/rcsb_1aki1.mp4
----
-figwidth: 25%
-align: center
----
-:::
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 25%; height: auto;">
+    <source src="../../_static/videos/rcsb_1aki1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
 
 
 
@@ -130,12 +130,12 @@ We will visualize the PDB file of the ternary structure of SpyCas9 (SpyCas9 boun
 4. Open the file using ChimeraX
 5. Change the molecule style to ribbon
 
-:::{figure} ../../static/videos/rcsb_7z4j0.mp4
----
-align: center
-figwidth: 25%
----
-:::
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 25%; height: auto;">
+    <source src="../../_static/videos/rcsb_7z4j0.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
 
 
 In Step 4. (or roughly 28 seconds into the video), once we opened PDB **7Z4J**, ChimeraX gives us some chain information in the "Log" panel. For this PDB, we have 5 chains corresponding to:
@@ -150,12 +150,12 @@ In Step 4. (or roughly 28 seconds into the video), once we opened PDB **7Z4J**, 
 
 In this example, we are looking at the DNA cleavage product from SpyCas9. Chains C and c both correspond to the target-strand DNA, but they are labeled as separate chains because they are not connected! They are treated as separate molecules in the PDB file.
 
-:::{figure} ../../static/videos/rcsb_7z4j1.mp4
----
-align: center
-figwidth: 75%
----
-:::
+<figure class="align-center">
+  <video controls playsinline preload="metadata" style="max-width: 75%; height: auto;">
+    <source src="../../_static/videos/rcsb_7z4j1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</figure>
 
 
 In this video, I zoom into the the HNH domain where target-strand DNA gets cleaved, and show all residues within 5 Å of the magnesium ion. Chain C is on the right, while Chain c is on the left.
@@ -254,4 +254,3 @@ This value can be used to gain insights into the flexibility of a molecule or a 
 | B-factor       | Quantification of how much an atom fluctuates around its average position in the crystal lattice. A higher B-factor indicates greater thermal motion or disorder, while a lower B-factor indicates less thermal motion and greater positional certainty <br> **Note:** A lower value indicates a well-ordered region, whereas a higher value indicates a more flexible region |
 | Element Symbol | Clear chemical identification (Carbon - C, Oxygen -O, Nitrogen -N, etc.) |
 | TER            | The end of a chain of residues |
-
