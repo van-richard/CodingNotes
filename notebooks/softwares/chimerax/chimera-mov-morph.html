@@ -58,7 +58,7 @@
     <link rel="icon" href="../../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="6.4.5. Rocking" href="chimera-mov-rock.html" />
+    <link rel="next" title="6.5. ffmpeg: Movies" href="../ffmpeg.html" />
     <link rel="prev" title="6.4.3. Fading" href="chimera-mov-fade.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -478,16 +478,15 @@ document.write(`
 </details></li>
 
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="chimera.html">6.4. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="chimera-cli-overview.html">6.4.1. ChimeraX Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-img-save.html">6.4.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera-mov-spin.html">6.4.1. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chimera-mov-rock.html">6.4.2. Rocking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chimera-mov-fade.html">6.4.3. Fading</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">6.4.4. Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-rock.html">6.4.5. Rocking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-spin.html">6.4.6. Spin</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../ffmpeg.html">6.5. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gnu-parallel.html">6.6. GNU Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vina/how_to_install_autodock_vina_gpu_macos_silicon.html">6.7. How to install AutoDock-GPU on Apple silicon</a></li>
 </ul>
 </div>
 </nav></div>
@@ -550,35 +549,40 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="morphing">
 <h1><span class="section-number">6.4.4. </span>Morphing<a class="headerlink" href="#morphing" title="Link to this heading">#</a></h1>
+<p>Create a smooth transition between aligned molecular structures in ChimeraX.</p>
 <figure class="align-center">
   <video controls playsinline preload="metadata" style="max-width: 50%; height: auto;">
     <source src="../../../_static/videos/chimerax_morph_fncas12a.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  <figcaption>Morphing transition between FnCas12a structures 6GTG and 6I1K.</figcaption>
 </figure>
-<section id="morphing-transition-between-2-pdb-structures">
-<h2><span class="section-number">6.4.4.1. </span>Morphing transition between 2 PDB structures<a class="headerlink" href="#morphing-transition-between-2-pdb-structures" title="Link to this heading">#</a></h2>
-<p>Note: You must align the structures before morphing.</p>
-<p><em>Morph between 2 PDB structures of FnCas12a (PDB 6GTG to 6I1K)</em></p>
-<p>The code looks like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">morph</span> <span class="c1">#1,2,3,4,5 frames 100</span>
+<p>The structures must be aligned before morphing. This example uses two FnCas12a structures, PDB 6GTG and PDB 6I1K.</p>
+<section id="morph-command">
+<h2><span class="section-number">6.4.4.1. </span>Morph command<a class="headerlink" href="#morph-command" title="Link to this heading">#</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>morph #1,2,3,4,5 frames 100
 </pre></div>
 </div>
-<section id="example">
-<h3><span class="section-number">6.4.4.1.1. </span>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
-<p>Open 2 PDB files for FnCas12a.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span> <span class="mi">6</span><span class="n">i1k</span> <span class="mi">6</span><span class="n">gtg</span>
-</pre></div>
-</div>
-<p>Align the two structures.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">match</span> <span class="c1">#2 to #1</span>
-</pre></div>
-</div>
-<p>Morph transition is done by:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">morph</span> <span class="c1">#1,2,3,4,5 frames 100</span>
+<p>Example setup:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>open 6i1k 6gtg
+match #2 to #1
+morph #1,2,3,4,5 frames 100
 </pre></div>
 </div>
 </section>
+<section id="one-line-morph-command">
+<h2><span class="section-number">6.4.4.2. </span>One-line morph command<a class="headerlink" href="#one-line-morph-command" title="Link to this heading">#</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>open 6i1k 6gtg; match #2 to #1; morph #1,2,3,4,5 frames 100
+</pre></div>
+</div>
+</section>
+<section id="what-each-morph-command-does">
+<h2><span class="section-number">6.4.4.3. </span>What each morph command does<a class="headerlink" href="#what-each-morph-command-does" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">6i1k</span> <span class="pre">6gtg</span></code> opens the two FnCas12a structures.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span> <span class="pre">#2</span> <span class="pre">to</span> <span class="pre">#1</span></code> aligns model <code class="docutils literal notranslate"><span class="pre">#2</span></code> to model <code class="docutils literal notranslate"><span class="pre">#1</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">morph</span> <span class="pre">#1,2,3,4,5</span> <span class="pre">frames</span> <span class="pre">100</span></code> creates a 100-frame morph using the listed models.</p></li>
+</ul>
 </section>
 </section>
 
@@ -621,11 +625,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="chimera-mov-rock.html"
+       href="../ffmpeg.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.4.5. </span>Rocking</p>
+        <p class="prev-next-title"><span class="section-number">6.5. </span><code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -645,10 +649,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morphing-transition-between-2-pdb-structures">6.4.4.1. Morphing transition between 2 PDB structures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">6.4.4.1.1. Example</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#morph-command">6.4.4.1. Morph command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#one-line-morph-command">6.4.4.2. One-line morph command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-each-morph-command-does">6.4.4.3. What each morph command does</a></li>
 </ul>
   </nav></div>
 
