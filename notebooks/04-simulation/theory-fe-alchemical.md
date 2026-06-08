@@ -33,11 +33,7 @@ Here, the quantity of interest is the change in binding affinity between a compo
 Alchemical relative free energy calculations avoids the need to simulate binding and unbinding events by making use of the fact that the free energy is a state function and exploiting the thermodynamic cycle.
 
 ::::{sidebar}
-<<<<<<< HEAD
-:::{figure} https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/images/fe-alchem-thermo-cycle.png
-=======
 :::{figure} ../../static/images/fe-alchem-thermo-cycle.png
->>>>>>> codex
 ---
 align: center
 figwidth: 100%
