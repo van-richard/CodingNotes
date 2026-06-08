@@ -580,28 +580,22 @@ document.write(`
 <h1><span class="section-number">5.1.8. </span>Alchemical Free Energy<a class="headerlink" href="#alchemical-free-energy" title="Link to this heading">#</a></h1>
 <p>Alchemical free energy calculations use unphysical intermediate states to estimate the free energy of the physical process we’re investigating.</p>
 <p>Here, the quantity of interest is the change in binding affinity between a compound A and a related compound B, (e.g., by modifying one of the drug scaffold’s substituents) is given by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c0117e75-d5c8-460e-a9d5-726af74e5efa">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-c0117e75-d5c8-460e-a9d5-726af74e5efa" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bb8d9361-efad-4b92-9b6c-be61041bc3af">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-bb8d9361-efad-4b92-9b6c-be61041bc3af" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; = \Delta G_{bind,B} - \Delta G_{bind,A} \\
                          &amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(R+B)} - \ln \frac{Z(RA)}{Z(R+A)} \right)
 \end{align}\]</div>
 <p>Alchemical relative free energy calculations avoids the need to simulate binding and unbinding events by making use of the fact that the free energy is a state function and exploiting the thermodynamic cycle.</p>
 <aside class="sidebar">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<figure class="align-default" id="id1">
-<img alt="https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/images/fe-alchem-thermo-cycle.png" src="https://github.com/van-richard/CodingNotes/blob/b324c9c14f93554820731457a698e5af886eae76/static/images/fe-alchem-thermo-cycle.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">=======</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
-<div class="legend">
-<figure class="align-default">
+<figure class="align-center" id="id1" style="width: 100%">
 <img alt="../../_images/fe-alchem-thermo-cycle.png" src="../../_images/fe-alchem-thermo-cycle.png" />
-</figure>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Example of thermodynamic cycle from the paper.</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </aside>
-<div class="amsmath math notranslate nohighlight" id="equation-182337b0-09c7-4b34-9bc8-df7512c2194d">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-182337b0-09c7-4b34-9bc8-df7512c2194d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-325e8fc7-a8c1-4407-b531-1f2a5b67b25f">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-325e8fc7-a8c1-4407-b531-1f2a5b67b25f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \Delta G_{bind,AB}&amp; \approx -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(R+B)}{Z(R+A)} \right) \\
                          &amp; = -k_bT \left( \ln \frac{Z(RB)}{Z(RA)} - \ln \frac{Z(B)}{Z(A)} \right) \\
                          &amp; = \Delta G_{bound} - \Delta_{unbound}

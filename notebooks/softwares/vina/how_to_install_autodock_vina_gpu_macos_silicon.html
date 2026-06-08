@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6.4. ChimeraX &#8212; CodingNotes</title>
+    <title>6.7. How to install AutoDock-GPU on Apple silicon &#8212; CodingNotes</title>
   
   
   
@@ -53,13 +53,12 @@
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/softwares/chimerax/chimera';</script>
-    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/softwares/chimerax/chimera.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/softwares/vina/how_to_install_autodock_vina_gpu_macos_silicon';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/softwares/vina/how_to_install_autodock_vina_gpu_macos_silicon.html" />
     <link rel="icon" href="../../../_static/van-codingnotes.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="6.4.1. ChimeraX Command Line" href="chimera-cli-overview.html" />
-    <link rel="prev" title="6.2.4. apptainer instance start" href="../apptainer/app-instance.html" />
+    <link rel="prev" title="6.6. GNU Parallel" href="../gnu-parallel.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -477,18 +476,18 @@ document.write(`
 </ul>
 </details></li>
 
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6.4. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="chimera-cli-overview.html">6.4.1. ChimeraX Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-img-save.html">6.4.2. Saving Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-fade.html">6.4.3. Fading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-morph.html">6.4.4. Morphing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-rock.html">6.4.5. Rocking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chimera-mov-spin.html">6.4.6. Spin</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chimerax/chimera.html">6.4. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-cli-overview.html">6.4.1. ChimeraX Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-img-save.html">6.4.2. Saving Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-fade.html">6.4.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-morph.html">6.4.4. Morphing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-rock.html">6.4.5. Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chimerax/chimera-mov-spin.html">6.4.6. Spin</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../ffmpeg.html">6.5. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gnu-parallel.html">6.6. GNU Parallel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../vina/how_to_install_autodock_vina_gpu_macos_silicon.html">6.7. How to install AutoDock Vina GPU on MacOS silicon</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6.7. How to install AutoDock-GPU on Apple silicon</a></li>
 </ul>
 </div>
 </nav></div>
@@ -546,13 +545,209 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="chimerax">
-<h1><span class="section-number">6.4. </span>ChimeraX<a class="headerlink" href="#chimerax" title="Link to this heading">#</a></h1>
-<p>Chimera and <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/">ChimeraX</a> are both great molecular visualization tools developed by UCSF.</p>
-<p>ChimeraX is the newest program, and it can efficiently handle large data (i.e. PDBs with thousands of atoms). It is my prefered GUI when exploring new structures and making videos/figures.</p>
-<p>Download the latest version of <a class="reference external" href="https://www.cgl.ucsf.edu/chimerax/download.html">ChimeraX</a>! You will need to register for an account, otherwise you’ll get a notification everytime you open the software.</p>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-install-autodock-gpu-on-apple-silicon">
+<h1><span class="section-number">6.7. </span>How to install AutoDock-GPU on Apple silicon<a class="headerlink" href="#how-to-install-autodock-gpu-on-apple-silicon" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p><strong>Note:</strong> The binary used here is from the Scripps <strong>AutoDock-GPU</strong> release, not the separate AutoDock Vina codebase. This guide follows the working installation path for the Apple Silicon OpenCL/OpenMP binary:</p>
+<p><code class="docutils literal notranslate"><span class="pre">adgpu-v1.6_omp_macos_aarch64_ocl_128wi</span></code></p>
+</div></blockquote>
+<p>This guide assumes you are installing on an Apple Silicon Mac, such as an M1, M2, M3, or newer Mac. The example below was tested on an M2 Pro Mac.</p>
+<hr class="docutils" />
+<section id="install-homebrew-if-needed">
+<h2><span class="section-number">6.7.1. </span>1. Install Homebrew if needed<a class="headerlink" href="#install-homebrew-if-needed" title="Link to this heading">#</a></h2>
+<p>If Homebrew is not already installed, install it from the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
 </div>
+<p>After installation, make sure Homebrew is available in your shell. On Apple Silicon Macs, Homebrew is usually installed under <code class="docutils literal notranslate"><span class="pre">/opt/homebrew</span></code>.</p>
+<p>You can test it with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>--version
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="install-the-required-openmp-runtime">
+<h2><span class="section-number">6.7.2. </span>2. Install the required OpenMP runtime<a class="headerlink" href="#install-the-required-openmp-runtime" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">omp_macos</span></code> AutoDock-GPU binary expects <code class="docutils literal notranslate"><span class="pre">libomp.dylib</span></code> to be available from Homebrew LLVM.</p>
+<p>Install LLVM with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>llvm
+</pre></div>
+</div>
+<p>Install OpenMP:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>libomp
+</pre></div>
+</div>
+<p>Verify that the OpenMP library exists:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l<span class="w"> </span>/opt/homebrew/opt/llvm/lib/libomp.dylib
+</pre></div>
+</div>
+<p>If this file exists, the required runtime dependency is installed.</p>
+</section>
+<hr class="docutils" />
+<section id="download-the-apple-silicon-autodock-gpu-binary">
+<h2><span class="section-number">6.7.3. </span>3. Download the Apple Silicon AutoDock-GPU binary<a class="headerlink" href="#download-the-apple-silicon-autodock-gpu-binary" title="Link to this heading">#</a></h2>
+<p>Download the Apple Silicon OpenCL/OpenMP binary from the official
+<a class="reference external" href="https://github.com/ccsb-scripps/AutoDock-GPU/releases">AutoDock-GPU GitHub releases page</a>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>adgpu-v1.6_omp_macos_aarch64_ocl_128wi
+</pre></div>
+</div>
+<p>For example, the downloaded file may initially be in:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$HOME</span>/Downloads/adgpu-v1.6_omp_macos_aarch64_ocl_128wi
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="create-a-program-directory-for-autodock-gpu">
+<h2><span class="section-number">6.7.4. </span>4. Create a program directory for AutoDock-GPU<a class="headerlink" href="#create-a-program-directory-for-autodock-gpu" title="Link to this heading">#</a></h2>
+<p>Create a dedicated directory under <code class="docutils literal notranslate"><span class="pre">$HOME/Programs</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HOME</span>/Programs/autodock
+mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HOME</span>/Programs/bin
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="move-the-downloaded-binary-into-place">
+<h2><span class="section-number">6.7.5. </span>5. Move the downloaded binary into place<a class="headerlink" href="#move-the-downloaded-binary-into-place" title="Link to this heading">#</a></h2>
+<p>Move the downloaded file into the AutoDock program directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mv<span class="w"> </span><span class="nv">$HOME</span>/Downloads/adgpu-v1.6_omp_macos_aarch64_ocl_128wi<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span><span class="nv">$HOME</span>/Programs/autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi
+</pre></div>
+</div>
+<p>Make the binary executable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span><span class="nv">$HOME</span>/Programs/autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi
+</pre></div>
+</div>
+<p>Remove the macOS quarantine attribute if the file was downloaded through a browser:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>xattr<span class="w"> </span>-d<span class="w"> </span>com.apple.quarantine<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">$HOME</span>/Programs/autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="create-a-convenient-command-line-symlink">
+<h2><span class="section-number">6.7.6. </span>6. Create a convenient command-line symlink<a class="headerlink" href="#create-a-convenient-command-line-symlink" title="Link to this heading">#</a></h2>
+<p>Go to your personal binary directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>/Programs/bin
+</pre></div>
+</div>
+<p>Create a symbolic link named <code class="docutils literal notranslate"><span class="pre">vina_gpu</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ln<span class="w"> </span>-sf<span class="w"> </span>../autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi<span class="w"> </span>vina_gpu
+</pre></div>
+</div>
+<p>This allows you to run the AutoDock-GPU binary using the shorter command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vina_gpu
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="add-home-programs-bin-to-your-path">
+<h2><span class="section-number">6.7.7. </span>7. Add <code class="docutils literal notranslate"><span class="pre">$HOME/Programs/bin</span></code> to your PATH<a class="headerlink" href="#add-home-programs-bin-to-your-path" title="Link to this heading">#</a></h2>
+<p>If <code class="docutils literal notranslate"><span class="pre">$HOME/Programs/bin</span></code> is not already in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, add it to your shell startup file.</p>
+<p>For the default macOS <code class="docutils literal notranslate"><span class="pre">zsh</span></code> shell:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export PATH=&quot;$HOME/Programs/bin:$PATH&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="nv">$HOME</span>/.zshrc
+<span class="nb">source</span><span class="w"> </span><span class="nv">$HOME</span>/.zshrc
+</pre></div>
+</div>
+<p>Confirm that the command is found:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which<span class="w"> </span>vina_gpu
+</pre></div>
+</div>
+<p>The output should be similar to:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>/Users/YOUR_USERNAME/Programs/bin/vina_gpu
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="test-the-installation">
+<h2><span class="section-number">6.7.8. </span>8. Test the installation<a class="headerlink" href="#test-the-installation" title="Link to this heading">#</a></h2>
+<p>Run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vina_gpu<span class="w"> </span>--help
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vina_gpu
+</pre></div>
+</div>
+<p>If the installation worked, AutoDock-GPU should print its usage information or command-line options.</p>
+</section>
+<hr class="docutils" />
+<section id="example-run-command">
+<h2><span class="section-number">6.7.9. </span>9. Example run command<a class="headerlink" href="#example-run-command" title="Link to this heading">#</a></h2>
+<p>A typical AutoDock-GPU command uses an AutoDock grid map descriptor file and a ligand PDBQT file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vina_gpu<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--ffile<span class="w"> </span>receptor.maps.fld<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--lfile<span class="w"> </span>ligand.pdbqt<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--nrun<span class="w"> </span><span class="m">20</span>
+</pre></div>
+</div>
+<p>The key required inputs are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--ffile</span></code> or <code class="docutils literal notranslate"><span class="pre">-M</span></code>: the AutoDock grid map field file, usually ending in <code class="docutils literal notranslate"><span class="pre">.maps.fld</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--lfile</span></code> or <code class="docutils literal notranslate"><span class="pre">-L</span></code>: the ligand file in <code class="docutils literal notranslate"><span class="pre">.pdbqt</span></code> format</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--nrun</span></code>: the number of docking runs to perform</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="troubleshooting">
+<h2><span class="section-number">6.7.10. </span>10. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<section id="error-library-not-loaded-opt-homebrew-opt-llvm-lib-libomp-dylib">
+<h3><span class="section-number">6.7.10.1. </span>Error: <code class="docutils literal notranslate"><span class="pre">Library</span> <span class="pre">not</span> <span class="pre">loaded:</span> <span class="pre">/opt/homebrew/opt/llvm/lib/libomp.dylib</span></code><a class="headerlink" href="#error-library-not-loaded-opt-homebrew-opt-llvm-lib-libomp-dylib" title="Link to this heading">#</a></h3>
+<p>Install LLVM with Homebrew:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>llvm
+</pre></div>
+</div>
+<p>Then verify:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls<span class="w"> </span>-l<span class="w"> </span>/opt/homebrew/opt/llvm/lib/libomp.dylib
+</pre></div>
+</div>
+<p>Try again:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vina_gpu<span class="w"> </span>--help
+</pre></div>
+</div>
+</section>
+<section id="error-permission-denied">
+<h3><span class="section-number">6.7.10.2. </span>Error: permission denied<a class="headerlink" href="#error-permission-denied" title="Link to this heading">#</a></h3>
+<p>Make sure the binary is executable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span><span class="nv">$HOME</span>/Programs/autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi
+</pre></div>
+</div>
+</section>
+<section id="error-macos-says-the-file-cannot-be-opened">
+<h3><span class="section-number">6.7.10.3. </span>Error: macOS says the file cannot be opened<a class="headerlink" href="#error-macos-says-the-file-cannot-be-opened" title="Link to this heading">#</a></h3>
+<p>Remove the quarantine attribute:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>xattr<span class="w"> </span>-d<span class="w"> </span>com.apple.quarantine<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="nv">$HOME</span>/Programs/autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+</pre></div>
+</div>
+</section>
+<section id="check-what-libraries-the-binary-needs">
+<h3><span class="section-number">6.7.10.4. </span>Check what libraries the binary needs<a class="headerlink" href="#check-what-libraries-the-binary-needs" title="Link to this heading">#</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">otool</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>otool<span class="w"> </span>-L<span class="w"> </span><span class="nv">$HOME</span>/Programs/autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi
+</pre></div>
+</div>
+<p>To specifically check OpenMP linkage:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>otool<span class="w"> </span>-L<span class="w"> </span><span class="nv">$HOME</span>/Programs/autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>omp
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="final-installed-layout">
+<h2><span class="section-number">6.7.11. </span>Final installed layout<a class="headerlink" href="#final-installed-layout" title="Link to this heading">#</a></h2>
+<p>After following this guide, the installation should look like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$HOME/Programs/
+├── autodock/
+│   └── adgpu-v1.6_omp_macos_aarch64_ocl_128wi
+└── bin/
+    └── vina_gpu -&gt; ../autodock/adgpu-v1.6_omp_macos_aarch64_ocl_128wi
+</pre></div>
+</div>
+<p>You can then run AutoDock-GPU from anywhere using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vina_gpu
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -568,7 +763,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./notebooks/softwares/chimerax"
+            path: "./notebooks/softwares/vina"
         },
         predefinedOutput: true
     }
@@ -585,22 +780,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../apptainer/app-instance.html"
+       href="../gnu-parallel.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">6.2.4. </span><code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></p>
+        <p class="prev-next-title"><span class="section-number">6.6. </span>GNU Parallel</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="chimera-cli-overview.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.4.1. </span>ChimeraX Command Line</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -613,9 +799,35 @@ document.write(`
 
 
   <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-homebrew-if-needed">6.7.1. 1. Install Homebrew if needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-required-openmp-runtime">6.7.2. 2. Install the required OpenMP runtime</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-the-apple-silicon-autodock-gpu-binary">6.7.3. 3. Download the Apple Silicon AutoDock-GPU binary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-program-directory-for-autodock-gpu">6.7.4. 4. Create a program directory for AutoDock-GPU</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#move-the-downloaded-binary-into-place">6.7.5. 5. Move the downloaded binary into place</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-convenient-command-line-symlink">6.7.6. 6. Create a convenient command-line symlink</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-home-programs-bin-to-your-path">6.7.7. 7. Add <code class="docutils literal notranslate"><span class="pre">$HOME/Programs/bin</span></code> to your PATH</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-the-installation">6.7.8. 8. Test the installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-run-command">6.7.9. 9. Example run command</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">6.7.10. 10. Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-library-not-loaded-opt-homebrew-opt-llvm-lib-libomp-dylib">6.7.10.1. Error: <code class="docutils literal notranslate"><span class="pre">Library</span> <span class="pre">not</span> <span class="pre">loaded:</span> <span class="pre">/opt/homebrew/opt/llvm/lib/libomp.dylib</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-permission-denied">6.7.10.2. Error: permission denied</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#error-macos-says-the-file-cannot-be-opened">6.7.10.3. Error: macOS says the file cannot be opened</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-what-libraries-the-binary-needs">6.7.10.4. Check what libraries the binary needs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#final-installed-layout">6.7.11. Final installed layout</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../../_sources/notebooks/softwares/chimerax/chimera.md">
+    <a href="../../../_sources/notebooks/softwares/vina/how_to_install_autodock_vina_gpu_macos_silicon.md">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
