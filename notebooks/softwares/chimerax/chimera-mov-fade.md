@@ -1,29 +1,31 @@
 # Fading
 
+Create a crossfade while changing how a molecular model is displayed in ChimeraX.
+
 <figure class="align-center">
   <video controls playsinline preload="metadata" style="max-width: 50%; height: auto;">
     <source src="../../../_static/videos/chimerax_fade_cas9.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  <figcaption>Crossfade that hides the Cas9 ribbon and atoms.</figcaption>
 </figure>
 
+## Fade command
 
-The code looks like:
-
-```
+```text
 crossfade 48
 hide #1 ribbon,atom
 wait 48
 ```
 
-One liner:
+## One-line fade command
 
-```
+```text
 crossfade 48; hide #1 ribbon,atom; wait 48
 ```
 
-Where:
+## What each fade command does
 
-crossfade [frames] - fade for # of frames
-[action] - can be hiding ribbon, show atoms, color, etc.
-wait [frames] - wait this number of frames before executing next line
+- `crossfade 48` begins a crossfade lasting 48 frames.
+- `hide #1 ribbon,atom` hides the ribbon and atoms for model `#1`.
+- `wait 48` waits for the crossfade to finish before running the next command.
