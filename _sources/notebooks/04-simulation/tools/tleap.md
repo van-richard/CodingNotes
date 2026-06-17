@@ -5,11 +5,6 @@ keywords: tleap, ambertools, bash
 # tleap
 
 
-```{literalinclude} ../../../_external/amberassist/ambertools/tleap/tleap.sh
-:language: bash
-:linenos: 
-```
-
 - 12-6 parameters
 
 ```{literalinclude} ../../../_external/amberassist/ambertools/tleap/tleap.126.sh
