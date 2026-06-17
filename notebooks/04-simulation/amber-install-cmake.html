@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6.1.1. run_cmake (sander only) &#8212; CodingNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/04-simulation/amber-install-cmake';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/04-simulation/amber-install-cmake.html" />
+    <link rel="icon" href="../../_static/van-codingnotes.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6.1.2. Installing helpme" href="amber-install-helpme.html" />
+    <link rel="prev" title="6.1. Compile Notes" href="amber.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search mee!!"
+         aria-label="Search mee!!"
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
+    <img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">CodingNotes</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+    command line
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+    HPC
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../03-python/toc.html">
+    python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="toc.html">
+    simulation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+    command line
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+    HPC
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../03-python/toc.html">
+    python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="toc.html">
+    simulation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="amber.html">6.1. Compile Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1.1. run_cmake (sander only)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-helpme.html">6.1.2. Installing helpme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-helpmelib.html">6.1.3. Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">6.1.4. Compiling Amber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">6.1.5. Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub-at23-patch-summary.html">6.1.6. QMHub AmberTools 23 Patch Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub-at26-patch-summary.html">6.1.7. <code class="docutils literal notranslate"><span class="pre">qmhub_at26.patch</span></code> summary and AT23 comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub-sqm-sinr-at26-patch-summary.html">6.1.8. SQM and SINR AmberTools 26 patch summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">6.1.9. TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/apptainer/apptainer.html">6.2. apptainer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-build.html">6.2.1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-run.html">6.2.2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-shell.html">6.2.3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-instance.html">6.2.4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
+</ul>
+</details></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/chimerax/chimera.html">6.4. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-spin.html">6.4.1. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-rock.html">6.4.2. Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-fade.html">6.4.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-morph.html">6.4.4. Morphing</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/ffmpeg.html">6.5. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/gnu-parallel.html">6.6. GNU Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/vina/how_to_install_autodock_vina_gpu_macos_silicon.html">6.7. How to install AutoDock-GPU on Apple silicon</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">6. </span>More Notes !!</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="amber.html" class="nav-link"><span class="section-number">6.1. </span>Compile Notes</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">6.1.1. </span>run_cmake (sander only)</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="run-cmake-sander-only">
+<h1><span class="section-number">6.1.1. </span>run_cmake (sander only)<a class="headerlink" href="#run-cmake-sander-only" title="Link to this heading">#</a></h1>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#  This file gives some sample cmake invocations.  You may wish to</span>
+<span class="c1">#  edit some options that are chosen here.</span>
+
+<span class="c1">#  For information on how to get cmake, visit this page:</span>
+<span class="c1">#  https://ambermd.org/pmwiki/pmwiki.php/Main/CMake-Quick-Start</span>
+
+<span class="c1">#  For information on common options for cmake, visit this page:</span>
+<span class="c1">#  http://ambermd.org/pmwiki/pmwiki.php/Main/CMake-Common-Options</span>
+
+<span class="c1">#  (Note that you can change the value of CMAKE_INSTALL_PREFIX from what</span>
+<span class="c1">#  is suggested below, but it cannot coincide with the ambertools26_src</span>
+<span class="c1">#  folder.)</span>
+
+<span class="nv">AMBER_PREFIX</span><span class="o">=</span><span class="k">$(</span>dirname<span class="w"> </span><span class="k">$(</span>dirname<span class="w"> </span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span><span class="k">))</span>
+<span class="nv">BUILDNAME</span><span class="o">=</span><span class="s2">&quot;sander26&quot;</span>
+<span class="nv">PLUMED_ROOT</span><span class="o">=</span><span class="s2">&quot;/home/van/Programs/plumed-2.9.4&quot;</span>
+
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/bin:</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/lib:</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/lib64:</span><span class="si">${</span><span class="nv">LD_LIBRARY_PATH</span><span class="k">:-</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/lib/libplumed.so&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nv">PLUMED_LIBDIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/lib&quot;</span>
+<span class="k">elif</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/lib64/libplumed.so&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nv">PLUMED_LIBDIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/lib64&quot;</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Could not find libplumed.so under </span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/lib or lib64&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nv">PLUMED_INCLUDEDIR</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">/include/plumed&quot;</span>
+<span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_INCLUDEDIR</span><span class="si">}</span><span class="s2">/wrapper/Plumed.h&quot;</span><span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Could not find </span><span class="si">${</span><span class="nv">PLUMED_INCLUDEDIR</span><span class="si">}</span><span class="s2">/wrapper/Plumed.h&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="c1">#     -DCMAKE_C_COMPILER=icc \</span>
+<span class="c1">#     -DCMAKE_CXX_COMPILER=icpc \</span>
+<span class="c1">#     -DCMAKE_Fortran_COMPILER=ifort \</span>
+<span class="c1">#     -DMPI=TRUE \</span>
+<span class="c1">#     -DMPI_C_COMPILER=mpiicc \</span>
+<span class="c1">#     -DMPI_CXX_COMPILER=mpiicpc \</span>
+<span class="c1">#     -DMPI_Fortran_COMPILER=mpiifort \</span>
+<span class="w">  </span>cmake<span class="w"> </span><span class="nv">$AMBER_PREFIX</span>/<span class="si">${</span><span class="nv">BUILDNAME</span><span class="si">}</span>_src<span class="w"> </span>-Wno-dev<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCMAKE_INSTALL_PREFIX<span class="o">=</span>/home/van/Programs/<span class="si">${</span><span class="nv">BUILDNAME</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCMAKE_BUILD_TYPE<span class="o">=</span>RELEASE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCOLOR_CMAKE_MESSAGES<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCOMPILER<span class="o">=</span>GNU<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DOPENMP<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DMKL_MULTI_THREADED<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_SHARED_LIBS<span class="o">=</span>TRUE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_GUI<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DDOWNLOAD_MINICONDA<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_PYTHON<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_PERL<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DINSTALL_TESTS<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_QUICK<span class="o">=</span>TRUE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_SANDER_LES<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_SANDER_API<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_SANDER_APBS<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DBUILD_SANDER_PUPIL<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DUSE_FFT<span class="o">=</span>FALSE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DPLUMED_ROOT<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DPLUMED_LIBRARY<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_LIBDIR</span><span class="si">}</span><span class="s2">/libplumed.so&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DPLUMED_KERNEL_LIBRARY<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_LIBDIR</span><span class="si">}</span><span class="s2">/libplumedKernel.so&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DPLUMED_INCLUDES<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_INCLUDEDIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCMAKE_PREFIX_PATH<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_ROOT</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCMAKE_INSTALL_RPATH_USE_LINK_PATH<span class="o">=</span>TRUE<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-DCMAKE_INSTALL_RPATH<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">PLUMED_LIBDIR</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">&quot;-DFORCE_EXTERNAL_LIBS=plumed&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">&quot;-DFORCE_INTERNAL_LIBS=fftw&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">&quot;-DFORCE_DISABLE_LIBS=boost;perlmol;mbx;pnetcdf&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="s2">&quot;-DDISABLE_TOOLS=gbnsr6;cifparse;addles;nmr_aux;nmode;antechamber;ndiff-2.00;gem.pmemd;xray;cpptraj;ambpdb;etc;mdgx;xtalutil;saxs;mm_pbsa;paramfit;FEW;cphstats;tcpb-cpp;tcpb-cpp/pytcpb;reaxff_puremd;nfe-umbrella-slice;leap;parmed;mmpbsa_py;pymsmt;pysander;pytraj;pdb4amber;packmol_memgen;packmol_memgen/web;PyPE_RESP;proprep;rismtools;moft;gpu_utils;pmemd;nabc;fe-toolkit;modXNA;rism&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w">  </span>cmake.log
+
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-s<span class="w"> </span>cmake.log<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Error:  No cmake.log file created: you may need to edit run_cmake&quot;</span>
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;If errors are reported, search for &#39;CMake Error&#39; in the cmake.log file.&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;If the cmake build report looks OK, you should now do the following:&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    make install&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    source </span><span class="nv">$AMBER_PREFIX</span><span class="s2">/</span><span class="si">${</span><span class="nv">BUILDNAME</span><span class="si">}</span><span class="s2">/amber.sh&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Consider adding the last line to your login startup script, e.g. ~/.bashrc&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/04-simulation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="amber.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6.1. </span>Compile Notes</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="amber-install-helpme.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.1.2. </span>Installing helpme</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/notebooks/04-simulation/amber-install-cmake.md"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,916 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6.1.8. SQM and SINR AmberTools 26 patch summary &#8212; CodingNotes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/04-simulation/amber-install-qmhub-sqm-sinr-at26-patch-summary';</script>
+    <link rel="canonical" href="https://van-richard.github.io/CodingNotes/notebooks/04-simulation/amber-install-qmhub-sqm-sinr-at26-patch-summary.html" />
+    <link rel="icon" href="../../_static/van-codingnotes.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6.1.9. TorchMDnet-ext Environment (CPU)" href="amber-install-torchmdnet.html" />
+    <link rel="prev" title="6.1.7. qmhub_at26.patch summary and AT23 comparison" href="amber-install-qmhub-at26-patch-summary.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search mee!!"
+         aria-label="Search mee!!"
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class=" navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/van-abstract-y-light.svg" class="logo__image only-light" alt=""/>
+    <img src="../../_static/van-abstract-y-dark.svg" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">CodingNotes</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class=" navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+    command line
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+    HPC
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../03-python/toc.html">
+    python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="toc.html">
+    simulation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+        </div>
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+    </div>
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../00-quickstart/00_overview.html">
+    quickstart
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../01-commandline/toc.html">
+    command line
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../02-hpc/toc.html">
+    HPC
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../03-python/toc.html">
+    python
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="toc.html">
+    simulation
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../morenotes.html">
+    More Notes !!
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Quick Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://scholar.google.com/citations?user=YQmlIIwAAAAJ&hl=en" title="Google Scholar" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-google fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Google Scholar</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/van-richard" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/OMGITSvanADIUM" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://linkedin.com/van-richard" title="Linkedin" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">Linkedin</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="amber.html">6.1. Compile Notes</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="amber-install-cmake.html">6.1.1. run_cmake (sander only)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-helpme.html">6.1.2. Installing helpme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-helpmelib.html">6.1.3. Compile <code class="docutils literal notranslate"><span class="pre">helpmelib</span></code> executable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-patch.html">6.1.4. Compiling Amber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub.html">6.1.5. Install QMHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub-at23-patch-summary.html">6.1.6. QMHub AmberTools 23 Patch Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-qmhub-at26-patch-summary.html">6.1.7. <code class="docutils literal notranslate"><span class="pre">qmhub_at26.patch</span></code> summary and AT23 comparison</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1.8. SQM and SINR AmberTools 26 patch summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amber-install-torchmdnet.html">6.1.9. TorchMDnet-ext Environment (CPU)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/apptainer/apptainer.html">6.2. apptainer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-build.html">6.2.1. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">build</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-run.html">6.2.2. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">run</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-shell.html">6.2.3. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">shell</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/apptainer/app-instance.html">6.2.4. <code class="docutils literal notranslate"><span class="pre">apptainer</span> <span class="pre">instance</span> <span class="pre">start</span></code></a></li>
+</ul>
+</details></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../softwares/chimerax/chimera.html">6.4. ChimeraX</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-spin.html">6.4.1. Spin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-rock.html">6.4.2. Rocking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-fade.html">6.4.3. Fading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../softwares/chimerax/chimera-mov-morph.html">6.4.4. Morphing</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/ffmpeg.html">6.5. <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code>: Movies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/gnu-parallel.html">6.6. GNU Parallel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/vina/how_to_install_autodock_vina_gpu_macos_silicon.html">6.7. How to install AutoDock-GPU on Apple silicon</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../morenotes.html" class="nav-link"><span class="section-number">6. </span>More Notes !!</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="amber.html" class="nav-link"><span class="section-number">6.1. </span>Compile Notes</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis"><span class="section-number">6.1.8. </span>SQM and SINR AmberTools 26 patch summary</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sqm-and-sinr-ambertools-26-patch-summary">
+<h1><span class="section-number">6.1.8. </span>SQM and SINR AmberTools 26 patch summary<a class="headerlink" href="#sqm-and-sinr-ambertools-26-patch-summary" title="Link to this heading">#</a></h1>
+<section id="sources-reviewed">
+<h2><span class="section-number">6.1.8.1. </span>Sources reviewed<a class="headerlink" href="#sources-reviewed" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>AmberTools 26 SQM patch: <code class="docutils literal notranslate"><span class="pre">qmhub/patches/sqm_at26.patch</span></code></p></li>
+<li><p>AmberTools 26 SINR patch: <code class="docutils literal notranslate"><span class="pre">qmhub/patches/sinr_at26.patch</span></code></p></li>
+<li><p>AmberTools 23 SQM reference: <code class="docutils literal notranslate"><span class="pre">legacy_patches/sqm_at23.patch</span></code></p></li>
+<li><p>AmberTools 23 SINR reference: <code class="docutils literal notranslate"><span class="pre">legacy_patches/sinr_at23.patch</span></code></p></li>
+</ul>
+</section>
+<section id="high-level-summary">
+<h2><span class="section-number">6.1.8.2. </span>High-level summary<a class="headerlink" href="#high-level-summary" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code> ports the SQM QM/MM electrostatic-output work to AmberTools 26. It adds storage and force-plumbing for MM-site electrostatic potential and field values from the QM region, extends SQM’s standalone force path so it can compute and print those MM-site quantities, and adds <code class="docutils literal notranslate"><span class="pre">qmmm_int=6/7</span></code> behavior for reduced QM/MM electrostatic damping and AM1/PM3/PM6 Gaussian correction handling.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sinr_at26.patch</span></code> adds a new Sander thermostat/integrator mode, <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code>, for a Stochastic Isokinetic Nose-Hoover RESPA middle scheme. It reuses the existing SINR state machinery used by <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code>, adds two middle-scheme operators, validates the new input mode, writes/restarts SINR auxiliary velocities with the internally scaled time constant, and preserves the existing <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> update path.</p>
+</section>
+<section id="patch-footprint">
+<h2><span class="section-number">6.1.8.3. </span>Patch footprint<a class="headerlink" href="#patch-footprint" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Patch</p></th>
+<th class="head text-right"><p>Files touched</p></th>
+<th class="head text-right"><p>Added lines</p></th>
+<th class="head text-right"><p>Removed lines</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code></p></td>
+<td class="text-right"><p>7</p></td>
+<td class="text-right"><p>196</p></td>
+<td class="text-right"><p>117</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">legacy_patches/sqm_at23.patch</span></code></p></td>
+<td class="text-right"><p>7</p></td>
+<td class="text-right"><p>197</p></td>
+<td class="text-right"><p>118</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sinr_at26.patch</span></code></p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-right"><p>96</p></td>
+<td class="text-right"><p>34</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">legacy_patches/sinr_at23.patch</span></code></p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-right"><p>103</p></td>
+<td class="text-right"><p>48</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="key-changes-in-sqm-at26-patch">
+<h2><span class="section-number">6.1.8.4. </span>Key changes in <code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code><a class="headerlink" href="#key-changes-in-sqm-at26-patch" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Main files</p></th>
+<th class="head"><p>What changes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>MM ESP/field storage</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qmmm_struct_module.F90</span></code></p></td>
+<td><p>Adds <code class="docutils literal notranslate"><span class="pre">qmmm_struct%mm_esp(4,*)</span></code> and allocates/deallocates it for QM/MM runs. Component 1 stores electrostatic potential; components 2-4 store field/force-like Cartesian components at MM sites.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sander QM/MM force call plumbing</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/qm_mm.F90</span></code>, <code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_get_qmmm_forces.F90</span></code></p></td>
+<td><p>Extends <code class="docutils literal notranslate"><span class="pre">qm2_get_qmmm_forces</span></code> to accept <code class="docutils literal notranslate"><span class="pre">mm_esp</span></code>, so Sander-side QM/MM force evaluation can also accumulate MM-site potential/field data.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Charge-separated force algebra</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_get_qmmm_forces.F90</span></code></p></td>
+<td><p>Computes the per-MM-site electrostatic potential and field before multiplying pair forces by the MM charge, then applies the charge when accumulating physical QM/MM forces. Switched-interaction terms are likewise changed so potential/field bookkeeping is not double-multiplied by MM charge.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Light/heavy derivative ESP accumulation</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_get_qmmm_forces.F90</span></code></p></td>
+<td><p>Passes an <code class="docutils literal notranslate"><span class="pre">mm_esp</span></code> scalar into both light-atom and heavy-atom derivative helpers, adds the electronic-plus-nuclear electrostatic energy contribution to <code class="docutils literal notranslate"><span class="pre">mm_esp(1,*)</span></code>, and accumulates Cartesian field components from <code class="docutils literal notranslate"><span class="pre">pair_force</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong><code class="docutils literal notranslate"><span class="pre">qmmm_int=6/7</span></code> reduced damping</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_calc_rij_and_eqns.F90</span></code></p></td>
+<td><p>Sets the QM/MM electrostatic damping terms <code class="docutils literal notranslate"><span class="pre">qmi_oneBDD1/2/3</span></code> to zero when <code class="docutils literal notranslate"><span class="pre">qmmm_int</span></code> is 6 or 7.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong><code class="docutils literal notranslate"><span class="pre">qmmm_int=7</span></code> Gaussian correction support</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_hcore_qmmm.F90</span></code>, <code class="docutils literal notranslate"><span class="pre">qm2_get_qmmm_forces.F90</span></code></p></td>
+<td><p>Extends the AM1/PM3/PM6 Gaussian core-core correction paths that previously applied to <code class="docutils literal notranslate"><span class="pre">qmmm_int=2</span></code> so they also apply to <code class="docutils literal notranslate"><span class="pre">qmmm_int=7</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Input range extension</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_read_nm_and_alloc.F90</span></code></p></td>
+<td><p>Raises the legal <code class="docutils literal notranslate"><span class="pre">qmmm_int</span></code> range from <code class="docutils literal notranslate"><span class="pre">0..5</span></code> to <code class="docutils literal notranslate"><span class="pre">0..7</span></code> and increases <code class="docutils literal notranslate"><span class="pre">parameter_file</span></code> path storage from 80 to 256 characters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Standalone SQM MM-force/ESP output</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/sqm.F90</span></code></p></td>
+<td><p>In standalone SQM force calculations, computes QM/MM forces for <code class="docutils literal notranslate"><span class="pre">qmmm_int</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> except <code class="docutils literal notranslate"><span class="pre">qmmm_int=5</span></code>, zeroes and fills <code class="docutils literal notranslate"><span class="pre">mm_esp</span></code>, supports the DFTB and non-DFTB force paths, and prints MM-site potential/field data when verbosity is greater than 3.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Larger external-charge input</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/sqm.F90</span></code></p></td>
+<td><p>Raises external-charge array capacity from 1,000 to 20,000 sites, extends input line handling from 80 to 100 characters, increases scan loops accordingly, and suppresses the verbose per-charge echo table.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="key-changes-in-sinr-at26-patch">
+<h2><span class="section-number">6.1.8.5. </span>Key changes in <code class="docutils literal notranslate"><span class="pre">sinr_at26.patch</span></code><a class="headerlink" href="#key-changes-in-sinr-at26-patch" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Main files</p></th>
+<th class="head"><p>What changes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>New <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code> input mode</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/mdread2.F90</span></code></p></td>
+<td><p>Prints an <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code> SINR middle-scheme banner and extends the legal <code class="docutils literal notranslate"><span class="pre">ntt</span></code> range to include 12.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>SINR validation for <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code></strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/mdread2.F90</span></code></p></td>
+<td><p>Allows <code class="docutils literal notranslate"><span class="pre">gamma_ln</span></code> with <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code>, requires <code class="docutils literal notranslate"><span class="pre">gamma_ln</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">nkija</span> <span class="pre">&gt;=</span> <span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">ntc=ntf=1</span></code>, and <code class="docutils literal notranslate"><span class="pre">tempi</span> <span class="pre">&lt;=</span> <span class="pre">temp0</span></code> for <code class="docutils literal notranslate"><span class="pre">ntt=10/12</span></code>, while keeping <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> at <code class="docutils literal notranslate"><span class="pre">sinrtau</span> <span class="pre">&gt;=</span> <span class="pre">0.5</span></code> and requiring only <code class="docutils literal notranslate"><span class="pre">sinrtau</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> for <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Internal SINR time constant</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/runmd.F90</span></code></p></td>
+<td><p>Adds <code class="docutils literal notranslate"><span class="pre">sinrtaux</span></code>; <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> uses the user <code class="docutils literal notranslate"><span class="pre">sinrtau</span></code> unchanged, while <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code> uses <code class="docutils literal notranslate"><span class="pre">sinrtau</span> <span class="pre">*</span> <span class="pre">20.455d0</span></code> for SINR initialization and restart read/write.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Shared SINR setup/cleanup</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/runmd.F90</span></code></p></td>
+<td><p>Initializes, restarts, writes auxiliary SINR velocities, and cleans up SINR data for both <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> and <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code>; the existing <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> initial force/kick/drift remains guarded so it is not run for <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Middle-scheme update sequence</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/runmd.F90</span></code></p></td>
+<td><p>Adds the <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code> per-step sequence: two velocity updates, a half coordinate drift, two thermostat updates with a stochastic thermostat update between them, and a final half coordinate drift.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>New SINR operators</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/sinr_t.F90</span></code></p></td>
+<td><p>Exports and implements <code class="docutils literal notranslate"><span class="pre">iLqdt</span></code> for half-step coordinate drift and <code class="docutils literal notranslate"><span class="pre">iLodt</span></code> for stochastic Ornstein-Uhlenbeck updates of the second thermostat variables.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Sander force-coordinate bookkeeping</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/runmd.F90</span></code></p></td>
+<td><p>Treats <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code> like <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> in the post-step coordinate/force bookkeeping and SINR temperature reporting hooks.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="notable-differences-from-the-at23-legacy-patches">
+<h2><span class="section-number">6.1.8.6. </span>Notable differences from the AT23 legacy patches<a class="headerlink" href="#notable-differences-from-the-at23-legacy-patches" title="Link to this heading">#</a></h2>
+<section id="sqm-differences">
+<h3><span class="section-number">6.1.8.6.1. </span>SQM differences<a class="headerlink" href="#sqm-differences" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Same file footprint, mostly direct port.</strong> Both SQM patches touch the same seven files and implement the same main feature set: MM-site ESP/field storage, QM/MM force algebra changes, <code class="docutils literal notranslate"><span class="pre">qmmm_int=6/7</span></code>, standalone SQM output, and larger external-charge input.</p></li>
+<li><p><strong>AT26 makes <code class="docutils literal notranslate"><span class="pre">mm_esp</span></code> explicitly accumulative.</strong> In <code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code>, <code class="docutils literal notranslate"><span class="pre">mm_esp</span></code> dummy arguments are <code class="docutils literal notranslate"><span class="pre">intent(inout)</span></code> and the first Cartesian field update uses <code class="docutils literal notranslate"><span class="pre">mm_esp(k,j)</span> <span class="pre">=</span> <span class="pre">mm_esp(k,j)</span> <span class="pre">+</span> <span class="pre">pair_force(...)</span></code>. The AT23 legacy patch used <code class="docutils literal notranslate"><span class="pre">intent(out)</span></code> and overwrote that first field contribution. This AT26 refinement matches the later additive updates and supports accumulation across QM/MM pair contributions after callers zero <code class="docutils literal notranslate"><span class="pre">qmmm_struct%mm_esp</span></code>.</p></li>
+<li><p><strong>RESP charge allocation is not duplicated in <code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code>.</strong> The legacy SQM patch changed <code class="docutils literal notranslate"><span class="pre">qm_resp_charges</span></code> allocation from <code class="docutils literal notranslate"><span class="pre">nquant</span></code> to <code class="docutils literal notranslate"><span class="pre">nquant+nlink</span></code>. The AT26 SQM patch does not carry that hunk because the maintained AT26 patch sequence puts QM/link RESP-charge allocation in <code class="docutils literal notranslate"><span class="pre">qmhub/patches/qmhub_at26.patch</span></code>, which is applied before <code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code>.</p></li>
+<li><p><strong>Context placement differs for AT26 source layout.</strong> The <code class="docutils literal notranslate"><span class="pre">mm_esp</span></code> allocation/deallocation hunks land around AT26’s existing <code class="docutils literal notranslate"><span class="pre">qmmm_switch</span></code> and <code class="docutils literal notranslate"><span class="pre">PM3MMX_INTERFACE</span></code> logic, while the legacy AT23 hunk lands nearer the end of the original allocation/deallocation routines.</p></li>
+</ul>
+</section>
+<section id="sinr-differences">
+<h3><span class="section-number">6.1.8.6.2. </span>SINR differences<a class="headerlink" href="#sinr-differences" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>AT26 preserves existing <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> semantics more carefully.</strong> The AT26 patch scales <code class="docutils literal notranslate"><span class="pre">sinrtaux</span></code> only when <code class="docutils literal notranslate"><span class="pre">ntt</span> <span class="pre">==</span> <span class="pre">12</span></code>; the legacy AT23 patch scaled it for both <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> and <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code>. AT26 also keeps the original <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> <code class="docutils literal notranslate"><span class="pre">sinrtau</span> <span class="pre">&gt;=</span> <span class="pre">0.5</span></code> check, while the legacy patch relaxed the shared check to <code class="docutils literal notranslate"><span class="pre">sinrtau</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>.</p></li>
+<li><p><strong>AT26 validation messages are corrected for the new mode.</strong> The AT26 patch updates the <code class="docutils literal notranslate"><span class="pre">ntt</span></code> range message to say <code class="docutils literal notranslate"><span class="pre">0..12</span></code> and updates shared <code class="docutils literal notranslate"><span class="pre">ntt=10/12</span></code> error strings. The legacy patch changed the logic but left some messages referring only to <code class="docutils literal notranslate"><span class="pre">0..11</span></code> or <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code>.</p></li>
+<li><p><strong>AT26 does not port legacy changes to existing low-level <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> SINR operators.</strong> The AT23 legacy patch also changed existing SINR internals such as the Suzuki-Yoshida <code class="docutils literal notranslate"><span class="pre">wj</span></code> time factor and <code class="docutils literal notranslate"><span class="pre">iLndt</span></code> coefficients/exponents. Those hunks are absent from <code class="docutils literal notranslate"><span class="pre">sinr_at26.patch</span></code>, leaving AT26’s existing <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> operator behavior untouched while adding only the operators needed for <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code>.</p></li>
+<li><p><strong>Some AT23 legacy fixes are already AT26-native.</strong> The legacy patch added MPI broadcast of <code class="docutils literal notranslate"><span class="pre">sd%v2</span></code> and rewrote the velocity-force propagator <code class="docutils literal notranslate"><span class="pre">iLvdt</span></code>; the AT26 source already contains those forms, so the AT26 patch does not need equivalent hunks.</p></li>
+<li><p><strong>AT26 includes AT26-specific declaration context.</strong> The <code class="docutils literal notranslate"><span class="pre">runmd.F90</span></code> declaration hunk preserves AT26’s existing <code class="docutils literal notranslate"><span class="pre">dt25</span></code> variable while adding <code class="docutils literal notranslate"><span class="pre">sinrtaux</span></code>; the legacy AT23 context did not include <code class="docutils literal notranslate"><span class="pre">dt25</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="changed-files-in-the-at26-patches">
+<h2><span class="section-number">6.1.8.7. </span>Changed files in the AT26 patches<a class="headerlink" href="#changed-files-in-the-at26-patches" title="Link to this heading">#</a></h2>
+<section id="sqm-at26-patch">
+<h3><span class="section-number">6.1.8.7.1. </span><code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code><a class="headerlink" href="#sqm-at26-patch" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/qm_mm.F90</span></code></p></td>
+<td><p>Passes <code class="docutils literal notranslate"><span class="pre">qmmm_struct%mm_esp</span></code> into SQM QM/MM force evaluation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_calc_rij_and_eqns.F90</span></code></p></td>
+<td><p>Adds reduced damping for <code class="docutils literal notranslate"><span class="pre">qmmm_int=6/7</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_get_qmmm_forces.F90</span></code></p></td>
+<td><p>Adds MM-site ESP/field accumulation and charge-separated force algebra.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_hcore_qmmm.F90</span></code></p></td>
+<td><p>Extends AM1/PM3/PM6 Gaussian correction handling to <code class="docutils literal notranslate"><span class="pre">qmmm_int=7</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qm2_read_nm_and_alloc.F90</span></code></p></td>
+<td><p>Allows <code class="docutils literal notranslate"><span class="pre">qmmm_int</span></code> up to 7 and lengthens <code class="docutils literal notranslate"><span class="pre">parameter_file</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/qmmm_struct_module.F90</span></code></p></td>
+<td><p>Adds allocation and deallocation for <code class="docutils literal notranslate"><span class="pre">mm_esp</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sqm/sqm.F90</span></code></p></td>
+<td><p>Adds standalone SQM MM force/ESP output and larger external-charge input capacity.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="sinr-at26-patch">
+<h3><span class="section-number">6.1.8.7.2. </span><code class="docutils literal notranslate"><span class="pre">sinr_at26.patch</span></code><a class="headerlink" href="#sinr-at26-patch" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>File</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/mdread2.F90</span></code></p></td>
+<td><p>Adds <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code> reporting and input validation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/runmd.F90</span></code></p></td>
+<td><p>Adds <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code> initialization, stepping, restart, and cleanup paths.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AmberTools/src/sander/sinr_t.F90</span></code></p></td>
+<td><p>Adds/export middle-scheme coordinate drift and stochastic thermostat operators.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="usage-implication">
+<h2><span class="section-number">6.1.8.8. </span>Usage implication<a class="headerlink" href="#usage-implication" title="Link to this heading">#</a></h2>
+<p>After the maintained patch sequence is applied, SQM can report MM-site electrostatic potential/field values from the QM region for supported QM/MM modes, including standalone SQM force runs at high verbosity. Sander also gains <code class="docutils literal notranslate"><span class="pre">ntt=12</span></code> as a separate SINR middle-scheme integrator mode; existing <code class="docutils literal notranslate"><span class="pre">ntt=10</span></code> behavior is intended to remain the AT26-native SINR path.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/04-simulation"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="amber-install-qmhub-at26-patch-summary.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6.1.7. </span><code class="docutils literal notranslate"><span class="pre">qmhub_at26.patch</span></code> summary and AT23 comparison</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="amber-install-torchmdnet.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.1.9. </span>TorchMDnet-ext Environment (CPU)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> 
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sources-reviewed">6.1.8.1. Sources reviewed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#high-level-summary">6.1.8.2. High-level summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#patch-footprint">6.1.8.3. Patch footprint</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-changes-in-sqm-at26-patch">6.1.8.4. Key changes in <code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-changes-in-sinr-at26-patch">6.1.8.5. Key changes in <code class="docutils literal notranslate"><span class="pre">sinr_at26.patch</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notable-differences-from-the-at23-legacy-patches">6.1.8.6. Notable differences from the AT23 legacy patches</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqm-differences">6.1.8.6.1. SQM differences</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinr-differences">6.1.8.6.2. SINR differences</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changed-files-in-the-at26-patches">6.1.8.7. Changed files in the AT26 patches</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqm-at26-patch">6.1.8.7.1. <code class="docutils literal notranslate"><span class="pre">sqm_at26.patch</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sinr-at26-patch">6.1.8.7.2. <code class="docutils literal notranslate"><span class="pre">sinr_at26.patch</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-implication">6.1.8.8. Usage implication</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/notebooks/04-simulation/amber-install-qmhub-sqm-sinr-at26-patch-summary.md"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
